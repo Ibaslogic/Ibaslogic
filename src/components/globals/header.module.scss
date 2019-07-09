@@ -1,0 +1,94 @@
+$header-bg-color: #20232a;
+$main-white: #fff;
+$content-max-width: 72rem;
+
+// mixins
+@mixin transition {
+  transition: all 0.5s linear;
+}
+
+.container {
+  background: $header-bg-color;
+
+  height: 4rem;
+  color: $main-white;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.content {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  height: 4rem;
+}
+
+.brand-link {
+  img {
+    width: 130px;
+    margin: 0;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.875rem 0;
+  line-height: 1.3125rem;
+  font-size: 1.3125rem;
+  color: $main-white;
+  margin-left: 0;
+  opacity: 0.6;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  @include transition;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.active-nav-item {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 0.96rem;
+    font-weight: 300;
+    position: relative;
+    opacity: 0.8;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 1px;
+      background: #fff;
+      opacity: 0;
+      @include transition;
+    }
+
+    &:hover {
+      //opacity: 1;
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &.active-nav-item {
+      opacity: 0.8;
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

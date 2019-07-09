@@ -1,0 +1,147 @@
+// =====================================================
+// Hero
+// ======================
+@mixin transition {
+  transition: all 0.5s linear;
+}
+.homePageHero {
+  min-height: calc(100vh - 4rem);
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.title {
+  font-size: 30px;
+  line-height: 1.17647;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  padding-top: 24px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 37px;
+    line-height: 1.146em;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 41px;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 43px;
+    padding-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 52px;
+  }
+}
+
+.nl {
+  @media screen and (min-width: 960px) {
+    display: block;
+  }
+}
+
+.description {
+  letter-spacing: 0;
+  margin-bottom: 1.35em;
+  font-size: 18px;
+  line-height: 1.34667;
+  font-weight: 100;
+  max-width: 34em;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 5.75rem;
+    height: 0.0625rem;
+    background: #f55f2d;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    margin-left: -2.875rem;
+
+    @media screen and (min-width: 960px) {
+      bottom: -3.5rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+    line-height: 1.44667;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.27667;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 31px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 37px;
+  }
+}
+.hero-button-container {
+  a {
+    display: block;
+    max-width: 270px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+
+    @media screen and (min-width: 768px) {
+      max-width: 330px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 360px;
+      padding: 0.9rem 1rem;
+    }
+  }
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  width: 100%;
+}
+.start-here {
+  a {
+    //border: 1px solid #f55f2d;
+    background: #f55f2d;
+    color: #fff;
+    @include transition;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+// .contact {
+//   margin-top: 3px;
+//   a {
+//     border: 1px solid #e9e9e9;
+//     background: #fff;
+//     color: inherit;
+//   }
+//   @media screen and (min-width: 768px) {
+//     margin-top: 0;
+//   }
+// }
+// .button {
+//   @media screen and (min-width: 768px) {
+//     margin: 0 4px;
+//     width: 40%;
+//   }
+// }

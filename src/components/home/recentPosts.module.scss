@@ -1,0 +1,144 @@
+@mixin transition {
+  transition: all 0.5s ease-out;
+}
+
+.recent-posts {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    @media screen and (min-width: 960px) {
+      max-width: 1150px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 25px;
+    }
+  }
+}
+.section-header {
+  padding-top: 3.5rem;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5rem;
+  }
+  .section-title {
+    margin: 0;
+    font-size: 1.875rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    text-transform: capitalize;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.375rem;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 2.625rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 3.75rem;
+      height: 0.0625rem;
+      background: #f55f2d;
+      position: absolute;
+      bottom: -1.5rem;
+      left: 50%;
+      margin-left: -1.875rem;
+    }
+  }
+}
+
+.view-all {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+
+  a {
+    @include transition;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.article {
+  margin-bottom: 3.125rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  header {
+    margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 480px) {
+      flex: 3;
+      margin-bottom: 0;
+      margin-right: 0.4375rem;
+    }
+    @media screen and (min-width: 600px) {
+      margin-right: 1.0625rem;
+    }
+    @media screen and (min-width: 960px) {
+      margin-right: 0;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .content {
+    @media screen and (min-width: 480px) {
+      flex: 7;
+      margin-top: -0.25rem;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 960px) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  h2 {
+    font-size: 1.1875rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    line-height: 1.32em;
+
+    @media screen and (min-width: 480px) {
+      margin-bottom: 0.25rem;
+    }
+    @media screen and (min-width: 600px) {
+      font-size: 1.4375rem;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 30px;
+    }
+
+    &:hover {
+      color: #f55f2d;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  p {
+    font-size: 0.9375rem;
+    margin: 0;
+    line-height: 1.714285714;
+    letter-spacing: 0.02em;
+  }
+}

@@ -1,0 +1,93 @@
+$footer-bg-color: #282c34;
+$main-white: #fff;
+$content-max-width: 72rem;
+
+.site-footer {
+  background: $footer-bg-color;
+  color: $main-white;
+  font-size: 0.75rem;
+  line-height: 1.66667;
+  text-align: center;
+}
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    height: 8rem;
+    padding: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.copy {
+  margin: 0;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+.socialList {
+  display: flex;
+  margin: 0;
+  margin-bottom: -6px;
+}
+.socialItem {
+  font-size: 1.2rem;
+  line-height: 1.66667;
+  opacity: 0.8;
+  margin: 20px 13px 0;
+  vertical-align: baseline;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  a {
+    color: #fff;
+    opacity: inherit;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.check-me {
+  position: relative;
+
+  opacity: 0.5;
+  margin-top: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    padding-right: 46px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      right: 0;
+      opacity: 0.5;
+    }
+  }
+}

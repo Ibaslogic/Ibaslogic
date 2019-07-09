@@ -1,0 +1,141 @@
+// mixins
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
+
+.recent-posts {
+  border: solid #f2f2f2 1px;
+  margin: 0 0 3.75rem 0;
+  color: #33475b;
+}
+.widget {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.list-container {
+  line-height: 1.75em;
+  margin-bottom: 0;
+  padding: 1.5rem 0.75rem 1.5rem;
+
+  li {
+    line-height: 1.5;
+    margin: 0 0 0.9375rem 0;
+    min-height: 3.125rem;
+
+    &:first-child {
+      margin-top: 0.4375rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0.4375rem;
+    }
+
+    .img-tumbnail {
+      margin: 0.25rem 0.75rem 0 0;
+      float: left;
+      min-width: 5rem;
+      height: auto;
+      max-height: 3.125rem;
+    }
+    a {
+      margin-right: 0.5625rem;
+      color: #444;
+      @include transition;
+
+      &:hover {
+        color: #f55f2d;
+      }
+    }
+  }
+
+  @media screen and(min-width: 480px) {
+    padding: 2.1875rem 2.5rem 2.625rem 2.5rem;
+  }
+  @media screen and(min-width: 960px) {
+    padding: 2.1875rem 1.5rem 2.625rem 1.5rem;
+  }
+}
+
+.sign-up {
+  text-align: center;
+  border: 1px solid #f2f2f2;
+  padding: 40px 10px;
+  background: #fcfcfc;
+  margin-bottom: 60px;
+  position: sticky;
+  top: 100px;
+  font-size: 1rem;
+  font-weight: 300;
+
+  @media screen and(min-width: 480px) {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.41667;
+
+  @media screen and(min-width: 768px) {
+    font-size: 2.1rem;
+    line-height: 1.02778;
+  }
+}
+
+.title,
+.description {
+  @media screen and(min-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
+  }
+}
+
+.description {
+  line-height: 1.667;
+  margin-bottom: 2rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  input,
+  button {
+    height: 60px;
+    font-size: inherit;
+    //font-size: 1rem;
+    border-radius: 2px;
+  }
+  input {
+    padding: 0px 25px;
+    border: 1px solid #f2f2f2;
+    margin-bottom: 2px;
+  }
+  button {
+    background-color: #f55f2d;
+    border: 1px solid #f55f2d;
+    opacity: 1;
+    color: #fff;
+    text-transform: uppercase;
+    @include transition;
+
+    &:hover {
+      // background-color: rgba(#f55f2d, 0.7);
+      // border: 1px solid #f55f2d;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+.guarantee {
+  font-size: 0.74rem;
+  text-align: center;
+  padding: 1.8rem 0px 0px;
+  display: block;
+  opacity: 0.5;
+  letter-spacing: 0.03rem;
+}

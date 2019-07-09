@@ -1,0 +1,204 @@
+// Globals
+// ===================================================
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+
+// Variables
+$primary-color: #444;
+//$secondary-color: #444;
+$header-bg-color: #20232a;
+$main-white: #fff;
+$main-black: #222;
+$main-spacing: 0.1rem;
+$body-font: "Roboto", sans-serif;
+$home-bg-banner: #282c34;
+$link-color: #f55f2d;
+
+// mixins
+@mixin transition {
+  transition: all 0.5s linear;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  color: $primary-color;
+  font-size: 100%;
+  line-height: 1.42857143;
+  background: $main-white;
+  font-family: $body-font;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  color: $link-color;
+  background-color: transparent;
+  outline: none;
+  text-decoration: none;
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+dl,
+ol,
+p,
+table,
+ul {
+  margin: 0 0 1.667rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h2 a,
+h2 a:hover {
+  color: #161922;
+}
+
+// Navigation Menu
+// =================================================
+
+.menu-btn {
+  cursor: pointer;
+  // z-index: 3;
+  //transition: all 0.5s ease-out;
+  @include transition;
+  .btn-line {
+    width: 24px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $main-white;
+    @include transition;
+  }
+  //rotate into X with Menu lines
+  &.close {
+    transform: rotate(180deg);
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+.menu-nav {
+  position: absolute;
+  top: 0;
+  opacity: 0.9;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  //overflow: hidden;
+  background: $header-bg-color;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  margin: 0;
+  padding: 4.5rem 1.25rem 0;
+  text-align: center;
+  //list-style: none;
+  z-index: -1;
+  visibility: hidden;
+  //display: none;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.5s ease-out;
+  list-style: none;
+
+  &.show-nav {
+    visibility: visible;
+    //display: block;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.brand,
+.navbar {
+  z-index: 1;
+}
+
+// =====================================================
+// Blog
+// ======================
+
+// ===========================================
+
+@media screen and (min-width: 480px) {
+  .recentTitle {
+    margin-left: 3.375rem !important;
+    margin-right: 3.375rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+  .nav-item {
+    margin-left: 2.5rem;
+  }
+  .menu-nav {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    height: inherit;
+    padding: 0;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .recentTitle {
+    margin-left: 2.375rem !important;
+    margin-right: 2.375rem !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-item {
+    margin-left: 3.4rem;
+  }
+}
