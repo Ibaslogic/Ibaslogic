@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Hero from "../components/headSection/hero"
 import RecentPosts from "../components/home/recentPosts"
 
-import SidebarTitle from "../components/sidebar/sidebarTitle"
+//import SidebarTitle from "../components/sidebar/sidebarTitle"
 
 const IndexPage = () => (
   <Layout>

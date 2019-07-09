@@ -77,7 +77,7 @@ const Blog = ({ data, pageContext }) => {
             </ul>
           </div>
         </main>
-        <aside className={blogPageStyles.secondaryArea} role="complementary">
+        <aside className={blogPageStyles.secondaryArea}>
           <Sidebar />
         </aside>
       </div>
