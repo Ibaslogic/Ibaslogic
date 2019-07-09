@@ -53,7 +53,7 @@ const recentPostQuery = graphql`
           title
           image {
             fluid(maxWidth: 460) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
