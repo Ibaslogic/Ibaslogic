@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { slugify } from "../../util/utilityFunction"
 import shareStyles from "./socialShare.module.scss"
 import {
   FaFacebookF,
@@ -35,8 +36,8 @@ const SocialShare = ({ slug, title }) => {
               href={
                 "https://twitter.com/share?url=" +
                 baseUrl +
-                slug +
-                "/&text=" +
+                slugify(slug) +
+                "/&text=" + 
                 title +
                 "&via=" +
                 twitterHandle
@@ -53,7 +54,7 @@ const SocialShare = ({ slug, title }) => {
               href={
                 "https://www.facebook.com/sharer/sharer.php?u=" +
                 baseUrl +
-                slug +
+                slugify(slug) +
                 "/"
               }
             >
@@ -68,7 +69,7 @@ const SocialShare = ({ slug, title }) => {
               href={
                 "https://www.linkedin.com/shareArticle?url=" +
                 baseUrl +
-                slug +
+                slugify(slug) +
                 "/"
               }
             >
