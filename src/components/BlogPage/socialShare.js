@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import shareStyles from "./share.module.scss"
+import shareStyles from "./socialShare.module.scss"
 import {
   FaFacebookF,
   // FaGithub,
@@ -8,7 +8,7 @@ import {
   FaTwitter,
 } from "react-icons/fa"
 
-const Share = ({ slug, title }) => {
+const SocialShare = ({ slug, title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -81,7 +81,7 @@ const Share = ({ slug, title }) => {
   )
 }
 
-export default Share
+export default SocialShare
 
 // import { FaFacebookF } from "react-icons/fa";
 // FaFacebookF   FaFacebookSquare    FaFacebook

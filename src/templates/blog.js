@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
-import Share from "../components/Blogpage/share"
+import SocialShare from "../components/BlogPage/socialShare"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 
@@ -63,7 +63,7 @@ const Blog = ({ data, pageContext }) => {
           </article>
 
           <>
-            <Share
+            <SocialShare
               slug={pageContext.slug}
               title={data.contentfulBlogPostContent.title}
             />
