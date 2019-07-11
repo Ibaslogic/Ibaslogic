@@ -32,6 +32,10 @@ $main-white: #fff;
   max-width: 660px;
   margin: 0 auto;
 
+  img {
+    margin-bottom: 1.666667rem;
+  }
+
   @media screen and (min-width: 960px) {
     padding-bottom: 0;
     width: 59.34%;
@@ -131,6 +135,18 @@ $main-white: #fff;
   word-wrap: break-word;
   hyphens: auto;
 
+  ol li {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 0.8333333333335em;
+  }
+
+  li > p {
+    margin-bottom: 0 !important;
+  }
+
   a {
     &:hover {
       text-decoration: underline;
@@ -140,6 +156,7 @@ $main-white: #fff;
   ul li {
     position: relative;
     padding: 0 0 0 1.9rem;
+
     &::after {
       content: "";
       display: block;

@@ -6,6 +6,8 @@ import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
 import SocialShare from "../components/BlogPage/socialShare"
+import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 
@@ -21,11 +23,50 @@ export const query = graphql`
           ...GatsbyContentfulFluid
         }
       }
+      body {
+        json
+      }
     }
   }
 `
 
 const Blog = ({ data, pageContext }) => {
+  const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: node => {
+        const { title, description, file } = node.data.target.fields
+        const mineType = file["en-US"].contentType
+        const mineGroup = mineType.split("/")[0]
+
+        switch (mineGroup) {
+          case "image":
+            return (
+              <img
+                title={title ? title["en-US"] : null}
+                alt={description ? description["en-US"] : null}
+                src={file["en-US"].url}
+              />
+            )
+          case "application":
+            return (
+              <a
+                href={file["en-US"].url}
+                alt={description ? description["en-US"] : null}
+              >
+                {title ? title["en-US"] : file["en-US"].details.fileName}
+              </a>
+            )
+          default:
+            return (
+              <span style={{ backgroundColor: "#333", color: "white" }}>
+                {mineType} embedded asset
+              </span>
+            )
+        }
+      },
+    },
+  }
+
   return (
     <Layout>
       <SEO title={data.contentfulBlogPostContent.title} />
@@ -56,18 +97,18 @@ const Blog = ({ data, pageContext }) => {
                 fluid={data.contentfulBlogPostContent.image.fluid}
                 alt={data.contentfulBlogPostContent.title}
               />
-              <div
-              // dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-              ></div>
+
+              {documentToReactComponents(
+                data.contentfulBlogPostContent.body.json,
+                options
+              )}
             </div>
           </article>
 
-          <>
-            <SocialShare
-              slug={pageContext.slug}
-              title={data.contentfulBlogPostContent.title}
-            />
-          </>
+          <SocialShare
+            slug={pageContext.slug}
+            title={data.contentfulBlogPostContent.title}
+          />
 
           <div className={blogPageStyles.tagLinks}>
             <ul className={blogPageStyles.postTags}>

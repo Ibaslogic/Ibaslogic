@@ -13,7 +13,7 @@ $content-max-width: 72rem;
 .container {
   max-width: $content-max-width;
   margin: 0 auto;
-  padding: 0.8rem 1rem;
+  padding: 1.8rem 1rem;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -71,7 +71,7 @@ $content-max-width: 72rem;
   position: relative;
 
   opacity: 0.5;
-  margin-top: 10px;
+  margin-top: 19px;
 
   @media screen and (min-width: 768px) {
     margin-top: 0;
