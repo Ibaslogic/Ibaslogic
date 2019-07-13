@@ -6,70 +6,37 @@ import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
 import SocialShare from "../components/BlogPage/socialShare"
-import { BLOCKS } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+//import { BLOCKS } from "@contentful/rich-text-types"
+//import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulBlogPostContent(slug: { eq: $slug }) {
-      title
-      publishedDate(formatString: "MMMM Do, YYYY")
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
       timeToRead
-      tags
-      image {
-        fluid(maxWidth: 680) {
-          ...GatsbyContentfulFluid
+      frontmatter {
+        title
+        date(formatString: "MMMM Do, YYYY")
+        tags
+        image {
+          childImageSharp {
+            fluid(maxWidth: 680) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
-      body {
-        json
-      }
+      html
     }
   }
 `
 
 const Blog = ({ data, pageContext }) => {
-  const options = {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: node => {
-        const { title, description, file } = node.data.target.fields
-        const mineType = file["en-US"].contentType
-        const mineGroup = mineType.split("/")[0]
-
-        switch (mineGroup) {
-          case "image":
-            return (
-              <img
-                title={title ? title["en-US"] : null}
-                alt={description ? description["en-US"] : null}
-                src={file["en-US"].url}
-              />
-            )
-          case "application":
-            return (
-              <a
-                href={file["en-US"].url}
-                alt={description ? description["en-US"] : null}
-              >
-                {title ? title["en-US"] : file["en-US"].details.fileName}
-              </a>
-            )
-          default:
-            return (
-              <span style={{ backgroundColor: "#333", color: "white" }}>
-                {mineType} embedded asset
-              </span>
-            )
-        }
-      },
-    },
-  }
-
   return (
     <Layout>
-      <SEO title={data.contentfulBlogPostContent.title} />
+      <SEO title={data.markdownRemark.frontmatter.title} />
       <div
         id="primary"
         className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
@@ -78,41 +45,43 @@ const Blog = ({ data, pageContext }) => {
           <article className={blogPageStyles.singlePost}>
             <header className="entryHeader">
               <h1 className={blogPageStyles.title}>
-                {data.contentfulBlogPostContent.title}
+                {data.markdownRemark.frontmatter.title}
               </h1>
               <div className={blogPageStyles.datePublished}>
                 {" "}
-                Updated on{" "}
-                <span>{data.contentfulBlogPostContent.publishedDate}</span>
+                Updated on <span>{data.markdownRemark.frontmatter.date}</span>
                 <span className={blogPageStyles.divider}></span>
-                <span>
-                  {data.contentfulBlogPostContent.timeToRead} min read
-                </span>
+                <span>{data.markdownRemark.timeToRead} min read</span>
               </div>
             </header>
 
             <div className={blogPageStyles.entryContent}>
               <Img
                 className={blogPageStyles.featuredImage}
-                fluid={data.contentfulBlogPostContent.image.fluid}
-                alt={data.contentfulBlogPostContent.title}
+                fluid={
+                  data.markdownRemark.frontmatter.image.childImageSharp.fluid
+                }
+                alt={data.markdownRemark.frontmatter.title}
               />
 
-              {documentToReactComponents(
+              {/* {documentToReactComponents(
                 data.contentfulBlogPostContent.body.json,
                 options
-              )}
+              )} */}
+              <div
+                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+              ></div>
             </div>
           </article>
 
           <SocialShare
             slug={pageContext.slug}
-            title={data.contentfulBlogPostContent.title}
+            title={data.markdownRemark.frontmatter.title}
           />
 
           <div className={blogPageStyles.tagLinks}>
             <ul className={blogPageStyles.postTags}>
-              {data.contentfulBlogPostContent.tags.map((tag, index) => (
+              {data.markdownRemark.frontmatter.tags.map((tag, index) => (
                 <li key={index}>
                   <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link>
                 </li>

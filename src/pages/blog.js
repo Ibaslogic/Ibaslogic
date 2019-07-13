@@ -22,20 +22,26 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allContentfulBlogPostContent(sort: { fields: publishedDate, order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          title
-          slug
-          publishedDate(formatString: "MMMM Do YYYY")
-          category
-          timeToRead
-          image {
-            fluid(maxWidth: 460) {
-              ...GatsbyContentfulFluid_tracedSVG
+          frontmatter {
+            title
+            date(formatString: "MMMM Do YYYY")
+            category
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
+          fields {
+            slug
+          }
+          timeToRead
         }
       }
     }

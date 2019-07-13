@@ -1,15 +1,15 @@
 ---
-title: "The Begineers javascript guide"
-date: "2019-04-08"
-category: "development"
-image: "../images/article.jpg"
+title: "First react bootcamp"
+slug: "First react bootcamp"
+date: "2019-04-06"
+category: "web design"
+image: "./images/mistake.jpg"
 tags:
-  - gatsby
-  - design
-  - javascript
+  - react
+  - wordpress dev
 ---
 
-![article](../images/article.jpg)
+![article](./images/mistake.jpg)
 
 ## This is the second heading
 
@@ -18,6 +18,8 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim qui dolore fugiat
 - omnis error
 - distinctio beatae facere,
 - perspiciatis assumenda nemo!
+
+![article](./images/mistake.jpg)
 
 ### This is the third heading
 

@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allContentfulBlogPostContent
+  const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
@@ -22,15 +22,15 @@ const Tags = ({ pageContext, data }) => {
           </div>
           <ul className={blogStyles.list}>
             {edges.map(({ node }) => {
-              const { id, slug, title, publishedDate, image, timeToRead } = node
+              const { id, timeToRead } = node
               return (
                 <Post
                   key={id}
-                  title={title}
-                  date={publishedDate}
+                  title={node.frontmatter.title}
+                  date={node.frontmatter.date}
                   time={timeToRead}
-                  fluid={image.fluid}
-                  slug={slug}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                  slug={node.fields.slug}
                 />
               )
             })}
@@ -44,24 +44,31 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
-    allContentfulBlogPostContent(
-      sort: { fields: publishedDate, order: DESC }
-      filter: { tags: { in: [$tag] } }
+  query($tag: String!) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
         node {
           id
-          slug
-          timeToRead
-          title
-          publishedDate(formatString: "MMMM Do, YYYY")
-          image {
-            fluid(maxWidth: 460) {
-              ...GatsbyContentfulFluid_tracedSVG
+          frontmatter {
+            title
+            date(formatString: "MMMM Do YYYY")
+            tags
+            image {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
+          fields {
+            slug
+          }
+          timeToRead
         }
       }
     }

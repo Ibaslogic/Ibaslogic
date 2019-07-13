@@ -1,14 +1,15 @@
 ---
-title: "Ultimate guide about GraphQL"
-date: "2019-04-10"
-category: "design"
-image: "../images/article.jpg"
+title: "Updated: Ultimate guide to WordPress Development"
+slug: "Ultimate guide to WordPress Development"
+date: "2019-07-05"
+category: "wordpress"
+image: "./images/css.jpg"
 tags:
-  - gatsby
-  - design
+  - wordpress
+  - development
 ---
 
-![article](../images/mistake.jpg)
+![article](./images/css.jpg)
 
 ## This is the second heading
 

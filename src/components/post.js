@@ -1,13 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
 import blogStyles from "./BlogPage/blogItems.module.scss"
-import { slugify } from "../util/utilityFunction"
+//import { slugify } from "../util/utilityFunction"
 import { Link } from "gatsby"
 
 const Post = ({ title, date, time, fluid, slug }) => {
   return (
     <li className={blogStyles.listItem}>
-      <Link to={`/blog/${slugify(slug)}/`}>
+      <Link to={`/blog/${slug}/`}>
         <article className="contentArticle">
           <header className={blogStyles.entryHeader}>
             <Img fluid={fluid} alt={slug} />

@@ -2,19 +2,19 @@ const path = require("path")
 const _ = require("lodash")
 const { slugify } = require("./src/util/utilityFunction")
 
-// module.exports.onCreateNode = ({ node, actions }) => {
-//   const { createNodeField } = actions
+module.exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
 
-//   if (node.internal.type === "MarkdownRemark") {
-//     //const slug = path.basename(node.fileAbsolutePath, ".md")
-//     const slug = slugify(node.frontmatter.title)
-//     createNodeField({
-//       node,
-//       name: "slug",
-//       value: slug,
-//     })
-//   }
-// }
+  if (node.internal.type === "MarkdownRemark") {
+    //const slug = path.basename(node.fileAbsolutePath, ".md")
+    const slug = slugify(node.frontmatter.slug)
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug,
+    })
+  }
+}
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -23,31 +23,35 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-      allContentfulBlogPostContent {
+      allMarkdownRemark {
         edges {
           node {
-            slug
-            tags
+            frontmatter {
+              tags
+            }
+            fields {
+              slug
+            }
           }
         }
       }
     }
   `)
 
-  res.data.allContentfulBlogPostContent.edges.forEach(edge => {
+  res.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
-      path: `/blog/${_.kebabCase(edge.node.slug)}/`,
+      path: `/blog/${edge.node.fields.slug}/`,
       component: blogTemplate,
       context: {
-        slug: edge.node.slug,
+        slug: edge.node.fields.slug,
       },
     })
   })
 
   let tags = []
-  _.each(res.data.allContentfulBlogPostContent.edges, edge => {
-    if (_.get(edge, "node.tags")) {
-      tags = tags.concat(edge.node.tags)
+  _.each(res.data.allMarkdownRemark.edges, edge => {
+    if (_.get(edge, "node.frontmatter.tags")) {
+      tags = tags.concat(edge.node.frontmatter.tags)
     }
   })
 

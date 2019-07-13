@@ -15,12 +15,12 @@ const RecentPosts = () => {
         query={recentPostQuery}
         render={data => (
           <ul className={recentPostStyles.listContainer}>
-            {data.allContentfulBlogPostContent.edges.map(({ node }) => (
+            {data.allMarkdownRemark.edges.map(({ node }) => (
               <SidebarPostsMarkup
                 key={node.id}
-                fluid={node.image.fluid}
-                title={node.title}
-                slug={node.slug}
+                fluid={node.frontmatter.image.childImageSharp.fluid}
+                title={node.frontmatter.title}
+                slug={node.fields.slug}
               />
               // <li key={node.id}>
               //   <Img
@@ -41,21 +41,27 @@ const RecentPosts = () => {
 
 const recentPostQuery = graphql`
   query {
-    allContentfulBlogPostContent(
-      sort: { fields: publishedDate, order: DESC }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       limit: 5
     ) {
       edges {
         node {
           id
-          slug
-          timeToRead
-          title
-          image {
-            fluid(maxWidth: 460) {
-              ...GatsbyContentfulFluid
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 460) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
+          fields {
+            slug
+          }
+          timeToRead
         }
       }
     }

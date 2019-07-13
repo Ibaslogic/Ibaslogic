@@ -1,14 +1,16 @@
 ---
-title: "Ultimate guide to WordPress Development"
-date: "2019-07-05"
-category: "wordpress"
-image: "../images/article.jpg"
+title: "The Begineers javascript guide"
+slug: "The Begineers javascript guide"
+date: "2019-04-08"
+category: "development"
+image: "./images/article.jpg"
 tags:
-  - wordpress
-  - development
+  - gatsby
+  - design
+  - javascript
 ---
 
-![article](../images/css.jpg)
+![article](./images/article.jpg)
 
 ## This is the second heading
 

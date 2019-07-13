@@ -5,7 +5,7 @@ import blogStyles from "./blogItems.module.scss"
 
 const getCategories = items => {
   let tempItems = items.map(item => {
-    return item.node.category
+    return item.node.frontmatter.category
   })
   let tempCategories = new Set(tempItems)
   let categories = Array.from(tempCategories)
@@ -17,9 +17,9 @@ class BlogItems extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      items: props.items.allContentfulBlogPostContent.edges,
-      blogPostItems: props.items.allContentfulBlogPostContent.edges,
-      categories: getCategories(props.items.allContentfulBlogPostContent.edges),
+      items: props.items.allMarkdownRemark.edges,
+      blogPostItems: props.items.allMarkdownRemark.edges,
+      categories: getCategories(props.items.allMarkdownRemark.edges),
     }
   }
 
@@ -33,7 +33,9 @@ class BlogItems extends Component {
         }
       })
     } else {
-      let items = tempItems.filter(({ node }) => node.category === category)
+      let items = tempItems.filter(
+        ({ node }) => node.frontmatter.category === category
+      )
       this.setState(() => {
         return {
           blogPostItems: items,
@@ -70,11 +72,11 @@ class BlogItems extends Component {
                 return (
                   <Post
                     key={node.id}
-                    title={node.title}
-                    date={node.publishedDate}
+                    title={node.frontmatter.title}
+                    date={node.frontmatter.date}
                     time={node.timeToRead}
-                    fluid={node.image.fluid}
-                    slug={node.slug}
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                    slug={node.fields.slug}
                   />
                 )
               })}

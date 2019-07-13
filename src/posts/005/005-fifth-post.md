@@ -1,8 +1,9 @@
 ---
 title: "Begineers guide to node.js"
+slug: "Begineers guide to node.js"
 date: "2019-04-09"
 category: "development"
-image: "../images/mistake.jpg"
+image: "./images/article.jpg"
 tags:
   - node
   - web development
@@ -16,7 +17,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim qui dolore fugiat
 - distinctio beatae facere,
 - perspiciatis assumenda nemo!
 
-![article](../images/article.jpg)
+![article](./images/article.jpg)
 
 ### This is the third heading
 
