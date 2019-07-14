@@ -4,12 +4,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Ibaslogic Site`,
+    title: `Ibaslogic`,
     description: `Here, you'll learn all the rudiment of web development`,
     author: `Ibas Majid`,
     twitterHandle: `ibaskunle`,
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {

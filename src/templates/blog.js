@@ -37,7 +37,7 @@ const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={data.markdownRemark.frontmatter.title} />
-      <div
+      <div 
         id="primary"
         className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
       >

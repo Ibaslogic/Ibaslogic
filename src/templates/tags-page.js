@@ -14,7 +14,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title="tags" />
+      <SEO title={`All posts tagged as "${tag}"`} />
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
           <div className={blogStyles.filterPosts}>

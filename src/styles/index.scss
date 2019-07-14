@@ -92,6 +92,60 @@ h2 a:hover {
   color: #161922;
 }
 
+// Code
+// =================================================
+
+code[class*="language-"],
+pre,
+pre[class*="language-"],
+pre code {
+  font-size: 13px;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+code,
+pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
+:not(pre) > code,
+p > code,
+li > code,
+li > code {
+  background: #f2f2f2;
+  color: #f55f2d; // #151414;
+}
+
+p > code,
+li > code,
+p > a > code,
+li > a > code {
+  padding: 0 3px;
+  font-size: 0.94em;
+  word-break: break-word;
+}
+
+// Prism Highligter
+// =================================================
+
+.filename {
+  background: #151414;
+  padding: 0.5rem 1rem 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-bottom: -0.7rem;
+}
+
+.token.class-name {
+  text-decoration: none;
+}
+
 // Navigation Menu
 // =================================================
 

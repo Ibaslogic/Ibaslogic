@@ -57,47 +57,49 @@ class Newsletter extends Component {
   render() {
     return (
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
-        {this.state.status === `success` ? (
-          <div>Thank you! Youʼll receive your first email shortly.</div>
-        ) : (
-          <>
-            <p className={newsletterStyles.title}>Want Practical Tutorials?</p>
-            <p className={newsletterStyles.description}>
-              Get fresh web development updates straight to your inbox and start
-              building real-world web applications.{" "}
-            </p>
-            <form
-              onSubmit={this._handleFormSubmit}
-              className={newsletterStyles.formContainer}
-              method="post"
-              noValidate
-            >
-              <input
-                className="fieldInput"
-                type="text"
-                onChange={this._handleEmailChange}
-                placeholder="Email here"
-              />
-              <button
-                style={{ outline: "none" }}
-                className="fieldSubmit"
-                type="submit"
-              >
-                Sign up
-              </button>
-              {this.state.status === `error` && (
-                <div
-                  style={{ color: "#f55f2d", marginTop: "10px" }}
-                  dangerouslySetInnerHTML={{ __html: this.state.msg }}
-                ></div>
-              )}
+        <p className={newsletterStyles.title}>
+          Like what you <br />
+          are reading?
+        </p>
+        <p className={newsletterStyles.description}>
+          Get fresh tutorials straight to your inbox and start learning how to
+          build real-world web applications.{" "}
+        </p>
+        <form
+          onSubmit={this._handleFormSubmit}
+          className={newsletterStyles.formContainer}
+          method="post"
+          noValidate
+        >
+          <input
+            className="fieldInput"
+            type="text"
+            onChange={this._handleEmailChange}
+            placeholder="Email here"
+          />
+          <button
+            style={{ outline: "none" }}
+            className="fieldSubmit"
+            type="submit"
+          >
+            I want to learn more
+          </button>
 
-              <span className={newsletterStyles.guarantee}>
-                100% Privacy. Guaranteed!
-              </span>
-            </form>
-          </>
-        )}
+          {this.state.status === `success` ? (
+            <div className={newsletterStyles.success}>
+              Welcome to the family! Youʼll receive your first email shortly.
+            </div>
+          ) : (
+            <div
+              className={newsletterStyles.error}
+              dangerouslySetInnerHTML={{ __html: this.state.msg }}
+            ></div>
+          )}
+
+          <span className={newsletterStyles.guarantee}>
+            100% Privacy. No spam. Guaranteed!
+          </span>
+        </form>
       </div>
     )
   }

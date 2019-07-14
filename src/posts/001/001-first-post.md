@@ -12,18 +12,18 @@ tags:
 Many desktop publishing packages and web page editors now use Lorem
 Ipsum as their default model text and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions have evolved
-over the years, sometimes by accident, sometimes on purpose
-(injected humor and the like).
 
-![article](./images/css.jpg)
+Check this <a href="http://localhost:8000/blog/ultimate-guide-to-wordpress-development">posts</a>
+over the years, sometimes by accident, sometimes on purpose another [post](http://localhost:8000/blog/ultimate-guide-to-wordpress-development)
+(injected humor and the like).
 
 ## Why do we use it?
 
-It is a long established fact that a reader will be distracted by the readable
+It is a long established <code>code</code> fact that a reader will be distracted by the readable
 content of a page when looking at its layout. The point of using Lorem Ipsum
 is that it has a more-or-less normal distribution of letters, as opposed to using
 
-```js
+```jsx
 {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,14 +35,15 @@ is that it has a more-or-less normal distribution of letters, as opposed to usin
 
 'Content here, content here', making it look like readable English.
 
-```jsx
+<div class="filename">Check this out</div>
 
+```jsx
 class TodoApp extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { items: [], text: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    super(props)
+    this.state = { items: [], text: "" }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   render() {
@@ -51,39 +52,35 @@ class TodoApp extends React.Component {
         <h3>TODO</h3>
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="new-todo">
-            What needs to be done?
-          </label>
+          <label htmlFor="new-todo">What needs to be done?</label>
           <input
             id="new-todo"
             onChange={this.handleChange}
             value={this.state.text}
           />
-          <button>
-            Add #{this.state.items.length + 1}
-          </button>
+          <button>Add #{this.state.items.length + 1}</button>
         </form>
       </div>
-    );
+    )
   }
 
   handleChange(e) {
-    this.setState({ text: e.target.value });
+    this.setState({ text: e.target.value })
   }
 
   handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     if (!this.state.text.length) {
-      return;
+      return
     }
     const newItem = {
       text: this.state.text,
-      id: Date.now()
-    };
+      id: Date.now(),
+    }
     this.setState(state => ({
       items: state.items.concat(newItem),
-      text: ''
-    }));
+      text: "",
+    }))
   }
 }
 
@@ -95,14 +92,11 @@ class TodoList extends React.Component {
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>
-    );
+    )
   }
 }
 
-ReactDOM.render(
-  <TodoApp />,
-  document.getElementById('todos-example')
-);
+ReactDOM.render(<TodoApp />, document.getElementById("todos-example"))
 ```
 
 ## This is the second heading

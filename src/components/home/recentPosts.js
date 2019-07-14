@@ -38,7 +38,7 @@ const RecentPosts = () => {
 
   return (
     <section id="blog" className={recentStyles.recentPosts}>
-      <SubHeading title="from the blog" />
+      <SubHeading title="Latest blog posts" />
       <div className={recentStyles.viewAll}>
         <Link to="/blog">view all posts</Link>
       </div>
