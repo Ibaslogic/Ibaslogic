@@ -12,7 +12,7 @@ import BlogItems from "../components/BlogPage/blogItems"
 const BlogPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Web Development Blog Articles" />
+      <SEO title="Web Dev Tutorials" />
       <BlogItems items={data} />
     </Layout>
   )
