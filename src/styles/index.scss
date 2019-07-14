@@ -106,6 +106,10 @@ pre code {
   }
 }
 
+pre[class*="language-"],
+pre {
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
+}
 code,
 pre {
   font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
@@ -143,7 +147,7 @@ li > a > code {
 }
 
 .token.class-name {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 // Navigation Menu

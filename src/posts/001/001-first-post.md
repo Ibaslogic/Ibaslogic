@@ -13,6 +13,35 @@ Many desktop publishing packages and web page editors now use Lorem
 Ipsum as their default model text and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions have evolved
 
+```
+├───components
+│   ├───BlogPage
+│   ├───globals
+│   ├───headSection
+│   ├───home
+│   └───sidebar
+├───images
+├───pages
+├───posts
+│   ├───001
+│   │   └───images
+│   ├───002
+│   │   └───images
+│   ├───003
+│   │   └───images
+│   ├───004
+│   │   └───images
+│   ├───005
+│   │   └───images
+│   ├───006
+│   │   └───images
+│   └───007
+│       └───images
+├───styles
+├───templates
+└───util
+```
+
 Check this <a href="http://localhost:8000/blog/ultimate-guide-to-wordpress-development">posts</a>
 over the years, sometimes by accident, sometimes on purpose another [post](http://localhost:8000/blog/ultimate-guide-to-wordpress-development)
 (injected humor and the like).
