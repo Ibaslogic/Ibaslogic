@@ -11,7 +11,7 @@ import RecentPosts from "../components/home/recentPosts"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Simple and Efficient Logic to Web Dev" />
+    <SEO title="Web Dev Tutorials" />
     <main className="main" role="main">
       <Hero />
       <RecentPosts />

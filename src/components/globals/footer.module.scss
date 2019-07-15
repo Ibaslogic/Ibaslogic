@@ -13,14 +13,14 @@ $content-max-width: 72rem;
 .container {
   max-width: $content-max-width;
   margin: 0 auto;
-  padding: 1.8rem 1rem;
+  padding: 1.8rem 10px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
     height: 8rem;
-    padding: 0 1rem;
+    padding: 0 10px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -43,7 +43,7 @@ $content-max-width: 72rem;
   vertical-align: baseline;
 
   @media screen and (min-width: 768px) {
-    margin-top: 0;
+    margin: 0 0 0 26px;
   }
 
   a {

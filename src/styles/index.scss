@@ -100,14 +100,13 @@ pre,
 pre[class*="language-"],
 pre code {
   font-size: 13px;
-  margin-bottom: 2rem;
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
 }
 
-pre[class*="language-"],
-pre {
+pre[class*="language-"] {
+  margin: 0.5em 0 2rem !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 }
 code,

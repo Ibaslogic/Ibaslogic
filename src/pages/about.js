@@ -4,11 +4,14 @@ import React from "react"
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
+import AboutHero from "../components/about/aboutHero"
+import AboutContent from "../components/about/aboutContent"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    Hello from About
+    <AboutHero />
+    <AboutContent />
   </Layout>
 )
 

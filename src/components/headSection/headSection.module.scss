@@ -4,18 +4,23 @@
 @mixin transition {
   transition: all 0.5s linear;
 }
-.homePageHero {
+.homePageHero,
+.errorPageHero {
   min-height: calc(100vh - 4rem);
-  background: #f7f7f7;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.homePageHero {
+  background: #f7f7f7;
+}
+.errorPageHero {
+  background: #ffffff;
+}
 .hero-content {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 4rem 10px;
   text-align: center;
 }
 .title {
@@ -128,6 +133,53 @@
     }
   }
 }
+
+.error-title {
+  font-size: 34px;
+  line-height: 1.17647;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 480px) {
+    font-size: 55px;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 82px;
+    line-height: 1.11905;
+  }
+}
+
+.error-description {
+  margin: 2em auto 0;
+  font-size: 18px;
+  line-height: 1.66667;
+  font-weight: 300;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.41667;
+  }
+}
+
+.error-button {
+  margin-top: 50px;
+  @media screen and (min-width: 480px) {
+    margin-top: 100px;
+  }
+  a {
+    //border: 1px solid #f55f2d;
+    background: #f55f2d;
+    color: #fff;
+    @include transition;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
 // .contact {
 //   margin-top: 3px;
 //   a {
