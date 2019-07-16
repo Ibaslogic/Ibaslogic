@@ -94,8 +94,10 @@
 
 .static-content {
   margin-top: 4rem;
+  margin-bottom: 4rem;
   @media screen and (min-width: 768px) {
     margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   p {
@@ -106,4 +108,125 @@
       font-size: 1.125rem;
     }
   }
+}
+
+.subscribe {
+  color: #fff;
+  background: url(../../images/newsletter-bg.jpg) center top no-repeat;
+  padding: 110px 0 100px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+
+  // @media screen and (min-width: 768px) {
+  //   padding: 280px 0 100px;
+  // }
+}
+.image-filter {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.subscibe-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.form-content {
+  margin: 0 auto;
+  .heading {
+    font-size: 1.4rem;
+    line-height: 1.44em;
+    font-weight: 600;
+
+    @media screen and (min-width: 480px) {
+      font-size: 1.7rem;
+      line-height: 1.2em;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 2.4rem;
+    }
+  }
+  .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+}
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  max-width: 24rem;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    max-width: 33rem;
+  }
+}
+
+.nl-subcribe {
+  @media screen and (min-width: 480px) {
+    display: block;
+  }
+}
+
+.field-input,
+.field-submit {
+  height: 50px;
+  font-size: inherit;
+}
+
+.field-input {
+  padding: 0px 25px;
+  border: 1px solid #f2f2f2;
+  margin-bottom: 4px;
+  color: #444;
+  @media screen and (min-width: 768px) {
+    flex: 6;
+    margin-bottom: 0;
+  }
+}
+.field-submit {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  @media screen and (min-width: 768px) {
+    flex: 4;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+  }
+}
+
+.success {
+  color: rgba(100, 255, 192, 0.93);
+}
+
+.error {
+  color: #f55f2d;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.success,
+.error {
+  margin-top: 20px;
 }
