@@ -58,7 +58,7 @@ class Newsletter extends Component {
     return (
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
         <p className={newsletterStyles.title}>
-          Like what you <br />
+          Enjoy what you <br />
           are reading?
         </p>
         <p className={newsletterStyles.description}>
