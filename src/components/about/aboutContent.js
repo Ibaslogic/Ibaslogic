@@ -13,7 +13,7 @@ const AboutContent = () => {
         <div className={aboutContentStyles.staticContent}>
           <p>
             If you are wondering where to learn WordPress, you've come to the
-            right place.
+            right place. I am testing....
           </p>
           <p>
             In this blog, you will get to know the simple logic behind WordPress
