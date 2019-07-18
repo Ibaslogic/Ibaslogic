@@ -1,8 +1,9 @@
 [[headers]]
   for = "*.js" # js files should be set this way
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "max-age=0, must-revalidate, public"
 [[headers]]
   for = "*.css" # css files too
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "max-age=0, must-revalidate, public"
+    
