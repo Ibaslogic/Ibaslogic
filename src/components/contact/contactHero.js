@@ -1,0 +1,26 @@
+import React from "react"
+import contactHeroStyles from "./contact.module.scss"
+
+const ContactHero = () => {
+  return (
+    <section className={contactHeroStyles.contactHero}>
+      {/* <div className={contactHeroStyles.imageFilter}></div> */}
+      <div className={contactHeroStyles.heroContentWrapper}>
+        <div className={contactHeroStyles.bannerContent}>
+          <h1>How can I help?</h1>
+          <p>
+            Do you have a question or you want to talk about your project? Just
+            send me an email and <span className={contactHeroStyles.nl}></span>{" "}
+            I will get back to you shortly.
+          </p>
+        </div>
+
+        <div className={contactHeroStyles.sendButton}>
+          <a href="mailto:ibaskunle@gmail.com">Email me</a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default ContactHero

@@ -4,11 +4,14 @@ import React from "react"
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
+import ContactHero from "../components/contact/contactHero"
+import ContactContent from "../components/contact/contactContent"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" />
-    contact page
+    <SEO title="Get in touch with Ibas" />
+    <ContactHero />
+    <ContactContent />
   </Layout>
 )
 

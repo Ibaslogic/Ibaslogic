@@ -10,10 +10,17 @@ const AboutHero = () => {
       >
         <div className={aboutHeroStyles.bannerContent}>
           <h1>
-            Find out how Ibaslogic will <span class={aboutHeroStyles.nl}></span>
-            <span>help you improve</span> your Dev knowledge
+            Find out how Ibaslogic will{" "}
+            <span>
+              {" "}
+              help <span class={aboutHeroStyles.nl}></span> you improve
+            </span>{" "}
+            your Web Dev knowledge
           </h1>
-          <p>Together we will build real-world web applications.</p>
+          <p>
+            Do you want to build real-world web applications? Then, you've{" "}
+            <span class={aboutHeroStyles.nl}></span>come to the right place.
+          </p>
         </div>
         <div className={aboutHeroStyles.imageContent}>
           <img src={authorImage} alt="Ibas Majid" />

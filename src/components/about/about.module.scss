@@ -1,3 +1,6 @@
+@mixin transition {
+  transition: all 0.3s ease-out;
+}
 // About Hero
 
 .about-hero {
@@ -80,7 +83,7 @@
 }
 
 .nl {
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1200px) {
     display: block;
   }
 }
@@ -112,15 +115,15 @@
 
 .subscribe {
   color: #fff;
-  background: url(../../images/newsletter-bg_.jpg) center top no-repeat;
+  background: url(../../images/newsletter-bg.jpg) center top no-repeat;
   padding: 110px 0 100px;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
 
-  @media screen and (min-width: 768px) {
-    background-image: url(../../images/newsletter-bg.jpg);
-  }
+  // @media screen and (min-width: 768px) {
+  //   background-image: url(../../images/newsletter-bg.jpg);
+  // }
 }
 .image-filter {
   background: rgba(0, 0, 0, 0.6);
@@ -189,6 +192,7 @@
   border: 1px solid #f2f2f2;
   margin-bottom: 4px;
   color: #444;
+  outline: none;
   @media screen and (min-width: 768px) {
     flex: 6;
     margin-bottom: 0;
@@ -202,6 +206,7 @@
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.04em;
+  @include transition;
 
   @media screen and (min-width: 768px) {
     flex: 4;
