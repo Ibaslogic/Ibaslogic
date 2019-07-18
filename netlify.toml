@@ -1,9 +1,23 @@
 [[headers]]
   for = "*.js" # js files should be set this way
   [headers.values]
-    Cache-Control = "max-age=0, must-revalidate, public"
+    cache-control = '''
+	max-age=0,
+	public,
+	must-revalidate'''
 [[headers]]
   for = "*.css" # css files too
   [headers.values]
-    Cache-Control = "max-age=0, must-revalidate, public"
+    cache-control = '''
+	max-age=0,
+	public,
+	must-revalidate'''
     
+[[headers]]
+  for = "https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+  [headers.values]
+    # COMMENT: Multi-key header rules are expressed with multi-line strings
+	cache-control = '''
+	max-age=0,
+	public,
+	must-revalidate'''
