@@ -3,7 +3,7 @@ title: "Updated: Custom icon fonts with React Native"
 description: "publishing packages and web page editors now use Lorem
 Ipsum as their default model text and a search for 'lorem ipsum' will"
 slug: "Custom icon fonts with React Native"
-date: "2019-07-13"
+date: "2019-07-20"
 category: "design"
 image: "./images/css.jpg"
 tags:
@@ -11,9 +11,9 @@ tags:
   - design
 ---
 
-Many desktop publishing packages and web page editors now use Lorem
+Today...Many desktop publishing packages and web page editors now use Lorem
 Ipsum as their default model text and a search for 'lorem ipsum' will
-uncover many web sites still in their infancy. Various versions have evolved
+uncover many web sites still in their infancy. 
 
 ```
 ├───components
