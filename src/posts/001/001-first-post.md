@@ -1,5 +1,7 @@
 ---
 title: "Updated: Custom icon fonts with React Native"
+description: "publishing packages and web page editors now use Lorem
+Ipsum as their default model text and a search for 'lorem ipsum' will"
 slug: "Custom icon fonts with React Native"
 date: "2019-07-13"
 category: "design"

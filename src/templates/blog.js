@@ -16,8 +16,10 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       timeToRead
+      excerpt
       frontmatter {
         title
+        description
         date(formatString: "MMMM Do, YYYY")
         tags
         image {
@@ -36,8 +38,12 @@ export const query = graphql`
 const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
-      <SEO title={data.markdownRemark.frontmatter.title} />
-      <div 
+      <SEO
+        title={data.markdownRemark.frontmatter.title}
+        excerpt={data.markdownRemark.excerpt}
+        description={data.markdownRemark.frontmatter.description}
+      />
+      <div
         id="primary"
         className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
       >

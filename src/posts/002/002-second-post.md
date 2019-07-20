@@ -1,5 +1,7 @@
 ---
 title: "The great gatsby bootcamp"
+description: "publishing packages and web page editors now use Lorem
+Ipsum as their default model text and a search for 'lorem ipsum' will"
 slug: "The great gatsby bootcamp"
 date: "2019-04-04"
 category: "development"

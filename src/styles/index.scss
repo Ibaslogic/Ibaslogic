@@ -108,6 +108,7 @@ pre code {
 pre[class*="language-"] {
   margin: 0.5em 0 2rem !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 }
 code,
 pre {
