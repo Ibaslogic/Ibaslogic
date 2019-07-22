@@ -49,7 +49,7 @@ const Blog = ({ data, pageContext }) => {
       >
         <main className={blogPageStyles.siteMain} role="main">
           <article className={blogPageStyles.singlePost}>
-            <header className="entryHeader">
+            <header className={blogPageStyles.entryHeader}>
               <h1 className={blogPageStyles.title}>
                 {data.markdownRemark.frontmatter.title}
               </h1>
@@ -80,10 +80,13 @@ const Blog = ({ data, pageContext }) => {
             </div>
           </article>
 
-          <SocialShare
-            slug={pageContext.slug}
-            title={data.markdownRemark.frontmatter.title}
-          />
+          <div className={blogPageStyles.bottomSocialShare}>
+            <SocialShare
+              slug={pageContext.slug}
+              title={data.markdownRemark.frontmatter.title}
+              heading="Share this"
+            />
+          </div>
 
           <div className={blogPageStyles.tagLinks}>
             <ul className={blogPageStyles.postTags}>
@@ -98,6 +101,14 @@ const Blog = ({ data, pageContext }) => {
         <aside className={blogPageStyles.secondaryArea}>
           <Sidebar />
         </aside>
+      </div>
+
+      <div className={blogPageStyles.sideSocialShare}>
+        <SocialShare
+          slug={pageContext.slug}
+          title={data.markdownRemark.frontmatter.title}
+          heading="share"
+        />
       </div>
     </Layout>
   )

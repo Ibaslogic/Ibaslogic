@@ -8,6 +8,7 @@ module.exports = {
     description: `Here, you'll learn all the rudiment of web development`,
     author: `Ibas Majid`,
     twitterHandle: `ibaskunle`,
+    siteUrl: `https://ibaslogic.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-catch-links`,

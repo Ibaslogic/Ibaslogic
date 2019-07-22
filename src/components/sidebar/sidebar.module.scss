@@ -65,13 +65,15 @@
 
   background: #fbfcfd;
   margin-bottom: 60px;
-  position: sticky;
-  top: 100px;
   font-size: 1rem;
   font-weight: 300;
 
   @media screen and(min-width: 480px) {
     padding: 3rem 1.5rem;
+  }
+  @media screen and(min-width: 1200px) {
+    top: 100px;
+    position: sticky;
   }
 }
 

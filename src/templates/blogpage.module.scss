@@ -29,7 +29,7 @@ $main-white: #fff;
 }
 .site-main {
   padding-bottom: 3.75rem;
-  max-width: 660px;
+  max-width: 680px;
   margin: 0 auto;
 
   img {
@@ -92,7 +92,7 @@ $main-white: #fff;
   //margin-bottom: 1.1rem;
 }
 
-.title {
+.entry-header .title {
   font-size: 1.67rem;
   line-height: 1.33333;
   //padding: 0.566rem 0 0;
@@ -202,4 +202,137 @@ $main-white: #fff;
 .entry-content h2,
 .entry-content h3 {
   padding-top: 0.8667rem;
+}
+
+// =====================================================
+// Social Shares
+// ======================
+
+@mixin transition {
+  transition: all 0.5s ease-out;
+}
+
+.share-container {
+  //display: block;
+  padding: 1.9375rem 0 0;
+  text-align: left;
+  border-top: 1px solid #f2f2f2;
+}
+
+.share-title {
+  font-size: 1.1875rem;
+  padding: 0;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.4375rem;
+    line-height: 1.3;
+  }
+}
+
+.bottom-social-share {
+  .social-share {
+    margin-top: 1.5rem;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0;
+
+      li {
+        margin: 8px 0;
+        a {
+          border-radius: 2px;
+          cursor: pointer;
+          margin: 0 9px 3px 0;
+          padding: 9px 33px 5px;
+          color: #fff;
+          @include transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+.side-social-share {
+  display: none;
+
+  @media screen and (min-width: 960px) {
+    display: block;
+  }
+  // @media screen and (min-width: 1345px) {
+  //   display: block;
+  //   left: 20px;
+  // }
+
+  .share-container {
+    @media screen and (min-width: 960px) {
+      left: 59.8%;
+    }
+    @media screen and (min-width: 1050px) {
+      left: 60.1%;
+    }
+    @media screen and (min-width: 1200px) {
+      left: 59.3%;
+    }
+    @media screen and (min-width: 1345px) {
+      left: 20px;
+      transform: translateX(-150%);
+    }
+    position: fixed;
+    top: 100px;
+    text-align: center;
+    padding: 0;
+    border: 0;
+
+    &.shareNotInView {
+      visibility: hidden;
+      transition: all 0.5s ease-out;
+    }
+
+    &.shareInView {
+      visibility: visible;
+      transform: translateX(0);
+      transition: all 0.5s ease-out;
+    }
+  }
+  .share-title {
+    font-size: 1rem;
+  }
+  ul {
+    margin: 0;
+    li {
+      margin: 21px 0;
+      a {
+        border-radius: 2px;
+        cursor: pointer;
+        //margin: 0 9px 3px 0;
+        padding: 9px 21px 6px;
+        color: #fff;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+.twitter {
+  background: #429cd6;
+  border: 1px solid #429cd6;
+}
+
+.facebook {
+  background: #3a589e;
+  border: 1px solid #3a589e;
+}
+
+.linkedin {
+  background: #0d77b7;
+  border: 1px solid #0d77b7;
 }

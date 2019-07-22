@@ -35,7 +35,7 @@ export default class Header extends Component {
   }
 
   handleToggle = () => {
-    console.log("clicked")
+    //console.log("clicked")
     this.setState({
       navbarOpen: !this.state.navbarOpen,
     })
@@ -45,29 +45,35 @@ export default class Header extends Component {
     return (
       <header className={headerStyles.container}>
         <div className={headerStyles.content}>
-          <div className="brand">
+          <div className={headerStyles.brand}>
             <Link to="/" className={headerStyles.brandLink}>
               <img src={logo} alt="ibaslogic logo" />
             </Link>
           </div>
 
-          <nav className="navbar">
+          <nav className={headerStyles.navbar}>
             <div
-              className={this.state.navbarOpen ? "menu-btn close" : "menu-btn"} // add close class
+              className={
+                this.state.navbarOpen
+                  ? `${headerStyles.menuBtn} ${headerStyles.close}`
+                  : `${headerStyles.menuBtn}`
+              } // add close class
               onClick={this.handleToggle}
             >
-              <div className="btn-line"></div>
-              <div className="btn-line"></div>
-              <div className="btn-line"></div>
+              <div className={headerStyles.btnLine}></div>
+              <div className={headerStyles.btnLine}></div>
+              <div className={headerStyles.btnLine}></div>
             </div>
             <ul // add show
               className={
-                this.state.navbarOpen ? "menu-nav show-nav" : "menu-nav"
+                this.state.navbarOpen
+                  ? `${headerStyles.menuNav} ${headerStyles.showNav}`
+                  : `${headerStyles.menuNav}`
               }
             >
               {this.state.links.map(link => {
                 return (
-                  <li key={link.id} className="nav-item">
+                  <li key={link.id} className={headerStyles.navItem}>
                     <Link
                       to={link.path}
                       className={headerStyles.navLink}
