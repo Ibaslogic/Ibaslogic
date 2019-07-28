@@ -141,7 +141,7 @@ $primary-color: #26282d;
     min-width: 157px;
     margin: 0;
     @include transition;
-    //height: 100px;
+    height: auto;
 
     border-radius: 2px;
     background-color: #fff;
