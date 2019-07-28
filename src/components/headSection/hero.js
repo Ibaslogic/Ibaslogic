@@ -9,8 +9,8 @@ const Hero = () => {
       <div className={heroStyles.heroContent}>
         <p className={heroStyles.title}>Dev Articles for the Self-Starter</p>
         <h1 className={heroStyles.description}>
-          Learn web dev and build realistic apps using{" "}
-          <span className={heroStyles.nl}></span>modern tools and technologies
+          Learn web dev and start building realistic apps
+          <span className={heroStyles.nl}></span> using modern tools and tech.
         </h1>
 
         <div className={heroStyles.heroButtonContainer}>

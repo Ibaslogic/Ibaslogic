@@ -159,6 +159,11 @@ $primary-color: #26282d;
     overflow-y: scroll;
     height: 200px;
     margin: 0;
+
+    @media screen and (min-width: 960px) {
+      overflow: hidden;
+      height: auto;
+    }
     // position: absolute;
     // top: 0;
     // left: 0;
@@ -176,13 +181,15 @@ $primary-color: #26282d;
     //@include transition;
 
     &:hover {
-      background-color: #e3e3e2;
-      color: #000;
+      background-color: #20232a;
+      color: #fff;
+      opacity: 0.8;
     }
 
     &.selected {
-      background-color: #e3e3e2;
-      color: #000;
+      background-color: #20232a;
+      opacity: 0.8;
+      color: #fff;
     }
   }
   // .selected-box-item {
