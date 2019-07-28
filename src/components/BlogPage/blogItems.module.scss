@@ -156,14 +156,14 @@ $primary-color: #26282d;
   }
 
   .drop-down-list {
-    overflow-y: scroll;
-    height: 200px;
+    //overflow-y: scroll;
+    height: auto;
     margin: 0;
 
-    @media screen and (min-width: 960px) {
-      overflow: hidden;
-      height: auto;
-    }
+    // @media screen and (min-width: 960px) {
+    //   overflow: hidden;
+    //   height: auto;
+    // }
     // position: absolute;
     // top: 0;
     // left: 0;
