@@ -1,19 +1,17 @@
 import React from "react"
 import { Link } from "react-scroll"
 import heroStyles from "./headSection.module.scss"
+import { FaChevronDown } from "react-icons/fa"
 
 const Hero = () => {
   return (
     <div className={heroStyles.homePageHero}>
       <div className={heroStyles.heroContent}>
-        <p className={heroStyles.description}>
-          WebDev Articles for Self-Starter
-        </p>
-        <p className={heroStyles.title}>
-          Learn the latest Dev technologies and start{" "}
-          <span className={heroStyles.nl}></span> building real world web
-          applications
-        </p>
+        <p className={heroStyles.title}>Dev Articles for the Self-Starter</p>
+        <h1 className={heroStyles.description}>
+          Learn web dev and build realistic apps using{" "}
+          <span className={heroStyles.nl}></span>modern tools and technologies
+        </h1>
 
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.startHere}>
@@ -25,7 +23,7 @@ const Hero = () => {
               offset={-64}
               duration={500}
             >
-              start here
+              get started <FaChevronDown />
             </Link>
           </div>
           {/* <div className={`${heroStyles.contact} ${heroStyles.button}`}>

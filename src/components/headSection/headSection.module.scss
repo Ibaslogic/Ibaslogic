@@ -12,7 +12,7 @@
   justify-content: center;
 }
 .homePageHero {
-  background: #f7f7f7;
+  background: #f8f9fa;
 }
 .errorPageHero {
   background: #ffffff;
@@ -24,59 +24,27 @@
   text-align: center;
 }
 .title {
-  font-size: 30px;
-  line-height: 1.17647;
-  margin-bottom: 4rem;
-  font-weight: 600;
-  padding-top: 24px;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  padding-top: 0;
 
-  @media screen and (min-width: 600px) {
-    font-size: 37px;
-    line-height: 1.146em;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 41px;
-  }
-  @media screen and (min-width: 960px) {
-    font-size: 43px;
-    padding-top: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 52px;
-  }
-}
-
-.nl {
-  @media screen and (min-width: 960px) {
-    display: block;
-  }
-}
-
-.description {
-  letter-spacing: 0;
-  margin-bottom: 1.35em;
-  font-size: 18px;
-  line-height: 1.34667;
-  font-weight: 100;
-  max-width: 34em;
-  margin-right: auto;
-  margin-left: auto;
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     width: 5.75rem;
-    height: 0.0625rem;
+    height: 1px;
     background: #f55f2d;
     position: absolute;
-    bottom: -1.5rem;
+    bottom: -44px;
     left: 50%;
     margin-left: -2.875rem;
 
-    @media screen and (min-width: 960px) {
-      bottom: -3.5rem;
-    }
+    // @media screen and (min-width: 960px) {
+    //   bottom: -3.5rem;
+    // }
   }
 
   @media screen and (min-width: 480px) {
@@ -85,36 +53,67 @@
   }
   @media screen and (min-width: 768px) {
     font-size: 26px;
-    line-height: 1.27667;
   }
-  @media screen and (min-width: 960px) {
-    font-size: 31px;
+}
+
+.nl {
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.description {
+  letter-spacing: 0;
+  margin-bottom: 5.5rem;
+  font-size: 2.1rem;
+  line-height: 1.17647;
+  font-weight: 600;
+  max-width: 34em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 44px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 2.4rem;
+    line-height: 1.14583em;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 3rem;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 37px;
+    font-size: 3.3rem;
   }
 }
 .hero-button-container {
   a {
-    display: block;
-    max-width: 270px;
+    //display: block;
+    //max-width: 270px;
     margin: 0 auto;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 2px;
     line-height: 1.5;
-    padding: 0.8rem 1rem;
+    //padding: 0.8rem 1rem;
+    //height:46px;
+    outline: none;
+    padding: 17px 24px;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.03rem;
 
-    @media screen and (min-width: 768px) {
-      max-width: 330px;
+    svg {
+      margin-bottom: -3px;
+      margin-left: 7px;
+      font-size: 18px;
     }
-    @media screen and (min-width: 768px) {
-      max-width: 360px;
-      padding: 0.9rem 1rem;
-    }
+
+    // @media screen and (min-width: 768px) {
+    //   max-width: 330px;
+    // }
+    // @media screen and (min-width: 768px) {
+    //   max-width: 360px;
+    //   padding: 0.9rem 1rem;
+    // }
   }
   // display: flex;
   // flex-wrap: wrap;

@@ -20,16 +20,22 @@ class BlogItems extends Component {
       items: props.items.allMarkdownRemark.edges,
       blogPostItems: props.items.allMarkdownRemark.edges,
       categories: getCategories(props.items.allMarkdownRemark.edges),
+      showItems: false,
+      selectedItem:
+        getCategories(props.items.allMarkdownRemark.edges) &&
+        getCategories(props.items.allMarkdownRemark.edges)[0],
     }
   }
 
-  handleItems = event => {
-    let category = event.target.value
+  handleItems = category => {
+    // let category = event.target.value
     let tempItems = [...this.state.items]
     if (category === "everything") {
       this.setState(() => {
         return {
           blogPostItems: tempItems,
+          //showItems: false,
+          selectedItem: category,
         }
       })
     } else {
@@ -39,9 +45,17 @@ class BlogItems extends Component {
       this.setState(() => {
         return {
           blogPostItems: items,
+          //showItems: false,
+          selectedItem: category,
         }
       })
     }
+  }
+
+  dropDown = () => {
+    this.setState(prevState => ({
+      showItems: !prevState.showItems,
+    }))
   }
 
   render() {
@@ -51,20 +65,51 @@ class BlogItems extends Component {
           <div className={blogStyles.container}>
             {/* categories filter */}
             <div className={blogStyles.filterPosts}>
-              <p>
+              <span className={blogStyles.filterPostsHeading}>
                 I want to learn about
-                <span>
-                  <select onChange={this.handleItems}>
+              </span>
+
+              <div
+                onClick={this.dropDown}
+                className={blogStyles.selectBoxContainer}
+              >
+                <span className={blogStyles.selectedBoxItem}>
+                  {this.state.selectedItem}
+                </span>
+                <div className={blogStyles.selectBoxArrow}>
+                  <span
+                    className={`${
+                      this.state.showItems
+                        ? `${blogStyles.selectBoxArrowUp}`
+                        : `${blogStyles.selectBoxArrowDown}`
+                    }`}
+                  ></span>
+                </div>
+
+                <div
+                  className={blogStyles.dropDownContainer}
+                  style={{ display: this.state.showItems ? "block" : "none" }}
+                >
+                  <ul className={blogStyles.dropDownList}>
                     {this.state.categories.map((category, index) => {
+                      const listClass =
+                        this.state.selectedItem === category
+                          ? `${blogStyles.selected}`
+                          : ""
                       return (
-                        <option key={index} value={category}>
+                        <li
+                          key={index}
+                          value={category}
+                          onClick={() => this.handleItems(category)}
+                          className={`${blogStyles.dropDownItem} ${listClass}`}
+                        >
                           {category}
-                        </option>
+                        </li>
                       )
                     })}
-                  </select>{" "}
-                </span>
-              </p>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <ul className={blogStyles.list}>

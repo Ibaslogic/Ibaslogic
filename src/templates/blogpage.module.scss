@@ -29,7 +29,7 @@ $main-white: #fff;
 }
 .site-main {
   padding-bottom: 3.75rem;
-  max-width: 680px;
+  max-width: 690px;
   margin: 0 auto;
 
   img {
@@ -40,6 +40,9 @@ $main-white: #fff;
     padding-bottom: 0;
     width: 59.34%;
     margin: 0;
+  }
+  @media screen and (min-width: 1345px) {
+    width: 60%;
   }
 }
 
@@ -103,7 +106,7 @@ $main-white: #fff;
   }
 
   @media screen and (min-width: 960px) {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 }
 .date-published {
