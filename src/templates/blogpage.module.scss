@@ -132,18 +132,27 @@ $main-white: #fff;
 }
 .featured-image {
   margin-bottom: 1.666667rem;
+
+  @media screen and (min-width: 960px) {
+    margin-bottom: 1.8667rem;
+  }
 }
 .entry-content {
   line-height: 1.75;
   word-wrap: break-word;
   hyphens: auto;
+  font-size: 0.938rem;
+
+  @media screen and (min-width: 480px) {
+    font-size: 1rem;
+  }
 
   ol li {
     list-style: decimal;
   }
 
   li {
-    margin-bottom: 0.4333333333335em;
+    margin-bottom: 0.2333333333335em;
   }
 
   li > p {
@@ -181,7 +190,11 @@ $main-white: #fff;
   p,
   ul,
   ol {
-    margin-bottom: 1.6667rem;
+    margin-bottom: 1.4rem;
+
+    @media screen and (min-width: 480px) {
+      margin-bottom: 1.6667rem;
+    }
   }
   h2,
   h3 {
