@@ -76,7 +76,7 @@ As you can see in the node tree, the document node is different from the <code><
 
 For instance,
 
-<code>document.doctype</code> will return the document type definition of the document. In the case of our HTML document, it will return <code><!DOCTYPE html></code>.
+<code>document.doctype</code> will return the document type definition of the document. In the case of our HTML document, it will return <code> &lt;!DOCTYPE html&gt;</code>.
 
 The DOM also provides API methods that allow access to the web page and manipulate it through the document object. For example, when you do this:
 
@@ -102,8 +102,8 @@ document.createTextNode(text)
 
 In any HTML document, spaces and newlines are considered valid characters in the DOM and as such, they form text nodes. This comes with two exceptions:
 
-1. spaces or newlines before the <head> tag are ignored.
-2. Also, spaces after the </body> tag are ignored
+1. spaces or newlines before the <code> &lt;head&gt;</code> tag are ignored.
+2. Also, spaces after the <code>&lt;/body&gt;</code> tag are ignored
 
 **Note:** Even though Comment is also a node type, the DOM will display whatever is present in the document (even if it is comment) as it is constructed from the source HTML
 
@@ -127,7 +127,7 @@ No. It is not!
 
 Another scenario where the DOM is different from the source HTML is when you have an invalid HTML document. This document will be automatically corrected while the DOM is being created by the browser.
 
-For instance, if your document is missing the required HTML element like the <html>, <head> and/or <body>, the browser will create and make them available in the DOM. With this, the DOM will always have a valid HTML.
+For instance, if your document is missing the required HTML element like the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> and/or <code>&lt;body&gt;</code>, the browser will create and make them available in the DOM. With this, the DOM will always have a valid HTML.
 
 But hold up a second.
 
@@ -145,7 +145,7 @@ This is so because of the following reasons:
 
 As seen in the image above, any space or newline between tags becomes empty text node <code>#text:</code> in the DOM view section.
 
-Remember that DOM ignores space and newline before the <code><head></code> tag and after <code></body></code> tag as explained under the node types section
+Remember that DOM ignores space and newline before the <code>&lt;head&gt;</code> tag and after <code>&lt;/body&gt;</code> tag as explained under the node types section
 
 Now, let’s remove spaces and newlines between tags and see its behave in the Live DOM Viewer.
 
