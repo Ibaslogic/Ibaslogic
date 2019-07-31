@@ -128,8 +128,11 @@ li > code,
 p > a > code,
 li > a > code {
   padding: 0 3px;
-  font-size: 0.94em;
+  font-size: 0.85rem;
   word-break: break-word;
+  @media screen and (min-width: 480px) {
+    font-size: 0.92em;
+  }
 }
 
 // Prism Highligter
