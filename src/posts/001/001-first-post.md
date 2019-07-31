@@ -174,7 +174,7 @@ Now we only have text node for strings between tags. This is not the case for th
    As a result of this, the DOM would not have access to them since it is created from the source HTML.
    To check things out, go ahead and add the following code just before the <code></head></code> tag in your HTML document.
 
-```css
+```html
 <style>
   a::after {
     content: " to Google";
