@@ -68,6 +68,10 @@ Let’s take a step further and talk about the node types.
 
 As seen in the image above, the DOM is a tree of different nodes. And in general, there are 8 types of node, of which five were highlighted in the image above (in the Labels section).
 
+Testing images
+
+![dom tree](./react-html.png "the dom tree")
+
 But in practice, we usually work with three. These include –
 
 **1. document node** – This node serves as the entry point into the web page’s content (DOM tree). It represents the entire document in the browser.
