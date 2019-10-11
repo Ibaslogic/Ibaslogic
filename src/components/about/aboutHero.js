@@ -10,15 +10,20 @@ const AboutHero = () => {
       >
         <div className={aboutHeroStyles.bannerContent}>
           <h1>
-            Find out how Ibaslogic will{" "}
+            Let's{" "}
+            <span>
+              help you <span class={aboutHeroStyles.nl}></span>improve{" "}
+            </span>
+            your Dev Knowledge
+            {/* Find out how Ibaslogic will{" "}
             <span>
               {" "}
               help <span class={aboutHeroStyles.nl}></span> you improve
             </span>{" "}
-            your Web Dev knowledge
+            your Web Dev knowledge */}
           </h1>
           <p>
-            Do you want to build real-world web applications? Then, you've{" "}
+            If you want to build real-world web applications? Then, you've{" "}
             <span class={aboutHeroStyles.nl}></span>come to the right place.
           </p>
         </div>

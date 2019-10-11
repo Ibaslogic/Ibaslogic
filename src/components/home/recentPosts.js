@@ -38,10 +38,15 @@ const RecentPosts = () => {
 
   return (
     <section id="blog" className={recentStyles.recentPosts}>
-      <SubHeading title="Latest blog posts" />
-      <div className={recentStyles.viewAll}>
-        <Link to="/blog">view all posts</Link>
+      <div className={recentStyles.subStyles}>
+        <div className={recentStyles.titleStyles}>
+          <SubHeading title="Latest blog posts" />
+        </div>
+        <div className={recentStyles.viewAll}>
+          <Link to="/blog">view all</Link>
+        </div>
       </div>
+
       <div className={recentStyles.container}>
         {edges.map(({ node }) => {
           const { id, frontmatter, fields, excerpt } = node

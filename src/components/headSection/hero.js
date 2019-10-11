@@ -7,11 +7,14 @@ const Hero = () => {
   return (
     <div className={heroStyles.homePageHero}>
       <div className={heroStyles.heroContent}>
-        <p className={heroStyles.title}>Dev Articles for the Self-Starter</p>
-        <h1 className={heroStyles.description}>
-          Learn web dev and start building realistic apps
-          <span className={heroStyles.nl}></span> using modern tools and tech.
+        <h1 className={heroStyles.title}>
+          Ready to build modern websites or apps?
         </h1>
+        <p className={heroStyles.description}>
+          Here, you will learn the latest web technologies and tools needed to
+          develop realistic apps.
+          {/* <span className={heroStyles.nl}></span>  */}
+        </p>
 
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.startHere}>
@@ -23,7 +26,7 @@ const Hero = () => {
               offset={-64}
               duration={500}
             >
-              get started <FaChevronDown />
+              get started
             </Link>
           </div>
           {/* <div className={`${heroStyles.contact} ${heroStyles.button}`}>
@@ -31,6 +34,18 @@ const Hero = () => {
           </div> */}
         </div>
       </div>
+
+      <Link
+        //activeClass="active"
+        to="blog"
+        //spy={true}
+        smooth={true}
+        offset={-64}
+        duration={500}
+        className={heroStyles.arrow}
+      >
+        <FaChevronDown />
+      </Link>
     </div>
   )
 }

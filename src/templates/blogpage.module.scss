@@ -1,5 +1,5 @@
 $content-max-width: 72rem;
-$link-color: #f55f2d;
+$link-color: #f44f18;
 $main-white: #fff;
 
 @mixin transition {
@@ -34,6 +34,8 @@ $main-white: #fff;
 
   img {
     margin-bottom: 1.666667rem;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
+    -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
   }
 
   @media screen and (min-width: 960px) {

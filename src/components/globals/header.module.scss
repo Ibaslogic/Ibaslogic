@@ -1,5 +1,6 @@
-$header-bg-color: #20232a;
+$header-bg-color: #ffffff;
 $main-white: #fff;
+$nav-link: #444;
 $content-max-width: 72rem;
 
 // mixins
@@ -21,8 +22,10 @@ $content-max-width: 72rem;
   width: 100%;
   top: 0;
   left: 0;
-  -webkit-box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
-  box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
+  // -webkit-box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
+  // box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
 }
 .content {
   display: flex;
@@ -36,19 +39,19 @@ $content-max-width: 72rem;
 
 .brand-link {
   img {
-    width: 130px;
+    width: 138px;
     margin: 0;
   }
 }
 
 .nav-link {
   display: block;
-  padding: 0.875rem 0;
+  padding: 1.4rem 0;
   line-height: 1.3125rem;
-  font-size: 1.3125rem;
-  color: $main-white;
+  font-size: 1.2125rem;
+  color: $nav-link;
   margin-left: 0;
-  opacity: 0.6;
+  opacity: 0.7;
   font-weight: bold;
   text-transform: capitalize;
   text-decoration: none;
@@ -68,7 +71,7 @@ $content-max-width: 72rem;
     font-size: 0.96rem;
     font-weight: 300;
     position: relative;
-    opacity: 0.8;
+    opacity: 1;
 
     &::after {
       content: "";
@@ -78,7 +81,7 @@ $content-max-width: 72rem;
       right: 0;
       bottom: -3px;
       height: 1px;
-      background: #fff;
+      background: #444;
       opacity: 0;
       @include transition;
     }
@@ -91,7 +94,6 @@ $content-max-width: 72rem;
     }
 
     &.active-nav-item {
-      opacity: 0.8;
       &::after {
         opacity: 1;
       }
@@ -111,7 +113,7 @@ $content-max-width: 72rem;
     width: 24px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: $main-white;
+    background: $nav-link;
     @include transition;
   }
   //rotate into X with Menu lines
@@ -137,7 +139,7 @@ $content-max-width: 72rem;
 .menu-nav {
   position: absolute;
   top: 0;
-  opacity: 0.9;
+  // opacity: 0.9;
   display: flex;
   flex-flow: column wrap;
   width: 100%;

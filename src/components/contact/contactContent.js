@@ -7,7 +7,10 @@ const ContactContent = () => {
   return (
     <section className={contactContentStyles.contact}>
       <div className={contactContentStyles.contentWrapper}>
-        <SubHeading title="You can also connect with me on..." />
+        <div className={contactContentStyles.heading}>
+          <SubHeading title="You can also connect with me on..." />
+        </div>
+
         <ContactSocial />
       </div>
     </section>

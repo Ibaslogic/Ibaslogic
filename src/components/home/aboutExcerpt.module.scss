@@ -1,0 +1,32 @@
+.about-posts {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding-top: 3.5rem;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5rem;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 72rem;
+  }
+  .about-excerpt {
+    display: flex;
+    padding: 4rem 1.25rem 0;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 3rem;
+      flex-direction: row;
+    }
+  }
+  .col-left {
+    margin-right: 10px;
+  }
+  .col-right {
+  }
+}
+.sub-styles-excerpt {
+  @media screen and (min-width: 960px) {
+    justify-content: start;
+  }
+}

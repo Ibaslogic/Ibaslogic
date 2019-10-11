@@ -45,7 +45,7 @@
       @include transition;
 
       &:hover {
-        color: #f55f2d;
+        color: #f44f18;
       }
     }
   }
@@ -121,8 +121,8 @@
     color: #444;
   }
   button {
-    background-color: #f55f2d;
-    border: 1px solid #f55f2d;
+    background-color: #f44f18;
+    border: 1px solid #f44f18;
     opacity: 1;
     color: #fff;
     text-transform: uppercase;
@@ -152,7 +152,7 @@
 }
 
 .error {
-  color: #f55f2d;
+  color: #f44f18;
 
   a {
     text-decoration: underline;

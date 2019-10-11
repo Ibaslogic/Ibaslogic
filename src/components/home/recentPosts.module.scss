@@ -3,10 +3,18 @@
 }
 
 .recent-posts {
+  padding-top: 3.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 5rem;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 640px;
+    max-width: 45rem;
     margin: 0 auto;
     padding: 4rem 1.25rem;
 
@@ -15,57 +23,77 @@
       padding-bottom: 6rem;
     }
     @media screen and (min-width: 960px) {
-      max-width: 1150px;
+      // max-width: 1150px;
+      max-width: 72rem;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 25px;
     }
   }
 }
-.section-header {
-  padding-top: 3.5rem;
+.sub-styles {
+  display: flex;
+  justify-content: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  flex-direction: column;
   text-align: center;
 
-  @media screen and (min-width: 768px) {
-    padding-top: 5rem;
+  @media screen and (min-width: 960px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
   }
-  .section-title {
-    margin: 0;
-    font-size: 1.675rem;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-    //text-transform: capitalize;
-    position: relative;
+}
+.title-styles {
+  margin-right: 13px;
+}
 
-    @media screen and (min-width: 480px) {
-      font-size: 1.875rem;
-    }
-    @media screen and (min-width: 768px) {
-      font-size: 2.375rem;
-    }
-    @media screen and (min-width: 960px) {
-      font-size: 2.625rem;
-    }
+.section-title {
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  line-height: 1.455em;
+  //text-transform: capitalize;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 3.75rem;
-      height: 0.0625rem;
-      background: #f55f2d;
-      position: absolute;
-      bottom: -2rem;
-      left: 50%;
-      margin-left: -1.875rem;
-    }
+  @media screen and (min-width: 480px) {
+    font-size: 1.875rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 2.375rem;
+  }
+  @media screen and (min-width: 960px) {
+    margin-bottom: 0rem;
+    font-size: 2.75rem;
   }
 }
 
 .view-all {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1rem;
-  padding-top: 12px;
+  font-size: 0.94rem;
+  //padding-top: 7px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 2.75rem;
+    height: 0.0625rem;
+    background: #e1d4d0;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    margin-left: -1.475rem;
+
+    @media screen and (min-width: 960px) {
+      width: 0.0625rem;
+      height: 1.75rem;
+      bottom: 0;
+      left: -6px;
+      margin-left: 0;
+    }
+  }
 
   a {
     @include transition;
@@ -133,7 +161,7 @@
     // }
 
     &:hover {
-      color: #f55f2d;
+      color: #f44f18;
     }
     a {
       color: inherit;

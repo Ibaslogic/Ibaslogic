@@ -1,5 +1,5 @@
 $content-max-width: 72rem;
-$primary-color: #26282d;
+$primary-color: #3c4043;
 
 @mixin transition {
   -webkit-transition: all 0.3s ease-in-out;
@@ -55,7 +55,7 @@ $primary-color: #26282d;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.447;
-  margin-bottom: 3.18rem;
+  margin-bottom: 4.18rem;
 
   @media screen and (min-width: 480px) {
     font-size: 2rem;
@@ -145,8 +145,8 @@ $primary-color: #26282d;
 
     border-radius: 2px;
     background-color: #fff;
-    -webkit-box-shadow: 0 15px 30px 0 rgba(54, 57, 73, 0.09);
-    box-shadow: 0 15px 30px 0 rgba(54, 57, 73, 0.09);
+    -webkit-box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09); // rgba(54, 57, 73, 0.09);
+    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09), inset 0 -1px 0 0 #f44f18;
     z-index: 9;
     overflow: hidden;
 
@@ -181,13 +181,13 @@ $primary-color: #26282d;
     //@include transition;
 
     &:hover {
-      background-color: #20232a;
+      background-color: #f44f18; // #20232a;
       color: #fff;
       opacity: 0.8;
     }
 
     &.selected {
-      background-color: #20232a;
+      background-color: #f44f18; // #20232a;
       opacity: 0.8;
       color: #fff;
     }
@@ -357,7 +357,7 @@ $primary-color: #26282d;
   a {
     color: #26282d;
     &:hover {
-      color: #f55f2d;
+      color: #f44f18;
       text-decoration: underline;
     }
   }
@@ -369,6 +369,6 @@ $primary-color: #26282d;
     height: 6px;
     left: -23px;
     top: 9px;
-    background: #f55f2d;
+    background: #f44f18;
   }
 }

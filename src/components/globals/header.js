@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
 import { Link } from "gatsby"
-import logo from "../../images/ibaslogic_logo.svg"
-
+//import logo from "../../images/ibaslogic_logo.svg"
+import logo from "../../images/ibaslogic4.png"
 // header styles
 import headerStyles from "./header.module.scss"
 

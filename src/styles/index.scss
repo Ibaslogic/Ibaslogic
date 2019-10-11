@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
 
 // Variables
-$primary-color: #1a1a1a;
+$primary-color: #3c4043;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
 $main-white: #fff;
@@ -12,7 +12,7 @@ $main-black: #222;
 $main-spacing: 0.1rem;
 $body-font: "Roboto", sans-serif;
 $home-bg-banner: #282c34;
-$link-color: #f55f2d;
+$link-color: #f44f18;
 
 // mixins
 @mixin transition {
@@ -89,7 +89,7 @@ h2,
 h3,
 h2 a,
 h2 a:hover {
-  color: #161922;
+  color: #202124;
 }
 
 // Code
@@ -120,7 +120,7 @@ p > code,
 li > code,
 li > code {
   background: #f2f2f2;
-  color: #f55f2d; // #151414;
+  color: #f44f18; // #151414;
 }
 
 p > code,

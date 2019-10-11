@@ -9,7 +9,10 @@ const AboutContent = () => {
       <div
         className={`${aboutContentStyles.content} ${aboutContentStyles.wrapper}`}
       >
-        <SubHeading title="About Ibaslogic" />
+        <div className={aboutContentStyles.headingWrap}>
+          <SubHeading title="About Ibaslogic" />
+        </div>
+
         <div className={aboutContentStyles.staticContent}>
           <p>
             If you are wondering where to learn WordPress, you've come to the
@@ -34,7 +37,9 @@ const AboutContent = () => {
       <div
         className={`${aboutContentStyles.content} ${aboutContentStyles.wrapper}`}
       >
-        <SubHeading title="Who is Ibas?" />
+        <div className={aboutContentStyles.headingWrap}>
+          <SubHeading title="Who is Ibas?" />
+        </div>
         <div className={aboutContentStyles.staticContent}>
           <p>
             If you are wondering where to learn WordPress, you've come to the

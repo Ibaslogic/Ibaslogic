@@ -72,12 +72,31 @@
     display: block;
   }
 }
+
+.heading {
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 4.75rem;
+    height: 0.0625rem;
+    background: #f44f18;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    margin-left: -2.25rem;
+  }
+}
+
 .contact {
   .content-wrapper {
-    padding: 0 1.25rem 4rem;
+    padding: 4rem 1.25rem;
     max-width: 72rem;
     margin: 0 auto;
     @media screen and (min-width: 768px) {
+      padding-top: 5rem;
       padding-bottom: 5rem;
     }
   }

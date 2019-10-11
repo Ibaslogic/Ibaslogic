@@ -34,6 +34,28 @@
   padding-right: 1.25rem;
 }
 
+.heading-wrap {
+  padding-top: 3rem;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 4.75rem;
+    height: 0.0625rem;
+    background: #f44f18;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    margin-left: -2.25rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 4rem;
+  }
+}
+
 .image-content {
   img {
     height: auto;
@@ -56,18 +78,25 @@
     margin-top: -100px;
   }
   h1 {
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 1.27647;
+    font-weight: normal;
     margin-bottom: 1.5rem;
 
     @media screen and (min-width: 480px) {
       font-size: 2.5rem;
-      line-height: 1.323em;
+      line-height: 1.14583em;
     }
-    @media screen and (min-width: 990px) {
-      font-size: 3rem;
-      line-height: 1.223em;
+    @media screen and (min-width: 600px) {
+      font-size: 2.7rem;
     }
+    @media screen and (min-width: 768px) {
+      font-size: 3.2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 4.3rem;
+    }
+
     // @media screen and (min-width: 1200px) {
     //   font-size: 3.5rem;
     // }
@@ -83,7 +112,7 @@
 }
 
 .nl {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 }
@@ -225,7 +254,7 @@
 }
 
 .error {
-  color: #f55f2d;
+  color: #f44f18;
   a {
     text-decoration: underline;
   }
