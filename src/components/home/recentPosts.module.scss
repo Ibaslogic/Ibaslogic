@@ -114,7 +114,7 @@
     @media screen and (min-width: 480px) {
       flex: 3;
       margin-bottom: 0;
-      margin-right: 0.4375rem;
+      margin-right: 0.7375rem;
     }
     @media screen and (min-width: 600px) {
       margin-right: 1.0625rem;
@@ -146,7 +146,7 @@
 .content {
   h2 {
     font-size: 1.1875rem;
-    font-weight: 300;
+    font-weight: normal;
     margin-bottom: 1rem;
     line-height: 1.32em;
 
@@ -155,6 +155,7 @@
     }
     @media screen and (min-width: 600px) {
       font-size: 1.4375rem;
+      margin-bottom: 0.55rem;
     }
     // @media screen and (min-width: 960px) {
     //   font-size: 1.6rem;
@@ -170,7 +171,7 @@
   p {
     font-size: 0.9375rem;
     margin: 0;
-    line-height: 1.714285714;
-    letter-spacing: 0.02em;
+    line-height: 1.625rem;
+    letter-spacing: 0;
   }
 }

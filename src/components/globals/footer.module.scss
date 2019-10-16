@@ -1,13 +1,15 @@
-$footer-bg-color: #282c34;
+$footer-bg-color: #f7f8f9;
 $main-white: #fff;
 $content-max-width: 72rem;
 
 .site-footer {
   background: $footer-bg-color;
-  color: $main-white;
-  font-size: 0.75rem;
-  line-height: 1.66667;
+  //color: $main-white;
+  font-size: 0.8rem;
   text-align: center;
+  border-top: 1px solid #e6e8ea;
+  line-height: 1.375rem;
+  letter-spacing: 0.01562rem;
 }
 
 .container {
@@ -29,7 +31,7 @@ $content-max-width: 72rem;
 .copy {
   margin: 0;
   letter-spacing: 0.05em;
-  opacity: 0.8;
+  //opacity: 0.8;
 }
 .socialList {
   display: flex;
@@ -48,11 +50,10 @@ $content-max-width: 72rem;
   }
 
   a {
-    color: #fff;
-    opacity: inherit;
+    color: #3c4043;
 
     &:hover {
-      opacity: 1;
+      color: #202124;
     }
   }
 }
@@ -71,7 +72,7 @@ $content-max-width: 72rem;
 .check-me {
   position: relative;
 
-  opacity: 0.5;
+  //opacity: 0.5;
   margin-top: 19px;
 
   @media screen and (min-width: 768px) {
@@ -83,7 +84,7 @@ $content-max-width: 72rem;
       display: block;
       width: 27px;
       height: 1px;
-      background: #fff;
+      background: #3c4043;
       position: absolute;
       top: 50%;
       margin-top: -1px;

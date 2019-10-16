@@ -13,6 +13,9 @@
     display: flex;
     padding: 4rem 1.25rem 0;
     flex-direction: column;
+    font-size: 1rem;
+line-height: 1.625rem;
+letter-spacing: 0;
 
     @media screen and (min-width: 768px) {
       padding-top: 3rem;
