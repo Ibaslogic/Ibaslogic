@@ -104,11 +104,11 @@ $main-white: #fff;
   margin: 0 0 1.2rem;
 
   @media screen and (min-width: 480px) {
-    font-size: 1.87rem;
+    font-size: 1.8rem;
   }
 
   @media screen and (min-width: 960px) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 .date-published {
@@ -144,9 +144,14 @@ $main-white: #fff;
   word-wrap: break-word;
   hyphens: auto;
   font-size: 0.938rem;
+  font-weight: normal;
+  letter-spacing: 0;
 
   @media screen and (min-width: 480px) {
     font-size: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    letter-spacing: 0.025em;
   }
 
   ol li {
@@ -198,17 +203,24 @@ $main-white: #fff;
       margin-bottom: 1.6667rem;
     }
   }
+  h2 {
+    font-size: 1.2rem;
+    @media screen and (min-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+  h3 {
+    font-size: 1.05rem;
+    @media screen and (min-width: 480px) {
+      font-size: 1.3rem;
+    }
+  }
   h2,
   h3 {
-    font-size: 1.2rem;
     line-height: 1.3777em;
     margin-bottom: 1.2em;
     font-weight: 600;
     //color: #f55f2d;
-
-    @media screen and (min-width: 480px) {
-      font-size: 1.5rem;
-    }
   }
 }
 
