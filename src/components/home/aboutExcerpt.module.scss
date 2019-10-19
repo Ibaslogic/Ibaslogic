@@ -2,6 +2,7 @@
   max-width: 45rem;
   margin: 0 auto;
   padding-top: 3.5rem;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     padding-top: 5rem;
@@ -11,21 +12,29 @@
   }
   .about-excerpt {
     display: flex;
-    padding: 4rem 1.25rem 0;
+    padding: 0.7rem 10px 3rem;
     flex-direction: column;
     font-size: 1rem;
-line-height: 1.625rem;
-letter-spacing: 0;
+    line-height: 1.625rem;
+    letter-spacing: 0;
 
     @media screen and (min-width: 768px) {
-      padding-top: 3rem;
+      //padding-top: 3rem;
       flex-direction: row;
+    }
+    @media screen and (min-width: 960px) {
+      padding-top: 3rem;
+      padding-bottom: 0;
     }
   }
   .col-left {
-    margin-right: 10px;
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+    }
   }
-  .col-right {
+  .col-left p,
+  .col-right p {
+    margin-bottom: 1rem;
   }
 }
 .sub-styles-excerpt {

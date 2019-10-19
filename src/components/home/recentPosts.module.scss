@@ -4,26 +4,32 @@
 
 .recent-posts {
   padding-top: 3.5rem;
-  max-width: 72rem;
+  max-width: 45rem;
   margin: 0 auto;
+  position: relative;
+  margin-bottom: 3.5rem;
 
   @media screen and (min-width: 768px) {
     padding-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 72rem;
+    margin-bottom: 0;
   }
 
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 45rem;
-    margin: 0 auto;
-    padding: 4rem 1.25rem;
+
+    padding: 0.7rem 10px 4rem;
 
     @media screen and (min-width: 768px) {
-      padding-top: 5rem;
       padding-bottom: 6rem;
     }
     @media screen and (min-width: 960px) {
       // max-width: 1150px;
+      padding-top: 3rem;
       max-width: 72rem;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 25px;
@@ -33,10 +39,11 @@
 .sub-styles {
   display: flex;
   justify-content: center;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
   flex-direction: column;
-  text-align: center;
+
+  //text-align: center;
 
   @media screen and (min-width: 960px) {
     flex-direction: row;
@@ -45,7 +52,9 @@
   }
 }
 .title-styles {
-  margin-right: 13px;
+  @media screen and (min-width: 960px) {
+    margin-right: 13px;
+  }
 }
 
 .section-title {
@@ -73,22 +82,24 @@
   text-transform: uppercase;
   font-size: 0.94rem;
   //padding-top: 7px;
-  position: relative;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 2.75rem;
-    height: 0.0625rem;
-    background: #e1d4d0;
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    margin-left: -1.475rem;
+  position: absolute;
+  bottom: 0;
 
-    @media screen and (min-width: 960px) {
+  @media screen and (min-width: 960px) {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 2.75rem;
+      height: 0.0625rem;
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      margin-left: -1.475rem;
       width: 0.0625rem;
       height: 1.75rem;
+      background: #e1d4d0;
       bottom: 0;
       left: -6px;
       margin-left: 0;

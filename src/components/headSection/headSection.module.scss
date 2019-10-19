@@ -14,22 +14,32 @@
 }
 .homePageHero {
   background: #f8f9fa;
-  background-image: url("../../images/hero-desktop.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
   //background-size: 599px 544px;
-} 
+  @media screen and (min-width: 768px) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../../images/hero-tablet.jpg");
+  }
+  @media screen and (min-width: 1024px) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../../images/hero-desktop.jpg");
+  }
+}
 .errorPageHero {
   background: #ffffff;
 }
 .hero-content {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 4rem 1.25rem;
+  padding: 4rem 10px;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
   @media screen and (min-width: 768px) {
+    max-width: 29rem;
+  }
+  @media screen and (min-width: 1024px) {
     max-width: 45rem;
   }
 }
@@ -52,6 +62,9 @@
     font-size: 2.7rem;
   }
   @media screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+  @media screen and (min-width: 1024px) {
     font-size: 3.2rem;
   }
   @media screen and (min-width: 1200px) {

@@ -1,24 +1,24 @@
 .contact-hero {
   color: #fff;
-  //background: url(../../images/newsletter-bg.jpg) center top no-repeat;
+  background: url(../../images/newsletter-bg.jpg) center top no-repeat;
   padding: 110px 0 100px;
-  background: #041220;
-  //background-size: cover;
-  //position: relative;
-  //background-attachment: fixed;
+  //background: #041220;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
 }
-// .image-filter {
-//   background: rgba(0, 0, 0, 0.6);
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-// }
+.image-filter {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .hero-content-wrapper {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0rem 1.25rem;
+  padding: 0rem 10px;
   text-align: center;
   position: relative;
   color: #fff;
@@ -92,7 +92,7 @@
 
 .contact {
   .content-wrapper {
-    padding: 4rem 1.25rem;
+    padding: 4rem 10px;
     max-width: 72rem;
     margin: 0 auto;
     @media screen and (min-width: 768px) {
