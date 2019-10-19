@@ -14,7 +14,7 @@ const AboutExcerpt = () => {
           <SubHeading title="A little about Ibaslogic" />
         </div>
         <div className={recentStyles.viewAll}>
-          <Link to="/about">Read more</Link>
+          <Link to="/about">Read more »</Link>
         </div>
       </div>
 
