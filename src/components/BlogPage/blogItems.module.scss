@@ -285,17 +285,16 @@ $primary-color: #3c4043;
 }
 
 .entry-title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   padding: 15px 10px;
   font-weight: 600;
   margin: 0 0 2.5625rem;
 
   @media screen and (min-width: 480px) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 1.4rem;
     padding: 1.25rem 0.9375rem;
   }
   // @media screen and (min-width: 992px) {

@@ -60,7 +60,7 @@
 .section-title {
   margin: 0;
   font-size: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 300;
   line-height: 1.455em;
   //text-transform: capitalize;
@@ -70,6 +70,7 @@
   }
   @media screen and (min-width: 768px) {
     font-size: 2.375rem;
+    margin-bottom: 2.5rem;
   }
   @media screen and (min-width: 960px) {
     margin-bottom: 0rem;

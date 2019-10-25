@@ -98,17 +98,17 @@ $main-white: #fff;
 }
 
 .entry-header .title {
-  font-size: 1.67rem;
+  font-size: 1.5rem;
   line-height: 1.33333;
   //padding: 0.566rem 0 0;
   margin: 0 0 1.2rem;
 
   @media screen and (min-width: 480px) {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   @media screen and (min-width: 960px) {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 }
 .date-published {
@@ -143,16 +143,16 @@ $main-white: #fff;
   line-height: 1.8em;
   word-wrap: break-word;
   hyphens: auto;
-  font-size: 0.938rem;
+  font-size: 1rem;
   font-weight: normal;
-  letter-spacing: 0;
+  //letter-spacing: 0;
 
   @media screen and (min-width: 480px) {
     font-size: 1rem;
   }
-  @media screen and (min-width: 768px) {
-    letter-spacing: 0.025em;
-  }
+  // @media screen and (min-width: 768px) {
+  //   letter-spacing: 0.025em;
+  // }
 
   ol li {
     list-style: decimal;
@@ -197,11 +197,7 @@ $main-white: #fff;
   p,
   ul,
   ol {
-    margin-bottom: 1.4rem;
-
-    @media screen and (min-width: 480px) {
-      margin-bottom: 1.6667rem;
-    }
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 1.2rem;
@@ -220,7 +216,7 @@ $main-white: #fff;
     line-height: 1.3777em;
     margin-bottom: 1.2em;
     font-weight: 600;
-    //color: #f55f2d;
+    color: #f44f18;
   }
 }
 

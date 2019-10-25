@@ -17,7 +17,7 @@ For that reason, we’ll take a look at <a href="https://google.com" target="_bl
 
 So let’s dive in.
 
-##What is DOM?
+###What is DOM?
 
 DOM (Document Object Model) is nothing but an interface that allow programs and scripts to read and manipulate the content of a document. This document can be HTML, XML or other document types. But here, the one we are concerned with is the HTML document.
 
@@ -35,7 +35,7 @@ This makes it possible to add, modify, delete contents or perform actions (like 
 
 Mind you, without the DOM, JavaScript would have no point of reference with which to interact with the HTML document.
 
-##Structure of the DOM
+###Structure of the DOM
 
 Understanding the visual representation of the DOM is necessary if you really want to grasp the concept behind manipulating web page content (DOM) through JavaScript.
 
@@ -111,7 +111,7 @@ In any HTML document, spaces and newlines are considered valid characters in the
 
 **Note:** Even though Comment is also a node type, the DOM will display whatever is present in the document (even if it is comment) as it is constructed from the source HTML
 
-##The DOM is NOT what you have in the DevTools
+###The DOM is NOT what you have in the DevTools
 
 The browser gives us a way to explore the DOM using an internal model similar to the it. This model is called the developer tools (also known as DevTools). Depending on your web browser, you can access it by right-clicking on a web page and select Inspect element or Inspect.
 
