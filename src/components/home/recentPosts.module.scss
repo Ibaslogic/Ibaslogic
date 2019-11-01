@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    padding: 0.7rem 10px 4rem;
+    padding: 0.7rem 15px 4rem;
 
     @media screen and (min-width: 768px) {
       padding-bottom: 6rem;
@@ -39,8 +39,8 @@
 .sub-styles {
   display: flex;
   justify-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   flex-direction: column;
 
   //text-align: center;
@@ -60,7 +60,7 @@
 .section-title {
   margin: 0;
   font-size: 1.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
   font-weight: 300;
   line-height: 1.455em;
   //text-transform: capitalize;

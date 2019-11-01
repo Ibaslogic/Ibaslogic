@@ -1,6 +1,6 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #444;
+$nav-link: #464646;
 $content-max-width: 72rem;
 
 // mixins
@@ -29,7 +29,7 @@ $content-max-width: 72rem;
 }
 .content {
   display: flex;
-  padding: 0 10px;
+  padding: 0 15px;
   justify-content: space-between;
   align-items: center;
   max-width: $content-max-width;
@@ -51,18 +51,28 @@ $content-max-width: 72rem;
   font-size: 1.2125rem;
   color: $nav-link;
   margin-left: 0;
-  opacity: 0.7;
   font-weight: bold;
   text-transform: capitalize;
   text-decoration: none;
   @include transition;
+  @media screen and (min-width: 768px) {
+    opacity: 0.7;
+  }
 
   &:hover {
-    opacity: 1;
+    color: #f44f18;
+    @media screen and (min-width: 768px) {
+      opacity: 1;
+      color: $nav-link;
+    }
   }
 
   &.active-nav-item {
-    opacity: 1;
+    color: #f44f18;
+    @media screen and (min-width: 768px) {
+      opacity: 1;
+      color: $nav-link;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -81,7 +91,7 @@ $content-max-width: 72rem;
       right: 0;
       bottom: -3px;
       height: 1px;
-      background: #444;
+      background: #464646;
       opacity: 0;
       @include transition;
     }
