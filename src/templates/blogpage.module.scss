@@ -145,10 +145,11 @@ $main-white: #fff;
   hyphens: auto;
   font-size: 1rem;
   font-weight: normal;
+
   //letter-spacing: 0;
 
-  @media screen and (min-width: 480px) {
-    font-size: 1rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.05rem;
   }
   // @media screen and (min-width: 768px) {
   //   letter-spacing: 0.025em;
