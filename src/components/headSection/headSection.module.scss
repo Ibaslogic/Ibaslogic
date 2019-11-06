@@ -15,11 +15,7 @@
 .homePageHero {
   background: #f8f9fa;
   //background-size: 599px 544px;
-  @media screen and (min-width: 768px) {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url("../../images/hero-tablet.jpg");
-  }
+
   @media screen and (min-width: 1024px) {
     background-position: center center;
     background-repeat: no-repeat;
@@ -37,9 +33,6 @@
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
   @media screen and (min-width: 768px) {
-    max-width: 29rem;
-  }
-  @media screen and (min-width: 1024px) {
     max-width: 45rem;
   }
 }

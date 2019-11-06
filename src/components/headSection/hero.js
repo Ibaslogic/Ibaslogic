@@ -7,12 +7,10 @@ const Hero = () => {
   return (
     <div className={heroStyles.homePageHero}>
       <div className={heroStyles.heroContent}>
-        <h1 className={heroStyles.title}>
-          Ready to build modern websites or apps?
-        </h1>
+        <h1 className={heroStyles.title}>Ready to build modern web project?</h1>
         <p className={heroStyles.description}>
-          Here, you will learn the latest web technologies and tools needed to
-          develop realistic apps.
+          Click on the button below and start learning how to apply the latest
+          web technologies to develop modern applications and websites.
           {/* <span className={heroStyles.nl}></span>  */}
         </p>
 

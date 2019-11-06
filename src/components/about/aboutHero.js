@@ -23,7 +23,7 @@ const AboutHero = () => {
             your Web Dev knowledge */}
           </h1>
           <p>
-            If you want to build real-world web applications? Then, you've{" "}
+            Do you want to build real-world web applications? Then, you've{" "}
             <span class={aboutHeroStyles.nl}></span>come to the right place.
           </p>
         </div>
