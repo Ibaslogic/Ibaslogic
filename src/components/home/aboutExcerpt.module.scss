@@ -29,7 +29,28 @@
   }
   .col-left {
     @media screen and (min-width: 768px) {
-      margin-right: 10px;
+      padding-right: 15px;
+
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 13.75rem;
+        border-right: 1px dashed #000;
+        bottom: -69px;
+        right: 0px;
+        @media screen and (min-width: 960px) {
+          height: 549px;
+          top: -250px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+  .col-right {
+    @media screen and (min-width: 768px) {
+      padding-left: 15px;
     }
   }
   .col-left p,
