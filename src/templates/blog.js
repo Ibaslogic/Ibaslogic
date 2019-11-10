@@ -57,7 +57,17 @@ const Blog = ({ data, pageContext }) => {
                 {" "}
                 Updated on <span>{data.markdownRemark.frontmatter.date}</span>
                 <span className={blogPageStyles.divider}></span>
-                <span>{data.markdownRemark.timeToRead} min read</span>
+                <span>{data.markdownRemark.timeToRead} min read</span> /{" "}
+                <a
+                  href={
+                    "https://github.com/Ibaslogic/Ibaslogic/tree/master/src/posts/" +
+                    pageContext.slug
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Edit
+                </a>
               </div>
             </header>
 

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { slugify } from "../../util/utilityFunction"
+//import { slugify } from "../../util/utilityFunction"
 import shareStyles from "../../templates/blogpage.module.scss"
 import {
   FaFacebookF,
@@ -35,7 +35,7 @@ const ShareItems = ({
                 href={
                   "https://twitter.com/share?url=" +
                   baseUrl +
-                  slugify(slug) +
+                  slug +
                   "/&text=" +
                   title +
                   "&via=" +
@@ -53,7 +53,7 @@ const ShareItems = ({
                 href={
                   "https://www.facebook.com/sharer/sharer.php?u=" +
                   baseUrl +
-                  slugify(slug) +
+                  slug +
                   "/"
                 }
               >
@@ -68,7 +68,7 @@ const ShareItems = ({
                 href={
                   "https://www.linkedin.com/shareArticle?url=" +
                   baseUrl +
-                  slugify(slug) +
+                  slug +
                   "/"
                 }
               >

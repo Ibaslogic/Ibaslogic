@@ -41,9 +41,12 @@
         bottom: -69px;
         right: 0px;
         @media screen and (min-width: 960px) {
-          height: 549px;
-          top: -250px;
+          height: 429px;
+          top: -170px;
           z-index: -1;
+        }
+        @media screen and (min-width: 1120px) {
+          height: 407px;
         }
       }
     }
