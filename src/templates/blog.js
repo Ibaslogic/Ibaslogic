@@ -10,6 +10,7 @@ import SocialShare from "../components/BlogPage/socialShare"
 //import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
+import { FaPencilAlt } from "react-icons/fa"
 
 export const query = graphql`
   query($slug: String!) {
@@ -57,16 +58,18 @@ const Blog = ({ data, pageContext }) => {
                 {" "}
                 Updated on <span>{data.markdownRemark.frontmatter.date}</span>
                 <span className={blogPageStyles.divider}></span>
-                <span>{data.markdownRemark.timeToRead} min read</span> /{" "}
+                <span>{data.markdownRemark.timeToRead} min read</span>
+                <span className={blogPageStyles.divider}></span>
                 <a
+                  className={blogPageStyles.editPost}
                   href={
-                    "https://github.com/Ibaslogic/Ibaslogic/tree/master/src/posts/" +
+                    "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/" +
                     pageContext.slug
                   }
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Edit
+                  Edit this post <FaPencilAlt />
                 </a>
               </div>
             </header>

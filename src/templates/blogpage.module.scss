@@ -118,6 +118,12 @@ $main-white: #fff;
   color: #7b8086;
   margin-bottom: 1.58333em;
 }
+.edit-post {
+  svg {
+    font-size: 9px;
+    margin-left: 3px;
+  }
+}
 .divider {
   margin-right: 10px;
   position: relative;
@@ -132,6 +138,7 @@ $main-white: #fff;
     left: 5px;
   }
 }
+
 .featured-image {
   margin-bottom: 1.666667rem;
 
