@@ -64,7 +64,8 @@ const Blog = ({ data, pageContext }) => {
                   className={blogPageStyles.editPost}
                   href={
                     "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/" +
-                    pageContext.slug
+                    pageContext.slug +
+                    ".md"
                   }
                   target="_blank"
                   rel="noopener noreferrer"

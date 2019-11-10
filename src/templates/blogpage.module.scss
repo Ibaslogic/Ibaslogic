@@ -123,6 +123,9 @@ $main-white: #fff;
     font-size: 9px;
     margin-left: 3px;
   }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .divider {
   margin-right: 10px;
