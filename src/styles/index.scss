@@ -11,7 +11,8 @@ $header-bg-color: #20232a;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
-$body-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;//"Roboto", sans-serif; //"Open Sans", sans-serif;
+$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, "Helvetica Neue", sans-serif; //"Roboto", sans-serif; //"Open Sans", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #f44f18;
@@ -114,24 +115,25 @@ pre {
   font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
 
-:not(pre) > code,
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] :not(pre) > code,
 p > code,
-li > code,
 li > code {
   background: #f2f2f2;
   color: #f44f18; // #151414;
+  text-shadow: none;
+  border-radius: 0px;
 }
 
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] :not(pre) > code,
 p > code,
 li > code,
 p > a > code,
 li > a > code {
   padding: 0 3px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   word-break: break-word;
-  @media screen and (min-width: 480px) {
-    font-size: 0.92em;
-  }
 }
 
 // Prism Highligter

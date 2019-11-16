@@ -40,10 +40,10 @@ const RecentPosts = () => {
     <section id="blog" className={recentStyles.recentPosts}>
       <div className={recentStyles.subStyles}>
         <div className={recentStyles.titleStyles}>
-          <SubHeading title="Latest blog posts" />
+          <SubHeading title="Latest Articles" />
         </div>
         <div className={recentStyles.viewAll}>
-          <Link to="/blog">view all posts »</Link>
+          <Link to="/blog">view all »</Link>
         </div>
       </div>
 

@@ -19,6 +19,17 @@
   margin-bottom: 0;
   padding: 1.5rem 0.75rem 1.5rem;
 
+  a {
+    //margin-right: 0.5625rem;
+    color: #464646;
+    @include transition;
+    //display: block;
+
+    &:hover {
+      color: #f44f18;
+    }
+  }
+
   li {
     line-height: 1.5;
     margin: 0 0 0.9375rem 0;
@@ -38,15 +49,6 @@
       min-width: 5rem;
       height: auto;
       max-height: 3.125rem;
-    }
-    a {
-      margin-right: 0.5625rem;
-      color: #464646;
-      @include transition;
-
-      &:hover {
-        color: #f44f18;
-      }
     }
   }
 
@@ -113,6 +115,7 @@
     font-size: inherit;
     //font-size: 1rem;
     border-radius: 2px;
+    outline: none;
   }
   input {
     padding: 0px 25px;

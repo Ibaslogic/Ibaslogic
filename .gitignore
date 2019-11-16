@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 .env.development
 
+# node modules
+node_modules
+
 # Runtime data
 pids
 *.pid

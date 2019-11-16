@@ -5,8 +5,7 @@ description: "Understanding how the DOM works will help you to quickly grasp the
 date: "2019-11-08T10:51:46+02:00"
 category: "lorem dolor"
 image: "./thumbnails/Image6.png"
-tags:
-  - consectetur
+tags: ["consectetur", "lorem", "ipsum"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
@@ -17,7 +16,7 @@ tempor.incididunt ut labore et dolore magna aliqua. Ut enim ad minim [Node.js](h
 
 ## exercitation ullamco
 
-laboris nisi ut aliquip ex ea _commodo_ consequat. Duis aute irure dolor in reprehenderit in `voluptate` velit esse cillum dolore eu fugiat nulla pariatur.
+laboris nisi ut aliquip ex ea _commodo_ consequat. Duis aute irure <code>dolor</code> in reprehenderit in `voluptate` velit esse cillum dolore eu fugiat nulla pariatur.
 
 ## Excepteur sint occaecat
 
@@ -49,5 +48,9 @@ module.exports.onCreateNode = ({ node, actions }) => {
 ```
 
 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```
+C:\Users\Your Name\my-todo-app > npm start
+```
 
 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
