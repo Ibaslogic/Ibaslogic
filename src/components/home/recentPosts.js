@@ -8,8 +8,8 @@ import recentStyles from "./recentPosts.module.scss"
 const RecentPosts = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+      allMdx(
+        sort: { fields: [fields___slug___modifiedTime], order: DESC }
         limit: 3
       ) {
         edges {
@@ -17,7 +17,8 @@ const RecentPosts = () => {
             id
             frontmatter {
               title
-              image {
+              description
+              featured {
                 childImageSharp {
                   fluid(maxWidth: 600) {
                     ...GatsbyImageSharpFluid
@@ -26,7 +27,9 @@ const RecentPosts = () => {
               }
             }
             fields {
-              slug
+              slug {
+                name
+              }
             }
             excerpt
           }
@@ -34,7 +37,7 @@ const RecentPosts = () => {
       }
     }
   `)
-  const edges = data.allMarkdownRemark.edges
+  const edges = data.allMdx.edges
 
   return (
     <section id="blog" className={recentStyles.recentPosts}>
@@ -53,18 +56,21 @@ const RecentPosts = () => {
           return (
             <article className={recentStyles.article} key={id}>
               <header>
-                <Link to={`/blog/${fields.slug}/`}>
+                <Link to={`/blog/${fields.slug.name}/`}>
                   <Img
-                    fluid={frontmatter.image.childImageSharp.fluid}
-                    alt={fields.slug}
+                    fluid={frontmatter.featured.childImageSharp.fluid}
+                    alt={fields.slug.name}
                   />
                 </Link>
               </header>
               <div className={recentStyles.content}>
                 <h2>
-                  <Link to={`/blog/${fields.slug}/`}> {frontmatter.title}</Link>
+                  <Link to={`/blog/${fields.slug.name}/`}>
+                    {" "}
+                    {frontmatter.title}
+                  </Link>
                 </h2>
-                <p>{excerpt}</p>
+                <p>{frontmatter.description || excerpt}</p>
               </div>
             </article>
           )

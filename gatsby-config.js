@@ -36,9 +36,9 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`, //`gatsby-transformer-remark`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           `gatsby-remark-prismjs`,
           `gatsby-remark-relative-images`,
           {
@@ -47,6 +47,13 @@ module.exports = {
               maxWidth: 750,
               linkImagesToOriginal: false,
             },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener"
+            }
           },
         ],
       },

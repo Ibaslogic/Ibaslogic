@@ -173,3 +173,41 @@ li > a > code {
     margin-right: 2.375rem !important;
   }
 }
+
+// Posts inter-link
+
+.series-link-container {
+  border: 1px solid #f2f2f2;
+  font-size: 1rem;
+  padding: 8px 12px;
+  margin: 35px 0;
+
+  p {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 41px;
+      height: 2px;
+      background: #f44f18;
+      position: absolute;
+      top: 0.8333333333335em;
+      left: 0px;
+      margin-top: 23px;
+    }
+  }
+
+  ul {
+    margin: 0 !important;
+
+    li {
+      list-style: none;
+      padding: 0 !important;
+
+      &::after {
+        content: normal !important;
+      }
+    }
+  }
+}

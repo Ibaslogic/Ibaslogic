@@ -308,9 +308,14 @@ $primary-color: #3c4043;
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 0.9375rem 1.1875rem;
+  padding: 0 0.69375rem 1.1875rem;
   font-size: 0.775rem;
   color: #727274;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 0.9775rem;
+    padding-right: 0.9775rem;
+  }
 }
 
 .divider {

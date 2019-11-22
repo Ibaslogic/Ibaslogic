@@ -6,7 +6,7 @@ import recentPostStyles from "./sidebar.module.scss"
 
 const SidebarPostMarkup = ({ fluid, title, slug }) => {
   return (
-    <Link to={`/blog/${slugify(slug)}`}>
+    <Link to={`/blog/${slugify(slug)}/`}>
       <li>
         <Img className={recentPostStyles.imgTumbnail} fluid={fluid} />
         <span>{title}</span>

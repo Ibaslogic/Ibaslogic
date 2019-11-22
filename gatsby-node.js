@@ -1,13 +1,12 @@
 const path = require("path")
 const _ = require("lodash")
-const { slugify } = require("./src/util/utilityFunction")
+// const { slugify } = require("./src/util/utilityFunction")
 
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = path.basename(node.fileAbsolutePath, ".md")
-    //const slug = slugify(node.frontmatter.slug)
+  if (node.internal.type === "Mdx") {
+    const slug = path.basename(node.fileAbsolutePath)
     createNodeField({
       node,
       name: "slug",
@@ -23,14 +22,17 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const res = await graphql(`
     query {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             frontmatter {
               tags
             }
             fields {
-              slug
+              slug {
+                name
+                relativePath
+              }
             }
           }
         }
@@ -38,18 +40,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  res.data.allMdx.edges.forEach(edge => {
     createPage({
-      path: `/blog/${edge.node.fields.slug}/`,
+      path: `/blog/${edge.node.fields.slug.name}/`,
       component: blogTemplate,
       context: {
-        slug: edge.node.fields.slug,
+        slug: edge.node.fields.slug.name,
+        postPath: edge.node.fields.slug.relativePath,
       },
     })
   })
 
   let tags = []
-  _.each(res.data.allMarkdownRemark.edges, edge => {
+  _.each(res.data.allMdx.edges, edge => {
     if (_.get(edge, "node.frontmatter.tags")) {
       tags = tags.concat(edge.node.frontmatter.tags)
     }

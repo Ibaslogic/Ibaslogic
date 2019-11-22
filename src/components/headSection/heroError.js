@@ -13,7 +13,7 @@ const HeroError = () => {
         </p>
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.errorButton}>
-            <Link to="/blog">go ahead</Link>
+            <Link to="/blog/">go ahead</Link>
           </div>
         </div>
       </div>

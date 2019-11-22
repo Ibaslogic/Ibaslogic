@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.allMdx
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
@@ -27,10 +27,11 @@ const Tags = ({ pageContext, data }) => {
                 <Post
                   key={id}
                   title={node.frontmatter.title}
-                  date={node.frontmatter.date}
+                  posted={node.fields.slug.birthTime}
+                  updated={node.fields.slug.modifiedTime}
                   time={timeToRead}
-                  fluid={node.frontmatter.image.childImageSharp.fluid}
-                  slug={node.fields.slug}
+                  fluid={node.frontmatter.featured.childImageSharp.fluid}
+                  slug={node.fields.slug.name}
                 />
               )
             })}
@@ -45,8 +46,8 @@ export default Tags
 
 export const pageQuery = graphql`
   query($tag: String!) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+    allMdx(
+      sort: { fields: [fields___slug___modifiedTime], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
@@ -55,9 +56,8 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM Do YYYY")
             tags
-            image {
+            featured {
               childImageSharp {
                 fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
@@ -66,7 +66,11 @@ export const pageQuery = graphql`
             }
           }
           fields {
-            slug
+            slug {
+              name
+              modifiedTime(formatString: "MMMM Do, YYYY")
+              birthTime(formatString: "MMMM Do, YYYY")
+            }
           }
           timeToRead
         }

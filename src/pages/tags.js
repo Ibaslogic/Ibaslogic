@@ -8,7 +8,7 @@ import { Link, graphql } from "gatsby"
 
 const Tagspage = ({
   data: {
-    allMarkdownRemark: { group },
+    allMdx: { group },
     site: {
       siteMetadata: { title },
     },
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMdx {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

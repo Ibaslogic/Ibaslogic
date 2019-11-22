@@ -22,15 +22,14 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [fields___slug___modifiedTime], order: DESC }) {
       edges {
         node {
           id
           frontmatter {
             title
-            date(formatString: "MMMM Do YYYY")
             category
-            image {
+            featured {
               childImageSharp {
                 fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid
@@ -39,7 +38,11 @@ export const query = graphql`
             }
           }
           fields {
-            slug
+            slug {
+              name
+              modifiedTime(formatString: "MMMM Do, YYYY")
+              birthTime(formatString: "MMMM Do, YYYY")
+            }
           }
           timeToRead
         }

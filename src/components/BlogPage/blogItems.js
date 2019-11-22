@@ -17,13 +17,13 @@ class BlogItems extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      items: props.items.allMarkdownRemark.edges,
-      blogPostItems: props.items.allMarkdownRemark.edges,
-      categories: getCategories(props.items.allMarkdownRemark.edges),
+      items: props.items.allMdx.edges,
+      blogPostItems: props.items.allMdx.edges,
+      categories: getCategories(props.items.allMdx.edges),
       showItems: false,
       selectedItem:
-        getCategories(props.items.allMarkdownRemark.edges) &&
-        getCategories(props.items.allMarkdownRemark.edges)[0],
+        getCategories(props.items.allMdx.edges) &&
+        getCategories(props.items.allMdx.edges)[0],
     }
   }
 
@@ -118,10 +118,11 @@ class BlogItems extends Component {
                   <Post
                     key={node.id}
                     title={node.frontmatter.title}
-                    date={node.frontmatter.date}
+                    updated={node.fields.slug.modifiedTime}
+                    posted={node.fields.slug.birthTime}
                     time={node.timeToRead}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    slug={node.fields.slug}
+                    fluid={node.frontmatter.featured.childImageSharp.fluid}
+                    slug={node.fields.slug.name}
                   />
                 )
               })}

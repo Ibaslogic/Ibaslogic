@@ -18,17 +18,17 @@ export default class Header extends Component {
       },
       {
         id: 2,
-        path: "/blog",
+        path: "/blog/",
         text: "blog",
       },
       {
         id: 3,
-        path: "/contact",
+        path: "/contact/",
         text: "contact",
       },
       {
         id: 4,
-        path: "/about",
+        path: "/about/",
         text: "about",
       },
     ],

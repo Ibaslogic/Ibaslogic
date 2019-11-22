@@ -4,7 +4,7 @@ import blogStyles from "./BlogPage/blogItems.module.scss"
 //import { slugify } from "../util/utilityFunction"
 import { Link } from "gatsby"
 
-const Post = ({ title, date, time, fluid, slug }) => {
+const Post = ({ title, updated, posted, time, fluid, slug }) => {
   return (
     <li className={blogStyles.listItem}>
       <Link to={`/blog/${slug}/`}>
@@ -15,7 +15,8 @@ const Post = ({ title, date, time, fluid, slug }) => {
           <div className={blogStyles.postSummaryContent}>
             <h2 className={blogStyles.entryTitle}>{title}</h2>
             <div className={blogStyles.entryFooter}>
-              <span> {date} </span>
+              {updated === posted ? " Posted " : "Updated"} on{" "}
+              <span> {updated} </span>
               <span className={blogStyles.divider}> </span>
               <span className={blogStyles.time}> {time} min read </span>
             </div>
