@@ -118,8 +118,8 @@ class BlogItems extends Component {
                   <Post
                     key={node.id}
                     title={node.frontmatter.title}
-                    updated={node.fields.slug.modifiedTime}
-                    posted={node.fields.slug.birthTime}
+                    updated={node.parent.modifiedTime}
+                    // posted={node.fields.slug.birthTime}
                     time={node.timeToRead}
                     fluid={node.frontmatter.featured.childImageSharp.fluid}
                     slug={node.fields.slug.name}

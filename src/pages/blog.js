@@ -26,6 +26,11 @@ export const query = graphql`
       edges {
         node {
           id
+          parent {
+            ... on File {
+              modifiedTime(fromNow: true)
+            }
+          }
           frontmatter {
             title
             category
@@ -40,10 +45,8 @@ export const query = graphql`
           fields {
             slug {
               name
-              modifiedTime(fromNow: true)
-              birthTime(fromNow: true)
             }
-          } 
+          }
           timeToRead
         }
       }
