@@ -40,10 +40,10 @@ export const query = graphql`
           fields {
             slug {
               name
-              modifiedTime(formatString: "MMMM Do, YYYY")
-              birthTime(formatString: "MMMM Do, YYYY")
+              modifiedTime(fromNow: true)
+              birthTime(fromNow: true)
             }
-          }
+          } 
           timeToRead
         }
       }
