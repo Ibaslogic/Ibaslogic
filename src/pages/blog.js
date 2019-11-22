@@ -22,18 +22,15 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: [fields___slug___modifiedTime], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }) {
       edges {
         node {
           id
-          parent {
-            ... on File {
-              modifiedTime(fromNow: true)
-            }
-          }
           frontmatter {
             title
             category
+            datePublished(formatString: "MMMM Do, YYYY")
+            dateUpdated(formatString: "MMMM Do, YYYY")
             featured {
               childImageSharp {
                 fluid(maxWidth: 600) {

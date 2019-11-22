@@ -42,7 +42,7 @@ const RecentPosts = () => {
 const recentPostQuery = graphql`
   query {
     allMdx(
-      sort: { fields: [fields___slug___modifiedTime], order: DESC }
+      sort: { fields: [frontmatter___dateUpdated], order: DESC }
       limit: 5
     ) {
       edges {
@@ -61,7 +61,6 @@ const recentPostQuery = graphql`
           fields {
             slug {
               name
-              modifiedTime(formatString: "MMMM Do, YYYY")
             }
           }
           timeToRead

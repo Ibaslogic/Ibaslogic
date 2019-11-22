@@ -22,15 +22,11 @@ export const query = graphql`
       id
       timeToRead
       excerpt
-      fields {
-        slug {
-          modifiedTime(formatString: "MMMM Do, YYYY")
-          birthTime(formatString: "MMMM Do, YYYY")
-        }
-      }
       frontmatter {
         title
         description
+        datePublished(formatString: "MMMM Do, YYYY")
+        dateUpdated(formatString: "MMMM Do, YYYY")
         tags
         featured {
           childImageSharp {
@@ -50,7 +46,7 @@ const shortcodes = {
 }
 
 const Blog = ({ data, pageContext }) => {
-  const { modifiedTime, birthTime } = data.mdx.fields.slug
+  const { datePublished, dateUpdated } = data.mdx.frontmatter
 
   return (
     <Layout>
@@ -71,8 +67,8 @@ const Blog = ({ data, pageContext }) => {
               </h1>
               <div className={blogPageStyles.datePublished}>
                 {" "}
-                {modifiedTime === birthTime ? " Posted " : "Updated"} on{" "}
-                <span>{data.mdx.fields.slug.modifiedTime}</span>
+                {datePublished === dateUpdated ? " Posted " : "Updated"} on{" "}
+                <span>{dateUpdated}</span>
                 <span className={blogPageStyles.divider}></span>
                 <span>{data.mdx.timeToRead} min read</span>
                 <span className={blogPageStyles.divider}></span>

@@ -9,7 +9,7 @@ const RecentPosts = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        sort: { fields: [fields___slug___modifiedTime], order: DESC }
+        sort: { fields: [frontmatter___dateUpdated], order: DESC }
         limit: 3
       ) {
         edges {
