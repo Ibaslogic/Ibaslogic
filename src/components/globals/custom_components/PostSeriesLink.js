@@ -5,7 +5,6 @@ const PostSeriesLink = props => {
   return (
     <div className="series-link-container">
       <p>{props.label}</p>
-      {/* {console.log(props.datas)} */}
       <ul>
         {props.datas.map((data, index) => (
           <li key={index}>

@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+//import { StaticQuery, graphql } from "gatsby"
 import shareStyles from "../../templates/blogpage.module.scss"
 import ShareItems from "./shareItems"
 // import {
@@ -31,10 +31,10 @@ class SocialShare extends React.Component {
   }
 
   render() {
-    const { slug, title, heading } = this.props
+    const { slug, title, heading, twitterHandle, siteUrl } = this.props
 
-    const twitterHandle = this.props.data.site.siteMetadata.twitterHandle
-    const siteUrl = this.props.data.site.siteMetadata.siteUrl
+    // const twitterHandle = this.props.data.site.siteMetadata.twitterHandle
+    // const siteUrl = this.props.data.site.siteMetadata.siteUrl
 
     return (
       <>
@@ -57,21 +57,23 @@ class SocialShare extends React.Component {
   }
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            twitterHandle
-            siteUrl
-          }
-        }
-      }
-    `}
-    render={data => <SocialShare data={data} {...props} />}
-  />
-)
+export default SocialShare
+
+// export default props => (
+//   <StaticQuery
+//     query={graphql`
+//       query {
+//         site {
+//           siteMetadata {
+//             twitterHandle
+//             siteUrl
+//           }
+//         }
+//       }
+//     `}
+//     render={data => <SocialShare data={data} {...props} />}
+//   />
+// )
 
 // import { FaFacebookF } from "react-icons/fa";
 // FaFacebookF   FaFacebookSquare    FaFacebook

@@ -186,6 +186,7 @@ $main-white: #fff;
   ul li {
     position: relative;
     padding: 0 0 0 1.9rem;
+    font-size: 0.96rem;
 
     &::after {
       content: "";
@@ -196,14 +197,14 @@ $main-white: #fff;
       position: absolute;
       top: 0.8333333333335em;
       left: 5px;
-      margin-top: -2px;
+      margin-top: 0;
     }
   }
 
-  ol,
-  ul {
-    margin-left: 1.388889rem;
-  }
+  // ol,
+  // ul {
+  //   margin-left: 1.388889rem;
+  // }
 
   p,
   ul,

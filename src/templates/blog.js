@@ -13,15 +13,23 @@ import SEO from "../components/seo"
 import { FaPencilAlt } from "react-icons/fa"
 
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
+import TableOfContents from "../components/globals/custom_components/TableOfContents"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export const query = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+        twitterHandle
+      }
+    }
     mdx(fields: { slug: { name: { eq: $slug } } }) {
       id
       timeToRead
       excerpt
+      tableOfContents
       frontmatter {
         title
         description
@@ -41,9 +49,14 @@ export const query = graphql`
   }
 `
 
-const shortcodes = {
-  PostSeriesLink,
-}
+// const shortcodes = {
+//   PostSeriesLink,
+//   TableOfContents: ({ data }) => (
+//     <TableOfContents items={data.mdx.tableOfContents}>
+//       Table of Contents
+//     </TableOfContents>
+//   ),
+// }
 
 const Blog = ({ data, pageContext }) => {
   const { datePublished, dateUpdated } = data.mdx.frontmatter
@@ -98,7 +111,17 @@ const Blog = ({ data, pageContext }) => {
                 data.contentfulBlogPostContent.body.json,
                 options
               )} */}
-              <MDXProvider components={shortcodes}>
+              <MDXProvider
+                components={{
+                  PostSeriesLink,
+                  TableOfContents: () => (
+                    <TableOfContents
+                      items={data.mdx.tableOfContents.items}
+                      slug={pageContext.slug}
+                    ></TableOfContents>
+                  ),
+                }}
+              >
                 <MDXRenderer>{data.mdx.body}</MDXRenderer>
               </MDXProvider>
             </div>
@@ -108,6 +131,8 @@ const Blog = ({ data, pageContext }) => {
             <SocialShare
               slug={pageContext.slug}
               title={data.mdx.frontmatter.title}
+              twitterHandle={data.site.siteMetadata.twitterHandle}
+              siteUrl={data.site.siteMetadata.siteUrl}
               heading="Share this"
             />
           </div>
@@ -131,6 +156,8 @@ const Blog = ({ data, pageContext }) => {
         <SocialShare
           slug={pageContext.slug}
           title={data.mdx.frontmatter.title}
+          twitterHandle={data.site.siteMetadata.twitterHandle}
+          siteUrl={data.site.siteMetadata.siteUrl}
           heading="share"
         />
       </div>

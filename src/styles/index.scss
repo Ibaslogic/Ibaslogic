@@ -192,7 +192,7 @@ li > a > code {
       height: 2px;
       background: #f44f18;
       position: absolute;
-      top: 0.8333333333335em;
+      bottom: -12px;
       left: 0px;
       margin-top: 23px;
     }
@@ -209,5 +209,13 @@ li > a > code {
         content: normal !important;
       }
     }
+  }
+}
+
+// heading liks svg
+
+.anchor {
+  svg {
+    display: none;
   }
 }

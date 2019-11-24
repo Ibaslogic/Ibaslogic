@@ -39,6 +39,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`, //`gatsby-transformer-remark`,
       options: {
         gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-relative-images`,
           {
@@ -52,8 +53,8 @@ module.exports = {
             resolve: "gatsby-remark-external-links",
             options: {
               target: "_blank",
-              rel: "noopener"
-            }
+              rel: "noopener",
+            },
           },
         ],
       },
