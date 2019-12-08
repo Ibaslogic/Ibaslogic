@@ -5,8 +5,8 @@ const TableOfContents = ({ items, slug }) => {
   return (
     <div className="table-content-container">
       <ul>
-        {items.map(item => (
-          <li>
+        {items.map((item, index) => (
+          <li key={index}>
             <Link to={"/blog/" + slug + "/" + item.url}>{item.title}</Link>
           </li>
         ))}

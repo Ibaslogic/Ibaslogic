@@ -9,7 +9,7 @@ const Hero = () => {
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.title}>Ready to build modern web project?</h1>
         <p className={heroStyles.description}>
-          Click on the button below and start learning how to apply the latest
+          Click on the button below and start learning the latest
           web technologies to develop modern applications and websites.
           {/* <span className={heroStyles.nl}></span>  */}
         </p>
