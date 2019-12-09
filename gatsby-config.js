@@ -13,6 +13,68 @@ module.exports = {
   plugins: [
     `gatsby-plugin-catch-links`,
     {
+      resolve: `gatsby-plugin-feed-mdx`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.dateUpdated,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
+                  custom_elements: [{ "content:encoded": edge.node.body }]
+                });
+              });
+            },
+            query: `
+            {
+              allMdx(
+                sort: { order: DESC, fields: [frontmatter___dateUpdated] },
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    body
+                    fields { 
+                      slug {
+                        name
+                      }
+                    }
+                    frontmatter {
+                      title
+                      dateUpdated
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            output: "/rss.xml",
+            title: "Your Site's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/"
+          }
+        ]
+      }
+    },
+    {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
