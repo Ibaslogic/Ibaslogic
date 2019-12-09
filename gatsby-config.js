@@ -36,19 +36,25 @@ module.exports = {
                   date: edge.node.frontmatter.dateUpdated,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
-                  custom_elements: [{ "content:encoded": edge.node.body }]
-                });
-              });
+                  enclosure: edge.node.frontmatter.featured && {
+                    url:
+                      site.siteMetadata.siteUrl +
+                      edge.node.frontmatter.featured.publicURL,
+                  },
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
             },
             query: `
             {
               allMdx(
+                limit: 1000
                 sort: { order: DESC, fields: [frontmatter___dateUpdated] },
               ) {
                 edges {
                   node {
-                    excerpt
-                    body
+                    excerpt(pruneLength: 140)
+                    html
                     fields { 
                       slug {
                         name
@@ -57,6 +63,9 @@ module.exports = {
                     frontmatter {
                       title
                       dateUpdated
+                      featured {
+                        publicURL
+                      }
                     }
                   }
                 }
@@ -64,15 +73,15 @@ module.exports = {
             }
             `,
             output: "/rss.xml",
-            title: "Your Site's RSS Feed",
+            title: "Ibaslogic Blog RSS Feed",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/"
-          }
-        ]
-      }
+            match: "^/blog/",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-mailchimp",
