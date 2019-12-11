@@ -33,7 +33,7 @@ const Footer = () => {
           <ul className={footerStyles.socialList}>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://twitter.com/ibaskunle"
+                href="https://twitter.com/ibaslogic"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -42,7 +42,7 @@ const Footer = () => {
             </li>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://www.facebook.com/ibaskunle"
+                href="https://www.facebook.com/ibaslogic"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,11 +52,11 @@ const Footer = () => {
 
             <li className={footerStyles.socialItem}>
               <a
-                href="https://www.linkedin.com/in/ibaskunle"
+                href="https://www.linkedin.com/in/ibaslogic"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin />
+                <FaLinkedin /> 
               </a>
             </li>
             <li className={footerStyles.socialItem}>

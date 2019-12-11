@@ -7,7 +7,7 @@ module.exports = {
     title: `Ibaslogic`,
     description: `Here, you'll learn all the rudiment of web development`,
     author: `Ibas Majid`,
-    twitterHandle: `ibaskunle`,
+    twitterHandle: `ibaslogic`,
     siteUrl: `https://ibaslogic.netlify.com`,
   },
   plugins: [
@@ -34,8 +34,14 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.dateUpdated,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug.name,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    "/" +
+                    edge.node.fields.slug.name,
+                  guid:
+                    site.siteMetadata.siteUrl +
+                    "/" +
+                    edge.node.fields.slug.name,
                   enclosure: edge.node.frontmatter.featured && {
                     url:
                       site.siteMetadata.siteUrl +
