@@ -18,7 +18,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        // I exclude individual tags pages in sitemap
         exclude: ["/tags/*"],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
