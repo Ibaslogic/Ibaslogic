@@ -15,7 +15,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ["/category/*", "/tags/links"],
+      },
+    },
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
