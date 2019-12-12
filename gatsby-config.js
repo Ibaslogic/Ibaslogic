@@ -15,6 +15,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -22,7 +23,6 @@ module.exports = {
         exclude: ["/tags/*"],
       },
     },
-    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {

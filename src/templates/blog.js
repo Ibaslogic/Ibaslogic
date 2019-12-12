@@ -60,6 +60,9 @@ export const query = graphql`
 
 const Blog = ({ data, pageContext }) => {
   const { datePublished, dateUpdated } = data.mdx.frontmatter
+  const image = data.mdx.frontmatter.featured
+    ? data.mdx.frontmatter.featured.childImageSharp.fluid
+    : null
 
   return (
     <Layout>
@@ -67,6 +70,8 @@ const Blog = ({ data, pageContext }) => {
         title={data.mdx.frontmatter.title}
         excerpt={data.mdx.excerpt}
         description={data.mdx.frontmatter.description}
+        image={image}
+        isBlogPost
       />
       <div
         id="primary"
