@@ -22,12 +22,7 @@ module.exports = {
         exclude: ["/tags/*"],
       },
     },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
