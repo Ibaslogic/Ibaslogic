@@ -15,6 +15,10 @@ const Footer = () => {
       site {
         siteMetadata {
           author
+          twitterHandle
+          linkedin
+          facebook
+          github
         }
       }
     }
@@ -33,7 +37,7 @@ const Footer = () => {
           <ul className={footerStyles.socialList}>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://twitter.com/ibaslogic"
+                href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -42,7 +46,7 @@ const Footer = () => {
             </li>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://www.facebook.com/ibaslogic"
+                href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,7 +56,7 @@ const Footer = () => {
 
             <li className={footerStyles.socialItem}>
               <a
-                href="https://www.linkedin.com/in/ibaslogic"
+                href={`https://www.linkedin.com/in/${data.site.siteMetadata.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -61,7 +65,7 @@ const Footer = () => {
             </li>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://github.com/ibaslogic"
+                href={`https://github.com/${data.site.siteMetadata.github}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

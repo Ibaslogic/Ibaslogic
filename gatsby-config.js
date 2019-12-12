@@ -8,10 +8,14 @@ module.exports = {
     description: `I teach JavaScript, React, GraphQL, Gatsby, WordPress.`,
     author: `Ibas Majid`,
     twitterHandle: `ibaslogic`,
+    linkedin: `ibaslogic`,
+    facebook: `ibaslogic`,
+    github: `ibaslogic`,
     siteUrl: `https://ibaslogic.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
