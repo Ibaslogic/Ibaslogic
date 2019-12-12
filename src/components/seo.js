@@ -68,10 +68,6 @@ function SEO({
           content: isBlogPost ? `article` : `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
