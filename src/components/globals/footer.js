@@ -56,12 +56,12 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin /> 
+                <FaLinkedin />
               </a>
             </li>
             <li className={footerStyles.socialItem}>
               <a
-                href="https://github.com/Ibaslogic"
+                href="https://github.com/ibaslogic"
                 target="_blank"
                 rel="noopener noreferrer"
               >

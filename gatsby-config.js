@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Ibaslogic`,
-    description: `Here, you'll learn all the rudiment of web development`,
+    description: `I teach JavaScript, React, GraphQL, Gatsby, WordPress.`,
     author: `Ibas Majid`,
     twitterHandle: `ibaslogic`,
     siteUrl: `https://ibaslogic.netlify.com`,
@@ -36,11 +36,11 @@ module.exports = {
                   date: edge.node.frontmatter.dateUpdated,
                   url:
                     site.siteMetadata.siteUrl +
-                    "/" +
+                    "/blog/" +
                     edge.node.fields.slug.name,
                   guid:
                     site.siteMetadata.siteUrl +
-                    "/" +
+                    "/blog/" +
                     edge.node.fields.slug.name,
                   enclosure: edge.node.frontmatter.featured && {
                     url:
@@ -79,7 +79,7 @@ module.exports = {
             }
             `,
             output: "/rss.xml",
-            title: "Ibaslogic Blog RSS Feed",
+            title: "Ibaslogic",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
