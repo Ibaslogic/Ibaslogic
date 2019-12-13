@@ -1,6 +1,6 @@
 import React from "react"
 import aboutHeroStyles from "./about.module.scss"
-import authorImage from "../../images/ibas.png"
+//import authorImage from "../../images/ibas.png"
 
 const AboutHero = () => {
   return (

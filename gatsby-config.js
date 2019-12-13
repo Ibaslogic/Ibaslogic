@@ -11,7 +11,7 @@ module.exports = {
     linkedin: `ibaslogic`,
     facebook: `ibaslogic`,
     github: `ibaslogic`,
-    siteUrl: `https://ibaslogic.netlify.com`,
+    siteUrl: `https://ibaslogic.com`,
   },
   plugins: [
     `gatsby-plugin-catch-links`,
