@@ -5,6 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa"
+import { useStaticQuery, graphql } from "gatsby"
 import socialStyles from "./contact.module.scss"
 
 const ContactSocial = () => {
