@@ -12,7 +12,6 @@ const ContactSocial = () => {
     query {
       site {
         siteMetadata {
-          author
           twitterHandle
           linkedin
           facebook

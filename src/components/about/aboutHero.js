@@ -28,7 +28,8 @@ const AboutHero = () => {
           </p>
         </div>
         <div className={aboutHeroStyles.imageContent}>
-          <img src={authorImage} alt="Ibas Majid" />
+          <img src="" alt="Ibas Majid" />
+          {/* {authorImage} */}
         </div>
       </div>
     </section>
