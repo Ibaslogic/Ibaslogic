@@ -8,8 +8,5 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
- [[redirects]]
-  from = "https://ibaslogic.netlify.com/*"
-  to = "https://ibaslogic.com/:splat"
-  status = 301
+ 
   
