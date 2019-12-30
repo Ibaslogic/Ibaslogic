@@ -21,7 +21,7 @@
 .content-wrapper {
   max-width: 72rem;
   margin: 0 auto;
-  padding-top: 4rem;
+  padding-top: 6rem; // 4rem;
   padding-bottom: 0;
   text-align: center;
   display: flex;
@@ -100,8 +100,9 @@
   }
 }
 .banner-content {
-  margin-bottom: 40px;
+  margin-bottom: 6rem; // 40px;
   @media screen and (min-width: 768px) {
+    //margin-bottom: 40px;
     flex: 0 0 60%;
     text-align: left;
   }
