@@ -9,6 +9,9 @@ yarn-error.log*
 # node modules
 node_modules
 
+# public folder
+public
+
 # Runtime data
 pids
 *.pid
