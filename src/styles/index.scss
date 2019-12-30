@@ -139,7 +139,7 @@ pre {
 pre[class*="language-"] :not(pre) > code,
 p > code,
 li > code {
-  background: #f2f2f2;
+  background: #f2f2f2 !important;
   color: #f44f18; // #151414;
   text-shadow: none;
   border-radius: 0px;
@@ -151,7 +151,7 @@ p > code,
 li > code,
 p > a > code,
 li > a > code {
-  padding: 0 3px;
+  padding: 0 3px !important;
   font-size: 0.9rem;
   word-break: break-word;
 }
