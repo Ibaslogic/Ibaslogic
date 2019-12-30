@@ -34,8 +34,8 @@ $main-white: #fff;
 
   img {
     margin-bottom: 1.666667rem;
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
-    -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
+    // box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
+    // -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15) !important;
   }
 
   @media screen and (min-width: 960px) {
@@ -72,7 +72,7 @@ $main-white: #fff;
       text-decoration: none;
       background-color: $link-color;
       font-size: 0.755rem;
-      padding: 8px;
+      padding: 4px 7px 6px;
       border-radius: 0.24rem;
       line-height: 1;
       color: $main-white;
@@ -151,8 +151,8 @@ $main-white: #fff;
 }
 .entry-content {
   line-height: 1.8em;
-  word-wrap: break-word;
-  hyphens: auto;
+  // word-wrap: break-word;
+  // hyphens: auto;
   font-size: 1rem;
   font-weight: normal;
 
@@ -186,7 +186,7 @@ $main-white: #fff;
   ul li {
     position: relative;
     padding: 0 0 0 1.9rem;
-    font-size: 0.96rem;
+    font-size: 1rem;
 
     &::after {
       content: "";
@@ -286,7 +286,7 @@ $main-white: #fff;
           border-radius: 2px;
           cursor: pointer;
           margin: 0 9px 3px 0;
-          padding: 9px 33px 5px;
+          padding: 5px 29px 3px;
           color: #fff;
           @include transition;
           &:hover {

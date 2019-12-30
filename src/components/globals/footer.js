@@ -67,6 +67,7 @@ const Footer = () => {
               <a
                 href={`https://github.com/${data.site.siteMetadata.github}`}
                 target="_blank"
+                title="Open-source project"
                 rel="noopener noreferrer"
               >
                 <FaGithub />

@@ -92,6 +92,26 @@ h2 a:hover {
   color: #202124;
 }
 
+blockquote {
+  color: rgba(0, 0, 0, 0.8);
+  border-left: 8px solid #ffe564;
+  background: rgba(255, 229, 100, 0.3);
+  border-radius: 4px;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 20px 32px 20px 26px;
+  }
+}
+
 // Code
 // =================================================
 
@@ -106,7 +126,7 @@ pre code {
 }
 
 pre[class*="language-"] {
-  margin: 0.5em 0 2rem !important;
+  margin: 0; //0.5em 0 2rem !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 }
@@ -132,7 +152,7 @@ li > code,
 p > a > code,
 li > a > code {
   padding: 0 3px;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   word-break: break-word;
 }
 
@@ -152,6 +172,35 @@ li > a > code {
 
 .token.class-name {
   text-decoration: none !important;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #262c35;
+  display: block;
+  margin-right: -13px;
+  margin-left: -13px;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+.gatsby-highlight {
+  overflow: auto;
+  margin-bottom: 2rem;
+  border-radius: 0.3em;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+blockquote .gatsby-highlight {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+blockquote .gatsby-highlight + p {
+  margin-top: 20px;
 }
 
 // =====================================================

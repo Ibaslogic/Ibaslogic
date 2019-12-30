@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Ibaslogic`,
-    description: `I teach JavaScript, React, GraphQL, Gatsby, WordPress.`,
+    description: `Looking for a simple and smarter way to learn the latest web tech? Here, you will learn the perfect strategy that works.`,
     author: `Ibas Majid`,
     twitterHandle: `ibaslogic`,
     linkedin: `ibaslogic`,
@@ -14,6 +14,15 @@ module.exports = {
     siteUrl: `https://ibaslogic.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-154777810-1",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-robots-txt`,
     {
@@ -103,8 +112,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint:
-          "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
+        endpoint: "https://ibaslogic.us4.list-manage.com/subscribe/post?u=bf8734e0f65fbe914de814264&amp;id=efcaf11c5c",
+          // "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
       },
     },
     // {
@@ -133,7 +142,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 750,
+              maxWidth: 700,
               linkImagesToOriginal: false,
             },
           },

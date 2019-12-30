@@ -9,7 +9,11 @@ const SubscribeSection = () => {
       <div
         className={`${aboutContentStyles.subscibeContent} ${aboutContentStyles.wrapper}`}
       >
-        <Subscribe />
+        <Subscribe
+          heading="Stay in the Loop"
+          subHeading="You'll be the first to know about the latest web development tips"
+          submitText="Sign me up!"
+        />
       </div>
     </section>
   )

@@ -30,6 +30,7 @@
   .col-left {
     @media screen and (min-width: 768px) {
       padding-right: 15px;
+      flex: 1;
 
       position: relative;
       &::after {
@@ -54,6 +55,7 @@
   .col-right {
     @media screen and (min-width: 768px) {
       padding-left: 15px;
+      flex: 1;
     }
   }
   .col-left p,

@@ -7,10 +7,12 @@ const Hero = () => {
   return (
     <div className={heroStyles.homePageHero}>
       <div className={heroStyles.heroContent}>
-        <h1 className={heroStyles.title}>Ready to build modern web project?</h1>
+        <h1 className={heroStyles.title}>
+          Web Dev Articles for the Self-Starter
+        </h1>
         <p className={heroStyles.description}>
-          Click on the button below and start learning the latest
-          web technologies to develop modern applications and websites.
+          Click on the button below and start learning web technologies and
+          tools needed for a modern web project.
           {/* <span className={heroStyles.nl}></span>  */}
         </p>
 

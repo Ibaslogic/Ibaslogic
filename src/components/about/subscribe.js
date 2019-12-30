@@ -58,13 +58,10 @@ class Subscribe extends Component {
     return (
       <>
         <div className={aboutContentStyles.formContent}>
-          <p className={aboutContentStyles.heading}>
-            Want to start building real-world{" "}
-            <span className={aboutContentStyles.nlSubcribe}></span>{" "}
-            applications?
-          </p>
+          <p className={aboutContentStyles.heading}>{this.props.heading}</p>
           <p className={aboutContentStyles.description}>
-            Then hop on the newsletter and get free tips and tricks.
+            {this.props.subHeading}
+            {/* Then hop on the newsletter and get free tips and tricks. */}
           </p>
         </div>
 
@@ -81,13 +78,13 @@ class Subscribe extends Component {
               className={aboutContentStyles.fieldSubmit}
               type="submit"
             >
-              Please teach me
+              {this.props.submitText}
             </button>
           </div>
 
           {this.state.status === `success` ? (
             <div className={aboutContentStyles.success}>
-              Welcome to the family! Youʼll receive your first email shortly.
+              Thanks for subscribing! Youʼll receive your first email shortly.
             </div>
           ) : (
             <div

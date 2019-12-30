@@ -83,6 +83,21 @@
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.11667;
+  position: relative;
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 41px;
+    height: 2px;
+    background: #f44f18;
+    position: absolute;
+    bottom: -29px;
+    left: 50%;
+    margin-top: 23px;
+    margin-left: -1.25rem;
+  }
 
   @media screen and(min-width: 768px) {
     font-size: 2.1rem;
@@ -101,7 +116,7 @@
 
 .description {
   line-height: 1.667;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .form-container {
   display: flex;
@@ -109,10 +124,14 @@
   margin: 0 auto;
   max-width: 90%;
 
+  .name-field {
+    text-transform: capitalize;
+  }
+
   input,
   button {
-    height: 55px;
-    font-size: inherit;
+    height: 50px;
+    font-size: 15px;
     //font-size: 1rem;
     border-radius: 2px;
     outline: none;
@@ -130,6 +149,7 @@
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 14px;
     @include transition;
 
     &:hover {
@@ -151,11 +171,15 @@
 }
 
 .success {
-  color: rgba(4, 121, 75, 0.93);
+  color: #282828;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .error {
-  color: #f44f18;
+  color: #ff0000;
+  font-style: italic;
+  font-weight: 400;
 
   a {
     text-decoration: underline;

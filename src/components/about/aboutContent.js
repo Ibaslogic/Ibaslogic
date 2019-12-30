@@ -15,22 +15,24 @@ const AboutContent = () => {
 
         <div className={aboutContentStyles.staticContent}>
           <p>
-            If you are wondering where to learn WordPress, you've come to the
-            right place. I am testing....
+            If you have ever wondered – "How can I learn and apply the latest
+            web technologies to build a real-world project?". You have come to
+            the right place.
           </p>
           <p>
-            In this blog, you will get to know the simple logic behind WordPress
-            solutions.
+            I know how it feels to learn different technologies in isolation
+            without having a deeper understanding of how to apply the knowledge to
+            build a modern project.
           </p>
+          <p>I learned this the hard way.</p>
+          <p>So you shouldn’t follow the same route.</p>
           <p>
-            May be you want to develop WordPress site; fix WordPress error or
-            any other WordPress related subject. This blog got you covered.
+            Instead, in this blog, I will show you the best way to learn web
+            development – The project-based learning method. This has proven to
+            work tremendously for my students.
           </p>
-          <p>
-            Ibaslogic came to existence to help WordPress users simplify any
-            technical subject because WordPress shouldn’t be too technical to
-            use.
-          </p>
+          <p>You will be able to learn web development in no distant time.</p>
+          <p>So stick around as we both learn together! </p>
         </div>
       </div>
       <SubscribeSection />
@@ -42,17 +44,42 @@ const AboutContent = () => {
         </div>
         <div className={aboutContentStyles.staticContent}>
           <p>
-            <b>Ibas Majid</b> is a front-end developer and a creative writer. He
-            specializes in developing realistic websites and web applications
-            using the latest tools and tech. He also writes technical contents
-            surrounding this subject.
+            <strong>Ibas Majid</strong> is a web developer, teacher and a
+            creative writer. He specializes in developing realistic websites and
+            web applications using the latest tools and tech. He also writes
+            technical contents around this subject.
           </p>
           <p>
-            Ibas currently teaches JavaScript, React and WordPress theme
+            He authored{" "}
+            <em>
+              <u>
+                <a
+                  href="https://www.amazon.com/React-Beginner-Developers-step-step/dp/1704461618/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1576879707&sr=8-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Easy React JS for Beginner Developers
+                </a>
+              </u>
+            </em>{" "}
+            and some other books which are available on Amazon.
+          </p>
+          <p>
+            Ibas currently teaches JavaScript, React, Gatsby and WordPress theme
             development. And he has helped companies of different sizes launch
             their production websites/apps. He has a Computer Engineering degree
             from the University of Lagos, and he has been programming for about
-            9 years. Aside from web development, he loves to play football.
+            9 years.
+          </p>
+          <p>
+            In this blog, he will be sharing with you all the dev knowledge he
+            acquired thus far. You will also learn all the simple logic to
+            easily grasp web technologies.
+          </p>
+          <p>
+            While you’re here, make sure you sign up for free updates to learn
+            all the tips and tricks that will boost your web development
+            knowledge.
           </p>
         </div>
       </div>

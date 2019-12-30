@@ -4,13 +4,15 @@ import newsletterStyles from "./sidebar.module.scss"
 
 class Newsletter extends Component {
   state = {
+    fname: ``,
     email: ``,
   }
 
   // Update state each time user edits email address
-  _handleEmailChange = e => {
+  _handleChange = e => {
+    const { name, value } = e.target
     this.setState({
-      email: e.target.value,
+      [name]: value,
     })
   }
 
@@ -21,7 +23,12 @@ class Newsletter extends Component {
     if (!this.state.email) {
       this.setState({
         status: `error`,
-        msg: "Please enter your email",
+        msg: "Please enter a valid email",
+      })
+    } else if (!this.state.fname) {
+      this.setState({
+        status: `error`,
+        msg: "Please enter your first name",
       })
     } else {
       this.setState({
@@ -31,7 +38,9 @@ class Newsletter extends Component {
 
       try {
         // setState callback (subscribe email to MC)
-        const result = await addToMailchimp(this.state.email)
+        const result = await addToMailchimp(this.state.email, {
+          FNAME: this.state.fname,
+        })
         //check for mailchimp errors or failures
         if (result.result !== `success`) {
           this.setState({
@@ -42,6 +51,8 @@ class Newsletter extends Component {
           this.setState({
             status: `success`,
             msg: result.msg,
+            fname: "",
+            email: "",
           })
         }
       } catch (err) {
@@ -61,8 +72,8 @@ class Newsletter extends Component {
           Do you want to <span style={{ fontWeight: "600" }}>Learn</span> more?
         </p>
         <p className={newsletterStyles.description}>
-          Get fresh tutorials straight to your inbox and start learning how to
-          build real-world web applications.{" "}
+          Get the next fresh tutorial straight in your inbox and continue your
+          web development learning journey!
         </p>
         <form
           onSubmit={this._handleFormSubmit}
@@ -71,10 +82,20 @@ class Newsletter extends Component {
           noValidate
         >
           <input
-            className="fieldInput"
+            className={newsletterStyles.nameField}
             type="text"
-            onChange={this._handleEmailChange}
-            placeholder="Email here"
+            name="fname"
+            value={this.state.fname}
+            onChange={this._handleChange}
+            placeholder="First Name"
+          />
+          <input
+            className={newsletterStyles.emailField}
+            type="text"
+            name="email"
+            value={this.state.email}
+            onChange={this._handleChange}
+            placeholder="Email Address"
           />
           <button
             style={{ outline: "none" }}
@@ -86,7 +107,7 @@ class Newsletter extends Component {
 
           {this.state.status === `success` ? (
             <div className={newsletterStyles.success}>
-              Welcome to the family! Youʼll receive your first email shortly.
+              Thanks for subscribing! Youʼll receive your first email shortly.
             </div>
           ) : (
             <div

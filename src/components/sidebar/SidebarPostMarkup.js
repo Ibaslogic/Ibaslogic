@@ -4,11 +4,11 @@ import { Link } from "gatsby"
 import { slugify } from "../../util/utilityFunction"
 import recentPostStyles from "./sidebar.module.scss"
 
-const SidebarPostMarkup = ({ fluid, title, slug }) => {
+const SidebarPostMarkup = ({ fixed, title, slug }) => {
   return (
     <Link to={`/blog/${slugify(slug)}/`}>
       <li>
-        <Img className={recentPostStyles.imgTumbnail} fluid={fluid} />
+        <Img className={recentPostStyles.imgTumbnail} fixed={fixed} />
         <span>{title}</span>
       </li>
     </Link>

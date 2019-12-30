@@ -16,7 +16,7 @@ const ContactHero = () => {
         </div>
 
         <div className={contactHeroStyles.sendButton}>
-          <a href="mailto:ibaskunle@gmail.com">Email me</a>
+          <a href="mailto:ibas@ibaslogic.com">Email me</a>
         </div>
       </div>
     </section>

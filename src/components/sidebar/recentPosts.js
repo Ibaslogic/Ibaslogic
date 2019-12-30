@@ -18,7 +18,7 @@ const RecentPosts = () => {
             {data.allMdx.edges.map(({ node }) => (
               <SidebarPostsMarkup
                 key={node.id}
-                fluid={node.frontmatter.featured.childImageSharp.fluid}
+                fixed={node.frontmatter.featured.childImageSharp.fixed}
                 title={node.frontmatter.title}
                 slug={node.fields.slug.name}
               />
@@ -52,8 +52,8 @@ const recentPostQuery = graphql`
             title
             featured {
               childImageSharp {
-                fluid(maxWidth: 460) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 80, height: 46) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
