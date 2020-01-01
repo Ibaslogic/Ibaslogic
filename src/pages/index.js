@@ -12,7 +12,7 @@ import AboutExcerpt from "../components/home/aboutExcerpt"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Web Dev Tutorials" />
+    <SEO title="Helping You Improving Your Web Dev Knowledge!" />
     <main className="main" role="main">
       <Hero />
       <AboutExcerpt />

@@ -53,7 +53,7 @@ module.exports = {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
-                  date: edge.node.frontmatter.dateUpdated,
+                  date: edge.node.frontmatter.datePublished,
                   url:
                     site.siteMetadata.siteUrl +
                     "/blog/" +
@@ -75,7 +75,7 @@ module.exports = {
             {
               allMdx(
                 limit: 1000
-                sort: { order: DESC, fields: [frontmatter___dateUpdated] },
+                sort: { order: DESC, fields: [frontmatter___datePublished] },
               ) {
                 edges {
                   node {
@@ -88,7 +88,7 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      dateUpdated
+                      datePublished
                       featured {
                         publicURL
                       }
@@ -112,8 +112,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: "https://ibaslogic.us4.list-manage.com/subscribe/post?u=bf8734e0f65fbe914de814264&amp;id=efcaf11c5c",
-          // "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
+        endpoint:
+          "https://ibaslogic.us4.list-manage.com/subscribe/post?u=bf8734e0f65fbe914de814264&amp;id=efcaf11c5c",
+        // "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
       },
     },
     // {
