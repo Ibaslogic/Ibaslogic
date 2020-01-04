@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import logo from "../../images/ibaslogic4.png"
 // header styles
 import headerStyles from "./header.module.scss"
+import Helmet from "react-helmet"
 
 export default class Header extends Component {
   state = {
@@ -44,6 +45,11 @@ export default class Header extends Component {
   render() {
     return (
       <header className={headerStyles.container}>
+        <Helmet>
+          <body
+            className={this.state.navbarOpen ? `${headerStyles.noScroll}` : ``}
+          />
+        </Helmet>
         <div className={headerStyles.content}>
           <div className={headerStyles.brand}>
             <Link to="/" className={headerStyles.brandLink}>
@@ -87,6 +93,13 @@ export default class Header extends Component {
             </ul>
           </nav>
         </div>
+        <div
+          className={
+            this.state.navbarOpen
+              ? `${headerStyles.sidebarOverlay} ${headerStyles.showOverlay}`
+              : `${headerStyles.sidebarOverlay}`
+          }
+        ></div>
       </header>
     )
   }

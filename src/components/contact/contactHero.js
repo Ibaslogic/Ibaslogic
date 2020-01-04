@@ -10,14 +10,15 @@ const ContactHero = () => {
           <h1>How can I help?</h1>
           <p>
             Do you want to talk about your project? Or have a question for me?
-            Send me an email and <span className={contactHeroStyles.nl}></span>{" "}
-            I will get back to you shortly.
+            Get in touch using the form below.
+            {/* Send me an email and <span className={contactHeroStyles.nl}></span>{" "}
+            I will get back to you shortly. */}
           </p>
         </div>
 
-        <div className={contactHeroStyles.sendButton}>
+        {/* <div className={contactHeroStyles.sendButton}>
           <a href="mailto:ibas@ibaslogic.com">Email me</a>
-        </div>
+        </div> */}
       </div>
     </section>
   )

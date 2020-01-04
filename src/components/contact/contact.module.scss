@@ -1,3 +1,6 @@
+@mixin transition {
+  transition: all 0.5s linear;
+}
 .contact-hero {
   color: #fff;
   background: url(../../images/newsletter-bg.jpg) center top no-repeat;
@@ -136,5 +139,100 @@
     &:hover {
       color: #8e8e8e;
     }
+  }
+}
+
+// Contact
+
+form {
+  padding-bottom: 60px;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.form-field {
+  display: grid;
+  grid-gap: 15px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+
+    .textarea-field,
+    .actions {
+      grid-column: 1/3;
+    }
+  }
+
+  .text-field,
+  .email-field,
+  .textarea-field {
+    font-size: 15px;
+    outline: none;
+    padding: 17px 10px 16px;
+    line-height: 1.66667;
+    border: 1px solid #e3e3e3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    &::placeholder,
+    &:-moz-placeholder {
+      font-size: 14px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: rgba(244, 79, 24, 0.12);
+      box-shadow: 0 2px 6px 0 rgba(244, 79, 24, 0.12);
+    }
+  }
+
+  .textarea-field {
+    height: 200x;
+    resize: vertical;
+  }
+}
+
+.actions {
+  margin: 20px 0;
+  display: flex;
+  justify-content: right;
+  input {
+    border: 1px solid #e3e3e3;
+    padding: 10px 21px;
+    outline: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+      padding: 15px 30px;
+    }
+  }
+}
+
+.submit-button {
+  margin-right: 8px;
+  background: #f44f18;
+  border: 1px solid #f44f18 !important;
+  color: #fff;
+  @include transition;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.reset-button {
+  color: #4d4d4d;
+  @include transition;
+
+  &:hover {
+    color: #f44f18;
   }
 }

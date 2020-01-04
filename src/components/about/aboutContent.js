@@ -21,7 +21,7 @@ const AboutContent = () => {
           </p>
           <p>
             I know how it feels to learn different technologies in isolation
-            without having a deeper understanding of how to apply the knowledge to
+            without having a deeper understanding applying the knowledge to
             build a modern project.
           </p>
           <p>I learned this the hard way.</p>
