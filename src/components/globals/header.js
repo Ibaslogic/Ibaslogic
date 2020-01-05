@@ -57,7 +57,7 @@ export default class Header extends Component {
             </Link>
           </div>
 
-          <nav className={headerStyles.navbar}>
+          <nav className={`${headerStyles.navbar}`}>
             <div
               className={
                 this.state.navbarOpen

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import { slugify } from "../util/utilityFunction"
@@ -14,11 +14,10 @@ import { FaPencilAlt } from "react-icons/fa"
 
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
+import ScrollTop from "../components/BlogPage/scrollTop"
+
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
-import { FaChevronUp } from "react-icons/fa"
-import { Link } from "react-scroll"
 
 export const query = graphql`
   query($slug: String!) {
@@ -149,8 +148,7 @@ const Blog = ({ data, pageContext }) => {
             <ul className={blogPageStyles.postTags}>
               {data.mdx.frontmatter.tags.map((tag, index) => (
                 <li key={index}>
-                  {/* <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link> */}
-                  <a href={`/tags/${slugify(tag)}/`}>{tag}</a>
+                  <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link>
                 </li>
               ))}
             </ul>
@@ -171,17 +169,7 @@ const Blog = ({ data, pageContext }) => {
         />
       </div>
 
-      <Link
-        //activeClass="active"
-        to="primary"
-        //spy={true}
-        smooth={true}
-        offset={-64}
-        duration={500}
-        className={blogPageStyles.scrollTop}
-      >
-        <FaChevronUp /> Back to top
-      </Link>
+      <ScrollTop />
     </Layout>
   )
 }
