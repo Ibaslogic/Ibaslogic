@@ -16,7 +16,8 @@ const ScrollTop = () => {
       duration={500}
       className={shareStyles.scrollTop}
     >
-      <FaChevronUp /> Back to top
+      <FaChevronUp /> Back <br />
+      to top
     </Link>
   )
 }

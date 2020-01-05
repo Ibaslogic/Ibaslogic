@@ -380,15 +380,18 @@ $main-white: #fff;
 .scroll-top {
   position: absolute;
   right: 0;
-  height: 42px;
-  width: 85px;
+  height: 50px;
+  width: 50px;
   box-shadow: 0 4px 8px #dadce0;
   display: block;
-  margin: -49px 8px 0 0;
+  margin: -35px 10px 0 0; //margin: -47px 10px 0 0;
   cursor: pointer;
   text-align: center;
   color: #fff;
   background-color: #282828;
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 13px;
 
   &:hover {
     text-decoration: underline;
@@ -396,7 +399,7 @@ $main-white: #fff;
 
   svg {
     display: block;
-    margin: 2px 0 4px 31px;
+    margin: 1px 0 2px 19px;
     font-size: 12px;
   }
 }
