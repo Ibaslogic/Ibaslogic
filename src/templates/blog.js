@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import { slugify } from "../util/utilityFunction"
@@ -16,6 +16,9 @@ import PostSeriesLink from "../components/globals/custom_components/PostSeriesLi
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+
+import { FaChevronUp } from "react-icons/fa"
+import { Link } from "react-scroll"
 
 export const query = graphql`
   query($slug: String!) {
@@ -146,7 +149,8 @@ const Blog = ({ data, pageContext }) => {
             <ul className={blogPageStyles.postTags}>
               {data.mdx.frontmatter.tags.map((tag, index) => (
                 <li key={index}>
-                  <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link>
+                  {/* <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link> */}
+                  <a href={`/tags/${slugify(tag)}/`}>{tag}</a>
                 </li>
               ))}
             </ul>
@@ -166,6 +170,18 @@ const Blog = ({ data, pageContext }) => {
           heading="share"
         />
       </div>
+
+      <Link
+        //activeClass="active"
+        to="primary"
+        //spy={true}
+        smooth={true}
+        offset={-64}
+        duration={500}
+        className={blogPageStyles.scrollTop}
+      >
+        <FaChevronUp /> Back to top
+      </Link>
     </Layout>
   )
 }

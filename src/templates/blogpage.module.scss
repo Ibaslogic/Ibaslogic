@@ -70,7 +70,7 @@ $main-white: #fff;
     margin-bottom: 0.66rem;
     a {
       text-decoration: none;
-      background-color: $link-color;
+      background-color: rgba(#8c8c8c, 0.8);
       font-size: 0.755rem;
       padding: 4px 7px 6px;
       border-radius: 0.24rem;
@@ -79,7 +79,7 @@ $main-white: #fff;
       @include transition;
 
       &:hover {
-        background-color: rgba($link-color, 0.8);
+        background-color: rgba(#8c8c8c, 1);
       }
     }
   }
@@ -374,4 +374,30 @@ $main-white: #fff;
 .linkedin {
   background: #0d77b7;
   border: 1px solid #0d77b7;
+}
+
+// Scoll Top
+.scroll-top {
+  position: absolute;
+  right: 0;
+  height: 42px;
+  width: 85px;
+  box-shadow: 0 4px 8px #dadce0;
+  display: block;
+  color: #444;
+  margin: -49px 8px 0 0;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  background-color: #282828;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    display: block;
+    margin: 2px 0 4px 31px;
+    font-size: 12px;
+  }
 }

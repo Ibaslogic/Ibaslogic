@@ -71,7 +71,7 @@
   }
 }
 .nl {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 760px) {
     display: block;
   }
 }
@@ -171,7 +171,7 @@ form {
     outline: none;
     padding: 17px 10px 16px;
     line-height: 1.66667;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #cecece;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 

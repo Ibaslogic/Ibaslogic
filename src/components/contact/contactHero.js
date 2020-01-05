@@ -9,9 +9,9 @@ const ContactHero = () => {
         <div className={contactHeroStyles.bannerContent}>
           <h1>How can I help?</h1>
           <p>
-            Do you want to talk about your project? Or have a question for me?
+            Do you want to talk about your project? Or have a question for me? <span className={contactHeroStyles.nl}></span>
             Get in touch using the form below.
-            {/* Send me an email and <span className={contactHeroStyles.nl}></span>{" "}
+            {/* Send me an email and {" "}
             I will get back to you shortly. */}
           </p>
         </div>

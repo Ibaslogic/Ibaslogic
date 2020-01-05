@@ -46,7 +46,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 6rem;
+    // padding-top: 6rem;
+    padding-top: 10rem;
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
@@ -107,9 +108,9 @@
     text-align: left;
   }
 
-  @media screen and (min-width: 960px) {
-    margin-top: -60px;
-  }
+  // @media screen and (min-width: 960px) {
+  //   margin-top: -60px;
+  // }
   h1 {
     font-size: 2rem;
     line-height: 1.27647;
@@ -135,9 +136,9 @@
     //   font-size: 3.5rem;
     // }
 
-    span {
-      font-weight: 600;
-    }
+    // span {
+    //   font-weight: 600;
+    // }
   }
   p {
     font-size: 1.1rem;
