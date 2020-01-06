@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import ContactHero from "../components/contact/contactHero"
 import ContactContent from "../components/contact/contactContent"
 
-const ContactPage = () => (
+const ContactPage = () => ( 
   <Layout>
     <SEO
       title="Get in touch with Ibas"
