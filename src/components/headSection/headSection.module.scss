@@ -115,11 +115,11 @@
 //   }
 // }
 
-// .nl {
-//   @media screen and (min-width: 1200px) {
-//     display: block;
-//   }
-// }
+.nl {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
 
 // .description {
 //   letter-spacing: 0;

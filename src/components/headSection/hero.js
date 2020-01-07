@@ -11,9 +11,9 @@ const Hero = () => {
           Web Dev Articles for the Self-Starter
         </h1>
         <p className={heroStyles.description}>
-          Click on the button below and start learning web technologies and
-          tools needed for a modern web project.
-          {/* <span className={heroStyles.nl}></span>  */}
+          Click on the button below and start learning the latest web
+          technologies <span className={heroStyles.nl}></span> for your next web
+          project.
         </p>
 
         <div className={heroStyles.heroButtonContainer}>
