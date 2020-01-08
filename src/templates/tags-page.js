@@ -27,13 +27,13 @@ const Tags = ({ pageContext, data }) => {
                 <Post
                   key={id}
                   title={node.frontmatter.title}
-                  posted={node.fields.slug.birthTime}
-                  updated={node.fields.slug.modifiedTime}
+                  posted={node.frontmatter.datePublished}
+                  updated={node.frontmatter.dateUpdated}
                   time={timeToRead}
                   fluid={node.frontmatter.featured.childImageSharp.fluid}
                   slug={node.fields.slug.name}
                 />
-              )
+              ) 
             })}
           </ul>
         </div>
@@ -47,7 +47,7 @@ export default Tags
 export const pageQuery = graphql`
   query($tag: String!) {
     allMdx(
-      sort: { fields: [fields___slug___modifiedTime], order: DESC }
+      sort: { fields: [frontmatter___dateUpdated], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
@@ -56,7 +56,8 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            tags
+            datePublished(formatString: "MMMM Do, YYYY")
+            dateUpdated(formatString: "MMMM Do, YYYY")
             featured {
               childImageSharp {
                 fluid(maxWidth: 600) {
@@ -68,8 +69,6 @@ export const pageQuery = graphql`
           fields {
             slug {
               name
-              modifiedTime(formatString: "MMMM Do, YYYY")
-              birthTime(formatString: "MMMM Do, YYYY")
             }
           }
           timeToRead
