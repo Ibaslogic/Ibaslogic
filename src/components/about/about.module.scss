@@ -52,6 +52,10 @@
     justify-content: space-between;
     flex: 1;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: -4rem;
+  }
 }
 
 .wrapper {
@@ -102,21 +106,27 @@
 }
 .banner-content {
   margin-bottom: 6rem; // 40px;
+  max-width: 18rem;
   @media screen and (min-width: 768px) {
     //margin-bottom: 40px;
     flex: 0 0 60%;
     text-align: left;
   }
 
-  // @media screen and (min-width: 960px) {
-  //   margin-top: -60px;
-  // }
+  @media screen and (min-width: 600px) {
+    max-width: 27rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.27647;
     font-weight: normal;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 700;
 
     @media screen and (min-width: 480px) {
       font-size: 2.1rem;
