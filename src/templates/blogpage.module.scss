@@ -154,13 +154,13 @@ $main-white: #fff;
   // word-wrap: break-word;
   // hyphens: auto;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.96rem;
 
   //letter-spacing: 0;
 
-  // @media screen and (min-width: 768px) {
-  //   font-size: 1.035rem;
-  // }
+  @media screen and (min-width: 600px) {
+    font-size: 1rem;
+  }
   // @media screen and (min-width: 768px) {
   //   letter-spacing: 0.025em;
   // }
@@ -186,7 +186,7 @@ $main-white: #fff;
   ul li {
     position: relative;
     padding: 0 0 0 1.9rem;
-    font-size: 1rem;
+    // font-size: 1rem;
 
     &::after {
       content: "";
