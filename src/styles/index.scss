@@ -5,7 +5,7 @@
 //@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
 
 // Variables
-$primary-color: #464646; //#3c4043;
+$primary-color: #3a3a3a; //464646; //#3c4043;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
 $main-white: #fff;
@@ -86,6 +86,15 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
 }
 
 h2 a,
