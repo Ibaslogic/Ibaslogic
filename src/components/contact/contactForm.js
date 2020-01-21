@@ -6,6 +6,7 @@ const ContactForm = () => {
   return (
     <form
       name="contact"
+      className={contactFormStyles.form}
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
