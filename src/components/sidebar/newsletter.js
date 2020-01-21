@@ -72,7 +72,7 @@ class Newsletter extends Component {
           Do you want to <span style={{ fontWeight: "600" }}>Learn</span> more?
         </p>
         <p className={newsletterStyles.description}>
-          Get the next fresh tutorial straight in your inbox and continue your
+          Get the next tutorial straight in your inbox and continue your
           web development learning journey!
         </p>
         <form
