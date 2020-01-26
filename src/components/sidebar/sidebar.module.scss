@@ -66,7 +66,7 @@
   border: 1px solid #f2f2f2;
   padding: 40px 10px;
 
-  background: #fbfcfd;
+  background: #f5f8fa; // #fbfcfd;
   margin-bottom: 60px;
   font-size: 1rem;
   font-weight: 300;
@@ -85,20 +85,20 @@
   font-weight: 300;
   line-height: 1.11667;
   position: relative;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 41px;
-    height: 2px;
-    background: #f44f18;
-    position: absolute;
-    bottom: -29px;
-    left: 50%;
-    margin-top: 23px;
-    margin-left: -1.25rem;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 41px;
+  //   height: 2px;
+  //   background: #f44f18;
+  //   position: absolute;
+  //   bottom: -29px;
+  //   left: 50%;
+  //   margin-top: 23px;
+  //   margin-left: -1.25rem;
+  // }
 
   @media screen and(min-width: 768px) {
     font-size: 2.1rem;
@@ -139,7 +139,7 @@
   }
   input {
     padding: 0px 25px;
-    border: 1px solid #f2f2f2;
+    border: 1px solid #dadadb; //#f2f2f2;
     margin-bottom: 4px;
     color: #444;
   }
