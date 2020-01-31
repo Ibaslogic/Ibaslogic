@@ -51,7 +51,7 @@ $main-white: #fff;
 .secondary-area {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  max-width: 660px;
+  max-width: 690px;
   margin: 0 auto;
   @media screen and (min-width: 960px) {
     width: 33.134%;
@@ -201,10 +201,9 @@ $main-white: #fff;
     }
   }
 
-  // ol,
-  // ul {
-  //   margin-left: 1.388889rem;
-  // }
+  ol {
+    margin-left: 20px;
+  }
 
   p,
   ul,

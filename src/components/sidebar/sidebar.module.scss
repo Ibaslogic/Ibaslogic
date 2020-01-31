@@ -108,9 +108,16 @@
 
 .title,
 .description {
-  @media screen and(min-width: 1200px) {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 18rem;
+  @media screen and(min-width: 480px) {
+    max-width: 20rem;
+  }
+  @media screen and(min-width: 600px) {
+    max-width: 27rem;
+  }
+  @media screen and(min-width: 960px) {
     max-width: 250px;
   }
 }
@@ -123,7 +130,17 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 18rem;
+  @media screen and(min-width: 480px) {
+    max-width: 20rem;
+  }
+  @media screen and(min-width: 600px) {
+    max-width: 27rem;
+  }
+
+  @media screen and(min-width: 960px) {
+    max-width: 90%;
+  }
 
   .name-field {
     text-transform: capitalize;
@@ -188,4 +205,11 @@
 .success,
 .error {
   margin-top: 20px;
+}
+
+.nl {
+  display: block;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
 }

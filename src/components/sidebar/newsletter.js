@@ -69,11 +69,12 @@ class Newsletter extends Component {
     return (
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
         <p className={newsletterStyles.title}>
-          Do you want to <span style={{ fontWeight: "600" }}>Learn</span> more?
+          Do you want to <span class={newsletterStyles.nl}></span>{" "}
+          <span style={{ fontWeight: "600" }}>Learn</span> more?
         </p>
         <p className={newsletterStyles.description}>
-          Get the next tutorial straight in your inbox and continue your
-          web development learning journey!
+          Get the next tutorial straight in your inbox and continue your web
+          development learning journey!
         </p>
         <form
           onSubmit={this._handleFormSubmit}

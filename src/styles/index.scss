@@ -5,7 +5,7 @@
 //@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
 
 // Variables
-$primary-color: #464646; //#3c4043; #3a3a3a;
+$primary-color: #555; //#464646; //#3c4043; #3a3a3a;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
 $main-white: #fff;
@@ -116,7 +116,7 @@ blockquote {
   margin: 1.5rem 0;
   padding: 20px;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: inherit;
 
   p:last-of-type {
     margin-bottom: 0;
@@ -167,7 +167,7 @@ li > code,
 p > a > code,
 li > a > code {
   padding: 0 3px !important;
-  font-size: 0.9rem;
+  //font-size: 0.9rem;
   word-break: break-word;
 }
 

@@ -46,7 +46,7 @@ const RecentPosts = () => {
           <SubHeading title="Latest Articles" />
         </div>
         <div className={recentStyles.viewAll}>
-          <Link to="/blog">view all »</Link>
+          <Link to="/blog/">view all »</Link>
         </div>
       </div>
 
