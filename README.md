@@ -4,8 +4,9 @@ Ibas personal blog site.
 
 ## Please Note
 
-> While this project is open sourced and available for use or modifications, I urge you to be innovative and create something that is tailored to your needs.
- 
+> While this project is open-sourced and available for use or modifications, I urge you to be innovative and create something that is tailored to your needs.
+>
+> If you don't know where to start. Please check this [Gatsby tutorial](https://ibaslogic.com/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
 
 ## Built With
 
@@ -26,7 +27,6 @@ Ibas personal blog site.
 I welcome any suggestions or features you think should be added to improve this web project.
 
 Also, If you see any typos somewhere in a post or other issue that needs to be tackle, please don't wait to open a pull request and correct it!
-
 
 ## Author
 
