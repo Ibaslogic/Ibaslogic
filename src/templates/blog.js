@@ -30,7 +30,7 @@ export const query = graphql`
     mdx(fields: { slug: { name: { eq: $slug } } }) {
       id
       timeToRead
-      excerpt
+      excerpt(pruneLength: 300)
       tableOfContents
       frontmatter {
         title
