@@ -46,13 +46,13 @@ const ContactForm = () => {
               className={contactFormStyles.submitButton}
             />
           </li>
-          <li>
+          {/* <li>
             <input
               type="reset"
               className={contactFormStyles.resetButton}
               value="Clear"
             />
-          </li>
+          </li> */}
         </ul>
       </div>
     </form>

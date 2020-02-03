@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  FaFacebookSquare,
+  // FaFacebookSquare,
   FaGithub,
   FaLinkedin,
   FaTwitter,
@@ -17,7 +17,6 @@ const Footer = () => {
           author
           twitterHandle
           linkedin
-          facebook
           github
         }
       }
@@ -44,7 +43,7 @@ const Footer = () => {
                 <FaTwitter />
               </a>
             </li>
-            <li className={footerStyles.socialItem}>
+            {/* <li className={footerStyles.socialItem}>
               <a
                 href={`https://www.facebook.com/${data.site.siteMetadata.facebook}`}
                 target="_blank"
@@ -52,7 +51,7 @@ const Footer = () => {
               >
                 <FaFacebookSquare />
               </a>
-            </li>
+            </li> */}
 
             <li className={footerStyles.socialItem}>
               <a

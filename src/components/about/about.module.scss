@@ -122,18 +122,18 @@
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.27647;
     font-weight: normal;
     margin-bottom: 1.5rem;
     font-weight: 700;
 
     @media screen and (min-width: 480px) {
-      font-size: 2.1rem;
+      font-size: 2.4rem;
       line-height: 1.14583em;
     }
     @media screen and (min-width: 960px) {
-      font-size: 2.6rem;
+      font-size: 3rem;
     }
     // @media screen and (min-width: 768px) {
     //   font-size: 3.2rem;
@@ -274,8 +274,8 @@
 }
 .field-submit {
   color: #fff;
-  background-color: transparent;
-  border: 1px solid #fff;
+  background-color: #f44f18;
+  border: 1px solid #f44f18;
   font-size: 1.2rem;
   text-transform: capitalize;
   font-weight: 400;
@@ -288,8 +288,8 @@
   }
 
   &:hover {
-    background-color: #fff;
-    color: #444;
+    background-color: rgba($color: #f44f18, $alpha: 0.8);
+    color: #fff;
     cursor: pointer;
   }
 }
