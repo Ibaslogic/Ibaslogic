@@ -100,6 +100,7 @@ module.exports = {
                     }
                     frontmatter {
                       title
+                      description
                       datePublished
                       featured {
                         publicURL
