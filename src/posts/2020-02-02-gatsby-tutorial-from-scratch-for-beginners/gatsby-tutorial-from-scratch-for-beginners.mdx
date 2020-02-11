@@ -1574,13 +1574,13 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-In the code, we are making use of the `createPages` API function to dynamically create a single post page. This API accepts two parameters, `graphql` and an `actions` object.
+In the code, we are making use of the `createPages` API function to dynamically create a single post page based on the markdown `slug`. 
 
-The `graphql` function which allows us to fetch the markdown `slugs` we created earlier returns a promise. And so we used the `async/await` syntax to get the response.
+Here, we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need.
 
-Since this response holds all of the data we need, we looped through its edges array (which contains the list of posts) and then dynamically create the pages for each of them by calling the `createPage` function.
+So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function. 
 
-This function accepts an object where we specified the `path` for visiting the single blog post, the `component` parameter which allows us to specify the absolute path to the template file while the `context` contains the data (i.e `slug`) we are passing to the template file.
+This function accepts an object where we defined the `path` for visiting the single blog post, the `component` parameter where we specified the absolute path to the template file while the `context` contains the data (i.e `slug`) we are passing to the template file.
 
 Now let’s restart the development server.
 

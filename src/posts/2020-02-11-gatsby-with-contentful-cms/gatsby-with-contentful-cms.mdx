@@ -48,7 +48,7 @@ Before we dive in, let’s quickly make some changes to the rendered content.
 
 Open your project with your favourite text editor.
 
-When it comes to page creation in Gatsby, the `src/pages` directory is where it looks to create site pages. Files in this directory automatically become static pages with paths based on their names.
+When it comes to page creation, the `src/pages` directory is where Gatsby looks to create site pages. Files in this directory automatically become static pages.
 
 So in the `src/pages` folder, rename the `page-2.js` file to `blog.js`.
 
@@ -88,17 +88,17 @@ Now that we have the basic setup, let’s see how to start sourcing content from
 
 The other types of CMS including the traditional CMSs like WordPress and Drupal also provides options to work with the frontend technologies by supporting the API approach.
 
-All that is required to load content in the frontend is the Content Delivery API from the CMS.
+All you need to source content from these CMSs is the Content Delivery API. 
 
 Ok. Enough said. 
 
 Let's head over to [contentful.com](https://www.contentful.com/sign-up/ "Contentful signup") and create a free account. After that, you’ll need to click on the **Explore content modeling** button to create an example project or simply browse to [app.contentful.com](https://app.contentful.com/ "Contentful login").
 
-Once this is done, you can create an empty space. Think of this space as a storage area for your project content.
+Once this is done, you can create an empty space. Think of *space* as a storage area for your project content.
 
 To create it, open the sidebar menu and click on the **create space** link. Go ahead and use the free space and give it a name. In my case, I will call it **Ibaslogic Gatsby Blog**.
 
-Make sure you select **Create an empty space** and then proceed.
+Select **Create an empty space** and proceed.
 
 Next, we will focus on defining the type of data we want to track. Here, we will look at the **Content model** and the **Content** tab.
 
@@ -106,7 +106,7 @@ For a typical blog post, you’ll want to get the *post title*, *date*, *feature
 
 So, we will add these fields in the model.
 
-Let’s click on the **Content model** tab to add our content type.
+Let’s click on the **Content model** tab to add a content type.
 
 Name your content type (for instance, **Blog Post**) and click on the **Create** button.
 
@@ -116,11 +116,11 @@ Next, we need to start adding the necessary fields for our blog posts.
 
 To add these fields, click the **Add field** button.
 
-For our Blog Post model, we will be using four of these fields. The **Text** for the post title, slug and excerpt, **Date and time** for the date, **Media** for the featured image and **Rich text** for the post body.
+We will be using four of these fields for our Blog Post model. The **Text** for the post title, slug and excerpt, **Date and time** for the date, **Media** for the featured image and **Rich text** for the post body.
 
 ![Content type](./images/content-type.png)
 
-To add a field for the Title, select **Text** and give the field the name of Title. Then click **Create**.
+To add a **Title** field, you’ll select **Text** and give it a name (for instance, *Title*). Then click **Create**.
 
 > **Note:** Unlike the **Title** where the Shot text radio button is selected, the **Excerpt** will use the Long text.
 >
@@ -141,6 +141,8 @@ Head over to the **Content** tab and click on the **Add Blog Post** button.
 Go ahead and fill all the fields you specified earlier and click the **Publish** button.
 
 ![Post editor](./images/post-editor.png)
+
+<br />
 
 Add more entries to the post list. Here, I’ve added one more entry.
 
@@ -188,7 +190,7 @@ Either way, you should see something like this:
 
 These data are sensitive and should be made secret. So, pasting them directly in the `gatsby-config.js` file is wrong since we will be pushing the code to GitHub.
 
-_Though it would work_.
+Though it would work.
 
 Instead, let’s create a file called `.env.development` in the project root directory and add them like this:
 
@@ -341,21 +343,19 @@ export default Blog
 
 Save the file and check the blog page. You should have your Contentful post listed.
 
-The code should be self-explanatory. It is similar to how you’d render the markdown data.
+The code should be self-explanatory. It is similar to how you’d [render the markdown data](/blog/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby data").
 
 In essence, we are using the query we constructed in the GraphiQL IDE to render the Contentful data in the JSX.
 
 Now, if you click on the **Read More** link to access the single post, you’ll get a 404 error page.
 
-So, we need to generate a single post page.
+We do not want that. So we need to generate a single post page.
 
 Let’s take a look at the `gatsby-node.js` file located in the root directory. Gatsby allows us to use this file to dynamically create the single post page.
 
-Also, we will need a template file alongside the `gatsby-node.js`. This template file will render every single post on the screen.
+Also, we will need a template file alongside the `gatsby-node.js`. This file will be used to render every of the single post on the screen.
 
-Let’s quickly do that.
-
-Add the following code to the `gatsby-node.js`file:
+First, let's add the following code to the `gatsby-node.js`file:
 
 ```js
 const path = require("path")
@@ -389,17 +389,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
 **What’s happening in the code?**
 
-We are making use of an API function, `createPages` to dynamically generate a single post page. This function accepts two parameters, `graphql` and an `actions` object.
+Gatsby allows us to use an API function called `createPages` to dynamically generate a single post page based on the `slug` we fetched from Contentful.
 
-The `graphql` function which allows us to fetch the post slugs from Contentful CMS returns a promise. And so we used the `async/await` syntax to get the promise response.
+Notice we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need. 
 
-Since this response holds all of the data we need including the `slug`, we looped through its `edges` array (which contains the list of posts) and then dynamically create the pages for each of them by calling the `createPage` function.
+So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function. 
 
-In this function, we specified the parameters needed to create the pages.
+In this function, we specified the parameters needed to create the pages. 
 
-Notice we are referencing the template file that we need to create in the `src` directory.
+Pay attention to the `component` parameter that points to the template file that you need to create in the `src` directory. 
 
-Let’s create that file.
+So let’s quickly create that file.
 
 In the `src` directory, create a new folder called `templates`. In this folder, create a file named `blog-post.js` and add the following code:
 

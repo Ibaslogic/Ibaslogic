@@ -178,7 +178,7 @@ $main-white: #fff;
   }
 
   a {
-    &:hover {
+    &:hover, &:focus, &:active {
       text-decoration: underline;
     }
   }
