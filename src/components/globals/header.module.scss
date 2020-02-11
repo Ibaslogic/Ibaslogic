@@ -5,11 +5,11 @@ $content-max-width: 72rem;
 
 // mixins
 @mixin transition {
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 
 .container {
@@ -51,7 +51,7 @@ $content-max-width: 72rem;
   font-size: 1.2rem;
   color: $nav-link;
   margin-left: 0;
-  font-weight: 600;
+  // font-weight: 600;
   text-transform: capitalize;
   text-decoration: none;
   @include transition;

@@ -40,7 +40,7 @@ Gatsby has become so popular because it is really fast and easy to work with. It
 
 If you are a technical person, you can manage and source your content from the Markdown files. 
 
-Otherwise, you can source your content from CMSs like Contentful, WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
+Otherwise, you can [source your content from CMSs like Contentful](/blog/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
 
 Either way, there are Gatsby plugins that allows us to achieve any of these.
 
@@ -1574,15 +1574,13 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-In the code, we are destructuring the `createPages` API function and grabbing the `graphql` function which allows us to fetch the markdown slugs we created earlier.
+In the code, we are making use of the `createPages` API function to dynamically create a single post page. This API accepts two parameters, `graphql` and an `actions` object.
 
-This `graphql` function returns a promise and so we used the `async/await` syntax to get the promise response.
+The `graphql` function which allows us to fetch the markdown `slugs` we created earlier returns a promise. And so we used the `async/await` syntax to get the response.
 
-Since this response holds all of the data we need including the slug, we looped through its `edges` array (which contains the list of posts) and run the `createPage` action for each of them.
+Since this response holds all of the data we need, we looped through its edges array (which contains the list of posts) and then dynamically create the pages for each of them by calling the `createPage` function.
 
-This `createPage` action is always called to generate a page.
-
-It accepts an object where we specified the `path` for visiting the single blog post, the `component` parameter allows us to specify the absolute path to the template file while the `context` contains the data (i.e slug) we are passing to the template file.
+This function accepts an object where we specified the `path` for visiting the single blog post, the `component` parameter which allows us to specify the absolute path to the template file while the `context` contains the data (i.e `slug`) we are passing to the template file.
 
 Now let’s restart the development server.
 
