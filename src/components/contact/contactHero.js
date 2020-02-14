@@ -8,12 +8,12 @@ const ContactHero = () => {
       <div className={contactHeroStyles.heroContentWrapper}>
         <div className={contactHeroStyles.bannerContent}>
           <h1>How can I help?</h1>
-          <p>
+          <h3 className={contactHeroStyles.description}>
             Do you want to talk about your project? Or have a question for me? <span className={contactHeroStyles.nl}></span>
             Get in touch using the form below.
             {/* Send me an email and {" "}
             I will get back to you shortly. */}
-          </p>
+          </h3>
         </div>
 
         {/* <div className={contactHeroStyles.sendButton}>

@@ -27,6 +27,7 @@ $main-white: #fff;
     flex-direction: row;
   }
 }
+
 .site-main {
   padding-bottom: 3.75rem;
   max-width: 690px;
@@ -49,7 +50,7 @@ $main-white: #fff;
 }
 
 .secondary-area {
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   letter-spacing: 0.25px;
   max-width: 690px;
   margin: 0 auto;
@@ -154,12 +155,12 @@ $main-white: #fff;
   // word-wrap: break-word;
   // hyphens: auto;
   font-weight: inherit;
-  font-size: 0.9375rem;
+  font-size: 1rem; //0.9375rem;
 
   //letter-spacing: 0;
 
   @media screen and (min-width: 600px) {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   // @media screen and (min-width: 768px) {
   //   letter-spacing: 0.025em;
@@ -178,14 +179,16 @@ $main-white: #fff;
   }
 
   a {
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       text-decoration: underline;
     }
   }
 
   ul li {
     position: relative;
-    padding: 0 0 0 1.9rem;
+    padding: 0 0 0 1.5rem;
     // font-size: 1rem;
 
     &::after {
@@ -211,9 +214,12 @@ $main-white: #fff;
     margin-bottom: 20px;
   }
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     @media screen and (min-width: 480px) {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.9rem;
     }
   }
   h3 {
@@ -225,9 +231,9 @@ $main-white: #fff;
   h2,
   h3 {
     line-height: 1.3777em;
-    margin-bottom: 1.2em;
+    margin-bottom: 1em;
     font-weight: 600;
-    color: #f44f18;
+    color: inherit; // #f44f18;
   }
 }
 

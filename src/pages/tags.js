@@ -20,7 +20,7 @@ const Tagspage = ({
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
           <div className={blogStyles.filterPosts}>
-            <p>All Tags</p>
+            <h3 className={blogStyles.description}>All Tags</h3>
           </div>
           <ul style={{ margin: 0 }}>
             {group.map(tag => (

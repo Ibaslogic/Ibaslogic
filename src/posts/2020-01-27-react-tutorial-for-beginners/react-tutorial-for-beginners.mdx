@@ -36,7 +36,7 @@ This React tutorial is divided into four different parts. And here is a quick ov
 
 Now let's get started.
 
-### What is React?
+## What is React?
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs from a small and isolated snippet of code.
 
@@ -48,7 +48,7 @@ Let’s take a step backwards.
 
 I mentioned that it allow developers to create complex UI from an isolated snippet of code. To understand this statement better, you need to start thinking in React Component.
 
-### Thinking in React Component
+## Thinking in React Component
 
 When building an application with React, you build a bunch of independent, isolated and reusable component. Think of component as a simple function that you can call with some input and they render some output.
 
@@ -72,7 +72,7 @@ Having this instinct indicate that you are **thinking in React!**
 
 Moving on.
 
-### The concept of Virtual DOM 
+## The concept of Virtual DOM 
 
 As a JavaScript developer, you are sure to have interacted with the real DOM while building interactive websites. Though, you may have been able to avoid understanding how it works.
 
@@ -100,7 +100,7 @@ Whenever new elements are added to the UI, a virtual DOM is created. But if the 
 
 DO not worry if all these seem strange, you will get to see them in practice later.
 
-### Setting up Working Environment
+## Setting up Working Environment
 
 There are several ways we can interact and get started with React. Though React recommends setting up through the `create-react-app` CLI tool, I will quickly walk you through how to start working with React by simply writing React code in HTML file.
 
@@ -108,7 +108,7 @@ This will quickly get you up and running and does not require any installation.
 
 So let’s do it.
 
-### Writing React directly in HTML
+## Writing React directly in HTML
 
 This method of interacting with React is the simplest way and it’s very easy if you have ever worked with HTML, CSS and JavaScript.
 
@@ -151,7 +151,7 @@ And you might be wondering why we are writing HTML inside of JavaScript.
 
 Well, that line is not HTML but JSX.
 
-### What is JSX?
+## What is JSX?
 
 Writing JavaScript/React code to describe what the user interface (UI) will look like is not as simple as you may think. 
 
@@ -220,7 +220,7 @@ If you successfully render your content on the screen, then you have just create
 
 Congratulations.
 
-### Using the Create-React-App CLI
+## Using the Create-React-App CLI
 
 Instead of manually loading scripts in the head element of your file, you will set up a React environment by installing the `create-react-app` CLI tool.
 
@@ -283,7 +283,7 @@ Once you save the file, the browser reloads automatically for the change to take
 Ok good.
 
 
-### Writing the To-dos App
+## Writing the To-dos App
 
 At this point, we are good to start creating our React App. You will learn how to create separate components that describes how different sections of the UI looks like. These components files live in the `src` folder.
 
@@ -320,7 +320,7 @@ Imagine having an app with hundreds of element, you’ll agree with me that it w
 
 So instead of rendering a simple element, we will render a React component.
 
-### Creating the Component files
+## Creating the Component files
 
 Remember, at the beginning, we decomposed our application into a tree of isolated components. Where the parent component, `TodoContainer`, holds three children components (`Header`, `InputTodo` and `TodosList`). Then, `TodosList` holds another component called `TodoItem`.
 
@@ -404,7 +404,7 @@ Also, take note of the component file path as used in the `index.js` file. Make 
 
 The file extension defaults to `.js`, so you don’t need to append it.
 
-### Working with Data
+## Working with Data
 
 When creating React app, you cannot do without having components receiving and/or passing data. It may be a child component receiving data from its parent or maybe the user directly input data to the component. Understanding how to work with data is very crucial to building React component.
 
@@ -434,7 +434,7 @@ Think of the state as the data you can store to a specific component. This data 
 
 So anytime you want some data to be updated whenever user perform some action like updating input field, toggling menu button etc., then you will make use of the state.
 
-### Adding state
+## Adding state
 
 As we have it in the app diagram, the `AddTodo` component, will carry the responsibility of accepting the user’s input. 
 
@@ -633,7 +633,7 @@ In the `TodoItem` component, take note of how we accessed the `title` using `thi
 
 Before we proceed, let’s briefly talk about the **React Developer Tools**.
 
-### The React Developer Tools
+## The React Developer Tools
 
 If you want to inspect and debug your application, check your components tree or see how React works in real-time, you will need this tool.
 
@@ -655,7 +655,7 @@ Then, on the browser inspection window, select the **Components** tab to see the
 
 You can navigate through different component in the tree and view the state and props data. Just play around with it.
 
-### Creating the Functional Component
+## Creating the Functional Component
 
 Up to this moment, we have been using the **class-based** component. This type is required if the component will hold the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**.
 
@@ -668,7 +668,7 @@ That means this component can only be class-based. The other components which ar
 For clarity, let’s convert one of the class component, `TodoItem`, to a functional component.
 
 
-### Converting Class-Based Component to Functional Component
+## Converting Class-Based Component to Functional Component
 
 In the `TodoItem.js` file, replace the code with the following:
 
@@ -753,7 +753,7 @@ function Header() {
 
 So go with the one you are most comfortable with.
 
-### Conclusion
+## Conclusion
 
 I'm excited you are here! We have set the ball rolling. 
 

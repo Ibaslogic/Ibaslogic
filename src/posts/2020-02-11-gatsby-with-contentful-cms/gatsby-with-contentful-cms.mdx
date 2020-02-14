@@ -24,7 +24,7 @@ For those of us that are conversant with Gatsby, let’s get started.
 
 <TableOfContents /> 
 
-### Installing a Gatsby Starter
+## Installing a Gatsby Starter
 
 Just like every other Gatsby site, we will start by installing a [Gatsby starter](https://www.gatsbyjs.org/starters/ "gatsby starters"). Here, we will be installing the official default starter.
 
@@ -82,7 +82,7 @@ Awesome! This is a good start.
 
 Now that we have the basic setup, let’s see how to start sourcing content from the Contentful CMS and load them dynamically in our Gatsby site.
 
-### Storing Post Content in the Contentful CMS
+## Storing Post Content in the Contentful CMS
 
 **Contentful CMS**, like every other headless CMS, focuses on the backend task (i.e storing content and providing a friendly editing interface). It then allows us to pull the content into any frontend technologies by providing an API.
 
@@ -150,7 +150,7 @@ Add more entries to the post list. Here, I’ve added one more entry.
 
 At this point, we can start accessing these data from our Gatsby site.
 
-### Accessing Contentful Data from the Gatsby Site
+## Accessing Contentful Data from the Gatsby Site
 
 Let’s start by installing the necessary plugins. In your terminal, run:
 
@@ -243,7 +243,7 @@ Make sure you are connected to the internet.
 
 Now, the Contentful data are available for us to use in the frontend.
 
-### Rendering Contentful Data in the Frontend
+## Rendering Contentful Data in the Frontend
 
 To render the Contentful data, let’s start by opening the GraphiQL IDE (http://localhost:8000/___graphql) and see what queries we have access to.
 Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post).
@@ -462,7 +462,7 @@ Notice we are not rendering the post body yet. This requires additional steps.
 
 We will take a look at that now.
 
-### Rendering the Contentful Rich Text
+## Rendering the Contentful Rich Text
 
 Remember, when working with Contentful CMS, we selected the **Rich Text** for the body content. This provides capabilities similar to that of the traditional editors.
 You’ll be able to embed assets and do all sort of things within your content.
@@ -555,7 +555,7 @@ _What’s happening?_
 
 <br />
 
-### Rendering the Contentful Rich Text Images
+## Rendering the Contentful Rich Text Images
 
 By default, embedded images are ignored. To display them, you need to customize how certain node types are rendered.
 
@@ -589,7 +589,7 @@ Then, update the `documentToReactComponents` function to include the `options` o
 
 Save your file and see your images rendered in the frontend.
 
-### Problem with Contentful Post Update
+## Problem with Contentful Post Update
 
 If you update your Contentful post by adding or removing images, it’s likely you encounter a “page break” while trying to access the content in the frontend.
 
@@ -668,7 +668,7 @@ So go ahead and add the following style:
 
 Save the file. Now the frontend should look more appealing.
 
-### Deploying Gatsby Site to Netlify
+## Deploying Gatsby Site to Netlify
 
 The first step to deploying your site is to push your project files to your GitHub repository. This should be a piece of cake. But if you need a refresher, [have a quick look](/blog/gatsby-tutorial-from-scratch-for-beginners/#deploying-gatsby-site-to-netlify "gatsby deploy").
 
@@ -690,7 +690,7 @@ Visit the link and see your site live!
 
 You can as well change your site name from the **Site information** section in the **Settings** page.
 
-### Continuous Deployment for Contentful CMS
+## Continuous Deployment for Contentful CMS
 
 Anytime you make changes to your site code, you’ll need to push this code to GitHub to see a new version of your site on the web.
 

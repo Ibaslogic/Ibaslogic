@@ -7,10 +7,10 @@ const HeroError = () => {
     <div className={heroStyles.errorPageHero}>
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.errorTitle}>404: Page not found</h1>
-        <p className={heroStyles.errorDescription}>
+        <h3 className={heroStyles.errorDescription}>
           I guess you are here to become a better web developer. Click on the
           button below and check some of the latest dev articles.
-        </p>
+        </h3>
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.errorButton}>
             <Link to="/blog/">go ahead</Link>

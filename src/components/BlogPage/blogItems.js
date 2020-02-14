@@ -64,7 +64,7 @@ class BlogItems extends Component {
         <main className={blogStyles.main} role="main">
           <div className={blogStyles.container}>
             {/* categories filter */}
-            <div className={blogStyles.filterPosts}>
+            <h3 className={blogStyles.filterPosts}>
               <span className={blogStyles.filterPostsHeading}>
                 I want to learn about
               </span>
@@ -110,7 +110,7 @@ class BlogItems extends Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </h3>
 
             <ul className={blogStyles.list}>
               {this.state.blogPostItems.map(({ node }) => {

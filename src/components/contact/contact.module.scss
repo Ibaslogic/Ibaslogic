@@ -40,11 +40,12 @@
       font-size: 5rem;
     }
   }
-  p {
+  .description {
     margin: 2em auto 0;
     font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.667;
+    color: inherit;
     @media screen and (min-width: 768px) {
       font-size: 1.2rem;
       line-height: 1.8;

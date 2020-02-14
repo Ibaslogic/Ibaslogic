@@ -41,7 +41,7 @@ Quick navigation – Overview of what you’ll learn in this part.
 
 Let's get started!
 
-### Adding checkboxes to the Todo items 
+## Adding checkboxes to the Todo items 
 
 You should be familiar with handling this type of input field in HTML form. But in React, form handling works a little bit different.
 
@@ -63,7 +63,7 @@ In React, the input fields are meant to be **controllable**.
  
 What does this mean and how do we go about it? First, we need to understand what controlled component is. 
 
-### Controlled Component
+## Controlled Component
 
 To make the input fields controllable, the input data (in this case, toggling of checkboxes) has to be handled by the component state and not the browser DOM. With this, the state will serve as a **single source of truth**.
 
@@ -117,7 +117,7 @@ For the meantime, we are assigning to the handler, a callback function that will
 
 Instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked. To do this, we need to understand how to raise and handle events.
 
-### Raising and Handling Events
+## Raising and Handling Events
 
 In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it.
 
@@ -215,7 +215,7 @@ Save the file. Look inside the console and click on the checkboxes. This time, y
 
 Good. We are heading somewhere.
 
-### Updating the state using the setState() method
+## Updating the state using the setState() method
 
 Our aim here is to change the state of the checkbox whenever it is clicked. In React, we do not modify the state directly. Instead, we update through a method we inherited by extending `React.Component`.
 
@@ -246,7 +246,7 @@ Save the file and check your application. You should be able to toggle the check
 
 You can also see the current state of your app in the React Tools.
 
-### Deleting items from the todos 
+## Deleting items from the todos 
 
 The way we will do this will be similar to how we handled the input checkbox. Since the todos items live in the `TodoContainer`, while the delete button will live in the `TodoItem` component, we will need to raise an event from the `TodoItem` component and move up levels until we get to the `TodoContainer` component where the event will be handled.
 
@@ -349,7 +349,7 @@ You should be able to delete any item(s) on the list.
 
 Moving on.
 
-### Adding a text input field and a submit button
+## Adding a text input field and a submit button
 
 In React, all the different types of input fields follow the same approach. We’ve seen how the checkbox type of input field works.
 
@@ -489,7 +489,7 @@ And if you recall from vanilla JavaScript DOM API, the predefined parameter, `e`
 
 From there, you can target the specific input field and grab the updated value. 
 
-### Handling form that has more than one text input field
+## Handling form that has more than one text input field
 
 For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the state and assigned an empty string.
 
@@ -547,7 +547,7 @@ Instead of having multiple methods to handle different input fields, we modified
 
 As long as the value of the `name` attribute in the input tag matches what you have in the state. It will work perfectly.
 
-### Updating the Todos list
+## Updating the Todos list
 
 At the moment, the page will reload if you try to submit a todos item and update the state data. We need to handle that.
 
@@ -662,7 +662,7 @@ With the `setState()` method, we are re-rendering the state. We are adding the n
 
 
 
-### Generating random ids for the todos list items
+## Generating random ids for the todos list items
 
 If you try to submit more than one todos item, React will trigger a console warning telling you that the ids/keys are meant to be unique. This is happening because we are assigning a single `id` (an id of 4) to every new todos item received through the input field.
 
@@ -714,7 +714,7 @@ If you check the React tools, you’ll see how the todos items are assigned uniq
 
 ![Adding unique ids](./images/uniqueids.png)
 
-### Conclusion
+## Conclusion
 
 If you've made it this far, congratulations on your way to becoming a better React developer.
 

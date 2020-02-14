@@ -22,7 +22,7 @@ For those of us who are comfortable writing React code, let’s dive in.
 
 <TableOfContents /> 
 
-### What is Gatsby?
+## What is Gatsby?
 
 [Gatsby or GasbyJS](https://www.gatsbyjs.org/ "Gatsby website") is a framework based on React library and GraphQL that makes it easy to create both website and web applications. It is built on the JAMstack – i.e a strategy for building websites/apps based on client-side JavaScript (or other scripts), reusable APIs and prebuilt Markup.
 
@@ -52,7 +52,7 @@ This is what we will build in this tutorial, [Gatsby site project](https://ibasl
 Enough said, let’s get started.
 
 
-### Initial Setup
+## Initial Setup
 
 To get started with Gatsby, you will need to have NodeJS and Git installed on your machine.
 
@@ -84,7 +84,7 @@ npm install -g gatsby-cli
 
 > **Note:** The `-g` flag indicates that you are installing the CLI globally on your machine. 
 
-### Generating your first Gatsby project
+## Generating your first Gatsby project
 
 Gatsby allows us to kick off a project by using any of its [starter template](https://www.gatsbyjs.org/starters/ "Gatsby starter template"). There are many built-in templates officially released by the Gatsby team. Likewise, there are hundreds of other once that are created by third-party developers.
 
@@ -180,7 +180,7 @@ At the moment, the site doesn't do anything too interesting. We will customize w
 
 First, you need to understand the project structure. So let’s take a look at some of the important files and folders inside the project directory.
 
-### Inside the Project directory
+## Inside the Project directory
 
 Having worked with React, I expect that you should be familiar with the project (folders and files) structure. But to be on the same page, I will quickly touch some of the important folders and files.
 
@@ -206,7 +206,7 @@ This is happening because Gatsby comes bundled with hot reload.
 
 Great start!
 
-### Working with Gatsby Pages
+## Working with Gatsby Pages
 
 As expected, the focus will be on the `src/pages` directory. At the moment, we only have the `index.js` file in this folder.
 
@@ -523,7 +523,7 @@ Now your site should look like this:
 
 In the `footer.js` file, we are calling the current year dynamically. Remember we can use a valid JavaScript within the React JSX through the curly braces, `{}`.
 
-### Styling Gatsby Site
+## Styling Gatsby Site
 
 Now that we have a decent amount of content spread across pages on our site, we need to work on the looks and feel by adding styles. Presently it looks terrible.
 
@@ -656,7 +656,7 @@ Save the file. Yeah, it works!
 
 <br/>
 
-### Styling Gatsby Site with CSS Modules
+## Styling Gatsby Site with CSS Modules
 
 In order to add some sort of global styles in our Gatsby site, we added a stylesheet in a shared `Layout` component.
 
@@ -784,7 +784,7 @@ We need to add a background image to the header section.
 
 So go inside the `src` directory and create a folder called `images`. Inside this folder, add a background image and name it `header-image.jpg`.
 
-Feel free to use any image on your hard drive. Or [check my GitHub repo](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial/tree/master/src/images "download project image") to download the same header image used in this project.
+Feel free to use any image on your hard drive. Or [check my GitHub repo](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial/tree/master/src/images "download project image") and download the same header image used in this project.
 
 Then update the `.header` class selector in the `header.module.scss` file so you have:
 
@@ -973,7 +973,7 @@ Save your files and check the frontend. Your page should look like this:
 
 Now that you have some styles in place, let’s move on and start getting dynamic data to our site.
 
-### Working with Gatsby data
+## Working with Gatsby data
 
 Up to this moment, we are writing all that is being displayed in the browser inside of the React component JSX.
 
@@ -1411,7 +1411,7 @@ You should have your posts displayed on the blog page.
 
 **So what did we do?**
 
-If you take a look at the returned data in the GraphiQL, you’ll see that Gatsby structure its content as a collection of objects inside the edges array.
+If you take a look at the returned data in the GraphiQL, you’ll see that Gatsby structure its content as a collection of objects inside the **edges** array.
 
 We are getting each of these objects (representing individual post data) by looping through the `edges` array using the `map()` method. From there, we are getting the data we need in our JSX markup.
 
@@ -1420,9 +1420,9 @@ You should be familiar with all of these if you have a basic understanding of Re
 
 Now that we have a list of posts on the blog page, let’s go ahead and create a single post page.
 
-### Creating the Single Post Page
+## Creating the Single Post Page
 
-At the moment, we are only rendering the excerpt of our markdown content on the blog page. Later, we will get to display the featured image as we have it in the finished product.
+At the moment, we are only rendering the excerpt of our markdown content on the blog page. Later, we will get to display the featured image as we have it in the finished project.
 
 But before that, let’s see how to generate the single post page.
 
@@ -1440,7 +1440,7 @@ We can achieve this in three simple steps:
 2. Creating the blog post page template
 3. Generating a new page for each post.
 
-The first step is only applicable if you are sourcing your content from the markdown files. For CMSs like Contentful, you don’t need to create slugs yourself. 
+The first step is only applicable if you are sourcing your content from the markdown files. For CMSs like Contentful, you wouldn’t need to create slugs yourself. 
 
 <br/>
 
@@ -1590,11 +1590,11 @@ At this point, your blog post pages are created. You can visit this URL, http://
 
 The content of this page is coming from the template file, `blog-post.js`. This is definitely not what we want. Instead, we will display data from the markdown post file.
 
-### Rendering post data in the blog template
+## Rendering post data in the blog template
 
 To get this done, we will set up a GraphQL query that will dynamically accept the post slug and return the blog post data.
 
-To see how this is done, let’s play around with the GraphiQL IDE.
+To see how this is done, let’s play with the GraphiQL IDE.
 
 So refresh or re-open the tool.
 
@@ -1663,7 +1663,7 @@ You should have your post rendered.
 
 Nice one!
 
-In the code, you will notice we are not using the `useStaticQuery` hook for our query as we normally do. This is because the static query cannot take query variables.
+In the code, you will notice we are not using the `useStaticQuery` hook for our query as we have been doing. This is because the static query cannot take query variables.
 
 Instead, we are using the page query.
 
@@ -1746,7 +1746,7 @@ Now you have a working blog.
 
 What next?
 
-### Setting up Images in Gatsby site
+## Setting up Images in Gatsby site
 
 If you have ever managed a website blog, you’ll agree with me that a major routine to speed up your site speed is to optimize your images before uploading.
 
@@ -2169,7 +2169,7 @@ Save your files.
 
 You should see the styles applied in the single post page.
 
-### Adding a 404 page
+## Adding a 404 page
 
 At the moment, if you visit a URL of your site that does not exist, Gatsby takes you to a page that only get shown when you are running a development server.
 
@@ -2204,7 +2204,7 @@ Save the file and revisit the error page.
 
 You should see your custom 404 page.
 
-### Managing the Page Metadata
+## Managing the Page Metadata
 
 Every SEO optimized website would have simple metadata like the page title and description in their head element. These are a major factor in helping search engines understand your page and are also important for search user experience.
 
@@ -2332,7 +2332,7 @@ At this point, you have the basic SEO setup for your Gatsby site.
 Try to navigate around your web pages and make sure that the page title at the top of the web browser reflects the current page.
 
 
-### Deploying Gatsby Site to Netlify
+## Deploying Gatsby Site to Netlify
 
 Now that you have your beautiful working site, it’s time to make it available on the web. Here, you will learn how to host and deploy your Gatsby site on Netlify for free.
 
@@ -2439,7 +2439,7 @@ Great!
 
 **Changing the Site name**
 
-Instead of using the name given to you by netlify, you can change it to something that you can easily read. To do that, click on the **Settings** tab and then click on the **Change site name** button to specify a name.
+Instead of using the name given to you by netlify, you can change it to something that you can easily read. To do that, Head over to the **Settings** tab and click on the **Change site name** button to specify a name.
 
 In my case, **ibaslogic-site**.
 
@@ -2463,7 +2463,7 @@ And... You're done!
 
 
 
-### Conclusion
+## Conclusion
 
 
 Congratulations! I’m excited you are here. This article should have given you a quick walkthrough of the subject. 

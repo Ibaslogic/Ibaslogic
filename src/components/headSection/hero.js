@@ -10,11 +10,11 @@ const Hero = () => {
         <h1 className={heroStyles.title}>
           Web Dev Articles for the Self-Starter
         </h1>
-        <p className={heroStyles.description}>
+        <h3 className={heroStyles.description}>
           Click on the button below and start learning the latest web{" "}
           <span className={heroStyles.nl}></span>
           technologies for your next web project.
-        </p>
+        </h3>
 
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.startHere}>

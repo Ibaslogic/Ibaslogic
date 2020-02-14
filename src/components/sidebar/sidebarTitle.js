@@ -13,7 +13,7 @@ const styles = {
 }
 
 const SidebarTitle = props => {
-  return <p style={styles}>{props.title}</p>
+  return <h3 style={styles}>{props.title}</h3>
 }
 
 export default SidebarTitle

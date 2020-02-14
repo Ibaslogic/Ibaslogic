@@ -16,13 +16,13 @@ const AboutHero = () => {
             {/* <span>help you improve </span>
             your <span class={aboutHeroStyles.nl}></span> Dev Knowledge */}
           </h1>
-          <p>
+          <h3 className={aboutHeroStyles.description}>
             Then you're in the right place. You will get to learn how to apply
             the tools <span class={aboutHeroStyles.nl}></span>and the strategy
             needed for your next project.
             {/* Enter your email below to get access to my web development
             (practical)<span class={aboutHeroStyles.nl}></span> tips and tricks. */}
-          </p>
+          </h3>
           {/* <Subscribe heading="" subHeading="" submitText="Sign up" /> */}
         </div>
         <div className={aboutHeroStyles.imageContent}>

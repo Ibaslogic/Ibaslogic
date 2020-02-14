@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
           <div className={blogStyles.filterPosts}>
-            <p>{tagHeader}</p>
+            <h3 className={blogStyles.description}>{tagHeader}</h3>
           </div>
           <ul className={blogStyles.list}>
             {edges.map(({ node }) => {

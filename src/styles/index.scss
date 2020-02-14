@@ -2,16 +2,17 @@
 // ===================================================
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
-//@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
 
 // Variables
-$primary-color: #555; //#464646; //#3c4043; #3a3a3a;
+$primary-color: #222; //#464646; //#3c4043; #3a3a3a;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
-$body-font: "Roboto", "Segoe UI", "Helvetica Neue", sans-serif; //"Roboto", sans-serif; //"Open Sans", sans-serif;
+$body-font: "Muli", "Roboto", "Segoe UI", "Helvetica Neue", sans-serif; //"Roboto", sans-serif; //"Open Sans", sans-serif;
+$heading-font: "Roboto", "Helvetica Neue", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #f44f18;
@@ -100,6 +101,7 @@ h4,
 h5,
 h6 {
   color: #262626;
+  font-family: $heading-font;
 }
 
 h2 a,
