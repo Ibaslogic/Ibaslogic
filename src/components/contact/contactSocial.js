@@ -20,7 +20,7 @@ const ContactSocial = () => {
   `)
   return (
     <p className={socialStyles.content}>
-      ...Or you can find{" "}
+      ...Or you can connect with{" "}
       <a
         href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
         target="_blank"

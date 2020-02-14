@@ -97,11 +97,45 @@
 .contact {
   .content-wrapper {
     padding: 4rem 15px;
-    max-width: 72rem;
+    max-width: 50rem;
     margin: 0 auto;
-    @media screen and (min-width: 768px) {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
+    // @media screen and (min-width: 768px) {
+    //   padding-top: 5rem;
+    //   padding-bottom: 5rem;
+    // }
+    @media screen and (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      max-width: 72rem;
+      column-gap: 1.5em;
+    }
+  }
+}
+
+.content {
+  text-align: center;
+  // padding: 0 15px;
+  color: #b7b7b7;
+  margin-bottom: 1em;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media screen and (min-width: 992px) {
+    text-align: left;
+    grid-column: 1 / span 5;
+  }
+
+  a {
+    color: #8e8e8e;
+    transition: all 0.3s ease-out;
+    text-decoration: underline;
+    &:hover {
+      color: #f44f18;
     }
   }
 }
@@ -126,35 +160,17 @@
 //   }
 // }
 
-.content {
-  text-align: center;
-  padding: 0 15px;
-  color: #b7b7b7;
-  margin-bottom: 1em;
-  font-size: 1.3rem;
-  font-weight: 300;
-  margin-bottom: 50px;
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
-  }
-
-  a {
-    color: #f44f18;
-    transition: all 0.3s ease-out;
-    text-decoration: underline;
-    &:hover {
-      color: #8e8e8e;
-    }
-  }
-}
-
 // Contact
 
 .form {
   // padding-bottom: 60px;
   max-width: 740px;
   margin: 0 auto;
+
+  @media screen and (min-width: 992px) {
+    width: 100%;
+    grid-column: 6 / span 8;
+  }
 }
 
 .form-field {
@@ -164,10 +180,13 @@
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
+    column-gap: 20px;
 
-    .textarea-field,
-    .actions {
+    .textarea-field {
       grid-column: 1/3;
+    }
+    .actions {
+      grid-column: 1/2;
     }
   }
 
@@ -178,13 +197,13 @@
     outline: none;
     padding: 17px 10px 16px;
     line-height: 1.66667;
-    border: 1px solid #cecece;
+    border: 1px solid #b0b0b0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
     &::placeholder,
     &:-moz-placeholder {
-      font-size: 14px;
+      font-size: 15px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     }
@@ -210,9 +229,9 @@
   // display: flex;
   // justify-content: center;
 
-  // @media screen and (min-width: 768px) {
-  //   justify-content: flex-end;
-  // }
+  @media screen and (min-width: 768px) {
+    margin: 0 0 15px;
+  }
 
   input {
     border: 1px solid #e3e3e3;
@@ -234,7 +253,9 @@
   background: #f44f18;
   border: 1px solid #f44f18 !important;
   color: #fff;
-  width: 100%;
+  // width: 100%;
+  padding: 0.8em 1.5em !important;
+  border-radius: 3px;
   @include transition;
   &:hover {
     opacity: 0.8;

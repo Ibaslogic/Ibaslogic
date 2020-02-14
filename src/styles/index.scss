@@ -8,6 +8,7 @@
 $primary-color: #222; //#464646; //#3c4043; #3a3a3a;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
+$header-color: #222;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
@@ -100,7 +101,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #262626;
+  color: $header-color;
   font-family: $heading-font;
 }
 
