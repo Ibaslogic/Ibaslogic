@@ -204,8 +204,8 @@
 
 .success,
 .error {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .nl {
@@ -217,15 +217,15 @@
 
 .getInTouch {
   margin-top: -8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: left;
   text-align: left;
   p {
     // text-align: left;
-    // display: inline;
+    display: inline;
     color: #757575;
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
   }
   span {
     margin-right: 5px;

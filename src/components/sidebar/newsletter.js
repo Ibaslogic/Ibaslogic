@@ -2,8 +2,6 @@ import React, { Component } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import newsletterStyles from "./sidebar.module.scss"
 
-import { FaTwitter } from "react-icons/fa"
-
 class Newsletter extends Component {
   state = {
     fname: ``,
@@ -123,14 +121,14 @@ class Newsletter extends Component {
             100% Privacy. No spam. Guaranteed!
           </span> */}
           <div className={newsletterStyles.getInTouch}>
-            <p>Not into email list, but still want to learn more?</p>
+            <p>Not into email list, but still want to learn more? </p>
             <span>
               <a
                 href={`https://twitter.com/${this.props.socialhandle}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTwitter /> Follow me on Twitter
+                Follow me on Twitter
               </a>
             </span>
           </div>
