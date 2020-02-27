@@ -8,7 +8,8 @@ const Hero = () => {
     <div className={heroStyles.homePageHero}>
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.title}>
-          Web Dev Articles for the Self-Starter
+          Web Dev Articles for the <span className={heroStyles.nlt}></span>
+          Self-Starter
         </h1>
         <h3 className={heroStyles.description}>
           Click on the button below and start learning the latest web{" "}

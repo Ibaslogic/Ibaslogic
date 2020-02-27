@@ -85,7 +85,7 @@
   font-weight: 300;
   line-height: 1.11667;
   position: relative;
-  margin-bottom: 1.667rem;
+  margin-bottom: 1.2rem;
 
   // &::after {
   //   content: "";
@@ -101,7 +101,7 @@
   // }
 
   @media screen and(min-width: 768px) {
-    font-size: 2.1rem;
+    // font-size: 2.1rem;
     line-height: 1.02778;
   }
 }
@@ -148,7 +148,7 @@
 
   input,
   button {
-    height: 50px;
+    height: 45px;
     font-size: 15px;
     //font-size: 1rem;
     border-radius: 2px;
@@ -179,14 +179,14 @@
   }
 }
 
-.guarantee {
-  font-size: 0.74rem;
-  text-align: center;
-  padding: 0.7rem 0px 0px;
-  display: block;
-  opacity: 0.5;
-  letter-spacing: 0.03rem;
-}
+// .guarantee {
+//   font-size: 0.74rem;
+//   text-align: center;
+//   padding: 0.7rem 0px 0px;
+//   display: block;
+//   opacity: 0.5;
+//   letter-spacing: 0.03rem;
+// }
 
 .success {
   color: #282828;
@@ -205,11 +205,31 @@
 .success,
 .error {
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .nl {
   display: block;
   @media screen and (min-width: 600px) {
     display: none;
+  }
+}
+
+.getInTouch {
+  margin-top: -8px;
+  p {
+    text-align: left;
+    display: inline;
+    color: #757575;
+    margin: 0;
+  }
+  span {
+    margin-left: 5px;
+    a {
+      text-decoration: underline;
+      svg {
+        margin-bottom: -2px;
+      }
+    }
   }
 }

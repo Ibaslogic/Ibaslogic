@@ -1,11 +1,12 @@
 import React from "react"
 import RecentPosts from "./recentPosts"
 import Newsletter from "./newsletter"
-const Sidebar = () => {
+
+const Sidebar = ({ twitterHandle }) => {
   return (
     <>
       <RecentPosts />
-      <Newsletter />
+      <Newsletter socialhandle={twitterHandle} />
     </>
   )
 }
