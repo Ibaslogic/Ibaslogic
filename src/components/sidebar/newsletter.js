@@ -130,7 +130,7 @@ class Newsletter extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Follow me on Twitter <FaTwitter />
+                <FaTwitter /> Follow me on Twitter
               </a>
             </span>
           </div>

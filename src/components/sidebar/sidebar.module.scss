@@ -81,7 +81,7 @@
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.11667;
   position: relative;
@@ -204,8 +204,8 @@
 
 .success,
 .error {
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nl {
@@ -217,14 +217,18 @@
 
 .getInTouch {
   margin-top: -8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
   p {
-    text-align: left;
-    display: inline;
+    // text-align: left;
+    // display: inline;
     color: #757575;
-    margin: 0;
+    margin-bottom: 12px;
   }
   span {
-    margin-left: 5px;
+    margin-right: 5px;
     a {
       text-decoration: underline;
       svg {
