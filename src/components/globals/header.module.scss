@@ -1,7 +1,7 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
 $nav-link: #464646;
-$content-max-width: 72rem;
+$content-max-width: 75rem;
 
 // mixins
 @mixin transition {
@@ -150,7 +150,7 @@ $content-max-width: 72rem;
 .menu-nav {
   position: fixed;
   top: 0;
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  // font-family: "Roboto", "Helvetica Neue", sans-serif;
   // opacity: 0.9;
   // display: flex;
   // flex-flow: column wrap;

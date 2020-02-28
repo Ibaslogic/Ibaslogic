@@ -19,7 +19,7 @@
 }
 
 .content-wrapper {
-  max-width: 72rem;
+  max-width: 75rem;
   margin: 0 auto;
   padding-top: 6rem; // 4rem;
   padding-bottom: 0;
@@ -107,6 +107,7 @@
 .banner-content {
   margin-bottom: 6rem; // 40px;
   max-width: 18rem;
+
   @media screen and (min-width: 768px) {
     //margin-bottom: 40px;
     flex: 0 0 60%;
@@ -126,7 +127,7 @@
     line-height: 1.27647;
     font-weight: normal;
     margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-weight: normal;
 
     @media screen and (min-width: 480px) {
       font-size: 2.4rem;

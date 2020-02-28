@@ -1,8 +1,8 @@
 // Globals
 // ===================================================
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap");
 
 // Variables
 $primary-color: #222; //#464646; //#3c4043; #3a3a3a;
@@ -13,7 +13,7 @@ $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
 $body-font: "Muli", "Roboto", "Segoe UI", "Helvetica Neue", sans-serif; //"Roboto", sans-serif; //"Open Sans", sans-serif;
-$heading-font: "Roboto", "Helvetica Neue", sans-serif;
+$heading-font: "Muli", "Roboto", "Helvetica Neue", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #f44f18;

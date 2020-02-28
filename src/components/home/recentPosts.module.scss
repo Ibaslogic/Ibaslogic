@@ -14,7 +14,7 @@
     margin-bottom: 5rem;
   }
   @media screen and (min-width: 960px) {
-    max-width: 72rem;
+    max-width: 75rem;
     margin-bottom: 0;
   }
 
@@ -30,7 +30,7 @@
     @media screen and (min-width: 960px) {
       // max-width: 1150px;
       padding-top: 3rem;
-      max-width: 72rem;
+      max-width: 75rem;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 25px;
     }
