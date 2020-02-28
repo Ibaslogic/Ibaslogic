@@ -12,9 +12,9 @@ const Hero = () => {
           Self-Starter
         </h1>
         <h3 className={heroStyles.description}>
-          Click on the button below and start learning the latest web{" "}
-          <span className={heroStyles.nl}></span>
-          technologies for your next web project.
+          Connect the dots and complete a real-world project. Click the button
+          below <span className={heroStyles.nl}></span> and start learning the
+          latest web technologies for your next project.
         </h3>
 
         <div className={heroStyles.heroButtonContainer}>

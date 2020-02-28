@@ -218,9 +218,12 @@
 .getInTouch {
   margin-top: -8px;
   text-align: left;
+  font-size: 0.74rem;
+  opacity: 0.5;
+  letter-spacing: 0.03rem;
   p {
     display: inline;
-    color: #757575;
+    //color: #757575;
   }
   span {
     margin-right: 5px;

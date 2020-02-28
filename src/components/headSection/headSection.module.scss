@@ -15,12 +15,9 @@
 .homePageHero {
   background: #f8f9fa;
   //background-size: 599px 544px;
-
-  @media screen and (min-width: 1024px) {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url("../../images/hero-desktop.jpg");
-  }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../../images/hero-desktop.jpg");
 }
 .errorPageHero {
   background: #ffffff;
@@ -28,19 +25,19 @@
 .hero-content {
   // max-width: 72rem;
   margin: 0 auto;
-  padding: 4rem 22px;
+  padding: 4rem 15px;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
   max-width: 36rem;
   @media screen and (min-width: 768px) {
-    max-width: 36rem; //45rem;
+    max-width: 45rem;
   }
 }
 .title {
   font-size: 2rem;
   margin-bottom: 1.1rem;
-
+  font-family: "Muli", "Roboto", "Segoe UI", "Helvetica Neue", sans-serif;
   line-height: 1.17647;
   font-weight: normal;
   max-width: 34em;
@@ -122,7 +119,7 @@
 // }
 
 .nl {
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 768px) {
     display: block;
   }
 }
