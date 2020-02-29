@@ -145,7 +145,7 @@ pre code {
 
 pre[class*="language-"] {
   margin: 0 !important; //0.5em 0 2rem !important;
-  padding: 2em;
+  padding: 2em !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 }
