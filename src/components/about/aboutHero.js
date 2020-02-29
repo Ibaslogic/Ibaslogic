@@ -11,8 +11,8 @@ const AboutHero = () => {
       >
         <div className={aboutHeroStyles.bannerContent}>
           <h1>
-            Do you want to build a <span class={aboutHeroStyles.nl}></span>{" "}
-            modern web project?
+            Want to build a modern <span class={aboutHeroStyles.nl}></span> web
+            project?
             {/* <span>help you improve </span>
             your <span class={aboutHeroStyles.nl}></span> Dev Knowledge */}
           </h1>

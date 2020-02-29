@@ -12,9 +12,8 @@ const Hero = () => {
           Self-Starter
         </h1>
         <h3 className={heroStyles.description}>
-          Connect the dots and complete a real-world project. Click the button
-          below <span className={heroStyles.nl}></span> and start learning the
-          latest web technologies for your next project.
+          Connect the dots (the latest web technologies) and complete a{" "}
+          <span className={heroStyles.nl}></span>real-world project.
         </h3>
 
         <div className={heroStyles.heroButtonContainer}>

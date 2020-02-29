@@ -137,7 +137,7 @@ code[class*="language-"],
 pre,
 pre[class*="language-"],
 pre code {
-  font-size: 13px;
+  font-size: 14px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -145,6 +145,7 @@ pre code {
 
 pre[class*="language-"] {
   margin: 0 !important; //0.5em 0 2rem !important;
+  padding: 2em;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 }
@@ -195,21 +196,32 @@ li > a > code {
 .gatsby-highlight-code-line {
   background-color: #262c35;
   display: block;
-  margin-right: -13px;
-  margin-left: -13px;
-  padding-right: 13px;
-  padding-left: 13px;
+  margin-right: -28px;
+  margin-left: -28px;
+  padding-right: 28px;
+  padding-left: 28px;
 }
 
 .gatsby-highlight {
   overflow: auto;
-  margin-bottom: 2rem;
-  border-radius: 0.3em;
+  margin: 2rem -15px;
+
+  @media screen and (min-width: 600px) {
+    margin: 2rem 0px;
+    border-radius: 0.3em;
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   border-radius: 0.3em;
+  //   margin-left: 0px;
+  //   margin-right: 0px;
+  // }
 }
 
 .gatsby-highlight pre[class*="language-"] {
   float: left; /* 1 */
   min-width: 100%; /* 2 */
+  border-radius: 0;
 }
 
 blockquote .gatsby-highlight {

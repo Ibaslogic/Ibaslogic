@@ -48,9 +48,10 @@ $content-max-width: 75rem;
   display: block;
   padding: 1.4rem 0;
   line-height: 1.3125rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: $nav-link;
   margin-left: 0;
+  letter-spacing: -0.03em;
   // font-weight: 600;
   text-transform: capitalize;
   text-decoration: none;
@@ -58,6 +59,7 @@ $content-max-width: 75rem;
 
   @media screen and (min-width: 768px) {
     opacity: 0.7;
+    letter-spacing: 0;
   }
 
   &:hover {
