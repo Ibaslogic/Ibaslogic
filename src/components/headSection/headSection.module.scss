@@ -259,6 +259,12 @@
   @media screen and (min-width: 768px) {
     height: 58px;
     width: 58px;
+
+    &:hover {
+      svg {
+        margin-bottom: -22px;
+      }
+    }
   }
 
   svg {
