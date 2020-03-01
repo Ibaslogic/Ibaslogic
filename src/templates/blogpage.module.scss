@@ -387,8 +387,9 @@ p img {
 
 // Scoll Top
 .scroll-top {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: 8px;
+  bottom: 18px;
   height: 50px;
   width: 50px;
   box-shadow: 0 4px 8px #dadce0;
@@ -397,18 +398,26 @@ p img {
   cursor: pointer;
   text-align: center;
   color: #fff;
-  background-color: #282828;
+  background-color: rgb(32, 35, 42);
   border-radius: 50%;
   line-height: 1;
   font-size: 13px;
+  transition: background-color 0.2s ease;
 
   &:hover {
-    text-decoration: underline;
+    svg {
+      margin-top: 4px;
+    }
   }
 
   svg {
     display: block;
-    margin: 1px 0 2px 19px;
-    font-size: 12px;
+    margin: 7px 0 2px 17px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 960px) {
+    right: 12px;
+    bottom: 38px;
   }
 }
