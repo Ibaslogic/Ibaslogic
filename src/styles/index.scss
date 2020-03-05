@@ -37,6 +37,7 @@ body {
   line-height: 1.42857143;
   background: $main-white;
   font-family: $body-font;
+  letter-spacing: -0.01rem;
 }
 
 html {
@@ -235,6 +236,12 @@ blockquote .gatsby-highlight {
 
 blockquote .gatsby-highlight + p {
   margin-top: 20px;
+}
+
+// Gatsby default image class
+.gatsby-resp-image-wrapper {
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 // =====================================================

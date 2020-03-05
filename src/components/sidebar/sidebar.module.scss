@@ -218,9 +218,11 @@
 .getInTouch {
   margin-top: -8px;
   text-align: left;
-  font-size: 0.74rem;
+  font-size: 13px;
   opacity: 0.5;
   letter-spacing: 0.03rem;
+  font-weight: 400;
+  color: rgb(101, 119, 134);
   p {
     display: inline;
     //color: #757575;
@@ -229,8 +231,8 @@
     margin-right: 5px;
     a {
       text-decoration: underline;
-      color: #606060;
-      font-weight: 400;
+      color: inherit;
+
       svg {
         margin-bottom: -2px;
       }
