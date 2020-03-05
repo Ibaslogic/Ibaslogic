@@ -182,8 +182,7 @@ module.exports = {
         icon: `src/images/ibaslogic_icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify-headers`, // make sure to put last in the array
-
+    `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
