@@ -1,9 +1,9 @@
 ---
 title: "How to Deploy React App to GitHub Pages"
-description: "This involves moving your files to the local repository, then to a remote repository and finally to Gh-pages."
+description: "You can deploy your app to GitHub pages in three simple steps. Move your files to the local repository, then to a remote repository and finally to Gh-pages."
 category: "React"
 datePublished: "2020-01-27 10:33:00"
-dateUpdated: "2020-01-27 10:33:00"
+dateUpdated: "2020-03-08 10:33:00"
 featured: "./images/deploying-react-app-to-github-pages.png"
 tags: ["react", "gh-pages"]
 ---
@@ -19,7 +19,7 @@ datas={[
     {
       prefix: "Part 2",
       label: "Form handling, Raising Events and the setState method",
-      url: "/blog/react-tutorial-for-beginners-2/"
+      url: "/blog/react-form-handling/"
     },
     {
       prefix: "Part 3",
@@ -29,17 +29,21 @@ datas={[
   ]}
 />
 
-Having gone through the tutorial series to create a simple React app, it's time to share what you've built with the world.
+Now that you have your beautiful app, it's time to share it with the world. 
 
-Here, we will deploy our React application to Github pages so that we can access it on the web.
+In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
 
 > GitHub Pages is a static hosting service that takes HTML, CSS and JavaScript files straight from a repository on GitHub, optionally runs the file through a build process and publishes a website/app.
 
-To get started, you need to have a [GitHub account](https://github.com/ "GitHub account sign up"). Also, [download and install Git](https://git-scm.com/downloads "Git site") for your operating system and then, [set it up](https://www.atlassian.com/git/tutorials/install-git "Git installation guide"). 
+To get started, you need to have a [GitHub account](https://github.com/ "GitHub account sign up"). Also, make sure you have Git installed on your machine.
+
+You can [download and install Git](https://git-scm.com/downloads "Git site") for your operating system and then, [set it up](https://www.atlassian.com/git/tutorials/install-git "Git installation guide").
 
 Once that’s done,
 
-You will need to move all your React code to your GitHub account. And this can be done in two phases.
+You will need to move all your React code to your GitHub account. 
+
+And this can be done in two phases.
 
 First, you will move your files to the local repository and then to the remote repository.
 
@@ -59,7 +63,7 @@ Fortunately, this is available by default when you set up a React project with `
 
 Now you should be able to see the `.git` folder in your project directory.
 
-But if you do not set up your project with the CLI, run this command in your terminal to create it:
+But if you do not set up your project with the CLI, run this command from your terminal to create it:
 
 ```
 C:\Users\Your Name\simple-todo-app > git init
@@ -67,39 +71,15 @@ C:\Users\Your Name\simple-todo-app > git init
 
 Make sure you are in your project directory in the terminal.
 
-If you are just starting with Git, you need to set up a username and a commit email address.
+For the rest of us that set up the project using the `create-react-app` CLI, we don’t need to reinitialize the git repository.
 
-You can do these using the following commands:
+Instead, we just have to make sure that all of the new files actually becomes part of the repo.
 
-```
-git config --global user.name 'ibaslogic'
-```
-
-And…
-
-```
-git config --global user.email 'ibaskunle@gmail.com'
-```
-
-> Ensure you use your **username** and **email** and take note of them because you'll need them to push your application online.
-
-You can confirm that you set them up correctly using these commands:
-
-```
-git config --global user.name
-```
-
-```
-git config --global user.email
-```
-
-They should return your username and email respectively if all went well.
+Let’s do that.
 
 ## Deploy to a local repository
 
-Now let's deploy our code into the local repository.
-
-Run this command:
+From your terminal, run this command:
 
 ```
 C:\Users\Your Name\simple-todo-app > git add .
@@ -113,25 +93,23 @@ This keeps all your working files in the staging area. Please don’t forget the
 > git add index.js
 >```
 
-Next, let’s see what is in the staging area. So run this command:
+To see what is in the staging area, let's run this command:
 
 ```
 C:\Users\Your Name\simple-todo-app > git status
 ```
 
-With this command, you can check the current status of the working tree. You should have the files in green if they are in the staging area. Else, you'll have them in red.
+This allows you to check the current status of the working tree. You'll have the files in green if they are in the staging area. Else, you'll have them in red.
 
 ![Git status](./images/gitstatus.png)
 
-Next, we need to commit all the changes.
-
-Let’s do that with this command:
+Next, run this command to commit all the changes:
 
 ```
 C:\Users\Your Name\simple-todo-app > git commit -m 'first commit'
 ```
 
-> What we have within the single quote is the commit message. Modify it to whatever suit you.
+> You specify your commit message within the quote. Modify to whatever suit you.
 
 At this point, your project files are now in the local repository. To view them, open the Git GUI you installed in your machine. Click on the **Open Existing Repository** and then search for your project folder.
 
@@ -161,7 +139,9 @@ Find the command that looks like this and run it in your terminal:
 git remote add origin https://github.com/Ibaslogic/simple-todo-app.git
 ```
 
-If you can't find it, make sure you modify the URL above to reflect your repository. What this command does is to add the repo as the remote repository.
+If you can't find it, make sure you modify the URL above to reflect your repository. 
+
+What this command does is add the repo as the remote repository.
 
 Finally, run this command to push to the master branch:
 
@@ -171,8 +151,7 @@ git push -u origin master
 
 Now reload your GitHub page. You should have your project files and folders already pushed to your account.
 
-Good.
-We are almost done! Now we can publish our app on gh-pages.
+We are almost done! Now we can publish our app to gh-pages.
 
 ## Deploy Todos app to Gh-pages
 
@@ -229,7 +208,7 @@ Your scripts should look like this:
 
 Save the file.
 
-Lastly, to push your file to the gh-pages, run this command:
+Lastly, run this command to push your file to the gh-pages:
 
 ```
 C:\Users\Your Name\simple-todo-app > npm run deploy
@@ -237,9 +216,9 @@ C:\Users\Your Name\simple-todo-app > npm run deploy
 
 This command will create a `build` folder in the root directory. This folder will contain production-ready files that will be deployed.
 
-Once your app is successfully deployed, visit the URL you assigned to the `homepage` property in the `package.json` file and see your application.
+Once your app is successfully deployed, you can visit the URL you assigned to the `homepage` property in the `package.json` file and see your application.
 
-Or go back to your GitHub repository and click on the **Settings** tab. Then scroll down to **GitHub pages** section to see the URL.
+Alternatively, you can go back to your GitHub repository and click on the **Settings** tab. Then scroll down to **GitHub pages** section to see the URL.
 
 ![locate React app url](./images/reactappurl.png)
 
@@ -249,19 +228,18 @@ Test your application and proudly share with the world.
 
 ## Conclusion
 
-So much have been covered in this React for beginners series. Now you know what React is and how you can create a beautiful React application. Not only that, you can deploy your app on the web for free. 
+So much have been covered in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy it on the web.
 
-In the coming series, I will walk you through how to fetch data from an API. There, you will be able to connect your application to a remote endpoint and make a number of requests. 
+In the coming series, I will walk you through how to fetch data from an API. There, you will learn the React lifecycle methods.
 
-So stay tuned and make sure you subscribe to get the next series straight to your inbox.
+Likewise, you will learn how to connect your application to a remote endpoint and make a number of requests.
 
 So far, I hope you feel more confident learning React through the series?
 
 As usual, endeavour to share this article around the web. 
 
-If something wasn't clear, do let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-deploying-react-app-to-github-pages/deploying-react-app-to-github-pages.mdx "Ibaslogic GitHub").
+If something wasn't clear, do let us know. 
 
 Again, here is the [React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").  
 
-Lastly, let me know if there is any other topic you'd like to read about.
 

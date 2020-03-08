@@ -3,9 +3,9 @@ title: "How to Implement CSS in Reactjs App"
 description: "There are many ways to style a React application. The inline CSS styles, the CSS classes and the CSS Modules."
 category: "React"
 datePublished: "2020-01-27 10:31:00"
-dateUpdated: "2020-02-02 10:31:00"
+dateUpdated: "2020-03-08 10:31:00"
 featured: "./images/css-in-reactjs-app.png"
-tags: ["react", "reactjs", "css-in-react"]
+tags: ["react", "reactjs", "css"]
 --- 
 
 <PostSeriesLink 
@@ -19,7 +19,7 @@ datas={[
     {
       prefix: "Part 2",
       label: "Form handling, Raising Events and the setState method",
-      url: "/blog/react-tutorial-for-beginners-2/"
+      url: "/blog/react-form-handling/"
     },
     {
       prefix: "Part 4",
@@ -31,12 +31,17 @@ datas={[
 
 You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves.
 
-In this article, you will learn how to add CSS to your React application.
+In this part, you will learn how to add CSS to your React JS app.
 
-Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes. React application can also be styled [using the CSS modules](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules"). 
+Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes. 
 
-But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in the [GatsbyJS tutorial](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
+React application can also be styled [using the CSS modules](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules"). 
 
+But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
+
+It follows the same approach since Gatsby is built on React.
+
+Let's dive in.
 
 ## Starting with the CSS classes
 
@@ -79,7 +84,7 @@ If you like, you can import the file in the parent component file, `TodoContaine
 
 Save the file.
 
-You should see your CSS styles applies in the frontend. Or better still, inspect the page to see the style declaration.
+You should see your CSS styles rendered in the frontend. Or better still, inspect the page to see the style declaration.
 
 Now, let’s start adding class names.
 
@@ -191,6 +196,8 @@ Your app should look like this:
 
 ![styling react app](./images/reactstyle.png)
 
+That's it. Simple!
+
 ## Inline styling
 
 If you recall, we use inline styling in HTML document by passing a string of all the styles to the `style` attribute. But with React JSX, we will assign a JavaScript object to the attribute.
@@ -212,7 +219,7 @@ return (
 );
 ```
 
-Save the file and check the frontend for changes.
+Save the file and check the frontend to see your changes.
 
 In the code, you’ll notice two curly braces. 
 
@@ -220,13 +227,9 @@ We already know that valid JavaScript expressions in JSX are written inside curl
 
 Also, notice that the style keys are in camelCase.
 
-This is also true for all attributes, event handlers in React with few exceptions like `aria-*` and `data-*` attributes which should be in lowercase.
-
-We have said that before.
-
 Another way to use an inline style in React is to use variables.
 
-Back in the `Header.js` file, add the following code above the return statement:
+Back in the `Header.js` file, add the following code above the `return` statement:
 
 ```js
 const headerStyle = {
@@ -268,7 +271,7 @@ const Header = () => {
 export default Header;
 ```
 
-Check the frontend for changes or inspect the `header` element to see your CSS style declaration.
+Check the frontend to see your changes or inspect the `header` element to see your CSS style declaration.
 
 In the code, we created an object, `headerStyle` with the styling information and then refer to it in the `style` attribute of the `<header>` tag. Here, we used a curly brace.
 
@@ -309,7 +312,7 @@ return (
 );
 ```
 
-In the code, we introduced a new tag, `span` and then added a `style` attribute to it. This is necessary to style only the `title` text.
+In the code, we introduced a new tag, `span` and then added a `style` attribute to it. 
 
 We also used the **ternary operator** in the `style` attribute to dynamically change the CSS style if any of the todos item(s) is/are completed.
 
@@ -369,7 +372,9 @@ Now that you have added a nice look and feel to your React app, it's time to dep
 
 While I'm excited you are here, endeavour to share this article around the web. 
 
-If something wasn't clear, do let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-css-in-reactjs-app/css-in-reactjs-app.mdx "Ibaslogic GitHub").
+Again, if something wasn't clear, do let us know. 
+
+Happy coding!
 
 <PostSeriesLink 
 label="This React tutorial is part 3 of 4 in the React for beginners series." 
@@ -382,7 +387,7 @@ datas={[
     {
       prefix: "Part 2",
       label: "Form handling, Raising Events and the setState method",
-      url: "/blog/react-tutorial-for-beginners-2/"
+      url: "/blog/react-form-handling/"
     },
     {
       prefix: "Part 4",

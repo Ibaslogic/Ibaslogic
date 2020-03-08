@@ -1,22 +1,26 @@
 ---
-title: "React Tutorial: The Beginner's Guide to Learning React in 2020"
-description: "If you are aiming to build a modern website or web apps that require high performance and safety, then, a knowledge of React is necessary!"
+title: "React Tutorial: A comprehensive guide to Learning React JS in 2020"
+description: "If you are aiming to build a modern website or app that require high performance and safety, then, a knowledge of React is necessary!"
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-02-02 10:27:00"
+dateUpdated: "2020-03-08 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
 tags: ["react", "reactjs"]
 --- 
 
-If you are aiming to build a modern website or web apps that require high performance and safety, then, a knowledge of React is necessary!
+If you are aiming to build a modern website or app that require high performance and safety, then, a knowledge of React is necessary!
 
-Today, most of the web technologies that developers and site owners now embraced are built on React. From the [Gatsby site](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") to [WordPress custom blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the new Gutenberg post editor.
+Today, many developers and site owners now embrace web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress custom blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
-This is just to mention a few. 
+So learning React is necessary if you want to be a present-day developer. 
 
-In this React tutorial, you will learn the React basic concept. You will also learn how to create and deploy React application on the web.
+In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
-Once you are well grounded with React, you can then start a more complex project like [building a Gatsby site](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"). 
+Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
+
+Once you are well-grounded with React, [building a Static site generator like Gatsby](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") will be a piece a cake.
+
+## Prerequisite
 
 Before you go ahead with this React tutorial, please make sure you have:
 
@@ -46,7 +50,12 @@ But technically, it is a library. Unlike some other frameworks like [Angular](ht
 
 Let’s take a step backwards.
 
-I mentioned that it allow developers to create complex UI from an isolated snippet of code. To understand this statement better, you need to start thinking in React Component.
+I mentioned that it allows developers to create complex UI from an isolated snippet of code.
+
+What does this mean?
+
+To understand better, you need to start thinking in React Component.
+
 
 ## Thinking in React Component
 
@@ -56,7 +65,7 @@ And as we can reuse functions, so also we can reuse components, merge them and t
 
 Let’s take a look at the image below. A simple To-dos app.
 
-We will create this app from scratch in this tutorial. It may look simple in the eye but trust me, you will get to understand the concept of React and how it works after you build this app.
+We will create this app from scratch in this tutorial. It may look simple in the eye but trust me, you will get to understand the concept of React and how it works afterwards.
 
 ![Todos app design](./images/todosapp.png)
 
@@ -68,7 +77,7 @@ The parent component (also known as the root component), label `TodoContainer`, 
 
 With this breakdown, we will be creating five different components in isolation.
 
-Having this instinct indicate that you are **thinking in React!**
+Having this instinct shows that you are **thinking in React!**
 
 Moving on.
 
@@ -92,17 +101,25 @@ So we need a way to minimize the time it takes to repaint the screen.
 
 This is where the Virtual DOM comes in.
 
-React makes use of Virtual DOM which uses a strategy that updates the DOM without having to redraw all the webpage elements. It ensures that the real DOM receive only the necessary data to repaint the UI.
+As the name implies, it is a virtual representation of the actual DOM.
+
+It uses a strategy that updates the DOM without having to redraw all the webpage elements. This ensures that the actual DOM receive only the necessary data to repaint the UI.
 
 This is how it works,
 
-Whenever new elements are added to the UI, a virtual DOM is created. But if the state of any of these elements changes, React would update the virtual DOM while still maintaining the previous version so that it can compare and figure out which virtual DOM objects have changed. React then update ONLY those objects on the real DOM thereby reduces the performance cost of re-rendering the webpage.
+Whenever a new element is added to the UI, a virtual DOM is created.
+
+Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare with the previous version to detect which virtual DOM object has changed.
+
+It then updates ONLY the object on the real DOM.
+
+This has a whole lot of optimization as it reduces the performance cost of re-rendering the webpage.
 
 DO not worry if all these seem strange, you will get to see them in practice later.
 
 ## Setting up Working Environment
 
-There are several ways we can interact and get started with React. Though React recommends setting up through the `create-react-app` CLI tool, I will quickly walk you through how to start working with React by simply writing React code in HTML file.
+There are several ways we can interact and get started with React. Though React recommends setting up the environment through the `create-react-app` CLI tool, I will quickly walk you through how to start working with React by simply writing React code in HTML file.
 
 This will quickly get you up and running and does not require any installation.
 
@@ -210,7 +227,7 @@ In the script, we called the `render()` method that React exposes through the `R
 
 > Remember we included the `ReactDOM` library in the `head` of the HTML file. Else, the `render()` method won’t work.
 
-The first argument of the `render()` method defines what you want to render while the second defines where you want to render it. As seen in the code, we used plain vanilla JavaScript to reference the `div` container (through the `root` id) in our `.html` file.
+The first argument of the `render()` method defines what you want to render while the second defines where you want to render it. As seen in the code, we are using plain vanilla JavaScript to reference the `div` container (through the `root` id) in our `.html` file.
 
 Save the HTML file and reload the webpage.
 
@@ -232,7 +249,7 @@ You can check if you already have Nodejs and npm installed by running these comm
 
 But if you don’t have it installed, head over to [Node.js](https://nodejs.org/ "node documentation"), download and install the latest stable version.
 
-Once you have it installed, run the following command in your terminal to create a React App called `simple-todo-app`.
+Once you have it installed, run the following command from your terminal: 
 
 ```
 C:\Users\Your Name> npx create-react-app simple-todo-app
@@ -258,17 +275,19 @@ Enough said.
 
 Let’s start the development server.
 
-Head over to your terminal and run this command:
+From your terminal, change directory inside your project folder, `cd simple-todo-app`.
+
+Then run this command:
 
 ```
 C:\Users\Your Name\simple-todo-app > npm start
 ```
 
-> Please make sure you are in the project directory before you run the command. Also, if you are on VsCode, you can toggle the terminal by pressing ``Ctrl + ` `` or ``Cmd + ` `` or go to `View-> Terminal`.
+> **Note:** If you are on VsCode, you can toggle the terminal by pressing ``Ctrl + ` `` or ``Cmd + ` `` or go to `View-> Terminal`.
 
 The `npm start` command will lunch the development server on `port 3000` and a new browser window displaying your application will appear automatically. 
 
-If nothing happens, write this URL, `localhost:3000` in the browser address bar and press enter.
+If nothing happens, visit this URL, [localhost:3000](http://localhost:3000/ "dev server") in the browser address bar.
 
 You should have something similar to the image below.
 
@@ -285,7 +304,7 @@ Ok good.
 
 ## Writing the To-dos App
 
-At this point, we are good to start creating our React App. You will learn how to create separate components that describes how different sections of the UI looks like. These components files live in the `src` folder.
+At this point, we can start creating our React App. The files that describe what you are seeing in the frontend live in the `src` folder.
 
 Since this React tutorial focuses on the beginners, we will write all the `src` files from scratch.
 
@@ -308,11 +327,13 @@ ReactDOM.render(element, document.getElementById("root"));
 
 Once you save the file, you’ll see a heading text displayed in the frontend.
 
-Comparing this code to the one we write directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we imported `React` and `ReactDOM` instead of loading their respective CDN.
+Comparing this code to the one we write directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we are importing React and ReactDOM instead of loading their respective CDN.
 
-> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`). A **module** is just a file that usually contains a class or library of functions. And `create-react-app` has both files installed for us to use. 
+> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`). A **module** is just a file that usually contains a class or library of functions. 
+> 
+> And `create-react-app` CLI has both files installed for us to use. 
 
-Notice also, we are not loading Babel to compile JSX to JavaScript as `create-react-app` have it installed and uses it under the hood.
+Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with the CLI - and it uses it under the hood.
 
 At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable.
 
@@ -324,7 +345,7 @@ So instead of rendering a simple element, we will render a React component.
 
 Remember, at the beginning, we decomposed our application into a tree of isolated components. Where the parent component, `TodoContainer`, holds three children components (`Header`, `InputTodo` and `TodosList`). Then, `TodosList` holds another component called `TodoItem`.
 
-That means we will create five components in total.
+Meaning, we are creating five components in total. 
 
 Again, see the image below:
 
@@ -366,6 +387,8 @@ Save the file and check the frontend.
 
 You should have a heading and a paragraph text being rendered on the screen.
 
+<br />
+
 What did we do?
 
 First, to create a component in React, you either write it as a **class** or **functional-based**.
@@ -387,7 +410,7 @@ Make sure you import `React` object for the JSX to work.
 > </React.Fragment>
 > ```
 
-The `TodoContainer` component which is the parent component was not connected to the app until we imported and rendered it in the `index.js` file.
+This `TodoContainer` component was isolated from the app until we imported and rendered it in the `index.js` file.
 
 In the file, we rendered the component using a custom tag similar to HTML, `<TodoContainer />`.
 
@@ -452,9 +475,11 @@ For this reason, the state data will live in the `TodoContainer` component, whic
 
 Hope it’s clear?
 
-To add a state, we simply create a state object with different key-value pair. For the todos data, we will have an array of objects.
+To add a state in a class component, we simply create a `state` object with different key-value pair. The value can be a string or array of objects.
 
-In the `TodoContainer.js` file, add the following code just above the `render()` method:
+In the case of todos data, we will have an array of objects.
+
+So add the following code just above the `render()` method in the `TodoContainer.js` file:
 
 ```JavaScript
 state = {
@@ -504,7 +529,7 @@ In React, we make use of the `map()` method which is an higher-order function to
 
 > Remember that you can use a valid JavaScript expression inside the JSX through curly braces, `{}`.
 
-At the moment, you’ll see React warnings if you check the console of your devtools. We will take care of that in a moment.
+If you check the console of your DevTools, you’ll see React warnings. We will take care of that in a moment.
 
 For now, I want you to compare the frontend result and the app diagram. You will realize that another component called `TodosList` has the responsibility to handle the todos list.
 
@@ -655,20 +680,35 @@ Then, on the browser inspection window, select the **Components** tab to see the
 
 You can navigate through different component in the tree and view the state and props data. Just play around with it.
 
-## Creating the Functional Component
+## Creating the Function Component
 
-Up to this moment, we have been using the **class-based** component. This type is required if the component will hold the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**.
+Up to this moment, we have been using the **class-based** component to describe the UI.
 
-On the other hand, the **functional component** also called a **stateless component** doesn’t require the lifecycle method and cannot maintain the state data unless it uses something called React hooks. This type is the simplest form of React component because it is primarily concerned with how things look.
+Before React 16.8, this type is required if the component will manage the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**.
 
-If you take a look at the components we’ve created, only one of them is holding the state data. And that is the parent component, `TodoContainer`. 
+On the other hand, the **function component** prior to React 16.8 cannot maintain state and lifecycle logic. And as such, it is referred to as a **stateless component**.
 
-That means this component can only be class-based. The other components which are presently class components can also be functional-based. This is because they do not hold state data.
+This type is the simplest form of React component because it is primarily concerned with how things look.
 
-For clarity, let’s convert one of the class component, `TodoItem`, to a functional component.
+But now, things have changed with the introduction of React Hooks.
 
+You can now manage the class-based logic (state and lifecycle) inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
 
-## Converting Class-Based Component to Functional Component
+Later in the series, you will learn how to use these React Hooks to manage the stateful and lifecycle logic in a function component.  
+
+For now, we will manage them in the class component so that you can grab the fundamentals.
+
+Back to our application.
+
+If you take a look at the components we created, only one of them is holding the state data. That is the parent component, `TodoContainer`.
+
+That means we will retain this component as a class-based.
+
+The other components which are presently class components can also be function components. This is because they do not hold state data.
+
+For clarity, let’s convert one of the class component, `TodoItem`, to a function component.
+
+## Converting Class-Based Component to Function Component
 
 In the `TodoItem.js` file, replace the code with the following:
 
@@ -692,11 +732,19 @@ Here, we created a function with the same component name instead of the ES6 clas
 
 Also, notice that `this.props` in the class component was replaced by `props`. And to use this `props`, we included it as the function argument.
 
-As you start with React, you may not always know whether to use a functional or class component. A lot of times, you will realize after a while that you chose the wrong type. But as you create more components, making this choice will get easier.
+As you start with React, you may not always know whether to use a function or class component. A lot of times, you will realize after a while that you chose the wrong type. But as you create more components, making this choice will get easier.
 
-Until then, one helpful tip is that a class component that only has markup within the `render()` method can safely be converted to a functional component.
+Well, this has been solved as we can now create React components ONLY with function. Thanks to React Hooks.
 
-In this tutorial, we will use the functional component type simply for presentation. As in the case of the `Header` component where we will focus on rendering simple heading text. So, revert the `TodoItem` component to class component.
+Coming to that later in the series.
+
+Until then, one helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
+
+In this React App, we will use the functional component simply for presentation as in the case of the `Header` component. 
+
+There, we are rendering a simple heading text. 
+
+So, revert the `TodoItem` component to class component.
 
 Let’s create the `Header` component.
 
@@ -739,7 +787,7 @@ render() {
 ```
 Save the file. You should have the heading text displayed in the frontend.
 
-Notice how we used the ES6 arrow function:
+Notice how we are using the ES6 arrow function:
 
 ```JavaScript
 const Header = () => {
@@ -772,7 +820,7 @@ datas={[
     {
       prefix: "Part 2",
       label: "Form handling, Raising Events and the setState method",
-      url: "/blog/react-tutorial-for-beginners-2/"
+      url: "/blog/react-form-handling/"
     },
     {
       prefix: "Part 3",
