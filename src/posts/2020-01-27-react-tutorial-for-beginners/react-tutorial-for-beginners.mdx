@@ -12,7 +12,7 @@ If you are aiming to build a modern website or app that require high performance
 
 Today, many developers and site owners now embrace web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress custom blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
-So learning React is necessary if you want to be a present-day developer. 
+As you can see learning React is necessary if you want to become a present-day developer. 
 
 In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
@@ -95,7 +95,7 @@ But there is a problem! Though not with the DOM.
 
 Every time the DOM changes, the browser would need to recalculate the CSS, run layout and repaint the web page.
 
-And with Single page application (SPA) where JavaScript updates the DOM much more than they have to. Things become slower due to the process in the browser workflow after DOM manipulation.
+And with Single Page Application (SPA) where JavaScript updates the DOM much more than they have to. Things become slower due to the process in the browser workflow after DOM manipulation.
 
 So we need a way to minimize the time it takes to repaint the screen.
 
@@ -109,7 +109,7 @@ This is how it works,
 
 Whenever a new element is added to the UI, a virtual DOM is created.
 
-Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare with the previous version to detect which virtual DOM object has changed.
+Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare with the previous version to detect which of the virtual DOM object has changed.
 
 It then updates ONLY the object on the real DOM.
 
@@ -249,7 +249,7 @@ You can check if you already have Nodejs and npm installed by running these comm
 
 But if you don’t have it installed, head over to [Node.js](https://nodejs.org/ "node documentation"), download and install the latest stable version.
 
-Once you have it installed, run the following command from your terminal: 
+Then, run the following command from your terminal:
 
 ```
 C:\Users\Your Name> npx create-react-app simple-todo-app
@@ -329,11 +329,13 @@ Once you save the file, you’ll see a heading text displayed in the frontend.
 
 Comparing this code to the one we write directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we are importing React and ReactDOM instead of loading their respective CDN.
 
-> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`). A **module** is just a file that usually contains a class or library of functions. 
+> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`). 
+>
+> A **module** is just a file that usually contains a class or library of functions. 
 > 
-> And `create-react-app` CLI has both files installed for us to use. 
+> And `create-react-app` CLI have both files installed for us to use. 
 
-Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with the CLI - and it uses it under the hood.
+Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI. 
 
 At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable.
 
@@ -421,7 +423,7 @@ A few notes:
 - It’s a good convention to use UpperCamelCase for the Component file name (i.e `TodoContainer.js`).
 - Component names in React must be capitalized. In our case, `TodoContainer`.
 
-This is necessary so that its instance (e.g `<TodoContainer />`) in JSX is not considered as HTML tag.
+This is necessary so that its instance (e.g `<TodoContainer />`) in JSX is not considered as DOM/HTML tag.
 
 Also, take note of the component file path as used in the `index.js` file. Make sure you always specify the relative path of that file from the current directory. In our case, `"./components/TodoContainer"`. Meaning the `TodoContainer` file is located in the `components` folder inside the current directory. 
 
@@ -459,7 +461,7 @@ So anytime you want some data to be updated whenever user perform some action li
 
 ## Adding state
 
-As we have it in the app diagram, the `AddTodo` component, will carry the responsibility of accepting the user’s input. 
+As we have it in the app diagram, the `InputTodo` component, will carry the responsibility of accepting the user’s input. 
 
 That means we will need a place to store the data received through the input. From there, we can display the data in the frontend.
 
@@ -629,9 +631,9 @@ After that, replace the `<li>` element in the `map()` method with this line:
 <TodoItem key={todo.id} todo={todo} />
 ```
 
-> **Note:** Since we are mapping through the todos, don’t forget to add `key` props. 
+> **Note:** Since we are mapping through the todos, don’t forget to add `key` prop. 
 
-At this point, each of the state data is present in the `todo` props. You can now access these data through props in the `TodoItem` component.
+At this point, each of the state data is present in the `todo` prop. You can now access these data through props in the `TodoItem` component.
 
 So let’s update the `TodoItem.js` file so it looks like this:
 
@@ -690,7 +692,7 @@ On the other hand, the **function component** prior to React 16.8 cannot maintai
 
 This type is the simplest form of React component because it is primarily concerned with how things look.
 
-But now, things have changed with the introduction of React Hooks.
+But now, things have changed with the [introduction of React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial").
 
 You can now manage the class-based logic (state and lifecycle) inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
 
@@ -734,9 +736,9 @@ Also, notice that `this.props` in the class component was replaced by `props`. A
 
 As you start with React, you may not always know whether to use a function or class component. A lot of times, you will realize after a while that you chose the wrong type. But as you create more components, making this choice will get easier.
 
-Well, this has been solved as we can now create React components ONLY with function. Thanks to React Hooks.
+Well, this has been solved as we can now create React components ONLY with functions. Thanks to React Hooks.
 
-Coming to that later in the series.
+We will get to that later in the series.
 
 Until then, one helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
 
@@ -819,7 +821,7 @@ label="This React tutorial is part 1 of 4 in the React for beginners series."
 datas={[
     {
       prefix: "Part 2",
-      label: "Form handling, Raising Events and the setState method",
+      label: "Getting Started with React Form and Event Handling",
       url: "/blog/react-form-handling/"
     },
     {

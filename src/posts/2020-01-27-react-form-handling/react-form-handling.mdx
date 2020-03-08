@@ -48,10 +48,9 @@ Let's move on...
 
 You should be familiar with handling this type of input field in the regular HTML form. In React, form handling works a little bit different.
 
-Let’s start by adding the input `checkbox` inside of the `li` element. 
+Let’s start by adding the input `checkbox` to our app. 
 
-So add this just before `{this.props.todo.title}` in the `TodoItem` component:
-
+Inside of the `li` element, add this code just before the `{this.props.todo.title}` in the `TodoItem` component:
 
 ```html
 <input type="checkbox" />
@@ -59,19 +58,23 @@ So add this just before `{this.props.todo.title}` in the `TodoItem` component:
 
 Save the file and see the checkboxes in the frontend.
 
-By default, the `input` type (in this case, checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour. 
+By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour. 
 
-That is why you can toggle the boxes. This type of input is called **uncontrolled input**.
+That is why you can toggle the boxes. 
+
+This type of input is called **uncontrolled input**.
 
 In React, the input fields are meant to be **controlled**.
- 
-What does this mean and how do we go about it? First, we need to understand what controlled component is. 
+
+This takes us to another important subtopic.
 
 ## Controlled Component
 
-To make the input field controllable, the input data (in this case, toggling of checkbox) has to be handled by the component state and not the browser DOM. 
+To make the input field controllable, the input data (in this case, toggling of the checkbox) has to be handled by the component state and not the browser DOM. 
 
-With this, the state will serve as a **single source of truth**. What this means is that the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app.  
+With this, the state will serve as a **single source of truth**. 
+
+Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app.  
 
 This is necessary because the component state will not change unless you change it.
 
