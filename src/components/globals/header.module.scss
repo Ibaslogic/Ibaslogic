@@ -1,6 +1,6 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #464646;
+$nav-link: rgb(12, 52, 75);
 $content-max-width: 75rem;
 
 // mixins
@@ -94,7 +94,7 @@ $content-max-width: 75rem;
       right: 0;
       bottom: -3px;
       height: 1px;
-      background: #464646;
+      background: $nav-link;
       opacity: 0;
       @include transition;
     }

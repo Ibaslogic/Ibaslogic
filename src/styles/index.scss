@@ -6,14 +6,10 @@
 //@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap");
 
 // Variables
-$primary-color: rgb(
-  12,
-  52,
-  75
-); // rgb(51, 51, 51); //#464646; //#3c4043; #3a3a3a;
+$primary-color: rgb(12, 52, 75);
 //$secondary-color: #444;
 $header-bg-color: #20232a;
-$header-color: #222;
+$header-color: $primary-color;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
