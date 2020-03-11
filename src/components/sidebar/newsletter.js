@@ -74,7 +74,7 @@ class Newsletter extends Component {
         </h3>
         <p className={newsletterStyles.description}>
           Get the next tutorial straight to your inbox and continue your dev
-          learning journey!
+          journey!
         </p>
         <form
           onSubmit={this._handleFormSubmit}

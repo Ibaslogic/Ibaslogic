@@ -2,18 +2,24 @@
 // ===================================================
 
 // @import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
+//@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap");
 
 // Variables
-$primary-color: rgb(51, 51, 51); //#464646; //#3c4043; #3a3a3a;
+$primary-color: rgb(
+  12,
+  52,
+  75
+); // rgb(51, 51, 51); //#464646; //#3c4043; #3a3a3a;
 //$secondary-color: #444;
 $header-bg-color: #20232a;
 $header-color: #222;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
-$body-font: "Muli", "Roboto", "Segoe UI", "Helvetica Neue", sans-serif; //"Roboto", sans-serif; //"Open Sans", sans-serif;
-$heading-font: "Muli", "Roboto", "Helvetica Neue", sans-serif;
+$body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
+  sans-serif;
+$heading-font: "Nunito", "Muli", "Segoe UI", "Helvetica Neue", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #f44f18;
@@ -37,7 +43,7 @@ body {
   line-height: 1.42857143;
   background: $main-white;
   font-family: $body-font;
-  letter-spacing: -0.006rem;
+  // letter-spacing: -0.006rem;
 }
 
 html {
@@ -163,8 +169,8 @@ pre {
 pre[class*="language-"] :not(pre) > code,
 p > code,
 li > code {
-  background: #f2f2f2 !important;
-  color: #111; // #151414;
+  background: #f0f0f0 !important;
+  color: #ea4812; // #151414;
   text-shadow: none;
   border-radius: 0px;
 }
