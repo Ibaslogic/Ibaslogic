@@ -3,16 +3,20 @@ title: "Instant Post Switching in a GatsbyJS Site"
 description: "Utilize the power of Gatsby React and create an instant post-filtering so that your users can easily interact with your posts."
 category: "Gatsby"
 datePublished: "2020-02-22 10:32:00"
-dateUpdated: "2020-02-22 11:32:00"
+dateUpdated: "2020-03-13 11:32:00"
 featured: "./images/instant-post-switching-in-a-gatsbyjs-site.png"
 tags: ["gatsby", "react"]
 ---
 
 Oftentimes, I get asked by my readers how they can implement the instant post switching as seen on my blog page.
 
-As a site owner, providing your audience with the ease to interact with your post is something you’d want to prioritize. 
+As a site owner, providing your audience with the ease to interact with your post is something you’d want to prioritize.
 
-In case you don’t know what this looks like, [you can take a look really quick](/blog/ "Ibaslogic blog").
+Take a look at this.
+
+<br />
+
+![post instant filter](./images/post_instant_filter_.gif)
 
 If you love the fluidity of the post type switching and think of applying that to your Gatsby site, then this guide is for you.
 
@@ -20,16 +24,19 @@ But instead of the dropdown type of post-filtering as seen on the blog page, we 
 
 This is what we [will create at the end of this tutorial](https://gatsby-post-switching.netlify.com/blog/ "Ibaslogic post switching").
 
+<br />
+
+![post button filter](./images/button-filter.gif)
+
 The approach is the same. You can use your CSS skills to make it a dropdown.
 
-Or simply take a look at [my site code on GitHub](https://github.com/Ibaslogic/Ibaslogic "Ibaslogic github project") and see how I created the dropdown. 
-
+Or simply take a look at [my site code on GitHub](https://github.com/Ibaslogic/Ibaslogic "Ibaslogic github project") and see how I created the dropdown.
 
 ## Prerequisite
 
 To follow this tutorial, make sure you are comfortable creating a Gatsby site. If not, quickly read this [Gatsby tutorial guide](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") and come back.
 
-You can as well follow along if you want to apply it in your [React application](/blog/react-tutorial-for-beginners/ "react tutorial").
+You can as well follow along if you want to apply this feature in your [React application](/blog/react-tutorial-for-beginners/ "react tutorial").
 
 We will be writing purely React code!
 
@@ -38,7 +45,6 @@ You just have to understand how it works. You can easily tweak the code to suit 
 <br />
 
 Enough said. Let’s dive in.
-
 
 ## Setting up a Gatsby Starter
 
@@ -68,35 +74,29 @@ Good.
 
 <br />
 
-**Before you get started, here is what you need to know.**
+**_Before you get started, here is what you need to know._**
 
 <br />
 
-Irrespective of the Gatsby blog starter you are using,
+Irrespective of the Gatsby blog starter you are using, you’d want to use the **page query** to grab your data from the source (either [from the filesystem](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") or [Content Management System](/blog/gatsby-with-contentful-cms/ "gatsby tutorial contentful")) instead of the **StaticQuery**.
 
-<br />
+The reason for that is because you can easily pass all the query data (in this case, a list of posts) into a child component so that your blog page file will not be cumbersome.
 
-**1.** You’d want to use the **page query** to grab your data from the source (either [from the filesystem](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") or [Content Management System](/blog/gatsby-with-contentful-cms/ "gatsby tutorial contentful")) instead of the **StaticQuery**.
-
-The reason for that is because you can easily pass all the query data into a sub-component. So that your blog page file will not be cumbersome.
-
-The starter we are using in this tutorial uses the **StaticQuery** to grab the data.
+The starter template we are using in this tutorial uses the **StaticQuery** to grab the data.
 
 It was intentional.
 
-This is an avenue for you to learn how to convert static query to page query. And we will start with that.
+This will allow you to learn how to convert static query to page query. And we will start with that.
 
-**2.** This sub-component will receive data from the blog page component. And inside there, the post switching magic will take place.
+Once this child component receives the query data (i.e a list of posts) from the blog page component, we will store them in the state so that we can filter and update them.
 
-Since it will be handling the post switching, we will make use of the `state` to store the initial data. That means the component will be a **class-based**.
+To do this, we will make the component a **class-based**.
 
-If this seems complex, it is not!
-
-If you [understand the Gatsby React fundamentals](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial"), you can easily work with any complex Gatsby theme and tweak the code to suit your needs.
+> Note that we can also manage the state logic through the **functional component** by [using the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial").
 
 <br />
 
-So let’s get started.
+Ok. Let’s get started.
 
 We will start by converting the blog page to use the page query.
 
@@ -138,13 +138,13 @@ At this point, the result coming from the query is injected into the component t
 const Blog = ({ data }) => {
 ```
 
-And now we can pass it down to a sub-component.
+And now we can pass it down to a child component.
 
 If you save your file, your code will still work!
 
 That’s all for the conversion.
 
-Now, we can create a sub-component where we will pass the query data. From there, we can manage the post switching and render them on the screen.
+Now, we can create a child component where we will pass the query data. From there, we can manage the post switching and render them on the screen.
 
 In the `src/components` folder, create a file called `blogItems.js`. Inside this file, add the following starting code:
 

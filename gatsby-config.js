@@ -147,10 +147,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`, //`gatsby-transformer-remark`,
       options: {
+        extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-relative-images`,
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-images`,
             options: {

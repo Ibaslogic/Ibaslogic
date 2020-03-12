@@ -5,34 +5,33 @@ category: "React"
 datePublished: "2020-01-27 10:29:00"
 dateUpdated: "2020-03-08 10:29:00"
 featured: "./images/react-form-handling.png"
-tags: ["react", "form"] 
---- 
+tags: ["react", "form"]
+---
 
-In the first part of this React series, we covered some of the basic React fundamentals, set up React working environment and started writing our React app.
+In the first part of this React series, we covered some of the basic React fundamentals, set up React working environment and started writing our Todos React app.
 
-<PostSeriesLink 
-label="This React tutorial is part 2 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 2 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/blog/react-tutorial-for-beginners/"
-    },
-    {
-      prefix: "Part 3",
-      label: "How to implement CSS in Reactjs App",
-      url: "/blog/css-in-reactjs-app/"
-    },
-    {
-      prefix: "Part 4",
-      label: "Deploying React App to GitHub Pages",
-      url: "/blog/deploying-react-app-to-github-pages/"
-    },
-  ]}
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 3",
+label: "How to implement CSS in Reactjs App",
+url: "/blog/css-in-reactjs-app/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/blog/deploying-react-app-to-github-pages/"
+},
+]}
 />
 
 Now that you know some of the React fundamentals, let's dive deeper and explain the React form and event handling.
-
 
 Quick navigation – Overview of what you’ll learn in this part.
 
@@ -44,11 +43,11 @@ Here is the current status of our app.
 
 Let's move on...
 
-## Adding checkboxes to the Todo items 
+## Adding checkboxes to the Todo items
 
 You should be familiar with handling this type of input field in the regular HTML form. In React, form handling works a little bit different.
 
-Let’s start by adding the input `checkbox` to our app. 
+Let’s start by adding the input `checkbox` to our app.
 
 Inside of the `li` element, add this code just before the `{this.props.todo.title}` in the `TodoItem` component:
 
@@ -58,9 +57,9 @@ Inside of the `li` element, add this code just before the `{this.props.todo.titl
 
 Save the file and see the checkboxes in the frontend.
 
-By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour. 
+By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour.
 
-That is why you can toggle the boxes. 
+That is why you can toggle the boxes.
 
 This type of input is called **uncontrolled input**.
 
@@ -70,21 +69,21 @@ This takes us to another important subtopic.
 
 ## Controlled Component
 
-To make the input field controllable, the input data (in this case, toggling of the checkbox) has to be handled by the component state and not the browser DOM. 
+To make the input field controllable, the input data (in this case, toggling of the checkbox) has to be handled by the component state and not the browser DOM.
 
-With this, the state will serve as a **single source of truth**. 
+With this, the state will serve as a **single source of truth**.
 
-Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app.  
+Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app.
 
 This is necessary because the component state will not change unless you change it.
 
 Let’s see how it works.
 
-If you take a look at the `state` object in the parent component, we have a Boolean value (`true` or `false`) assigned to every `completed` key in the `todos` data. 
+If you take a look at the `state` object in the parent component, we have a Boolean value (`true` or `false`) assigned to every `completed` key in the `todos` data.
 
 We can tap into that to toggle the checkboxes.
 
-So go inside the `TodoItem.js` file and add a `checked` prop to the `input` checkbox and then assign `{this.props.todo.completed}`. 
+So go inside the `TodoItem.js` file and add a `checked` prop to the `input` checkbox and then assign `{this.props.todo.completed}`.
 
 So you have:
 
@@ -126,7 +125,7 @@ For the meantime, we are assigning to the handler, a callback function that will
 
 ![Handling Input](./images/handlingInput.png)
 
-Now, instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked. 
+Now, instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked.
 
 To do this, we need to understand how to raise and handle events.
 
@@ -134,11 +133,11 @@ To do this, we need to understand how to raise and handle events.
 
 In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it.
 
-Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`. 
+Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`.
 
 We need to find a way to access the state data from the `TodoItem` and toggle the `completed` value to `true` or `false` in the `TodoContainer` component.
 
-To do this, we will need to raise an event from the `TodoItem` up a level to `TodosList`, and then into `TodoContainer` component. 
+To do this, we will need to raise an event from the `TodoItem` up a level to `TodosList`, and then into `TodoContainer` component.
 
 In other words, we need to **climb a ladder**.
 
@@ -176,14 +175,18 @@ So update `<TodosList />` so you have:
 
 > **Note:** We are using `this.handleChange` to reference the `handleChange()` method because it is part of the class.
 
-Now, you have the `handleChange()` method assigned to the `handleChangeProps`. Its data can be accessed through props in the `TodosList` component. 
+Now, you have the `handleChange()` method assigned to the `handleChangeProps`. Its data can be accessed through props in the `TodosList` component.
 
 From there, we can pass it to the `TodoItem` component.
 
 Let’s update the `<TodoItem />` instance in the `TodosList.js` file so you have:
 
 ```jsx
-<TodoItem key={todo.id} todo={todo} handleChangeProps={this.props.handleChangeProps}/>
+<TodoItem
+  key={todo.id}
+  todo={todo}
+  handleChangeProps={this.props.handleChangeProps}
+/>
 ```
 
 At this point, the `handleChange()` data can be accessed from the `TodoItem` component.
@@ -198,7 +201,7 @@ This time, make sure you have parenthesis, `()` attached to the `handleChangePro
 
 Save all your files.
 
-Now, if you click any of the checkboxes, the `onChange` event will trigger and will call the `handleChange()` method in the parent component, `TodoContainer`. 
+Now, if you click any of the checkboxes, the `onChange` event will trigger and will call the `handleChange()` method in the parent component, `TodoContainer`.
 
 For now, we are only logging a text in the console.
 
@@ -226,7 +229,7 @@ handleChange = (id) => {
 
 Note how we are receiving and logging the `id`.
 
-Save the file. 
+Save the file.
 
 Open the console and click on the checkboxes. This time, you will see their respective ids.
 
@@ -238,7 +241,7 @@ Good. We are heading somewhere.
 
 Our aim here is to change the state of the checkbox whenever it is clicked. In React, we do not modify the state directly. Instead, we update through a method we inherited by extending `React.Component`.
 
-This method is called `setState()`. It tells React that we are updating the state. 
+This method is called `setState()`. It tells React that we are updating the state.
 
 React figures out what part of the state is changed and then update ONLY that part in the real DOM.
 
@@ -269,7 +272,7 @@ Save the file and check your application. You should be able to toggle the check
 
 You can also see the current state of your app in the React Tools.
 
-## Deleting items from the todos 
+## Deleting items from the todos
 
 This will be similar to how we handled the input checkboxes. Here also, the todos items live in the `TodoContainer`, while the delete button will live in the `TodoItem` component.
 
@@ -287,21 +290,21 @@ So add this `button` element below the `input` tag:
 
 We will update it later.
 
-As usual, we will enable communication between these components to raise an event. 
+As usual, we will enable communication between these components to raise an event.
 
 So go inside the `TodoContainer` component and add a `delTodo` method above the `render()`.
 
 ```JavaScript
 delTodo = id => {
   console.log("deleted", id);
-}; 
+};
 ```
 
 Still in the component, update the `<TodosList />` to include:
 
 ```js
 deleteTodoProps={this.delTodo}
-``` 
+```
 
 So you have:
 
@@ -329,7 +332,9 @@ Finally, back in the `TodoItem` component. Update the `button` element to includ
 You should have this:
 
 ```jsx
-<button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>Delete</button>
+<button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>
+  Delete
+</button>
 ```
 
 Save all your files and check the frontend.
@@ -385,7 +390,7 @@ Using the same pattern, we will add the text input field that will allow users t
 Let’s start by adding the following code inside the empty `InputTodo.js` file:
 
 ```jsx
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 class InputTodo extends Component {
   render() {
@@ -394,10 +399,10 @@ class InputTodo extends Component {
         <input type="text" placeholder="Add Todo..." />
         <input type="submit" value="Submit" />
       </form>
-    );
+    )
   }
 }
-export default InputTodo;
+export default InputTodo
 ```
 
 Since we will be getting data through the user’s interaction (i.e through the input field), this component will, therefore, hold state. For that reason, it will be a class-based component.
@@ -436,7 +441,7 @@ render() {
       <InputTodo />
       <TodosList
         todos={this.state.todos}
-        handleChangeProps={this.handleChange} 
+        handleChangeProps={this.handleChange}
         deleteTodoProps={this.delTodo}
       />
     </div>
@@ -522,7 +527,7 @@ In the `setState()` method, we are passing the current value of the state (i.e t
 
 And if you recall from vanilla JavaScript DOM API, the predefined parameter, `e`, hold some important information about the event.
 
-From there, you can target the specific input field and grab the updated value. 
+From there, you can target the specific input field and grab the updated value.
 
 ## Handling React form that has more than one text input field
 
@@ -543,17 +548,17 @@ Then, you add a `name` attribute to each of the input tags and assigned a value 
 If you apply these changes in your code, your `InputTodo` component should look like this:
 
 ```jsx{9,19}
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 class InputTodo extends Component {
   state = {
-    title: ""
-  };
+    title: "",
+  }
   onChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
+      [e.target.name]: e.target.value,
+    })
+  }
   render() {
     return (
       <form>
@@ -566,10 +571,10 @@ class InputTodo extends Component {
         />
         <input type="submit" value="Submit" />
       </form>
-    );
+    )
   }
 }
-export default InputTodo;
+export default InputTodo
 ```
 
 With these changes, you can add as many text input fields as you want.
@@ -590,7 +595,7 @@ To submit todos items, we will make use of the `onSubmit` event handler on the `
 
 Let's quickly do that.
 
-Update the `<form>` tag in the `InputTodo` component to include the `onSubmit` handler. 
+Update the `<form>` tag in the `InputTodo` component to include the `onSubmit` handler.
 
 ```jsx
 <form onSubmit={this.handleSubmit}>
@@ -605,7 +610,7 @@ handleSubmit = e => {
 };
 ```
 
-For the meantime, if you submit your todos items, they will be displayed in the Console tab of your browser. 
+For the meantime, if you submit your todos items, they will be displayed in the Console tab of your browser.
 
 > Note how we are preventing the default behaviour of the form submission.
 
@@ -693,7 +698,6 @@ In the code, we started by defining an object for the new item. In this object, 
 
 With the `setState()` method, we are re-rendering the state. We are adding the new item to the current todos list which can be grabbed using the spread operator (`…`).
 
-
 ## Generating random ids for the todos list items
 
 If you try to submit more than one todos item, React will trigger a console warning telling you that the ids/keys are meant to be unique. This is happening because we are assigning a single `id` (an id of 4) to every new todos item received through the input field.
@@ -752,34 +756,33 @@ Great! We are getting there.
 
 If you've made it this far, congratulations on your way to becoming a better React developer.
 
-So far, we've learned what React is and what we can do with it, what JSX is and why we use it to write React applications. We've also learned the types of React component, handling forms in React, raising and handling events. 
+So far, we've learned what React is and what we can do with it, what JSX is and why we use it to write React applications. We've also learned the types of React component, handling forms in React, raising and handling events.
 
-Next, we will learn how to implement CSS in React application. 
+Next, we will learn how to implement CSS in React application.
 
 It promises to be fun!
 
-Before you go-ahead to the next part, make sure you share this article around the web. 
+Before you go-ahead to the next part, make sure you share this article around the web.
 
 If something wasn't clear, do let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-form-handling/react-form-handling.mdx "Ibaslogic GitHub").
 
-
-<PostSeriesLink 
-label="This React tutorial is part 2 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 2 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/blog/react-tutorial-for-beginners/"
-    },
-    {
-      prefix: "Part 3",
-      label: "How to implement CSS in Reactjs App",
-      url: "/blog/css-in-reactjs-app/"
-    },
-    {
-      prefix: "Part 4",
-      label: "Deploying React App to GitHub Pages",
-      url: "/blog/deploying-react-app-to-github-pages/"
-    },
-  ]}
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 3",
+label: "How to implement CSS in Reactjs App",
+url: "/blog/css-in-reactjs-app/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/blog/deploying-react-app-to-github-pages/"
+},
+]}
 />
