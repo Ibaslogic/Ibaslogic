@@ -3,39 +3,39 @@ title: "How to Implement CSS in Reactjs App"
 description: "There are many ways to style a React application. The inline CSS styles, the CSS classes and the CSS Modules."
 category: "React"
 datePublished: "2020-01-27 10:31:00"
-dateUpdated: "2020-03-08 10:31:00"
+dateUpdated: "2020-03-12 10:31:00"
 featured: "./images/css-in-reactjs-app.png"
 tags: ["react", "reactjs", "css"]
---- 
+---
 
-<PostSeriesLink 
-label="This React tutorial is part 3 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 3 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/blog/react-tutorial-for-beginners/"
-    },
-    {
-      prefix: "Part 2",
-      label: "Getting Started with React Form and Event Handling",
-      url: "/blog/react-form-handling/"
-    },
-    {
-      prefix: "Part 4",
-      label: "Deploying React App to GitHub Pages",
-      url: "/blog/deploying-react-app-to-github-pages/"
-    },
-  ]}
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/blog/react-form-handling/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/blog/deploying-react-app-to-github-pages/"
+},
+]}
 />
 
 You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves.
 
 In this part, you will learn how to add CSS to your React JS app.
 
-Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes. 
+Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes.
 
-React application can also be styled [using the CSS modules](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules"). 
+React application can also be styled [using the CSS modules](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules").
 
 But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
 
@@ -71,13 +71,13 @@ Save the file.
 Next, import it in the `index.js` file:
 
 ```jsx{5}
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
 //component file
-import TodoContainer from "./components/TodoContainer";
-import "./App.css";
+import TodoContainer from "./components/TodoContainer"
+import "./App.css"
 
-ReactDOM.render(<TodoContainer />, document.getElementById("root"));
+ReactDOM.render(<TodoContainer />, document.getElementById("root"))
 ```
 
 If you like, you can import the file in the parent component file, `TodoContainer.js` instead of the `index.js`.
@@ -88,7 +88,7 @@ You should see your CSS styles rendered in the frontend. Or better still, inspec
 
 Now, let’s start adding class names.
 
-Open the `TodoContainer.js`, update the `div` wrapper to include a `container` class name. 
+Open the `TodoContainer.js`, update the `div` wrapper to include a `container` class name.
 
 ```jsx{1}
 <div className="container">
@@ -209,19 +209,17 @@ So you have:
 ```jsx{3,6}
 return (
   <header>
-    <h1 style={{ fontSize: "25px", marginBottom: "15px" }}>
-      Simple Todo App
-    </h1>
+    <h1 style={{ fontSize: "25px", marginBottom: "15px" }}>Simple Todo App</h1>
     <p style={{ fontSize: "19px" }}>
       Please add to-dos item(s) through the input field
     </p>
   </header>
-);
+)
 ```
 
 Save the file and check the frontend to see your changes.
 
-In the code, you’ll notice two curly braces. 
+In the code, you’ll notice two curly braces.
 
 We already know that valid JavaScript expressions in JSX are written inside curly braces. The second curly brace is for the inline styling in the form of a JavaScript object.
 
@@ -234,8 +232,8 @@ Back in the `Header.js` file, add the following code above the `return` statemen
 ```js
 const headerStyle = {
   padding: "20px 0",
-  lineHeight: "2em"
-};
+  lineHeight: "2em",
+}
 ```
 
 Then update the `<header>` opening tag so you have:
@@ -249,13 +247,13 @@ Save the file.
 Now, your code should look like this:
 
 ```jsx{3-7,9,10,13}
-import React from "react";
+import React from "react"
 
 const Header = () => {
   const headerStyle = {
     padding: "20px 0",
-    lineHeight: "2em"
-  };
+    lineHeight: "2em",
+  }
   return (
     <header style={headerStyle}>
       <h1 style={{ fontSize: "25px", marginBottom: "15px" }}>
@@ -265,10 +263,10 @@ const Header = () => {
         Please add to-dos item(s) through the input field
       </p>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 ```
 
 Check the frontend to see your changes or inspect the `header` element to see your CSS style declaration.
@@ -288,8 +286,8 @@ const completedStyle = {
   fontStyle: "italic",
   color: "#d35e0f",
   opacity: 0.4,
-  textDecoration: "line-through"
-};
+  textDecoration: "line-through",
+}
 ```
 
 Then, update the `return` statement so you have:
@@ -309,17 +307,17 @@ return (
       {this.props.todo.title}
     </span>
   </li>
-);
+)
 ```
 
-In the code, we introduced a new tag, `span` and then added a `style` attribute to it. 
+In the code, we introduced a new tag, `span` and then added a `style` attribute to it.
 
 We also used the **ternary operator** in the `style` attribute to dynamically change the CSS style if any of the todos item(s) is/are completed.
 
 > As a refresher,
-> 
+>
 > Ternary operator (or inline if-statement) as used here will check if any item in the todos list is completed or not.
-> 
+>
 > This is how it works:
 >
 > ```
@@ -361,38 +359,38 @@ return (
     <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
     <span style={completed ? completedStyle : null}>{title}</span>
   </li>
-);
+)
 ```
 
 Make sure you test your application.
 
 ## Conclusion
 
-Now that you have added a nice look and feel to your React app, it's time to deploy it on the web. In the next part, you will learn how to deploy your React application to GitHub pages. 
+Now that you have added a nice look and feel to your React app, it's time to deploy it on the web. In the next part, you will learn how to deploy your React application to GitHub pages.
 
-While I'm excited you are here, endeavour to share this article around the web. 
+While I'm excited you are here, endeavour to share this article around the web.
 
-Again, if something wasn't clear, do let us know. 
+Again, if something wasn't clear, do let us know.
 
 Happy coding!
 
-<PostSeriesLink 
-label="This React tutorial is part 3 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 3 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/blog/react-tutorial-for-beginners/"
-    },
-    {
-      prefix: "Part 2",
-      label: "Getting Started with React Form and Event Handling",
-      url: "/blog/react-form-handling/"
-    },
-    {
-      prefix: "Part 4",
-      label: "Deploying React App to GitHub Pages",
-      url: "/blog/deploying-react-app-to-github-pages/"
-    },
-  ]}
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/blog/react-form-handling/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/blog/deploying-react-app-to-github-pages/"
+},
+]}
 />
