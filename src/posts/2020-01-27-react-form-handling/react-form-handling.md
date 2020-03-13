@@ -3,7 +3,7 @@ title: "React Tutorial: Getting Started with React Form and Event Handling"
 description: "Form handling in React works a bit different compared to the regular HTML form that is handled by the DOM. In this step-by-step guide, you will learn how to successfully handle form in React."
 category: "React"
 datePublished: "2020-01-27 10:29:00"
-dateUpdated: "2020-03-08 10:29:00"
+dateUpdated: "2020-03-13 10:29:00"
 featured: "./images/react-form-handling.png"
 tags: ["react", "form"]
 ---
@@ -123,7 +123,7 @@ Save the file and look inside the Console tab once again, you'll see that the wa
 
 For the meantime, we are assigning to the handler, a callback function that will log a "clicked" text in the console whenever the checkbox is clicked.
 
-![Handling Input](./images/handlingInput.png)
+![Handling Input](./images/handlingInput.gif)
 
 Now, instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked.
 
@@ -515,7 +515,7 @@ Save the file. Now you should be able to write something in the input field.
 
 You will also see the state of your app in real-time if you open the React tools.
 
-![Handling text field](./images/handlingtextfield.png)
+![Handling text field](./images/handlingTextField_.gif)
 
 <br />
 

@@ -6,13 +6,13 @@ datePublished: "2020-01-27 10:27:00"
 dateUpdated: "2020-03-08 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
 tags: ["react", "reactjs"]
---- 
+---
 
 If you are aiming to build a modern website or app that require high performance and safety, then, a knowledge of React is necessary!
 
 Today, many developers and site owners now embrace web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress custom blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
-As you can see learning React is necessary if you want to become a present-day developer. 
+As you can see learning React is necessary if you want to become a present-day developer.
 
 In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
@@ -24,19 +24,22 @@ Once you are well-grounded with React, [building a Static site generator like Ga
 
 Before you go ahead with this React tutorial, please make sure you have:
 
--	Basic understanding of HTML and CSS.
--	JavaScript fundamentals (object, array, conditionals etc).
--	Familiarity with JavaScript ES6 features (class syntax, arrow functions, object destructuring etc).
+- Basic understanding of HTML and CSS.
+- JavaScript fundamentals (object, array, conditionals etc).
+- Familiarity with JavaScript ES6 features (class syntax, arrow functions, object destructuring etc).
 
-If you are still finding it tough with JavaScript, just read and code along with me. 
+If you are still finding it tough with JavaScript, just read and code along with me.
 I will try as much as possible to explain every task as we code our React app.
 
-Here is the React application we will build - [Simple React App](https://ibaslogic.github.io/simple-todo-app/ "simple react app"). And you can find all of the code in [my GitHub repo](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
+At the end of this React tutorial, you will be able to build [this Todos App](https://ibaslogic.github.io/simple-todo-app/ "simple react app").
+
+![Todos app design](./images/todos-app.gif)
+
+You will find all of the code in [my GitHub repo](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
 
 This React tutorial is divided into four different parts. And here is a quick overview of what you’ll learn in this part.
 
-<TableOfContents /> 
-
+<TableOfContents />
 
 Now let's get started.
 
@@ -56,7 +59,6 @@ What does this mean?
 
 To understand better, you need to start thinking in React Component.
 
-
 ## Thinking in React Component
 
 When building an application with React, you build a bunch of independent, isolated and reusable component. Think of component as a simple function that you can call with some input and they render some output.
@@ -65,7 +67,7 @@ And as we can reuse functions, so also we can reuse components, merge them and t
 
 Let’s take a look at the image below. A simple To-dos app.
 
-We will create this app from scratch in this tutorial. It may look simple in the eye but trust me, you will get to understand the concept of React and how it works afterwards.
+As you are aware, we will create this app from scratch in this tutorial. It may look simple in the eye but trust me, you will get to understand the concept of React and how it works afterwards.
 
 ![Todos app design](./images/todosapp.png)
 
@@ -81,7 +83,7 @@ Having this instinct shows that you are **thinking in React!**
 
 Moving on.
 
-## The concept of Virtual DOM 
+## The concept of Virtual DOM
 
 As a JavaScript developer, you are sure to have interacted with the real DOM while building interactive websites. Though, you may have been able to avoid understanding how it works.
 
@@ -161,7 +163,7 @@ The area of focus in the code above is the `script` element. The `type` attribut
 In the script, we have what looks like HTML.
 
 ```jsx
-const element = <h1>Hello from React</h1>;
+const element = <h1>Hello from React</h1>
 ```
 
 And you might be wondering why we are writing HTML inside of JavaScript.
@@ -170,11 +172,11 @@ Well, that line is not HTML but JSX.
 
 ## What is JSX?
 
-Writing JavaScript/React code to describe what the user interface (UI) will look like is not as simple as you may think. 
+Writing JavaScript/React code to describe what the user interface (UI) will look like is not as simple as you may think.
 
-This makes the React author create what looks like a JavaScript version of HTML. This is called JSX (JavaScript XML). It is an XML like syntax extension to JavaScript that makes it easier and more intuitive to describe the UI. 
+This makes the React author create what looks like a JavaScript version of HTML. This is called JSX (JavaScript XML). It is an XML like syntax extension to JavaScript that makes it easier and more intuitive to describe the UI.
 
-Under the hood, the JSX is being translated to regular JavaScript version of itself at runtime since the browser can’t read it. 
+Under the hood, the JSX is being translated to regular JavaScript version of itself at runtime since the browser can’t read it.
 
 This is how it works:
 
@@ -197,12 +199,11 @@ Take note of the following about the JSX
 - You can use a valid JavaScript expression inside the JSX through curly braces, `{}`.
 - In JSX, elements attributes, event handlers are always in camelCase. The few exceptions are `aria-*` and `data-*` attributes, which are lowercase.
 
-
 Back to our code.
 
 Save the `index.html` file and open it with a web browser.
 
-Make sure you are connected to the internet as we have included libraries through CDN. 
+Make sure you are connected to the internet as we have included libraries through CDN.
 
 At the moment, nothing is displayed in the browser viewport. But if you open the DevTools and check the Console tab (since we `console.log` the element in our code), you will see an object representing the JSX.
 
@@ -218,12 +219,12 @@ Update the `script` element so it looks like so:
 
 ```jsx{3}
 <script type="text/babel">
- const element = <h1>Hello from React</h1>;
- ReactDOM.render(element, document.getElementById("root"));
+  const element = <h1>Hello from React</h1>; ReactDOM.render(element,
+  document.getElementById("root"));
 </script>
 ```
 
-In the script, we called the `render()` method that React exposes through the `ReactDOM` object. 
+In the script, we called the `render()` method that React exposes through the `ReactDOM` object.
 
 > Remember we included the `ReactDOM` library in the `head` of the HTML file. Else, the `render()` method won’t work.
 
@@ -283,9 +284,9 @@ Then run this command:
 C:\Users\Your Name\simple-todo-app > npm start
 ```
 
-> **Note:** If you are on VsCode, you can toggle the terminal by pressing ``Ctrl + ` `` or ``Cmd + ` `` or go to `View-> Terminal`.
+> **Note:** If you are on VsCode, you can toggle the terminal by pressing `` Ctrl + ` `` or `` Cmd + ` `` or go to `View-> Terminal`.
 
-The `npm start` command will lunch the development server on `port 3000` and a new browser window displaying your application will appear automatically. 
+The `npm start` command will lunch the development server on `port 3000` and a new browser window displaying your application will appear automatically.
 
 If nothing happens, visit this URL, [localhost:3000](http://localhost:3000/ "dev server") in the browser address bar.
 
@@ -300,7 +301,6 @@ For instance, you can change the "Learn React" text to something else.
 Once you save the file, the browser reloads automatically for the change to take effect. This is happening because the `create-react-app` CLI comes bundled with hot reload.
 
 Ok good.
-
 
 ## Writing the To-dos App
 
@@ -317,25 +317,25 @@ Let’s create the file.
 In the `src` folder, create an `index.js` file and add the following code:
 
 ```jsx
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
 
-const element = <h1>Hello from Create React App</h1>;
+const element = <h1>Hello from Create React App</h1>
 
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(element, document.getElementById("root"))
 ```
 
 Once you save the file, you’ll see a heading text displayed in the frontend.
 
 Comparing this code to the one we write directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we are importing React and ReactDOM instead of loading their respective CDN.
 
-> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`). 
+> **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`).
 >
-> A **module** is just a file that usually contains a class or library of functions. 
-> 
-> And `create-react-app` CLI have both files installed for us to use. 
+> A **module** is just a file that usually contains a class or library of functions.
+>
+> And `create-react-app` CLI have both files installed for us to use.
 
-Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI. 
+Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
 
 At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable.
 
@@ -347,7 +347,7 @@ So instead of rendering a simple element, we will render a React component.
 
 Remember, at the beginning, we decomposed our application into a tree of isolated components. Where the parent component, `TodoContainer`, holds three children components (`Header`, `InputTodo` and `TodosList`). Then, `TodosList` holds another component called `TodoItem`.
 
-Meaning, we are creating five components in total. 
+Meaning, we are creating five components in total.
 
 Again, see the image below:
 
@@ -360,7 +360,7 @@ Start by creating a folder called `components` inside the `src` directory and cr
 Next, add the following code in the parent component file, `TodoContainer.js` and save it:
 
 ```jsx
-import React from "react";
+import React from "react"
 class TodoContainer extends React.Component {
   render() {
     return (
@@ -368,21 +368,21 @@ class TodoContainer extends React.Component {
         <h1>Hello from Create React App</h1>
         <p>I am in a React Component!</p>
       </div>
-    );
+    )
   }
 }
-export default TodoContainer;
+export default TodoContainer
 ```
 
 Also, go inside the `index.js` file and update it so it looks like so:
 
 ```jsx{3-6}
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
 //component file
-import TodoContainer from "./components/TodoContainer";
+import TodoContainer from "./components/TodoContainer"
 
-ReactDOM.render(<TodoContainer />, document.getElementById("root"));
+ReactDOM.render(<TodoContainer />, document.getElementById("root"))
 ```
 
 Save the file and check the frontend.
@@ -407,8 +407,8 @@ Make sure you import `React` object for the JSX to work.
 >
 > ```jsx
 > <React.Fragment>
->  <h1>Hello from Create React App</h1>
->  <p>I am in a React Component!</p>
+>   <h1>Hello from Create React App</h1>
+>   <p>I am in a React Component!</p>
 > </React.Fragment>
 > ```
 
@@ -425,7 +425,7 @@ A few notes:
 
 This is necessary so that its instance (e.g `<TodoContainer />`) in JSX is not considered as DOM/HTML tag.
 
-Also, take note of the component file path as used in the `index.js` file. Make sure you always specify the relative path of that file from the current directory. In our case, `"./components/TodoContainer"`. Meaning the `TodoContainer` file is located in the `components` folder inside the current directory. 
+Also, take note of the component file path as used in the `index.js` file. Make sure you always specify the relative path of that file from the current directory. In our case, `"./components/TodoContainer"`. Meaning the `TodoContainer` file is located in the `components` folder inside the current directory.
 
 The file extension defaults to `.js`, so you don’t need to append it.
 
@@ -437,12 +437,12 @@ That brings us to the concept of **state** and **props**.
 
 **Starting with the props**
 
-The `props` (which stands for properties) can be thought of as the attributes in HTML element. 
+The `props` (which stands for properties) can be thought of as the attributes in HTML element.
 
 For instance, the attributes – `type`, `checked` – in the `input` tag below are props.
 
 ```html
-<input type="checkbox" checked={true} />
+<input type="checkbox" checked="{true}" />
 ```
 
 They are the primary way to send data and/or event handlers down the component tree. i.e from parent to its child component.
@@ -461,17 +461,17 @@ So anytime you want some data to be updated whenever user perform some action li
 
 ## Adding state
 
-As we have it in the app diagram, the `InputTodo` component, will carry the responsibility of accepting the user’s input. 
+As we have it in the app diagram, the `InputTodo` component, will carry the responsibility of accepting the user’s input.
 
 That means we will need a place to store the data received through the input. From there, we can display the data in the frontend.
 
-Though, you can decide to have some default todos items displayed in the frontend. Or if you like, you can display an empty todos list. 
+Though, you can decide to have some default todos items displayed in the frontend. Or if you like, you can display an empty todos list.
 
 Either way, you will need to define a state in your file.
 
 For every component that will be accessing the state data, you will need to declare the state in the file of their closest common parent.
 
-For instance, in our app diagram, the input field in the `InputTodo` component will be adding data to the state. Also, the Delete button in the `TodoItem` component will be accessing the state data and removing todos item. 
+For instance, in our app diagram, the input field in the `InputTodo` component will be adding data to the state. Also, the Delete button in the `TodoItem` component will be accessing the state data and removing todos item.
 
 For this reason, the state data will live in the `TodoContainer` component, which is their closest common parent.
 
@@ -561,7 +561,7 @@ Since we are using an instance of a component, `<TodosList />` in another file, 
 import TodosList from "./TodosList";
 ```
 
-At this point, you now have the `state` data in the `todos` props. Thanks to this line: 
+At this point, you now have the `state` data in the `todos` props. Thanks to this line:
 
 ```jsx
 <TodosList todos={this.state.todos} />
@@ -572,7 +572,7 @@ Now, we can access this data through `props` in the `TodosList` component.
 So let’s update the `TodosList.js` file so it looks like this:
 
 ```jsx
-import React from "react";
+import React from "react"
 
 class TodosList extends React.Component {
   render() {
@@ -582,11 +582,11 @@ class TodosList extends React.Component {
           <li>{todo.title}</li>
         ))}
       </div>
-    );
+    )
   }
 }
 
-export default TodosList;
+export default TodosList
 ```
 
 Save your file. You should have the todos title rendered on the screen just like before.
@@ -631,27 +631,22 @@ After that, replace the `<li>` element in the `map()` method with this line:
 <TodoItem key={todo.id} todo={todo} />
 ```
 
-> **Note:** Since we are mapping through the todos, don’t forget to add `key` prop. 
+> **Note:** Since we are mapping through the todos, don’t forget to add `key` prop.
 
 At this point, each of the state data is present in the `todo` prop. You can now access these data through props in the `TodoItem` component.
 
 So let’s update the `TodoItem.js` file so it looks like this:
 
-
 ```jsx
-import React from "react";
+import React from "react"
 
 class TodoItem extends React.Component {
   render() {
-    return (
-      <li>
-        {this.props.todo.title}
-      </li>
-    );
+    return <li>{this.props.todo.title}</li>
   }
 }
 
-export default TodoItem;
+export default TodoItem
 ```
 
 Save all your files. You should have the frontend displayed as expected.
@@ -666,19 +661,19 @@ If you want to inspect and debug your application, check your components tree or
 
 This tool is available as a browser extension for Chrome and Firefox.
 
-Let’s go ahead and install it.  
+Let’s go ahead and install it.
 
-Head over to the extension page for your browser of choice (Chrome [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "Chrome react tools") and Firefox [here](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ "Firefox react tools")) and install it. 
+Head over to the extension page for your browser of choice (Chrome [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "Chrome react tools") and Firefox [here](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ "Firefox react tools")) and install it.
 
 Once you install it, you are done. It doesn’t require any other setup.
 
 To view it, open the browser devtools by right-clicking anywhere on your web page viewport and select **Inspect** or **Inspect Element** depending on your browser.
 
-Then, on the browser inspection window, select the **Components** tab to see the view of your application hierarchy. 
+Then, on the browser inspection window, select the **Components** tab to see the view of your application hierarchy.
 
 ![React devtools](./images/react-devtools.png)
 
-> Please note that you will not be able to see the **Components** tab if your webpage is not using React at the moment. 
+> Please note that you will not be able to see the **Components** tab if your webpage is not using React at the moment.
 
 You can navigate through different component in the tree and view the state and props data. Just play around with it.
 
@@ -696,7 +691,7 @@ But now, things have changed with the [introduction of React Hooks](/blog/react-
 
 You can now manage the class-based logic (state and lifecycle) inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
 
-Later in the series, you will learn how to use these React Hooks to manage the stateful and lifecycle logic in a function component.  
+Later in the series, you will learn how to use these React Hooks to manage the stateful and lifecycle logic in a function component.
 
 For now, we will manage them in the class component so that you can grab the fundamentals.
 
@@ -715,15 +710,13 @@ For clarity, let’s convert one of the class component, `TodoItem`, to a functi
 In the `TodoItem.js` file, replace the code with the following:
 
 ```jsx
-import React from "react";
+import React from "react"
 
 function TodoItem(props) {
-  return (
-    <li>{props.todo.title}</li>
-  );
+  return <li>{props.todo.title}</li>
 }
 
-export default TodoItem;
+export default TodoItem
 ```
 
 If you save the file and check your application, you’ll still have the todos items displayed.
@@ -742,9 +735,9 @@ We will get to that later in the series.
 
 Until then, one helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
 
-In this React App, we will use the functional component simply for presentation as in the case of the `Header` component. 
+In this React App, we will use the functional component simply for presentation as in the case of the `Header` component.
 
-There, we are rendering a simple heading text. 
+There, we are rendering a simple heading text.
 
 So, revert the `TodoItem` component to class component.
 
@@ -753,7 +746,7 @@ Let’s create the `Header` component.
 This is pretty straight forward. So, add the following code in the `Header.js` file:
 
 ```jsx
-import React from "react";
+import React from "react"
 
 const Header = () => {
   return (
@@ -761,10 +754,10 @@ const Header = () => {
       <h1>Simple Todo App</h1>
       <p>Please add to-dos item(s) through the input field</p>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
 ```
 
 Save the file.
@@ -772,7 +765,7 @@ Save the file.
 Next, go inside the `TodoContainer` component and import the file at the top like so:
 
 ```jsx
-import Header from "./Header";
+import Header from "./Header"
 ```
 
 Then, call its instance, `<Header />` within the `render()` method so you have:
@@ -787,6 +780,7 @@ render() {
   );
 }
 ```
+
 Save the file. You should have the heading text displayed in the frontend.
 
 Notice how we are using the ES6 arrow function:
@@ -805,36 +799,33 @@ So go with the one you are most comfortable with.
 
 ## Conclusion
 
-I'm excited you are here! We have set the ball rolling. 
+I'm excited you are here! We have set the ball rolling.
 
-So far, we have touched some of the React fundamentals and started writing our simple todos application. 
+So far, we have touched some of the React fundamentals and started writing our simple todos application.
 
-In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more. 
+In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more.
 
 Before you grab a coffee and move on to the next part, make sure you share this article around the web and subscribe to our newsletter for more of this.
 
-Lastly, if something wasn't clear, endeavour to let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-tutorial-for-beginners/react-tutorial-for-beginners.mdx "Ibaslogic GitHub").  
- 
+Lastly, if something wasn't clear, endeavour to let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-tutorial-for-beginners/react-tutorial-for-beginners.mdx "Ibaslogic GitHub").
 
-<PostSeriesLink 
-label="This React tutorial is part 1 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 1 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 2",
-      label: "Getting Started with React Form and Event Handling",
-      url: "/blog/react-form-handling/"
-    },
-    {
-      prefix: "Part 3",
-      label: "How to implement CSS in Reactjs App",
-      url: "/blog/css-in-reactjs-app/"
-    },
-    {
-      prefix: "Part 4",
-      label: "Deploying React App to GitHub Pages",
-      url: "/blog/deploying-react-app-to-github-pages/"
-    },
-  ]}
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/blog/react-form-handling/"
+},
+{
+prefix: "Part 3",
+label: "How to implement CSS in Reactjs App",
+url: "/blog/css-in-reactjs-app/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/blog/deploying-react-app-to-github-pages/"
+},
+]}
 />
-
-

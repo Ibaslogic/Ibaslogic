@@ -3,7 +3,7 @@ title: "React Hooks Tutorial: The Practical Guide to Learning Hooks for Beginner
 description: "React Hooks allows us to use a state and manage the class-based lifecycle logic inside of the function components. Now, you have total control over the type of component to create."
 category: "React"
 datePublished: "2020-03-05 10:32:00"
-dateUpdated: "2020-03-05 11:32:00"
+dateUpdated: "2020-03-13 11:32:00"
 featured: "./images/react-hooks-tutorial.png"
 tags: ["react", "hooks"]
 ---
@@ -66,7 +66,7 @@ You should see this app in your browser address bar at [http://localhost:3000/](
 
 This is a good start!
 
-*What this app does is simple.*
+_What this app does is simple._
 
 The user inputs the top and bottom text through the input fields and then generate random images by clicking on the **GENERATE** button.
 
@@ -99,7 +99,6 @@ export default MemeGenerator
 ```
 
 This is the first conversion. Notice we are now using a function instead of class.
-
 
 ## Using the React Hooks useState
 
@@ -270,7 +269,6 @@ This is not going to scale especially if you have some other input fields in you
 
 Now that you’ve learned about managing the state in a function component using the `useState` React Hook, let’s see how we can replicate the lifecycle logic in a function component.
 
-
 ## Using the React Hooks useEffect
 
 At the moment, if we click the **GENERATE** button in our app to display a random image, nothing will happen except that we are logging a simple text in the console.
@@ -322,7 +320,7 @@ useEffect(() => {
 
 If you save the file and take a look at the console once again, you will see that your log keeps incrementing. This shows the Hook is running infinitely.
 
-![useEffect](./images/useEffect.png)
+![useEffect](./images/useEffect.gif)
 
 What’s happening?
 
@@ -415,7 +413,7 @@ This gets updated whenever you click on the **Generate** button thereby causing 
 
 If you open your DevTools console, you’ll see a logged message “fetching data” at first rendering and subsequently when the `Generate` button gets clicked.
 
-![react hooks componentdidupdate](./images/react-hooks-componentdidupdate.png)
+![react hooks componentdidupdate](./images/react-hooks-componentdidupdate.gif)
 
 Moving on.
 
