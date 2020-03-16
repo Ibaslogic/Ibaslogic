@@ -63,7 +63,7 @@ $content-max-width: 75rem;
   }
 
   &:hover {
-    color: #f44f18;
+    color: #ff7a59;
     @media screen and (min-width: 768px) {
       opacity: 1;
       color: $nav-link;
@@ -71,7 +71,7 @@ $content-max-width: 75rem;
   }
 
   &.active-nav-item {
-    color: #f44f18;
+    color: #ff7a59;
     @media screen and (min-width: 768px) {
       opacity: 1;
       color: $nav-link;

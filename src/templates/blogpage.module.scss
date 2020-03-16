@@ -71,17 +71,12 @@ $main-white: #fff;
     margin-bottom: 0.66rem;
     a {
       text-decoration: none;
-      background-color: rgba(#8c8c8c, 0.8);
+      background-color: #e5f5f8; // rgba(#8c8c8c, 0.8);
       font-size: 0.755rem;
       padding: 4px 7px 6px;
       border-radius: 0.24rem;
       line-height: 1;
-      color: $main-white;
-      @include transition;
-
-      &:hover {
-        background-color: rgba(#8c8c8c, 1);
-      }
+      color: #33475b;
     }
   }
 }
@@ -116,8 +111,8 @@ $main-white: #fff;
   font-size: 0.77rem;
   line-height: 1.66667rem;
   font-weight: 300;
-  color: #7b8086;
   margin-bottom: 1.58333em;
+  color: rgba(#0c344b, 0.6);
 }
 .edit-post {
   svg {

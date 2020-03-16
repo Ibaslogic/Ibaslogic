@@ -27,7 +27,7 @@
     //display: block;
 
     &:hover {
-      color: #f44f18;
+      color: #ff7a59;
     }
   }
 
@@ -66,7 +66,7 @@
   border: 1px solid #f2f2f2;
   padding: 40px 10px;
 
-  background: #f5f8fa; // #fbfcfd;
+  background: #fff; //#f5f8fa; // #fbfcfd;
   margin-bottom: 60px;
   font-size: 0.925rem;
   font-weight: 300;
@@ -92,7 +92,7 @@
   //   display: block;
   //   width: 41px;
   //   height: 2px;
-  //   background: #f44f18;
+  //   background: #ff7a59;
   //   position: absolute;
   //   bottom: -29px;
   //   left: 50%;
@@ -161,8 +161,8 @@
     color: #444;
   }
   button {
-    background-color: #f44f18;
-    border: 1px solid #f44f18;
+    background-color: #ff7a59;
+    border: 1px solid #ff7a59;
     opacity: 1;
     color: #fff;
     text-transform: uppercase;
@@ -222,7 +222,7 @@
   opacity: 0.5;
   letter-spacing: 0.03rem;
   font-weight: 400;
-  color: #1a1a1a;
+  color: rgba(#0c344b, 0.9);
   p {
     display: inline;
     //color: #757575;

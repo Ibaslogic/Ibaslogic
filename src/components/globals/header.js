@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 
 import { Link } from "gatsby"
 //import logo from "../../images/ibaslogic_logo.svg"
-import logo from "../../images/ibaslogic4.png"
+import logo from "../../images/ibaslogic_logo.png"
 // header styles
 import headerStyles from "./header.module.scss"
 import Helmet from "react-helmet"

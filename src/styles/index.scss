@@ -18,7 +18,7 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
 $heading-font: "Nunito", "Muli", "Segoe UI", "Helvetica Neue", sans-serif;
 
 $home-bg-banner: #282c34;
-$link-color: #f44f18;
+$link-color: #ff7a59; //#ff7a59;
 
 // mixins
 @mixin transition {
@@ -281,7 +281,7 @@ blockquote .gatsby-highlight + p {
       display: block;
       width: 41px;
       height: 2px;
-      background: #f44f18;
+      background: #ff7a59;
       position: absolute;
       bottom: -12px;
       left: 0px;

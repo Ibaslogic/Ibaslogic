@@ -86,7 +86,7 @@
 //     display: block;
 //     width: 4.75rem;
 //     height: 0.0625rem;
-//     background: #f44f18;
+//     background: #ff7a59;
 //     position: absolute;
 //     bottom: -1.5rem;
 //     left: 50%;
@@ -135,7 +135,7 @@
     transition: all 0.3s ease-out;
     text-decoration: underline;
     &:hover {
-      color: #f44f18;
+      color: #ff7a59;
     }
   }
 }
@@ -250,7 +250,7 @@
 
 .submit-button {
   // margin-right: 8px;
-  background: #f44f18;
+  background: #ff7a59;
   border: 1px solid #f44f18 !important;
   color: #fff;
   // width: 100%;
@@ -267,6 +267,6 @@
 //   @include transition;
 
 //   &:hover {
-//     color: #f44f18;
+//     color: #ff7a59;
 //   }
 // }

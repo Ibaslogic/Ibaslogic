@@ -8,28 +8,28 @@ featured: "./images/deploying-react-app-to-github-pages.png"
 tags: ["react", "gh-pages"]
 ---
 
-<PostSeriesLink 
-label="This React tutorial is part 4 of 4 in the React for beginners series." 
+<PostSeriesLink
+label="This React tutorial is part 4 of 4 in the React for beginners series."
 datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/blog/react-tutorial-for-beginners/"
-    },
-    {
-      prefix: "Part 2",
-      label: "Getting Started with React Form and Event Handling",
-      url: "/blog/react-form-handling/"
-    },
-    {
-      prefix: "Part 3",
-      label: "How to Implement CSS in Reactjs App",
-      url: "/blog/css-in-reactjs-app/"
-    },
-  ]}
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/blog/react-form-handling/"
+},
+{
+prefix: "Part 3",
+label: "How to Implement CSS in Reactjs App",
+url: "/blog/css-in-reactjs-app/"
+},
+]}
 />
 
-Now that you have your beautiful app, it's time to share it with the world. 
+Now that you have your beautiful app, it's time to share it with the world.
 
 In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
 
@@ -41,7 +41,7 @@ You can [download and install Git](https://git-scm.com/downloads "Git site") for
 
 Once that’s done,
 
-You will need to move all your React code to your GitHub account. 
+You will need to move all your React code to your GitHub account.
 
 And this can be done in two phases.
 
@@ -91,7 +91,7 @@ This keeps all your working files in the staging area. Please don’t forget the
 >
 > ```
 > git add index.js
->```
+> ```
 
 To see what is in the staging area, let's run this command:
 
@@ -139,7 +139,7 @@ Find the command that looks like this and run it in your terminal:
 git remote add origin https://github.com/Ibaslogic/simple-todo-app.git
 ```
 
-If you can't find it, make sure you modify the URL above to reflect your repository. 
+If you can't find it, make sure you modify the URL above to reflect your repository.
 
 What this command does is add the repo as the remote repository.
 
@@ -230,16 +230,14 @@ Test your application and proudly share with the world.
 
 So much have been covered in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy it on the web.
 
-In the coming series, I will walk you through how to fetch data from an API. There, you will learn the React lifecycle methods.
+In the coming series, I will walk you through how to connect your application to a remote endpoint and fetch data from an API.
 
-Likewise, you will learn how to connect your application to a remote endpoint and make a number of requests.
+Likewise, you will learn the React lifecycle methods.
 
 So far, I hope you feel more confident learning React through the series?
 
-As usual, endeavour to share this article around the web. 
+As usual, endeavour to share this article around the web.
 
-If something wasn't clear, do let us know. 
+If something wasn't clear, do let us know.
 
-Again, here is the [React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").  
-
-
+Again, here is the [React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").

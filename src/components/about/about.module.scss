@@ -31,7 +31,7 @@
   flex-flow: column-reverse;
 
   .field-submit {
-    background-color: #f44f18;
+    background-color: #ff7a59;
 
     &:hover {
       background: rgba(#f44f18, 0.8);
@@ -73,7 +73,7 @@
     display: block;
     width: 4.75rem;
     height: 2px;
-    background: #f44f18;
+    background: #ff7a59;
     position: absolute;
     bottom: -1.5rem;
     left: 50%;
@@ -286,8 +286,8 @@
 }
 .field-submit {
   color: #fff;
-  background-color: #f44f18;
-  border: 1px solid #f44f18;
+  background-color: #ff7a59;
+  border: 1px solid #ff7a59;
   font-size: 1.2rem;
   text-transform: capitalize;
   font-weight: 400;

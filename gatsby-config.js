@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `#f44f18`,
+        color: `#ff7a59`,
         // Disable the loading spinner.
         showSpinner: false,
       },
@@ -181,7 +181,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ibaslogic_icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ibaslogic_favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify`,

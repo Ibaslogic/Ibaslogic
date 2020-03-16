@@ -324,7 +324,7 @@ state = {
 }
 ```
 
-As you have noticed, we are passing the `edges` array (which contains all of the post data) to the `getCategories` function, which we then looped through to get the categories.
+As you have noticed, we are passing the `edges` array (which contains all of the post data) to the `getCategories` function, which we then looped through to get the individual post category.
 
 To see the result through the console, add this line immediately inside the `render()` method.
 
@@ -467,11 +467,11 @@ handleItems = category => {
 }
 ```
 
-For the meantime, we are displaying the category that is being clicked in the console.
+For the meantime, we are logging the category that is being clicked in the console.
 
 Save the file.
 
-Open the DevTools console and click any of the filter buttons. You should see its value rendered.
+Open the DevTools console and click any of the filter buttons. You should see its category rendered.
 
 Instead of that, let’s switch the posts based on these categories.
 

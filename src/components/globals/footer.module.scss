@@ -50,10 +50,11 @@ $content-max-width: 75rem;
   }
 
   a {
-    color: #3c4043;
+    color: #0c344b;
+    opacity: 0.8;
 
     &:hover {
-      color: #202124;
+      opacity: 1;
     }
   }
 }

@@ -8,7 +8,7 @@ const styles = {
   paddingBottom: "1.25rem",
   margin: "1.25rem 1.875rem",
   marginBottom: "-0.0625rem",
-  color: "#f44f18",
+  color: "#ff7a59",
   textTransform: "capitalize",
 }
 

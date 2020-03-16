@@ -147,7 +147,7 @@ $primary-color: #3c4043;
     border-radius: 2px;
     background-color: #fff;
     -webkit-box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09); // rgba(54, 57, 73, 0.09);
-    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09), inset 0 -1px 0 0 #f44f18;
+    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09), inset 0 -1px 0 0 #ff7a59;
     z-index: 8;
     overflow: hidden;
 
@@ -183,14 +183,14 @@ $primary-color: #3c4043;
 
     &:hover {
       background-color: #f6f8f9; // #20232a;
-      color: #f44f18;
+      color: #ff7a59;
       opacity: 0.8;
     }
 
     &.selected {
       background-color: #f6f8f9; // #20232a;
       opacity: 0.8;
-      color: #f44f18;
+      color: #ff7a59;
     }
   }
 }
@@ -243,7 +243,7 @@ $primary-color: #3c4043;
   width: 100%;
   padding: 0 0.69375rem 1.1875rem;
   font-size: 0.775rem;
-  color: #727274;
+  color: rgba(#0c344b, 0.7);
 
   @media screen and (min-width: 768px) {
     padding-left: 0.9775rem;
@@ -293,7 +293,7 @@ $primary-color: #3c4043;
   a {
     color: #26282d;
     &:hover {
-      color: #f44f18;
+      color: #ff7a59;
       text-decoration: underline;
     }
   }
@@ -305,6 +305,6 @@ $primary-color: #3c4043;
     height: 6px;
     left: -23px;
     top: 9px;
-    background: #f44f18;
+    background: #ff7a59;
   }
 }
