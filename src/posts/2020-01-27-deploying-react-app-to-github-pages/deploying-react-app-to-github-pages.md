@@ -9,7 +9,7 @@ tags: ["react", "gh-pages"]
 ---
 
 <PostSeriesLink
-label="This React tutorial is part 4 of 4 in the React for beginners series."
+label="This React tutorial is part 4 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 1",
@@ -25,6 +25,16 @@ url: "/blog/react-form-handling/"
 prefix: "Part 3",
 label: "How to Implement CSS in Reactjs App",
 url: "/blog/css-in-reactjs-app/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />
@@ -230,7 +240,7 @@ Test your application and proudly share with the world.
 
 So much have been covered in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy it on the web.
 
-In the coming series, I will walk you through how to connect your application to a remote endpoint and fetch data from an API.
+In the next part, I will walk you through how to connect your application to a remote endpoint and fetch data from an API.
 
 Likewise, you will learn the React lifecycle methods.
 
@@ -241,3 +251,34 @@ As usual, endeavour to share this article around the web.
 If something wasn't clear, do let us know.
 
 Again, here is the [React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
+
+<PostSeriesLink
+label="This React tutorial is part 4 of 6 in the React for beginners series."
+datas={[
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/blog/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/blog/react-form-handling/"
+},
+{
+prefix: "Part 3",
+label: "How to Implement CSS in Reactjs App",
+url: "/blog/css-in-reactjs-app/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
+},
+]}
+/>

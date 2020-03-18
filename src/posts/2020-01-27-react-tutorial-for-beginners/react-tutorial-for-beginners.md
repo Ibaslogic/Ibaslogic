@@ -10,17 +10,21 @@ tags: ["react", "reactjs"]
 
 If you are aiming to build a modern website or app that require high performance and safety, then, a knowledge of React is necessary!
 
-Today, many developers and site owners now embrace web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress custom blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
+Today, many developers and site owners now embrace web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
-As you can see learning React is necessary if you want to become a present-day developer.
+These are just to name a few.
+
+What this means is that you cannot escape learning React if you want to become a present-day developer.
 
 In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
 Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
 
-Once you are well-grounded with React, [building a Static site generator like Gatsby](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") will be a piece a cake.
+Once you are well-grounded with React, [following a Gatsby site project](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that are built on it will be a piece a cake.
 
-## Prerequisite
+<p style="font-size: 1.5rem; line-height: 1.3777em;
+margin-bottom: 1.8rem;
+font-weight: 600; padding-top: 1.4em;">Prerequisite</p>
 
 Before you go ahead with this React tutorial, please make sure you have:
 
@@ -28,16 +32,15 @@ Before you go ahead with this React tutorial, please make sure you have:
 - JavaScript fundamentals (object, array, conditionals etc).
 - Familiarity with JavaScript ES6 features (class syntax, arrow functions, object destructuring etc).
 
-If you are still finding it tough with JavaScript, just read and code along with me.
-I will try as much as possible to explain every task as we code our React app.
+If you are still finding it tough with JavaScript, just read and code along with me. I will be explaining every task as we code our React app.
 
 At the end of this React tutorial, you will be able to build [this Todos App](https://ibaslogic.github.io/simple-todo-app/ "simple react app").
 
 ![Todos app design](./images/todos-app.gif)
 
-You will find all of the code in [my GitHub repo](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
+To follow along, you can find all of the code in [my GitHub repo](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
 
-This React tutorial is divided into four different parts. And here is a quick overview of what you’ll learn in this part.
+This React tutorial is divided into six different parts. And here is a quick overview of what you’ll learn in this part.
 
 <TableOfContents />
 
@@ -71,7 +74,7 @@ As you are aware, we will create this app from scratch in this tutorial. It may 
 
 ![Todos app design](./images/todosapp.png)
 
-To build this type of app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into a smaller and isolated unit as outlined in the image. Where each of these units can be represented as a component which can then be built in isolation and then later merge to form a complex UI.
+To build this type of app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into a smaller and isolated unit as outlined in the image. Where each of these units can be represented as a component which can be built in isolation and then later merge to form a complex UI.
 
 Still on the image.
 
@@ -217,7 +220,7 @@ Let’s render the React element inside of the real DOM.
 
 Update the `script` element so it looks like so:
 
-```jsx{3}
+```jsx
 <script type="text/babel">
   const element = <h1>Hello from React</h1>; ReactDOM.render(element,
   document.getElementById("root"));
@@ -810,7 +813,7 @@ Before you grab a coffee and move on to the next part, make sure you share this 
 Lastly, if something wasn't clear, endeavour to let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-tutorial-for-beginners/react-tutorial-for-beginners.mdx "Ibaslogic GitHub").
 
 <PostSeriesLink
-label="This React tutorial is part 1 of 4 in the React for beginners series."
+label="This React tutorial is part 1 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 2",
@@ -826,6 +829,16 @@ url: "/blog/css-in-reactjs-app/"
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
 url: "/blog/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />

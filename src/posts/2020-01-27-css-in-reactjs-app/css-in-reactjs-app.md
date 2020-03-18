@@ -9,7 +9,7 @@ tags: ["react", "reactjs", "css"]
 ---
 
 <PostSeriesLink
-label="This React tutorial is part 3 of 4 in the React for beginners series."
+label="This React tutorial is part 3 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 1",
@@ -25,6 +25,16 @@ url: "/blog/react-form-handling/"
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
 url: "/blog/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />
@@ -375,7 +385,7 @@ Again, if something wasn't clear, do let us know.
 Happy coding!
 
 <PostSeriesLink
-label="This React tutorial is part 3 of 4 in the React for beginners series."
+label="This React tutorial is part 3 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 1",
@@ -391,6 +401,16 @@ url: "/blog/react-form-handling/"
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
 url: "/blog/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />

@@ -11,7 +11,7 @@ tags: ["react", "form"]
 In the first part of this React series, we covered some of the basic React fundamentals, set up React working environment and started writing our Todos React app.
 
 <PostSeriesLink
-label="This React tutorial is part 2 of 4 in the React for beginners series."
+label="This React tutorial is part 2 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 1",
@@ -27,6 +27,16 @@ url: "/blog/css-in-reactjs-app/"
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
 url: "/blog/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />
@@ -767,7 +777,7 @@ Before you go-ahead to the next part, make sure you share this article around th
 If something wasn't clear, do let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-form-handling/react-form-handling.mdx "Ibaslogic GitHub").
 
 <PostSeriesLink
-label="This React tutorial is part 2 of 4 in the React for beginners series."
+label="This React tutorial is part 2 of 6 in the React for beginners series."
 datas={[
 {
 prefix: "Part 1",
@@ -783,6 +793,16 @@ url: "/blog/css-in-reactjs-app/"
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
 url: "/blog/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/blog/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/blog/react-hooks-tutorial/"
 },
 ]}
 />
