@@ -1,9 +1,9 @@
 ---
 title: "React Tutorial: A Comprehensive Guide to Learning React JS in 2020"
-description: "From Zero to deploy, you will learn everything about React JS and build a modern application in this React tutorial series."
+description: "In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-03-08 10:27:00"
+dateUpdated: "2020-03-19 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
 tags: ["react", "reactjs"]
 ---
@@ -20,7 +20,7 @@ In this React tutorial, you will learn the React JS fundamentals. Besides, you w
 
 Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
 
-Once you are well-grounded with React, [following a Gatsby site project](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that are built on it will be a piece a cake.
+Once you are well-grounded with React, [following a Gatsby site project](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
 
 <p style="font-size: 1.5rem; line-height: 1.3777em;
 margin-bottom: 1.8rem;
@@ -136,7 +136,7 @@ This method of interacting with React is the simplest way and it’s very easy i
 
 Let’s see how it’s done.
 
-We will start by creating `index.html` file. Inside of it, we will load in three scripts in the head element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`. Then, we will create an empty `div` element and give it a unique `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
+We will start by creating `index.html` file. Inside of it, we will load in three scripts in the head element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`. Then, we will create an empty `div` element and give it an `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
 
 So your `index.html` file should look like this:
 
@@ -191,9 +191,9 @@ Head over to [babel website](https://babeljs.io/repl "babel repl") and add the J
 
 ![Babel repl](./images/babelrepl.png)
 
-You should have something similar to the image above.
+You should have something similar to the image above. As seen, the JSX code is converted to plain React code.
 
-As seen in the image, the JSX code is converted to plain React code. With this, we can conclude that using JSX to describe what the UI looks like is much easier.
+Here, we can conclude that using JSX to describe what the UI looks like is much easier.
 
 Also, remember that we loaded React library in the head of our HTML code even though we are not explicitly using it. But under the hood, React is using the React object from the library as you can see on the right side of the Babel editor.
 
@@ -530,7 +530,7 @@ So what did we do?
 
 After we defined the state data, we accessed it in the `render()` method using `this.state.todos`. Since its value is an array of objects as declared in the state, we looped through this array and output each of the todos item i.e `title`.
 
-In React, we make use of the `map()` method which is an higher-order function to do this iteration.
+In React, we make use of the `map()` method which is a higher-order function to do this iteration.
 
 > Remember that you can use a valid JavaScript expression inside the JSX through curly braces, `{}`.
 
@@ -808,7 +808,7 @@ So far, we have touched some of the React fundamentals and started writing our s
 
 In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more.
 
-Before you grab a coffee and move on to the next part, make sure you share this article around the web and subscribe to our newsletter for more of this.
+Before you head over to the next part, endeavour to share this article around the web and subscribe to our newsletter for more of this.
 
 Lastly, if something wasn't clear, endeavour to let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-tutorial-for-beginners/react-tutorial-for-beginners.mdx "Ibaslogic GitHub").
 

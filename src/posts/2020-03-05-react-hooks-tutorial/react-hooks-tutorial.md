@@ -14,7 +14,9 @@ A lot of times I hear!
 
 Well, you are not alone. Now, the function component can do more than just being a presentational component.
 
-With the introduction of React Hooks, you’ll get to use a state and manage the class-based lifecycle logic inside of the function components.
+With the introduction of [React Hooks](https://reactjs.org/docs/hooks-intro.html "react hooks"), you’ll get to use a state and manage the class-based lifecycle logic inside of the function components.
+
+https://reactjs.org/docs/hooks-intro.html
 
 The benefit here is that you’ll be able to write a more readable, concise and clear code. You will also have one way of creating a component.
 

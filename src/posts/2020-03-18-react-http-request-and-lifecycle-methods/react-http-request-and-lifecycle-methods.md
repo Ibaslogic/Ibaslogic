@@ -511,6 +511,8 @@ Now, you can start learning how to use the React Hooks to manage the state and l
 
 Before you head over to the next part, make sure you subscribe and share this article around the web.
 
+[Project source code here](https://github.com/Ibaslogic/todoapp-data-fetching "project source code").
+
 <PostSeriesLink
 label="This React tutorial is part 5 of 6 in the React for beginners series."
 datas={[
