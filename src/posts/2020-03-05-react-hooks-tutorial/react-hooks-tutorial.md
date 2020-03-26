@@ -38,7 +38,7 @@ To get started, let's get our project files ready.
 
 ## Pulling project files from GitHub
 
-I’ve [provided a starter project](https://ibaslogic.github.io/react-hooks-starter-project/ "starting project"). So go ahead and clone it by running this command from your terminal:
+I’ve [provided a starter project](https://github.com/Ibaslogic/react-hooks-starter-project "starting project"). So go ahead and clone it by running this command from your terminal:
 
 ```
 git clone https://github.com/Ibaslogic/react-hooks-starter-project
