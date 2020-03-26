@@ -155,7 +155,11 @@ const Blog = ({ data, pageContext }) => {
           </div>
         </main>
         <aside className={blogPageStyles.secondaryArea}>
-          <Sidebar twitterHandle={data.site.siteMetadata.twitterHandle} />
+          <Sidebar
+            relatedArticles={pageContext.relatedArticles}
+            twitterHandle={data.site.siteMetadata.twitterHandle}
+            slug={pageContext.slug}
+          />
         </aside>
       </div>
 

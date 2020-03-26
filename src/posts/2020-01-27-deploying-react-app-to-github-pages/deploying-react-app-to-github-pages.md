@@ -5,7 +5,9 @@ category: "React"
 datePublished: "2020-01-27 10:33:00"
 dateUpdated: "2020-03-08 10:33:00"
 featured: "./images/deploying-react-app-to-github-pages.png"
-tags: ["react", "gh-pages"]
+tags:
+  - react
+  - gh-pages
 ---
 
 <PostSeriesLink

@@ -1,11 +1,13 @@
 ---
-title: "React Tutorial: A Comprehensive Guide to Learning React JS in 2020"
-description: "In this React tutorial, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
+title: "React Tutorial: The Beginners Guide to Learning React JS in 2020"
+description: "From Zero to deploy, you will learn everything about React JS and build a modern application in this React tutorial guide."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-03-19 10:27:00"
+dateUpdated: "2020-03-23 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
-tags: ["react", "reactjs"]
+tags:
+  - react
+  - react js
 ---
 
 If you are aiming to build a modern website or app that require high performance and safety, then, a knowledge of React is necessary!
@@ -94,7 +96,7 @@ So, let’s reiterate to enable you to quickly grasp the concept behind virtual 
 
 The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document). Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML.
 
-This way, JavaScript would be able to connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
+This way, JavaScript can connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
 
 But there is a problem! Though not with the DOM.
 
@@ -124,7 +126,7 @@ DO not worry if all these seem strange, you will get to see them in practice lat
 
 ## Setting up Working Environment
 
-There are several ways we can interact and get started with React. Though React recommends setting up the environment through the `create-react-app` CLI tool, I will quickly walk you through how to start working with React by simply writing React code in HTML file.
+There are several ways we can interact and get started with React. Though React recommended setting up the environment through the `create-react-app` CLI tool (coming to that), I will quickly walk you through how to start working with React by simply writing React code in HTML file.
 
 This will quickly get you up and running and does not require any installation.
 

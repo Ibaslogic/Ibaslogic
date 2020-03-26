@@ -5,7 +5,10 @@ category: "Gatsby"
 datePublished: "2020-02-11 10:32:00"
 dateUpdated: "2020-02-11 11:32:00"
 featured: "./images/gatsby-with-contentful-cms.png"
-tags: ["gatsby", "contentful", "netlify"]
+tags:
+  - gatsby
+  - contentful
+  - netlify
 ---
 
 If you have been working with a Gatsby blog site, you’d most likely know how to source markdown files from the filesystem.
@@ -22,7 +25,7 @@ If you are not familiar with GatsbyJS, consider reading [this step by step guide
 
 For those of us that are conversant with Gatsby, let’s get started.
 
-<TableOfContents /> 
+<TableOfContents />
 
 ## Installing a Gatsby Starter
 
@@ -88,13 +91,13 @@ Now that we have the basic setup, let’s see how to start sourcing content from
 
 The other types of CMS including the traditional CMSs like WordPress and Drupal also provides options to work with the frontend technologies by supporting the API approach.
 
-All you need to source content from these CMSs is the Content Delivery API. 
+All you need to source content from these CMSs is the Content Delivery API.
 
-Ok. Enough said. 
+Ok. Enough said.
 
 Let's head over to [contentful.com](https://www.contentful.com/sign-up/ "Contentful signup") and create a free account. After that, you’ll need to click on the **Explore content modeling** button to create an example project or simply browse to [app.contentful.com](https://app.contentful.com/ "Contentful login").
 
-Once this is done, you can create an empty space. Think of *space* as a storage area for your project content.
+Once this is done, you can create an empty space. Think of _space_ as a storage area for your project content.
 
 To create it, open the sidebar menu and click on the **create space** link. Go ahead and use the free space and give it a name. In my case, I will call it **Ibaslogic Gatsby Blog**.
 
@@ -102,7 +105,7 @@ Select **Create an empty space** and proceed.
 
 Next, we will focus on defining the type of data we want to track. Here, we will look at the **Content model** and the **Content** tab.
 
-For a typical blog post, you’ll want to get the *post title*, *date*, *featured image*, *excerpt*, *slug* and the actual *posts content*.
+For a typical blog post, you’ll want to get the _post title_, _date_, _featured image_, _excerpt_, _slug_ and the actual _posts content_.
 
 So, we will add these fields in the model.
 
@@ -120,7 +123,7 @@ We will be using four of these fields for our Blog Post model. The **Text** for 
 
 ![Content type](./images/content-type.png)
 
-To add a **Title** field, you’ll select **Text** and give it a name (for instance, *Title*). Then click **Create**.
+To add a **Title** field, you’ll select **Text** and give it a name (for instance, _Title_). Then click **Create**.
 
 > **Note:** Unlike the **Title** where the Shot text radio button is selected, the **Excerpt** will use the Long text.
 >
@@ -391,13 +394,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
 Gatsby allows us to use an API function called `createPages` to dynamically generate a single post page based on the `slug` we fetched from Contentful.
 
-Notice we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need. 
+Notice we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need.
 
-So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function. 
+So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
 
-In this function, we specified the parameters needed to create the pages. 
+In this function, we specified the parameters needed to create the pages.
 
-Pay attention to the `component` parameter that points to the template file. We need to create this file in the `src` directory. 
+Pay attention to the `component` parameter that points to the template file. We need to create this file in the `src` directory.
 
 So let’s quickly do that.
 
@@ -724,6 +727,6 @@ Great!
 
 Now, you know how to work with data from a headless CMS. It’s time to put what you’ve learned into practice and create a beautiful Gatsby site for yourself.
 
-But before that, make sure you share this post around the web. 
+But before that, make sure you share this post around the web.
 
 Again, you can view [the project here](https://gatsby-contentful-blogsite.netlify.com/blog/ "Ibaslogic gatsby tutorial") and the [source code here](https://github.com/Ibaslogic/gatsby-contentful-blogsite "github repo").

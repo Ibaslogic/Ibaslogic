@@ -25,7 +25,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
       allMdx {
         edges {
           node {
+            id
             frontmatter {
+              title
               tags
             }
             fields {
@@ -40,6 +42,51 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  //callback for sortByDateDescending in a related posts
+  const sortByDateDescending = (a, b) => {
+    const aPubDateInMS = new Date(a.publishedOn).getTime()
+    const bPubDateInMS = new Date(b.publishedOn).getTime()
+
+    if (aPubDateInMS > bPubDateInMS) {
+      return 1
+    }
+
+    if (aPubDateInMS < bPubDateInMS) {
+      return -1
+    }
+
+    return 0
+  }
+
+  //callback for related posts
+
+  const getRelatedArticles = (currentArticle, articles) => {
+    const MINIMUM_CATEGORIES_IN_COMMMON = 1
+
+    const hasAtLeastOneCategoryInCommon = ({ node }) => {
+      // console.log("@@@@@@ node", node)
+
+      if (currentArticle.id === node.id) {
+        return false
+      }
+      const commonCategories = _.intersection(
+        currentArticle.frontmatter.tags,
+        node.frontmatter.tags
+      )
+
+      return commonCategories.length >= MINIMUM_CATEGORIES_IN_COMMMON
+    }
+
+    const filteredResult = articles.filter(hasAtLeastOneCategoryInCommon)
+    // console.log("@@@@@@@ lenght", filteredResult.length)
+
+    if (filteredResult.length > 3) {
+      return filteredResult.sort(sortByDateDescending).slice(0, 3)
+    }
+    // console.log("@@@@@@@ filter result", filteredResult)
+    return filteredResult
+  }
+
   res.data.allMdx.edges.forEach(edge => {
     createPage({
       path: `/blog/${edge.node.fields.slug.name}/`,
@@ -47,9 +94,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: edge.node.fields.slug.name,
         postPath: edge.node.fields.slug.relativePath,
+        //related articles
+        relatedArticles: getRelatedArticles(edge.node, res.data.allMdx.edges),
       },
     })
   })
+
+  //tags
 
   let tags = []
   _.each(res.data.allMdx.edges, edge => {

@@ -5,7 +5,9 @@ category: "React"
 datePublished: "2020-01-27 10:31:00"
 dateUpdated: "2020-03-12 10:31:00"
 featured: "./images/css-in-reactjs-app.png"
-tags: ["react", "reactjs", "css"]
+tags:
+  - react
+  - css
 ---
 
 <PostSeriesLink

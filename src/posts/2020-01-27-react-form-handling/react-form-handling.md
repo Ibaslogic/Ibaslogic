@@ -5,7 +5,9 @@ category: "React"
 datePublished: "2020-01-27 10:29:00"
 dateUpdated: "2020-03-13 10:29:00"
 featured: "./images/react-form-handling.png"
-tags: ["react", "form"]
+tags:
+  - react
+  - form
 ---
 
 In the first part of this React series, we covered some of the basic React fundamentals, set up React working environment and started writing our Todos React app.

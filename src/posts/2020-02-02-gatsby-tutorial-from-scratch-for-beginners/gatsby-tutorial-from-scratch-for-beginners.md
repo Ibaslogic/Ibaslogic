@@ -5,7 +5,9 @@ category: "Gatsby"
 datePublished: "2020-02-02 10:32:00"
 dateUpdated: "2020-02-02 10:32:00"
 featured: "./images/gatsby-tutorial-from-scratch-for-beginners.png"
-tags: ["gatsby", "react", "graphql", "markdown"]
+tags:
+  - gatsby
+  - graphql
 ---
 
 You may have noticed that navigating around this website works like a single page web app.
@@ -20,7 +22,7 @@ Before you proceed, you’ll need to have a knowledge of React. So go ahead and 
 
 For those of us who are comfortable writing React code, let’s dive in.
 
-<TableOfContents /> 
+<TableOfContents />
 
 ## What is Gatsby?
 
@@ -28,9 +30,9 @@ For those of us who are comfortable writing React code, let’s dive in.
 
 This type of site has high performance, scalability and safety.
 
-Though, Gatsby is considered a static site generator (SSG) like other Jamstack technologies (Jekyll, Next, Hugo etc) based on what it shares with them. 
+Though, Gatsby is considered a static site generator (SSG) like other Jamstack technologies (Jekyll, Next, Hugo etc) based on what it shares with them.
 
-*But in reality, it can do much more than you can typically do with a static site generator.*
+_But in reality, it can do much more than you can typically do with a static site generator._
 
 You can think of Gatsby as a React framework for building complex websites and web apps.
 
@@ -38,7 +40,7 @@ With Gatsby, you are not limited to static sites. You can build a blog site, e-c
 
 Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources.
 
-If you are a technical person, you can manage and source your content from the Markdown files. 
+If you are a technical person, you can manage and source your content from the Markdown files.
 
 Otherwise, you can [source your content from CMSs like Contentful](/blog/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
 
@@ -48,15 +50,13 @@ Throughout this tutorial, you’ll learn how to source and manage your content t
 
 This is what we will build in this tutorial, [Gatsby site project](https://ibaslogic-site.netlify.com/ "Gatsby project"). And you can find all of the code in my [GitHub repository](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "Ibaslogic GitHub repo").
 
-
 Enough said, let’s get started.
-
 
 ## Initial Setup
 
 To get started with Gatsby, you will need to have NodeJS and Git installed on your machine.
 
-With NodeJS, you can run your Gatsby JavaScript code outside of a web browser. You will also have access to its npm (node package manager) tool. 
+With NodeJS, you can run your Gatsby JavaScript code outside of a web browser. You will also have access to its npm (node package manager) tool.
 
 You can check if you have it installed by running `npm -v` and `node –v` in your terminal.
 
@@ -82,7 +82,7 @@ So head over to your terminal and run this npm command:
 npm install -g gatsby-cli
 ```
 
-> **Note:** The `-g` flag indicates that you are installing the CLI globally on your machine. 
+> **Note:** The `-g` flag indicates that you are installing the CLI globally on your machine.
 
 ## Generating your first Gatsby project
 
@@ -90,11 +90,11 @@ Gatsby allows us to kick-off a project by using any of its [starter template](ht
 
 With these templates, you can create all sort of interesting sites and applications.
 
-Since the goal in this Gatsby tutorial is to explore the fundamental features, we will be using a Gatsby starter with the barest minimum feature – i.e no plugins and no boilerplate. 
+Since the goal in this Gatsby tutorial is to explore the fundamental features, we will be using a Gatsby starter with the barest minimum feature – i.e no plugins and no boilerplate.
 
 This will allow you to understand the basics. And once you do, you’ll be able to work with any of the starters out there.
 
-So, we will install the official *hello world* starter.
+So, we will install the official _hello world_ starter.
 
 The convention to install a new Gatsby starter through the CLI is:
 
@@ -124,7 +124,7 @@ If you open the `package.json` file in the root and check the `scripts` property
 
 ```json
 "scripts": {
-  "build": "gatsby build", 
+  "build": "gatsby build",
   "develop": "gatsby develop",
   "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
   "start": "npm run develop",
@@ -152,7 +152,7 @@ Then, run:
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > gatsby develop
 ```
 
-If you are using VsCode, you can open its integrated terminal from `View -> Terminal` (or use the shortcut, ``Ctrl + ` `` or ``cmd + ` `` on Windows and Mac respectively) and run `gatsby develop`.
+If you are using VsCode, you can open its integrated terminal from `View -> Terminal` (or use the shortcut, `` Ctrl + ` `` or `` cmd + ` `` on Windows and Mac respectively) and run `gatsby develop`.
 
 Once the command is done, you will see a success message with the link to view your default starter site.
 
@@ -160,7 +160,7 @@ Once the command is done, you will see a success message with the link to view y
 
 Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
 
-Take note of the second URL, [http://localhost:8000/___graphql](http://localhost:8000/___graphql "GraphiQL IDE"). We will explore this later when we start pulling data to our site.
+Take note of the second URL, [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). We will explore this later when we start pulling data to our site.
 
 ![Gatsby first site](./images/gatsby-site.png)
 
@@ -168,13 +168,11 @@ If you are seeing this. You have successfully created and launch your first Gats
 
 Congratulations.
 
-
-
 > **Note:** It may happen that you are getting some warnings in your terminal if you are using Git bash. Something like: There are multiple modules with names that only differ in casing...
 >
-> *The fix is simple*.
+> _The fix is simple_.
 >
-> Make sure in your terminal, the directories name in your file path are consistent in cases. For instance, you shouldn't have a *desktop* in the path when you should have *Desktop*. 
+> Make sure in your terminal, the directories name in your file path are consistent in cases. For instance, you shouldn't have a _desktop_ in the path when you should have _Desktop_.
 
 At the moment, the site doesn't do anything too interesting. We will customize what we are seeing in a moment.
 
@@ -184,11 +182,11 @@ First, you need to understand the project structure. So let’s take a look at s
 
 Having worked with React, I expect that you should be familiar with the project (folders and files) structure. But to be on the same page, I will quickly touch some of the important folders and files.
 
-The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial. 
+The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial.
 
-The `public` folder will contain the public asset of your site and will hold your static files. 
+The `public` folder will contain the public asset of your site and will hold your static files.
 
-The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory. This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename. At the moment, we have `index.js` present in the pages folder. And as you know, the index file always references the home page. This is why the content of this file is being rendered in the frontend. 
+The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory. This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename. At the moment, we have `index.js` present in the pages folder. And as you know, the index file always references the home page. This is why the content of this file is being rendered in the frontend.
 
 Don’t worry about the `src` files, we will write everything from scratch.
 
@@ -202,7 +200,7 @@ Now that you are familiar with the project structure, let’s go ahead and make 
 
 I mentioned earlier that the `src/pages` folder holds the file for the site static pages. So go inside the folder and open the `index.js` file. The code in this file is a simple React component that is rendering a simple "Hello world!" on the screen. If you change the "hello world!" text to something else and save the file, the changes will be reflected in real-time in the browser.
 
-This is happening because Gatsby comes bundled with hot reload. 
+This is happening because Gatsby comes bundled with hot reload.
 
 Great start!
 
@@ -239,7 +237,7 @@ All we are doing is rendering a simple React functional component.
 
 If you are scratching your head understanding the code, please go ahead and read this [React tutorial](/blog/react-tutorial-for-beginners/ "Ibaslogic React tutorial") and come back.
 
-So what exactly is happening when Gatsby generate our site? 
+So what exactly is happening when Gatsby generate our site?
 
 It starts by looking at the `src/pages` folder to figure out which static pages it should create. In our case, it realizes we only have one file, `index.js`. Meaning our site will only have a single page.
 
@@ -309,7 +307,7 @@ Save your files and don’t forget to access your pages at http://localhost:8000
 
 **Creating the Gatsby page Layout Component**
 
-Now, instead of accessing all your pages by navigating to their respective URLs in the browser address bar, we will create another component called the `Header` component. 
+Now, instead of accessing all your pages by navigating to their respective URLs in the browser address bar, we will create another component called the `Header` component.
 
 This component will render the header content including the navigation menu links.
 
@@ -333,11 +331,7 @@ In the `src` directory, create a new folder called `components`. Inside this fol
 import React from "react"
 
 const Header = () => {
-  return (
-    <div>
-      This is the header content
-    </div>
-  )
+  return <div>This is the header content</div>
 }
 
 export default Header
@@ -355,7 +349,7 @@ Go inside the `components` folder and create the `layout.js` file. Then start by
 import React from "react"
 import Header from "./header"
 
-const Layout = (props) => {
+const Layout = props => {
   return (
     <div>
       <Header />
@@ -463,7 +457,7 @@ For instance, clicking on the HTML anchor element will make the page to run thro
 
 Here, we use the `to` attribute to reference the destination page instead of the `href` attribute in the `<a>` tag.
 
-To use the `Link` component, you have to import it from `gatsby` module and use it to link pages within your Gatsby site. Use the regular `<a>` tag to link to any external page. 
+To use the `Link` component, you have to import it from `gatsby` module and use it to link pages within your Gatsby site. Use the regular `<a>` tag to link to any external page.
 
 <br />
 
@@ -531,7 +525,7 @@ In this section, you will learn how to easily style your Gatsby site using CSS.
 
 Along the way, you will also learn how to set up a Gatsby plugin to enable SASS. You will be able to take advantage of all its great features and further customize your site.
 
-> If you are not comfortable with SASS, feel free to use the regular CSS styles. 
+> If you are not comfortable with SASS, feel free to use the regular CSS styles.
 
 So let’s get started.
 
@@ -599,7 +593,7 @@ From your terminal, run:
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > npm install gatsby-plugin-sass node-sass
 ```
 
-`node-sass` allows us to compile `.scss` files to regular `css`. While `gatsby-plugin-sass` allows us to do that in a Gatsby project. 
+`node-sass` allows us to compile `.scss` files to regular `css`. While `gatsby-plugin-sass` allows us to do that in a Gatsby project.
 
 Once the installation is done, you need to configure your Gatsby site to use the Gatsby plugin.
 So, open the `gatsby-config.js` file and replace everything in the file with this:
@@ -748,7 +742,7 @@ Let’s go inside the `src/components` directory and create a file called `heade
 }
 ```
 
-Please note that you’ll append `.module.css` to your file name if you are writing in the `.css` file. Also note that we are indenting css selector and the pseudo-class (`:hover`) inside another selector in the `.scss` file. This will not work in a `css` file. 
+Please note that you’ll append `.module.css` to your file name if you are writing in the `.css` file. Also note that we are indenting css selector and the pseudo-class (`:hover`) inside another selector in the `.scss` file. This will not work in a `css` file.
 
 After that, go inside the `header.js` file and import the `.scss` file like so:
 
@@ -770,9 +764,7 @@ return (
       </p>
     </div>
     <nav className={headerStyles.navContainer}>
-      <ul className={headerStyles.navList}>    
-        ...
-      </ul>
+      <ul className={headerStyles.navList}>...</ul>
     </nav>
   </header>
 )
@@ -805,7 +797,7 @@ Before you save the file, let’s add an overlay to the background image.
 In the `header.js` file, add this `div` immediately after the `<header>` opening tag:
 
 ```html
-<div className={headerStyles.overlay}></div>
+<div className="{headerStyles.overlay}"></div>
 ```
 
 Then update the `header.module.scss` file to include the following styles:
@@ -831,7 +823,7 @@ Now save all your files. Your frontend should look like this:
 
 **So what did we do?**
 
-First, we tell Gatsby to process the SCSS file as a CSS module by appending to the file `.module.scss`. This module is then imported in the `header.js` file and declared as a JavaScript object called `headerStyles`. 
+First, we tell Gatsby to process the SCSS file as a CSS module by appending to the file `.module.scss`. This module is then imported in the `header.js` file and declared as a JavaScript object called `headerStyles`.
 
 This object holds all the class selector in the `.scss` file, and we referenced them in the JSX className attribute with `headerStyles.classSelector` (for instance, `headerStyles.header`).
 
@@ -850,16 +842,24 @@ To do this, go inside the `header.js` file and update the `<Link />` components 
 ```jsx
 <ul className={headerStyles.navList}>
   <li>
-    <Link to="/" activeClassName={headerStyles.activeMenuItem}>Home</Link>
+    <Link to="/" activeClassName={headerStyles.activeMenuItem}>
+      Home
+    </Link>
   </li>
   <li>
-    <Link to="/blog/" activeClassName={headerStyles.activeMenuItem}>Blog</Link>
+    <Link to="/blog/" activeClassName={headerStyles.activeMenuItem}>
+      Blog
+    </Link>
   </li>
   <li>
-    <Link to="/contact/" activeClassName={headerStyles.activeMenuItem}>Contact</Link>
+    <Link to="/contact/" activeClassName={headerStyles.activeMenuItem}>
+      Contact
+    </Link>
   </li>
   <li>
-    <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>About</Link>
+    <Link to="/about/" activeClassName={headerStyles.activeMenuItem}>
+      About
+    </Link>
   </li>
 </ul>
 ```
@@ -983,7 +983,7 @@ In this section, you’ll learn how to get data into your Gatsby site using [the
 
 Well, if you have never used GraphQL, it’s fine. We will go over the basics as we use them.
 
-> GraphQL is just a query language that is used to load data to a client. It lets the client specify exactly what data it needs. 
+> GraphQL is just a query language that is used to load data to a client. It lets the client specify exactly what data it needs.
 
 You will see how this works in a moment.
 
@@ -1004,7 +1004,7 @@ module.exports = {
   siteMetadata: {
     title: "Ibas Majid",
     description: "I teach JavaScript, React, GraphQL and Gatsby",
-    author: "Ibaslogic"
+    author: "Ibaslogic",
   },
   plugins: ["gatsby-plugin-sass"],
 }
@@ -1014,7 +1014,7 @@ Save the file.
 
 Now, you need to query these data and use them in your site.
 
-To do this, you will need to know how to use a tool called **GraphiQL**. This tool is an in-browser IDE (integrated development environment) for exploring GraphQL API. 
+To do this, you will need to know how to use a tool called **GraphiQL**. This tool is an in-browser IDE (integrated development environment) for exploring GraphQL API.
 
 You can access this tool at http://localhost:8000/___graphql.
 
@@ -1056,7 +1056,7 @@ Now that we are getting the data we want, we will move the query into our Gatsby
 
 <br/>
 
-**Query Types** 
+**Query Types**
 
 Gatsby allows us to load data into a component through the **page query** or the **StaticQuery**. Now, the type of query to use depends on the component type. Whether it is a **Page** or **Non-page** component.
 
@@ -1133,9 +1133,7 @@ const Header = () => {
           {data.site.siteMetadata.description}
         </p>
       </div>
-      <nav className={headerStyles.navContainer}>
-        ...
-      </nav>
+      <nav className={headerStyles.navContainer}>...</nav>
     </header>
   )
 }
@@ -1249,13 +1247,13 @@ Also, add this content to the `second-gatsby-blog-post.md` file:
 title: "Second Gatsby Blog Post"
 date: "2020-01-19"
 ---
-Seprehenderit accusamus, explicabo eligendi necessitatibus soluta! 
+Seprehenderit accusamus, explicabo eligendi necessitatibus soluta!
 
 ## Ipsam mollitia
 
-alias temporibus dictorem ipsum dolor sit amet consectetur adipisicing elit. 
+alias temporibus dictorem ipsum dolor sit amet consectetur adipisicing elit.
 
-## Excepturi maxime 
+## Excepturi maxime
 
 omnis earum nobis architecto, quia officiis aperiam voluptate quaerat.
 ```
@@ -1294,7 +1292,7 @@ With this configuration, we are telling Gatsby to source content from the file s
 
 > **Note:** To embed expression within a string, we use template literals (`` ` ` ``).
 >
-> The `__dirname` is a method of NodeJS that returns the absolute path of the currently running file. There are 2 underscores before the dirname. 
+> The `__dirname` is a method of NodeJS that returns the absolute path of the currently running file. There are 2 underscores before the dirname.
 
 Save your file and restart the development server.
 
@@ -1308,7 +1306,7 @@ Remember, the source plugin allows us to query data about the files. The image b
 
 You can also add more fields in the query area by using autocomplete shortcut, `Ctrl + Space`.
 
-Now that we are fetching the local files, let’s go ahead and install the `gatsby-transformer-remark` plugin that will transform the available Markdown files (.md) into HTML.  
+Now that we are fetching the local files, let’s go ahead and install the `gatsby-transformer-remark` plugin that will transform the available Markdown files (.md) into HTML.
 
 Back to your terminal, stop the development server and run this installation:
 
@@ -1342,7 +1340,7 @@ If you explore some of the fields that are available on the node of the `allMark
 
 In the query area, you’ll notice we are passing the `sort` argument to the `allMarkdownRemark` to structure the blog posts in descending order of the frontmatter’s date field.
 
-Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files. 
+Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files.
 
 As seen in the Explorer panel, you can also pass a number of arguments (filter, limit and skip) to your query. For instance, you can reduce the total number of results from a query by specifying the `limit`. Also, you can omit a number of results through the `skip`.
 
@@ -1415,8 +1413,7 @@ If you take a look at the returned data in the GraphiQL, you’ll see that Gatsb
 
 We are getting each of these objects (representing individual post data) by looping through the `edges` array using the `map()` method. From there, we are getting the data we need in our JSX markup.
 
-You should be familiar with all of these if you have a basic understanding of React. 
-
+You should be familiar with all of these if you have a basic understanding of React.
 
 Now that we have a list of posts on the blog page, let’s go ahead and create a single post page.
 
@@ -1428,7 +1425,7 @@ But before that, let’s see how to generate the single post page.
 
 Imagine you are creating a React component in the `src/pages` directory for each of the single blog posts.
 
-Remember, every component in this directory automatically becomes a page. 
+Remember, every component in this directory automatically becomes a page.
 
 This is not something you’d want to venture in.
 
@@ -1440,17 +1437,17 @@ We can achieve this in three simple steps:
 2. Creating the blog post page template
 3. Generating a new page for each post.
 
-The first step is only applicable if you are sourcing your content from the markdown files. For CMSs like Contentful, you wouldn’t need to create slugs yourself. 
+The first step is only applicable if you are sourcing your content from the markdown files. For CMSs like Contentful, you wouldn’t need to create slugs yourself.
 
 <br/>
 
-**Generate slugs for pages** 
+**Generate slugs for pages**
 
 Here, we will make use of a Gatsby node API called `onCreateNode`. This API is called when a new node is created and will allow us to attach new data to the individual node. In our case, we will attach the generated post slug.
 
 Let’s see how to generate the slug and implement this API.
 
-We will start by creating a file called `gatsby-node.js` in the root directory. 
+We will start by creating a file called `gatsby-node.js` in the root directory.
 
 In the file, add the following:
 
@@ -1574,11 +1571,11 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-In the code, we are making use of the `createPages` API function to dynamically create a single post page based on the markdown `slug`. 
+In the code, we are making use of the `createPages` API function to dynamically create a single post page based on the markdown `slug`.
 
 Here, we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need.
 
-So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function. 
+So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
 
 This function accepts an object where we defined the `path` for visiting the single blog post, the `component` parameter where we specified the absolute path to the template file while the `context` contains the data (i.e `slug`) we are passing to the template file.
 
@@ -1610,7 +1607,7 @@ As seen above, GraphiQL provides us with a way to pass variables in the query. B
 
 Remember we specified the slug in the object.
 
-> **Note:** Variables are prefixed with `$`, so the `slug` property becomes `$slug` argument in the query. 
+> **Note:** Variables are prefixed with `$`, so the `slug` property becomes `$slug` argument in the query.
 
 Now let’s take this query and use it to exhibit each of the single posts.
 
@@ -1671,7 +1668,7 @@ This type of query lives outside of the component definition as you can see in t
 
 Now the result of the query is injected into the React component through the props. From there, we are accessing the data and using them in our JSX markup.
 
-> **Note:** In the JSX, we are using the `dangerouslySetInnerHTML` prop to render HTML for our blog posts.  
+> **Note:** In the JSX, we are using the `dangerouslySetInnerHTML` prop to render HTML for our blog posts.
 
 Now, we have the template in place for each and every blog post. Let’s go ahead and link to these new pages from the blog page.
 
@@ -1824,9 +1821,9 @@ module.exports = {
 
 Save the file and run the development server. You should see the image appear in the single post page.
 
-> **Note:** We updated the `gatsby-config.js` file by adding the `gatsby-remark-images` within the `plugins` option of the `gatsby-transformer-remark`. 
+> **Note:** We updated the `gatsby-config.js` file by adding the `gatsby-remark-images` within the `plugins` option of the `gatsby-transformer-remark`.
 
-This image is an optimized version of what you added. It is responsive, compressed and has a lazy-load effect.  
+This image is an optimized version of what you added. It is responsive, compressed and has a lazy-load effect.
 
 Next up,
 
@@ -1854,7 +1851,7 @@ To query this featured image for use, you’ll need to install the following plu
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > npm install gatsby-image gatsby-transformer-sharp
 ```
 
-The `gatsby-image` is a React component that allows us to render an optimized image (for both fixed and full-width images) through `<Img />`. While `gatsby-transformer-sharp` will expose the node, `childImageSharp`, for processing your images. 
+The `gatsby-image` is a React component that allows us to render an optimized image (for both fixed and full-width images) through `<Img />`. While `gatsby-transformer-sharp` will expose the node, `childImageSharp`, for processing your images.
 
 Once the plugins are installed, add the `gatsby-transformer-sharp` plugin to your `gatsby-config.js` file.
 
@@ -1909,19 +1906,23 @@ Then you’ll pass the returned data from the `fluid` object in your query throu
 So add the following just below the span element in the JSX.
 
 ```jsx
-{props.data.markdownRemark.frontmatter.featured && (
-  <Img
-    fluid={props.data.markdownRemark.frontmatter.featured.childImageSharp.fluid}
-    alt={props.data.markdownRemark.frontmatter.title}
-  />
-)}
+{
+  props.data.markdownRemark.frontmatter.featured && (
+    <Img
+      fluid={
+        props.data.markdownRemark.frontmatter.featured.childImageSharp.fluid
+      }
+      alt={props.data.markdownRemark.frontmatter.title}
+    />
+  )
+}
 ```
 
 This code checks if you have a featured image in your post frontmatter or not.
 
 Here, we are using the JavaScript truthy and falsy.
 
-*This is how it works*.
+_This is how it works_.
 
 If the operand before the `&&` is truthy i.e there is featured image, the second operand (the `<Img />` component) is returned. Else, it is ignored.
 
@@ -1929,7 +1930,7 @@ Save the file. You should see the featured image rendered in the single post pag
 
 In the query, you’ll notice that we replaced the `src` with `GatsbyImageSharpFluid`. This is a query fragment used to return the image parameters like the `src`, `srcSet` etc.
 
-> **Note:** Query fragments are not supported yet in the GraphiQL IDE. 
+> **Note:** Query fragments are not supported yet in the GraphiQL IDE.
 
 <br/>
 
@@ -1962,12 +1963,14 @@ import Img from "gatsby-image"
 Then add the following just above the **excerpt** in the JSX.
 
 ```jsx
-{edge.node.frontmatter.featured && (
-  <Img
-    fluid={edge.node.frontmatter.featured.childImageSharp.fluid}
-    alt={edge.node.frontmatter.title}
-  />
-)}
+{
+  edge.node.frontmatter.featured && (
+    <Img
+      fluid={edge.node.frontmatter.featured.childImageSharp.fluid}
+      alt={edge.node.frontmatter.title}
+    />
+  )
+}
 ```
 
 Save the file and check the blog page. You should see the thumbnail displayed.
@@ -2028,7 +2031,7 @@ Go inside the `src/pages` directory and create a new file called `blog.module.sc
   margin-bottom: 20px;
 }
 .featured {
- max-height: 330px;
+  max-height: 330px;
 }
 .excerpt {
   margin: 30px 0 15px;
@@ -2124,7 +2127,7 @@ Go inside the `src/templates` directory and create a new file called `blogPost.m
   margin-bottom: 20px;
 }
 .featured {
- max-height: 330px;
+  max-height: 330px;
   margin-bottom: 25px;
 }
 ```
@@ -2143,8 +2146,8 @@ return (
     <div className={postStyles.content}>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <span className={postStyles.meta}>
-        Posted on {props.data.markdownRemark.frontmatter.date}{" "}
-        <span> / </span> {props.data.markdownRemark.timeToRead} min read
+        Posted on {props.data.markdownRemark.frontmatter.date} <span> / </span>{" "}
+        {props.data.markdownRemark.timeToRead} min read
       </span>
 
       {props.data.markdownRemark.frontmatter.featured && (
@@ -2226,7 +2229,7 @@ Stop your development server and run this:
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > npm install gatsby-plugin-react-helmet react-helmet
 ```
 
-`react-helmet` is a component for managing the document head. It allows us to set the title, description and other valid head tags. The `gatsby-plugin-react-helmet` will pull all of these head tags into our Gatsby page.  
+`react-helmet` is a component for managing the document head. It allows us to set the title, description and other valid head tags. The `gatsby-plugin-react-helmet` will pull all of these head tags into our Gatsby page.
 
 Next, add `gatsby-plugin-react-helmet` in the plugins array of the `gatsby-config.js` file.
 
@@ -2331,7 +2334,6 @@ At this point, you have the basic SEO setup for your Gatsby site.
 
 Try to navigate around your web pages and make sure that the page title at the top of the web browser reflects the current page.
 
-
 ## Deploying Gatsby Site to Netlify
 
 Now that you have your beautiful working site, it’s time to make it available on the web. Here, you will learn how to host and deploy your Gatsby site on Netlify for free.
@@ -2346,7 +2348,7 @@ This involves moving the files to the local repository and then to the remote re
 
 The first thing you would want to do when setting up a git project is to initialize your local Git repository. This will create a `.git` folder in your project directory.
 
-Fortunately, all Gatsby project already have this Git repository created. Now you just have to make sure that all of your new files actually becomes part of the repository. 
+Fortunately, all Gatsby project already have this Git repository created. Now you just have to make sure that all of your new files actually becomes part of the repository.
 
 You will need a couple of Git commands to achieve this.
 
@@ -2420,7 +2422,7 @@ We are almost done!
 
 **Connecting GitHub repository to Netlify**
 
-Head over to [Netlify website](https://www.netlify.com/ "Netlify site")  and signup for an account. Once you confirm your account and logged in, click on the **New site from Git** button at the top right of the screen.
+Head over to [Netlify website](https://www.netlify.com/ "Netlify site") and signup for an account. Once you confirm your account and logged in, click on the **New site from Git** button at the top right of the screen.
 
 On the new page, select GitHub as your Git provider under the **Continuous Deployment** section and permit Netlify to use your account.
 
@@ -2461,14 +2463,11 @@ Click on the Source Control, label 1, to see your pending changes. After that, c
 
 And... You're done!
 
-
-
 ## Conclusion
 
+Congratulations! I’m excited you are here. This article should have given you a quick walkthrough of the subject.
 
-Congratulations! I’m excited you are here. This article should have given you a quick walkthrough of the subject. 
-
-Now you know how to build a static site with Gatsby and deploy on Netlify. You can explore all that you have learned and build a more complex project. 
+Now you know how to build a static site with Gatsby and deploy on Netlify. You can explore all that you have learned and build a more complex project.
 
 Before then, endeavour to share this article and let me know if there is any topic you’ll like to read on this blog.
 

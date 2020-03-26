@@ -1,0 +1,27 @@
+.listContainer {
+  font-size: 16px;
+  ul {
+    border: 1px solid #f0f0f0;
+    padding: 12px 20px;
+    font-size: 15px;
+    line-height: 28px;
+    a {
+      color: inherit;
+      &:hover,
+      &:focus {
+        color: #ff7a59;
+      }
+    }
+  }
+}
+.subTitle {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 12px;
+  }
+}
+.hot {
+  color: #ff0000;
+  margin-right: 4px;
+}

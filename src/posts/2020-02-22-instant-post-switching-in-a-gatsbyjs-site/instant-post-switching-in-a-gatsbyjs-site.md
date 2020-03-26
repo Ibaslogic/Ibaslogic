@@ -5,7 +5,9 @@ category: "Gatsby"
 datePublished: "2020-02-22 10:32:00"
 dateUpdated: "2020-03-13 11:32:00"
 featured: "./images/instant-post-switching-in-a-gatsbyjs-site.png"
-tags: ["gatsby", "react"]
+tags:
+  - gatsby
+  - react
 ---
 
 Oftentimes, I get asked by my readers how they can implement the instant post switching as seen on my blog page.

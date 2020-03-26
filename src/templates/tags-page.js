@@ -33,7 +33,7 @@ const Tags = ({ pageContext, data }) => {
                   fluid={node.frontmatter.featured.childImageSharp.fluid}
                   slug={node.fields.slug.name}
                 />
-              ) 
+              )
             })}
           </ul>
         </div>

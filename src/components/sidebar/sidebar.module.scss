@@ -4,8 +4,8 @@
 }
 
 .recent-posts {
-  border: solid #f2f2f2 1px;
-  margin: 0 0 3.75rem 0;
+  border: solid #f0f0f0 1px;
+  margin: 0 0 3.4rem 0;
   color: #33475b;
 }
 .widget {
@@ -61,27 +61,33 @@
   }
 }
 
-.sign-up {
-  text-align: center;
-  border: 1px solid #f2f2f2;
-  padding: 40px 10px;
-
-  background: #fff; //#f5f8fa; // #fbfcfd;
-  margin-bottom: 60px;
-  font-size: 0.925rem;
-  font-weight: 300;
-
-  @media screen and(min-width: 480px) {
-    padding: 3rem 1.5rem;
-  }
+.sticky {
   @media screen and(min-width: 1200px) {
-    top: 100px;
+    top: 92px;
     position: sticky;
   }
 }
 
+.sign-up {
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  padding: 2rem 10px;
+
+  background: #fdfdfd; //#fff; //#f5f8fa; // #fbfcfd;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 300;
+
+  @media screen and(min-width: 480px) {
+    padding: 1.5rem 1.5rem;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 20px;
+  }
+}
+
 .title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.11667;
   position: relative;
@@ -118,13 +124,17 @@
     max-width: 27rem;
   }
   @media screen and(min-width: 960px) {
-    max-width: 223px;
+    max-width: 260px;
   }
 }
 
 .description {
   line-height: 1.667;
   margin-bottom: 1.5rem;
+  font-size: 16px;
+  @media screen and(min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 .form-container {
   display: flex;
@@ -206,6 +216,8 @@
 .error {
   margin-top: 15px;
   margin-bottom: 15px;
+  font-size: 13px;
+  text-align: left;
 }
 
 .nl {
