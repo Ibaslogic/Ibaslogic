@@ -1,5 +1,6 @@
 $content-max-width: 72rem;
 $primary-color: #3c4043;
+$body-color: #1a1a1a;
 
 @mixin transition {
   -webkit-transition: all 0.3s ease-in-out;
@@ -119,7 +120,7 @@ $primary-color: #3c4043;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 8px solid rgba(12, 52, 75, 0.6);
+    border-top: 8px solid rgba($body-color, 0.6);
   }
   .select-box-arrow-up {
     position: absolute;
@@ -129,7 +130,7 @@ $primary-color: #3c4043;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 8px solid rgba(12, 52, 75, 0.6);
+    border-bottom: 8px solid rgba($body-color, 0.6);
   }
 
   .drop-down-container {
@@ -243,7 +244,7 @@ $primary-color: #3c4043;
   width: 100%;
   padding: 0 0.69375rem 1.1875rem;
   font-size: 0.775rem;
-  color: rgba(#0c344b, 0.7);
+  color: rgba($body-color, 0.7);
 
   @media screen and (min-width: 768px) {
     padding-left: 0.9775rem;
