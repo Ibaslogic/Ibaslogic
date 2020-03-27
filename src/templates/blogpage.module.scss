@@ -1,6 +1,7 @@
-$content-max-width: 75rem;
+$content-max-width: 72rem;
 $link-color: #f44f18;
 $main-white: #fff;
+$body-color: #1a1a1a;
 
 @mixin transition {
   transition: all 0.5s ease-out;
@@ -45,7 +46,7 @@ $main-white: #fff;
     margin: 0;
   }
   @media screen and (min-width: 1345px) {
-    width: 60%;
+    width: 63%; //60%;
   }
 }
 
@@ -57,6 +58,9 @@ $main-white: #fff;
   @media screen and (min-width: 960px) {
     width: 33.134%;
     margin: 0;
+  }
+  @media screen and (min-width: 1345px) {
+    width: 31.134%;
   }
 }
 
@@ -112,7 +116,7 @@ $main-white: #fff;
   line-height: 1.66667rem;
   font-weight: 300;
   margin-bottom: 1.58333em;
-  color: rgba(#0c344b, 0.6);
+  color: rgba($body-color, 0.6);
 }
 .edit-post {
   svg {
@@ -324,7 +328,7 @@ p img {
       left: 59.3%;
     }
     @media screen and (min-width: 1345px) {
-      left: 14px;
+      left: 17px;
       transform: translateX(-150%);
     }
     position: fixed;
@@ -359,6 +363,10 @@ p img {
         color: #fff;
         &:hover {
           opacity: 0.8;
+        }
+        @media screen and (min-width: 1345px) {
+          padding-left: 27px;
+          padding-right: 27px;
         }
       }
     }

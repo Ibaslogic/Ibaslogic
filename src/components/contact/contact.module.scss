@@ -4,6 +4,9 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
 @mixin transition {
   transition: all 0.5s linear;
 }
+
+$max-width: 72rem;
+
 .contact-hero {
   color: #fff;
   background: url(../../images/newsletter-bg.jpg) center top no-repeat;
@@ -109,7 +112,7 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
     @media screen and (min-width: 992px) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      max-width: 75rem;
+      max-width: $max-width;
       column-gap: 1.5em;
     }
   }

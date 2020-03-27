@@ -3,10 +3,16 @@
   transition: all 0.3s ease-out;
 }
 
+$body-color: #1a1a1a;
+
 .recent-posts {
   border: solid #f0f0f0 1px;
   margin: 0 0 3.4rem 0;
   color: #33475b;
+
+  h3 {
+    margin: 1.25rem 17px 0rem;
+  }
 }
 .widget {
   &:last-child {
@@ -17,12 +23,12 @@
 .list-container {
   line-height: 1.75em;
   margin-bottom: 0;
-  padding: 1.5rem 0.75rem 1.5rem;
+  padding: 1.5rem 17px 1.5rem;
   font-weight: 300;
 
   a {
     //margin-right: 0.5625rem;
-    color: rgb(12, 52, 75);
+    color: $body-color;
     @include transition;
     //display: block;
 
@@ -45,7 +51,7 @@
     }
 
     .img-tumbnail {
-      margin: 0.25rem 0.75rem 0 0;
+      margin: 0.2rem 0.75rem 0 0;
       float: left;
       min-width: 5rem;
       height: auto;
@@ -53,12 +59,12 @@
     }
   }
 
-  @media screen and(min-width: 480px) {
-    padding: 2.1875rem 2.5rem 2.625rem 2.5rem;
-  }
-  @media screen and(min-width: 960px) {
-    padding: 2.1875rem 1.5rem 2.625rem 1.5rem;
-  }
+  // @media screen and(min-width: 480px) {
+  //   padding: 2.1875rem 2.5rem 2.625rem 2.5rem;
+  // }
+  // @media screen and(min-width: 960px) {
+  //   padding: 2.1875rem 1.5rem 2.625rem 1.5rem;
+  // }
 }
 
 .sticky {
@@ -69,9 +75,8 @@
 }
 
 .sign-up {
-  text-align: center;
   border: 1px solid #f0f0f0;
-  padding: 2rem 10px;
+  padding: 2rem 17px;
 
   background: #fdfdfd; //#fff; //#f5f8fa; // #fbfcfd;
   margin-bottom: 40px;
@@ -79,7 +84,7 @@
   font-weight: 300;
 
   @media screen and(min-width: 480px) {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 17px;
   }
   @media screen and(min-width: 1200px) {
     margin-bottom: 20px;
@@ -87,24 +92,24 @@
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.11667;
   position: relative;
   margin-bottom: 1.2rem;
 
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 41px;
-  //   height: 2px;
-  //   background: #ff7a59;
-  //   position: absolute;
-  //   bottom: -29px;
-  //   left: 50%;
-  //   margin-top: 23px;
-  //   margin-left: -1.25rem;
-  // }
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #ff7a59;
+    position: absolute;
+    bottom: -20px;
+    left: 21px;
+    margin-top: 23px;
+    margin-left: -1.25rem;
+  }
 
   @media screen and(min-width: 768px) {
     // font-size: 2.1rem;
@@ -112,24 +117,25 @@
   }
 }
 
-.title,
-.description {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 18rem;
-  @media screen and(min-width: 480px) {
-    max-width: 20rem;
-  }
-  @media screen and(min-width: 600px) {
-    max-width: 27rem;
-  }
-  @media screen and(min-width: 960px) {
-    max-width: 260px;
-  }
-}
+// .title,
+// .description {
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   // max-width: 18rem;
+//   // @media screen and(min-width: 480px) {
+//   //   max-width: 20rem;
+//   // }
+//   // @media screen and(min-width: 600px) {
+//   //   max-width: 27rem;
+//   // }
+//   // @media screen and(min-width: 960px) {
+//   //   max-width: 260px;
+//   // }
+// }
 
 .description {
   line-height: 1.667;
+  padding-top: 1.3rem;
   margin-bottom: 1.5rem;
   font-size: 16px;
   @media screen and(min-width: 1200px) {
@@ -139,21 +145,52 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 18rem;
-  @media screen and(min-width: 480px) {
-    max-width: 20rem;
-  }
-  @media screen and(min-width: 600px) {
-    max-width: 27rem;
-  }
+  // margin: 0 auto;
+  // max-width: 18rem;
+  // @media screen and(min-width: 480px) {
+  //   max-width: 20rem;
+  // }
+  // @media screen and(min-width: 600px) {
+  //   max-width: 27rem;
+  // }
 
-  @media screen and(min-width: 960px) {
-    max-width: 90%;
-  }
+  // @media screen and(min-width: 960px) {
+  //   max-width: 90%;
+  // }
 
   .name-field {
     text-transform: capitalize;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and(min-width: 600px) {
+      flex: 1;
+      flex-direction: row;
+    }
+
+    @media screen and(min-width: 960px) {
+      flex-direction: column;
+    }
+
+    input {
+      @media screen and(min-width: 600px) {
+        flex: 0.7;
+      }
+      @media screen and(min-width: 960px) {
+        flex: auto;
+      }
+    }
+    button {
+      @media screen and(min-width: 600px) {
+        flex: 0.5;
+      }
+      @media screen and(min-width: 960px) {
+        flex: auto;
+      }
+    }
   }
 
   input,
@@ -165,7 +202,7 @@
     outline: none;
   }
   input {
-    padding: 0px 25px;
+    padding: 0px 20px;
     border: 1px solid #dadadb; //#f2f2f2;
     margin-bottom: 4px;
     color: #444;
@@ -220,12 +257,12 @@
   text-align: left;
 }
 
-.nl {
-  display: block;
-  @media screen and (min-width: 600px) {
-    display: none;
-  }
-}
+// .nl {
+//   display: block;
+//   @media screen and (min-width: 600px) {
+//     display: none;
+//   }
+// }
 
 .getInTouch {
   margin-top: -8px;
@@ -234,7 +271,7 @@
   opacity: 0.5;
   letter-spacing: 0.03rem;
   font-weight: 400;
-  color: rgba(#0c344b, 0.9);
+  color: rgba($body-color, 0.9);
   p {
     display: inline;
     //color: #757575;

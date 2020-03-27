@@ -1,14 +1,13 @@
 import React from "react"
 
 const styles = {
-  fontSize: "1.125rem",
+  fontSize: "20px",
   lineHeight: "1.666666666667em",
   fontWeight: "700",
   borderBottom: "solid #f0f0f0 1px",
   paddingBottom: "1.25rem",
-  margin: "1.25rem 1.875rem",
   marginBottom: "-0.0625rem",
-  color: "#ff7a59",
+  // color: "#ff7a59",
   textTransform: "capitalize",
 }
 

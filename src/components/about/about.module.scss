@@ -1,6 +1,8 @@
 @mixin transition {
   transition: all 0.3s ease-out;
 }
+
+$max-width: 72rem;
 // About Hero
 
 .about-hero {
@@ -19,7 +21,7 @@
 }
 
 .content-wrapper {
-  max-width: 75rem;
+  max-width: $max-width;
   margin: 0 auto;
   padding-top: 6rem; // 4rem;
   padding-bottom: 0;

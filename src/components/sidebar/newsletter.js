@@ -63,8 +63,7 @@ const Newsletter = props => {
     <div className={newsletterStyles.sticky}>
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
         <h3 className={newsletterStyles.title}>
-          Do you want to <span className={newsletterStyles.nl}></span>{" "}
-          <span style={{ fontWeight: "600" }}>Learn</span> more?
+          Do you want to <span style={{ fontWeight: "600" }}>Learn</span> more?
         </h3>
         <p className={newsletterStyles.description}>
           Get the next tutorial straight to your inbox and continue your dev
@@ -84,20 +83,22 @@ const Newsletter = props => {
             onChange={_fnameHandleChange}
             placeholder="First Name"
           /> */}
-          <input
-            className={newsletterStyles.emailField}
-            type="text"
-            value={email}
-            onChange={_emailHandleChange}
-            placeholder="Email Address"
-          />
-          <button
-            style={{ outline: "none" }}
-            className="fieldSubmit"
-            type="submit"
-          >
-            I want to learn more
-          </button>
+          <div className={newsletterStyles.inputContainer}>
+            <input
+              className={newsletterStyles.emailField}
+              type="text"
+              value={email}
+              onChange={_emailHandleChange}
+              placeholder="Email Address"
+            />
+            <button
+              style={{ outline: "none" }}
+              className="fieldSubmit"
+              type="submit"
+            >
+              I want to learn more
+            </button>
+          </div>
 
           {status === `success` ? (
             <div className={newsletterStyles.success}>

@@ -1,6 +1,7 @@
 $footer-bg-color: #f7f8f9;
 $main-white: #fff;
-$content-max-width: 75rem;
+$footer-link: #1a1a1a;
+$content-max-width: 72rem;
 
 .site-footer {
   background: $footer-bg-color;
@@ -50,7 +51,7 @@ $content-max-width: 75rem;
   }
 
   a {
-    color: #0c344b;
+    color: $footer-link;
     opacity: 0.8;
 
     &:hover {

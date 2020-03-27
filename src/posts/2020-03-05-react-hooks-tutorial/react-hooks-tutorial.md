@@ -137,7 +137,7 @@ For instance,
 const [title, setTitle] = useState("hello")
 ```
 
-Here, we declared a state variable called `title` (which holds the initial state i.e **hello**) and a function called `setTitle` to update the state.
+Here, we declared a state variable called `title` (which holds the current state i.e **hello**) and a function called `setTitle` to update the state.
 
 This is similar to `this.state.title` and `this.setState` in our class component.
 

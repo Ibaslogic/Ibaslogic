@@ -1,3 +1,5 @@
+$max-width: 72rem;
+
 .about-posts {
   max-width: 45rem;
   margin: 0 auto;
@@ -8,7 +10,7 @@
     padding-top: 5rem;
   }
   @media screen and (min-width: 960px) {
-    max-width: 75rem;
+    max-width: $max-width;
   }
   .about-excerpt {
     display: flex;
