@@ -78,7 +78,7 @@ $body-color: #1a1a1a;
   border: 1px solid #f0f0f0;
   padding: 2rem 17px;
 
-  background: #fdfdfd; //#fff; //#f5f8fa; // #fbfcfd;
+  background: #fff;
   margin-bottom: 40px;
   font-size: 14px;
   font-weight: 300;
@@ -93,7 +93,7 @@ $body-color: #1a1a1a;
 
 .title {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 1.11667;
   position: relative;
   margin-bottom: 1.2rem;
@@ -175,7 +175,13 @@ $body-color: #1a1a1a;
       flex-direction: column;
     }
 
-    input {
+    .emailInputContainer {
+      background: #fbfcfd;
+      margin-bottom: 4px;
+      .emailInput {
+        border: 1px solid #dadadb;
+        padding: 0 20px;
+      }
       @media screen and(min-width: 600px) {
         flex: 0.7;
       }
@@ -183,7 +189,17 @@ $body-color: #1a1a1a;
         flex: auto;
       }
     }
-    button {
+    .submitInputContainer {
+      .submitInput {
+        border: 1px solid rgba(#ff7a59, 1);
+        &:hover {
+          border: 1px solid rgba(#ff7a59, 0.8);
+          button {
+            background-color: rgba(#ff7a59, 0.8);
+            cursor: pointer;
+          }
+        }
+      }
       @media screen and(min-width: 600px) {
         flex: 0.5;
       }
@@ -195,34 +211,28 @@ $body-color: #1a1a1a;
 
   input,
   button {
-    height: 45px;
+    height: 50px;
+    width: 100%;
     font-size: 15px;
     //font-size: 1rem;
-    border-radius: 2px;
+
     outline: none;
   }
   input {
-    padding: 0px 20px;
-    border: 1px solid #dadadb; //#f2f2f2;
-    margin-bottom: 4px;
+    border: none; //#f2f2f2;
+    border-radius: 2px;
+    // margin-bottom: 4px;
     color: #444;
   }
   button {
-    background-color: #ff7a59;
-    border: 1px solid #ff7a59;
+    background-color: rgba(#ff7a59, 1);
+    border: none;
     opacity: 1;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
     @include transition;
-
-    &:hover {
-      // background-color: rgba(#f55f2d, 0.7);
-      // border: 1px solid #f55f2d;
-      opacity: 0.8;
-      cursor: pointer;
-    }
   }
 }
 
