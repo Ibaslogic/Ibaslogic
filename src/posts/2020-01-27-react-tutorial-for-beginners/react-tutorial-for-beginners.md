@@ -220,7 +220,7 @@ In React, this element can have a state. And anytime the state changes, a new Re
 
 Let’s render the React element inside of the real DOM.
 
-Update the `script` element so it looks like so:
+Update the `script` element so it looks like this:
 
 ```jsx
 <script type="text/babel">
@@ -466,7 +466,7 @@ So anytime you want some data to be updated whenever user perform some action li
 
 ## Adding state
 
-As we have it in the app diagram, the `InputTodo` component, will carry the responsibility of accepting the user’s input.
+As we have it in the app diagram, the `InputTodo` component will carry the responsibility of accepting the user’s input.
 
 That means we will need a place to store the data received through the input. From there, we can display the data in the frontend.
 
@@ -482,9 +482,9 @@ For this reason, the state data will live in the `TodoContainer` component, whic
 
 Hope it’s clear?
 
-To add a state in a class component, we simply create a `state` object with different key-value pair. The value can be a string or array of objects.
+To add a state in a class component, we simply create a `state` object with different key-value pair. The value can be of any data type.
 
-In the case of todos data, we will have an array of objects.
+In the case of the todos data, we will have an array of objects.
 
 So add the following code just above the `render()` method in the `TodoContainer.js` file:
 
@@ -596,9 +596,9 @@ export default TodosList
 
 Save your file. You should have the todos title rendered on the screen just like before.
 
-Notice how we accessed the state data from within the child component, `TodosList`, using `this.props.todos`. It is called **prop drilling**.
+Notice how we accessed the state data from within the child component, `TodosList`, using `this.props.todos`.
 
-With props, we can access state data at different levels of the component hierarchy.
+Always remember, with props, we can access state data at different levels of the component hierarchy. This is called **prop drilling**.
 
 As a recap,
 

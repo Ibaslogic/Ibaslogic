@@ -239,7 +239,7 @@ Also, notice that the style keys are in camelCase.
 
 Another way to use an inline style in React is to use variables.
 
-Back in the `Header.js` file, add the following code above the `return` statement:
+Still in the `Header.js` file, add the following code above the `return` statement:
 
 ```js
 const headerStyle = {
@@ -344,7 +344,7 @@ Ok. Save the file and check the frontend.
 
 ## Using Destructuring
 
-If you take a look at the `TodoItem` component, we were writing multiples `this.props.todo` to grab the `id`, `titles` and `completed` values.
+If you take a look at the `TodoItem` component, we were writing multiples `this.props.todo` to grab the `id`, `title` and `completed` values.
 
 This can be a pain in the neck if your application gets complex.
 

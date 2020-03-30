@@ -69,13 +69,9 @@ Inside of the `li` element, add this code just before the `{this.props.todo.titl
 
 Save the file and see the checkboxes in the frontend.
 
-By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour.
+By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour. That is why you can toggle the boxes.
 
-That is why you can toggle the boxes.
-
-This type of input is called **uncontrolled input**.
-
-In React, the input fields are meant to be **controlled**.
+This type of input is called **uncontrolled input**. But in React, the input fields are meant to be **controlled**.
 
 This takes us to another important subtopic.
 
@@ -241,9 +237,7 @@ handleChange = (id) => {
 
 Note how we are receiving and logging the `id`.
 
-Save the file.
-
-Open the console and click on the checkboxes. This time, you will see their respective ids.
+Save the file. Open the console and click on the checkboxes. This time, you will see their respective ids.
 
 ![handling checkbox](./images/handlingclick.png)
 
@@ -363,11 +357,9 @@ Next, we will manipulate the state and remove any of the deleted items from the 
 
 The way we do that is by using the `filter()` method.
 
-This method is also an higher-order function just like the `map()` method. It returns a new array by applying a condition on every array element.
+This method is also a higher-order function just like the `map()` method. It returns a new array by applying a condition on every array element.
 
-In this case, we only want to return the todos items that do not match the id that will be passed in – i.e the clicked id.
-
-Any id that matches will be deleted.
+In this case, we only want to return the todos items that do not match the id that will be passed in – i.e the clicked id. Any id that matches will be deleted.
 
 Now update the `delTodo` method so you have:
 
