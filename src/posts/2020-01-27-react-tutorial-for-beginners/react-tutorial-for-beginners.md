@@ -1,9 +1,9 @@
 ---
-title: "React Tutorial: The Beginners Guide to Learning React JS in 2020"
-description: "From Zero to deploy, you will learn everything about React JS and build a modern application in this React tutorial guide."
+title: "React Tutorial — The Beginners Guide to Learning React JS in 2020"
+description: "From Zero to deploy, you'll learn everything about React JS and build a modern application in this React tutorial guide."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-03-23 10:27:00"
+dateUpdated: "2020-04-03 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
 tags:
   - react
