@@ -53,9 +53,7 @@ You can [download and install Git](https://git-scm.com/downloads "Git site") for
 
 Once that’s done,
 
-You will need to move all your React code to your GitHub account.
-
-And this can be done in two phases.
+You will need to move all your React code to your GitHub account. And this can be done in two phases.
 
 First, you will move your files to the local repository and then to the remote repository.
 

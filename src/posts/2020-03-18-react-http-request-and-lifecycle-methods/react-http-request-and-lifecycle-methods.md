@@ -87,7 +87,7 @@ state = {
 }
 ```
 
-Save the file and you’ll see your app displaying empty default items.
+Save the file and see your app displaying empty default items.
 
 Next, head over to [JSONPlaceholder website](https://jsonplaceholder.typicode.com "jsonplaceholder site"). Scroll down to **Resources** section and click on the **todos** link. Here, you will see a list of 200 todos that we will be working with.
 
@@ -141,7 +141,7 @@ So let's apply this method. Start your development server with `npm start`.
 
 ### Making a GET request
 
-As expected, we use the `Get` HTTP method to fetch data. So, let’s start by importing the Axios library in the `TodoContainer`.js file:
+As expected, we use the `Get` HTTP method to fetch data. So, let’s start by importing the Axios library in the `TodoContainer.js` file:
 
 ```
 import axios from "axios";
@@ -309,9 +309,9 @@ This is another important lifecycle method in React. As I mentioned earlier, thi
 
 It is a perfect place to manipulate the DOM when the component has been updated. Also, in this method, you can make API calls after specific conditions have been met.
 
-So let see how we can apply this method in our todos application.
+So let's see how we can apply this method in our todos application.
 
-First, what do we want to achieve?
+First, what is the goal here?
 
 We want a situation whereby when we click on the checkboxes, a text with random background colour is displayed in the header of our app.
 
@@ -378,7 +378,7 @@ As I mentioned earlier, we will define another property in the `state` object of
 
 With this, we will have access to the `prevProps`.
 
-So, update the `state` to include the `show` property and pass it to the `<header />`.
+So, update the `state` to include the `show` property and pass it to the `<Header />`.
 
 ```jsx{5,11}
 ...

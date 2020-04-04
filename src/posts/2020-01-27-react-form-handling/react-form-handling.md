@@ -457,7 +457,7 @@ Save the file. You should have the form fields rendered in the frontend.
 
 As we did for the checkbox, we have to make the form input field a controlled field.
 
-The first step is to have the state manage the user's input. So, add this code just above the `render()` method in the `InputTodo` component:
+The first step is to have a state manage the user's input. So, add this code just above the `render()` method in the `InputTodo` component:
 
 ```JavaScript
 state = {
@@ -719,8 +719,6 @@ From your terminal, run:
 ```
 C:\Users\Your Name\simple-todo-app > npm i uuid
 ```
-
-Make sure you are inside your project directory.
 
 Once installed, start the server again with `npm start`.
 

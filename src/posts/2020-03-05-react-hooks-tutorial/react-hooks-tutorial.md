@@ -6,7 +6,6 @@ datePublished: "2020-03-05 10:32:00"
 dateUpdated: "2020-03-26 11:32:00"
 featured: "./images/react-hooks-tutorial.png"
 tags:
-  - react
   - hooks
 ---
 
@@ -76,7 +75,7 @@ As expected of you, you should know that the files that make up this UI live in 
 
 If you take a look inside the `src/components` folder, we have five component files. Of which all of them are class-based.
 
-Now, let’s optimize our code by using React Hooks.
+Now, let’s optimize our code using React Hooks.
 
 We will start with the component where only the state logic (and not lifecycle logic) is being managed.
 

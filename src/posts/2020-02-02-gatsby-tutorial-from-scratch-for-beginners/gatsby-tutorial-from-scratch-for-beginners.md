@@ -3,14 +3,14 @@ title: "Gatsby Tutorial: A Step-by-Step Guide to Building a Gatsby Site from Scr
 description: "Today, many site owners are embracing the Gatsby site framework because of its high performance, scalability and safety."
 category: "Gatsby"
 datePublished: "2020-02-02 10:32:00"
-dateUpdated: "2020-02-02 10:32:00"
+dateUpdated: "2020-03-23 10:32:00"
 featured: "./images/gatsby-tutorial-from-scratch-for-beginners.png"
 tags:
   - gatsby
   - graphql
 ---
 
-You may have noticed that navigating around this website works like a single page web app.
+If you navigate around this website, you will notice that it works like a single page application.
 
 The requested pages open almost immediately without page reload. This is happening because the files are generated ahead of time, eliminating the use of web servers.
 
