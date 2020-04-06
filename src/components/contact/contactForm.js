@@ -43,7 +43,7 @@ const ContactForm = () => {
             <input
               className={contactFormStyles.textField}
               type="text"
-              placeholder="Your name"
+              placeholder="First name"
               name="name"
               id="name"
               required
