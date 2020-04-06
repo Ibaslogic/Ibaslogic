@@ -40,41 +40,43 @@ const RecentPosts = () => {
   const edges = data.allMdx.edges
 
   return (
-    <section id="blog" className={recentStyles.recentPosts}>
-      <div className={recentStyles.subStyles}>
-        <div className={recentStyles.titleStyles}>
-          <SubHeading title="Latest Articles" />
+    <section id="blog" className={recentStyles.container}>
+      <div className={recentStyles.recentPosts}>
+        <div className={recentStyles.subStyles}>
+          <div className={recentStyles.titleStyles}>
+            <SubHeading title="Latest Articles" />
+          </div>
+          <div className={recentStyles.viewAll}>
+            <Link to="/blog/">view all »</Link>
+          </div>
         </div>
-        <div className={recentStyles.viewAll}>
-          <Link to="/blog/">view all »</Link>
-        </div>
-      </div>
 
-      <div className={recentStyles.container}>
-        {edges.map(({ node }) => {
-          const { id, frontmatter, fields, excerpt } = node
-          return (
-            <article className={recentStyles.article} key={id}>
-              <header>
-                <Link to={`/blog/${fields.slug.name}/`}>
-                  <Img
-                    fluid={frontmatter.featured.childImageSharp.fluid}
-                    alt={fields.slug.name}
-                  />
-                </Link>
-              </header>
-              <div className={recentStyles.content}>
-                <h2>
+        <div className={recentStyles.container}>
+          {edges.map(({ node }) => {
+            const { id, frontmatter, fields, excerpt } = node
+            return (
+              <article className={recentStyles.article} key={id}>
+                <header>
                   <Link to={`/blog/${fields.slug.name}/`}>
-                    {" "}
-                    {frontmatter.title}
+                    <Img
+                      fluid={frontmatter.featured.childImageSharp.fluid}
+                      alt={fields.slug.name}
+                    />
                   </Link>
-                </h2>
-                <p>{frontmatter.description || excerpt}</p>
-              </div>
-            </article>
-          )
-        })}
+                </header>
+                <div className={recentStyles.content}>
+                  <h2>
+                    <Link to={`/blog/${fields.slug.name}/`}>
+                      {" "}
+                      {frontmatter.title}
+                    </Link>
+                  </h2>
+                  <p>{frontmatter.description || excerpt}</p>
+                </div>
+              </article>
+            )
+          })}
+        </div>
       </div>
     </section>
   )

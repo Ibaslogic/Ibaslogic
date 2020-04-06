@@ -168,6 +168,10 @@ $max-width: 72rem;
 }
 
 .about {
+  background-color: #fff;
+  @media screen and (min-width: 960px) {
+    padding-bottom: 1rem;
+  }
   .content {
     max-width: 800px;
     margin: 0 auto;

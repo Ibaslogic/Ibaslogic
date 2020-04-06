@@ -5,12 +5,19 @@
     padding: 12px 17px;
     font-size: 15px;
     line-height: 28px;
+    background-color: #fff;
     a {
       color: inherit;
       .hot {
-        color: #fd5025;
+        // color: #fd5025;
+        float: left;
         font-size: 13px;
-        margin-right: 4px;
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        svg {
+          margin-bottom: -5px;
+        }
       }
       &:hover,
       &:focus {

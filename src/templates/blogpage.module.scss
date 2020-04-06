@@ -41,12 +41,19 @@ $body-color: #1a1a1a;
   }
 
   @media screen and (min-width: 960px) {
-    padding-bottom: 0;
-    width: 59.34%;
+    // padding-bottom: 0;
+    // width: 59.34%;
+    width: 61.34%;
     margin: 0;
+    background-color: $main-white;
+    padding: 25px;
+    border: 1px solid #f0f0f0;
   }
-  @media screen and (min-width: 1345px) {
-    width: 63%; //60%;
+  @media screen and (min-width: 1280px) {
+    width: 65%; //60%;
+    max-width: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -56,11 +63,12 @@ $body-color: #1a1a1a;
   max-width: 700px;
   margin: 0 auto;
   @media screen and (min-width: 960px) {
-    width: 33.134%;
+    // width: 33.134%;
+    width: 30.134%;
     margin: 0;
   }
-  @media screen and (min-width: 1345px) {
-    width: 31.134%;
+  @media screen and (min-width: 1280px) {
+    width: 30%;
   }
 }
 
@@ -90,6 +98,10 @@ $body-color: #1a1a1a;
   border-bottom: 1px solid #f2f2f2;
   margin-top: 50px;
   padding: 29px 0;
+
+  @media screen and (min-width: 960px) {
+    border-bottom: none;
+  }
 
   ul {
     margin-bottom: 0;
@@ -319,17 +331,20 @@ p img {
 
   .share-container {
     @media screen and (min-width: 960px) {
-      left: 59.8%;
+      left: 62%;
     }
-    @media screen and (min-width: 1050px) {
-      left: 60.1%;
-    }
-    @media screen and (min-width: 1200px) {
-      left: 59.3%;
-    }
-    @media screen and (min-width: 1345px) {
-      left: 17px;
+    // @media screen and (min-width: 1050px) {
+    //   left: 60.1%;
+    // }
+    // @media screen and (min-width: 1200px) {
+    //   left: 59.3%;
+    // }
+    @media screen and (min-width: 1280px) {
+      left: 10px;
       transform: translateX(-150%);
+    }
+    @media screen and (min-width: 1300px) {
+      left: 17px;
     }
     position: fixed;
     top: 92px;
@@ -364,7 +379,7 @@ p img {
         &:hover {
           opacity: 0.8;
         }
-        @media screen and (min-width: 1345px) {
+        @media screen and (min-width: 1300px) {
           padding-left: 27px;
           padding-right: 27px;
         }

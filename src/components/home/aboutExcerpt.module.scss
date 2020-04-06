@@ -1,5 +1,9 @@
 $max-width: 72rem;
 
+.container {
+  background-color: #fff;
+}
+
 .about-posts {
   max-width: 45rem;
   margin: 0 auto;
@@ -48,7 +52,7 @@ $max-width: 72rem;
         @media screen and (min-width: 960px) {
           height: 429px;
           top: -170px;
-          z-index: -1;
+          z-index: 1;
         }
         @media screen and (min-width: 1120px) {
           height: 407px;

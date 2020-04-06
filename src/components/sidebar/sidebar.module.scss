@@ -4,11 +4,13 @@
 }
 
 $body-color: #1a1a1a;
+$main-white: #fff;
 
 .recent-posts {
   border: solid #f0f0f0 1px;
   margin: 0 0 3.4rem 0;
   color: #33475b;
+  background-color: $main-white;
 
   h3 {
     margin: 1.25rem 17px 0rem;
