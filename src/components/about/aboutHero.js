@@ -10,11 +10,13 @@ const AboutHero = () => {
       >
         <div className={aboutHeroStyles.bannerContent}>
           <h1>
-            Want to build a modern <span className={aboutHeroStyles.nl}></span>{" "}
-            web project?
+            {/* Want to build a modern <span className={aboutHeroStyles.nl}></span>{" "}
+            web project? */}
+            Do you want to learn the latest{" "}
+            <span className={aboutHeroStyles.nl}></span> web technologies?
           </h1>
           <h3 className={aboutHeroStyles.description}>
-            Then you're in the right place. You will get to learn how to apply
+            Then you're in the right place. Here, you will learn how to apply
             the tools <span className={aboutHeroStyles.nl}></span>and the
             strategy needed for your next project.
           </h3>
