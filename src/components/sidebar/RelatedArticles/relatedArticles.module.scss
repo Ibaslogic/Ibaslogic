@@ -9,7 +9,6 @@
     a {
       color: inherit;
       .hot {
-        // color: #fd5025;
         float: left;
         font-size: 13px;
         width: 14px;
@@ -22,9 +21,6 @@
       &:hover,
       &:focus {
         color: #ff7a59;
-        // .hot {
-        //   color: #ff0000;
-        // }
       }
     }
   }

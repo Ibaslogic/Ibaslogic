@@ -5,10 +5,9 @@ $content-max-width: 72rem;
 
 .site-footer {
   background: $footer-bg-color;
-  //color: $main-white;
   font-size: 0.8rem;
   text-align: center;
-  border-top: 1px solid #e6e8ea;
+  border-top: 1px solid #ececec;
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
 }
@@ -32,7 +31,6 @@ $content-max-width: 72rem;
 .copy {
   margin: 0;
   letter-spacing: 0.05em;
-  //opacity: 0.8;
 }
 .socialList {
   display: flex;
@@ -73,8 +71,6 @@ $content-max-width: 72rem;
 
 .check-me {
   position: relative;
-
-  //opacity: 0.5;
   margin-top: 19px;
 
   @media screen and (min-width: 768px) {

@@ -69,11 +69,7 @@ a {
   color: $link-color;
   background-color: transparent;
   outline: none;
-  // font-weight: 400;
   text-decoration: none;
-  // &:hover {
-  //   text-decoration: underline;
-  // }
 }
 
 strong,
@@ -149,7 +145,7 @@ pre code {
 }
 
 pre[class*="language-"] {
-  margin: 0 !important; //0.5em 0 2rem !important;
+  margin: 0 !important;
   padding: 2em 15px !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
@@ -168,7 +164,7 @@ pre[class*="language-"] :not(pre) > code,
 p > code,
 li > code {
   background: #f0f0f0 !important;
-  color: #ea4812; // #151414;
+  color: #ea4812;
   text-shadow: none;
   border-radius: 0px;
 }
@@ -180,7 +176,6 @@ li > code,
 p > a > code,
 li > a > code {
   padding: 0 3px !important;
-  //font-size: 0.9rem;
   word-break: break-word;
 }
 
@@ -219,12 +214,6 @@ li > a > code {
     margin: 2rem 0px;
     border-radius: 0.3em;
   }
-
-  // @media screen and (min-width: 768px) {
-  //   border-radius: 0.3em;
-  //   margin-left: 0px;
-  //   margin-right: 0px;
-  // }
 }
 
 .gatsby-highlight pre[class*="language-"] {

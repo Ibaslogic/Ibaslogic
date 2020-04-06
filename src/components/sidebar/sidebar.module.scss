@@ -105,7 +105,6 @@ $main-white: #fff;
   }
 
   @media screen and(min-width: 768px) {
-    // font-size: 2.1rem;
     line-height: 1.02778;
   }
 }
@@ -183,14 +182,11 @@ $main-white: #fff;
     height: 50px;
     width: 100%;
     font-size: 15px;
-    //font-size: 1rem;
-
     outline: none;
   }
   input {
-    border: none; //#f2f2f2;
+    border: none;
     border-radius: 2px;
-    // margin-bottom: 4px;
     color: #444;
   }
   button {
@@ -204,15 +200,6 @@ $main-white: #fff;
     @include transition;
   }
 }
-
-// .guarantee {
-//   font-size: 0.74rem;
-//   text-align: center;
-//   padding: 0.7rem 0px 0px;
-//   display: block;
-//   opacity: 0.5;
-//   letter-spacing: 0.03rem;
-// }
 
 .success {
   color: #282828;
@@ -236,13 +223,6 @@ $main-white: #fff;
   text-align: left;
 }
 
-// .nl {
-//   display: block;
-//   @media screen and (min-width: 600px) {
-//     display: none;
-//   }
-// }
-
 .getInTouch {
   margin-top: -8px;
   text-align: left;
@@ -253,7 +233,6 @@ $main-white: #fff;
   color: rgba($body-color, 0.9);
   p {
     display: inline;
-    //color: #757575;
   }
   span {
     margin-right: 5px;

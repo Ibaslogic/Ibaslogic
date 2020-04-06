@@ -6,12 +6,7 @@ $max-width: 72rem;
 // About Hero
 
 .about-hero {
-  //min-height: calc(100vh - 4rem);
   background: #fafafa;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // text-align: center;
   overflow: hidden;
   @media screen and (min-width: 960px) {
     height: calc(100vh - 6rem);
@@ -97,7 +92,6 @@ $max-width: 72rem;
     width: 14.25rem;
     min-height: 20rem;
     margin-bottom: 3rem;
-    //height: calc(100vh - 4rem);
     @media screen and (min-width: 768px) {
       margin-bottom: 0px;
     }
@@ -107,11 +101,10 @@ $max-width: 72rem;
   }
 }
 .banner-content {
-  margin-bottom: 6rem; // 40px;
+  margin-bottom: 6rem;
   max-width: 18rem;
 
   @media screen and (min-width: 768px) {
-    //margin-bottom: 40px;
     flex: 0 0 60%;
     text-align: left;
   }
@@ -139,20 +132,6 @@ $max-width: 72rem;
       font-size: 3rem;
       letter-spacing: -0.03125rem;
     }
-    // @media screen and (min-width: 768px) {
-    //   font-size: 3.2rem;
-    // }
-    // @media screen and (min-width: 1200px) {
-    //   font-size: 4.3rem;
-    // }
-
-    // @media screen and (min-width: 1200px) {
-    //   font-size: 3.5rem;
-    // }
-
-    // span {
-    //   font-weight: 600;
-    // }
   }
   .description {
     font-size: 1.1rem;
@@ -203,10 +182,6 @@ $max-width: 72rem;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
-
-  // @media screen and (min-width: 768px) {
-  //   background-image: url(../../images/newsletter-bg.jpg);
-  // }
 }
 .image-filter {
   background: rgba(0, 0, 0, 0.6);
