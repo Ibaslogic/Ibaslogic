@@ -9,11 +9,11 @@ tags:
   - hooks
 ---
 
-This tutorial is a follow up to the [practical guide to learning the React hooks](/blog/react-hooks-tutorial/ "react hook tutorial"). It is aimed at helping the beginners to solidify their React Hooks foundation.
+Earlier on this blog, we created a [practical guide to learning the React hooks](/blog/react-hooks-tutorial/ "react hook tutorial"). There, we discussed the fundamentals of these Hooks and apply them in a real project.
 
-If you haven’t get started with React and its Hooks, please follow this [step by step guide to React](/blog/react-tutorial-for-beginners/ "react tutorial") and its [React Hooks version](/blog/react-hooks-tutorial/ "react hook tutorial").
+That is a good starting point if you are just getting started with React Hooks. However, in this guide, we aimed at solidifying our React Hooks foundation by working on another simple project called meme generator.
 
-After that, you can follow this simple meme generator project.
+To follow this guide, make sure you are familiar with React and Hooks. Else, go ahead and read this [step by step guide to React](/blog/react-tutorial-for-beginners/ "react tutorial") and its [React Hooks version](/blog/react-hooks-tutorial/ "react hook tutorial").
 
 Ok. If you are ready, let’s dive in.
 

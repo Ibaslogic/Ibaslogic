@@ -31,7 +31,7 @@ const Footer = () => {
         </p>
         <div className={footerStyles.social}>
           <span className={footerStyles.checkMe}>
-            Follow me on my social pages
+            Follow me for more updates
           </span>
           <ul className={footerStyles.socialList}>
             <li className={footerStyles.socialItem}>

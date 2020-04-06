@@ -49,6 +49,7 @@ $max-width: 72rem;
     margin: 0;
 
     @media screen and (min-width: 600px) {
+      font-size: 21px;
       padding: 30px 10px;
     }
   }
@@ -73,7 +74,6 @@ $max-width: 72rem;
   font-weight: 300;
   margin-bottom: 50px;
   padding-top: 30px;
-  opacity: 0.6;
 
   @media screen and (min-width: 768px) {
     font-size: 1.8rem;
