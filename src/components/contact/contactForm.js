@@ -17,7 +17,7 @@ const ContactForm = () => {
   return (
     <div className={contactTopStyles.topContainer}>
       <p className={contactTopStyles.inTouch}>
-        Get in touch using the form below.
+        Get in touch using the form below
       </p>
       <div className={contactTopStyles.mainContent}>
         <p className={contactTopStyles.connect}>

@@ -19,12 +19,12 @@ $body-color: #1a1a1a;
   }
 }
 .wrap {
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
 
   @media screen and (min-width: 768px) {
-    padding-top: 4.15rem;
-    padding-bottom: 5rem;
+    // padding-top: 4.15rem;
+    padding-bottom: 3.7rem;
     flex-direction: row;
   }
 }
