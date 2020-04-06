@@ -1,6 +1,6 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #1a1a1a; // rgb(12, 52, 75);
+$nav-link: #464646;
 $content-max-width: 72rem;
 
 // mixins
@@ -18,12 +18,10 @@ $content-max-width: 72rem;
   height: 4rem;
   color: $main-white;
   position: fixed;
-  z-index: 9; //100;
+  z-index: 9;
   width: 100%;
   top: 0;
   left: 0;
-  // -webkit-box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
-  // box-shadow: 0 29px 60px 0 rgba(54, 57, 73, 0.09);
   -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
 }
@@ -52,7 +50,6 @@ $content-max-width: 72rem;
   color: $nav-link;
   margin-left: 0;
   letter-spacing: -0.03em;
-  // font-weight: 600;
   text-transform: capitalize;
   text-decoration: none;
   @include transition;
@@ -100,7 +97,6 @@ $content-max-width: 72rem;
     }
 
     &:hover {
-      //opacity: 1;
       &::after {
         opacity: 1;
       }
@@ -152,13 +148,8 @@ $content-max-width: 72rem;
 .menu-nav {
   position: fixed;
   top: 0;
-  // font-family: "Roboto", "Helvetica Neue", sans-serif;
-  // opacity: 0.9;
-  // display: flex;
-  // flex-flow: column wrap;
   max-width: 300px;
   width: 70%;
-  //overflow: hidden;
   overflow-y: scroll;
   background: $header-bg-color;
   right: 0;
@@ -167,17 +158,14 @@ $content-max-width: 72rem;
   margin: 0;
   padding: 4rem 0 0;
   text-align: center;
-  //list-style: none;
   z-index: -1; //102;
   visibility: hidden;
-  //display: none;
   transform: translate3d(100%, 0, 0);
   @include transition;
   list-style: none;
 
   &.show-nav {
     visibility: visible;
-    //display: block;
     transform: translate3d(0, 0, 0);
   }
 
