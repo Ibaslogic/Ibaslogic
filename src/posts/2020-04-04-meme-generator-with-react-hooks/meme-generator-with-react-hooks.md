@@ -242,7 +242,7 @@ As you can see, this Hook accepts a function that defines the side effect to run
 
 By default, it runs not only after the first render but also after every update – i.e when there is a prop or state changes.
 
-In our code, a change occur. The `setAllMemeImgs` function updates its state variable when the data is fetched from the endpoint. Thereby causing the Hook to run continuously.
+In our code, a change occurs. The `setAllMemeImgs` function updates its state variable when the data is fetched from the endpoint. Thereby causing the Hook to run continuously.
 
 So, we have the responsibility to control it to the logic we want. Remember, we want to replicate the logic of the `componentDidMount` which should only run once it fetches data for the first time.
 

@@ -418,7 +418,7 @@ What’s happening?
 
 Unlike `componentDidMount` lifecycle that only runs once it fetches data for the first time, the `useEffect` Hook by default runs not only after the first render but also after every update – i.e when there is a prop or state changes.
 
-In our code, the `todos` state variable is being updated when the data is fetched from the endpoint. Thereby causing an infinite loop.
+In our code, a change occurs. The `todos` state variable is being updated through the `setTodos` function when the data is fetched from the endpoint. Thereby causing an infinite loop.
 
 _This is happening because the Hook combines different lifecycle logic. It is our responsibility to control it to the logic we want._
 
