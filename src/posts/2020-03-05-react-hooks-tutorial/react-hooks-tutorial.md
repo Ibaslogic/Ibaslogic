@@ -412,7 +412,7 @@ If you save the file and take a look at the console once again, you will see tha
 
 <br />
 
-![useEffect Hook](./images/useeffect.gif)
+![useEffect Hook](./images/use-effect.gif)
 
 What’s happening?
 
