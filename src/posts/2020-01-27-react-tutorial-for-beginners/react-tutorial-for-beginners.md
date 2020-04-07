@@ -52,15 +52,13 @@ Now let's get started.
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs from a small and isolated snippet of code.
 
-In some quarters, React is often called a framework because of its behaviour and capabilities.
-
-But technically, it is a library. Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
+In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library. Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
 
 Let’s take a step backwards.
 
 I mentioned that it allows developers to create complex UI from an isolated snippet of code.
 
-What does this mean?
+What does that mean?
 
 To understand better, you need to start thinking in React Component.
 
