@@ -434,9 +434,9 @@ useEffect(() => {
 }, []);
 ```
 
-This allows us to skip applying an effect if the specified values (passed-in) haven’t changed between re-renders.
+By specifying this array, we can control whether or not the effect should re-run. If we pass-in variable(s), the effect will only re-run if its value(s) changes between re-renders. Else, it will skip applying the effect.
 
-If you pass an empty array instead, React will only execute the Hook once because no data is changing.
+But if we pass an empty array, React will only execute the effect once because no data is changing.
 
 Taking a closer look at this, we have the equivalent of `componentDidMount` when the array is empty and `componentDidUpdate` when it includes variable(s) that will trigger re-rendering.
 
