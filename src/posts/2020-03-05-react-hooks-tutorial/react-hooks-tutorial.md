@@ -216,7 +216,7 @@ If you are vigilant, you’d ask yourself why we are not using the `e.target.nam
 
 Now read carefully.
 
-In our code, we are assigning a string to the query variable through the `useState`. This is the simplest use case of the Hook.
+In our code, we are assigning a string to the `title` state variable through the `useState`. This is the simplest use case of the Hook.
 
 With this setup, you can only manage an input field in a function call. If you add more fields, you’ll need to define a separate `useState` Hook and a function to manage it.
 
