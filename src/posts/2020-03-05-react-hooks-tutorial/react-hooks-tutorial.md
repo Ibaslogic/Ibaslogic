@@ -463,7 +463,7 @@ Starting with the `componentDidUpdate`,
 
 Remember that component gets updated when there is/are state or prop changes, thereby trigger re-rendering.
 
-If you take a look at the `src/components/Header.js` file, we are using this lifecycle method to update the DOM when there is prop change. This happens every time the checkbox is clicked.
+If you take a look at the `src/components/Header.js` file, we are using this lifecycle method to update the DOM whenever there is prop change. This happens every time the checkbox is clicked.
 
 To apply this logic using the Hook,
 
@@ -502,7 +502,7 @@ Import the `useEffect` from the `react` module like so:
 import React, { useEffect } from "react"
 ```
 
-Then add this Hook in your `Header` component (at the top level):
+Then add this Hook in your `Header` component (above the `return` statement):
 
 ```js
 useEffect(() => {
@@ -566,7 +566,7 @@ If you save your file and check the console, you should see this:
 
 ![useref initial mount](./images/useref-initial-mount.png)
 
-The `useRef` Hook returns an object containing the `current` property. This property is assigned a value equal to the argument we passed to the Hook.
+The `useRef` Hook returns an object containing the `current` property. This property holds the value we passed to the Hook.
 
 This is good because we can track whether we are on the first render or subsequent render.
 
@@ -675,7 +675,13 @@ Save the file.
 
 Now let’s apply the Unmount logic.
 
-In the `TodoItem` component, add the following code above the `return` statement.
+In the same file, import the `useEffect` like so:
+
+```js
+import React, { useEffect } from "react"
+```
+
+Then, add the following code above the `return` statement.
 
 ```js
 useEffect(() => {
