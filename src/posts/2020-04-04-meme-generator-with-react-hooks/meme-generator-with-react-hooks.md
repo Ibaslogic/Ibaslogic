@@ -217,7 +217,7 @@ We have covered much of this in the [React Hooks guide](/blog/react-hooks-tutori
 
 Let’s see how to apply it in our application.
 
-Back in your `src/components/MemeGenerator.js` file, import `useEffect` Hook from the react module.
+Back in your `src/components/MemeGenerator.js` file, import `useEffect` Hook from the `react` module.
 
 ```js
 import React, { useState, useEffect } from "react"
@@ -234,7 +234,7 @@ useEffect(() => {
 })
 ```
 
-If you save the file and visit the console. You’ll see that this Hook is running infinitely.
+If you visit the console, you’ll see that this Hook is running infinitely.
 
 What’s happening?
 

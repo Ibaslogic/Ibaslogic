@@ -129,7 +129,7 @@ React has several optional lifecycle methods, of which some are deprecated. But 
 
 **componentDidUpdate()** – This is called immediately after updating occurs.
 
-**componentWillUnmount()** – This is called immediately before a component is unmounted or destroyed.
+**componentWillUnmount()** – This is called just before a component is unmounted or destroyed.
 
 ### The componentDidMount() method
 
