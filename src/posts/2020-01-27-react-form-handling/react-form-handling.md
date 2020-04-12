@@ -3,7 +3,7 @@ title: "React Tutorial: Getting Started with React Form and Event Handling"
 description: "Form handling in React works a bit different compared to the regular HTML form that is handled by the DOM. In this step-by-step guide, you will learn how to successfully handle form in React."
 category: "React"
 datePublished: "2020-01-27 10:29:00"
-dateUpdated: "2020-03-13 10:29:00"
+dateUpdated: "2020-04-12 10:29:00"
 featured: "./images/react-form-handling.png"
 tags:
   - react
@@ -727,10 +727,10 @@ To use these ids in your app, you need to import the UUID in the `TodoContainer.
 So, add this line below the list of the `import` statements.
 
 ```JavaScript
-import uuid from "uuid";
+import { v4 as uuidv4 } from "uuid";
 ```
 
-Then, replace any hardcoded `id` value with `uuid.v4()`.
+Then, replace any hardcoded `id` value with `uuidv4()`.
 
 For instance, instead of having:
 
@@ -741,7 +741,7 @@ id: 1,
 You’ll have:
 
 ```js
-id: uuid.v4(),
+id: uuidv4(),
 ```
 
 Do the same for the other ids.
