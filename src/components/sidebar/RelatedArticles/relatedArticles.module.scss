@@ -1,3 +1,5 @@
+$link-color: #ea4812;
+
 .listContainer {
   font-size: 16px;
   ul {
@@ -20,7 +22,7 @@
       }
       &:hover,
       &:focus {
-        color: #ff7a59;
+        color: $link-color;
       }
     }
   }
