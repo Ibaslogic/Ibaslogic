@@ -2,6 +2,7 @@
   transition: all 0.5s ease-out;
 }
 $max-width: 72rem;
+$link-color: #ea4812;
 
 .container {
   background-color: #fff;
@@ -173,7 +174,7 @@ $max-width: 72rem;
     }
 
     &:hover {
-      color: #ff7a59;
+      color: $link-color;
     }
     a {
       color: inherit;

@@ -18,7 +18,8 @@ $heading-font: "Roboto", "Nunito", "Muli", "Segoe UI", "Helvetica Neue",
   sans-serif;
 
 $home-bg-banner: #282c34;
-$link-color: #ff7a59;
+$link-color: #ea4812; //#ff7a59;
+//$secondary-link-color: #ea4812;
 
 // mixins
 @mixin transition {
@@ -167,7 +168,7 @@ li > code {
   background: #f0f0f0 !important;
   color: #ea4812;
   text-shadow: none;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 :not(pre) > code[class*="language-"],
@@ -176,7 +177,7 @@ p > code,
 li > code,
 p > a > code,
 li > a > code {
-  padding: 0 3px !important;
+  padding: 1px 6px !important;
   word-break: break-word;
 }
 
@@ -207,13 +208,23 @@ li > a > code {
   padding-left: 28px;
 }
 
-.gatsby-highlight {
+.gatsby-highlight,
+blockquote {
   overflow: auto;
   margin: 2rem -15px;
+  border-radius: 0;
 
   @media screen and (min-width: 600px) {
     margin: 2rem 0px;
     border-radius: 0.3em;
+  }
+  @media screen and (min-width: 960px) {
+    margin: 2rem -25px;
+    border-radius: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 2rem -30px;
+    border-radius: 0;
   }
 }
 
@@ -273,7 +284,7 @@ blockquote .gatsby-highlight + p {
       display: block;
       width: 41px;
       height: 2px;
-      background: #ff7a59;
+      background: $link-color;
       position: absolute;
       bottom: -12px;
       left: 0px;

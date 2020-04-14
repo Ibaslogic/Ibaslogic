@@ -2,6 +2,7 @@ $content-max-width: 72rem;
 $primary-color: #3c4043;
 $body-color: #1a1a1a;
 $main-white: #fff;
+$link-color: #ea4812;
 
 @mixin transition {
   -webkit-transition: all 0.3s ease-in-out;
@@ -150,7 +151,8 @@ $main-white: #fff;
     border-radius: 2px;
     background-color: #fff;
     -webkit-box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09); // rgba(54, 57, 73, 0.09);
-    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09), inset 0 -1px 0 0 #ff7a59;
+    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09),
+      inset 0 -1px 0 0 $link-color;
     z-index: 8;
     overflow: hidden;
 
@@ -186,14 +188,14 @@ $main-white: #fff;
 
     &:hover {
       background-color: #f6f8f9; // #20232a;
-      color: #ff7a59;
+      color: $link-color;
       opacity: 0.8;
     }
 
     &.selected {
       background-color: #f6f8f9; // #20232a;
       opacity: 0.8;
-      color: #ff7a59;
+      color: $link-color;
     }
   }
 }
@@ -296,7 +298,7 @@ $main-white: #fff;
   a {
     color: #26282d;
     &:hover {
-      color: #ff7a59;
+      color: $link-color;
       text-decoration: underline;
     }
   }
@@ -308,6 +310,6 @@ $main-white: #fff;
     height: 6px;
     left: -23px;
     top: 9px;
-    background: #ff7a59;
+    background: $link-color;
   }
 }

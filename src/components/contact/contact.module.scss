@@ -6,6 +6,7 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
 }
 
 $max-width: 72rem;
+$link-color: #ea4812;
 
 .heading {
   text-align: center;
@@ -84,7 +85,7 @@ $max-width: 72rem;
     transition: all 0.3s ease-out;
     text-decoration: underline;
     &:hover {
-      color: #ff7a59;
+      color: $link-color;
     }
   }
 }
@@ -139,7 +140,7 @@ $max-width: 72rem;
 
     &:focus {
       border-color: rgba(244, 79, 24, 0.12);
-      box-shadow: 0 2px 6px 0 rgba(#ff7a59, 0.12);
+      box-shadow: 0 2px 6px 0 rgba($link-color, 0.12);
     }
   }
 
@@ -171,8 +172,8 @@ $max-width: 72rem;
 }
 
 .submit-button {
-  background: #ff7a59;
-  border: 1px solid #ff7a59 !important;
+  background: $link-color;
+  border: 1px solid $link-color !important;
   color: #fff;
   padding: 0.8em 1.5em !important;
   border-radius: 3px;

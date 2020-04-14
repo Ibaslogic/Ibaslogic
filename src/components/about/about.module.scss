@@ -3,6 +3,7 @@
 }
 
 $max-width: 72rem;
+$link-color: #ea4812;
 // About Hero
 
 .about-hero {
@@ -28,10 +29,10 @@ $max-width: 72rem;
   flex-flow: column-reverse;
 
   .field-submit {
-    background-color: #ff7a59;
+    background-color: $link-color;
 
     &:hover {
-      background: rgba(#f44f18, 0.8);
+      background: rgba($link-color, 0.8);
       color: #fff;
     }
   }
@@ -70,7 +71,7 @@ $max-width: 72rem;
     display: block;
     width: 4.75rem;
     height: 2px;
-    background: #ff7a59;
+    background: $link-color;
     position: absolute;
     bottom: -1.5rem;
     left: 50%;
@@ -267,8 +268,8 @@ $max-width: 72rem;
 }
 .field-submit {
   color: #fff;
-  background-color: #ff7a59;
-  border: 1px solid #ff7a59;
+  background-color: $link-color;
+  border: 1px solid $link-color;
   font-size: 1.2rem;
   text-transform: capitalize;
   font-weight: 400;

@@ -2,6 +2,7 @@ $header-bg-color: #ffffff;
 $main-white: #fff;
 $nav-link: #464646;
 $content-max-width: 72rem;
+$link-color: #ea4812;
 
 // mixins
 @mixin transition {
@@ -60,7 +61,7 @@ $content-max-width: 72rem;
   }
 
   &:hover {
-    color: #ff7a59;
+    color: $link-color;
     @media screen and (min-width: 768px) {
       opacity: 1;
       color: $nav-link;
@@ -68,7 +69,7 @@ $content-max-width: 72rem;
   }
 
   &.active-nav-item {
-    color: #ff7a59;
+    color: $link-color;
     @media screen and (min-width: 768px) {
       opacity: 1;
       color: $nav-link;
