@@ -2,6 +2,7 @@ $content-max-width: 72rem;
 $link-color: #f44f18;
 $main-white: #fff;
 $body-color: #1a1a1a;
+$heading-color: #111;
 
 @mixin transition {
   transition: all 0.5s ease-out;
@@ -229,7 +230,7 @@ $body-color: #1a1a1a;
     line-height: 1.3777em;
     margin-bottom: 1.8rem;
     font-weight: 600;
-    color: inherit;
+    color: $heading-color;
   }
 }
 

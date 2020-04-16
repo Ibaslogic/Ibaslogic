@@ -8,7 +8,7 @@
 // Variables
 $primary-color: #464646; //#1a1a1a;
 $header-bg-color: #20232a;
-$header-color: $primary-color;
+$header-color: #111;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
@@ -110,7 +110,7 @@ h6 {
 
 h2 a,
 h2 a:hover {
-  color: #202124;
+  color: $header-color;
 }
 
 blockquote {
@@ -166,7 +166,7 @@ pre[class*="language-"] :not(pre) > code,
 p > code,
 li > code {
   background: #f0f0f0 !important;
-  color: #ea4812;
+  color: #111;
   text-shadow: none;
   border-radius: 2px;
 }
