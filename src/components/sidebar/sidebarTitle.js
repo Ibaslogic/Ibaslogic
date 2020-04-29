@@ -4,7 +4,7 @@ const styles = {
   fontSize: "20px",
   lineHeight: "1.666666666667em",
   fontWeight: "700",
-  borderBottom: "solid #f0f0f0 1px",
+  borderBottom: "solid #dfdfdf 1px",
   paddingBottom: "1.25rem",
   marginBottom: "-0.0625rem",
   // color: "#ff7a59",

@@ -1,4 +1,5 @@
 $link-color: #ea4812;
+$sidebar-bg-color: #edeff1;
 
 .listContainer {
   font-size: 16px;
@@ -7,7 +8,7 @@ $link-color: #ea4812;
     padding: 12px 17px;
     font-size: 15px;
     line-height: 28px;
-    background-color: #fff;
+    background-color: $sidebar-bg-color;
     a {
       color: inherit;
       .hot {
@@ -17,7 +18,7 @@ $link-color: #ea4812;
         height: 14px;
         margin-right: 10px;
         svg {
-          margin-bottom: -5px;
+          margin-bottom: -2px;
         }
       }
       &:hover,
@@ -36,4 +37,12 @@ $link-color: #ea4812;
   @media screen and(min-width: 1200px) {
     margin-bottom: 12px;
   }
+}
+
+.image-container {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: -1px;
 }

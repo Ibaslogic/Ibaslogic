@@ -3,15 +3,16 @@
   transition: all 0.3s ease-out;
 }
 
-$body-color: #1a1a1a;
+$body-color: #464646;
 $main-white: #fff;
 $link-color: #ea4812;
+$sidebar-bg-color: #edeff1;
 
 .recent-posts {
   border: solid #f0f0f0 1px;
   margin: 0 0 3.4rem 0;
-  color: #33475b;
-  background-color: $main-white;
+  // color: #33475b;
+  background-color: $sidebar-bg-color;
 
   h3 {
     margin: 1.25rem 17px 0rem;
@@ -72,7 +73,7 @@ $link-color: #ea4812;
   border: 1px solid #f0f0f0;
   padding: 2rem 17px;
 
-  background: #fff;
+  background: $sidebar-bg-color;
   margin-bottom: 40px;
   font-size: 14px;
   font-weight: 300;
@@ -141,11 +142,11 @@ $link-color: #ea4812;
     }
 
     .emailInputContainer {
-      background: #fbfcfd;
+      // background: #fbfcfd;
       margin-bottom: 4px;
       .emailInput {
-        border: 1px solid #dadadb;
-        border-radius: 2px;
+        border: 1px solid #cbcbcc;
+        border-radius: 3px;
         padding: 0 20px;
       }
       @media screen and(min-width: 600px) {
@@ -158,7 +159,7 @@ $link-color: #ea4812;
     .submitInputContainer {
       .submitInput {
         border: 1px solid rgba($link-color, 1);
-        border-radius: 2px;
+        border-radius: 3px;
         &:hover {
           border: 1px solid rgba($link-color, 0.8);
           button {
@@ -180,7 +181,7 @@ $link-color: #ea4812;
 
   input,
   button {
-    height: 50px;
+    height: 34px;
     width: 100%;
     font-size: 15px;
     outline: none;
@@ -189,6 +190,7 @@ $link-color: #ea4812;
     border: none;
     border-radius: 2px;
     color: #444;
+    background: transparent;
   }
   button {
     background-color: rgba($link-color, 1);
@@ -228,10 +230,10 @@ $link-color: #ea4812;
   margin-top: -8px;
   text-align: left;
   font-size: 13px;
-  opacity: 0.5;
+  // opacity: 0.5;
   letter-spacing: 0.03rem;
-  font-weight: 400;
-  color: rgba($body-color, 0.9);
+  font-weight: 300;
+  color: $body-color;
   p {
     display: inline;
   }
