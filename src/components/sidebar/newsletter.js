@@ -102,7 +102,7 @@ const Newsletter = props => {
                   className="fieldSubmit"
                   type="submit"
                 >
-                  Yes, Please send me!
+                  Yes, I want to learn!
                 </button>
               </div>
             </div>
