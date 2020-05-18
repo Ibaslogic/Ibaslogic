@@ -62,9 +62,9 @@ const Newsletter = props => {
   return (
     <div className={newsletterStyles.sticky}>
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
-        <h3 className={newsletterStyles.title}>
+        <p className={newsletterStyles.title}>
           Do you want to <span style={{ fontWeight: "600" }}>learn</span> more?
-        </h3>
+        </p>
         <p className={newsletterStyles.description}>
           Get the next tutorial straight to your inbox and continue your dev
           journey!

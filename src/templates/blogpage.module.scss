@@ -117,12 +117,30 @@ $heading-color: #111;
     font-size: 2rem;
   }
 }
-.date-published {
+.post-meta {
   font-size: 0.77rem;
   line-height: 1.66667rem;
   font-weight: 300;
-  margin-bottom: 1.58333em;
+  margin-bottom: 2em;
   color: rgba($body-color, 0.6);
+}
+
+.author-avatar {
+  display: inline-block;
+  color: inherit;
+  img {
+    width: 35px;
+    max-width: 35px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 3px -10px 0;
+    display: inline-block;
+    border: 1px solid #eaeaea;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 .edit-post {
   svg {
@@ -156,12 +174,12 @@ $heading-color: #111;
   }
 }
 .entry-content {
-  line-height: 1.8em;
+  line-height: 1.68;
   font-weight: inherit;
   font-size: 1rem;
 
   @media screen and (min-width: 600px) {
-    font-size: 1.04rem;
+    font-size: 1.0305rem;
   }
 
   ol li {
@@ -208,7 +226,7 @@ $heading-color: #111;
   p,
   ul,
   ol {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   h2 {
     font-size: 1.5rem;
@@ -242,7 +260,7 @@ $heading-color: #111;
 .entry-content ul + h3,
 .entry-content h2,
 .entry-content h3 {
-  padding-top: 1.577em;
+  padding-top: 1em;
 }
 
 p img {
@@ -381,7 +399,7 @@ p img {
 .scroll-top {
   position: fixed;
   right: 8px;
-  bottom: 18px;
+  bottom: 30px;
   height: 50px;
   width: 50px;
   box-shadow: 0 4px 8px #dadce0;
@@ -408,8 +426,11 @@ p img {
     font-size: 16px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 768px) {
     right: 12px;
-    bottom: 38px;
+    bottom: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    bottom: 30px;
   }
 }

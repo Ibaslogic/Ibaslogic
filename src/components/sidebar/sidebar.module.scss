@@ -6,7 +6,7 @@
 $body-color: #464646;
 $main-white: #fff;
 $link-color: #ea4812;
-$sidebar-bg-color: #edeff1;
+$sidebar-bg-color: #fff; //#edeff1;
 
 .recent-posts {
   border: solid #f0f0f0 1px;
@@ -88,7 +88,7 @@ $sidebar-bg-color: #edeff1;
 
 .title {
   font-size: 1.3rem;
-  font-weight: bold;
+  // font-weight: bold;
   line-height: 1.11667;
   position: relative;
   margin-bottom: 1.2rem;
@@ -109,6 +109,9 @@ $sidebar-bg-color: #edeff1;
   @media screen and(min-width: 768px) {
     line-height: 1.02778;
   }
+  // @media screen and(min-width: 1200px) {
+  //   font-size: 1.5rem;
+  // }
 }
 
 .description {
@@ -143,7 +146,7 @@ $sidebar-bg-color: #edeff1;
 
     .emailInputContainer {
       // background: #fbfcfd;
-      margin-bottom: 4px;
+      margin-bottom: 1px;
       .emailInput {
         border: 1px solid #cbcbcc;
         border-radius: 3px;
@@ -158,12 +161,12 @@ $sidebar-bg-color: #edeff1;
     }
     .submitInputContainer {
       .submitInput {
-        border: 1px solid rgba($link-color, 1);
+        border: 1px solid rgba($link-color, 0.8);
         border-radius: 3px;
         &:hover {
-          border: 1px solid rgba($link-color, 0.8);
+          border: 1px solid rgba($link-color, 1);
           button {
-            background-color: rgba($link-color, 0.8);
+            background-color: rgba($link-color, 1);
             cursor: pointer;
           }
         }
@@ -181,7 +184,7 @@ $sidebar-bg-color: #edeff1;
 
   input,
   button {
-    height: 34px;
+    height: 40px;
     width: 100%;
     font-size: 15px;
     outline: none;
@@ -193,7 +196,7 @@ $sidebar-bg-color: #edeff1;
     background: transparent;
   }
   button {
-    background-color: rgba($link-color, 1);
+    background-color: rgba($link-color, 0.8);
     border: none;
     opacity: 1;
     color: #fff;

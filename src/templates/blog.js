@@ -6,6 +6,7 @@ import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
 import SocialShare from "../components/BlogPage/socialShare"
+import avatar from "../images/ibas_avartar.png"
 //import { BLOCKS } from "@contentful/rich-text-types"
 //import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import blogPageStyles from "./blogpage.module.scss"
@@ -85,8 +86,11 @@ const Blog = ({ data, pageContext }) => {
               <h1 className={blogPageStyles.title}>
                 {data.mdx.frontmatter.title}
               </h1>
-              <div className={blogPageStyles.datePublished}>
-                {" "}
+              <div className={blogPageStyles.postMeta}>
+                <Link to="/about/" className={blogPageStyles.authorAvatar}>
+                  <img src={avatar} alt="author avatar" /> by Ibas{" "}
+                  <span className={blogPageStyles.divider}></span>
+                </Link>
                 {datePublished === dateUpdated ? " Posted " : "Updated"} on{" "}
                 <span>{dateUpdated}</span>
                 <span className={blogPageStyles.divider}></span>

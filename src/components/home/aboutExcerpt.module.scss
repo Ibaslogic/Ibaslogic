@@ -29,7 +29,8 @@ $max-width: 72rem;
       flex-direction: row;
     }
     @media screen and (min-width: 960px) {
-      font-size: 1.04rem;
+      font-size: 1.15rem;
+      letter-spacing: -0.1px;
       padding-top: 3rem;
       padding-bottom: 0;
     }

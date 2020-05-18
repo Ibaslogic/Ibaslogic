@@ -1,9 +1,9 @@
 ---
 title: "React Tutorial: Getting Started with React Form and Event Handling"
-description: "Form handling in React works a bit different compared to the regular HTML form that is handled by the DOM. In this step-by-step guide, you will learn how to successfully handle form in React."
+description: "Form handling in React works a bit different compared to the regular HTML form. In this step-by-step guide, you will learn this in a simple way."
 category: "React"
 datePublished: "2020-01-27 10:29:00"
-dateUpdated: "2020-04-12 10:29:00"
+dateUpdated: "2020-05-17 10:29:00"
 featured: "./images/react-form-handling.png"
 tags:
   - react
@@ -61,7 +61,7 @@ You should be familiar with handling this type of input field in the regular HTM
 
 Let’s start by adding the input `checkbox` to our app.
 
-Inside of the `li` element, add this code just before the `{this.props.todo.title}` in the `TodoItem` component:
+Inside of the `li` element, add this `input` just before the `{this.props.todo.title}` in the `TodoItem` component:
 
 ```html
 <input type="checkbox" />
@@ -71,7 +71,7 @@ Save the file and see the checkboxes in the frontend.
 
 By default, the `input` type (i.e checkboxes) are being handled by the DOM – i.e they have the default HTML behaviour. That is why you can toggle the boxes.
 
-This type of input is called **uncontrolled input**. But in React, the input fields are meant to be **controlled**.
+This type of input is called **uncontrolled input**. This is not the case with React, the input fields are meant to be **controlled**.
 
 This takes us to another important subtopic.
 
@@ -79,11 +79,7 @@ This takes us to another important subtopic.
 
 To make the input field controllable, the input data (in this case, toggling of the checkbox) has to be handled by the component state and not the browser DOM.
 
-With this, the state will serve as a **single source of truth**.
-
-Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app.
-
-This is necessary because the component state will not change unless you change it.
+With this, the state will serve as a **single source of truth**. Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app. This is necessary because the component state will not change unless you change it.
 
 Let’s see how it works.
 
@@ -109,9 +105,7 @@ Now if you try to toggle any of the checkboxes, nothing will happen. This is bec
 
 Remember, only the first task is assigned to be completed.
 
-We need a way to change the state whenever users click on the checkboxes.
-
-React already gives us a hint through the Console tab of the browser DevTools.
+We need a way to change the state whenever users click on the checkboxes. React already gives us a hint through the Console tab of the browser DevTools.
 
 If you open it, you'll see a warning displayed as a result of the added `checked` attribute.
 
@@ -169,9 +163,7 @@ handleChange = () => {
 };
 ```
 
-You can name this method anything you like.
-
-Let’s see how we can communicate with this method from the child component.
+You can name this method anything you like. Let’s see how we can communicate with this method from the child component.
 
 Start by passing this method to the `TodosList` component through the props.
 
@@ -217,7 +209,7 @@ Let’s go a step further.
 
 We need to identify which one of the checkboxes is clicked. To do this, we need to pass along their respective `ids` through the callback function.
 
-Update the `onChange` handler in the `TodoItem` component to include the id.
+Update the `onChange` handler in the `TodoItem` component to include the `id`.
 
 ```jsx
 onChange={() => this.props.handleChangeProps(this.props.todo.id)}
@@ -353,9 +345,7 @@ At the moment, we are logging "deleted" text alongside the id of the deleted ite
 
 Up to this point, we are repeating what we did for the checkbox. If it's not clear, revisit the earlier explanation.
 
-Next, we will manipulate the state and remove any of the deleted items from the list.
-
-The way we do that is by using the `filter()` method.
+Next, we will manipulate the state and remove any of the deleted items from the list. The way we do that is by using the `filter()` method.
 
 This method is also a higher-order function just like the `map()` method. It returns a new array by applying a condition on every array element.
 
@@ -379,17 +369,13 @@ With the `filter()` method, we are saying that for each of the todos data that w
 
 > Please note the spread operator (`…`) in the code. It allows us to grab the current todos item(s) at every point. As this is necessary for the code to work.
 
-Save the file and test your application.
-
-You should be able to delete any item(s) on the list.
+Save the file and test your application. You should be able to delete any item(s) on the list.
 
 Moving on.
 
 ## Adding a text input field and a submit button
 
-In React, all the different types of input fields follow the same approach. We’ve seen how the checkbox type of input field works.
-
-Using the same pattern, we will add the text input field that will allow users to add todos items to the list.
+In React, all the different types of input fields follow the same approach. We’ve seen how the checkbox type of input field works. Using the same pattern, we will add the text input field that will allow users to add todos items to the list.
 
 Let’s start by adding the following code inside the empty `InputTodo.js` file:
 
@@ -475,9 +461,9 @@ So update it so you have:
 
 > **Note:** We use `checked` prop for the input checkbox and `value` prop for the text input.
 
-Now, the text input field is being controlled by the component state and not the DOM. You will not be able to write anything in the field because it is assigned a value equal to the current value of the state.
+Now, the text input field is being controlled by the component state and not the DOM. Hence, you will not be able to write anything in the field because it is assigned a value equal to the current value of the state.
 
-The value is empty as declared in the `state`.
+The value is empty as declared in the `state` object.
 
 To change the state, we need to update it through the `setState()` method.
 
@@ -503,9 +489,7 @@ Save your file.
 
 If you try to write in the input field, you’ll see "hello" text being displayed in response to every keystroke inside the console.
 
-Next, we need to handle the event and update the state.
-
-Let’s update the `onChange` method to this:
+Next, we need to handle the event and update the state. Let’s update the `onChange` method to this:
 
 ```JavaScript{2-4}
 onChange = e => {
@@ -515,9 +499,7 @@ onChange = e => {
 };
 ```
 
-Save the file. Now you should be able to write something in the input field.
-
-You will also see the state of your app in real-time if you open the React tools.
+Save the file. Now you should be able to write something in the input field. You will also see the state of your app in real-time if you open the React tools.
 
 ![Handling text field](./images/handlingTextField_.gif)
 
@@ -535,7 +517,7 @@ From there, you can target the specific input field and grab the updated value.
 
 ## Handling React form that has more than one text input field
 
-For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the state and assigned an empty string.
+For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the `state` and assigned an empty string.
 
 After that, you’ll have to modify the `onChange` method to this:
 
@@ -547,7 +529,7 @@ onChange = e => {
 };
 ```
 
-Then, you add a `name` attribute to each of the input tags and assigned a value with the same name you declared in the state. For instance, in our case, we will have the `name="title"` included in the text input tag.
+Then, you add a `name` attribute to each of the input tags and assigned a value with the same name you declared in the `state`. For instance, in our case, we will have the `name="title"` included in the text input tag.
 
 If you apply these changes in your code, your `InputTodo` component should look like this:
 
@@ -581,9 +563,7 @@ class InputTodo extends Component {
 export default InputTodo
 ```
 
-With these changes, you can add as many text input fields as you want.
-
-Instead of having multiple methods to handle different input fields, we modified the `setState()` method to this:
+With these changes, you can add as many text input fields as you want. Now,instead of having multiple methods to handle different input fields, we modified the `setState()` method to this:
 
 ```JavaScript
 [e.target.name]: e.target.value
@@ -758,7 +738,7 @@ Great! We are getting there.
 
 If you've made it this far, congratulations on your way to becoming a better React developer.
 
-So far, we've learned what React is and what we can do with it, what JSX is and why we use it to write React applications. We've also learned the types of React component, handling forms in React, raising and handling events.
+So far, we've learned what React is and what we can do with it, what JSX is and why we use it to write React applications. We've also learned the types of React component, handling simple form in React, raising and handling events.
 
 Next, we will learn how to implement CSS in React application.
 

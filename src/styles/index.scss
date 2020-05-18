@@ -1,8 +1,8 @@
 // Globals
 // ===================================================
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
-//@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
+//@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
 //@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap");
 
 // Variables
@@ -12,10 +12,8 @@ $header-color: #111;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
-$body-font: "Roboto", "Nunito", "Muli", "Helvetica Neue", Helvetica, "Segoe UI",
-  "Helvetica Neue", sans-serif;
-$heading-font: "Roboto", "Nunito", "Muli", "Segoe UI", "Helvetica Neue",
-  sans-serif;
+$body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+$heading-font: "Nunito", "Segoe UI", "Helvetica Neue", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #ea4812; //#ff7a59;
@@ -42,7 +40,7 @@ body {
   font-family: $body-font;
 
   @media screen and (min-width: 960px) {
-    background-color: #f5f5f5;
+    background-color: #fdfdfd;
   }
 }
 
