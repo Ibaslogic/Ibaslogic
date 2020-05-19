@@ -585,3 +585,5 @@ At this point, you can start working on a more complex project without having to
 If you have any difficulties, questions or contributions as regards this topic, please let me know.
 
 Finally, if you like this React context tutorial, endeavour to share this post around the web and make sure you subscribe to our newsletter to receiving more of this.
+
+### [Project Source Code on GitHub](https://github.com/Ibaslogic/react-context-api "render context project source code").
