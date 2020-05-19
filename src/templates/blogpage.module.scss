@@ -174,12 +174,13 @@ $heading-color: #111;
   }
 }
 .entry-content {
-  line-height: 30px;
+  line-height: 1.68;
   font-weight: inherit;
   font-size: 1rem;
 
   @media screen and (min-width: 600px) {
     font-size: 1.04rem;
+    line-height: 30px;
   }
 
   ol li {
