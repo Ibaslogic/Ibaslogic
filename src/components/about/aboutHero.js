@@ -12,14 +12,12 @@ const AboutHero = () => {
           <h1>
             {/* Want to build a modern <span className={aboutHeroStyles.nl}></span>{" "}
             web project? */}
-            Do you want to learn the latest{" "}
-            <span className={aboutHeroStyles.nl}></span> web technologies?
+            Do you want to learn the latest web tools and tech?
           </h1>
-          <h3 className={aboutHeroStyles.description}>
+          <p className={aboutHeroStyles.description}>
             Then you're in the right place. Here, you will learn how to apply
-            the tools <span className={aboutHeroStyles.nl}></span>and the
-            strategy needed for your next project.
-          </h3>
+            the tools and the strategy needed for your next project.
+          </p>
         </div>
         <div className={aboutHeroStyles.imageContent}>
           {/* <img src={authorImage} alt="Ibas Majid" /> */}

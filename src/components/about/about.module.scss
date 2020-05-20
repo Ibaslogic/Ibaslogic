@@ -2,7 +2,7 @@
   transition: all 0.3s ease-out;
 }
 
-$max-width: 72rem;
+$max-width: 70rem;
 $link-color: #ea4812;
 // About Hero
 
@@ -103,7 +103,7 @@ $link-color: #ea4812;
 }
 .banner-content {
   margin-bottom: 6rem;
-  max-width: 18rem;
+  // max-width: 18rem;
 
   @media screen and (min-width: 768px) {
     flex: 0 0 60%;
@@ -123,29 +123,39 @@ $link-color: #ea4812;
     line-height: 1.27647;
     font-weight: normal;
     margin-bottom: 1.5rem;
-    font-weight: normal;
+    font-weight: 700;
 
     @media screen and (min-width: 480px) {
       font-size: 2.4rem;
-      line-height: 1.14583em;
+      line-height: 1.04583em;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 430px;
     }
     @media screen and (min-width: 960px) {
       font-size: 3rem;
       letter-spacing: -0.03125rem;
+      max-width: 450px;
     }
   }
   .description {
     font-size: 1.1rem;
     font-weight: 300;
     margin-bottom: 1.667rem;
+    @media screen and (min-width: 768px) {
+      max-width: 430px;
+    }
+    @media screen and (min-width: 960px) {
+      max-width: 450px;
+    }
   }
 }
 
-.nl {
-  @media screen and (min-width: 960px) {
-    display: block;
-  }
-}
+// .nl {
+//   @media screen and (min-width: 960px) {
+//     display: block;
+//   }
+// }
 
 .about {
   background-color: #fff;

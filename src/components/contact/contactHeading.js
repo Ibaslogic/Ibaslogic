@@ -4,10 +4,14 @@ import contactHeadingStyles from "./contact.module.scss"
 const ContactHero = () => {
   return (
     <section className={contactHeadingStyles.heading}>
-      <h1>How can I help?</h1>
-      <h3>
-        Do you want to talk about your project? Or have a question for me?
-      </h3>
+      <div className={contactHeadingStyles.container}>
+        <h1 className={contactHeadingStyles.hero__title}>How can I help?</h1>
+        <p className={contactHeadingStyles.hero__subtitle}>
+          Want to talk about your project? Or maybe you have a question for me?
+          <span className={contactHeadingStyles.nl}></span> Get in touch using
+          the form below.
+        </p>
+      </div>
     </section>
   )
 }

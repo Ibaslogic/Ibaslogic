@@ -62,7 +62,7 @@ const BlogItems = props => {
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
           {/* categories filter */}
-          <h3 className={blogStyles.filterPosts}>
+          <p className={blogStyles.filterPosts}>
             <span className={blogStyles.filterPostsHeading}>
               I want to learn about
             </span>
@@ -105,7 +105,7 @@ const BlogItems = props => {
                 </ul>
               </div>
             </div>
-          </h3>
+          </p>
 
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {

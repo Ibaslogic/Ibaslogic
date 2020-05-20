@@ -1,8 +1,9 @@
-$content-max-width: 72rem;
+$content-max-width: 75rem;
 $link-color: #f44f18;
 $main-white: #fff;
 $body-color: #1a1a1a;
 $heading-color: #111;
+$main-aside-max-width: 730px;
 
 @mixin transition {
   transition: all 0.5s ease-out;
@@ -32,7 +33,7 @@ $heading-color: #111;
 
 .site-main {
   padding-bottom: 3.75rem;
-  max-width: 700px;
+  max-width: $main-aside-max-width;
   margin: 0 auto;
 
   img {
@@ -46,25 +47,25 @@ $heading-color: #111;
     padding: 25px;
     border: 1px solid #f0f0f0;
   }
-  @media screen and (min-width: 1280px) {
-    width: 65%;
-    max-width: 750px;
-    padding-left: 30px;
-    padding-right: 30px;
+  @media screen and (min-width: 1300px) {
+    width: 67%;
+    max-width: 780px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 .secondary-area {
   font-size: 0.825rem;
   letter-spacing: 0.25px;
-  max-width: 700px;
+  max-width: $main-aside-max-width;
   margin: 0 auto;
   @media screen and (min-width: 960px) {
     width: 30.134%;
     margin: 0;
   }
   @media screen and (min-width: 1280px) {
-    width: 30%;
+    width: 29%;
   }
 }
 
@@ -331,15 +332,18 @@ p img {
 
   .share-container {
     @media screen and (min-width: 960px) {
-      left: 62%;
+      left: 62.5%;
     }
-    @media screen and (min-width: 1280px) {
-      left: 10px;
+
+    @media screen and (min-width: 1300px) {
+      left: 6px;
       transform: translateX(-150%);
     }
-    @media screen and (min-width: 1300px) {
-      left: 17px;
+
+    @media screen and (min-width: 1340px) {
+      left: 15px;
     }
+
     position: fixed;
     top: 92px;
     text-align: center;
@@ -372,10 +376,10 @@ p img {
         &:hover {
           opacity: 0.8;
         }
-        @media screen and (min-width: 1300px) {
-          padding-left: 27px;
-          padding-right: 27px;
-        }
+        // @media screen and (min-width: 1300px) {
+        //   padding-left: 27px;
+        //   padding-right: 27px;
+        // }
       }
     }
   }

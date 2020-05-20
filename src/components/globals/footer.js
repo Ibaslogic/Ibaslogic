@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
+  FaEnvelope,
 } from "react-icons/fa"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
@@ -46,6 +47,13 @@ const Footer = () => {
                 start here
               </Link>
             </div>
+          </div>
+          <div className={footerStyles.support}>
+            <h3>Support</h3>
+            <p>
+              <FaEnvelope />{" "}
+              <a href="mailto:ibas@ibaslogic.com">ibas@ibaslogic.com</a>
+            </p>
           </div>
         </div>
         <div className={footerStyles.ftBottom}>
