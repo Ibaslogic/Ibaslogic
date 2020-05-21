@@ -34,6 +34,13 @@ $site-pry-color: #ea4812;
     margin-bottom: 20px;
   }
 
+  a {
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(5, 1fr);
     max-width: $content-max-width;

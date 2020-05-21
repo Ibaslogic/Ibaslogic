@@ -43,7 +43,7 @@ const Footer = () => {
               . Also welcomes suggestions to improve this web project.
             </p>
             <div className={footerStyles.startHere}>
-              <p>Don't know where to start? </p>
+              <p>Don't know where to start? Follow this Gatsby tutorial. </p>
               <Link to="/blog/gatsby-tutorial-from-scratch-for-beginners/">
                 start here
               </Link>
