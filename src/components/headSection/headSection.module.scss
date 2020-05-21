@@ -18,10 +18,14 @@ $body-font: "Roboto", "Nunito", "Muli", "Helvetica Neue", Helvetica, "Segoe UI",
   flex-direction: column;
 }
 .homePageHero {
-  background: #f8f9fa;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url("../../images/hero-desktop.jpg");
+  // background: #f8f9fa;
+  background-position: right;
+  // background-repeat: no-repeat;
+  background-image: url("../../images/home_hero.jpg");
+
+  @media screen and (min-width: 768px) {
+    background-position: left;
+  }
 }
 .errorPageHero {
   background: #ffffff;

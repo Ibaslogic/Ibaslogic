@@ -19,6 +19,7 @@ const Footer = () => {
           twitterHandle
           linkedin
           github
+          siteUrl
         }
       }
     }
@@ -49,11 +50,21 @@ const Footer = () => {
             </div>
           </div>
           <div className={footerStyles.support}>
-            <h3>Support</h3>
+            <h3>Mail me</h3>
             <p>
               <FaEnvelope />{" "}
               <a href="mailto:ibas@ibaslogic.com">ibas@ibaslogic.com</a>
             </p>
+          </div>
+          <div className={footerStyles.site}>
+            <h3>Site</h3>
+            <a
+              href={`${data.site.siteMetadata.siteUrl}/rss.xml`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RSS
+            </a>
           </div>
         </div>
         <div className={footerStyles.ftBottom}>
