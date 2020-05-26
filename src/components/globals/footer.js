@@ -31,7 +31,7 @@ const Footer = () => {
           <div className={footerStyles.openSource}>
             <h3>Open Source Project</h3>
             <p>
-              Use and modify (be creative){" "}
+              Use and modify{" "}
               <a
                 href={`https://github.com/${data.site.siteMetadata.github}/Ibaslogic`}
                 title="Open-source project"
@@ -39,12 +39,17 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 site source code
-              </a>
-              . Also welcomes suggestions to improve this web project.
+              </a>{" "}
+              (be creative). Also welcomes suggestions to improve this web
+              project.
             </p>
             <div className={footerStyles.startHere}>
-              <p>Don't know where to start? Follow this Gatsby tutorial. </p>
-              <Link to="/blog/gatsby-tutorial-from-scratch-for-beginners/">
+              <p>Don't know where to start? </p>
+              <Link
+                to="/blog/gatsby-tutorial-from-scratch-for-beginners/"
+                target="_blank"
+                title="Gatsby tutorial from scratch"
+              >
                 start here
               </Link>
             </div>

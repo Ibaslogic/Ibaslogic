@@ -121,7 +121,7 @@ $main-aside-max-width: 730px;
 .post-meta {
   font-size: 0.77rem;
   line-height: 1.66667rem;
-  font-weight: 300;
+  // font-weight: 300;
   margin-bottom: 2em;
   color: rgba($body-color, 0.6);
 }
@@ -130,18 +130,18 @@ $main-aside-max-width: 730px;
   display: inline-block;
   color: inherit;
   img {
-    width: 35px;
-    max-width: 35px;
+    width: 32px;
+    max-width: 32px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 50px;
     margin: 0 3px -10px 0;
     display: inline-block;
     border: 1px solid #eaeaea;
   }
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+  // &:hover,
+  // &:focus {
+  //   text-decoration: underline;
+  // }
 }
 .edit-post {
   svg {
