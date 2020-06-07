@@ -1,6 +1,6 @@
 ---
 title: "Handling Form Inputs in React – A Simple Step-by-Step Guide"
-description: "React form is fun and easy to work with. Let me show you how to handle multiple input fields with an onChange handler."
+description: "React form is fun and easy to work with. In this tutorial, you'll learn how to handle multiple input fields with an onChange handler."
 category: "React"
 datePublished: "2020-06-07 10:32:00"
 dateUpdated: "2020-06-07 10:32:00"
