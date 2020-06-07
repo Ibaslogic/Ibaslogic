@@ -3,7 +3,7 @@ title: "React Tutorial: Getting Started with React Form and Event Handling"
 description: "Form handling in React works a bit different compared to the regular HTML form. In this step-by-step guide, you will learn this in a simple way."
 category: "React"
 datePublished: "2020-01-27 10:29:00"
-dateUpdated: "2020-05-17 10:29:00"
+dateUpdated: "2020-05-25 10:29:00"
 featured: "./images/react-form-handling.png"
 tags:
   - react
@@ -43,9 +43,11 @@ url: "/blog/react-hooks-tutorial/"
 ]}
 />
 
-Now that you know some of the React fundamentals, let's dive deeper and explain the React form and event handling.
+Now that you know some of the React fundamentals, let's dive deeper and add form input fields to our Todos application. From there, we will get to understand how we can handle an event in React.
 
-Quick navigation – Overview of what you’ll learn in this part.
+[In this guide](/blog/simple-guide-to-react-form/ "react form"), I have covered everything you need to get started with React form input. Take a quick look and understand how it works.
+
+For quick navigation – See an overview of what you’ll learn in this part.
 
 <TableOfContents />
 
