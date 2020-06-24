@@ -1,7 +1,8 @@
 import React from "react"
 import aboutContentStyles from "./about.module.scss"
 import SubHeading from "../home/subHeading"
-import SubscribeSection from "./subscribeSection"
+import { Link } from "gatsby"
+// import SubscribeSection from "./subscribeSection"
 
 const AboutContent = () => {
   return (
@@ -9,78 +10,137 @@ const AboutContent = () => {
       <div
         className={`${aboutContentStyles.content} ${aboutContentStyles.wrapper}`}
       >
-        <div className={aboutContentStyles.headingWrap}>
-          <SubHeading title="About Ibaslogic" />
-        </div>
+        <div className={aboutContentStyles.mainContentWrapper}>
+          <div className={aboutContentStyles.mainContent}>
+            <div className={aboutContentStyles.headingWrap}>
+              <SubHeading title="How Ibaslogic Will Help Your Dev Knowledge" />
+            </div>
 
-        <div className={aboutContentStyles.staticContent}>
-          <p>
-            If you have ever wondered – "How can I learn and apply the latest
-            web technologies to build a real-world project?". You have come to
-            the right place.
-          </p>
-          <p>
-            I know how it feels to learn different technologies in isolation
-            without having a deeper understanding applying the knowledge to
-            build a modern project.
-          </p>
-          <p>I learned this the hard way.</p>
-          <p>So you shouldn’t follow the same route.</p>
-          <p>
-            Instead, in this blog, I will show you the best way to learn web
-            development – The project-based learning method. This has proven to
-            work tremendously for my students.
-          </p>
-          <p>You will be able to learn web development in no distant time.</p>
-          <p>So stick around as we both learn together! </p>
-        </div>
-      </div>
-      <SubscribeSection />
-      <div
-        className={`${aboutContentStyles.content} ${aboutContentStyles.wrapper}`}
-      >
-        <div className={aboutContentStyles.headingWrap}>
-          <SubHeading title="Who is Ibas?" />
-        </div>
-        <div className={aboutContentStyles.staticContent}>
-          <p>
-            <strong>Ibas Majid</strong> is a web developer, teacher and a
-            creative writer. He specializes in developing realistic websites and
-            web applications using the latest tools and tech. He also writes
-            technical contents around this subject.
-          </p>
-          <p>
-            He authored{" "}
-            <em>
-              <u>
+            <div className={aboutContentStyles.staticContent}>
+              <p>
+                Are you finding it hard to complete a real-world web project?{" "}
+              </p>
+              <p>
+                Most beginners get trapped in the common pitfalls of learning
+                web languages and technologies in isolation without having a
+                deeper understanding to apply the knowledge and build a modern
+                project.
+              </p>
+              <p>I learned this the hard way.</p>
+              <p>
+                So you shouldn’t follow the same route. Instead, you should{" "}
+                <strong>start learning in a project-based method</strong>.
+              </p>
+              <p>
+                And that is where Ibaslogic comes in. Through easy to follow
+                guides, you’ll learn how to connect the dots (web technologies)
+                and complete a real-world web application.
+              </p>
+              <p>
+                This way, you can easily see how the dev topics are connected to
+                form a solution. Thus, you’ll not only appreciate what you are
+                learning, but you’ll also retain the knowledge easily.
+              </p>
+              <p>This has proven to work best!</p>
+              <p>
+                So stick around as you take your dev knowledge to another level.
+              </p>
+              <p>
+                Oh, while you are here, make sure you get my free React Book and
+                start building awesome projects.
+              </p>
+              <p>
+                Also, I advise you take a look at these practical guides for a
+                quick start:
+              </p>
+              <h3>Practical Guides to Help You Get Started:</h3>
+              <ul>
+                <li>
+                  <Link
+                    to="/blog/react-tutorial-for-beginners/"
+                    target="_blank"
+                    title="React tutorial"
+                  >
+                    A Step-by-Step Guide to Learning React JS in 2020
+                  </Link>{" "}
+                </li>
+                <li>
+                  <Link
+                    to="/blog/gatsby-tutorial-from-scratch-for-beginners/"
+                    target="_blank"
+                    title="Gatsby tutorial"
+                  >
+                    Gatsby Tutorial: A Step-by-Step Guide to Building a Gatsby
+                    Site from Scratch
+                  </Link>{" "}
+                </li>
+              </ul>
+              <p>
+                Once you have the basic understanding of React and Gatsby, you
+                can take a look at{" "}
                 <a
-                  href="https://www.amazon.com/React-Beginner-Developers-step-step/dp/1704461618/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1576879707&sr=8-1"
+                  href="https://github.com/ibaslogic/Ibaslogic"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Open source project"
                 >
-                  Easy React JS for Beginner Developers
+                  my site source code on GitHub
                 </a>
-              </u>
-            </em>{" "}
-            and some other books which are available on Amazon.
-          </p>
-          <p>
-            Ibas currently teaches JavaScript, React, Gatsby and WordPress theme
-            development. And he has helped companies of different sizes launch
-            their production websites/apps. He has a Computer Engineering degree
-            from the University of Lagos, and he has been programming for about
-            9 years.
-          </p>
-          <p>
-            In this blog, he will be sharing with you all the dev knowledge he
-            acquired thus far. You will also learn all the simple logic to
-            easily grasp web technologies.
-          </p>
-          <p>
-            While you’re here, make sure you sign up for free updates to learn
-            all the tips and tricks that will boost your web development
-            knowledge.
-          </p>
+                . It’s open-sourced for use and modifications.
+              </p>
+            </div>
+
+            <div className={aboutContentStyles.headingWrap}>
+              <SubHeading title="Who is Ibas?" />
+            </div>
+            <div className={aboutContentStyles.staticContent}>
+              <p>
+                Ibaslogic was developed by Ibas Majid, a self-taught web
+                developer and a writer.
+              </p>
+              <p>
+                Prior to building this site with Gatsby, I had no knowledge of
+                the requisite tech to complete this project – i.e React, GrapQL,
+                NodeJS and of course GatsbyJS.
+              </p>
+              <p>
+                In fact, I had little knowledge of JavaScript which is also a
+                prerequisite. Back then, I was working majorly on WordPress
+                sites.
+              </p>
+              <p>
+                My love for Gatsby fast-tracked my dev journey because it served
+                as a turning point to go into the “real” web dev. And in no
+                distant time, through project-based learning, I acquired enough
+                knowledge on the subject.
+              </p>
+              <p>
+                Now, I teach JavaScript, React, Gatsby and WordPress theme
+                development. And I have helped companies of different sizes
+                launch their production websites/apps.
+              </p>
+              <p>
+                In this blog, I will be sharing with you all the dev knowledge
+                and strategy I acquired thus far. So make sure you sign up for
+                free updates and follow me around the web.
+              </p>
+              <p>
+                <strong>
+                  <em>
+                    <a
+                      href="https://twitter.com/ibaslogic"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Follow me on Twitter"
+                    >
+                      Connect with Ibas on Twitter
+                    </a>
+                  </em>
+                </strong>
+                .
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

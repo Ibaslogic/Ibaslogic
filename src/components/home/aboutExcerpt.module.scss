@@ -47,15 +47,16 @@ $max-width: 75rem;
         position: absolute;
         height: 13.75rem;
         border-right: 1px dashed #000;
-        bottom: -69px;
+        bottom: -7px;
         right: 0px;
         @media screen and (min-width: 960px) {
-          height: 429px;
-          top: -170px;
+          height: 240px;
+          top: -25px;
           z-index: 1;
         }
         @media screen and (min-width: 1120px) {
-          height: 407px;
+          top: -100px;
+          height: 300px;
         }
       }
     }

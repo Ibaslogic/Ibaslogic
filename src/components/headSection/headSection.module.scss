@@ -6,7 +6,7 @@
 }
 $link-color: #ea4812;
 
-$body-font: "Roboto", "Nunito", "Muli", "Helvetica Neue", Helvetica, "Segoe UI",
+$head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   "Helvetica Neue", sans-serif;
 
 .homePageHero,
@@ -44,9 +44,9 @@ $body-font: "Roboto", "Nunito", "Muli", "Helvetica Neue", Helvetica, "Segoe UI",
 .title {
   font-size: 2rem;
   margin-bottom: 1.1rem;
-  font-family: $body-font;
+  font-family: $head-font;
   line-height: 1.17647;
-  font-weight: normal;
+  font-weight: 600;
   max-width: 34em;
   margin-right: auto;
   margin-left: auto;

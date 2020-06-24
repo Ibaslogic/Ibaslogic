@@ -45,11 +45,7 @@ const Footer = () => {
             </p>
             <div className={footerStyles.startHere}>
               <p>Don't know where to start? </p>
-              <Link
-                to="/blog/gatsby-tutorial-from-scratch-for-beginners/"
-                target="_blank"
-                title="Gatsby tutorial from scratch"
-              >
+              <Link to="/about/" target="_blank" title="About Ibaslogic">
                 start here
               </Link>
             </div>
@@ -71,14 +67,10 @@ const Footer = () => {
               RSS
             </a>
           </div>
-        </div>
-        <div className={footerStyles.ftBottom}>
-          <p className={footerStyles.copy}>
-            Designed and developed by {data.site.siteMetadata.author} &copy;{" "}
-            {new Date().getFullYear().toString()}
-          </p>
+
           <div className={footerStyles.social}>
-            <span className={footerStyles.checkMe}>Connect with Ibas</span>
+            {/* <h3 className={footerStyles.checkMe}>Connect</h3> */}
+            <h3>Connect</h3>
             <ul className={footerStyles.socialList}>
               <li className={footerStyles.socialItem}>
                 <a
@@ -110,6 +102,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+        <div className={footerStyles.ftBottom}>
+          <p className={footerStyles.copy}>
+            Designed and developed by {data.site.siteMetadata.author} &copy;{" "}
+            {new Date().getFullYear().toString()}
+          </p>
         </div>
       </div>
     </footer>

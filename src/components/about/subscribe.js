@@ -59,10 +59,10 @@ class Subscribe extends Component {
       <>
         <div className={aboutContentStyles.formContent}>
           <h2 className={aboutContentStyles.heading}>{this.props.heading}</h2>
-          <h4 className={aboutContentStyles.description}>
+          <p className={aboutContentStyles.description}>
             {this.props.subHeading}
             {/* Then hop on the newsletter and get free tips and tricks. */}
-          </h4>
+          </p>
         </div>
 
         <form onSubmit={this._handleFormSubmit} method="post" noValidate>

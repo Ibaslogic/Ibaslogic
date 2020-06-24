@@ -1,5 +1,6 @@
 import React from "react"
 import aboutHeroStyles from "./about.module.scss"
+import Subscribe from "./subscribe"
 // import authorImage from "../../images/ibas.png"
 
 const AboutHero = () => {
@@ -9,17 +10,18 @@ const AboutHero = () => {
         className={`${aboutHeroStyles.contentWrapper} ${aboutHeroStyles.wrapper}`}
       >
         <div className={aboutHeroStyles.bannerContent}>
-          <h1>
-            {/* Want to build a modern <span className={aboutHeroStyles.nl}></span>{" "}
-            web project? */}
-            Do you want to learn the latest web tools and tech?
-          </h1>
+          <h1>New here? Here is how I can help!</h1>
           <p className={aboutHeroStyles.description}>
-            Then you're in the right place. Here, you will learn how to apply
-            the tools and the strategy needed for your next project.
+            I will show you how to easily grasp web languages, tools and
+            strategy needed to complete a real-world project.
           </p>
         </div>
-        <div className={aboutHeroStyles.imageContent}>
+        <div className={aboutHeroStyles.subscribeContent}>
+          <Subscribe
+            subHeading="Get my ReactJS Book for FREE (Worth $9.99) and start building web projects you’d be happy to share."
+            submitText="Yes, I want"
+          />
+
           {/* <img src={authorImage} alt="Ibas Majid" /> */}
         </div>
       </div>
