@@ -47,15 +47,15 @@ Now that you know some of the React fundamentals, let's dive deeper and add form
 
 [In this guide](/blog/simple-guide-to-react-form/ "react form"), I have covered everything you need to get started with React form input. Take a quick look and understand how it works.
 
-For quick navigation – See an overview of what you’ll learn in this part.
+Moving on. Here is an overview of what you’ll learn in this part.
 
 <TableOfContents />
 
-Here is the current status of our app.
+The current status of our app:
 
 ![React devtools](./images/react-devtools.png)
 
-Let's move on...
+And now...
 
 ## Adding checkboxes to the Todo items
 

@@ -3,7 +3,7 @@ title: "React Context API Made Simple – The practical guide (Updated)"
 description: "The context API in React allows every component in the component tree to have access to data without having to manually pass props down to it."
 category: "React"
 datePublished: "2020-05-26 10:32:00"
-dateUpdated: "2020-05-26 10:32:00"
+dateUpdated: "2020-05-27 10:32:00"
 featured: "./images/react-context-api.png"
 tags:
   - react

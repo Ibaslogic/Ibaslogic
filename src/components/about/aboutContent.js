@@ -58,7 +58,6 @@ const AboutContent = () => {
                 <li>
                   <Link
                     to="/blog/react-tutorial-for-beginners/"
-                    target="_blank"
                     title="React tutorial"
                   >
                     A Step-by-Step Guide to Learning React JS in 2020
@@ -67,7 +66,6 @@ const AboutContent = () => {
                 <li>
                   <Link
                     to="/blog/gatsby-tutorial-from-scratch-for-beginners/"
-                    target="_blank"
                     title="Gatsby tutorial"
                   >
                     Gatsby Tutorial: A Step-by-Step Guide to Building a Gatsby
@@ -110,7 +108,7 @@ const AboutContent = () => {
               </p>
               <p>
                 My love for Gatsby fast-tracked my dev journey because it served
-                as a turning point to go into the “real” web dev. And in no
+                as a turning point to learning the “real” web dev. And in no
                 distant time, through project-based learning, I acquired enough
                 knowledge on the subject.
               </p>

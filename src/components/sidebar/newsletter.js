@@ -62,12 +62,12 @@ const Newsletter = props => {
   return (
     <div className={newsletterStyles.sticky}>
       <div className={`${newsletterStyles.signUp} ${newsletterStyles.widget}`}>
-        <p className={newsletterStyles.title}>
-          Do you want to <span style={{ fontWeight: "600" }}>learn</span> more?
-        </p>
+        <h3 className={newsletterStyles.title}>
+          <span style={{ fontWeight: "700" }}>FREE</span> React Tutorial Book
+        </h3>
         <p className={newsletterStyles.description}>
-          Get the next tutorial straight to your inbox and continue your dev
-          journey!
+          Get Book (worth $14.99) now and start building web projects you’ll be
+          happy to share.
         </p>
         <form
           onSubmit={_handleFormSubmit}
@@ -102,7 +102,7 @@ const Newsletter = props => {
                   className="fieldSubmit"
                   type="submit"
                 >
-                  Yes, I want to learn!
+                  Yes, I want!
                 </button>
               </div>
             </div>

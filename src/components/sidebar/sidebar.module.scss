@@ -88,7 +88,7 @@ $sidebar-bg-color: #fff; //#edeff1;
 
 .title {
   font-size: 1.3rem;
-  // font-weight: bold;
+  font-weight: 400;
   line-height: 1.11667;
   position: relative;
   margin-bottom: 1.2rem;
@@ -104,10 +104,13 @@ $sidebar-bg-color: #fff; //#edeff1;
     left: 21px;
     margin-top: 23px;
     margin-left: -1.25rem;
+    @media screen and(min-width: 768px) {
+      bottom: -12px;
+    }
   }
 
   @media screen and(min-width: 768px) {
-    line-height: 1.02778;
+    line-height: 1.32778;
   }
   // @media screen and(min-width: 1200px) {
   //   font-size: 1.5rem;
@@ -119,6 +122,9 @@ $sidebar-bg-color: #fff; //#edeff1;
   padding-top: 1.3rem;
   margin-bottom: 1.5rem;
   font-size: 16px;
+  @media screen and(min-width: 768px) {
+    padding-top: 10px;
+  }
   @media screen and(min-width: 1200px) {
     font-size: 15px;
   }

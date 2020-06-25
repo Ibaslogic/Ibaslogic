@@ -18,7 +18,7 @@ const AboutHero = () => {
         </div>
         <div className={aboutHeroStyles.subscribeContent}>
           <Subscribe
-            subHeading="Get my ReactJS Book for FREE (Worth $9.99) and start building web projects you’d be happy to share."
+            subHeading="Get my ReactJS Book for FREE (Worth $14.99) and start building web projects you’d be happy to share."
             submitText="Yes, I want"
           />
 
