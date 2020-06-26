@@ -10,7 +10,7 @@ tags:
   - form
 ---
 
-In the first part of this React series, we covered some of the basic React fundamentals, set up React working environment and started writing our Todos React app.
+In the [first part of the React tutorial for beginners](/blog/react-tutorial-for-beginners/ "react tutorial"), we covered some of the basics of React; set up React working environment and started writing our Todos application.
 
 <PostSeriesLink
 label="This React tutorial is part 2 of 6 in the React for beginners series."
@@ -43,19 +43,17 @@ url: "/blog/react-hooks-tutorial/"
 ]}
 />
 
-Now that you know some of the React fundamentals, let's dive deeper and add form input fields to our Todos application. From there, we will get to understand how we can handle an event in React.
+Now, in this part, we will take a look at integrating form in our React app, you will also get to know how to raise and handle events in React.
 
-[In this guide](/blog/simple-guide-to-react-form/ "react form"), I have covered everything you need to get started with React form input. Take a quick look and understand how it works.
+But before you go ahead, I will advise you to take a look at [how to handle form inputs fields in React](/blog/simple-guide-to-react-form/ "react form"). There, you will learn how the common input types such as checkbox, text, textarea, select input, radio and range work in React.
 
-Moving on. Here is an overview of what you’ll learn in this part.
+Once you know the basics of the React form inputs, let’s move on.
 
-<TableOfContents />
-
-The current status of our app:
+Here is the current status of our app:
 
 ![React devtools](./images/react-devtools.png)
 
-And now...
+And Now, let’s start by adding the checkboxes.
 
 ## Adding checkboxes to the Todo items
 

@@ -20,26 +20,27 @@ const AboutContent = () => {
               <p>
                 Are you finding it hard to complete a real-world web project?{" "}
               </p>
+              <p>Most beginners do!</p>
               <p>
-                Most beginners get trapped in the common pitfalls of learning
-                web languages and technologies in isolation without having a
-                deeper understanding to apply the knowledge and build a modern
-                project.
-              </p>
-              <p>I learned this the hard way.</p>
-              <p>
-                So you shouldn’t follow the same route. Instead, you should{" "}
-                <strong>start learning in a project-based method</strong>.
+                They learn web languages/technologies in isolation without
+                having a deeper understanding to apply the knowledge and
+                complete a project.
               </p>
               <p>
-                And that is where Ibaslogic comes in. Through easy to follow
-                guides, you’ll learn how to connect the dots (web technologies)
-                and complete a real-world web application.
+                I learned this the hard way. So don’t get trapped in the common
+                pitfalls. Instead, you should
+                <strong> start learning in a project-based method</strong>.
+              </p>
+              <p>And that is where Ibaslogic comes in.</p>
+              <p>
+                Through easy to follow guides, you’ll learn how to connect the
+                dots (web technologies) and complete a real-world web
+                application.
               </p>
               <p>
-                This way, you can easily see how the dev topics are connected to
-                form a solution. Thus, you’ll not only appreciate what you are
-                learning, but you’ll also retain the knowledge easily.
+                This way, you will easily see how the dev topics are connected
+                to form a solution. Thus, appreciating what you are learning and
+                of course, retaining the knowledge easily.
               </p>
               <p>This has proven to work best!</p>
               <p>
@@ -50,8 +51,8 @@ const AboutContent = () => {
                 start building awesome projects.
               </p>
               <p>
-                Also, I advise you take a look at these practical guides for a
-                quick start:
+                Also, I advise you to take a look at these practical guides for
+                a quick start:
               </p>
               <h3>Practical Guides to Help You Get Started:</h3>
               <ul>
@@ -74,8 +75,8 @@ const AboutContent = () => {
                 </li>
               </ul>
               <p>
-                Once you have the basic understanding of React and Gatsby, you
-                can take a look at{" "}
+                Once you have the basic knowledge of React and Gatsby, you can
+                then take a look at{" "}
                 <a
                   href="https://github.com/ibaslogic/Ibaslogic"
                   target="_blank"
@@ -93,34 +94,34 @@ const AboutContent = () => {
             </div>
             <div className={aboutContentStyles.staticContent}>
               <p>
-                Ibaslogic was developed by Ibas Majid, a self-taught web
-                developer and a writer.
+                Ibaslogic was designed and developed by Ibas Majid, a
+                self-taught web developer and a writer.
               </p>
               <p>
-                Prior to building this site with Gatsby, I had no knowledge of
-                the requisite tech to complete this project – i.e React, GrapQL,
+                Before building this site with Gatsby, Ibas did not know the
+                requisite tech to complete this project – i.e React, GraphQL,
                 NodeJS and of course GatsbyJS.
               </p>
               <p>
-                In fact, I had little knowledge of JavaScript which is also a
-                prerequisite. Back then, I was working majorly on WordPress
+                He had little knowledge of JavaScript which is also a
+                prerequisite. Back then, he was working majorly on WordPress
                 sites.
               </p>
               <p>
-                My love for Gatsby fast-tracked my dev journey because it served
-                as a turning point to learning the “real” web dev. And in no
-                distant time, through project-based learning, I acquired enough
-                knowledge on the subject.
+                His love for Gatsby fast-tracked his dev journey because it
+                served as a turning point for him to learn the “real” web dev.
+                And in no distant time, through project-based learning, he
+                acquired enough knowledge on the subject.
               </p>
               <p>
-                Now, I teach JavaScript, React, Gatsby and WordPress theme
-                development. And I have helped companies of different sizes
+                Now, Ibas teaches JavaScript, React, Gatsby and WordPress theme
+                development. And he has helped companies of different sizes
                 launch their production websites/apps.
               </p>
               <p>
-                In this blog, I will be sharing with you all the dev knowledge
-                and strategy I acquired thus far. So make sure you sign up for
-                free updates and follow me around the web.
+                In this blog, Ibas will be sharing with you all the dev
+                knowledge and strategy he acquired thus far. So make sure you
+                sign up for free updates and follow Ibas around the web.
               </p>
               <p>
                 <strong>
