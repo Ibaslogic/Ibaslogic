@@ -1,6 +1,6 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #1a1a1a;
+$nav-link: #08090a;
 $content-max-width: 75rem;
 $link-color: #ea4812;
 
@@ -79,8 +79,8 @@ $link-color: #ea4812;
   @media screen and (min-width: 768px) {
     display: inline-block;
     padding: 6px 0;
-    font-size: 0.96rem;
-    font-weight: 300;
+    font-size: 15px;
+    // font-weight: 300;
     position: relative;
     opacity: 1;
 

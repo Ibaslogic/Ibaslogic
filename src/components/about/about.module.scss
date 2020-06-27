@@ -162,8 +162,8 @@ $li-color: #353535;
     }
   }
   .description {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1rem;
+    // font-weight: 300;
     margin-bottom: 1.667rem;
 
     @media screen and (min-width: 960px) {
@@ -199,7 +199,7 @@ $li-color: #353535;
     line-height: 1.65;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.125rem;
+      font-size: 1.04rem;
     }
   }
 
@@ -280,14 +280,14 @@ $li-color: #353535;
     }
   }
   .description {
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1rem;
+    // font-weight: 300;
     margin-bottom: 1.667rem;
     line-height: 1.667;
     color: inherit;
     @media screen and (min-width: 768px) {
-      font-size: 1.2rem;
-      line-height: 1.8;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
   }
 }

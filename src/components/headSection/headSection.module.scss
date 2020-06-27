@@ -78,14 +78,14 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 .description {
   font-size: 1rem;
   margin-bottom: 2.5rem;
-  font-weight: 300;
+  // font-weight: 300;
   padding-top: 0;
   line-height: 1.625rem;
 
-  @media screen and (min-width: 768px) {
-    font-size: 1.125rem;
-    line-height: 1.85rem;
-  }
+  // @media screen and (min-width: 768px) {
+  //   font-size: 1.125rem;
+  //   line-height: 1.85rem;
+  // }
 }
 
 // .title {
@@ -222,13 +222,13 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 
 .error-description {
   margin: 2em auto 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.66667;
-  font-weight: 300;
+  // font-weight: 300;
 
   @media screen and (min-width: 768px) {
-    font-size: 24px;
-    line-height: 1.41667;
+    font-size: 18px;
+    // line-height: 1.41667;
   }
 }
 

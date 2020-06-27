@@ -88,8 +88,10 @@ const Blog = ({ data, pageContext }) => {
               </h1>
               <div className={blogPageStyles.postMeta}>
                 <Link to="/about/" className={blogPageStyles.authorAvatar}>
-                  <img src={avatar} alt="author avatar" /> by Ibas{" "}
-                  <span className={blogPageStyles.divider}></span>
+                  <span className={blogPageStyles.avatarContainer}>
+                    <img src={avatar} alt="author avatar" />
+                  </span>
+                  by Ibas<span className={blogPageStyles.divider}></span>
                 </Link>
                 {datePublished === dateUpdated ? " Posted " : "Updated"} on{" "}
                 <span>{dateUpdated}</span>

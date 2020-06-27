@@ -23,14 +23,14 @@ $max-width: 75rem;
     font-size: 1rem;
     line-height: 1.625rem;
     letter-spacing: 0;
-    font-weight: 300;
+    // font-weight: 300;
 
     @media screen and (min-width: 768px) {
       flex-direction: row;
     }
     @media screen and (min-width: 960px) {
-      font-size: 1.15rem;
-      letter-spacing: -0.1px;
+      // font-size: 1.15rem;
+      // letter-spacing: -0.1px;
       padding-top: 3rem;
       padding-bottom: 0;
     }

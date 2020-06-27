@@ -2,6 +2,7 @@ $content-max-width: 75rem;
 $link-color: #f44f18;
 $main-white: #fff;
 $body-color: #1a1a1a;
+$sidebar-color: #4d5760;
 $heading-color: #111;
 $main-aside-max-width: 730px;
 
@@ -60,6 +61,8 @@ $main-aside-max-width: 730px;
   letter-spacing: 0.25px;
   max-width: $main-aside-max-width;
   margin: 0 auto;
+  color: $sidebar-color;
+
   @media screen and (min-width: 960px) {
     width: 30.134%;
     margin: 0;
@@ -126,17 +129,39 @@ $main-aside-max-width: 730px;
   color: rgba($body-color, 0.6);
 }
 
-.author-avatar {
+.avatar-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-right: 7px;
   display: inline-block;
+  position: relative;
+
+  &:after {
+    content: "";
+    border: 1px solid #353535;
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border-radius: 100%;
+    pointer-events: none;
+  }
+}
+
+.author-avatar {
   color: inherit;
   img {
-    width: 32px;
-    max-width: 32px;
+    border-radius: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 50px;
-    margin: 0 3px -10px 0;
+    max-width: 100%;
+
+    margin-bottom: 0;
+    vertical-align: bottom;
     display: inline-block;
-    border: 1px solid #eaeaea;
   }
   // &:hover,
   // &:focus {
@@ -181,7 +206,7 @@ $main-aside-max-width: 730px;
 
   @media screen and (min-width: 600px) {
     font-size: 1.04rem;
-    line-height: 30px;
+    line-height: 1.6;
   }
 
   ol li {
