@@ -130,7 +130,7 @@ This method of interacting with React is the simplest way and it’s very easy i
 
 Let’s see how it’s done.
 
-We will start by creating `index.html` file. Inside of it, we will load in three scripts in the head element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`. Then, we will create an empty `div` element and give it an `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
+We will start by creating `index.html` file. Inside of it, we will load in three scripts in the `head` element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`. Then, we will create an empty `div` element and give it an `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
 
 So your `index.html` file should look like this:
 
@@ -542,7 +542,7 @@ Since we are using an instance of a component, `<TodosList />` in another file, 
 import TodosList from "./TodosList";
 ```
 
-At this point, you now have the `state` data in the `todos` props. Thanks to this line:
+At this point, you now have the `state` data in the `todos` prop. Thanks to this line:
 
 ```jsx
 <TodosList todos={this.state.todos} />

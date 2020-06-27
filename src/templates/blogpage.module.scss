@@ -200,13 +200,13 @@ $main-aside-max-width: 730px;
   }
 }
 .entry-content {
-  line-height: 1.68;
+  line-height: 1.7;
   font-weight: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
 
   @media screen and (min-width: 600px) {
-    font-size: 1.04rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   ol li {
