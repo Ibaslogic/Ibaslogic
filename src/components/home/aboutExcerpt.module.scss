@@ -21,7 +21,7 @@ $max-width: 75rem;
     padding: 0.7rem 15px 3rem;
     flex-direction: column;
     font-size: 0.94rem;
-    line-height: 1.65;
+    line-height: 1.8;
     letter-spacing: 0;
     // font-weight: 300;
 
@@ -77,6 +77,6 @@ $max-width: 75rem;
 }
 .sub-styles-excerpt {
   @media screen and (min-width: 960px) {
-    justify-content: start;
+    justify-content: space-between;
   }
 }

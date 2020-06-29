@@ -51,7 +51,7 @@ $link-color: #ea4812;
 
   @media screen and (min-width: 960px) {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: baseline;
   }
 }
@@ -63,13 +63,13 @@ $link-color: #ea4812;
 
 .section-title {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 1.8rem;
-  font-weight: 700;
+  font-weight: normal;
   line-height: 1.455em;
 
   @media screen and (min-width: 480px) {
-    font-size: 1.875rem;
+    font-size: 1.9rem;
   }
   @media screen and (min-width: 768px) {
     margin-bottom: 2.5rem;
@@ -78,42 +78,33 @@ $link-color: #ea4812;
     margin-bottom: 0rem;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 
 .view-all {
-  text-align: center;
-  text-transform: uppercase;
+  line-height: 1.375rem;
+  letter-spacing: 0.01562rem;
   font-size: 0.94rem;
-
   position: absolute;
   bottom: 0;
 
+  @media screen and (min-width: 600px) {
+    font-size: 1rem;
+  }
+
   @media screen and (min-width: 960px) {
     position: relative;
-    &::after {
-      content: "";
-      display: block;
-      width: 2.75rem;
-      height: 0.0625rem;
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      margin-left: -1.475rem;
-      width: 0.0625rem;
-      height: 1.75rem;
-      background: #e1d4d0;
-      bottom: 0;
-      left: -6px;
-      margin-left: 0;
-    }
   }
 
   a {
     @include transition;
+
     &:hover {
-      text-decoration: underline;
+      opacity: 0.8;
+    }
+    svg {
+      margin-bottom: -2px;
     }
   }
 }

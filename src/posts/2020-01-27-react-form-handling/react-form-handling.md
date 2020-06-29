@@ -1,5 +1,5 @@
 ---
-title: "React Tutorial: Getting Started with React Form and Event Handling"
+title: "React Tutorial: Getting Started with React Form and Handling Event"
 description: "Form handling in React works a bit different compared to the regular HTML form. In this step-by-step guide, you will learn this in a simple way."
 category: "React"
 datePublished: "2020-01-27 10:29:00"
@@ -59,9 +59,9 @@ And Now, let’s start by adding the checkboxes.
 
 You should be familiar with handling this type of input field in the regular HTML form. In React, form handling works a little bit different.
 
-Let’s start by adding the input `checkbox` to our app.
+So let's see how to.
 
-Inside of the `li` element, add this `input` just before the `{this.props.todo.title}` in the `TodoItem` component:
+Open the `src/components/TodoItem.js` file. Add the checkbox `input` just before the `{this.props.todo.title}` in the `li` element.
 
 ```html
 <input type="checkbox" />

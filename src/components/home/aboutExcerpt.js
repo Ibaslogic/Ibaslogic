@@ -3,6 +3,7 @@ import SubHeading from "./subHeading"
 import { Link } from "gatsby"
 import recentStyles from "./recentPosts.module.scss"
 import aboutStyles from "./aboutExcerpt.module.scss"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 const AboutExcerpt = () => {
   return (
@@ -15,7 +16,9 @@ const AboutExcerpt = () => {
             <SubHeading title="How Ibaslogic can help you!" />
           </div>
           <div className={recentStyles.viewAll}>
-            <Link to="/about/">Read more »</Link>
+            <Link to="/about/">
+              Click to Read More <FaExternalLinkAlt />
+            </Link>
           </div>
         </div>
 

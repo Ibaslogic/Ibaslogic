@@ -145,7 +145,7 @@ $main-aside-max-width: 730px;
     height: 100%;
     position: absolute;
     left: -1px;
-    top: -1px;
+    top: 0px;
     border-radius: 100%;
     pointer-events: none;
   }
@@ -200,9 +200,9 @@ $main-aside-max-width: 730px;
   }
 }
 .entry-content {
-  line-height: 1.7;
+  line-height: 1.8;
   font-weight: inherit;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
 
   @media screen and (min-width: 600px) {
     font-size: 1rem;
@@ -253,7 +253,7 @@ $main-aside-max-width: 730px;
   p,
   ul,
   ol {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
   h2 {
     font-size: 1.5rem;

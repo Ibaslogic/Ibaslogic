@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import SubHeading from "./subHeading"
 //import { slugify } from "../../util/utilityFunction"
 import recentStyles from "./recentPosts.module.scss"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 const RecentPosts = () => {
   const data = useStaticQuery(graphql`
@@ -47,7 +48,9 @@ const RecentPosts = () => {
             <SubHeading title="Latest Articles" />
           </div>
           <div className={recentStyles.viewAll}>
-            <Link to="/blog/">view all »</Link>
+            <Link to="/blog/">
+              View all Articles <FaExternalLinkAlt />
+            </Link>
           </div>
         </div>
 
