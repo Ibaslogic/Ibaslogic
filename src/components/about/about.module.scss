@@ -5,6 +5,7 @@
 $max-width: 70rem;
 $link-color: #ea4812;
 $li-color: #353535;
+$base-font-size: 0.94rem;
 
 .about-hero {
   background-image: linear-gradient(180deg, #fff 10%, #f0f1f2);
@@ -81,7 +82,7 @@ $li-color: #353535;
 }
 
 .main-content {
-  font-size: 0.92rem;
+  font-size: $base-font-size;
   line-height: 1.8;
 
   @media screen and (min-width: 600px) {

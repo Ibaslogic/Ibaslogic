@@ -3,6 +3,7 @@
 }
 $max-width: 75rem;
 $link-color: #ea4812;
+$base-font-size: 0.94rem;
 
 .container {
   background-color: #fff;
@@ -66,7 +67,7 @@ $link-color: #ea4812;
   font-size: 1.7rem;
   margin-bottom: 1.8rem;
   font-weight: normal;
-  line-height: 1.455em;
+  line-height: 1.1666em;
 
   @media screen and (min-width: 480px) {
     font-size: 1.9rem;
@@ -78,14 +79,14 @@ $link-color: #ea4812;
     margin-bottom: 0rem;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 
 .view-all {
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
-  font-size: 0.94rem;
+  font-size: $base-font-size;
   position: absolute;
   bottom: 0;
 

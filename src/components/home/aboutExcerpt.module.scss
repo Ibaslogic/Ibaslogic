@@ -1,4 +1,5 @@
 $max-width: 75rem;
+$base-font-size: 0.94rem;
 
 .container {
   background-color: #fff;
@@ -20,7 +21,7 @@ $max-width: 75rem;
     display: flex;
     padding: 0.7rem 15px 3rem;
     flex-direction: column;
-    font-size: 0.94rem;
+    font-size: $base-font-size;
     line-height: 1.8;
     letter-spacing: 0;
     // font-weight: 300;
