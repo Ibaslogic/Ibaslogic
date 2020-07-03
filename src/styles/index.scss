@@ -2,17 +2,18 @@
 // ===================================================
 
 //@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 // Variables
-$primary-color: #08090a;
+$primary-color: #2e4052; //#08090a;
 $header-bg-color: #20232a;
 $header-color: #111;
 $main-white: #fff;
 $main-black: #222;
 $main-spacing: 0.1rem;
-$body-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
-  sans-serif;
+$body-font: "Lato", "Open Sans", "Nunito", "Helvetica Neue", Helvetica,
+  "Segoe UI", sans-serif;
 
 $home-bg-banner: #282c34;
 $link-color: #ea4812;

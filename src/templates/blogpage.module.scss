@@ -2,10 +2,10 @@ $content-max-width: 75rem;
 $link-color: #f44f18;
 $main-white: #fff;
 $body-color: #1a1a1a;
-$sidebar-color: #4d5760;
+//$sidebar-color: #4d5760;
 $heading-color: #111;
 $main-aside-max-width: 730px;
-$base-font-size: 0.94rem;
+$base-font-size: 1rem;
 
 @mixin transition {
   transition: all 0.5s ease-out;
@@ -62,7 +62,7 @@ $base-font-size: 0.94rem;
   letter-spacing: 0.25px;
   max-width: $main-aside-max-width;
   margin: 0 auto;
-  color: $sidebar-color;
+  // color: $sidebar-color;
 
   @media screen and (min-width: 960px) {
     width: 30.134%;
@@ -124,7 +124,7 @@ $base-font-size: 0.94rem;
 }
 .post-meta {
   font-size: 0.77rem;
-  line-height: 1.66667rem;
+  line-height: 1.6;
   // font-weight: 300;
   margin-bottom: 2em;
   color: rgba($body-color, 0.6);
@@ -159,8 +159,7 @@ $base-font-size: 0.94rem;
     width: 100%;
     height: auto;
     max-width: 100%;
-
-    margin-bottom: 0;
+    margin-bottom: -4px;
     vertical-align: bottom;
     display: inline-block;
   }
@@ -201,13 +200,13 @@ $base-font-size: 0.94rem;
   }
 }
 .entry-content {
-  line-height: 1.8;
+  line-height: 1.6;
   font-weight: inherit;
   font-size: $base-font-size;
 
   @media screen and (min-width: 600px) {
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.5;
   }
 
   ol li {

@@ -46,7 +46,7 @@ Otherwise, you can [source your content from CMSs like Contentful](/blog/gatsby-
 
 Either way, there are Gatsby plugins that can allow us achieve any of these.
 
-Throughout this tutorial, you’ll learn how to source and manage your content through the Markdown files. In the follow-up tutorial, you’ll get to know how to source from the Contentful CMS.
+Throughout this tutorial, you’ll learn how to source and manage your content through the Markdown files. [In the follow-up tutorial](/blog/gatsby-with-contentful-cms/ "Gatsby with contentful"), you’ll get to know how to source from the Contentful CMS.
 
 This is what we will build in this tutorial, [Gatsby site project](https://ibaslogic-site.netlify.com/ "Gatsby project"). And you can find all of the code in my [GitHub repository](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "Ibaslogic GitHub repo").
 
@@ -81,8 +81,6 @@ So head over to your terminal and run this npm command:
 ```
 npm install -g gatsby-cli
 ```
-
-> **Note:** The `-g` flag indicates that you are installing the CLI globally on your machine.
 
 ## Generating your first Gatsby project
 
@@ -160,7 +158,7 @@ Once the command is done, you will see a success message with the link to view y
 
 Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
 
-Take note of the second URL, [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). We will explore this later when we start pulling data to our site.
+> Take note of the second URL, [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). We will explore this later when we start pulling data to our site.
 
 ![Gatsby first site](./images/gatsby-site.png)
 
@@ -168,7 +166,7 @@ If you are seeing this. You have successfully created and launch your first Gats
 
 Congratulations.
 
-> **Note:** It may happen that you are getting some warnings in your terminal if you are using Git bash. Something like: There are multiple modules with names that only differ in casing...
+> **Note:** It may happen that you are getting some warnings in your terminal if you are using Git bash. Something like: "There are multiple modules with names that only differ in casing..."
 >
 > _The fix is simple_.
 >

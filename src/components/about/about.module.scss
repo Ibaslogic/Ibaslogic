@@ -83,11 +83,11 @@ $base-font-size: 0.94rem;
 
 .main-content {
   font-size: $base-font-size;
-  line-height: 1.8;
+  line-height: 1.6;
 
   @media screen and (min-width: 600px) {
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 960px) {
