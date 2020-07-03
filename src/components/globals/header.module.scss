@@ -1,8 +1,9 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #2e4052;
+$nav-link: #333;
 $content-max-width: 75rem;
 $link-color: #ea4812;
+$nav-btn-color: #5f6368;
 
 // mixins
 @mixin transition {
@@ -120,10 +121,10 @@ $link-color: #ea4812;
   //transition: all 0.5s ease-out;
   @include transition;
   .btn-line {
-    width: 24px;
+    width: 22px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: $nav-link;
+    background: $nav-btn-color;
     @include transition;
   }
   //rotate into X with Menu lines

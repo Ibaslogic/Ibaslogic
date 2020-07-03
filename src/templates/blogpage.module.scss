@@ -3,7 +3,6 @@ $link-color: #f44f18;
 $main-white: #fff;
 $body-color: #1a1a1a;
 //$sidebar-color: #4d5760;
-$heading-color: #111;
 $main-aside-max-width: 730px;
 $base-font-size: 1rem;
 
@@ -135,6 +134,7 @@ $base-font-size: 1rem;
   height: 32px;
   border-radius: 100%;
   margin-right: 7px;
+  margin-bottom: -6px;
   display: inline-block;
   position: relative;
 
@@ -159,9 +159,7 @@ $base-font-size: 1rem;
     width: 100%;
     height: auto;
     max-width: 100%;
-    margin-bottom: -4px;
-    vertical-align: bottom;
-    display: inline-block;
+    margin-bottom: 0px;
   }
   // &:hover,
   // &:focus {
@@ -275,7 +273,6 @@ $base-font-size: 1rem;
     line-height: 1.3777em;
     margin-bottom: 1.8rem;
     font-weight: 600;
-    color: $heading-color;
   }
 }
 
