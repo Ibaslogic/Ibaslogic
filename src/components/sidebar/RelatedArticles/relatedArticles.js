@@ -8,7 +8,7 @@ import flame from "../../../images/flame.svg"
 
 const RelatedArticles = ({ articles }) => {
   return (
-    <div className={relatedPostStyles.listContainer}>
+    <div className={`list__container ${relatedPostStyles.listContainer}`}>
       <h3 className={relatedPostStyles.subTitle}>
         Closely Related Posts{" "}
         <span className={relatedPostStyles.imageContainer}>

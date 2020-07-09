@@ -1,11 +1,11 @@
 import React from "react"
 import aboutHeroStyles from "./about.module.scss"
-import Subscribe from "./subscribe"
+import Subscribe from "../subscribe/subscribe"
 // import authorImage from "../../images/ibas.png"
 
 const AboutHero = () => {
   return (
-    <section className={aboutHeroStyles.aboutHero}>
+    <section className={`about__hero ${aboutHeroStyles.aboutHero}`}>
       <div
         className={`${aboutHeroStyles.contentWrapper} ${aboutHeroStyles.wrapper}`}
       >
@@ -16,13 +16,18 @@ const AboutHero = () => {
             strategy needed to complete a real-world project.
           </p>
         </div>
-        <div className={aboutHeroStyles.subscribeContent}>
-          <Subscribe
-            subHeading="Get my ReactJS Book for FREE (Worth $14.99) and start building web projects you’d be happy to share."
-            submitText="Yes, I want"
-          />
-
-          {/* <img src={authorImage} alt="Ibas Majid" /> */}
+        <div
+          className={`subscribe__content ${aboutHeroStyles.subscribeContent}`}
+        >
+          <div className={aboutHeroStyles.formContent}>
+            <p className={aboutHeroStyles.description}>
+              Get my ReactJS Book for FREE (Worth $14.99) and start building web
+              projects you’d be happy to share.
+            </p>
+          </div>
+          <div className="about__subscribe">
+            <Subscribe submitText="Yes, I want" />
+          </div>
         </div>
       </div>
     </section>

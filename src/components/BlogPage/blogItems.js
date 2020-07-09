@@ -70,21 +70,21 @@ const BlogItems = props => {
             <div
               ref={node}
               onClick={dropDown}
-              className={blogStyles.selectBoxContainer}
+              className={`select__box ${blogStyles.selectBoxContainer}`}
             >
               <span className={blogStyles.selectedBoxItem}>{selectedItem}</span>
               <div className={blogStyles.selectBoxArrow}>
                 <span
                   className={`${
                     showItems
-                      ? `${blogStyles.selectBoxArrowUp}`
-                      : `${blogStyles.selectBoxArrowDown}`
+                      ? `arrow___up ${blogStyles.selectBoxArrowUp}`
+                      : `arrow__down ${blogStyles.selectBoxArrowDown}`
                   }`}
                 ></span>
               </div>
 
               <div
-                className={blogStyles.dropDownContainer}
+                className={`drop__down ${blogStyles.dropDownContainer}`}
                 style={{ display: showItems ? "block" : "none" }}
               >
                 <ul className={blogStyles.dropDownList}>

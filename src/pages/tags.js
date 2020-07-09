@@ -22,7 +22,7 @@ const Tagspage = ({
           <div className={blogStyles.filterPosts}>
             <h3 className={blogStyles.description}>All Tags</h3>
           </div>
-          <ul style={{ margin: 0 }}>
+          <ul className={`tag__list__container`}>
             {group.map(tag => (
               <li className={blogStyles.tagList} key={tag.fieldValue}>
                 <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>

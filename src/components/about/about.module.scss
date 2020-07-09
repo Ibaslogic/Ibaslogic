@@ -3,7 +3,6 @@
 }
 
 $max-width: 70rem;
-$link-color: #ea4812;
 $li-color: #353535;
 $base-font-size: 0.94rem;
 
@@ -28,30 +27,6 @@ $base-font-size: 0.94rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  .field-submit {
-    color: #fff;
-    background-color: $link-color;
-    border: 1px solid $link-color;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    @include transition;
-    cursor: pointer;
-
-    @media screen and (min-width: 960px) {
-      flex: 4;
-      font-size: 1rem;
-      margin-left: -3px;
-    }
-
-    &:hover {
-      color: #fff;
-      background: rgba($link-color, 0.8);
-      border: 1px solid rgba($link-color, 0.8);
-    }
-  }
 
   @media screen and (min-width: 960px) {
     padding-top: 10rem;
@@ -98,19 +73,6 @@ $base-font-size: 0.94rem;
 
 .heading-wrap {
   text-align: left;
-  // position: relative;
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 4.75rem;
-  //   height: 2px;
-  //   background: $link-color;
-  //   position: absolute;
-  //   bottom: -1.5rem;
-  //   left: 50%;
-  //   margin-left: -2.25rem;
-  // }
 }
 
 .subscribe-content {
@@ -182,7 +144,7 @@ $base-font-size: 0.94rem;
 }
 
 .about {
-  background-color: #fff;
+  // background-color: #fff;
   @media screen and (min-width: 960px) {
     padding-bottom: 1rem;
   }
@@ -198,10 +160,6 @@ $base-font-size: 0.94rem;
 .static-content {
   margin-top: 3rem;
   margin-bottom: 4rem;
-  // @media screen and (min-width: 768px) {
-  //   margin-top: 3rem;
-  //   margin-bottom: 4rem;
-  // }
 
   h3 {
     font-size: 1.2rem;
@@ -233,7 +191,6 @@ $base-font-size: 0.94rem;
       margin-bottom: 0.7335em;
       a {
         position: relative;
-        color: $link-color;
         &:after {
           content: "";
           display: block;
@@ -261,88 +218,17 @@ $base-font-size: 0.94rem;
 
 .form-content {
   margin: 0 auto;
-  .heading {
-    font-size: 1.5rem;
-    line-height: 1.44em;
-    font-weight: 600;
-    color: inherit;
-    margin-bottom: 1.667rem;
 
-    @media screen and (min-width: 480px) {
-      font-size: 1.8rem;
-      line-height: 1.2em;
-    }
-    @media screen and (min-width: 768px) {
-      font-size: 2.2rem;
-    }
-    @media screen and (min-width: 960px) {
-      font-size: 2.6rem;
-    }
-  }
   .description {
     font-size: 1rem;
     // font-weight: 300;
     margin-bottom: 1.667rem;
     line-height: 1.667;
     color: inherit;
+    margin-top: 20px;
     @media screen and (min-width: 768px) {
       font-size: 1.1rem;
       line-height: 1.7;
     }
   }
-}
-.form-fields {
-  display: flex;
-  flex-direction: column;
-  max-width: 30rem;
-  margin: 0 auto;
-  @media screen and (min-width: 960px) {
-    flex-direction: row;
-    max-width: 33rem;
-    margin: 0;
-  }
-}
-
-.nl-subcribe {
-  @media screen and (min-width: 480px) {
-    display: block;
-  }
-}
-
-.field-input,
-.field-submit {
-  height: 50px;
-  font-size: inherit;
-  border-radius: 3px;
-}
-
-.field-input {
-  padding: 0px 25px;
-  border: 1px solid #e6e6e6;
-  margin-bottom: 4px;
-  color: #444;
-  outline: none;
-
-  @media screen and (min-width: 960px) {
-    flex: 6;
-    margin-bottom: 0;
-  }
-}
-
-.success {
-  color: #282828;
-  font-weight: 400;
-}
-
-.error {
-  color: #ff0000;
-  font-weight: 400;
-  a {
-    text-decoration: underline;
-  }
-}
-
-.success,
-.error {
-  margin-top: 20px;
 }

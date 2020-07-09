@@ -15,6 +15,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
+        minify: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-154777810-1",
@@ -120,6 +129,7 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -181,7 +191,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ibaslogic_favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ibaslogic__site__favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-netlify`,

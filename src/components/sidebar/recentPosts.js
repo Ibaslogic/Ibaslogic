@@ -8,7 +8,7 @@ import SidebarPostsMarkup from "./SidebarPostMarkup"
 const RecentPosts = () => {
   return (
     <div
-      className={`${recentPostStyles.recentPosts} ${recentPostStyles.widget}`}
+      className={`recent__post ${recentPostStyles.recentPosts} ${recentPostStyles.widget}`}
     >
       <SidebarTitle title="recent posts" />
       <StaticQuery

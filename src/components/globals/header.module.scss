@@ -1,8 +1,8 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #333;
+$nav-link: #5f6368;
 $content-max-width: 75rem;
-$link-color: #ea4812;
+$link-color: #ee6d41;
 $nav-btn-color: #5f6368;
 
 // mixins
@@ -14,10 +14,15 @@ $nav-btn-color: #5f6368;
   -o-transition: all 0.35s ease-out;
 }
 
+// No Scroll on Menu toggle on Mobile
+.noScroll {
+  overflow-y: hidden;
+}
+
 .container {
   background: $header-bg-color;
 
-  height: 3.75rem;
+  height: 4rem;
   color: $main-white;
   position: fixed;
   z-index: 9;
@@ -27,60 +32,131 @@ $nav-btn-color: #5f6368;
   -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
 }
+
+.headerContentWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.contentRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -6px;
+
+  a {
+    padding: 15px;
+    color: $nav-link;
+    font-size: 19px;
+  }
+  svg {
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.darkLight {
+  background: inherit;
+  border: none;
+  padding: 12px 15px 12px 12px;
+  cursor: pointer;
+  width: 45px;
+  outline: none;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 0px;
+    width: 30px;
+  }
+  svg {
+    color: $nav-btn-color;
+  }
+
+  .moon {
+    svg {
+      width: 25px;
+      height: 18px;
+    }
+  }
+
+  .sun {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
 .content {
   display: flex;
-  padding: 0 15px;
-  justify-content: space-between;
+  padding: 0;
   align-items: center;
   max-width: $content-max-width;
   margin: 0 auto;
-  height: 3.75rem;
+  height: 4rem;
+  justify-content: flex-start;
+  flex-flow: row-reverse;
+
+  @media screen and (min-width: 768px) {
+    justify-content: normal;
+    flex-flow: unset;
+  }
+}
+
+.brand {
+  margin-left: 5px;
+  @media screen and (min-width: 768px) {
+    margin: 0px;
+  }
 }
 
 .brand-link {
   img {
-    width: 138px;
+    width: 45px;
+    height: 36px;
     margin: 0;
   }
 }
 
 .nav-link {
   display: block;
-  padding: 1.4rem 0;
+  padding: 1.2rem 25px;
   line-height: 1.3125rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: $nav-link;
   margin-left: 0;
   letter-spacing: -0.03em;
   text-transform: capitalize;
   text-decoration: none;
-  @include transition;
-
-  // @media screen and (min-width: 768px) {
-  //   // opacity: 0.7;
-  //   // letter-spacing: 0;
-  // }
 
   &:hover {
-    color: $link-color;
+    color: $link-color !important;
     @media screen and (min-width: 768px) {
-      // opacity: 1;
-      color: $nav-link;
+      color: $nav-link !important;
     }
   }
 
   &.active-nav-item {
-    color: $link-color;
+    color: $link-color !important;
     @media screen and (min-width: 768px) {
       opacity: 1;
-      color: $nav-link;
+      color: $nav-link !important;
     }
   }
 
   @media screen and (min-width: 768px) {
     display: inline-block;
     padding: 6px 0;
-    font-size: 15px;
+    font-size: 0.9rem;
     // font-weight: 300;
     position: relative;
     opacity: 1;
@@ -117,29 +193,16 @@ $nav-btn-color: #5f6368;
 
 .menu-btn {
   cursor: pointer;
-  // z-index: 103;
-  //transition: all 0.5s ease-out;
-  @include transition;
+  padding: 15px;
+
   .btn-line {
     width: 22px;
-    height: 3px;
+    height: 2px;
     margin: 0 0 5px 0;
     background: $nav-btn-color;
-    @include transition;
-  }
-  //rotate into X with Menu lines
-  &.close {
-    transform: rotate(180deg);
-    .btn-line {
-      &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
+
+    &:last-child {
+      margin-bottom: 0 !important;
     }
   }
 
@@ -150,25 +213,39 @@ $nav-btn-color: #5f6368;
 .menu-nav {
   position: fixed;
   top: 0;
-  max-width: 300px;
+  max-width: 280px;
   width: 70%;
   overflow-y: scroll;
   background: $header-bg-color;
-  right: 0;
+  left: 0;
   height: 100%;
   top: 0;
   margin: 0;
-  padding: 4rem 0 0;
-  text-align: center;
-  z-index: -1; //102;
+  padding: 4rem 0px 0;
+  text-align: left;
+  z-index: 0;
   visibility: hidden;
-  transform: translate3d(100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
   @include transition;
   list-style: none;
 
   &.show-nav {
     visibility: visible;
     transform: translate3d(0, 0, 0);
+  }
+
+  .close {
+    color: #5f6368;
+    font-size: 21px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    padding: 13px 20px;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -182,13 +259,13 @@ $nav-btn-color: #5f6368;
     padding: 0;
     visibility: visible;
     transform: translate3d(0, 0, 0);
-    background: transparent;
+    background: none !important;
   }
 }
 
 // .brand,
 .navbar {
-  z-index: 99;
+  z-index: 11;
 }
 
 .nav-item {
@@ -226,11 +303,5 @@ $nav-btn-color: #5f6368;
 
   &.show-overlay {
     visibility: visible;
-  }
-}
-
-body {
-  &.no-scroll {
-    overflow-y: hidden;
   }
 }

@@ -80,13 +80,16 @@ const Blog = ({ data, pageContext }) => {
         id="primary"
         className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
       >
-        <main className={blogPageStyles.siteMain} role="main">
+        <main
+          className={`blogpage__main ${blogPageStyles.siteMain}`}
+          role="main"
+        >
           <article className={blogPageStyles.singlePost}>
             <header className={blogPageStyles.entryHeader}>
               <h1 className={blogPageStyles.title}>
                 {data.mdx.frontmatter.title}
               </h1>
-              <div className={blogPageStyles.postMeta}>
+              <div className={`post__meta ${blogPageStyles.postMeta}`}>
                 <Link to="/about/" className={blogPageStyles.authorAvatar}>
                   <span className={blogPageStyles.avatarContainer}>
                     <img src={avatar} alt="author avatar" />

@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const Post = ({ title, updated, posted, time, fluid, slug }) => {
   return (
-    <li className={blogStyles.listItem}>
+    <li className={`list__item ${blogStyles.listItem}`}>
       <Link to={`/blog/${slug}/`}>
         <article className="contentArticle">
           <header className={blogStyles.entryHeader}>

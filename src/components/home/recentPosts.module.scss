@@ -2,12 +2,8 @@
   transition: all 0.5s ease-out;
 }
 $max-width: 75rem;
-$link-color: #ea4812;
+$link-hover: #ee6d41;
 $base-font-size: 0.94rem;
-
-.container {
-  background-color: #fff;
-}
 
 .recent-posts {
   padding-top: 3.5rem;
@@ -102,7 +98,7 @@ $base-font-size: 0.94rem;
     @include transition;
 
     &:hover {
-      opacity: 0.8;
+      color: $link-hover;
     }
     svg {
       margin-bottom: -2px;
@@ -166,7 +162,7 @@ $base-font-size: 0.94rem;
     }
 
     &:hover {
-      color: $link-color;
+      color: $link-hover;
     }
     a {
       color: inherit;

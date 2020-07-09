@@ -3,7 +3,7 @@ $main-white: #fff;
 $color: #94a1af;
 $footer-link: #94a1af;
 $content-max-width: 75rem;
-$site-pry-color: #ea4812;
+$link-color: #ee6d41;
 
 .site-footer {
   background: $footer-bg-color;
@@ -71,7 +71,7 @@ $site-pry-color: #ea4812;
     line-height: 1.66667;
     padding: 14px 20px 12px 20px;
     letter-spacing: 0.16em;
-    border: 1px solid $site-pry-color;
+    border: 1px solid $link-color;
     text-decoration: none !important;
     color: #fff;
     text-transform: uppercase;
@@ -79,7 +79,7 @@ $site-pry-color: #ea4812;
     font-weight: 700;
     cursor: pointer;
     border-radius: 2px;
-    background-color: $site-pry-color;
+    background-color: $link-color;
     display: inline-block;
 
     &:hover,

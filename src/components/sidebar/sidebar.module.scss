@@ -5,7 +5,7 @@
 
 $body-color: #464646;
 $main-white: #fff;
-$link-color: #ea4812;
+$link-color: #ee6d41;
 $sidebar-bg-color: #fff; //#edeff1;
 
 .recent-posts {
@@ -126,12 +126,13 @@ $sidebar-bg-color: #fff; //#edeff1;
   }
 }
 .form-container {
+  // delete
   display: flex;
   flex-direction: column;
 
-  .name-field {
-    text-transform: capitalize;
-  }
+  // .name-field {
+  //   text-transform: capitalize;
+  // }
 
   .inputContainer {
     display: flex;

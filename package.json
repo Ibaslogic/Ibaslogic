@@ -1,7 +1,7 @@
 {
   "name": "ibaslogic-gatsby-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple Gatsby blog starter to get you up and running",
   "version": "0.1.0",
   "author": "Ibas Majid <ibaskunle@gmail.com>",
   "dependencies": {
@@ -23,6 +23,7 @@
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-sitemap": "^2.2.22",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-autolink-headers": "^2.1.18",
     "gatsby-remark-copy-linked-files": "^2.1.39",
     "gatsby-remark-external-links": "0.0.4",
@@ -42,7 +43,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
-    "react-scroll": "^1.7.12"
+    "react-scroll": "^1.7.12",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "eslint-plugin-mdx": "^1.6.3",

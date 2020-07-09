@@ -12,7 +12,11 @@ const styles = {
 }
 
 const SidebarTitle = props => {
-  return <h3 style={styles}>{props.title}</h3>
+  return (
+    <h3 className="sidebarTitle" style={styles}>
+      {props.title}
+    </h3>
+  )
 }
 
 export default SidebarTitle

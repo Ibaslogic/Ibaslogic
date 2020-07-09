@@ -6,7 +6,8 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
 }
 
 $max-width: 75rem;
-$link-color: #ea4812;
+$link-color: #ee6d41;
+$link-hover: #ea4812;
 $heading-color: #1d2b35;
 
 .heading {
@@ -59,8 +60,6 @@ $heading-color: #1d2b35;
 }
 
 .contact__area {
-  background-color: #fff;
-
   .main__container {
     padding: 4rem 15px;
     max-width: 75rem;
@@ -194,6 +193,6 @@ $heading-color: #1d2b35;
   border-radius: 3px;
   @include transition;
   &:hover {
-    opacity: 0.8;
+    background: $link-hover;
   }
 }

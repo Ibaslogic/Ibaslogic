@@ -5,7 +5,7 @@ import heroStyles from "./headSection.module.scss"
 const HeroError = () => {
   return (
     <div className={heroStyles.errorPageHero}>
-      <div className={heroStyles.heroContent}>
+      <div className={`${heroStyles.heroContent} ${heroStyles.error}`}>
         <h1 className={heroStyles.errorTitle}>404: Page not found</h1>
         <p className={heroStyles.errorDescription}>
           I guess you are here to become a better web developer. Click on the

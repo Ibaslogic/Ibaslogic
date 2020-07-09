@@ -4,7 +4,8 @@
 @mixin transition {
   transition: all 0.5s linear;
 }
-$link-color: #ea4812;
+$link-color: #ee6d41; // #ea4812;
+$link-hover: #ea4812;
 
 $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   "Helvetica Neue", sans-serif;
@@ -27,20 +28,27 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     background-position: left;
   }
 }
-.errorPageHero {
-  background: #ffffff;
-}
+
 .hero-content {
   margin: 0 auto;
-  padding: 4rem 15px;
+  padding: 0 15px;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
   max-width: 36rem;
+  padding-top: 4rem;
   @media screen and (min-width: 768px) {
     max-width: 45rem;
+    padding-top: 6rem;
   }
 }
+
+.error {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 6rem;
+  }
+}
+
 .title {
   font-size: 2rem;
   margin-bottom: 1.1rem;
@@ -174,21 +182,9 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     @include transition;
     &:hover {
       cursor: pointer;
-      opacity: 0.8;
+      background: $link-hover;
     }
-
-    // @media screen and (min-width: 768px) {
-    //   max-width: 330px;
-    // }
-    // @media screen and (min-width: 768px) {
-    //   max-width: 360px;
-    //   padding: 0.9rem 1rem;
-    // }
   }
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  //width: 100%;
 }
 // .start-here {
 //   a {
@@ -202,6 +198,12 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 //     }
 //   }
 // }
+
+.additional {
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  line-height: 1.3rem;
+}
 
 .error-title {
   font-size: 34px;
@@ -235,7 +237,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 .error-button {
   margin-top: 50px;
   @media screen and (min-width: 480px) {
-    margin-top: 100px;
+    margin-top: 40px;
   }
   a {
     //border: 1px solid #f55f2d;
@@ -244,7 +246,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     @include transition;
     &:hover {
       cursor: pointer;
-      opacity: 0.8;
+      background: $link-hover;
     }
   }
 }

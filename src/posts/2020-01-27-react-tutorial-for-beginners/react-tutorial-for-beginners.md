@@ -24,9 +24,7 @@ Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-t
 
 Once you are well-grounded with React, [following a Gatsby site project](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
 
-<p style="font-size: 1.5rem; color: #111; line-height: 1.3777em;
-margin-bottom: 1.8rem;
-font-weight: 600; padding-top: 1.4em;">Prerequisite</p>
+<p className="prerequisite">Prerequisite</p>
 
 Before you go ahead with this React tutorial, please make sure you have:
 

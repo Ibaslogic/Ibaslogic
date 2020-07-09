@@ -2,7 +2,7 @@ $content-max-width: 75rem;
 $primary-color: #3c4043;
 $body-color: #1a1a1a;
 $main-white: #fff;
-$link-color: #ea4812;
+$link-color: #ee6d41;
 
 @mixin transition {
   -webkit-transition: all 0.3s ease-in-out;
@@ -15,7 +15,7 @@ $link-color: #ea4812;
 .main {
   padding-top: 3.18rem;
   padding-bottom: 4.8rem;
-  background-color: $main-white;
+  // background-color: $main-white;
 
   @media screen and (min-width: 768px) {
     padding-top: 4.15rem;

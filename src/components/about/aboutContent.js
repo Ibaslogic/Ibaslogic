@@ -10,7 +10,9 @@ const AboutContent = () => {
       <div
         className={`${aboutContentStyles.content} ${aboutContentStyles.wrapper}`}
       >
-        <div className={aboutContentStyles.mainContentWrapper}>
+        <div
+          className={`about__content_wrap ${aboutContentStyles.mainContentWrapper}`}
+        >
           <div className={aboutContentStyles.mainContent}>
             <div className={aboutContentStyles.headingWrap}>
               <SubHeading title="How Ibaslogic Will Help Your Dev Knowledge" />
@@ -55,7 +57,7 @@ const AboutContent = () => {
                 a quick start:
               </p>
               <h3>Practical Guides to Help You Get Started:</h3>
-              <ul>
+              <ul className="list__container">
                 <li>
                   <Link
                     to="/blog/react-tutorial-for-beginners/"

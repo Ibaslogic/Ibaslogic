@@ -2,10 +2,11 @@ import React from "react"
 import { Link } from "react-scroll"
 import heroStyles from "./headSection.module.scss"
 import { FaChevronDown } from "react-icons/fa"
+import Subscribe from "../subscribe/subscribe"
 
 const Hero = () => {
   return (
-    <div className={heroStyles.homePageHero}>
+    <div className={`hero__container ${heroStyles.homePageHero}`}>
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.title}>
           Web Dev Articles for the <span className={heroStyles.nlt}></span>
@@ -29,9 +30,16 @@ const Hero = () => {
               get started
             </Link>
           </div>
-          {/* <div className={`${heroStyles.contact} ${heroStyles.button}`}>
-            <a href="#!">get in touch</a>
-          </div> */}
+        </div>
+        <div className={heroStyles.additional}>
+          <p>
+            Get our React JS book (worth of $14.99) for <strong>FREE</strong>{" "}
+            and start building awesome projects. Enter your email below and
+            receive it in your inbox.{" "}
+            <div className="home__subscribe">
+              <Subscribe placeholder="Email here" />
+            </div>
+          </p>
         </div>
       </div>
 
