@@ -203,6 +203,11 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   font-size: 0.85rem;
   margin-top: 3rem;
   line-height: 1.3rem;
+  margin-bottom: 1.5rem;
+
+  p {
+    display: inline;
+  }
 }
 
 .error-title {

@@ -170,19 +170,6 @@ $heading-color: #1d2b35;
   @media screen and (min-width: 768px) {
     margin: 0 0 15px;
   }
-
-  input {
-    padding: 20px 30px;
-    outline: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-
-    @media screen and (min-width: 768px) {
-      font-size: 16px;
-    }
-  }
 }
 
 .submit-button {
@@ -191,8 +178,19 @@ $heading-color: #1d2b35;
   color: #fff;
   padding: 0.8em 1.5em !important;
   border-radius: 3px;
+  cursor: pointer;
+
+  // padding: 20px 30px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
   @include transition;
   &:hover {
     background: $link-hover;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
   }
 }

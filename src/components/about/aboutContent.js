@@ -76,19 +76,6 @@ const AboutContent = () => {
                   </Link>{" "}
                 </li>
               </ul>
-              <p>
-                Once you have the basic knowledge of React and Gatsby, you can
-                then take a look at{" "}
-                <a
-                  href="https://github.com/ibaslogic/Ibaslogic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Open source project"
-                >
-                  my site source code on GitHub
-                </a>
-                . It’s open-sourced for use and modifications.
-              </p>
             </div>
 
             <div className={aboutContentStyles.headingWrap}>

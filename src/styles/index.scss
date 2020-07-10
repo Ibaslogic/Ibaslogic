@@ -389,7 +389,7 @@ Subscribe Form
 // Home Page Subscribe
 
 .home__subscribe {
-  display: inline-flex;
+  display: inline-block;
   .form__container {
     text-align: left;
   }
@@ -403,6 +403,10 @@ Subscribe Form
   }
   .field__submit {
     display: none;
+  }
+  .status__success,
+  .status__error {
+    display: table;
   }
 }
 
@@ -578,14 +582,18 @@ body {
       }
     }
 
-    .email__input {
-      border-color: var(--hr-dark) !important;
-
-      input {
+    .email__input,
+    .form__field {
+      input,
+      textarea {
         color: var(--main-white);
         background: transparent;
         border-color: var(--hr-dark);
       }
+    }
+
+    .email__input {
+      border-color: var(--hr-dark) !important;
     }
 
     footer,

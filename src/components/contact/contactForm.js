@@ -15,7 +15,7 @@ const ContactForm = () => {
       >
         <input type="hidden" name="bot-field" />{" "}
         <input type="hidden" name="form-name" value="contact" />{" "}
-        <div className={contactFormStyles.formField}>
+        <div className={`form__field ${contactFormStyles.formField}`}>
           <input
             className={contactFormStyles.textField}
             type="text"
@@ -42,11 +42,9 @@ const ContactForm = () => {
           />
           <ul className={contactFormStyles.actions}>
             <li>
-              <input
-                type="submit"
-                value="Send Message"
-                className={contactFormStyles.submitButton}
-              />
+              <button className={contactFormStyles.submitButton}>
+                Send Message
+              </button>
             </li>
           </ul>
         </div>

@@ -36,10 +36,10 @@ const Hero = () => {
             Get our React JS book (worth of $14.99) for <strong>FREE</strong>{" "}
             and start building awesome projects. Enter your email below and
             receive it in your inbox.{" "}
-            <div className="home__subscribe">
-              <Subscribe placeholder="Email here" />
-            </div>
           </p>
+          <div className="home__subscribe">
+            <Subscribe placeholder="Email here" />
+          </div>
         </div>
       </div>
 
