@@ -57,6 +57,7 @@ const Header = () => {
   }, [])
 
   const darkMode = useDarkMode(false)
+  console.log(darkMode);
 
   const data = useStaticQuery(graphql`
     query {

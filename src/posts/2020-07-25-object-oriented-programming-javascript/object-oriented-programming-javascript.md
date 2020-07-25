@@ -610,10 +610,10 @@ You should be good!
 
 ## Conclusion
 
-Having come this far, you have learned a lot on the subject.
+Having come this far, you have learned a lot about the subject. Now you know how to represent real-world entity using the object. 
 
-Alongside the object fundamentals, we covered the OOP concepts, the ES5 constructor function, prototype and inheritance. Besides, we also treated how to use the ES6 class syntax to ease your work.
+In addition to understanding this object fundamental, you have also learned the OOP concepts; the constructor function; prototype and inheritance. Furthermore, you learned how to use the ES6 class syntax to write more elegant code.
 
-I hope this guide helps? 
+So, if you like this guide, endeavor to share around the web and follow me for more updates.
 
-If you like it, do share around the web and [follow me on Twitter](https://twitter.com/ibaslogic "Ibaslogic Twitter") for more updates.
+[Follow me on Twitter](https://twitter.com/ibaslogic "Ibaslogic Twitter")
