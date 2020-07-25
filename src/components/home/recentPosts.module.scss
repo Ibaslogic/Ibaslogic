@@ -1,9 +1,10 @@
 @mixin transition {
   transition: all 0.5s ease-out;
 }
-$max-width: 75rem;
+$max-width: 76rem;
 $link-hover: #ee6d41;
 $base-font-size: 0.94rem;
+$base-container-LR-padding: 20px;
 
 .recent-posts {
   padding-top: 3.5rem;
@@ -25,7 +26,7 @@ $base-font-size: 0.94rem;
     display: grid;
     grid-template-columns: 1fr;
 
-    padding: 0.7rem 15px 4rem;
+    padding: 0.7rem $base-container-LR-padding 4rem;
 
     @media screen and (min-width: 768px) {
       padding-bottom: 6rem;
@@ -42,8 +43,8 @@ $base-font-size: 0.94rem;
 .sub-styles {
   display: flex;
   justify-content: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $base-container-LR-padding;
+  padding-right: $base-container-LR-padding;
   flex-direction: column;
 
   @media screen and (min-width: 960px) {

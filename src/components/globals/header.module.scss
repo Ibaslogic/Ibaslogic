@@ -1,7 +1,8 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
 $nav-link: #5f6368;
-$content-max-width: 75rem;
+$content-max-width: 76rem;
+$base-container-LR-padding: 20px;
 $link-color: #ee6d41;
 $nav-btn-color: #5f6368;
 
@@ -39,10 +40,10 @@ $nav-btn-color: #5f6368;
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    max-width: 75rem;
+    max-width: $content-max-width;
     margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: $base-container-LR-padding;
+    padding-left: $base-container-LR-padding;
   }
 }
 
@@ -68,14 +69,14 @@ $nav-btn-color: #5f6368;
 .darkLight {
   background: inherit;
   border: none;
-  padding: 12px 15px 12px 12px;
+  padding: 12px $base-container-LR-padding 12px 12px;
   cursor: pointer;
-  width: 45px;
+  width: 54px;
   outline: none;
 
   @media screen and (min-width: 768px) {
     padding-right: 0px;
-    width: 30px;
+    width: 34px;
   }
   svg {
     color: $nav-btn-color;
@@ -195,7 +196,7 @@ $nav-btn-color: #5f6368;
 
 .menu-btn {
   cursor: pointer;
-  padding: 15px;
+  padding: $base-container-LR-padding;
 
   .btn-line {
     width: 22px;

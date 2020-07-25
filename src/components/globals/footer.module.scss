@@ -2,8 +2,9 @@ $footer-bg-color: #1d2b35; //#fdfdfd;
 $main-white: #fff;
 $color: #94a1af;
 $footer-link: #94a1af;
-$content-max-width: 75rem;
+$content-max-width: 76rem;
 $link-color: #ee6d41;
+$base-container-LR-padding: 20px;
 
 .site-footer {
   background: $footer-bg-color;
@@ -17,7 +18,7 @@ $link-color: #ee6d41;
 .container {
   max-width: $content-max-width;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $base-container-LR-padding;
 }
 .ftTop {
   display: grid;

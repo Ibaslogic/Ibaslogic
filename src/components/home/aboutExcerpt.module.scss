@@ -1,5 +1,6 @@
-$max-width: 75rem;
+$max-width: 76rem;
 $base-font-size: 0.94rem;
+$base-container-LR-padding: 20px;
 
 .about-posts {
   max-width: 45rem;
@@ -15,7 +16,7 @@ $base-font-size: 0.94rem;
   }
   .about-excerpt {
     display: flex;
-    padding: 0.7rem 15px 3rem;
+    padding: 0.7rem $base-container-LR-padding 3rem;
     flex-direction: column;
     font-size: $base-font-size;
     line-height: 1.6;

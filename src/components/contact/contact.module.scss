@@ -5,11 +5,12 @@ $body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
   transition: all 0.5s linear;
 }
 
-$max-width: 75rem;
+$max-width: 76rem;
 $link-color: #ee6d41;
 $link-hover: #ea4812;
 $heading-color: #1d2b35;
 $body-color: #212529;
+$base-container-LR-padding: 20px;
 
 .heading {
   background-color: $heading-color;
@@ -22,7 +23,7 @@ $body-color: #212529;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 15px;
+    padding: 80px $base-container-LR-padding;
 
     .hero__title {
       // max-width: 72rem;
@@ -62,8 +63,8 @@ $body-color: #212529;
 
 .contact__area {
   .main__container {
-    padding: 4rem 15px;
-    max-width: 75rem;
+    padding: 4rem $base-container-LR-padding;
+    max-width: $max-width;
     margin: 0 auto;
 
     @media screen and (min-width: 992px) {

@@ -96,12 +96,11 @@ const Blog = ({ data, pageContext }) => {
                   </span>
                   Ibas<span className={blogPageStyles.divider}></span>
                 </Link>
-                {datePublished === dateUpdated ? " Published " : "Updated"} on {" "}
-                <span>{dateUpdated}</span>
+                <span className={blogPageStyles.inlineBlockStyle}>{datePublished === dateUpdated ? " Published " : "Updated"} on {dateUpdated}</span>
                 <span className={blogPageStyles.divider}></span>
-                <span>{data.mdx.timeToRead} min read</span>
+                <span className={blogPageStyles.inlineBlockStyle}>{data.mdx.timeToRead} min read</span>
                 <span className={blogPageStyles.divider}></span>
-                <a
+                <span className={blogPageStyles.inlineBlockStyle}><a
                   className={blogPageStyles.editPost}
                   href={
                     "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/" +
@@ -111,7 +110,8 @@ const Blog = ({ data, pageContext }) => {
                   rel="noopener noreferrer"
                 >
                   Edit <FaPencilAlt />
-                </a>
+                </a></span>
+
               </div>
             </header>
 

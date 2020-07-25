@@ -18,7 +18,7 @@ html {
 }
 
 :root {
-  --primary-color: #212529; //#333;
+  --primary-color: #3c4043;// #212529;
   --header-color: #111;
   --bg-secondary: #1d2b35; //#1f2330;
   --main-white: hsla(0, 0%, 100%, 0.878);
@@ -216,7 +216,7 @@ li > a > code {
 .gatsby-highlight,
 blockquote {
   overflow: auto;
-  margin: 2rem -15px;
+  margin: 2rem -20px;
   border-radius: 0;
 
   @media screen and (min-width: 600px) {

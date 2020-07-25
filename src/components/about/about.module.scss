@@ -4,7 +4,8 @@
 
 $max-width: 70rem;
 $li-color: #353535;
-$base-font-size: 0.94rem;
+$base-font-size: 1rem;
+$base-container-LR-padding: 20px;
 
 .about-hero {
   background-image: linear-gradient(180deg, #fff 10%, #f0f1f2);
@@ -41,8 +42,8 @@ $base-font-size: 0.94rem;
 }
 
 .wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $base-container-LR-padding;
+  padding-right: $base-container-LR-padding;
 }
 
 .main-content-wrapper {
@@ -61,7 +62,6 @@ $base-font-size: 0.94rem;
   line-height: 1.6;
 
   @media screen and (min-width: 600px) {
-    font-size: 1rem;
     line-height: 1.5;
   }
 

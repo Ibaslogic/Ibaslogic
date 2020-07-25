@@ -6,6 +6,7 @@
 }
 $link-color: #ee6d41; // #ea4812;
 $link-hover: #ea4812;
+$base-container-LR-padding: 20px;
 
 $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   "Helvetica Neue", sans-serif;
@@ -31,7 +32,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 
 .hero-content {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $base-container-LR-padding;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
