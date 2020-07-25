@@ -9,6 +9,7 @@ $max-width: 75rem;
 $link-color: #ee6d41;
 $link-hover: #ea4812;
 $heading-color: #1d2b35;
+$body-color: #212529;
 
 .heading {
   background-color: $heading-color;
@@ -75,13 +76,10 @@ $heading-color: #1d2b35;
 .connect {
   text-align: center;
   margin-bottom: 1em;
-  font-size: 1.3rem;
-  font-weight: 300;
+  font-size: 1.2rem;
   margin-bottom: 50px;
+  line-height: 1.6;
 
-  @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
-  }
   @media screen and (min-width: 992px) {
     flex: 0.4;
     text-align: left;
@@ -139,7 +137,7 @@ $heading-color: #1d2b35;
     line-height: 1.66667;
     border: 1px solid #b3b3b3;
     font-family: $body-font;
-    color: #0c344b;
+    color: $body-color;
 
     &::placeholder,
     &:-moz-placeholder {

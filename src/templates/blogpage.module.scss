@@ -1,7 +1,7 @@
 $content-max-width: 75rem;
 $link-color: #f44f18;
-$main-white: #fff;
-$body-color: #1a1a1a;
+$main-white: #fff; 
+$meta: #888;
 //$sidebar-color: #4d5760;
 $main-aside-max-width: 730px;
 $base-font-size: 1rem;
@@ -9,6 +9,8 @@ $base-font-size: 1rem;
 @mixin transition {
   transition: all 0.5s ease-out;
 }
+
+
 
 .container {
   max-width: $content-max-width;
@@ -112,6 +114,7 @@ $base-font-size: 1rem;
   font-size: 1.5rem;
   line-height: 1.33333;
   margin: 0 0 1.2rem;
+  font-weight: 700;
 
   @media screen and (min-width: 480px) {
     font-size: 1.75rem;
@@ -122,11 +125,11 @@ $base-font-size: 1rem;
   }
 }
 .post-meta {
-  font-size: 0.77rem;
+  font-size: 14px;
   line-height: 1.6;
   // font-weight: 300;
   margin-bottom: 2em;
-  color: rgba($body-color, 0.6);
+  color: $meta;
 }
 
 .avatar-container {
@@ -161,32 +164,36 @@ $base-font-size: 1rem;
     max-width: 100%;
     margin-bottom: 0px;
   }
-  // &:hover,
-  // &:focus {
-  //   text-decoration: underline;
-  // }
+  &:hover,
+  &:focus {
+    color: $meta;
+    text-decoration: underline;
+  }
 }
 .edit-post {
+  color: $meta;
+  margin-left: 2px;
   svg {
     font-size: 9px;
     margin-left: 3px;
   }
-  &:hover {
+  &:hover, &:focus {
+    color: $meta;
     text-decoration: underline;
   }
 }
 .divider {
-  margin-right: 10px;
+  margin-right: 7px;
   position: relative;
   &::after {
     content: "";
     display: block;
     width: 2px;
     height: 2px;
-    background: #727274;
+    background: $meta;
     position: absolute;
-    top: 6px;
-    left: 5px;
+    top: 8px;
+    left: 4px;
   }
 }
 
@@ -203,7 +210,6 @@ $base-font-size: 1rem;
   font-size: $base-font-size;
 
   @media screen and (min-width: 600px) {
-    font-size: 1rem;
     line-height: 1.5;
   }
 
@@ -251,7 +257,7 @@ $base-font-size: 1rem;
   p,
   ul,
   ol {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   h2 {
     font-size: 1.5rem;
@@ -287,9 +293,9 @@ $base-font-size: 1rem;
   padding-top: 1em;
 }
 
-p img {
-  padding-bottom: 10px;
-}
+// p img {
+//   padding-bottom: 10px;
+// }
 
 // =====================================================
 // Social Shares
@@ -445,6 +451,7 @@ p img {
     svg {
       padding-top: 3px;
     }
+    color: $main-white;
   }
 
   svg {

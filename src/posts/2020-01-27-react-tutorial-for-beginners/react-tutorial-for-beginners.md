@@ -1,13 +1,13 @@
 ---
-title: "React Tutorial: A Step-by-Step Guide to Learning React JS in 2020"
-description: "From Zero to deploy, you'll learn everything about React JS and build a modern application in this React tutorial for beginners guide."
+title: "React Tutorial From Scratch: A Step-by-Step Guide for 2020"
+description: "In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-05-26 10:27:00"
+dateUpdated: "2020-07-24 10:27:00"
 featured: "./images/react-tutorial-for-beginners.png"
 tags:
   - react
-  - react js
+  - javascript
 ---
 
 If you are aiming to build a modern website or app that require high performance and safety, then, it's a wise decision learning React JS.
@@ -18,7 +18,7 @@ These are just to name a few.
 
 What this means is that you cannot escape learning React if you want to become a present-day developer.
 
-In this React tutorial for beginners guide, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
+In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
 Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
 
@@ -32,9 +32,9 @@ Before you go ahead with this React tutorial, please make sure you have:
 - JavaScript fundamentals (object, array, conditionals etc).
 - Familiarity with JavaScript ES6 features (class syntax, arrow functions, object destructuring etc).
 
-> If you are still finding it tough with JavaScript, just read and code along with me. I will be explaining every task as we code our React app.
+> If you are still finding it tough with [any of the JavaScript topics](/blog/object-oriented-programming-javascript/ "oop tutorial"), just read and code along with me. I will be explaining every task as we code our React app.
 
-At the end of this React tutorial, you will be able to build [this Todos App](https://ibaslogic.github.io/simple-todo-app/ "simple react app").
+At the end of this React js tutorial, you will be able to build [this Todos App](https://ibaslogic.github.io/simple-todo-app/ "simple react app").
 
 ![Todos app design](./images/todos-app.gif)
 
@@ -46,7 +46,7 @@ Since our aim is to cover this topic to length for beginners. We’ve divided th
 
 Now let's get started.
 
-## What is React?
+## What Is React?
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs from a small and isolated snippet of code.
 
@@ -80,7 +80,7 @@ With this breakdown, we will be creating five different components in isolation.
 
 Moving on.
 
-## The concept of Virtual DOM
+## The Concept of Virtual DOM
 
 As a JavaScript developer, you are sure to have interacted with the real DOM while building interactive websites. Though, you may have been able to avoid understanding how it works.
 
@@ -122,7 +122,7 @@ This will quickly get you up and running and does not require any installation.
 
 So let’s do it.
 
-## Writing React directly in HTML
+## Writing React Directly in HTML
 
 This method of interacting with React is the simplest way and it’s very easy if you have ever worked with HTML, CSS and JavaScript.
 
@@ -165,7 +165,7 @@ And you might be wondering why we are writing HTML inside of JavaScript.
 
 Well, that line is not HTML but JSX.
 
-## What is JSX?
+## What Is JSX?
 
 Writing JavaScript/React code to describe what the user interface (UI) will look like is not as simple as you may think.
 
@@ -214,8 +214,8 @@ Update the `script` element so it looks like this:
 
 ```jsx
 <script type="text/babel">
-  const element = <h1>Hello from React</h1>; ReactDOM.render(element,
-  document.getElementById("root"));
+  const element = <h1>Hello from React</h1>; 
+  ReactDOM.render(element, document.getElementById("root"));
 </script>
 ```
 
@@ -324,7 +324,7 @@ Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bun
 
 At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable. Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain. So instead of rendering a simple element, we will render a React component.
 
-## Creating the Component files
+## Creating the Component Files
 
 Remember, at the beginning, we decomposed our application into a tree of isolated components. Where the parent component, `TodoContainer`, holds three children components (`Header`, `InputTodo` and `TodosList`). Then, `TodosList` holds another component called `TodoItem`.
 
@@ -376,7 +376,7 @@ What did we do?
 
 First, to create a component in React, you either write it as a **class** or **functional-based**.
 
-A **class component** is created using the ES6 class syntax while the **functional component** is created by writing function.
+A **class component** is created using [the ES6 class syntax](/blog/object-oriented-programming-javascript/#the-es6-classes "ES6 class") while the **functional component** is created by writing function.
 
 In the parent file of our app, we defined a React component class called `TodoContainer` and extends the `Component` class in the React library. Inside this class, we have the `render()` method where we return the JSX that is rendered on the screen.
 
@@ -408,7 +408,7 @@ Also, take note of the component file path as used in the `index.js` file. Make 
 
 The file extension defaults to `.js`, so you don’t need to append it.
 
-## Working with Data
+## Working With Data
 
 When creating React app, you cannot do without having components receiving and/or passing data. It may be a child component receiving data from its parent or maybe the user directly input data to the component. Understanding how to work with data is very crucial to building React component.
 
@@ -438,7 +438,7 @@ Think of the state as the data you can store to a specific component. This data 
 
 So anytime you want some data to be updated whenever user perform some action like updating input field, toggling menu button etc., then you will make use of the state.
 
-## Adding state
+## Adding State
 
 As we have it in the app diagram, the `InputTodo` component will carry the responsibility of accepting the user’s input. That means we will need a place to store the data (in this case, the store is the state) received through the input. From there, we can display the data in the frontend.
 
@@ -640,7 +640,7 @@ Before we proceed, let’s briefly talk about the **React Developer Tools**.
 
 If you want to inspect and debug your application, check your components tree or see how React works in real-time, you will need this tool.
 
-This tool is available as a browser extension for Chrome and Firefox.
+It is available as a browser extension for Chrome and Firefox.
 
 Let’s go ahead and install it.
 

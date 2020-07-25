@@ -9,6 +9,7 @@ const ContactContent = () => {
       site {
         siteMetadata {
           twitterHandle
+          email
         }
       }
     }
@@ -17,7 +18,7 @@ const ContactContent = () => {
     <section className={contactContentStyles.contact__area}>
       <div className={contactContentStyles.main__container}>
         <p className={contactContentStyles.connect}>
-          ...Or you can connect with{" "}
+          You can also send a direct mail to: <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a> or connect with{" "}
           <a
             href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
             target="_blank"
@@ -25,6 +26,7 @@ const ContactContent = () => {
           >
             Ibas on Twitter
           </a>
+
         </p>
         <ContactForm />
       </div>

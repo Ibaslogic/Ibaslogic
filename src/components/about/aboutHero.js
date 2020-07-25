@@ -21,7 +21,7 @@ const AboutHero = () => {
         >
           <div className={aboutHeroStyles.formContent}>
             <p className={aboutHeroStyles.description}>
-              Get my ReactJS Book for FREE (Worth $14.99) and start building web
+              Get my ReactJS Book for FREE (worth $14.99) and start building web
               projects you’d be happy to share.
             </p>
           </div>

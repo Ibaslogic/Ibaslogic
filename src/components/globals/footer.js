@@ -20,6 +20,7 @@ const Footer = () => {
           linkedin
           github
           siteUrl
+          email
         }
       }
     }
@@ -46,7 +47,7 @@ const Footer = () => {
             <div className={footerStyles.startHere}>
               <p>Don't know where to start? </p>
               <Link to="/about/" target="_blank" title="About Ibaslogic">
-                start here
+                Visit The About Page
               </Link>
             </div>
           </div>
@@ -54,7 +55,7 @@ const Footer = () => {
             <h3>Mail me</h3>
             <p>
               <FaEnvelope />{" "}
-              <a href="mailto:ibas@ibaslogic.com">ibas@ibaslogic.com</a>
+              <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a>
             </p>
           </div>
           <div className={footerStyles.site}>

@@ -11,6 +11,7 @@ module.exports = {
     linkedin: `ibaslogic`,
     facebook: `ibaslogic`,
     github: `ibaslogic`,
+    email: `ibas@ibaslogic.com`,
     siteUrl: `https://ibaslogic.com`,
   },
   plugins: [

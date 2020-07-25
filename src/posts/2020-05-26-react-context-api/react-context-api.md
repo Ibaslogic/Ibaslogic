@@ -1,9 +1,9 @@
 ---
-title: "React Context API Made Simple – The practical guide (Updated)"
+title: "React Context API Made Simple – The Practical Guide (Updated)"
 description: "The context API in React allows every component in the component tree to have access to data without having to manually pass props down to it."
 category: "React"
 datePublished: "2020-05-26 10:32:00"
-dateUpdated: "2020-05-27 10:32:00"
+dateUpdated: "2020-06-27 10:32:00"
 featured: "./images/react-context-api.png"
 tags:
   - react
@@ -24,7 +24,7 @@ But as your app grows in size, you’ll discover that passing this data several 
 
 To get around this, React provides us with the Context API.
 
-## What is React context API
+## What Is React Context API
 
 The context API in React allows every component in the component tree to have access to consume data without having to manually pass props down to it.
 
@@ -169,7 +169,7 @@ At this point, nothing has changed in our application!
 
 Let’s see how we can access/consume the context value from any of the children components.
 
-## Accessing the Context data
+## Accessing the Context Data
 
 Depending on the type of component, there are different ways you can access your context data. We will start by accessing this data in a class component. Later you will learn how to achieve the same in a function component and also through a React Hook.
 
@@ -497,7 +497,7 @@ You should be able to toggle the checkboxes and delete todos items. But you can�
 
 Moving on.
 
-## Accessing the React Context with Hook
+## Accessing the React Context With Hook
 
 Here also, we will be working with a function component. But this time, in a much simpler way. The Hook method.
 
@@ -594,7 +594,7 @@ You can save your file and test your application.
 
 It should work as expected.
 
-## Performance Issue with React Context API
+## Performance Issue With React Context API
 
 React context is known for re-rendering components that consume the context data every time the `value` prop changes in the context.
 
