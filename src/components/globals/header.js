@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
 //import logo from "../../images/ibaslogic_logo.svg"
-import logo from "../../images/ibaslogic__site__logo_v3.png"
+import logo from "../../images/ibaslogic__site__logo_v3.5.png"
 import { FaMoon, FaGithub, FaTwitter, FaTimes } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
 

@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
         <div className={heroStyles.additional}>
           <p>
-            Get our React JS book (worth $14.99) for <strong>FREE</strong>{" "}
+            Get our React JS book (valued at $14.99) for <strong>FREE</strong>{" "}
             and start building awesome projects. Enter your email below and
             receive it in your inbox.{" "}
           </p>

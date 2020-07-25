@@ -36,8 +36,8 @@ export const query = graphql`
       frontmatter {
         title
         description
-        datePublished(formatString: "MMMM Do, YYYY")
-        dateUpdated(formatString: "MMMM Do, YYYY")
+        datePublished(formatString: "Do MMM, YY")
+        dateUpdated(formatString: "Do MMM, YY")
         tags
         featured {
           childImageSharp {
@@ -94,9 +94,9 @@ const Blog = ({ data, pageContext }) => {
                   <span className={blogPageStyles.avatarContainer}>
                     <img src={avatar} alt="author avatar" />
                   </span>
-                  by Ibas<span className={blogPageStyles.divider}></span>
+                  Ibas<span className={blogPageStyles.divider}></span>
                 </Link>
-                {datePublished === dateUpdated ? " Posted " : "Updated"} on{" "}
+                {datePublished === dateUpdated ? " Published " : "Updated"} on {" "}
                 <span>{dateUpdated}</span>
                 <span className={blogPageStyles.divider}></span>
                 <span>{data.mdx.timeToRead} min read</span>
@@ -110,7 +110,7 @@ const Blog = ({ data, pageContext }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Edit this post <FaPencilAlt />
+                  Edit <FaPencilAlt />
                 </a>
               </div>
             </header>
