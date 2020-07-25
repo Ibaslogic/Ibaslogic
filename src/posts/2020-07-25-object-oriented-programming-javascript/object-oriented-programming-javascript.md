@@ -616,4 +616,4 @@ Alongside the object fundamentals, we covered the OOP concepts, the ES5 construc
 
 I hope this guide helps? 
 
-If you have any questions or difficulties, you can send me a mail or buzz me on Twitter. I’ll be glad to assist.
+If you like it, do share around the web and [follow me on Twitter](https://twitter.com/ibaslogic "Ibaslogic Twitter") for more updates.
