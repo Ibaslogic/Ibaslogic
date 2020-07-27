@@ -203,7 +203,7 @@ In this section, we will take a brief look at each of them.
 
 The parent class is also called _super_ or _base_ while the child class is also called _sub_ or _derived_.
 
-**Polymorphism** – Simply means the condition of occurring in several different forms. In OOP, it means that you can have a method or function which can be presented in multiple forms. So that when you invoke (call) any of these forms on different object types, they respond appropriately.
+**Polymorphism** – Simply means the condition of occurring in several different forms. In OOP, it means that you can have a method or function which can be presented in multiple forms. Of which you can decide which of the forms get executed based on the object types.
 
 _You will see their implementations later in this guide._
 

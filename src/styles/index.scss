@@ -18,7 +18,7 @@ html {
 }
 
 :root {
-  --primary-color: #3c4043;// #212529;
+  --primary-color:  #36313d;// #3c4043;// #212529;
   --header-color: #111;
   --bg-secondary: #1d2b35; //#1f2330;
   --main-white: hsla(0, 0%, 100%, 0.878);
@@ -95,6 +95,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--header-color);
 }
 
 h2 a,
@@ -500,6 +504,10 @@ body {
   &.dark-mode {
     color: var(--main-white);
     background: var(--bg-secondary);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--main-white);
+    }
 
     .top__header {
       box-shadow: none;

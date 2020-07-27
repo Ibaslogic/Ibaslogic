@@ -56,7 +56,9 @@ $nav-btn-color: #5f6368;
   a {
     padding: 15px;
     color: $nav-link;
-    font-size: 19px;
+    font-size: 18px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
   svg {
     opacity: 0.8;
@@ -69,14 +71,14 @@ $nav-btn-color: #5f6368;
 .darkLight {
   background: inherit;
   border: none;
-  padding: 12px $base-container-LR-padding 13px 12px;
+  padding: 12px $base-container-LR-padding 12px 10px;
   cursor: pointer;
-  width: 54px;
+  width: 50px;
   outline: none;
 
   @media screen and (min-width: 768px) {
     padding-right: 0px;
-    width: 35px;
+    width: 30px;
   }
   svg {
     color: $nav-btn-color;
@@ -85,16 +87,16 @@ $nav-btn-color: #5f6368;
   .moon {
     outline: none;
     svg {
-      width: 25px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
     }
   }
 
   .sun {
     outline: none;
     svg {
-      width: 25px;
-      height: 25px;
+      width: 21px;
+      height: 21px;
     }
   }
 }
