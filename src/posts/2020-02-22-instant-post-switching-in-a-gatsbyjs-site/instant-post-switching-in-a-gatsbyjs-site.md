@@ -36,9 +36,9 @@ Or simply take a look at [my site code on GitHub](https://github.com/Ibaslogic/I
 
 ## Prerequisite
 
-To follow this tutorial, make sure you are comfortable creating a Gatsby site. If not, quickly read this [Gatsby tutorial guide](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") and come back.
+To follow this tutorial, make sure you are comfortable creating a Gatsby site. If not, quickly read this [Gatsby tutorial guide](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") and come back.
 
-You can as well follow along if you want to apply this feature in your [React application](/blog/react-tutorial-for-beginners/ "react tutorial").
+You can as well follow along if you want to apply this feature in your [React application](/react-tutorial-for-beginners/ "react tutorial").
 
 We will be writing purely React code!
 
@@ -80,7 +80,7 @@ Good.
 
 <br />
 
-Irrespective of the Gatsby blog starter you are using, you’d want to use the **page query** to grab your data from the source (either [from the filesystem](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") or [Content Management System](/blog/gatsby-with-contentful-cms/ "gatsby tutorial contentful")) instead of the **StaticQuery**.
+Irrespective of the Gatsby blog starter you are using, you’d want to use the **page query** to grab your data from the source (either [from the filesystem](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") or [Content Management System](/gatsby-with-contentful-cms/ "gatsby tutorial contentful")) instead of the **StaticQuery**.
 
 The reason for that is because you can easily pass all the query data (in this case, a list of posts) into a child component so that your blog page file will not be cumbersome.
 
@@ -94,7 +94,7 @@ Once this child component receives the query data (i.e a list of posts) from the
 
 To do this, we will make the component a **class-based**.
 
-> Note that we can also manage the state logic through the **functional component** by [using the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial").
+> Note that we can also manage the state logic through the **functional component** by [using the React Hooks](/react-hooks-tutorial/ "React Hooks tutorial").
 
 <br />
 
@@ -278,7 +278,7 @@ So let’s start by adding the `category` field to the `frontmatter` of every po
 In my case, I’ve created another blog post making it three. Then I added “Gatsby” and again “React” to the other two posts.
 You will see why I did that in a moment.
 
-> **Note:** If you are getting the content from CMS like Contentful, go there and add the category to the Content model. You can [check this guide](/blog/gatsby-with-contentful-cms/ "gatsby contentful") for easy setup.
+> **Note:** If you are getting the content from CMS like Contentful, go there and add the category to the Content model. You can [check this guide](/gatsby-with-contentful-cms/ "gatsby contentful") for easy setup.
 
 Next, update the blog page query to include the `category`.
 

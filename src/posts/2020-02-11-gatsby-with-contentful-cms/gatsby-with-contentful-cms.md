@@ -21,7 +21,7 @@ In this tutorial, you’ll learn how to set up Gatsby with Contentful CMS (Conte
 
 At the end of this tutorial, you will be able to create [this Gatsby blog site](https://gatsby-contentful-blogsite.netlify.com/blog/ "Ibaslogic gatsby tutorial").
 
-If you are not familiar with GatsbyJS, consider reading [this step by step guide to creating a Gatsby site](/blog/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial"). There, you will learn the fundamentals of Gatsby and GraphQL. You’ll also learn how to source Gatsby markdown content from the filesystem.
+If you are not familiar with GatsbyJS, consider reading [this step by step guide to creating a Gatsby site](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial"). There, you will learn the fundamentals of Gatsby and GraphQL. You’ll also learn how to source Gatsby markdown content from the filesystem.
 
 For those of us that are conversant with Gatsby, let’s get started.
 
@@ -37,7 +37,7 @@ From the terminal, run this command:
 C:\Users\Your Name > gatsby new gatsby-contentful-blogsite
 ```
 
-> **Heads-up:** Make sure you have NodeJS, Git and Gatsby CLI installed. You should know this if you follow the [Gatsby tutorial guide](/blog/gatsby-tutorial-from-scratch-for-beginners/#initial-setup "gatsby setup").
+> **Heads-up:** Make sure you have NodeJS, Git and Gatsby CLI installed. You should know this if you follow the [Gatsby tutorial guide](/gatsby-tutorial-from-scratch-for-beginners/#initial-setup "gatsby setup").
 
 The command will create a new project folder called **gatsby-contentful-blogsite** and include all of the starter files.
 
@@ -263,7 +263,7 @@ If you explore some of the fields that are available on the `allContentfulBlogPo
 
 As seen in the image above, the query is returning the Contentful data that we need.
 
-> If the query looks strange to you, you need to [start from here](/blog/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby graphql data").
+> If the query looks strange to you, you need to [start from here](/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby graphql data").
 
 Now, we need to use this query to construct the blog page (post listing page).
 
@@ -346,7 +346,7 @@ export default Blog
 
 Save the file and check the blog page. You should have your Contentful post listed.
 
-The code should be self-explanatory. It is similar to how you’d [render the markdown data](/blog/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby data").
+The code should be self-explanatory. It is similar to how you’d [render the markdown data](/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby data").
 
 In essence, we are using the query we constructed in the GraphiQL IDE to render the Contentful data in the JSX.
 
@@ -619,7 +619,7 @@ Now you should be good.
 
 Before we go ahead and deploy our site to Netlify, let’s add some styling.
 
-It is recommended to scope your component styles locally [using the CSS Module](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "gatsby styles"). But for the sake of this tutorial, we’ll add a few lines of CSS styles in the `src/components/layout.css` file.
+It is recommended to scope your component styles locally [using the CSS Module](/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "gatsby styles"). But for the sake of this tutorial, we’ll add a few lines of CSS styles in the `src/components/layout.css` file.
 
 So go ahead and add the following style:
 
@@ -673,7 +673,7 @@ Save the file. Now the frontend should look more appealing.
 
 ## Deploying Gatsby Site to Netlify
 
-The first step to deploying your site is to push your project files to your GitHub repository. This should be a piece of cake. But if you need a refresher, [have a quick look](/blog/gatsby-tutorial-from-scratch-for-beginners/#deploying-gatsby-site-to-netlify "gatsby deploy").
+The first step to deploying your site is to push your project files to your GitHub repository. This should be a piece of cake. But if you need a refresher, [have a quick look](/gatsby-tutorial-from-scratch-for-beginners/#deploying-gatsby-site-to-netlify "gatsby deploy").
 
 Next, we will go ahead and connect this repo to Netlify.
 

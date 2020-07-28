@@ -10,7 +10,7 @@ tags:
   - form
 ---
 
-In the [first part of the React tutorial for beginners](/blog/react-tutorial-for-beginners/ "react tutorial"), we covered some of the basics of React; set up React working environment and started writing our Todos application.
+In the [first part of the React tutorial for beginners](/react-tutorial-for-beginners/ "react tutorial"), we covered some of the basics of React; set up React working environment and started writing our Todos application.
 
 <PostSeriesLink
 label="This React tutorial is part 2 of 6 in the React for beginners series."
@@ -18,34 +18,34 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 3",
 label: "How to implement CSS in Reactjs App",
-url: "/blog/css-in-reactjs-app/"
+url: "/css-in-reactjs-app/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 5",
 label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/blog/react-http-request-and-lifecycle-methods/"
+url: "/react-http-request-and-lifecycle-methods/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />
 
 Now, in this part, we will take a look at integrating form in our React app, you will also get to know how to raise and handle events in React.
 
-But before you go ahead, I will advise you to take a look at [how to handle form inputs fields in React](/blog/simple-guide-to-react-form/ "react form"). There, you will learn how the common input types such as checkbox, text, textarea, select input, radio and range work in React.
+But before you go ahead, I will advise you to take a look at [how to handle form inputs fields in React](/simple-guide-to-react-form/ "react form"). There, you will learn how the common input types such as checkbox, text, textarea, select input, radio and range work in React.
 
 Once you know the basics of the React form inputs, let’s move on.
 
@@ -754,27 +754,27 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 3",
 label: "How to implement CSS in Reactjs App",
-url: "/blog/css-in-reactjs-app/"
+url: "/css-in-reactjs-app/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 5",
 label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/blog/react-http-request-and-lifecycle-methods/"
+url: "/react-http-request-and-lifecycle-methods/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />

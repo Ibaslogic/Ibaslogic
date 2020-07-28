@@ -9,9 +9,9 @@ tags:
   - hooks
 ---
 
-Earlier on this blog, we created a [practical guide to learning the React hooks](/blog/react-hooks-tutorial/ "react hook tutorial"). There, we discussed the fundamentals of these Hooks and also apply them in a real project.
+Earlier on this blog, we created a [practical guide to learning the React hooks](/react-hooks-tutorial/ "react hook tutorial"). There, we discussed the fundamentals of these Hooks and also apply them in a real project.
 
-You'd want to start with that if you are just getting started with React Hooks. In case you are not yet comfortable writing React code, you can follow this [step by step guide to React](/blog/react-tutorial-for-beginners/ "react tutorial").
+You'd want to start with that if you are just getting started with React Hooks. In case you are not yet comfortable writing React code, you can follow this [step by step guide to React](/react-tutorial-for-beginners/ "react tutorial").
 
 That said. In this tutorial, we aim to solidify our React Hooks foundation by working on another simple project called meme generator.
 
@@ -88,7 +88,7 @@ You should know that the `useState` Hook will return an array containing two ite
 
 ![React setState Hook](./images/setState.png)
 
-Recall from the [React Hooks for beginners’ guide](/blog/react-hooks-tutorial/ "react hooks tutorial"), we can destructure the returned value of this Hook to have access to its initial state (i.e default value) as well as a callback to modify it.
+Recall from the [React Hooks for beginners’ guide](/react-hooks-tutorial/ "react hooks tutorial"), we can destructure the returned value of this Hook to have access to its initial state (i.e default value) as well as a callback to modify it.
 
 Something like this.
 
@@ -213,7 +213,7 @@ And as you know, this method is not available in a function component.
 
 So we will use another Hook called `useEffect`.
 
-We have covered much of this in the [React Hooks guide](/blog/react-hooks-tutorial/ "react hook tutorial"), but to reemphasise, you can think of this Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
+We have covered much of this in the [React Hooks guide](/react-hooks-tutorial/ "react hook tutorial"), but to reemphasise, you can think of this Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
 
 Let’s see how to apply it in our application.
 

@@ -16,27 +16,27 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 2",
 label: "Getting Started with React Form and Event Handling",
-url: "/blog/react-form-handling/"
+url: "/react-form-handling/"
 },
 {
 prefix: "Part 3",
 label: "How to Implement CSS in Reactjs App",
-url: "/blog/css-in-reactjs-app/"
+url: "/css-in-reactjs-app/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />
@@ -521,27 +521,27 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 2",
 label: "Getting Started with React Form and Event Handling",
-url: "/blog/react-form-handling/"
+url: "/react-form-handling/"
 },
 {
 prefix: "Part 3",
 label: "How to Implement CSS in Reactjs App",
-url: "/blog/css-in-reactjs-app/"
+url: "/css-in-reactjs-app/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />

@@ -20,7 +20,7 @@ It is happening because the files are generated ahead of time, eliminating the u
 
 In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.
 
-Before you proceed, you’ll need to have a knowledge of React. So go ahead and cover this [React tutorial](/blog/react-tutorial-for-beginners/ "React tutorial") and come back.
+Before you proceed, you’ll need to have a knowledge of React. So go ahead and cover this [React tutorial](/react-tutorial-for-beginners/ "React tutorial") and come back.
 
 For those of us who are comfortable writing React code, let’s dive in.
 
@@ -42,9 +42,9 @@ With Gatsbyjs, you are not limited to static sites. You can build a blog site, e
 
 Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources.
 
-If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/blog/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
+If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
 
-Throughout this beginner's guide, you’ll learn how to source and manage your content through the Markdown files. [In the follow-up tutorial](/blog/gatsby-with-contentful-cms/ "Gatsby with contentful"), you’ll get to know how to source content from the Contentful CMS.
+Throughout this beginner's guide, you’ll learn how to source and manage your content through the Markdown files. [In the follow-up tutorial](/gatsby-with-contentful-cms/ "Gatsby with contentful"), you’ll get to know how to source content from the Contentful CMS.
 
 Before you dive in, this is what you will build in this tutorial, [Gatsby site project](https://ibaslogic-site.netlify.com/ "Gatsby project"). And the source code is available in my [GitHub repo](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "Ibaslogic GitHub repo").
 
@@ -217,7 +217,7 @@ Save the file and see your changes in the frontend.
 
 This is all it takes to create a Gatsby page. All we are doing is rendering a simple React functional component.
 
-If you are scratching your head understanding the code, please go ahead and read this [React tutorial](/blog/react-tutorial-for-beginners/ "Ibaslogic React tutorial") and come back.
+If you are scratching your head understanding the code, please go ahead and read this [React tutorial](/react-tutorial-for-beginners/ "Ibaslogic React tutorial") and come back.
 
 **So what exactly is happening when Gatsby generate our site?**
 

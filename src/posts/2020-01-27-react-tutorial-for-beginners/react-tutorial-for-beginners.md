@@ -12,7 +12,7 @@ tags:
 
 If you are aiming to build a modern website or app that require high performance and safety, then, it's a wise decision learning React JS.
 
-Today, many developers and site owners are embracing web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
+Today, many developers and site owners are embracing web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
 These are just to name a few.
 
@@ -20,9 +20,9 @@ What this means is that you cannot escape learning React if you want to become a
 
 In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
-Later in the series, you will get to [learn the React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
+Later in the series, you will get to [learn the React Hooks](/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
 
-Once you are well-grounded with React, [following a Gatsby site project](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
+Once you are well-grounded with React, [following a Gatsby site project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
 
 <p className="prerequisite">Prerequisite</p>
 
@@ -32,7 +32,7 @@ Before you go ahead with this React tutorial, please make sure you have:
 - JavaScript fundamentals (object, array, conditionals etc).
 - Familiarity with JavaScript ES6 features (class syntax, arrow functions, object destructuring etc).
 
-> If you are still finding it tough with [any of the JavaScript topics](/blog/object-oriented-programming-javascript/ "oop tutorial"), just read and code along with me. I will be explaining every task as we code our React app.
+> If you are still finding it tough with [any of the JavaScript topics](/object-oriented-programming-javascript/ "oop tutorial"), just read and code along with me. I will be explaining every task as we code our React app.
 
 At the end of this React js tutorial, you will be able to build [this Todos App](https://ibaslogic.github.io/simple-todo-app/ "simple react app").
 
@@ -376,7 +376,7 @@ What did we do?
 
 First, to create a component in React, you either write it as a **class** or **functional-based**.
 
-A **class component** is created using [the ES6 class syntax](/blog/object-oriented-programming-javascript/#the-es6-classes "ES6 class") while the **functional component** is created by writing function.
+A **class component** is created using [the ES6 class syntax](/object-oriented-programming-javascript/#the-es6-classes "ES6 class") while the **functional component** is created by writing function.
 
 In the parent file of our app, we defined a React component class called `TodoContainer` and extends the `Component` class in the React library. Inside this class, we have the `render()` method where we return the JSX that is rendered on the screen.
 
@@ -450,7 +450,7 @@ For this reason, the state data will live in the `TodoContainer` component, whic
 
 Hope it’s clear?
 
-Though, instead of declaring the `state` object in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/blog/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
+Though, instead of declaring the `state` object in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
 
 In this React tutorial series, we will start with the simplest of them. Once you have the basic knowledge, you can then learn to use the Context API for your state management.
 
@@ -668,7 +668,7 @@ On the other hand, the **function component** prior to React 16.8 cannot maintai
 
 This type is the simplest form of React component because it is primarily concerned with how things look.
 
-But now, things have changed with the [introduction of React Hooks](/blog/react-hooks-tutorial/ "React Hooks tutorial").
+But now, things have changed with the [introduction of React Hooks](/react-hooks-tutorial/ "React Hooks tutorial").
 
 You can now manage the class-based logic (state and lifecycle) inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
 
@@ -792,27 +792,27 @@ datas={[
 {
 prefix: "Part 2",
 label: "Getting Started with React Form and Event Handling",
-url: "/blog/react-form-handling/"
+url: "/react-form-handling/"
 },
 {
 prefix: "Part 3",
 label: "How to implement CSS in Reactjs App",
-url: "/blog/css-in-reactjs-app/"
+url: "/css-in-reactjs-app/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 5",
 label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/blog/react-http-request-and-lifecycle-methods/"
+url: "/react-http-request-and-lifecycle-methods/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />

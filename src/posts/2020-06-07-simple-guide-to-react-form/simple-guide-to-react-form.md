@@ -25,7 +25,7 @@ Here is the final project.
 
 And you can find all [the project source code here](https://github.com/Ibaslogic/react-form-inputs/blob/master/src/App.js "react form source code").
 
-As you can see, we are getting the input values in real-time (and on every keystroke for the text input). This is one of the beauty of React. You can take advantage of this and [build a Meme generator app](/blog/meme-generator-with-react-hooks/ "Meme generator app").
+As you can see, we are getting the input values in real-time (and on every keystroke for the text input). This is one of the beauty of React. You can take advantage of this and [build a Meme generator app](/meme-generator-with-react-hooks/ "Meme generator app").
 
 Just so you can follow along with me, let’s create a simple React project. So, run the following command from your terminal:
 
@@ -33,11 +33,11 @@ Just so you can follow along with me, let’s create a simple React project. So,
 C:\Users\Your Name> npx create-react-app react-form-handling
 ```
 
-> You need to have Nodejs installed on your computer to run the command. You should know that if you have worked with React. Else you need to [start from here](/blog/react-tutorial-for-beginners/ "react tutorial").
+> You need to have Nodejs installed on your computer to run the command. You should know that if you have worked with React. Else you need to [start from here](/react-tutorial-for-beginners/ "react tutorial").
 
 The command will create a project folder called `react-form-handling` in your choosing directory.
 
-I won’t dive in the file structure here. You should be familiar with it if you [follow my React tutorial](/blog/react-tutorial-for-beginners/ "react tutorial").
+I won’t dive in the file structure here. You should be familiar with it if you [follow my React tutorial](/react-tutorial-for-beginners/ "react tutorial").
 
 Open the folder with your favourite code editor and start the development server:
 
@@ -85,7 +85,7 @@ When you have this type of input, then you have a **controlled input**.
 
 How does it work?
 
-Depending on your component type, you will store your input data in the component state. Here, we will be [using the React Hook](/blog/react-hooks-tutorial/ "react hook tutorial") to manage our form data. However, the approach is the same if you are using a class-based component. All you have to do is to declare a `state` object where your data would live.
+Depending on your component type, you will store your input data in the component state. Here, we will be [using the React Hook](/react-hooks-tutorial/ "react hook tutorial") to manage our form data. However, the approach is the same if you are using a class-based component. All you have to do is to declare a `state` object where your data would live.
 
 From there, you will set up logic to listen to changes in the input and control it (i.e update the state) using the `onChange` event.
 
@@ -122,7 +122,7 @@ In the code, we added a state using the `useState` Hook and assigned a default e
 
 The second item return by the `useState` Hook (I called it `setFname`, but you can name it anything you like) is a function that will allow us to update the state value.
 
-> If you are scratching your head understanding the Hook, head over to my [React Hooks tutorial](/blog/react-hooks-tutorial/ "react hook tutorial") and come back.
+> If you are scratching your head understanding the Hook, head over to my [React Hooks tutorial](/react-hooks-tutorial/ "react hook tutorial") and come back.
 
 Now, for us to make the input field a controlled input, we assigned the state variable (which contains a default empty string) to the `value` prop.
 

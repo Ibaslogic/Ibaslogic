@@ -16,27 +16,27 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 2",
 label: "Getting Started with React Form and Event Handling",
-url: "/blog/react-form-handling/"
+url: "/react-form-handling/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 5",
 label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/blog/react-http-request-and-lifecycle-methods/"
+url: "/react-http-request-and-lifecycle-methods/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />
@@ -47,9 +47,9 @@ In this part, you will learn how to add CSS to your React JS app.
 
 Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes.
 
-React application can also be styled [using the CSS modules](/blog/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules").
+React application can also be styled [using the CSS modules](/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules").
 
-But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/blog/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
+But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
 
 It follows the same approach since Gatsby is built on React.
 
@@ -392,27 +392,27 @@ datas={[
 {
 prefix: "Part 1",
 label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/blog/react-tutorial-for-beginners/"
+url: "/react-tutorial-for-beginners/"
 },
 {
 prefix: "Part 2",
 label: "Getting Started with React Form and Event Handling",
-url: "/blog/react-form-handling/"
+url: "/react-form-handling/"
 },
 {
 prefix: "Part 4",
 label: "Deploying React App to GitHub Pages",
-url: "/blog/deploying-react-app-to-github-pages/"
+url: "/deploying-react-app-to-github-pages/"
 },
 {
 prefix: "Part 5",
 label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/blog/react-http-request-and-lifecycle-methods/"
+url: "/react-http-request-and-lifecycle-methods/"
 },
 {
 prefix: "Part 6",
 label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/blog/react-hooks-tutorial/"
+url: "/react-hooks-tutorial/"
 },
 ]}
 />

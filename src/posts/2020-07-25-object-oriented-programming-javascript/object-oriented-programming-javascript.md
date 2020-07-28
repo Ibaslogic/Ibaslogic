@@ -570,7 +570,7 @@ As you can see, using the `class` syntax is much easier. You don’t have to cal
 
 To create a subclass from our existing Book, we will use the `extends` keyword. This tells JavaScript where the child class should inherit from.
 
-If you’ve worked with [React class component](/blog/react-tutorial-for-beginners/ "React tutorial"), you’d often see this keyword.
+If you’ve worked with [React class component](/react-tutorial-for-beginners/ "React tutorial"), you’d often see this keyword.
 
 Let’s reconstruct our `Journal` constructor function (in the prototype-based) to use the `class` syntax.
 

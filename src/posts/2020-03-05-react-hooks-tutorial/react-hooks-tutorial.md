@@ -23,7 +23,7 @@ In this tutorial, you will learn how to get started with these React Hooks pract
 
 Our task now is to switch from managing this logic from the class component into a function-based component. This way, you'll not only learn the fundamentals, but you'll also learn how it applies in a real project.
 
-Before we dive in, make sure you are familiar with React. If not, [you can start here](/blog/react-tutorial-for-beginners/ "react tutorial").
+Before we dive in, make sure you are familiar with React. If not, [you can start here](/react-tutorial-for-beginners/ "react tutorial").
 
 ## What are React Hooks?
 
@@ -67,7 +67,7 @@ You should see this app in your browser address bar at [http://localhost:3000/](
 
 ![React Hook Starter](./images/react-hook-starter.gif)
 
-_(To build this todos app from scratch, check out this post, [React tutorial for beginners](/blog/react-tutorial-for-beginners/ "React tutorial").)_
+_(To build this todos app from scratch, check out this post, [React tutorial for beginners](/react-tutorial-for-beginners/ "React tutorial").)_
 
 What this app does is simple and clear. You simply add, checked and delete todos items. On top of that, you get alerted when the checkbox or delete button is clicked.
 
@@ -212,7 +212,7 @@ So all we did here was to convert the class methods to function by adding the `c
 
 Another area of concern is the `onChange` method. This method is called whenever the input text field changes.
 
-If you are vigilant, you’d ask yourself why we are not using the `e.target.name` in the `onChange` method as we have it in the class version. And if you follow this [React tutorial from scratch](/blog/react-tutorial-for-beginners/ "React tutorial"), you’d know that this target allows us to manage many input fields with a single method/function as the case may be.
+If you are vigilant, you’d ask yourself why we are not using the `e.target.name` in the `onChange` method as we have it in the class version. And if you follow this [React tutorial from scratch](/react-tutorial-for-beginners/ "React tutorial"), you’d know that this target allows us to manage many input fields with a single method/function as the case may be.
 
 Now read carefully.
 

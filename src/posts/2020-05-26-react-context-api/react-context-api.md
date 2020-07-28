@@ -14,7 +14,7 @@ Managing your app data using the React Context API is fun and simple to implemen
 
 However, it can also become a nightmare if not handled with care especially as your app grows in size.
 
-As a React developer, you cannot do without passing around data in your React app. And if you are just [getting started with React](/blog/react-tutorial-for-beginners/ "react tutorial"), you will most likely be doing what is called "prop drilling".
+As a React developer, you cannot do without passing around data in your React app. And if you are just [getting started with React](/react-tutorial-for-beginners/ "react tutorial"), you will most likely be doing what is called "prop drilling".
 
 This has to do with manually getting data from component A down to component C and D through the props. Where component A is the common parent of C and D.
 
@@ -68,7 +68,7 @@ You should see the app in your browser address bar at [localhost:3000](http://lo
 
 ![Todos app design](./images/todosapplication.png)
 
-_You can learn how to build this app from scratch, by following [this React tutorial guide](/blog/react-tutorial-for-beginners/ "React tutorial"). There, we used "props drilling" for the data flow._
+_You can learn how to build this app from scratch, by following [this React tutorial guide](/react-tutorial-for-beginners/ "React tutorial"). There, we used "props drilling" for the data flow._
 
 The image above shows a clear picture of the components hierarchy. As expected, you should know that the component files for the app live in the `src/components` folder.
 
@@ -76,7 +76,7 @@ The `TodoContainer` is the parent component which holds all the other children c
 
 Likewise, it has a couple of class methods that also need access to the todos state data.
 
-If you follow [this tutorial](/blog/react-tutorial-for-beginners/ "React tutorial") or conversant with React, you should know why we are lifting the state all the way to the parent component. To reiterate, for every component accessing the state data, the `state` object is declared in the file of their closest common parent.
+If you follow [this tutorial](/react-tutorial-for-beginners/ "React tutorial") or conversant with React, you should know why we are lifting the state all the way to the parent component. To reiterate, for every component accessing the state data, the `state` object is declared in the file of their closest common parent.
 
 We were doing what is called State lifting! Nothing special, that is basic React.
 
@@ -147,7 +147,7 @@ Moreover, the focus is on the Context API and not the component type. Also, reme
 
 You still don’t want to use any class component?
 
-I have [covered how you can write this same Todos app](/blog/react-hooks-tutorial/ "React hooks tutorial") only with function component using the React Hook. You can quickly go through it and come back to continue this context tutorial.
+I have [covered how you can write this same Todos app](/react-hooks-tutorial/ "React hooks tutorial") only with function component using the React Hook. You can quickly go through it and come back to continue this context tutorial.
 
 It’s up to you!
 
@@ -356,9 +356,9 @@ Now you know how to access the context data in a class component. A lot still ne
 
 ## Accessing the Context Data in a Function Component
 
-With the [introduction of React Hooks](/blog/meme-generator-with-react-hooks/ "React hooks meme tutorial"), you can now have your entire app component only with the function component. In this regard, knowing how to access this data in this component type is very crucial.
+With the [introduction of React Hooks](/meme-generator-with-react-hooks/ "React hooks meme tutorial"), you can now have your entire app component only with the function component. In this regard, knowing how to access this data in this component type is very crucial.
 
-As you know, this app is built only with the class components. Though, I’ve covered [how you can build this with the function component](/blog/react-hooks-tutorial/ "React hooks tutorial"). You can take a look quickly if you need a refresher.
+As you know, this app is built only with the class components. Though, I’ve covered [how you can build this with the function component](/react-hooks-tutorial/ "React hooks tutorial"). You can take a look quickly if you need a refresher.
 
 What this tells you is that we need to convert one of the components into a function type to see how we can access the context data.
 
@@ -505,7 +505,7 @@ This is my preferred method. Very simple and concise.
 
 We will take a look at the component that controls the input field and submission. So open the `InputTodo.js` file. Unfortunately, this component is class-based. Meaning, we will need to convert it to function to use the Hook.
 
-If you [follow my React Hook tutorial](/blog/react-hooks-tutorial/ "React hooks tutorial"), this conversion should be a piece of cake.
+If you [follow my React Hook tutorial](/react-hooks-tutorial/ "React hooks tutorial"), this conversion should be a piece of cake.
 
 Here you have it:
 
