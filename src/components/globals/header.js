@@ -23,7 +23,7 @@ const Header = () => {
     {
       id: 1,
       path: "/blog/",
-      text: "blog",
+      text: "guides",
     },
     {
       id: 2,

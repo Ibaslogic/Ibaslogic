@@ -9,7 +9,7 @@ const HeroError = () => {
         <h1 className={heroStyles.errorTitle}>404: Page not found</h1>
         <p className={heroStyles.errorDescription}>
           I guess you are here to become a better web developer. Click on the
-          button below and check some of the latest dev articles.
+          button below and check some of the latest dev guides.
         </p>
         <div className={heroStyles.heroButtonContainer}>
           <div className={heroStyles.errorButton}>

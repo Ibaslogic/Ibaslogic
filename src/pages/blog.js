@@ -13,8 +13,8 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Blog Articles"
-        description="Read our articles and start learning the tools and strategy required for your next web development project."
+        title="Comprehensive Guides"
+        description="Read our step-by-step guides and start learning the tools and strategy required for your next web project."
       />
       <BlogItems items={data} />
     </Layout>
