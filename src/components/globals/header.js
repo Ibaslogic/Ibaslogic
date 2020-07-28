@@ -15,23 +15,23 @@ const Header = () => {
   const node = useRef()
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [links] = useState([
+    // {
+    //   id: 1,
+    //   path: "/",
+    //   text: "home",
+    // },
     {
       id: 1,
-      path: "/",
-      text: "home",
-    },
-    {
-      id: 2,
       path: "/blog/",
       text: "blog",
     },
     {
-      id: 3,
+      id: 2,
       path: "/contact/",
       text: "contact",
     },
     {
-      id: 4,
+      id: 3,
       path: "/about/",
       text: "about",
     },

@@ -18,7 +18,7 @@ const RelatedArticles = ({ articles }) => {
       <ul>
         {articles.map(article => (
           <li key={article.node.id}>
-            <Link to={`/blog/${slugify(article.node.fields.slug.name)}/`}>
+            <Link to={`/${slugify(article.node.fields.slug.name)}/`}>
               <span>
                 <span className={relatedPostStyles.hot}>
                   <FaSlackHash />

@@ -17,7 +17,7 @@ const ShareItems = ({
   customClass,
   siteUrl,
 }) => {
-  const baseUrl = `${siteUrl}/blog/`
+  const baseUrl = `${siteUrl}/`
 
   //console.log(slug, title, twitterHandle, customClass, siteUrl, baseUrl)
 

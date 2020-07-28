@@ -60,7 +60,7 @@ const AboutContent = () => {
               <ul className="list__container">
                 <li>
                   <Link
-                    to="/blog/react-tutorial-for-beginners/"
+                    to="/react-tutorial-for-beginners/"
                     title="React tutorial"
                   >
                     A Step-by-Step Guide to Learning React JS in 2020
@@ -68,7 +68,7 @@ const AboutContent = () => {
                 </li>
                 <li>
                   <Link
-                    to="/blog/gatsby-tutorial-from-scratch-for-beginners/"
+                    to="/gatsby-tutorial-from-scratch-for-beginners/"
                     title="Gatsby tutorial"
                   >
                     Gatsby Tutorial: A Step-by-Step Guide to Building a Gatsby

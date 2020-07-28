@@ -1,2 +1,6 @@
 # Redirect default Netlify subdomain to primary domain
 https://ibaslogic.netlify.com/* https://ibaslogic.com/:splat 301!
+
+# Redirect /blog/ pages  pages to /
+/blog/* /:splat 301!
+

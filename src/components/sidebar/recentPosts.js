@@ -27,7 +27,7 @@ const RecentPosts = () => {
               //     className={recentPostStyles.imgTumbnail}
               //     fluid={node.frontmatter.image.childImageSharp.fluid}
               //   />
-              //   <Link to={`/blog/${node.fields.slug}`}>
+              //   <Link to={`/${node.fields.slug}`}>
               //     {node.frontmatter.title}
               //   </Link>
               // </li>

@@ -60,7 +60,7 @@ const RecentPosts = () => {
             return (
               <article className={recentStyles.article} key={id}>
                 <header>
-                  <Link to={`/blog/${fields.slug.name}/`}>
+                  <Link to={`/${fields.slug.name}/`}>
                     <Img
                       fluid={frontmatter.featured.childImageSharp.fluid}
                       alt={fields.slug.name}
@@ -69,7 +69,7 @@ const RecentPosts = () => {
                 </header>
                 <div className={recentStyles.content}>
                   <h2>
-                    <Link to={`/blog/${fields.slug.name}/`}>
+                    <Link to={`/${fields.slug.name}/`}>
                       {" "}
                       {frontmatter.title}
                     </Link>

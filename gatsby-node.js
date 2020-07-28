@@ -89,7 +89,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   res.data.allMdx.edges.forEach(edge => {
     createPage({
-      path: `/blog/${edge.node.fields.slug.name}/`,
+      path: `/${edge.node.fields.slug.name}/`,
       component: blogTemplate,
       context: {
         slug: edge.node.fields.slug.name,
