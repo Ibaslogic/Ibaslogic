@@ -53,7 +53,7 @@ const recentPostQuery = graphql`
             featured {
               childImageSharp {
                 fixed(width: 80, height: 46) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_noBase64
                 }
               }
             }

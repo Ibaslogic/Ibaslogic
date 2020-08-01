@@ -8,7 +8,8 @@ const SidebarPostMarkup = ({ fixed, title, slug }) => {
   return (
     <Link to={`/${slugify(slug)}/`}>
       <li>
-        <Img className={recentPostStyles.imgTumbnail} fixed={fixed} />
+        <Img className={recentPostStyles.imgTumbnail} fixed={fixed} fadeIn={false}
+          loading="eager" />
         <span>{title}</span>
       </li>
     </Link>

@@ -34,11 +34,12 @@ const Hero = () => {
         <div className={heroStyles.additional}>
           <p>
             Get our React JS book (valued at $14.99) for <strong>FREE</strong>{" "}
-            and start building awesome projects. Enter your email below and
-            receive it in your inbox.{" "}
+            and start building awesome projects.
+            {/* Enter your email below and
+            receive it in your inbox.{" "} */}
           </p>
           <div className="home__subscribe">
-            <Subscribe placeholder="Email here" />
+            <Subscribe placeholder="Enter email to receive it" />
           </div>
         </div>
       </div>

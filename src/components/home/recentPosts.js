@@ -22,7 +22,7 @@ const RecentPosts = () => {
               featured {
                 childImageSharp {
                   fluid(maxWidth: 600) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_noBase64
                   }
                 }
               }
@@ -64,6 +64,8 @@ const RecentPosts = () => {
                     <Img
                       fluid={frontmatter.featured.childImageSharp.fluid}
                       alt={fields.slug.name}
+                      fadeIn={false}
+                      loading="eager"
                     />
                   </Link>
                 </header>

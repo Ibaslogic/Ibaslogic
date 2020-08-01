@@ -10,7 +10,8 @@ const Post = ({ title, updated, posted, time, fluid, slug }) => {
       <Link to={`/${slug}/`}>
         <article className="contentArticle">
           <header className={blogStyles.entryHeader}>
-            <Img fluid={fluid} alt={slug} />
+            <Img fluid={fluid} alt={slug} fadeIn={false}
+              loading="eager" />
           </header>
           <div className={blogStyles.postSummaryContent}>
             <h2 className={blogStyles.entryTitle}>{title}</h2>

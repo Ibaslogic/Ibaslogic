@@ -23,7 +23,7 @@ const Header = () => {
     {
       id: 1,
       path: "/blog/",
-      text: "guides",
+      text: "tutorial",
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ const Header = () => {
   }, [])
 
   const darkMode = useDarkMode(false)
-  console.log(darkMode);
+  // console.log(darkMode);
 
   const data = useStaticQuery(graphql`
     query {
