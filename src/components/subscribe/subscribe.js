@@ -50,13 +50,16 @@ const Subscribe = props => {
         noValidate
       >
         <div className="email__input form__fields">
-          <input
-            className="field__input"
-            type="text"
-            value={email}
-            onChange={_emailHandleChange}
-            placeholder={`${props.placeholder || "Email Address"}`}
-          />
+          <label htmlFor="your-email">
+            <input
+              id="your-email"
+              className="field__input"
+              type="text"
+              value={email}
+              onChange={_emailHandleChange}
+              placeholder={`${props.placeholder || "Email Address"}`}
+            />
+          </label>
 
           <button
             style={{ outline: "none" }}
@@ -72,11 +75,11 @@ const Subscribe = props => {
             Thanks for subscribing! Youʼll receive your first email shortly.
           </div>
         ) : (
-          <div
-            className="status__error"
-            dangerouslySetInnerHTML={{ __html: msg }}
-          ></div>
-        )}
+            <div
+              className="status__error"
+              dangerouslySetInnerHTML={{ __html: msg }}
+            ></div>
+          )}
       </form>
     </>
   )

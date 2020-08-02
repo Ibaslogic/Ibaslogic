@@ -21,12 +21,11 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 }
 .homePageHero {
   // background: #f8f9fa;
-  background-position: right;
+  // background-position: right;
   // background-repeat: no-repeat;
-  background-image: url("../../images/home_hero.jpg");
-
   @media screen and (min-width: 768px) {
     background-position: left;
+    background-image: url("../../images/home_hero.jpg");
   }
 }
 

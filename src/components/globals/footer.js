@@ -78,6 +78,7 @@ const Footer = () => {
                   href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="twitter"
                 >
                   <FaTwitter />
                 </a>
@@ -88,6 +89,7 @@ const Footer = () => {
                   href={`https://www.linkedin.com/in/${data.site.siteMetadata.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="linkedin"
                 >
                   <FaLinkedin />
                 </a>
@@ -97,6 +99,7 @@ const Footer = () => {
                   href={`https://github.com/${data.site.siteMetadata.github}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="github"
                 >
                   <FaGithub />
                 </a>
