@@ -16,6 +16,17 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`,
+            variants: [`300`, `400`, `700`]
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {
         classNameDark: "dark-mode",
