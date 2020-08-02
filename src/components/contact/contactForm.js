@@ -23,6 +23,7 @@ const ContactForm = () => {
             placeholder="First name"
             name="name"
             id="name"
+            aria-label="your-name"
             required
           />
 
@@ -32,6 +33,7 @@ const ContactForm = () => {
             placeholder="Your email"
             name="email"
             id="email"
+            aria-label="your-email"
             required
           />
 
@@ -40,13 +42,14 @@ const ContactForm = () => {
             placeholder="Your message"
             className={contactFormStyles.textareaField}
             id="message"
+            aria-label="text-area"
             rows="6"
             required
           />
 
           <ul className={contactFormStyles.actions}>
             <li>
-              <button className={contactFormStyles.submitButton}>
+              <button aria-label="submit-form" className={contactFormStyles.submitButton}>
                 Send Message
               </button>
             </li>

@@ -50,21 +50,21 @@ const Subscribe = props => {
         noValidate
       >
         <div className="email__input form__fields">
-          <label htmlFor="your-email">
-            <input
-              id="your-email"
-              className="field__input"
-              type="text"
-              value={email}
-              onChange={_emailHandleChange}
-              placeholder={`${props.placeholder || "Email Address"}`}
-            />
-          </label>
+
+          <input
+            className="field__input"
+            type="text"
+            value={email}
+            onChange={_emailHandleChange}
+            placeholder={`${props.placeholder || "Email Address"}`}
+            aria-label="your-email"
+          />
 
           <button
             style={{ outline: "none" }}
             className="field__submit"
             type="submit"
+            aria-label="submit-button"
           >
             {props.submitText}
           </button>
