@@ -42,7 +42,7 @@ export const query = graphql`
         featured {
           childImageSharp {
             fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -120,8 +120,8 @@ const Blog = ({ data, pageContext }) => {
                 className={blogPageStyles.featuredImage}
                 fluid={data.mdx.frontmatter.featured.childImageSharp.fluid}
                 alt={data.mdx.frontmatter.title}
-                fadeIn={false}
-                loading="eager"
+              // fadeIn={false}
+              // loading="eager"
               />
               {/* {renderAst(data.mdx.htmlAst)} */}
 

@@ -16,6 +16,7 @@ const ContactForm = () => {
         <input type="hidden" name="bot-field" />{" "}
         <input type="hidden" name="form-name" value="contact" />{" "}
         <div className={`form__field ${contactFormStyles.formField}`}>
+
           <input
             className={contactFormStyles.textField}
             type="text"
@@ -24,6 +25,7 @@ const ContactForm = () => {
             id="name"
             required
           />
+
           <input
             className={contactFormStyles.emailField}
             type="text"
@@ -32,6 +34,7 @@ const ContactForm = () => {
             id="email"
             required
           />
+
           <textarea
             name="message"
             placeholder="Your message"
@@ -40,6 +43,7 @@ const ContactForm = () => {
             rows="6"
             required
           />
+
           <ul className={contactFormStyles.actions}>
             <li>
               <button className={contactFormStyles.submitButton}>
