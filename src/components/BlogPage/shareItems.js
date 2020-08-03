@@ -31,6 +31,7 @@ const ShareItems = ({
               <a
                 className={shareStyles.twitter}
                 target="_blank"
+                title="twitter"
                 rel="noopener noreferrer"
                 href={
                   "https://twitter.com/share?url=" +
@@ -49,6 +50,7 @@ const ShareItems = ({
               <a
                 className={shareStyles.facebook}
                 target="_blank"
+                title="facebook"
                 rel="noopener noreferrer"
                 href={
                   "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -64,6 +66,7 @@ const ShareItems = ({
               <a
                 className={shareStyles.linkedin}
                 target="_blank"
+                title="linkedin"
                 rel="noopener noreferrer"
                 href={
                   "https://www.linkedin.com/shareArticle?url=" +
