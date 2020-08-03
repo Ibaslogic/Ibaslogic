@@ -358,7 +358,7 @@ Subscribe Form
 
 .status__success,
 .status__error {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 13px;
 }
 
@@ -453,7 +453,7 @@ Subscribe Form
   }
 
   .field__input {
-    margin-bottom: 1px;
+    margin-bottom: 8px;
     @media screen and(min-width: 600px) {
       flex: 0.7;
     }
@@ -463,6 +463,7 @@ Subscribe Form
   }
 
   .field__submit {
+    margin-bottom: 5px;
     @media screen and(min-width: 600px) {
       flex: 0.5;
       margin-left: -2px;

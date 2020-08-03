@@ -6,13 +6,13 @@ import recentPostStyles from "./sidebar.module.scss"
 
 const SidebarPostMarkup = ({ fixed, title, slug }) => {
   return (
-    <Link to={`/${slugify(slug)}/`}>
-      <li>
+    <li>
+      <Link to={`/${slugify(slug)}/`}>
         <Img className={recentPostStyles.imgTumbnail} fixed={fixed} fadeIn={false}
           loading="eager" />
         <span>{title}</span>
-      </li>
-    </Link>
+      </Link>
+    </li >
   )
 }
 

@@ -136,7 +136,7 @@ $base-container-LR-padding: 20px;
 
 .avatar-container {
   width: 32px;
-  height: 32px;
+  height: auto;
   border-radius: 100%;
   margin-right: 7px;
   margin-bottom: -6px;
@@ -151,7 +151,7 @@ $base-container-LR-padding: 20px;
     height: 100%;
     position: absolute;
     left: -1px;
-    top: 0px;
+    top: -1px;
     border-radius: 100%;
     pointer-events: none;
   }

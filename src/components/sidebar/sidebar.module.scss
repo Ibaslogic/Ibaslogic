@@ -43,14 +43,15 @@ $sidebar-bg-color: #fff; //#edeff1;
     line-height: 1.5;
     margin: 0 0 0.9375rem 0;
     min-height: 3.125rem;
+    margin-bottom: .4375rem;
 
-    &:first-child {
-      margin-top: 0.4375rem;
-    }
+    // &:first-child {
+    //   margin-top: 0.4375rem;
+    // }
 
-    &:last-child {
-      margin-bottom: 0.4375rem;
-    }
+    // &:last-child {
+    //   margin-bottom: 0.4375rem;
+    // }
 
     .img-tumbnail {
       margin: 0.2rem 0.75rem 0 0;

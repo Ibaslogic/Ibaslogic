@@ -9,6 +9,9 @@ $sidebar-bg-color: #fff; //#edeff1;
     font-size: 15px;
     line-height: 28px;
     background-color: $sidebar-bg-color;
+    li {
+      margin-bottom: 10px;
+    }
     a {
       color: inherit;
       .hot {
