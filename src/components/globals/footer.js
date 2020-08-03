@@ -30,7 +30,7 @@ const Footer = () => {
       <div className={footerStyles.container}>
         <div className={footerStyles.ftTop}>
           <div className={footerStyles.openSource}>
-            <h3>Open Source Project</h3>
+            <p className={footerStyles.heading}>Open Source Project</p>
             <p>
               Use and modify{" "}
               <a
@@ -52,14 +52,14 @@ const Footer = () => {
             </div>
           </div>
           <div className={footerStyles.support}>
-            <h3>Mail me</h3>
+            <p className={footerStyles.heading}>Mail me</p>
             <p>
               <FaEnvelope />{" "}
               <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a>
             </p>
           </div>
           <div className={footerStyles.site}>
-            <h3>Site</h3>
+            <p className={footerStyles.heading}>Site</p>
             <a
               href={`${data.site.siteMetadata.siteUrl}/rss.xml`}
               target="_blank"
@@ -70,8 +70,8 @@ const Footer = () => {
           </div>
 
           <div className={footerStyles.social}>
-            {/* <h3 className={footerStyles.checkMe}>Connect</h3> */}
-            <h3>Connect</h3>
+            {/* <p className={footerStyles.checkMe}>Connect</p> */}
+            <p className={footerStyles.heading}>Connect</p>
             <ul className={footerStyles.socialList}>
               <li className={footerStyles.socialItem}>
                 <a
@@ -127,4 +127,4 @@ export default Footer
 // FaLinkedinIn FaLinkedin
 // FaPinterestP  FaPinterestSquare
 // FaTwitter   FaTwitterSquare
-// <h3> Lets go for a <FaFacebookF />? </h3>
+// <p> Lets go for a <FaFacebookF />? </p>
