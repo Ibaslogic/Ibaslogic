@@ -20,25 +20,23 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   flex-direction: column;
 }
 .homePageHero {
-  // background: #f8f9fa;
-  // background-position: right;
-  // background-repeat: no-repeat;
-  @media screen and (min-width: 768px) {
-    background-position: left;
-    background-image: url("../../images/home_hero.jpg");
-  }
+  background-image: linear-gradient(180deg, #fff 10%, #f0f1f2);
+  // @media screen and (min-width: 768px) {
+  //   background-position: left;
+  //   background-image: url("../../images/home_hero.jpg");
+  // }
 }
 
 .hero-content {
-  margin: 0 auto;
+  // margin: 0 auto;
   padding: 0 $base-container-LR-padding;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  max-width: 36rem;
+  // max-width: 36rem;
   padding-top: 4rem;
   @media screen and (min-width: 768px) {
-    max-width: 45rem;
+    // max-width: 45rem;
     padding-top: 6rem;
   }
 }
@@ -51,11 +49,11 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 
 .title {
   font-size: 2rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 2rem;
   font-family: $head-font;
   line-height: 1.17647;
   font-weight: 600;
-  max-width: 34em;
+  // max-width: 34em;
   margin-right: auto;
   margin-left: auto;
 
@@ -75,18 +73,20 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     line-height: 1.24583em;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 3.25rem;
+    font-size: 3.4rem;
   }
   @media screen and (min-width: 1200px) {
-    // font-size: 3.7rem;
+    font-size: 3.8rem;
     letter-spacing: -0.03125rem;
   }
 }
 
 .description {
-  font-size: .92rem;
+  font-size: 1.06rem;
+  margin: 0 auto;
   margin-bottom: 2.5rem;
   // font-weight: 300;
+  max-width: 750px;
   padding-top: 0;
   line-height: 1.6;
 

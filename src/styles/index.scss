@@ -14,9 +14,9 @@ html {
 }
 
 :root {
-  --primary-color:  #36313d;// #3c4043;// #212529;
-  --header-color: #111;
-  --bg-secondary: #1d2b35; //#1f2330;
+  --primary-color: #3c4043; 
+  --header-color: #343a40; 
+  --bg-secondary: #1d2b35; 
   --main-white: hsla(0, 0%, 100%, 0.878);
   --main-spacing: 0.1rem;
   --home-bg-banner: #282c34;
@@ -400,6 +400,7 @@ Subscribe Form
     padding-right: 10px;
     height: 35px;
     border-radius: unset;
+    background: transparent;
   }
   .field__submit {
     display: none;
