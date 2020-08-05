@@ -6,6 +6,7 @@
 }
 $link-color: #ee6d41; // #ea4812;
 $link-hover: #ea4812;
+$base-a80: rgba(9, 10, 11, 0.8);
 $base-container-LR-padding: 20px;
 
 $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
@@ -53,7 +54,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   font-family: $head-font;
   line-height: 1.17647;
   font-weight: 600;
-  // max-width: 34em;
+  color: $base-a80; 
   margin-right: auto;
   margin-left: auto;
 
@@ -82,7 +83,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 }
 
 .description {
-  font-size: 1.06rem;
+  font-size: 1rem;
   margin: 0 auto;
   margin-bottom: 2.5rem;
   // font-weight: 300;
@@ -90,76 +91,11 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   padding-top: 0;
   line-height: 1.6;
 
-  // @media screen and (min-width: 768px) {
-  //   font-size: 1.125rem;
-  //   line-height: 1.85rem;
-  // }
-}
-
-// .title {
-//   font-size: 1.4rem;
-//   margin-bottom: 2.5rem;
-//   font-weight: 300;
-//   padding-top: 0;
-
-//   position: relative;
-
-//   &::before {
-//     content: "";
-//     display: block;
-//     width: 5.75rem;
-//     height: 1px;
-//     background: #f55f2d;
-//     position: absolute;
-//     bottom: -44px;
-//     left: 50%;
-//     margin-left: -2.875rem;
-
-//     // @media screen and (min-width: 960px) {
-//     //   bottom: -3.5rem;
-//     // }
-//   }
-
-//   @media screen and (min-width: 600px) {
-//     font-size: 1.7rem;
-//     line-height: 1.44667;
-//   }
-//   @media screen and (min-width: 768px) {
-//     font-size: 2rem;
-//   }
-//   @media screen and (min-width: 1200px) {
-//     font-size: 2.9rem;
-//   }
-// }
-
-.nl {
   @media screen and (min-width: 768px) {
-    display: block;
+    font-size: 1.04rem;
   }
 }
 
-// .description {
-//   letter-spacing: 0;
-//   margin-bottom: 5.5rem;
-//   font-size: 2.1rem;
-//   line-height: 1.17647;
-//   font-weight: 600;
-//   max-width: 34em;
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding-top: 44px;
-
-//   @media screen and (min-width: 480px) {
-//     font-size: 2.4rem;
-//     line-height: 1.14583em;
-//   }
-//   @media screen and (min-width: 768px) {
-//     font-size: 3rem;
-//   }
-//   @media screen and (min-width: 1200px) {
-//     font-size: 3.11rem;
-//   }
-// }
 .hero-button-container {
   a {
     display: block;
@@ -186,18 +122,6 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     }
   }
 }
-// .start-here {
-//   a {
-//     //border: 1px solid #f55f2d;
-//     background: #f55f2d;
-//     color: #fff;
-//     @include transition;
-//     &:hover {
-//       cursor: pointer;
-//       opacity: 0.8;
-//     }
-//   }
-// }
 
 .additional {
   font-size: 0.85rem;
@@ -213,6 +137,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 .error-title {
   font-size: 34px;
   line-height: 1.17647;
+  color: $base-a80;
   font-weight: 600;
   text-transform: capitalize;
 

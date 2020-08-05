@@ -1,5 +1,5 @@
 $max-width: 76rem;
-$base-font-size: 0.94rem;
+$base-font-size: 1rem;
 $base-container-LR-padding: 20px;
 
 .about-posts {
@@ -23,11 +23,12 @@ $base-container-LR-padding: 20px;
     letter-spacing: 0;
     // font-weight: 300;
 
-    @media screen and (min-width: 600px) {
-      font-size: 1rem;
-    }
+    // @media screen and (min-width: 600px) {
+    //   font-size: 1rem;
+    // }
     @media screen and (min-width: 768px) {
       flex-direction: row;
+      font-size: 1.03rem;
     }
     @media screen and (min-width: 960px) {
       // font-size: 1.15rem;

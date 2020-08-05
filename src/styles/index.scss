@@ -14,8 +14,8 @@ html {
 }
 
 :root {
-  --primary-color: #3c4043; 
-  --header-color: #343a40; 
+  --primary-color: #08090a; // #08090ae6; // #3c4043; 
+  --header-color: var(--primary-color);
   --bg-secondary: #1d2b35; 
   --main-white: hsla(0, 0%, 100%, 0.878);
   --main-spacing: 0.1rem;
@@ -95,6 +95,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--header-color);
+  font-weight: 700;
 }
 
 h2 a,
@@ -513,6 +514,11 @@ body {
       border-bottom: 1px solid var(--hr-dark);
     }
 
+    .menu__btn div {
+      background-color: var(--main-white);
+      opacity: .8;
+    }
+
     .menu__nav {
       background: var(--bg-secondary);
     }
@@ -530,12 +536,7 @@ body {
       }
     }
 
-    .menu__btn div {
-      background: var(--main-white);
-      opacity: 0.8;
-    }
-
-    .nav__close {
+    .tag__container, .secondary__area, .nav__close, .edit__post {
       color: var(--main-white);
       opacity: 0.8;
     }

@@ -52,15 +52,6 @@ export const query = graphql`
   }
 `
 
-// const shortcodes = {
-//   PostSeriesLink,
-//   TableOfContents: ({ data }) => (
-//     <TableOfContents items={data.mdx.tableOfContents}>
-//       Table of Contents
-//     </TableOfContents>
-//   ),
-// }
-
 const Blog = ({ data, pageContext }) => {
   const { datePublished, dateUpdated } = data.mdx.frontmatter
   const image = data.mdx.frontmatter.featured
@@ -89,6 +80,15 @@ const Blog = ({ data, pageContext }) => {
               <h1 className={blogPageStyles.title}>
                 {data.mdx.frontmatter.title}
               </h1>
+              <div className={blogPageStyles.tagLinks}>
+                <ul className={blogPageStyles.postTags}>
+                  {data.mdx.frontmatter.tags.map((tag, index) => (
+                    <li key={index}>
+                      {(tag === "javascript") ? <Link style={{ backgroundColor: "#f4d001", color: "#000" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "gatsby") ? <Link style={{ backgroundColor: "#653297", color: "#fff" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "react" || tag === "reactjs" || tag === "jsx") ? <Link style={{ backgroundColor: "#222222", color: "#61DAF6" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : <Link style={{ backgroundColor: "#bfbfbf", color: "#000" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className={`post__meta ${blogPageStyles.postMeta}`}>
                 <Link to="/about/" className={blogPageStyles.authorAvatar}>
                   <span className={blogPageStyles.avatarContainer}>
@@ -101,7 +101,7 @@ const Blog = ({ data, pageContext }) => {
                 <span className={blogPageStyles.inlineBlockStyle}>{data.mdx.timeToRead} min read</span>
                 <span className={blogPageStyles.divider}></span>
                 <span className={blogPageStyles.inlineBlockStyle}><a
-                  className={blogPageStyles.editPost}
+                  className={`edit__post ${blogPageStyles.editPost}`}
                   href={
                     "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/" +
                     pageContext.postPath
@@ -120,15 +120,7 @@ const Blog = ({ data, pageContext }) => {
                 className={blogPageStyles.featuredImage}
                 fluid={data.mdx.frontmatter.featured.childImageSharp.fluid}
                 alt={data.mdx.frontmatter.title}
-              // fadeIn={false}
-              // loading="eager"
               />
-              {/* {renderAst(data.mdx.htmlAst)} */}
-
-              {/* {documentToReactComponents(
-                data.contentfulBlogPostContent.body.json,
-                options
-              )} */}
               <MDXProvider
                 components={{
                   PostSeriesLink,
@@ -154,18 +146,8 @@ const Blog = ({ data, pageContext }) => {
               heading="Share this"
             />
           </div>
-
-          <div className={blogPageStyles.tagLinks}>
-            <ul className={blogPageStyles.postTags}>
-              {data.mdx.frontmatter.tags.map((tag, index) => (
-                <li key={index}>
-                  <Link to={`/tags/${slugify(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </main>
-        <aside className={blogPageStyles.secondaryArea}>
+        <aside className={`secondary__area ${blogPageStyles.secondaryArea}`}>
           <Sidebar
             relatedArticles={pageContext.relatedArticles}
             twitterHandle={data.site.siteMetadata.twitterHandle}

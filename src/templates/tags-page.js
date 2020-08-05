@@ -10,7 +10,7 @@ const Tags = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMdx
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+    } tagged with "${tag}"`
 
   return (
     <Layout>
@@ -55,13 +55,13 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            title
+            title 
             datePublished(formatString: "MMMM Do, YYYY")
             dateUpdated(formatString: "MMMM Do, YYYY")
             featured {
               childImageSharp {
                 fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }

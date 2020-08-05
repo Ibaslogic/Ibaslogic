@@ -18,19 +18,10 @@ const RecentPosts = () => {
             {data.allMdx.edges.map(({ node }) => (
               <SidebarPostsMarkup
                 key={node.id}
-                fixed={node.frontmatter.featured.childImageSharp.fixed}
                 title={node.frontmatter.title}
+                tags={node.frontmatter.tags}
                 slug={node.fields.slug.name}
               />
-              // <li key={node.id}>
-              //   <Img
-              //     className={recentPostStyles.imgTumbnail}
-              //     fluid={node.frontmatter.image.childImageSharp.fluid}
-              //   />
-              //   <Link to={`/${node.fields.slug}`}>
-              //     {node.frontmatter.title}
-              //   </Link>
-              // </li>
             ))}
           </ul>
         )}
@@ -50,20 +41,13 @@ const recentPostQuery = graphql`
           id
           frontmatter {
             title
-            featured {
-              childImageSharp {
-                fixed(width: 80, height: 46) {
-                  ...GatsbyImageSharpFixed_noBase64
-                }
-              }
-            }
+            tags
           }
           fields {
             slug {
               name
             }
           }
-          timeToRead
         }
       }
     }

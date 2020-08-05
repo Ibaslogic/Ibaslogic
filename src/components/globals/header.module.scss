@@ -1,10 +1,11 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
-$nav-link: #5f6368;
+$base-a80: rgba(9, 10, 11, 0.8);
+$nav-link: $base-a80; // #5f6368;
 $content-max-width: 76rem;
 $base-container-LR-padding: 20px;
 $link-color: #ee6d41;
-$nav-btn-color: #5f6368;
+$nav-btn-color: #08090a; // #5f6368;
 
 // mixins
 @mixin transition {
@@ -81,7 +82,7 @@ $nav-btn-color: #5f6368;
     width: 30px;
   }
   svg {
-    color: $nav-btn-color;
+    color: $nav-link; //$nav-btn-color;
   }
 
   .moon {

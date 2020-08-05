@@ -9,14 +9,10 @@ const Hero = () => {
     <div className={`hero__container ${heroStyles.homePageHero}`}>
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.title}>
-          Web Dev Articles for the
-          Self-Starter
-          {/* <span className={heroStyles.nlt}></span> */}
+          Web Dev Articles for the Self-Starter
         </h1>
         <p className={heroStyles.description}>
           Hey! Are you struggling connecting web technologies to form a real-world project? Here, you'll learn in a project-based method.
-          {/* Connect the dots (the latest web technologies) and complete a{" "}
-          <span className={heroStyles.nl}></span>real-world project. */}
         </p>
 
         <div className={heroStyles.heroButtonContainer}>

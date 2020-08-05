@@ -11,10 +11,10 @@ const Newsletter = props => {
         className={`sign__up ${newsletterStyles.signUp} ${newsletterStyles.widget}`}
       >
         <h3 className={newsletterStyles.title}>
-          <span style={{ fontWeight: "700" }}>FREE</span> React Tutorial Book
+          FREE React Tutorial Book
         </h3>
         <p className={newsletterStyles.description}>
-          Get Book (worth $14.99) now and start building web projects you’ll be
+          Get Book (valued at $14.99) now and start building web projects you’ll be
           happy to share.
         </p>
         <div className="sidebar__subscribe">
