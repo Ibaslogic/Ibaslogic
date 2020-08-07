@@ -4,7 +4,7 @@ description: "The context API in React allows every component in the component t
 category: "React"
 datePublished: "2020-05-26 10:32:00"
 dateUpdated: "2020-06-27 10:32:00"
-featured: "./images/react-context-api.png"
+featured: "./images/react-context-api_.png"
 tags:
   - react
   - context

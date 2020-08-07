@@ -2,7 +2,7 @@ $content-max-width: 76rem;
 $primary-color: #3c4043; 
 $body-color: #1a1a1a;
 $main-white: #fff;
-$link-color: #ee6d41;
+$link-color:  #e55e34;
 $base-container-LR-padding: 20px;
 
 @mixin transition {
@@ -67,7 +67,7 @@ $base-container-LR-padding: 20px;
     font-size: 2rem;
   }
   @media screen and (min-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   .filter-posts-heading {
@@ -195,14 +195,12 @@ $base-container-LR-padding: 20px;
 
     &.selected {
       background-color: #f6f8f9; // #20232a;
-      opacity: 0.8;
       color: $link-color;
     }
   }
 }
 
 .list-item {
-  border: 1px solid #f2f2f2;
   position: relative;
 
   a {
@@ -215,6 +213,10 @@ $base-container-LR-padding: 20px;
       }
     }
   }
+
+   @media screen and (min-width: 480px) {
+    border: 1px solid #f2f2f2;
+  }
 }
 
 .post-summary-content {
@@ -224,32 +226,32 @@ $base-container-LR-padding: 20px;
 }
 
 .entry-title {
-  font-size: 1.3rem;
-  padding: 15px 10px;
+  font-size: 1.5rem;
+  padding: 15px 0px;
   font-weight: 600;
   margin: 0 0 2.5625rem;
 
-  // @media screen and (min-width: 480px) {
-  //   font-size: 1.3rem;
-  // }
+  @media screen and (min-width: 480px) {
+    padding: 15px 10px;
+  }
 
   @media screen and (min-width: 768px) {
     padding: 1.25rem 0.9375rem;
   }
-  // @media screen and (min-width: 992px) {
-  //   font-size: 1.8rem;
-  //   line-height: 34px;
-  //   padding: 1.25rem 0.9375rem;
-  // }
 }
 
 .entry-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 0.69375rem 1.1875rem;
+  padding: 0 0 1.1875rem;
   font-size: 0.775rem;
   color: rgba($body-color, 0.7);
+
+  @media screen and (min-width: 480px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   @media screen and (min-width: 768px) {
     padding-left: 0.9775rem;
@@ -277,6 +279,8 @@ $base-container-LR-padding: 20px;
 
 .entry-header {
   position: relative;
+  margin: 0 -20px;
+
   &::after {
     content: "";
     position: absolute;
@@ -288,6 +292,10 @@ $base-container-LR-padding: 20px;
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.4);
     @include transition;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin: 0;
   }
 }
 

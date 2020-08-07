@@ -20,7 +20,7 @@ html {
   --main-white: hsla(0, 0%, 100%, 0.878);
   --main-spacing: 0.1rem;
   --home-bg-banner: #282c34;
-  --link-color: #ee6d41;
+  --link-color: #e55e34; // #ee6d41;
   --link-hover: #ea4812;
   --btn-bg-color: var(--link-color);
   --button-hover: var(--link-hover);
@@ -395,6 +395,7 @@ Subscribe Form
     text-align: left;
   }
   .field__input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid var(--dark-color);
     padding-left: 10px;
@@ -536,7 +537,7 @@ body {
       }
     }
 
-    .tag__container, .secondary__area, .nav__close, .edit__post {
+    .tag__container, .secondary__area, .nav__close, .edit__post, .author__avatar {
       color: var(--main-white);
       opacity: 0.8;
     }

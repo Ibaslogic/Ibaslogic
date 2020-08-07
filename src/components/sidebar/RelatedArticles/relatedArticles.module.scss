@@ -1,16 +1,26 @@
-$link-color: #ee6d41;
+$link-color: #e55e34;
 $sidebar-bg-color: #fff; //#edeff1;
 
 .listContainer {
   font-size: 16px;
   ul {
     border: 1px solid #f0f0f0;
-    padding: 12px 17px;
+    padding: 12px 17px;  
     font-size: 15px;
     line-height: 28px;
     background-color: $sidebar-bg-color;
+
+    @media screen and(min-width: 960px) {
+      padding: 10px 17px;
+    }
     li {
       margin-bottom: 10px;
+      @media screen and(min-width: 960px) {
+        margin-bottom: 5px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
     }
     a {
       color: inherit;

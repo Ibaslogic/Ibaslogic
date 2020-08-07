@@ -4,7 +4,7 @@ description: "Form handling in React works a bit different compared to the regul
 category: "React"
 datePublished: "2020-01-27 10:29:00"
 dateUpdated: "2020-05-25 10:29:00"
-featured: "./images/react-form-handling.png"
+featured: "./images/react-form-handling_.png"
 tags:
   - react
   - form

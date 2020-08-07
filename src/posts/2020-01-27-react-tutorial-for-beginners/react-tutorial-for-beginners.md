@@ -4,7 +4,7 @@ description: "In this React tutorial for beginners, you will learn the React JS 
 category: "React"
 datePublished: "2020-01-27 10:27:00"
 dateUpdated: "2020-07-24 10:27:00"
-featured: "./images/react-tutorial-for-beginners.png"
+featured: "./images/react-tutorial-for-beginners_.png"
 tags:
   - react
   - javascript

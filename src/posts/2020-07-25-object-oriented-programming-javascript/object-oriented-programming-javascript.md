@@ -368,7 +368,7 @@ In the same line, the `Book()` constructor function also looks up to a template 
 
 The image below will do justice to the explanation.
 
-![oop prototype](./images/oop__prototype.png)
+![oop prototype](./images/oop__prototype_.png)
 
 This explains that `book1` object inherits members from its constructor, `Book()`. And because the Book’s template/prototype is the global `Object()`, `book1` can also inherit members from the `Object()`.
 

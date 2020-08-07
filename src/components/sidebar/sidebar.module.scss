@@ -6,7 +6,7 @@
 $body-color: #4d5760;
 $hash-color:  rgba(77, 87, 96, .6); 
 $main-white: #fff;
-$link-color: #ee6d41;
+$link-color: #e55e34;
 $sidebar-bg-color: #fff; //#edeff1;
 
 .recent-posts {
@@ -65,6 +65,8 @@ $sidebar-bg-color: #fff; //#edeff1;
   .tagContainer {
     margin-top: 5px;
     font-size: 14px;
+    display: flex;
+    flex-flow: wrap;
     color: $hash-color;
     .hashContainer {
       margin-right: 8px;
@@ -94,7 +96,7 @@ $sidebar-bg-color: #fff; //#edeff1;
     padding: 1.5rem 17px;
   }
   @media screen and(min-width: 1200px) {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 }
 

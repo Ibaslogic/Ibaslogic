@@ -4,7 +4,7 @@ description: "Utilize the power of Gatsby React and create an instant post-filte
 category: "Gatsby"
 datePublished: "2020-02-22 10:32:00"
 dateUpdated: "2020-03-13 11:32:00"
-featured: "./images/instant-post-switching-in-a-gatsbyjs-site.png"
+featured: "./images/instant-post-switching-in-a-gatsbyjs-site_.png"
 tags:
   - gatsby
   - react

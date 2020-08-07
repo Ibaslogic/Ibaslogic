@@ -1,7 +1,9 @@
 $content-max-width: 76rem;
-$link-color: #f44f18;
+$link-color: #e55e34;
+$scroll-bg-color: rgba(229, 94, 52, 0.8); //rgb(32, 35, 42);
 $main-white: #fff; 
 $meta: #202428;//#888;
+$separator: #707788;
 $sidebar-color: #4d5760;
 $main-aside-max-width: 730px;
 $base-font-size: 1rem;
@@ -177,7 +179,7 @@ $base-container-LR-padding: 20px;
 }
 .edit-post {
   color: $meta;
-  margin-left: 2px;
+  margin: 4px;
   svg {
     font-size: 9px;
     margin-left: 3px;
@@ -195,7 +197,7 @@ $base-container-LR-padding: 20px;
     display: block;
     width: 2px;
     height: 2px;
-    background: $meta;
+    background: $separator;
     position: absolute;
     top: 8px;
     left: 4px;
@@ -208,6 +210,13 @@ $base-container-LR-padding: 20px;
 
 .featured-image {
   margin-bottom: 1.666667rem;
+  margin-left: -20px;
+  margin-right: -20px;
+
+@media screen and (min-width: 480px) {
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
   @media screen and (min-width: 960px) {
     margin-bottom: 1.8667rem;
@@ -451,7 +460,7 @@ $base-container-LR-padding: 20px;
   cursor: pointer;
   text-align: center;
   color: #fff;
-  background-color: rgb(32, 35, 42);
+  background-color: $scroll-bg-color; 
   border-radius: 50%;
   line-height: 1;
   font-size: 13px;

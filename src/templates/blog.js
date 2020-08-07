@@ -90,7 +90,7 @@ const Blog = ({ data, pageContext }) => {
                 </ul>
               </div>
               <div className={`post__meta ${blogPageStyles.postMeta}`}>
-                <Link to="/about/" className={blogPageStyles.authorAvatar}>
+                <Link to="/about/" className={`author__avatar ${blogPageStyles.authorAvatar}`}>
                   <span className={blogPageStyles.avatarContainer}>
                     <img src={avatar} alt="author avatar" />
                   </span>

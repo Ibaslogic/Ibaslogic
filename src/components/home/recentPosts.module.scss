@@ -2,7 +2,7 @@
   transition: all 0.5s ease-out;
 }
 $max-width: 76rem;
-$link-hover: #ee6d41;
+$link-hover: #e55e34;
 $base-font-size: 0.94rem;
 $base-container-LR-padding: 20px;
 
@@ -114,11 +114,14 @@ $base-container-LR-padding: 20px;
   }
   header {
     margin-bottom: 1.25rem;
+    margin-left: -20px;
+    margin-right: -20px;
 
     @media screen and (min-width: 480px) {
-      flex: 3;
+      flex: 3; 
       margin-bottom: 0;
       margin-right: 0.7375rem;
+      margin-left: 0px;
     }
     @media screen and (min-width: 600px) {
       margin-right: 1.0625rem;

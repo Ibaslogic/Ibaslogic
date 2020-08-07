@@ -4,7 +4,7 @@ description: "In this tutorial, you will learn how to build a Gatsby blog site f
 category: "Gatsby"
 datePublished: "2020-02-02 10:32:00"
 dateUpdated: "2020-07-23 10:32:00"
-featured: "./images/gatsby-tutorial-from-scratch-for-beginners.png"
+featured: "./images/gatsby-tutorial-from-scratch-for-beginners_.png"
 tags:
   - gatsby
   - javascript
@@ -18,7 +18,7 @@ If you navigate around this website, you will notice that the requested pages op
 
 It is happening because the files are generated ahead of time, eliminating the use of web servers. This is a new way of building websites that delivers better performance.
 
-In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.
+In this Gatsby tutorial, you will learn how to build this type of blog site from scratch and deploy on the web for free.
 
 Before you proceed, you’ll need to have a knowledge of React. So go ahead and cover this [React tutorial](/react-tutorial-for-beginners/ "React tutorial") and come back.
 
