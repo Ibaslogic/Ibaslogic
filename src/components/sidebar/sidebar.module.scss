@@ -3,9 +3,9 @@
   transition: all 0.3s ease-out;
 }
 
-$body-color: #4d5760;
-$hash-color:  rgba(77, 87, 96, .6); 
-$main-white: #fff;
+$body-color: #08090a; // #4d5760;
+$hash-color:  rgba(8, 9, 10, .7); 
+$main-white: #fff; 
 $link-color: #e55e34;
 $sidebar-bg-color: #fff; //#edeff1;
 
@@ -63,7 +63,7 @@ $sidebar-bg-color: #fff; //#edeff1;
     // }
   }
   .tagContainer {
-    margin-top: 5px;
+    margin-top: 3px;
     font-size: 14px;
     display: flex;
     flex-flow: wrap;
