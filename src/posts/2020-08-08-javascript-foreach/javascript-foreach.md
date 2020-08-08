@@ -127,7 +127,7 @@ Let’s optimize our code further.
 
 We can make it more concise by using the ES6 arrow function. If you rewrite the callback using the arrow function, you should have:
 
-```js
+```js{4}
 const lists = ['item1', , 'item2', 'item3']
 const newList = []
 
@@ -168,7 +168,7 @@ The output:
 
 Moving on.
 
-### Applying the second argument of the forEach method – `thisValue` 
+### Applying the second argument of the forEach method – i.e the `thisValue` 
 
 Sometimes, you may be working with `this` keyword in your `forEach` loop. And if you are familiar with the keyword, you’ll know it can reference different object.
 
@@ -222,7 +222,7 @@ console.log(num.data);
 
 The area of focus is the `multiply` method. Its function is receiving array as an argument which we are looping through using the `forEach` method.
 
-The logic here is that we want to update the empty `data` array by pushing new array elements into it. So we need to reference the `data` property using `this` keyword.
+The logic here is that we want to update the empty `data` array by pushing new array elements into it. So we need to reference the `data` property using `this` keyword within the callback.
 
 But if you save the file and look at the console, you’ll see something like this:
 
@@ -230,7 +230,7 @@ But if you save the file and look at the console, you’ll see something like th
 
 In addition to the console error, we are also seeing the `Window` object because we `console.log(this)` inside the `forEach`.
 
-Meaning that `this` is referencing the global object which is the `Window`. Instead, we want `this` keyword to reference the current object instance.
+Meaning that `this` is referencing the global object which is the `Window`. Instead, we want `this` to reference the current object instance.
 
 That is where the second argument of the `forEach` comes in. So simply add `this` as the argument and save your file. You should be good.
 
@@ -251,7 +251,7 @@ Output:
 
 ### Using the arrow function as a callback
 
-You can eliminate using `this` as the second parameter of the `forEach` method if you replace its callback function with an arrow function. Like so:
+You can avoid using `this` as the second parameter of the `forEach` method if you replace its callback function with an arrow function. Like so:
 
 ```js
 numbers.forEach((number) => {
@@ -445,7 +445,7 @@ let itemsArray = [...itemsByClassName]
 console.log(itemsArray);
 ```
 
-The **spread syntax** (`…`) “spreads” or expands the array-like objects inside the square brackets, [].
+The **spread syntax** (`…`) “spreads” or expands the array-like object inside the square brackets, [] making it a proper array.
 
 Now, you can use the `forEach` method directly on the array.
 
@@ -462,7 +462,7 @@ const arrayLike = {
 };
 ```
 
-This type is not iterable and you cannot use the spread syntax to convert it to an array. In this case, you simply use the `Array.from()` like so:
+Unlike the earlier once, this type is not iterable and you cannot use the spread syntax to convert it to an array. In this case, you simply use the `Array.from()` like so:
 
 ```js
 const newArray = Array.from(arrayLike)

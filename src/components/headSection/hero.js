@@ -12,7 +12,7 @@ const Hero = () => {
           Web Dev Articles for the Self-Starter
         </h1>
         <p className={heroStyles.description}>
-          Hey! Are you struggling connecting web technologies to form a real-world project? Here, you'll learn in a project-based method.
+          Hey! Are you struggling connecting web technologies to form a real-world project? Then, start learning in a project-based method
         </p>
 
         <div className={heroStyles.heroButtonContainer}>
@@ -32,9 +32,7 @@ const Hero = () => {
         <div className={heroStyles.additional}>
           <p>
             Get our React JS book (valued at $14.99) for <strong>FREE</strong>{" "}
-            and start building awesome projects.
-            {/* Enter your email below and
-            receive it in your inbox.{" "} */}
+            and start building awesome projects:
           </p>
           <div className="home__subscribe">
             <Subscribe placeholder="Enter email to receive it" />
