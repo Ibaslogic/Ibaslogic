@@ -2408,4 +2408,6 @@ Now you know how to build a static site with Gatsby and deploy on Netlify. You c
 
 Before then, endeavour to share this article and let me know if there is any topic you’ll like to read on this blog.
 
+Also, if you have questions, let me know through the comment section. 
+
 View Project [here](https://ibaslogic-site.netlify.com/ "Gatsby project") and source code [here](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "Ibaslogic GitHub repo").

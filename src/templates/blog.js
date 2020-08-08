@@ -166,7 +166,7 @@ const Blog = ({ data, pageContext }) => {
             />
           </div>
 
-          <div className={`comment__section ${blogPageStyles.commentSection}`}>
+          <div className={blogPageStyles.commentSection}>
             <h2 className={blogPageStyles.title}>Comments</h2>
             <Comment commentBoxRef={commentBoxRef} />
           </div>

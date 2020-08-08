@@ -776,15 +776,11 @@ So go with the one you are most comfortable with.
 
 ## Conclusion
 
-I'm excited you are here! We have set the ball rolling.
+I'm excited you are here! We have set the ball rolling. So far, we have touched some of the React fundamentals and started writing our simple todos application.
 
-So far, we have touched some of the React fundamentals and started writing our simple todos application.
+In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more. But before you head over, endeavour to share this article around the web and subscribe to our newsletter for more updates.
 
-In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more.
-
-Before you head over to the next part, endeavour to share this article around the web and subscribe to our newsletter for more updates.
-
-Lastly, if something wasn't clear, endeavour to let us know. And if you found an error somewhere in this article, you can [edit on GitHub](https://github.com/Ibaslogic/Ibaslogic/blob/master/src/posts/2020-01-27-react-tutorial-for-beginners/react-tutorial-for-beginners.mdx "Ibaslogic GitHub").
+Lastly, if something wasn't clear, please let me know through the comment section.
 
 <PostSeriesLink
 label="This React tutorial is part 1 of 6 in the React for beginners series."

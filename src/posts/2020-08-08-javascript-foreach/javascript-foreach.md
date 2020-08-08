@@ -25,7 +25,7 @@ And if you `console.log(lists)` or simply add the line to your console, you’ll
 
 The notation above is called **array literal** and it’s very simple to use.
 
-But internally, the JavaScript engine, instead uses the inbuilt `Array()` constructor function like so:
+But internally, the JavaScript engine would reconstruct the above literal using the inbuilt `Array()` constructor function like so:
 
 ```js
 const lists = new Array('item1', 'item2', 'item3')
@@ -35,13 +35,13 @@ This is the equivalent object notation.
 
 If you replace the literal notation with the above, you’ll see the same structure in the console.
 
-Now, if you go a step further and check this Array constructor, you’ll find a `prototype` property consisting of several methods. Let’s take a look really quick.
+Now, if you go a step further and take a look at the `Array` constructor in the console, you’ll find a `prototype` property consisting of several methods. Let’s find out really quick.
 
-Type `Array.prototype.` in the console, you’ll find the `forEach` alongside other methods:
+Type `Array.prototype.` in the console:
 
 ![Array forEach](./images/array-foreach.png)
 
-That is where it’s coming from.
+As you can see the `forEach` alongside other methods. That is where it’s coming from.
 
 Ok. If you know how the [prototype property works in OOP](/object-oriented-programming-javascript/ "oop tutorial"), all the methods defined on it including the `forEach` are inherited and available to the object instance. In this case, the `lists` array.
 
@@ -51,7 +51,7 @@ That means we can call it directly on the `lists` array like so:
 lists.forEach()
 ```
 
-## So what exactly is ForEach? 
+## So what exactly is forEach? 
 
 ForEach is one of the means of looping or iterating through arrays. In modern JavaScript, it is commonly used in place of the traditional for loop.
 
@@ -497,4 +497,6 @@ If you save the file and check the console, you should see your items.
 
 We have seen almost all the use cases of the forEach method. From iterating through a simple array to working with the array-like objects and almost all that is in-between. Now, you should be able to apply it in your project.
 
-If you like this tutorial, endeavor to share it around the web and subscribe for more updates.
+If you have any questions, please let me know through the comment section.
+
+And if you like this tutorial, endeavor to share it around the web and subscribe for more updates.
