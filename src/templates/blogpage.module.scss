@@ -4,10 +4,11 @@ $scroll-bg-color: rgba(229, 94, 52, 0.8); //rgb(32, 35, 42);
 $main-white: #fff; 
 $meta: #202428;//#888;
 $separator: #707788;
-$sidebar-color: #08090a; // #4d5760;
+$sidebar-color: rgba(8, 9, 10, .8); // #4d5760;
 $main-aside-max-width: 730px;
 $base-font-size: 1rem;
 $base-container-LR-padding: 20px;
+$border-color: #f2f2f2;;
 
 
 @mixin transition {
@@ -323,9 +324,10 @@ $base-container-LR-padding: 20px;
 }
 
 .share-container {
-  padding: 1.9375rem 0 0;
+  padding: 1.9375rem 0;
   text-align: left;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
 }
 
 .share-title {
@@ -343,8 +345,17 @@ $base-container-LR-padding: 20px;
 }
 
 .bottom-social-share {
+  margin: 3rem 0 2rem;
+  .share-container {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  .share-title {
+    margin-right: 20px;
+  }
   .social-share {
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
     ul {
       display: flex;
       flex-flow: row wrap;
@@ -356,12 +367,16 @@ $base-container-LR-padding: 20px;
           border-radius: 2px;
           cursor: pointer;
           margin: 0 9px 3px 0;
-          padding: 5px 29px 3px;
+          padding: 7px 21px 6px;
           color: #fff;
           @include transition;
           &:hover {
             opacity: 0.8;
           }
+
+          @media screen and (min-width: 480px) {
+            padding: 8px 30px 7px;
+        }
         }
       }
     }
@@ -408,6 +423,11 @@ $base-container-LR-padding: 20px;
   }
   .share-title {
     font-size: 1rem;
+    display: none;
+
+    @media screen and (min-width: 480px) {
+      display: block;
+    }
   }
   ul {
     margin: 0;
@@ -483,5 +503,23 @@ $base-container-LR-padding: 20px;
   }
   @media screen and (min-width: 1280px) {
     bottom: 30px;
+  }
+}
+
+// =====================================================
+// Comments
+// ======================
+
+.commentSection {
+  .title {
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 1rem;
+    padding-bottom: 1.3rem;
+    font-weight: 400;
+    font-size: 24px;
+
+    @media screen and (min-width: 480px) {
+      font-size: 30px;
+    }
   }
 }

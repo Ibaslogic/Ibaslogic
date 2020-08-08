@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -19,6 +19,7 @@ import ScrollTop from "../components/BlogPage/scrollTop"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Comment from "../components/comment"
 
 export const query = graphql`
   query($slug: String!) {
@@ -57,6 +58,24 @@ const Blog = ({ data, pageContext }) => {
   const image = data.mdx.frontmatter.featured
     ? data.mdx.frontmatter.featured.childImageSharp.fluid
     : null
+
+  const commentBoxRef = React.createRef();
+
+  useEffect(() => {
+    const scriptEle = document.createElement('script')
+    scriptEle.async = true
+    scriptEle.src = 'https://utteranc.es/client.js'
+    scriptEle.setAttribute('repo', 'ibaslogic/comments')
+    scriptEle.setAttribute('issue-term', 'pathname')
+    scriptEle.setAttribute('id', 'utterances')
+    scriptEle.setAttribute('theme', 'github-light')
+    scriptEle.setAttribute('crossorigin', 'anonymous')
+    if (commentBoxRef && commentBoxRef.current) {
+      commentBoxRef.current.appendChild(scriptEle)
+    } else {
+      console.log(`Error with utterances comments on: ${commentBoxRef}`);
+    }
+  }, [])
 
   return (
     <Layout>
@@ -143,8 +162,13 @@ const Blog = ({ data, pageContext }) => {
               title={data.mdx.frontmatter.title}
               twitterHandle={data.site.siteMetadata.twitterHandle}
               siteUrl={data.site.siteMetadata.siteUrl}
-              heading="Share this"
+              heading="Share"
             />
+          </div>
+
+          <div className={`comment__section ${blogPageStyles.commentSection}`}>
+            <h2 className={blogPageStyles.title}>Comments</h2>
+            <Comment commentBoxRef={commentBoxRef} />
           </div>
         </main>
         <aside className={`secondary__area ${blogPageStyles.secondaryArea}`}>

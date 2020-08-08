@@ -3,8 +3,8 @@
   transition: all 0.3s ease-out;
 }
 
-$body-color: #08090a; // #4d5760;
-$hash-color:  rgba(8, 9, 10, .7); 
+$body-color: rgba(8, 9, 10, .8); // #4d5760;
+$hash-color:  rgba(8, 9, 10, .6); 
 $main-white: #fff; 
 $link-color: #e55e34;
 $sidebar-bg-color: #fff; //#edeff1;
@@ -27,7 +27,7 @@ $sidebar-bg-color: #fff; //#edeff1;
 .list-container {
   line-height: 1.6;
   margin-bottom: 0;
-  font-size: .94rem;
+  font-size: .92rem;
   // font-weight: 300;
 
   a {
@@ -252,7 +252,6 @@ $sidebar-bg-color: #fff; //#edeff1;
   font-size: 13px;
   // opacity: 0.5;
   letter-spacing: 0.03rem;
-  font-weight: 300;
   color: $body-color;
   p {
     display: inline;
