@@ -1,7 +1,3 @@
-// require("dotenv").config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// })
-
 module.exports = {
   siteMetadata: {
     title: `Ibaslogic`,
@@ -86,12 +82,12 @@ module.exports = {
                   date: edge.node.frontmatter.datePublished,
                   url:
                     site.siteMetadata.siteUrl +
-                    "/blog/" +
+                    "/" +
                     edge.node.fields.slug.name +
                     "/",
                   guid:
                     site.siteMetadata.siteUrl +
-                    "/blog/" +
+                    "/" +
                     edge.node.fields.slug.name +
                     "/",
                   enclosure: edge.node.frontmatter.featured && {
@@ -131,12 +127,12 @@ module.exports = {
             }
             `,
             output: "/rss.xml",
-            title: "Ibaslogic",
+            title: "Ibaslogic | RSS Feed",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
+            // match: "^/blog/",
           },
         ],
       },
@@ -147,16 +143,8 @@ module.exports = {
       options: {
         endpoint:
           "https://ibaslogic.us4.list-manage.com/subscribe/post?u=bf8734e0f65fbe914de814264&amp;id=efcaf11c5c",
-        // "https://netlify.us17.list-manage.com/subscribe/post?u=6c865ee0b82dcd3f851e6829a&amp;id=dfefb54d80", // add your MC list endpoint here; see instructions below
       },
     },
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
-    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
