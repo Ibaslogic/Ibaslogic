@@ -8,6 +8,7 @@ featured: "./images/javascript-foreach.png"
 tags:
   - javascript
   - array
+  - basic
 ---
 
 Straight to the point! What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the "array-like" objects?

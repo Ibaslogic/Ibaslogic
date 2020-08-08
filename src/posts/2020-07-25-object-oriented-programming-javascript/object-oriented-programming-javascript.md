@@ -8,6 +8,7 @@ featured: "./images/object-oriented-programming-javascript.png"
 tags:
   - javascript
   - oop
+  - basic
 ---
 
 In JavaScript and every other programming language, there are different ways you can write and organize your code. It can be procedural, functional, object-oriented etc.
