@@ -3,7 +3,7 @@ title: "React Tutorial From Scratch: A Step-by-Step Guide for 2020"
 description: "In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-07-24 10:27:00"
+dateUpdated: "2020-08-09 10:27:00"
 featured: "./images/react-tutorial-for-beginners_.png"
 tags:
   - react
@@ -24,7 +24,7 @@ Later in the series, you will get to [learn the React Hooks](/react-hooks-tutori
 
 Once you are well-grounded with React, [following a Gatsby site project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
 
-<p className="prerequisite">Prerequisite</p>
+<p className="prerequisite">Prerequisites</p>
 
 Before you go ahead with this React tutorial, please make sure you have:
 
@@ -202,7 +202,7 @@ Save the `index.html` file and open it with a web browser.
 
 At the moment, nothing is displayed in the browser viewport. But if you open the DevTools and check the Console tab (since we `console.log` the element in our code), you will see an object representing the JSX.
 
-![DevTools](./images/devtools.png)
+![DevTools](./images/devtools_.png)
 
 This output is a React element which is also part of the virtual DOM.
 
@@ -227,11 +227,9 @@ The first argument of the `render()` method defines what you want to render whil
 
 Save the HTML file and reload the webpage.
 
-![React in html](./images/react-in-html.png)
+![React in html](./images/react-in-html_.png)
 
 If you successfully render your content on the screen, then you have just created a React application.
-
-Congratulations.
 
 ## Using the Create-React-App CLI
 
@@ -370,13 +368,9 @@ Save the file and check the frontend.
 
 You should have a heading and a paragraph text being rendered on the screen.
 
-<br />
+### What did we do?
 
-What did we do?
-
-First, to create a component in React, you either write it as a **class** or **functional-based**.
-
-A **class component** is created using [the ES6 class syntax](/object-oriented-programming-javascript/#the-es6-classes "ES6 class") while the **functional component** is created by writing function.
+First, to create a component in React, you either write it as a **class** or **functional-based**. A **class component** is created using [the ES6 class syntax](/object-oriented-programming-javascript/#the-es6-classes "ES6 class") while the **functional component** is created by writing function.
 
 In the parent file of our app, we defined a React component class called `TodoContainer` and extends the `Component` class in the React library. Inside this class, we have the `render()` method where we return the JSX that is rendered on the screen.
 
@@ -414,11 +408,9 @@ When creating React app, you cannot do without having components receiving and/o
 
 That brings us to the concept of **state** and **props**.
 
-**Starting with the props**
+### Starting with the props
 
-The `props` (which stands for properties) can be thought of as the attributes in HTML element.
-
-For instance, the attributes – `type`, `checked` – in the `input` tag below are props.
+The `props` (which stands for properties) can be thought of as the attributes in HTML element. For instance, the attributes – `type`, `checked` – in the `input` tag below are props.
 
 ```html
 <input type="checkbox" checked="{true}" />
@@ -428,11 +420,9 @@ They are the primary way to send data and/or event handlers down the component t
 
 When this happens, the data that is received in the child component becomes read-only and cannot be changed by the child component. This is because the data is owned by the parent component and can only be changed by the same parent component.
 
-**The state**
+### The state
 
-If props allow a child component to receive data from its parent, what happens if a user inputs data directly to the component?
-
-That is why we have the state.
+If props allow a child component to receive data from its parent, what happens if a user inputs data directly to the component? That is why we have the state.
 
 Think of the state as the data you can store to a specific component. This data is owned and can only be updated by the component holding it. Making the state local to that component.
 
@@ -448,7 +438,7 @@ Now, for every component that will be accessing the state data, you will need to
 
 For this reason, the state data will live in the `TodoContainer` component, which is their closest common parent.
 
-Hope it’s clear?
+*Hope it’s clear?*
 
 Though, instead of declaring the `state` object in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
 
@@ -458,9 +448,7 @@ Let’s move on.
 
 To add a state in a class component, we simply create a `state` object with different key-value pair. The value can be of any data type.
 
-In the case of the todos data, we will have an array of objects.
-
-So add the following code just above the `render()` method in the `TodoContainer.js` file:
+In the case of the todos data, we will have an array of objects. So add the following code just above the `render()` method in the `TodoContainer.js` file:
 
 ```JavaScript
 state = {
@@ -502,7 +490,7 @@ Save the file and check the frontend.
 
 ![adding state data](./images/adding-state-data.png)
 
-So what did we do?
+### So what did we do?
 
 After we defined the todos data in the `state` object, we accessed it in the `render()` method using `this.state.todos`. Since its value is an array of objects as declared in the state, we looped through this array and output each of the todos item i.e `title`.
 
@@ -510,9 +498,7 @@ In React, we make use of the `map()` method which is a higher-order function to 
 
 > Remember that you can use a valid JavaScript expression inside the JSX through curly braces, `{}`.
 
-If you check the console of your DevTools, you’ll see React warnings. We will take care of that in a moment.
-
-For now, I want you to compare the frontend result and the app diagram. You will realize that another component called `TodosList` has the responsibility to handle the todos list.
+If you check the console of your DevTools, you’ll see React warnings. We will take care of that in a moment. For now, I want you to compare the frontend result and the app diagram. You will realize that another component called `TodosList` has the responsibility to handle the todos list.
 
 This is where we will apply the knowledge of `props` earlier explained.
 
@@ -572,9 +558,7 @@ Save your file. You should have the todos title rendered on the screen just like
 
 Notice how we accessed the state data from within the child component, `TodosList`, using `this.props.todos`.
 
-Always remember, with props, we can access state data at different levels of the component hierarchy. This is called **prop drilling**.
-
-It has to do with manually getting data from component A down to component B through the props. Where component A is the parent of B.
+Always remember, with props, we can access state data at different levels of the component hierarchy. This is called **prop drilling**. And it has to do with manually getting data from component A down to component B through the props. Where component A is the parent of B.
 
 As a recap,
 
@@ -638,13 +622,11 @@ Before we proceed, let’s briefly talk about the **React Developer Tools**.
 
 ## The React Developer Tools
 
-If you want to inspect and debug your application, check your components tree or see how React works in real-time, you will need this tool.
-
-It is available as a browser extension for Chrome and Firefox.
+If you want to inspect and debug your application, check your components tree or see how React works in real-time, you will need this tool. It is available as a browser extension for Chrome and Firefox.
 
 Let’s go ahead and install it.
 
-Head over to the extension page for your browser of choice (Chrome [here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "Chrome react tools") and Firefox [here](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ "Firefox react tools")) and install it.
+Head over to the extension page for your browser of choice ([Chrome here](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "Chrome react tools") and [Firefox here](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ "Firefox react tools")) and install it.
 
 Once you install it, you are done. It doesn’t require any other setup.
 
@@ -660,21 +642,15 @@ You can navigate through different component in the tree and view the state and 
 
 ## Creating the Function Component
 
-Up to this moment, we have been using the **class-based** component to describe the UI.
-
-Before React 16.8, this class-based type is required if the component will manage the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**.
+Up to this moment, we have been using the **class-based** component to describe the UI. Before React 16.8, this class-based type is required if the component will manage the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**. 
 
 On the other hand, the **function component** prior to React 16.8 cannot maintain state and lifecycle logic. And as such, it is referred to as a **stateless component**.
 
-This type is the simplest form of React component because it is primarily concerned with how things look.
-
-But now, things have changed with the [introduction of React Hooks](/react-hooks-tutorial/ "React Hooks tutorial").
+This type is the simplest form of React component because it is primarily concerned with how things look. But now, things have changed with the [introduction of React Hooks](/react-hooks-tutorial/ "React Hooks tutorial").
 
 You can now manage the class-based logic (state and lifecycle) inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
 
-Later in the series, you will learn how to use these React Hooks to manage the stateful and lifecycle logic in a function component.
-
-For now, we will manage them in the class component so that you can grab the fundamentals.
+Later in the series, you will learn how to use these React Hooks to manage the stateful and lifecycle logic in a function component. For now, we will manage them in the class component so that you can grab the fundamentals.
 
 Back to our application.
 
@@ -702,7 +678,7 @@ export default TodoItem
 
 If you save the file and check your application, you’ll still have the todos items displayed.
 
-So what changes?
+### So what changes?
 
 Here, we created a function with the same component name instead of the ES6 class that extends `React.Component`. This functional component does not require a `render()` method which is part of the lifecycle method (coming to that).
 
@@ -710,9 +686,7 @@ Also, notice that `this.props` in the class component was replaced by `props`. A
 
 As you start with React, you may not always know whether to use a function or class component. A lot of times, you will realize after a while that you chose the wrong type. But as you create more components, making this choice will get easier.
 
-Well, this has been solved as we can now create React components ONLY with functions. Thanks to React Hooks.
-
-We will get to that later in the series.
+Well, this has been solved as we can now create React components ONLY with functions. Thanks to React Hooks. We will get to that later in the series.
 
 Until then, one helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
 
@@ -774,15 +748,15 @@ function Header() {
 
 So go with the one you are most comfortable with.
 
-## Conclusion
+At this point, we've set the ball rolling. And I'm excited you are here!
 
-I'm excited you are here! We have set the ball rolling. So far, we have touched some of the React fundamentals and started writing our simple todos application.
+So far, we have touched some of the React fundamentals and started writing our simple todos application. In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more.
 
-In the next part, we will go deeper and explain how you can handle form in React, raising and handling events and many more. But before you head over, endeavour to share this article around the web and subscribe to our newsletter for more updates.
+But before you head over, endeavor to share this article around the web and subscribe to our newsletter for more updates. Also, if something wasn't clear, please let me know through the comment section.
 
-Lastly, if something wasn't clear, please let me know through the comment section.
+<PostNextUnit heading="Next part: Working with React Form and Event Handling" btnLabel="continue" url="/react-form-handling/" />
 
-<PostSeriesLink
+<!-- <PostSeriesLink
 label="This React tutorial is part 1 of 6 in the React for beginners series."
 datas={[
 {
@@ -811,4 +785,4 @@ label: "The Practical Guide to Learning Hooks for Beginners",
 url: "/react-hooks-tutorial/"
 },
 ]}
-/>
+/> -->

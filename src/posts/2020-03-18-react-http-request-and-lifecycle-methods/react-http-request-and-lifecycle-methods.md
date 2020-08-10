@@ -10,40 +10,38 @@ tags:
   - http
 ---
 
+In the last part of our React series, we deployed our working [todos app on the web](https://ibaslogic.github.io/simple-todo-app/ "todos app"). Up to this moment, we have the default todos items hardcoded in the app component. 
+
 <PostSeriesLink
 label="This React tutorial is part 5 of 6 in the React for beginners series."
 datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 3",
-label: "How to Implement CSS in Reactjs App",
-url: "/css-in-reactjs-app/"
-},
-{
-prefix: "Part 4",
-label: "Deploying React App to GitHub Pages",
-url: "/deploying-react-app-to-github-pages/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
+  {
+    prefix: "Part 1",
+    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+    url: "/react-tutorial-for-beginners/"
+  },
+  {
+    prefix: "Part 2",
+    label: "Getting Started with React Form and Event Handling",
+    url: "/react-form-handling/"
+  },
+  {
+    prefix: "Part 3",
+    label: "How to Implement CSS in Reactjs App",
+    url: "/css-in-reactjs-app/"
+  },
+  {
+    prefix: "Part 4",
+    label: "Deploying React App to GitHub Pages",
+    url: "/deploying-react-app-to-github-pages/"
+  },
+  {
+    prefix: "Part 6",
+    label: "The Practical Guide to Learning Hooks for Beginners",
+    url: "/react-hooks-tutorial/"
+  },
 ]}
 />
-
-In the last part of our React series, we deployed our working [todos app on the web](https://ibaslogic.github.io/simple-todo-app/ "dev server").
-
-Up to this moment, we have the default todos items hardcoded in the app component.
 
 While that’s fine, in reality, making an HTTP request or fetching data from an API is most likely what you’ll be doing when building an application with a frontend framework.
 
@@ -51,15 +49,9 @@ So instead of manually adding these default items, we will request the todos dat
 
 To do this, we can make use of the native Fetch API or Axios to perform this HTTP request to a REST API.
 
-<br />
-
-HTTP request? Native Fetch API? Axios? REST API?
-
-<br />
+*HTTP request? Native Fetch API? Axios? REST API?*
 
 What are they?
-
-<br />
 
 **An HTTP request** is a packet of information that one computer (client) sends to another computer (server) to convey something. Once the message is received by the server, a response is expected by the client.
 
@@ -189,9 +181,7 @@ componentDidMount() {
 }
 ```
 
-You should have the same result as the first method.
-
-Here we are using the `params` option to set a query string parameter in the config object.
+You should have the same result as the first method. Here we are using the `params` option to set a query string parameter in the config object.
 
 To be on the same page, let’s go with the first method.
 
@@ -422,7 +412,7 @@ So we need to get the current prop by updating the method that is called wheneve
 
 In the parent component, `TodoContainer`, update the `handleChange` method to include the `show` object property:
 
-```js
+```js{9}
 handleChange = id => {
   this.setState({
     todos: this.state.todos.map(todo => {
@@ -503,45 +493,8 @@ Save your file and test your work.
 
 Good job.
 
-## Conclusion
-
 A quick recap. In this part of the series, you’ve learned how to make an HTTP request to a server endpoint, how you can handle responses and finally, how you can use the React lifecycle methods in your application.
 
-At this point, you have accomplished a lot in this React series.
+In the next section, you will learn how to use the React Hooks to manage the state and lifecycle logic in a function component.
 
-Now, you can start learning how to use the React Hooks to manage the state and lifecycle logic in a function component.
-
-Before you head over to the next part, make sure you subscribe and share this article around the web.
-
-[Project source code here](https://github.com/Ibaslogic/todoapp-data-fetching "project source code").
-
-<PostSeriesLink
-label="This React tutorial is part 5 of 6 in the React for beginners series."
-datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 3",
-label: "How to Implement CSS in Reactjs App",
-url: "/css-in-reactjs-app/"
-},
-{
-prefix: "Part 4",
-label: "Deploying React App to GitHub Pages",
-url: "/deploying-react-app-to-github-pages/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
-]}
-/>
+<PostNextUnit heading="Next part: Learning the React Hooks" btnLabel="continue" url="/react-hooks-tutorial/" />

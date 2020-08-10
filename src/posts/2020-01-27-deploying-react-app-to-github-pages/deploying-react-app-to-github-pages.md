@@ -7,55 +7,51 @@ dateUpdated: "2020-03-08 10:33:00"
 featured: "./images/deploying-react-app-to-github-pages.png"
 tags:
   - react
-  - gh-pages
+  - github
 ---
+
+Now that you have your beautiful app, it's time to share it with the world. In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
 
 <PostSeriesLink
 label="This React tutorial is part 4 of 6 in the React for beginners series."
 datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 3",
-label: "How to Implement CSS in Reactjs App",
-url: "/css-in-reactjs-app/"
-},
-{
-prefix: "Part 5",
-label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/react-http-request-and-lifecycle-methods/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
+  {
+    prefix: "Part 1",
+    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+    url: "/react-tutorial-for-beginners/"
+  },
+  {
+    prefix: "Part 2",
+    label: "Getting Started with React Form and Event Handling",
+    url: "/react-form-handling/"
+  },
+  {
+    prefix: "Part 3",
+    label: "How to Implement CSS in Reactjs App",
+    url: "/css-in-reactjs-app/"
+  },
+  {
+    prefix: "Part 5",
+    label: "Making HTTP Request in React and understanding the lifecycle methods",
+    url: "/react-http-request-and-lifecycle-methods/"
+  },
+  {
+    prefix: "Part 6",
+    label: "The Practical Guide to Learning Hooks for Beginners",
+    url: "/react-hooks-tutorial/"
+  },
 ]}
 />
 
-Now that you have your beautiful app, it's time to share it with the world.
+GitHub Pages is a static hosting service that takes HTML, CSS and JavaScript files straight from a repository on GitHub, optionally runs the file through a build process and publishes a website/app.
 
-In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
-
-> GitHub Pages is a static hosting service that takes HTML, CSS and JavaScript files straight from a repository on GitHub, optionally runs the file through a build process and publishes a website/app.
-
-To get started, you need to have a [GitHub account](https://github.com/ "GitHub account sign up"). Also, make sure you have Git installed on your machine.
+To get started, you [need a GitHub account](https://github.com/ "GitHub account sign up"). Also, make sure you have Git installed on your machine.
 
 You can [download and install Git](https://git-scm.com/downloads "Git site") for your operating system and then, [set it up](https://www.atlassian.com/git/tutorials/install-git "Git installation guide").
 
 Once that’s done,
 
-You will need to move all your React code to your GitHub account. And this can be done in two phases.
-
-First, you will move your files to the local repository and then to the remote repository.
+You will need to move all your React code to your GitHub account. And this can be done in two phases. First, you will move your files to the local repository and then to the remote repository.
 
 Let’s get started.
 
@@ -139,9 +135,7 @@ On the new page, you will be required to name your repository. In my case, I wil
 
 > Note that React already included a `README.md` file in your project folder. So DON'T Initialize this repository with a README.
 
-Once you are done, click on the **Create repository** button.
-
-This takes you to a page where you will find additional information on what to do.
+Once you are done, click on the **Create repository** button. This takes you to a page where you will find additional information on what to do.
 
 Find the command that looks like this and run it in your terminal:
 
@@ -236,49 +230,12 @@ Congratulations!
 
 Test your application and proudly share with the world.
 
-## Conclusion
+At this point, you've covered so much in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy on the web.
 
-So much have been covered in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy it on the web.
+In the next part, I will walk you through how to connect your application to a remote endpoint and fetch data from an API. Also, you will learn the React lifecycle methods.
 
-In the next part, I will walk you through how to connect your application to a remote endpoint and fetch data from an API.
+So far, I hope you feel more confident learning React through the series? If you like it, endeavor to share around the web and let me know through the comment section.
 
-Likewise, you will learn the React lifecycle methods.
+In case you missed it, here is [the React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
 
-So far, I hope you feel more confident learning React through the series?
-
-As usual, endeavour to share this article around the web.
-
-If something wasn't clear, do let us know.
-
-Again, here is the [React application](https://ibaslogic.github.io/simple-todo-app/ "simple react app") and the [source code](https://github.com/Ibaslogic/simple-todo-app "simple react app GitHub repo").
-
-<PostSeriesLink
-label="This React tutorial is part 4 of 6 in the React for beginners series."
-datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 3",
-label: "How to Implement CSS in Reactjs App",
-url: "/css-in-reactjs-app/"
-},
-{
-prefix: "Part 5",
-label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/react-http-request-and-lifecycle-methods/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
-]}
-/>
+<PostNextUnit heading="Next part: Making HTTP Request in React and understanding the lifecycle methods" btnLabel="continue" url="/react-http-request-and-lifecycle-methods/" />

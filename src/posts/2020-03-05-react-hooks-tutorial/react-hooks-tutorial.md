@@ -6,6 +6,7 @@ datePublished: "2020-03-05 10:32:00"
 dateUpdated: "2020-03-26 11:32:00"
 featured: "./images/react-hooks-tutorial.png"
 tags:
+  - react
   - hooks
 ---
 
@@ -62,8 +63,6 @@ npm start
 ```
 
 You should see this app in your browser address bar at [http://localhost:3000/](http://localhost:3000/ "dev server")
-
-<br />
 
 ![React Hook Starter](./images/react-hook-starter.gif)
 
@@ -194,9 +193,7 @@ Save the file. You should see the input fields back in the frontend.
 
 Test it and it should work perfectly.
 
-<br />
-
-**What’s happening in the code?**
+### What’s happening in the code?
 
 If you revisit the class version, we declared a `state` object where we assigned a key-value pair. But now, we are doing this using the `useState` React Hook.
 
@@ -357,7 +354,7 @@ Save your file and test your application.
 
 Notice we are not including the lifecycle logic yet, hence no data is being fetched. We will take care of that in a moment.
 
-So what is happening?
+### So what is happening?
 
 In the code, we started by defining a separate `useState` Hook for the state variables and assigning a default value to them.
 
@@ -410,11 +407,9 @@ useEffect(() => {
 
 If you save the file and take a look at the console once again, you will see that your log keeps incrementing. This shows the Hook is running infinitely.
 
-<br />
-
 ![useEffect Hook](./images/use-effect.gif)
 
-What’s happening?
+### What’s happening?
 
 Unlike `componentDidMount` lifecycle that only runs once it fetches data for the first time, the `useEffect` Hook by default runs not only after the first render but also after every update – i.e when there is a prop or state changes.
 
@@ -422,9 +417,7 @@ In our code, a change occurs. The `todos` state variable is being updated throug
 
 _This is happening because the Hook combines different lifecycle logic. It is our responsibility to control it to the logic we want._
 
-<br />
-
-How can we control it?
+### How can we control it?
 
 That’s where the optional array of dependencies comes in.
 
@@ -457,9 +450,7 @@ It should work as expected.
 
 Next, let’s see how the `useEffect` handles the logic of the `componentDidUpdate` and `componentWillUnmount`.
 
-<br />
-
-Starting with the `componentDidUpdate`,
+### Starting with the `componentDidUpdate`,
 
 Remember that component gets updated when there is/are state or prop changes, thereby trigger re-rendering.
 
@@ -520,7 +511,7 @@ Save your file and check your application.
 
 Oops! The heading text, “clicked” is displaying on initial render – without the checkbox being clicked.
 
-What’s happening?
+### What’s happening?
 
 As mentioned earlier, the Hook is designed to run not only when the component first renders but also on every update. That is why the call to manipulate the DOM as defined in it is being executed on the initial rendering.
 
@@ -610,9 +601,7 @@ Save your file and test your application.
 
 ![useref initial mount](./images/useeffect-componentdidupdate.gif)
 
-<br />
-
-What’s happening in the code?
+### What’s happening in the code?
 
 In the `useEffect` Hook, we are checking if the current property of the `useRef` is `true`.
 
@@ -694,8 +683,6 @@ useEffect(() => {
 Save your file and test your application.
 
 ![react hooks componentwillunmount](./images/react-hook-starter.gif)
-
-<br />
 
 The code is pretty simple. Anytime you return a function inside the `useEffect` Hook, it will execute before the Hook run the next time (in case you are triggering a re-run) and also before the component is unmounted.
 

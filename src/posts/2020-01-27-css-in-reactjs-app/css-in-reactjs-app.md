@@ -7,47 +7,43 @@ dateUpdated: "2020-03-12 10:31:00"
 featured: "./images/css-in-reactjs-app.png"
 tags:
   - react
-  - css
+  - style
 ---
+
+You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves. In this part, you will learn how to add CSS to your React JS app.
 
 <PostSeriesLink
 label="This React tutorial is part 3 of 6 in the React for beginners series."
 datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 4",
-label: "Deploying React App to GitHub Pages",
-url: "/deploying-react-app-to-github-pages/"
-},
-{
-prefix: "Part 5",
-label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/react-http-request-and-lifecycle-methods/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
+  {
+    prefix: "Part 1",
+    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+    url: "/react-tutorial-for-beginners/"
+  },
+  {
+    prefix: "Part 2",
+    label: "Getting Started with React Form and Event Handling",
+    url: "/react-form-handling/"
+  },
+  {
+    prefix: "Part 4",
+    label: "Deploying React App to GitHub Pages",
+    url: "/deploying-react-app-to-github-pages/"
+  },
+  {
+    prefix: "Part 5",
+    label: "Making HTTP Request in React and understanding the lifecycle methods",
+    url: "/react-http-request-and-lifecycle-methods/"
+  },
+  {
+    prefix: "Part 6",
+    label: "The Practical Guide to Learning Hooks for Beginners",
+    url: "/react-hooks-tutorial/"
+  },
 ]}
 />
 
-You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves.
-
-In this part, you will learn how to add CSS to your React JS app.
-
-Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes.
-
-React application can also be styled [using the CSS modules](/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "css modules").
+Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes. React application can also be styled [using the CSS modules](/styling-in-gatsby/#styling-gatsby-site-with-css-modules "css modules").
 
 But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
 
@@ -92,9 +88,7 @@ import "./App.css"
 ReactDOM.render(<TodoContainer />, document.getElementById("root"))
 ```
 
-If you like, you can import the file in the parent component file, `TodoContainer.js` instead of the `index.js`.
-
-Save the file.
+If you like, you can import the file in the parent component file, `TodoContainer.js` instead of the `index.js`. Save the file.
 
 You should see your CSS styles rendered in the frontend. Or better still, inspect the page to see the style declaration.
 
@@ -218,7 +212,7 @@ Go inside the `Header.js` file and update the heading and paragraph elements to 
 
 So you have:
 
-```jsx{3,6}
+```jsx{3,4}
 return (
   <header>
     <h1 style={{ fontSize: "25px", marginBottom: "15px" }}>Simple Todo App</h1>
@@ -237,9 +231,7 @@ We already know that valid JavaScript expressions in JSX are written inside curl
 
 Also, notice that the style keys are in camelCase.
 
-Another way to use an inline style in React is to use variables.
-
-Still in the `Header.js` file, add the following code above the `return` statement:
+Another way to use an inline style in React is to use variables. Still in the `Header.js` file, add the following code above the `return` statement:
 
 ```js
 const headerStyle = {
@@ -342,6 +334,8 @@ Ok. Save the file and check the frontend.
 
 ![Completed styles](./images/completedstyles.png)
 
+That is it. But before we move to the next section, let’s simply optimize our code.
+
 ## Using Destructuring
 
 If you take a look at the `TodoItem` component, we were writing multiples `this.props.todo` to grab the `id`, `title` and `completed` values.
@@ -376,43 +370,4 @@ return (
 
 Make sure you test your application.
 
-## Conclusion
-
-Now that you have added a nice look and feel to your React app, it's time to deploy it on the web. In the next part, you will learn how to deploy your React application to GitHub pages.
-
-While I'm excited you are here, endeavour to share this article around the web.
-
-Again, if something wasn't clear, do let us know.
-
-Happy coding!
-
-<PostSeriesLink
-label="This React tutorial is part 3 of 6 in the React for beginners series."
-datas={[
-{
-prefix: "Part 1",
-label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-url: "/react-tutorial-for-beginners/"
-},
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 4",
-label: "Deploying React App to GitHub Pages",
-url: "/deploying-react-app-to-github-pages/"
-},
-{
-prefix: "Part 5",
-label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/react-http-request-and-lifecycle-methods/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
-]}
-/>
+<PostNextUnit heading="Next part: Deploying React App to GitHub Pages" btnLabel="continue" url="/deploying-react-app-to-github-pages/" />

@@ -2,8 +2,8 @@
 title: "JavaScript Foreach: A Comprehensive Guide for Beginners"
 description: "What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?"
 category: "JavaScript"
-datePublished: "2020-08-08 10:32:00"
-dateUpdated: "2020-08-08 10:32:00"
+datePublished: "2020-08-09 10:32:00"
+dateUpdated: "2020-08-09 10:32:00"
 featured: "./images/javascript-foreach.png"
 tags:
   - javascript

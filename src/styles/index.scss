@@ -26,6 +26,7 @@ html {
   --button-hover: var(--link-hover);
   --hr-dark: hsla(0, 0%, 100%, 0.2);
   --dark-color: rgba(49, 45, 45, 0.2);
+  --border-color: #f0f0f0;
 }
 
 body {
@@ -129,7 +130,7 @@ blockquote {
   line-height: 1.3777em;
   margin-bottom: 1.8rem;
   font-weight: 600;
-  padding-top: 1.4em;
+  padding-top: 1em;
 
   @media screen and (min-width: 480px) {
     font-size: 1.65rem;
@@ -281,6 +282,7 @@ blockquote .gatsby-highlight + p {
   border: 1px solid #f2f2f2;
   padding: 8px 12px;
   margin: 35px 0;
+  background: #f9f9f9;
 
   p {
     position: relative;
@@ -490,6 +492,39 @@ Subscribe Form
 
 
 /* ======================
+Next Series Posts
+======================= */
+
+.post__next__unit {
+  border-top: 1px solid var(--border-color);
+  margin-top: 2rem;
+  .next__heading {
+    padding-top: 1.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  }
+
+  .btn__link {
+    background-color: var(--link-color);
+    color: var(--main-white);
+    border-radius: 2px;
+    padding: 8px 14px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+
+    &:hover, &:focus {
+      background: var(--link-hover);
+      text-decoration: none;
+    }
+
+    svg {
+      margin-bottom: -3px;
+    }
+  }
+}
+
+
+/* ======================
 DARK LIGHT MODE
 ======================= */
 
@@ -521,7 +556,7 @@ body {
       opacity: .8;
     }
 
-    .menu__nav {
+    .menu__nav, .series-link-container {
       background: var(--bg-secondary);
     }
 
@@ -601,7 +636,7 @@ body {
       }
     }
 
-    .email__input {
+    .email__input, .post__next__unit, .series-link-container, .share__container, .discusion__title {
       border-color: var(--hr-dark) !important;
     }
 

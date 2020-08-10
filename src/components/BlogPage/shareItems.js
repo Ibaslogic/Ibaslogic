@@ -23,7 +23,7 @@ const ShareItems = ({
 
   return (
     <>
-      <div className={`${customClass} ${shareStyles.shareContainer}`}>
+      <div className={`share__container ${customClass} ${shareStyles.shareContainer}`}>
         <p className={shareStyles.shareTitle}>{heading}</p>
         <div className={shareStyles.socialShare}>
           <ul>
