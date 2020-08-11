@@ -11,7 +11,9 @@ tags:
   - react
 ---
 
-[In the previous section](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we've learned some of the Gatsby fundamentals and started developing our Gatsby site. Now, we have a decent amount of content spread across pages on our site. So, we need to work on the look and feel by adding styles.
+[In the previous section](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we've learned some of the Gatsby fundamentals and started developing our Gatsby site.
+
+Now, we have a decent amount of content spread across pages on our site. So, we need to work on the look and feel by adding styles.
 
 In this section, you will learn how to easily style your Gatsby site using CSS.
 
@@ -51,7 +53,7 @@ After that, import the CSS file in the `Layout` component like so:
 import "../styles/style.css"
 ```
 
-> The reason for the `Layout` component is that it is used in every pages’ files. 
+> The reason for the `Layout` component is that it is used in every pages’ files.
 
 Save your files and see your styles applied in the frontend. That is a great starting point.
 
@@ -93,7 +95,7 @@ Next, rename the `style.css` file to `style.scss` and update the `import` in the
 import "../styles/style.scss"
 ```
 
-Save your file. You should still have your styles applied in the frontend. Now you can use sass in your project. 
+Save your file. You should still have your styles applied in the frontend. Now you can use sass in your project.
 
 Let’s confirm that it’s working by adding sass variables in our `scss` file. Update the file so you have:
 
@@ -112,7 +114,9 @@ body {
   line-height: 1.4283;
   font-family: "Segoe UI", Roboto, Verdana, "Helvetica Neue", sans-serif;
 }
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 a {
@@ -125,7 +129,9 @@ Save the file. Yeah, it works!
 
 ## Styling Gatsby Site with CSS Modules
 
-In order to add some sort of global styles in our Gatsby site, we added a stylesheet in a shared `Layout` component. Though this stylesheet file can hold all of your site styles, it is recommended to limit this file to your global styles and scope your component styles locally using the CSS Module.
+In order to add some sort of global styles in our Gatsby site, we added a stylesheet in a shared `Layout` component.
+
+Though this stylesheet file can hold all of your site styles, it is recommended to limit this file to your global styles and scope your component styles locally using the CSS Module.
 
 > CSS Modules are supported by default in a Gatsby project and they eliminate the risk of name conflicts with the css selector or some other issues related to the global scope styling.
 
@@ -436,7 +442,9 @@ Save your files and check the frontend. Your page should look like this:
 
 ![css module body](./images/css-module-body.png)
 
-Looks good. Now you know how to add styles to your Gatsby site. Depending on what you want, you can decide to add a global style or locally scope your style to your component. Besides, you also learned how to implement SASS in a Gatsby site.
+Looks good. Now you know how to add styles to your Gatsby site.
+
+Depending on what you want, you can decide to add a global style or locally scope your style to your component. Besides, you also learned how to implement SASS in a Gatsby site.
 
 In the next section, we will start working on getting dynamic data to our site.
 

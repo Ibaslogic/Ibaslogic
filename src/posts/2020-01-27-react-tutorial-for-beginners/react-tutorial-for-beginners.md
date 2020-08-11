@@ -50,7 +50,9 @@ Now let's get started.
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs from a small and isolated snippet of code.
 
-In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library. Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
+In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library.
+
+Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
 
 Let’s take a step backwards. I mentioned that it allows developers to create complex UI from an isolated snippet of code.
 
@@ -70,11 +72,15 @@ As you are aware, we will create this app from scratch in this React tutorial. I
 
 ![Todos app design](./images/todosapp.png)
 
-To build this type of React app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into a smaller and isolated unit as outlined in the image. Where each of these units can be represented as a component which can be built in isolation and then later merge to form a complex UI.
+To build this type of React app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into a smaller and isolated unit as outlined in the image.
+
+Where each of these units can be represented as a component which can be built in isolation and then later merge to form a complex UI.
 
 Still on the image.
 
-The parent component (also known as the root component), label `TodoContainer`, holds all the other components (known as children components). The `Header` component renders the header contents, the `InputTodo` component accepts the user’s input, the `TodosList` component renders the todos list and finally, the `TodoItem` component takes care of each of the todos items.
+The parent component (also known as the root component), label `TodoContainer`, holds all the other components (known as children components).
+
+The `Header` component renders the header contents, the `InputTodo` component accepts the user’s input, the `TodosList` component renders the todos list and finally, the `TodoItem` component takes care of each of the todos items.
 
 With this breakdown, we will be creating five different components in isolation. Having this instinct shows that you are **thinking in React!**
 
@@ -86,7 +92,9 @@ As a JavaScript developer, you are sure to have interacted with the real DOM whi
 
 So, let’s reiterate to enable you to quickly grasp the concept behind virtual DOM that React provides for us.
 
-The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document). Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML.
+The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document).
+
+Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML.
 
 This way, JavaScript can connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
 
@@ -128,7 +136,9 @@ This method of interacting with React is the simplest way and it’s very easy i
 
 Let’s see how it’s done.
 
-We will start by creating `index.html` file. Inside of it, we will load in three scripts in the `head` element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`. Then, we will create an empty `div` element and give it an `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
+We will start by creating `index.html` file. Inside of it, we will load in three scripts in the `head` element pointing to their respective CDN – the `React`, `ReactDOM` and `Babel`.
+
+Then, we will create an empty `div` element and give it an `id` of `root`. This is where our application will live. Lastly, we will create a `script` element where we will write our React code.
 
 So your `index.html` file should look like this:
 
@@ -175,7 +185,9 @@ Under the hood, the JSX is being translated to regular JavaScript version of its
 
 This is how it works:
 
-The JSX code is passed to Babel (a JavaScript compiler) which will then convert it to plain JavaScript code that all browser can understand. This compiler also changes any JavaScript ES6 features into what the older browsers would recognize. For instance, it converts the `const` keyword to `var`.
+The JSX code is passed to Babel (a JavaScript compiler) which will then convert it to plain JavaScript code that all browser can understand.
+
+This compiler also changes any JavaScript ES6 features into what the older browsers would recognize. For instance, it converts the `const` keyword to `var`.
 
 Let’s see a quick demo.
 
@@ -214,8 +226,8 @@ Update the `script` element so it looks like this:
 
 ```jsx
 <script type="text/babel">
-  const element = <h1>Hello from React</h1>; 
-  ReactDOM.render(element, document.getElementById("root"));
+  const element = <h1>Hello from React</h1>; ReactDOM.render(element,
+  document.getElementById("root"));
 </script>
 ```
 
@@ -257,7 +269,9 @@ Your initial file structure should look like this:
 
 Let’s have a quick look inside the project folder.
 
-The `node_modules` folder contains all the third-party libraries as well as React itself. It will also contain packages that you’ll be installing through npm later. The `public` folder contains the public asset of your application and it is where your static files reside. The `index.html` in the public folder is similar to the one we created earlier. It also has a `div` container element where your entire application will appear.
+The `node_modules` folder contains all the third-party libraries as well as React itself. It will also contain packages that you’ll be installing through npm later. The `public` folder contains the public asset of your application and it is where your static files reside.
+
+The `index.html` in the public folder is similar to the one we created earlier. It also has a `div` container element where your entire application will appear.
 
 The `src` folder contains the working files. One of them is the `index.js` which will serve as the entry point to our application. Don’t worry about all the `src` files, we will write everything from scratch.
 
@@ -320,7 +334,9 @@ Comparing this code to the one we write directly in the HTML file at the beginni
 
 Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
 
-At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable. Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain. So instead of rendering a simple element, we will render a React component.
+At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable.
+
+Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain. So instead of rendering a simple element, we will render a React component.
 
 ## Creating the Component Files
 
@@ -398,15 +414,17 @@ A few notes:
 
 This is necessary so that its instance (e.g `<TodoContainer />`) in JSX is not considered as DOM/HTML tag.
 
-Also, take note of the component file path as used in the `index.js` file. Make sure you always specify the relative path of that file from the current directory. In our case, `"./components/TodoContainer"`. Meaning the `TodoContainer` file is located in the `components` folder inside the current directory.
+Also, take note of the component file path as used in the `index.js` file. Make sure you always specify the relative path of that file from the current directory.
+
+In our case, `"./components/TodoContainer"`. Meaning the `TodoContainer` file is located in the `components` folder inside the current directory.
 
 The file extension defaults to `.js`, so you don’t need to append it.
 
 ## Working With Data
 
-When creating React app, you cannot do without having components receiving and/or passing data. It may be a child component receiving data from its parent or maybe the user directly input data to the component. Understanding how to work with data is very crucial to building React component.
+When creating React app, you cannot do without having components receiving and/or passing data. It may be a child component receiving data from its parent or maybe the user directly input data to the component.
 
-That brings us to the concept of **state** and **props**.
+Understanding how to work with data is very crucial to building React component. That brings us to the concept of **state** and **props**.
 
 ### Starting with the props
 
@@ -438,7 +456,7 @@ Now, for every component that will be accessing the state data, you will need to
 
 For this reason, the state data will live in the `TodoContainer` component, which is their closest common parent.
 
-*Hope it’s clear?*
+_Hope it’s clear?_
 
 Though, instead of declaring the `state` object in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
 
@@ -498,7 +516,9 @@ In React, we make use of the `map()` method which is a higher-order function to 
 
 > Remember that you can use a valid JavaScript expression inside the JSX through curly braces, `{}`.
 
-If you check the console of your DevTools, you’ll see React warnings. We will take care of that in a moment. For now, I want you to compare the frontend result and the app diagram. You will realize that another component called `TodosList` has the responsibility to handle the todos list.
+If you check the console of your DevTools, you’ll see React warnings. We will take care of that in a moment. For now, I want you to compare the frontend result and the app diagram.
+
+You will realize that another component called `TodosList` has the responsibility to handle the todos list.
 
 This is where we will apply the knowledge of `props` earlier explained.
 
@@ -642,7 +662,9 @@ You can navigate through different component in the tree and view the state and 
 
 ## Creating the Function Component
 
-Up to this moment, we have been using the **class-based** component to describe the UI. Before React 16.8, this class-based type is required if the component will manage the state data and/or lifecycle method (more on this later). This is why the class component is also called a **stateful component**. 
+Up to this moment, we have been using the **class-based** component to describe the UI. Before React 16.8, this class-based type is required if the component will manage the state data and/or lifecycle method (more on this later).
+
+This is why the class component is also called a **stateful component**.
 
 On the other hand, the **function component** prior to React 16.8 cannot maintain state and lifecycle logic. And as such, it is referred to as a **stateless component**.
 
@@ -755,34 +777,3 @@ So far, we have touched some of the React fundamentals and started writing our s
 But before you head over, endeavor to share this article around the web and subscribe to our newsletter for more updates. Also, if something wasn't clear, please let me know through the comment section.
 
 <PostNextUnit heading="Next part: Working with React Form and Event Handling" btnLabel="continue" url="/react-form-handling/" />
-
-<!-- <PostSeriesLink
-label="This React tutorial is part 1 of 6 in the React for beginners series."
-datas={[
-{
-prefix: "Part 2",
-label: "Getting Started with React Form and Event Handling",
-url: "/react-form-handling/"
-},
-{
-prefix: "Part 3",
-label: "How to implement CSS in Reactjs App",
-url: "/css-in-reactjs-app/"
-},
-{
-prefix: "Part 4",
-label: "Deploying React App to GitHub Pages",
-url: "/deploying-react-app-to-github-pages/"
-},
-{
-prefix: "Part 5",
-label: "Making HTTP Request in React and understanding the lifecycle methods",
-url: "/react-http-request-and-lifecycle-methods/"
-},
-{
-prefix: "Part 6",
-label: "The Practical Guide to Learning Hooks for Beginners",
-url: "/react-hooks-tutorial/"
-},
-]}
-/> -->

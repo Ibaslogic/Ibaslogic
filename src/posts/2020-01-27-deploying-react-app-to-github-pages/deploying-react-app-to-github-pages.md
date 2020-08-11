@@ -10,36 +10,38 @@ tags:
   - github
 ---
 
-Now that you have your beautiful app, it's time to share it with the world. In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
+Now that you have your beautiful app, it's time to share it with the world.
+
+In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
 
 <PostSeriesLink
 label="This React tutorial is part 4 of 6 in the React for beginners series."
 datas={[
-  {
-    prefix: "Part 1",
-    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-    url: "/react-tutorial-for-beginners/"
-  },
-  {
-    prefix: "Part 2",
-    label: "Getting Started with React Form and Event Handling",
-    url: "/react-form-handling/"
-  },
-  {
-    prefix: "Part 3",
-    label: "How to Implement CSS in Reactjs App",
-    url: "/css-in-reactjs-app/"
-  },
-  {
-    prefix: "Part 5",
-    label: "Making HTTP Request in React and understanding the lifecycle methods",
-    url: "/react-http-request-and-lifecycle-methods/"
-  },
-  {
-    prefix: "Part 6",
-    label: "The Practical Guide to Learning Hooks for Beginners",
-    url: "/react-hooks-tutorial/"
-  },
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/react-form-handling/"
+},
+{
+prefix: "Part 3",
+label: "How to Implement CSS in Reactjs App",
+url: "/css-in-reactjs-app/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/react-hooks-tutorial/"
+},
 ]}
 />
 

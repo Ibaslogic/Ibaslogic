@@ -12,13 +12,13 @@ tags:
   - react
 ---
 
-Do you want to build a well-optimized site with Gatsby? 
+Do you want to build a well-optimized site with Gatsby?
 
 If you navigate around this website, you will notice that the requested pages open almost immediately without page reload.
 
 This is happening because the files are generated ahead of time, eliminating the use of web servers. This is a new way of building websites that delivers better performance.
 
-In this Gatsby tutorial, you will learn how to build this type of site from scratch and deploy on the web for free. Here is the [Gatsby project you’ll build](https://ibaslogic-site.netlify.app/ "React tutorial") in this tutorial. 
+In this Gatsby tutorial, you will learn how to build this type of site from scratch and deploy on the web for free. Here is the [Gatsby project you’ll build](https://ibaslogic-site.netlify.app/ "React tutorial") in this tutorial.
 
 Before you proceed, let's take a look at the prerequisite.
 
@@ -31,21 +31,25 @@ While [knowledge of GraphQL](https://graphql.org/ "GraphQL tutorial") is also a 
 
 For those of us who are comfortable writing React code, let’s dive in.
 
-<!-- <TableOfContents /> -->
-
 ## What Is Gatsby?
 
-[Gatsby or GatsbyJS](https://www.gatsbyjs.org/ "Gatsby website") is a framework based on React library and GraphQL that makes it easy to create both website and web applications. It is built on the JAMstack – i.e a strategy for building websites/apps based on client-side JavaScript (or other scripts), reusable APIs and prebuilt Markup.
+[Gatsby or GatsbyJS](https://www.gatsbyjs.org/ "Gatsby website") is a framework based on React library and GraphQL that makes it easy to create both website and web applications.
+
+It is built on the JAMstack – i.e a strategy for building websites/apps based on client-side JavaScript (or other scripts), reusable APIs and prebuilt Markup.
 
 This type of site has high performance, scalability and safety.
 
-Though, Gatsby is considered a static site generator (SSG) like other Jamstack technologies (Jekyll, Next, Hugo etc) based on what it shares with them. But in reality, it can do much more than you can typically do with a static site generator. 
+Though, Gatsby is considered a static site generator (SSG) like other Jamstack technologies (Jekyll, Next, Hugo etc) based on what it shares with them. But in reality, it can do much more than you can typically do with a static site generator.
 
 You can think of Gatsby as a React framework for building complex websites and web apps.
 
-With Gatsbyjs, you are not limited to static sites. You can build a blog site, e-commerce or any complex website by using the latest tools like React, GraphQL, headless CMSs etc. Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources.
+With Gatsbyjs, you are not limited to static sites. You can build a blog site, e-commerce or any complex website by using the latest tools like React, GraphQL, headless CMSs etc.
 
-If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal. This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
+Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources.
+
+If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal.
+
+This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
 
 Throughout this beginner's guide, you’ll learn how to source and manage your content through the Markdown files. [In the follow-up tutorial](/gatsby-with-contentful-cms/ "Gatsby with contentful"), we cover how to source content from the Contentful CMS.
 
@@ -83,7 +87,7 @@ With these templates, you can create all sort of interesting sites and applicati
 
 Since the goal in this Gatsby tutorial is to explore the fundamental features, we will be using a Gatsby starter with the barest minimum feature – i.e no plugins and no boilerplate.
 
-This will allow you to understand the basics. And once you do, you’ll be able to work with any of the starters out there. So, we will install [the official *hello world* starter](https://github.com/gatsbyjs/gatsby-starter-hello-world "Gatsby starter hello world").
+This will allow you to understand the basics. And once you do, you’ll be able to work with any of the starters out there. So, we will install [the official _hello world_ starter](https://github.com/gatsbyjs/gatsby-starter-hello-world "Gatsby starter hello world").
 
 The convention to install a new Gatsby starter through the CLI is:
 
@@ -141,8 +145,6 @@ If you are using VsCode, you can open its integrated terminal from `View -> Term
 
 Once the command is done, you will see a success message with the link to view your default starter site.
 
-<!-- ![Gatsby develop](./images/gatsby-develop.png) -->
-
 Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
 
 > Also, you'd see a URL like this: [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). Take note of it, We will explore this later when we start pulling data to our site.
@@ -165,9 +167,13 @@ First, you need to understand the project structure. So let’s take a look at s
 
 Having worked with React, I expect that you should be familiar with the project (folders and files) structure. But to be on the same page, I will quickly touch some of the important folders and files.
 
-The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial. The `public` folder will contain the public asset of your site and will hold your static files.
+The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial.
 
-The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory. This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename.
+The `public` folder will contain the public asset of your site and will hold your static files.
+
+The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory.
+
+This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename.
 
 At the moment, we have `index.js` present in the pages folder. And as you know, the index file always references the home page. This is why the content of this file is being rendered in the frontend.
 
@@ -224,8 +230,9 @@ It starts by looking at the `src/pages` folder to figure out which static pages 
 
 Now the name of the file is also important. Here, the file is called `index.js`. This is similar to how `index.html` will be the default page for a website homepage.
 
-With Gatsby, `index.js` will be the default homepage.
-To create a new page, all you have to do is to add a new file to the `src/pages` directory. In this tutorial, we will be creating an additional three pages. The **Blog**, **Contact** and **About** pages.
+With Gatsby, `index.js` will be the default homepage. To create a new page, all you have to do is to add a new file to the `src/pages` directory.
+
+In this tutorial, we will be creating an additional three pages. The **Blog**, **Contact** and **About** pages.
 
 So let’s create these files – `blog.js`, `contact.js` and `about.js` in the `src/pages` folder.
 
@@ -418,7 +425,9 @@ Save the file and see your changes in the frontend.
 
 In the code, we are making use of the `<Link />` component from the `gatsby` module to link between internal pages. This has a whole lot of optimization compared to the regular HTML `<a>` tag.
 
-For instance, clicking on the HTML anchor element will make the page to run through a full page refresh. But the `Link` tags allows the page to load instantly which provides a better user experience. Here, we use the `to` attribute to reference the destination page instead of the `href` attribute in the `<a>` tag.
+For instance, clicking on the HTML anchor element will make the page to run through a full page refresh. But the `Link` tags allows the page to load instantly which provides a better user experience.
+
+Here, we use the `to` attribute to reference the destination page instead of the `href` attribute in the `<a>` tag.
 
 To use the `Link` component, you have to import it from `gatsby` module and use it to link pages within your Gatsby site. Use the regular `<a>` tag to link to any external page.
 
@@ -474,7 +483,7 @@ Save your files and check the frontend. Now your site should look like this:
 
 Notice how we are calling the current year dynamically in the `footer.js` file. Remember we can use a valid JavaScript within the React JSX through the curly braces, `{}`.
 
-Good! This is a great start. 
+Good! This is a great start.
 
 In the next section, we will add a bit of style to our site to improve the look and feel. After that, we will start working with dynamic data.
 

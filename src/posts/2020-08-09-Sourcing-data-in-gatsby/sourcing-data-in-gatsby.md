@@ -11,7 +11,9 @@ tags:
   - graphql
 ---
 
-[In our Gatsby site project at the moment](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), the content being displayed in the browser is static. That is, we are writing the content directly in the component JSX.
+In our [Gatsby site project at the moment](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), the content being displayed in the browser is static.
+
+That is, we are writing the content directly in the component JSX.
 
 But as the site grows, this approach is not going to scale. Instead, you’ll want to store data outside components and dynamically load them into your site.
 
@@ -58,7 +60,9 @@ Once you open the tool, click on the **Explorer** button at the top to see the E
 
 ![GraophiQL IDE](./images/graphiql-ide.png)
 
-This panel makes it super easy to construct your queries by clicking through available fields instead of manually typing out these queries. If you prefer typing these query out by hand, there are shortcut keys available to make the tool easy to use. For instance, you can use `Ctrl + Space` or `Shift + Space` to bring up autocomplete window.
+This panel makes it super easy to construct your queries by clicking through available fields instead of manually typing out these queries.
+
+If you prefer typing these query out by hand, there are shortcut keys available to make the tool easy to use. For instance, you can use `Ctrl + Space` or `Shift + Space` to bring up autocomplete window.
 
 In a moment, we will explore the tool together. So keep reading.
 
@@ -86,7 +90,9 @@ Gatsby allows us to load data into a component through the **page query** or the
 
 A page component lives in the `src/pages` directory and becomes site pages automatically. This type can use either of the query types.
 
-On the other hand, the Non-page component is embedded in other component or multiple page components. For instance, the `Header`, `Footer`, `Layout` components. This type of component can only use the `StaticQuery` type or its React hooks version, `useStaticQuery`.
+On the other hand, the Non-page component is embedded in other component or multiple page components. For instance, the `Header`, `Footer`, `Layout` components.
+
+This type of component can only use the `StaticQuery` type or its React hooks version, `useStaticQuery`.
 
 In our site, we want to get the site title and description in the `Header` component and the author in the `Footer` component.
 
@@ -230,7 +236,9 @@ I mentioned earlier that we can source blog post content from the local files, C
 
 To achieve this, we will make use of two plugins.
 
-First, a source plugin called `gatsby-source-filesystem` that will fetch the raw content and allow us to query data about the files. The second plugin, `gatsby-transformer-remark`, will allow us to query the data inside the files and will transform the content (i.e markdown content) into the format we want (i.e HTML).
+First, a source plugin called `gatsby-source-filesystem` that will fetch the raw content and allow us to query data about the files.
+
+The second plugin, `gatsby-transformer-remark`, will allow us to query the data inside the files and will transform the content (i.e markdown content) into the format we want (i.e HTML).
 
 Let’s see how to achieve this.
 
@@ -318,7 +326,7 @@ Remember, the source plugin allows us to query data about the files. The image b
 
 ![local files](./images/local-files.png)
 
-As seen in the query area, you can bring up autocomplete window using the `Ctrl + Space` and add more fields to the query. 
+As seen in the query area, you can bring up autocomplete window using the `Ctrl + Space` and add more fields to the query.
 
 Now that we are fetching the local files, let’s go ahead and install the `gatsby-transformer-remark` plugin that will transform the available Markdown files (.md) into HTML.
 
@@ -352,7 +360,9 @@ If you explore some of the fields that are available on the node of the `allMark
 
 ![allMarkdownRemark](./images/allmarkdownremark.png)
 
-In the query area, you’ll notice we are passing the `sort` argument to the `allMarkdownRemark` to structure the blog posts in descending order of the frontmatter’s date field. Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files.
+In the query area, you’ll notice we are passing the `sort` argument to the `allMarkdownRemark` to structure the blog posts in descending order of the frontmatter’s date field.
+
+Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files.
 
 As seen in the Explorer panel, you can also pass a number of arguments (filter, limit and skip) to your query. For instance, you can reduce the total number of results from a query by specifying the `limit`. Also, you can omit a number of results through the `skip`.
 
@@ -415,7 +425,7 @@ Save the file and check the frontend. You should have your posts displayed on th
 
 ### So what did we do?
 
-If you take a look at the returned data in the GraphiQL, you’ll see that Gatsby structure its content as a collection of objects inside the **edges** array. We are getting each of these objects (representing individual post data) by looping through the `edges` array using the `map()` method. 
+If you take a look at the returned data in the GraphiQL, you’ll see that Gatsby structure its content as a collection of objects inside the **edges** array. We are getting each of these objects (representing individual post data) by looping through the `edges` array using the `map()` method.
 
 From there, we are getting the data we need in our JSX markup. You should be familiar with all of these if you have a basic understanding of React.
 
@@ -427,7 +437,9 @@ At the moment, we are only rendering the excerpt of our markdown content on the 
 
 But before that, let’s see how to generate the single post page.
 
-Imagine you are creating a React component in the `src/pages` directory for each of the single blog posts. Remember, every component in this directory automatically becomes a page. This is not something you’d want to venture in. Instead, you will learn how to dynamically generate the single post page using Gatsby node API. 
+Imagine you are creating a React component in the `src/pages` directory for each of the single blog posts. Remember, every component in this directory automatically becomes a page. This is not something you’d want to venture in.
+
+Instead, you will learn how to dynamically generate the single post page using Gatsby node API.
 
 We can achieve this in three simple steps:
 
@@ -436,7 +448,6 @@ We can achieve this in three simple steps:
 3. Generating a new page for each post.
 
 > **Note:** The first step is only applicable if you are sourcing your content from the markdown files. For CMSs like Contentful, you wouldn’t need to create slugs yourself.
-
 
 ### Generate Slugs for Pages
 
@@ -509,7 +520,9 @@ In the GraphiQL, you should produce something like this.
 
 ![createNodeField](./images/createnodefield.png)
 
-Now that the slugs are being generated, let’s move on to step two which is creating the blog post template. In this template, all you need to do is to create a React component. This single component will be used to render all of the single blog posts.
+Now that the slugs are being generated, let’s move on to step two which is creating the blog post template. In this template, all you need to do is to create a React component.
+
+This single component will be used to render all of the single blog posts.
 
 In the `src` directory, create a new folder called `templates`. In this folder, create a file named `blog-post.js` and add the following:
 
@@ -562,7 +575,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
 In the code, we are making use of the `createPages` API function to dynamically create a single post page based on the markdown `slug`.
 
-Here, we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need. So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
+Here, we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need.
+
+So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
 
 This function accepts an object where we defined the `path` for visiting the single blog post, the `component` parameter where we specified the absolute path to the template file while the `context` contains the data (i.e `slug`) we are passing to the template file.
 
@@ -578,7 +593,9 @@ The content of this page is coming from the template file, `blog-post.js`. Remem
 
 To render our data, we will set up a GraphQL query that will dynamically accept the post slug and return the blog post.
 
-In the meantime, let’s play with the GraphiQL IDE and see how it is done. So refresh or re-open the tool. Here we will make use of `markdownRemark` query to get the single post. In this query, we will target each of the posts by their respective slug through the `fields` argument.
+In the meantime, let’s play with the GraphiQL IDE and see how it is done. So refresh or re-open the tool. Here we will make use of `markdownRemark` query to get the single post.
+
+In this query, we will target each of the posts by their respective slug through the `fields` argument.
 
 To do this, we will make use of the **query variables** (a set of data you can pass into your query). In our case, we will be passing-in the dynamic slug.
 

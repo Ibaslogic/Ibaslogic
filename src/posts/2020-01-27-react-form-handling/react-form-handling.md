@@ -15,31 +15,31 @@ In the previous section, we covered some of the basics of React; set up React wo
 <PostSeriesLink
 label="This React tutorial is part 2 of 6 in the React for beginners series."
 datas={[
-  {
-    prefix: "Part 1",
-    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-    url: "/react-tutorial-for-beginners/"
-  },
-  {
-    prefix: "Part 3",
-    label: "How to implement CSS in Reactjs App",
-    url: "/css-in-reactjs-app/"
-  },
-  {
-    prefix: "Part 4",
-    label: "Deploying React App to GitHub Pages",
-    url: "/deploying-react-app-to-github-pages/"
-  },
-  {
-    prefix: "Part 5",
-    label: "Making HTTP Request in React and understanding the lifecycle methods",
-    url: "/react-http-request-and-lifecycle-methods/"
-  },
-  {
-    prefix: "Part 6",
-    label: "The Practical Guide to Learning Hooks for Beginners",
-    url: "/react-hooks-tutorial/"
-  },
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 3",
+label: "How to implement CSS in Reactjs App",
+url: "/css-in-reactjs-app/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/react-hooks-tutorial/"
+},
 ]}
 />
 
@@ -79,7 +79,9 @@ This takes us to another important subtopic.
 
 To make the input field controllable, the input data (in this case, toggling of the checkbox) has to be handled by the component state and not the browser DOM.
 
-With this, the state will serve as a **single source of truth**. Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app. This is necessary because the component state will not change unless you change it.
+With this, the state will serve as a **single source of truth**.
+
+Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app. This is necessary because the component state will not change unless you change it.
 
 Let’s see how it works.
 
@@ -129,7 +131,9 @@ To do this, we need to understand how to raise and handle events.
 
 ## Raising and Handling Events
 
-In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it. Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`.
+In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it.
+
+Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`.
 
 We need to find a way to access the state data from the `TodoItem` and toggle the `completed` value to `true` or `false` in the `TodoContainer` component.
 
@@ -423,7 +427,7 @@ render() {
 
 Save the file. You should have the form fields rendered in the frontend.
 
-As we did for the checkbox, we have to make the form input field a controlled field. The first step is to have a state manage the user's input. 
+As we did for the checkbox, we have to make the form input field a controlled field. The first step is to have a state manage the user's input.
 
 So, add this code just above the `render()` method in the `InputTodo` component:
 
@@ -654,7 +658,9 @@ Go to the frontend and add a new todos item to the list.
 
 What did we do?
 
-In the code, we started by defining an object for the new item. In this object, we are passing a set of key-value pair. Here, we have the `title` from the user’s input, the `completed` key assigned a `false` value so that the checkbox is not selected by default. Then, for the meantime, we are working with hardcoded `id`.
+In the code, we started by defining an object for the new item. In this object, we are passing a set of key-value pair. Here, we have the `title` from the user’s input, the `completed` key assigned a `false` value so that the checkbox is not selected by default.
+
+Then, for the meantime, we are working with hardcoded `id`.
 
 With the `setState()` method, we are re-rendering the state. We are adding the new item to the current todos list which can be grabbed using the spread operator (`…`).
 
@@ -708,7 +714,7 @@ If you check the React tools, you’ll see that the todos items are assigned uni
 
 ![Adding unique ids](./images/uniqueids.png)
 
-Great! We are getting there. 
+Great! We are getting there.
 
 Now you know the logic behind form handling in React. Not only that, you now know how to raise and handle events.
 

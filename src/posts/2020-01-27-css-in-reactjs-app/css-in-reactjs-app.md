@@ -10,36 +10,38 @@ tags:
   - style
 ---
 
-You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves. In this part, you will learn how to add CSS to your React JS app.
+You've added functionalities to your React app. Now, it's time to add the looks and feel that your React app deserves.
+
+In this part, you will learn how to add CSS to your React JS app.
 
 <PostSeriesLink
 label="This React tutorial is part 3 of 6 in the React for beginners series."
 datas={[
-  {
-    prefix: "Part 1",
-    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-    url: "/react-tutorial-for-beginners/"
-  },
-  {
-    prefix: "Part 2",
-    label: "Getting Started with React Form and Event Handling",
-    url: "/react-form-handling/"
-  },
-  {
-    prefix: "Part 4",
-    label: "Deploying React App to GitHub Pages",
-    url: "/deploying-react-app-to-github-pages/"
-  },
-  {
-    prefix: "Part 5",
-    label: "Making HTTP Request in React and understanding the lifecycle methods",
-    url: "/react-http-request-and-lifecycle-methods/"
-  },
-  {
-    prefix: "Part 6",
-    label: "The Practical Guide to Learning Hooks for Beginners",
-    url: "/react-hooks-tutorial/"
-  },
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/react-form-handling/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 5",
+label: "Making HTTP Request in React and understanding the lifecycle methods",
+url: "/react-http-request-and-lifecycle-methods/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/react-hooks-tutorial/"
+},
 ]}
 />
 
