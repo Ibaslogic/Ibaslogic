@@ -11,9 +11,9 @@ tags:
   - graphql
 ---
 
-Up to this moment in [our Gatsby tutorial series](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we covered how to set up a working blog site where the post data is coming from the Markdown filesystem. If you miss anything, [take a look at the previous section](/sourcing-data-in-gatsby/ "Gatsby data").
+Up to this moment in [our Gatsby tutorial series](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we covered how to set up a working blog site where the post data is coming from the Markdown filesystem. If you missed anything, [take a look at the previous section](/sourcing-data-in-gatsby/ "Gatsby data").
 
-Moving forward, in this part, you will learn how to start working with images in your Gatsby site. 
+Moving forward, in this part, you will learn how to start working with images in your Gatsby site.
 
 If you have ever managed a website blog, you’ll agree with me that a major routine to speed up your site speed is to optimize your images before uploading. We do this by using different editing tools to retouch, crop and resize the images or simply use plugins if you are using WordPress.
 
@@ -26,7 +26,6 @@ So let’s see how it works.
 In a Gatsby blog post, you can add images in multiple ways. Aside from including images in the Markdown body, you may want to include a featured image that appears at the top of a post.
 
 Here, you will learn how to do both.
-
 
 ## Adding Images to Markdown Body
 
@@ -196,7 +195,6 @@ If the operand before the `&&` is truthy i.e there is featured image, the second
 Save the file. You should see the featured image rendered in the single post page.
 
 > In the query, you’ll notice that we replaced the `src` with `GatsbyImageSharpFluid`. This is a query fragment used to return the image parameters like the `src`, `srcSet` etc. Query fragments are not supported yet in the GraphiQL IDE. Hence, we simply used `src`.
-
 
 ## Adding Thumbnail to Posts in the Post Listing Page (Blog Page)
 
