@@ -35,9 +35,31 @@ We will start by adding an image to our post using the default Markdown syntax. 
 ![gatsby tutorial](../images/gatsby-tutorial.png)
 ```
 
-> **Note:** Make sure you add an image named `gatsby-tutorial.png` in the `src/images` folder.
+Like so:
 
-![markdown images](./images/markdown-images.png)
+```md{12}
+---
+title: "First Gatsby Blog Post"
+date: "2020-01-18"
+---
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+## Excepturi maxime
+
+reprehenderit accusamus, explicabo eligendi necessitatibus soluta!
+
+![gatsby tutorial](../images/gatsby-tutorial.png)
+
+Ipsam mollitia alias temporibus dicta
+
+1. omnis earum nobis
+2. architecto, quia
+3. officiis aperiam
+4. voluptate quaerat
+```
+
+> **Note:** Make sure you add an image named `gatsby-tutorial.png` in the `src/images` folder.
 
 In the frontend, you will see the image `alt` text (gatsby tutorial) being displayed instead of the actual image.
 

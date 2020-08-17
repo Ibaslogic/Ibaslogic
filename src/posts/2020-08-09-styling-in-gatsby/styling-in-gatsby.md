@@ -99,7 +99,7 @@ Save your file. You should still have your styles applied in the frontend. Now y
 
 Let’s confirm that it’s working by adding sass variables in our `scss` file. Update the file so you have:
 
-```scss{1-3,9,19}
+```scss{1-3,9,21}
 $primaryColor: #464646;
 $secondaryColor: #f44f18;
 $mainWhite: #fff;

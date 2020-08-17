@@ -60,21 +60,21 @@ const Blog = ({ data, pageContext }) => {
     ? data.mdx.frontmatter.featured.childImageSharp.fluid
     : null
 
-  const commentBoxRef = React.createRef();
+  const commentBoxRef = React.createRef()
 
   useEffect(() => {
-    const scriptEle = document.createElement('script')
+    const scriptEle = document.createElement("script")
     scriptEle.async = true
-    scriptEle.src = 'https://utteranc.es/client.js'
-    scriptEle.setAttribute('repo', 'ibaslogic/comments')
-    scriptEle.setAttribute('issue-term', 'pathname')
-    scriptEle.setAttribute('id', 'utterances')
-    scriptEle.setAttribute('theme', 'github-light')
-    scriptEle.setAttribute('crossorigin', 'anonymous')
+    scriptEle.src = "https://utteranc.es/client.js"
+    scriptEle.setAttribute("repo", "ibaslogic/comments")
+    scriptEle.setAttribute("issue-term", "pathname")
+    scriptEle.setAttribute("id", "utterances")
+    scriptEle.setAttribute("theme", "github-light")
+    scriptEle.setAttribute("crossorigin", "anonymous")
     if (commentBoxRef && commentBoxRef.current) {
       commentBoxRef.current.appendChild(scriptEle)
     } else {
-      console.log(`Error with utterances comments on: ${commentBoxRef}`);
+      console.log(`Error with utterances comments on: ${commentBoxRef}`)
     }
   }, [])
 
@@ -104,34 +104,96 @@ const Blog = ({ data, pageContext }) => {
                 <ul className={blogPageStyles.postTags}>
                   {data.mdx.frontmatter.tags.map((tag, index) => (
                     <li key={index}>
-                      {(tag === "javascript") ? <Link style={{ backgroundColor: "#f4d001", color: "#000" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "gatsby") ? <Link style={{ backgroundColor: "#653297", color: "#fff" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "basic") ? <Link style={{ backgroundColor: "#035b21", color: "#fff" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "graphql") ? <Link style={{ backgroundColor: "#ae0878", color: "#fff" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : (tag === "react" || tag === "reactjs" || tag === "jsx") ? <Link style={{ backgroundColor: "#222222", color: "#61DAF6" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link> : <Link style={{ backgroundColor: "#bfbfbf", color: "#000" }} to={`/tags/${slugify(tag)}/`}><span>#</span>{tag}</Link>}
+                      {tag === "javascript" ? (
+                        <Link
+                          style={{ backgroundColor: "#f4d001", color: "#000" }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      ) : tag === "gatsby" ? (
+                        <Link
+                          style={{ backgroundColor: "#653297", color: "#fff" }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      ) : tag === "basic" ? (
+                        <Link
+                          style={{ backgroundColor: "#035b21", color: "#fff" }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      ) : tag === "graphql" ? (
+                        <Link
+                          style={{ backgroundColor: "#ae0878", color: "#fff" }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      ) : tag === "react" ||
+                        tag === "reactjs" ||
+                        tag === "jsx" ? (
+                        <Link
+                          style={{
+                            backgroundColor: "#222222",
+                            color: "#61DAF6",
+                          }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      ) : (
+                        <Link
+                          style={{ backgroundColor: "#bfbfbf", color: "#000" }}
+                          to={`/tags/${slugify(tag)}/`}
+                        >
+                          <span>#</span>
+                          {tag}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className={`post__meta ${blogPageStyles.postMeta}`}>
-                <Link to="/about/" className={`author__avatar ${blogPageStyles.authorAvatar}`}>
+                <Link
+                  to="/about/"
+                  className={`author__avatar ${blogPageStyles.authorAvatar}`}
+                >
                   <span className={blogPageStyles.avatarContainer}>
                     <img src={avatar} alt="author avatar" />
                   </span>
                   Ibas<span className={blogPageStyles.divider}></span>
                 </Link>
-                <span className={blogPageStyles.inlineBlockStyle}>{datePublished === dateUpdated ? " Published " : "Updated"} on {dateUpdated}</span>
+                <span className={blogPageStyles.inlineBlockStyle}>
+                  {datePublished === dateUpdated ? " Published " : "Updated"} on{" "}
+                  {dateUpdated}
+                </span>
                 <span className={blogPageStyles.divider}></span>
-                <span className={blogPageStyles.inlineBlockStyle}>{data.mdx.timeToRead} min read</span>
+                <span className={blogPageStyles.inlineBlockStyle}>
+                  {data.mdx.timeToRead} min read
+                </span>
                 <span className={blogPageStyles.divider}></span>
-                <span className={blogPageStyles.inlineBlockStyle}><a
-                  className={`edit__post ${blogPageStyles.editPost}`}
-                  href={
-                    "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/" +
-                    pageContext.postPath
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Edit <FaPencilAlt />
-                </a></span>
-
+                <span className={blogPageStyles.inlineBlockStyle}>
+                  <a
+                    className={`edit__post ${blogPageStyles.editPost}`}
+                    href={
+                      "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/" +
+                      pageContext.postPath
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Edit <FaPencilAlt />
+                  </a>
+                </span>
               </div>
             </header>
 
@@ -169,7 +231,9 @@ const Blog = ({ data, pageContext }) => {
           </div>
 
           <div className={blogPageStyles.commentSection}>
-            <h2 className={`discusion__title ${blogPageStyles.title}`}>Discussion</h2>
+            <h2 className={`discusion__title ${blogPageStyles.title}`}>
+              Discussion
+            </h2>
             <Comment commentBoxRef={commentBoxRef} />
           </div>
         </main>

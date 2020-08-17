@@ -21,7 +21,7 @@ const BlogItems = props => {
   const [showItems, setShowItems] = useState(false)
   const [selectedItem, setSelectedItem] = useState(
     getCategories(props.items.allMdx.edges) &&
-    getCategories(props.items.allMdx.edges)[0]
+      getCategories(props.items.allMdx.edges)[0]
   )
 
   const handleItems = category => {
@@ -79,7 +79,7 @@ const BlogItems = props => {
                     showItems
                       ? `arrow___up ${blogStyles.selectBoxArrowUp}`
                       : `arrow__down ${blogStyles.selectBoxArrowDown}`
-                    }`}
+                  }`}
                 ></span>
               </div>
 
