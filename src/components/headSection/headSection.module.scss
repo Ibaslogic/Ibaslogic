@@ -19,10 +19,13 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-position: bottom !important;
 
-  background-position: left !important;
-  background-repeat: repeat !important;
-  background-size: contain !important;
+  @media screen and (min-width: 768px) {
+    background-position: left !important;
+    background-repeat: repeat !important;
+    background-size: contain !important;
+  }
 }
 
 .hero-content {

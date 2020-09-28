@@ -36,10 +36,13 @@ $sColor: #e55e34;
     text-transform: uppercase;
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 35px;
     margin: 0;
     font-weight: 300;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .view-all {

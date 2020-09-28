@@ -535,7 +535,8 @@ body {
       background: var(--bg-secondary);
     }
 
-    .menu__btn div {
+    .menu__btn div,
+    .menu__nav button {
       background-color: var(--main-white);
       opacity: 0.8;
     }
