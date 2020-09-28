@@ -1,81 +1,51 @@
 $max-width: 76rem;
 $base-font-size: 1rem;
-$base-container-LR-padding: 20px;
+$plr: 1em;
+$plrls: 2em;
+$sColor: #e55e34;
+@mixin transition {
+  transition: all 0.5s ease-out;
+}
 
-.about-posts {
-  max-width: 45rem;
+.inner {
+  padding: 3.5rem $plr;
+  max-width: 700px;
   margin: 0 auto;
-  padding-top: 3.5rem;
-  position: relative;
 
   @media screen and (min-width: 768px) {
-    padding-top: 5rem;
-  }
-  @media screen and (min-width: 960px) {
-    max-width: $max-width;
-  }
-  .about-excerpt {
-    display: flex;
-    padding: 0.7rem $base-container-LR-padding 3rem;
-    flex-direction: column;
-    font-size: $base-font-size;
-    line-height: 1.6;
-    letter-spacing: 0;
-    // font-weight: 300;
-
-    // @media screen and (min-width: 600px) {
-    //   font-size: 1rem;
-    // }
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-      font-size: 1.03rem;
-    }
-    @media screen and (min-width: 960px) {
-      // font-size: 1.15rem;
-      // letter-spacing: -0.1px;
-      padding-top: 3rem;
-      padding-bottom: 0;
-    }
-  }
-  .col-left {
-    @media screen and (min-width: 768px) {
-      padding-right: 15px;
-      flex: 1;
-
-      position: relative;
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        height: 13.75rem;
-        border-right: 1px dashed #000;
-        bottom: -7px;
-        right: 0px;
-        @media screen and (min-width: 960px) {
-          height: 240px;
-          top: -25px;
-          z-index: 1;
-        }
-        @media screen and (min-width: 1120px) {
-          top: -100px;
-          height: 300px;
-        }
-      }
-    }
-  }
-  .col-right {
-    @media screen and (min-width: 768px) {
-      padding-left: 15px;
-      flex: 1;
-    }
-  }
-  .col-left p,
-  .col-right p {
-    margin-bottom: 1rem;
+    padding: 7rem $plrls;
   }
 }
-.sub-styles-excerpt {
-  @media screen and (min-width: 960px) {
-    justify-content: space-between;
+.about-posts {
+  padding-left: 20px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: $sColor;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 20px;
+    line-height: 35px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .view-all {
+    line-height: 1.375rem;
+    letter-spacing: 0.01562rem;
+    font-size: $base-font-size;
+    margin-top: 15px;
   }
 }

@@ -4,7 +4,7 @@ description: "In this OOP tutorial, we cover the object fundamentals, OOPS conce
 category: "JavaScript"
 datePublished: "2020-07-25 10:32:00"
 dateUpdated: "2020-07-25 10:32:00"
-featured: "./images/object-oriented-programming-javascript.png"
+featured: "./images/object-oriented-programming-javascript_.png"
 tags:
   - javascript
   - oop
@@ -237,14 +237,14 @@ Start by adding the following code to your `.js` file.
 ```js
 // function
 function createBook(title, genre, author) {
-  const book = {};
-  book.title = title,
-  book.genre = genre,
-  book.author = author,
-  book.bookDetails = function () {
-    return `Name: ${book.author} | Title: ${book.title} | Genre: ${book.genre}.`;
-  };
-  return book;
+  const book = {}
+  ;(book.title = title),
+    (book.genre = genre),
+    (book.author = author),
+    (book.bookDetails = function() {
+      return `Name: ${book.author} | Title: ${book.title} | Genre: ${book.genre}.`
+    })
+  return book
 }
 ```
 
@@ -303,12 +303,12 @@ Now, to create several books object via the constructor function, we need to fir
 ```js
 // Constructor function
 function Book(title, genre, author) {
-  this.title = title,
-  this.genre = genre,
-  this.author = author,
-  this.bookDetails = function () {
+  ;(this.title = title),
+    (this.genre = genre),
+    (this.author = author),
+    (this.bookDetails = function() {
       return `Name: ${this.author} | Title: ${this.title} | Genre: ${this.genre}.`
-  }
+    })
 }
 ```
 
@@ -398,7 +398,7 @@ function Book(title, genre, author) {
   this.author = author
 }
 
-Book.prototype.bookDetails = function () {
+Book.prototype.bookDetails = function() {
   return `Name: ${this.author} | Title: ${this.title} | Genre: ${this.genre}.`
 }
 
@@ -453,7 +453,7 @@ At the end of the day, all we are doing in the child constructor is this:
 ```js
 function Journal(title, genre, author, year) {
   this.title = title
-  this.genre = genre 
+  this.genre = genre
   this.author = author
   this.year = year
 }
@@ -611,7 +611,7 @@ You should be good!
 
 ## Conclusion
 
-Having come this far, you have learned a lot about the subject. Now you know how to represent real-world entity using the object. 
+Having come this far, you have learned a lot about the subject. Now you know how to represent real-world entity using the object.
 
 In addition to understanding this object fundamental, you have also learned the OOP concepts; the constructor function; prototype and inheritance. Furthermore, you learned how to use the ES6 class syntax to write more elegant code.
 

@@ -4,7 +4,7 @@ description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
 dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/page-metadata-and-404-page.png"
+featured: "./images/page-metadata-and-404-page_.png"
 tags:
   - gatsby
   - seo
@@ -13,7 +13,7 @@ tags:
 
 If you visit a URL of your site that does not exist, Gatsby takes you to a page that only get shown when you are running a development server.
 
-On this page, you can click on the **Preview custom 404 page** button to see the actual 404 page that the regular users will see when your site is live. 
+On this page, you can click on the **Preview custom 404 page** button to see the actual 404 page that the regular users will see when your site is live.
 
 But, with the current [status of our Gatsby site project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), clicking on the button will direct you on how to create the page.
 

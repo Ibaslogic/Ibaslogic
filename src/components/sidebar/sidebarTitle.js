@@ -7,7 +7,6 @@ const styles = {
   borderBottom: "solid #dfdfdf 1px",
   paddingBottom: "1.25rem",
   marginBottom: "-0.0625rem",
-  // color: "#ff7a59",
   textTransform: "capitalize",
 }
 

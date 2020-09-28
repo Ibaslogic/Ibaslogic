@@ -1,46 +1,28 @@
 import React from "react"
 import SubHeading from "./subHeading"
-import { Link } from "gatsby"
-import recentStyles from "./recentPosts.module.scss"
 import aboutStyles from "./aboutExcerpt.module.scss"
+import ReadMore from "./readMore"
 import { FaExternalLinkAlt } from "react-icons/fa"
 
 const AboutExcerpt = () => {
   return (
-    <section className={aboutStyles.container}>
-      <div className={aboutStyles.aboutPosts}>
-        <div
-          className={`${recentStyles.subStyles} ${aboutStyles.subStylesExcerpt}`}
-        >
-          <div className={recentStyles.titleStyles}>
-            <SubHeading title="How Ibaslogic can help you!" />
-          </div>
-          <div className={recentStyles.viewAll}>
-            <Link to="/about/">
-              Click to Read More <FaExternalLinkAlt />
-            </Link>
-          </div>
-        </div>
-
-        <div className={aboutStyles.aboutExcerpt}>
-          <div className={aboutStyles.colLeft}>
-            <p>
-              Most beginner developers often learn web languages in isolation
-              without having a deeper knowledge to{" "}
-              <strong>connect the dots</strong> and complete a real-world
-              project.
-            </p>
-          </div>
-          <div className={aboutStyles.colRight}>
-            <p>
-              To avoid this scenario, you need to follow a proven path to
-              learning web development.
-            </p>
-            <p>And that’s where Ibaslogic comes in. </p>
-            <p>
-              Through project-based learning, you will discover how to grasp all
-              of these dev technologies in no distant time.
-            </p>
+    <section className={aboutStyles.abtExcerpt}>
+      <div className={aboutStyles.inner}>
+        <div className={aboutStyles.aboutPosts}>
+          <SubHeading title="How Ibaslogic can help you grow your dev knowledge!" />
+          <p>
+            Often, beginner developers learn web languages without having a
+            sound knowledge to build a real-world project. To avoid this
+            pitfall, here, you will start learning dev topics in a project-based
+            method. Through, easy to follow guides, you will learn to connect
+            the dots and complete a project.
+          </p>
+          <div className={aboutStyles.viewAll}>
+            <ReadMore
+              linkTo="/about/"
+              text="Click to Read More"
+              icon={<FaExternalLinkAlt />}
+            />
           </div>
         </div>
       </div>

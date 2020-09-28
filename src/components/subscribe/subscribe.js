@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Subscribe = props => {
-  // const [fname, setFname] = useState(``)
   const [email, setEmail] = useState(``)
   const [status, setStatus] = useState(``)
   const [msg, setMsg] = useState(``)
@@ -50,7 +49,6 @@ const Subscribe = props => {
         noValidate
       >
         <div className="email__input form__fields">
-
           <input
             className="field__input"
             type="text"
@@ -75,11 +73,11 @@ const Subscribe = props => {
             Thanks for subscribing! Youʼll receive your first email shortly.
           </div>
         ) : (
-            <div
-              className="status__error"
-              dangerouslySetInnerHTML={{ __html: msg }}
-            ></div>
-          )}
+          <div
+            className="status__error"
+            dangerouslySetInnerHTML={{ __html: msg }}
+          ></div>
+        )}
       </form>
     </>
   )

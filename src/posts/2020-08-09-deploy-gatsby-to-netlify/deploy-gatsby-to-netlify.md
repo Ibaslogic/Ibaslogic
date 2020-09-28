@@ -4,20 +4,20 @@ description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
 dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/deploy-gatsby-to-netlify.png"
+featured: "./images/deploy-gatsby-to-netlify_.png"
 tags:
   - gatsby
   - github
   - netlify
 ---
 
-You have come a long way in [developing a beautiful site with Gatsby](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"). Now, it’s time to make it available on the web. 
+You have come a long way in [developing a beautiful site with Gatsby](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"). Now, it’s time to make it available on the web.
 
 Here, you will learn how to host and deploy your Gatsby site on Netlify for free.
 
 Netlify is a great service for hosting static websites and a very popular choice when working with Gatsby sites. It allows us to push our code to GitHub or any of its other supported repository. It then takes this code and deploys your site.
 
-To get started, [you need a GitHub account](https://github.com/ "GitHub account"). So create one if you don’t have. 
+To get started, [you need a GitHub account](https://github.com/ "GitHub account"). So create one if you don’t have.
 
 Then, we will move all our Gatsby files to GitHub repository. This involves moving the files to the local repository and then to the remote repository.
 
@@ -128,6 +128,6 @@ You were then introduced to the different ways of styling a Gatsby site. In addi
 
 After that, you learned how to set up a basic SEO for your Gatsby site. And lastly, in this part of the series, you learned how to deploy your site to Netlify.
 
-If you have any questions, recommendations or additions, let me know through the comment sections. And if you like this Gatsby tutorial, endeavor to share around the web and subscribe for more updates. 
+If you have any questions, recommendations or additions, let me know through the comment sections. And if you like this Gatsby tutorial, endeavor to share around the web and subscribe for more updates.
 
 View [Project here](https://ibaslogic-site.netlify.com/ "Gatsby project") and [source code here](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "Ibaslogic GitHub repo").

@@ -4,7 +4,7 @@ description: "We will be working with a simple meme generator app that is built 
 category: "React"
 datePublished: "2020-04-04 10:32:00"
 dateUpdated: "2020-04-04 10:32:00"
-featured: "./images/simple-meme-generator-with-react-hooks.png"
+featured: "./images/simple-meme-generator-with-react-hooks_.png"
 tags:
   - hooks
 ---

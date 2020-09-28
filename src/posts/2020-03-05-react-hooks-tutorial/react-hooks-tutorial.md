@@ -4,7 +4,7 @@ description: "React Hooks allows us to use a state and manage the class-based li
 category: "React"
 datePublished: "2020-03-05 10:32:00"
 dateUpdated: "2020-03-26 11:32:00"
-featured: "./images/react-hooks-tutorial.png"
+featured: "./images/react-hooks-tutorial_.png"
 tags:
   - react
   - hooks

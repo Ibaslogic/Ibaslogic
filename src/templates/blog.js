@@ -1,23 +1,18 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
 import SocialShare from "../components/BlogPage/socialShare"
 import avatar from "../images/ibas_avartar.png"
-//import { BLOCKS } from "@contentful/rich-text-types"
-//import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 import { FaPencilAlt } from "react-icons/fa"
-
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
 import PostNextUnit from "../components/globals/custom_components/PostNextUnit"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
 import ScrollTop from "../components/BlogPage/scrollTop"
-
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Comment from "../components/comment"
@@ -96,6 +91,12 @@ const Blog = ({ data, pageContext }) => {
           role="main"
         >
           <article className={blogPageStyles.singlePost}>
+            <Img
+              className={blogPageStyles.featuredImage}
+              fluid={data.mdx.frontmatter.featured.childImageSharp.fluid}
+              alt={data.mdx.frontmatter.title}
+              backgroundColor="#eaeaea"
+            />
             <header className={blogPageStyles.entryHeader}>
               <h1 className={blogPageStyles.title}>
                 {data.mdx.frontmatter.title}
@@ -198,11 +199,6 @@ const Blog = ({ data, pageContext }) => {
             </header>
 
             <div className={blogPageStyles.entryContent}>
-              <Img
-                className={blogPageStyles.featuredImage}
-                fluid={data.mdx.frontmatter.featured.childImageSharp.fluid}
-                alt={data.mdx.frontmatter.title}
-              />
               <MDXProvider
                 components={{
                   PostSeriesLink,

@@ -4,7 +4,7 @@ description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
 dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/sourcing-data-in-gatsby.png"
+featured: "./images/sourcing-data-in-gatsby_.png"
 tags:
   - gatsby
   - data

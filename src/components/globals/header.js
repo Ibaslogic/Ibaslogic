@@ -2,9 +2,8 @@ import React, { useState, useEffect, useRef } from "react"
 
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
-//import logo from "../../images/ibaslogic_logo.svg"
 import logo from "../../images/ibaslogic__site__logo_v3.5.png"
-import { FaMoon, FaGithub, FaTwitter, FaTimes } from "react-icons/fa"
+import { FaMoon, FaGithub, FaTwitter } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
 
 // header styles
@@ -15,11 +14,6 @@ const Header = () => {
   const node = useRef()
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [links] = useState([
-    // {
-    //   id: 1,
-    //   path: "/",
-    //   text: "home",
-    // },
     {
       id: 1,
       path: "/blog/",
@@ -57,7 +51,6 @@ const Header = () => {
   }, [])
 
   const darkMode = useDarkMode(false)
-  // console.log(darkMode);
 
   const data = useStaticQuery(graphql`
     query {
@@ -85,14 +78,14 @@ const Header = () => {
             </div>
 
             <nav ref={node} className={`${headerStyles.navbar}`}>
-              <div
+              <button
                 className={`menu__btn ${headerStyles.menuBtn}`}
                 onClick={handleToggle}
               >
                 <div className={headerStyles.btnLine}></div>
                 <div className={headerStyles.btnLine}></div>
                 <div className={headerStyles.btnLine}></div>
-              </div>
+              </button>
               <ul // add show
                 className={
                   navbarOpen
@@ -100,12 +93,13 @@ const Header = () => {
                     : `menu__nav ${headerStyles.menuNav}`
                 }
               >
-                <div
-                  className={`nav__close ${headerStyles.close}`}
-                  onClick={handleToggle}
-                >
-                  <FaTimes />
+                <div className={headerStyles.closeBtn}>
+                  <button className={headerStyles.close} onClick={handleToggle}>
+                    <div className={headerStyles.btnLine}></div>
+                    <div className={headerStyles.btnLine}></div>
+                  </button>
                 </div>
+
                 {links.map(link => {
                   return (
                     <li key={link.id} className={headerStyles.navItem}>
@@ -147,15 +141,13 @@ const Header = () => {
             onClick={darkMode.toggle}
             title="Switch theme mode"
           >
-            {darkMode.value ? (
-              <div className={headerStyles.sun}>
-                <TiAdjustBrightness />
-              </div>
-            ) : (
-                <div className={headerStyles.moon}>
-                  <FaMoon />
-                </div>
-              )}
+            <div
+              className={`${headerStyles.themeMode} ${
+                darkMode.value ? headerStyles.sun : headerStyles.moon
+              }`}
+            >
+              {darkMode.value ? <TiAdjustBrightness /> : <FaMoon />}
+            </div>
           </button>
         </div>
       </div>

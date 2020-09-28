@@ -4,7 +4,7 @@ description: "React form is fun and easy to work with. In this tutorial, you'll 
 category: "React"
 datePublished: "2020-06-07 10:32:00"
 dateUpdated: "2020-06-07 10:32:00"
-featured: "./images/react-form.png"
+featured: "./images/simple-guide-to-react-form_.png"
 tags:
   - react
   - form

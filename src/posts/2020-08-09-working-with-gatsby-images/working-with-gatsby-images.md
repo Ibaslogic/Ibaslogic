@@ -4,7 +4,7 @@ description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
 dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/working-with-gatsby-images.png"
+featured: "./images/working-with-gatsby-images_.png"
 tags:
   - gatsby
   - images

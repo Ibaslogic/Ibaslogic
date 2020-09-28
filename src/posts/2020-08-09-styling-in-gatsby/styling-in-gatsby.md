@@ -4,7 +4,7 @@ description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
 dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/styling-in-gatsby.png"
+featured: "./images/styling-in-gatsby_.png"
 tags:
   - gatsby
   - style

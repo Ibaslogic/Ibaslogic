@@ -2,9 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import SubHeading from "./subHeading"
-//import { slugify } from "../../util/utilityFunction"
 import recentStyles from "./recentPosts.module.scss"
-import { FaExternalLinkAlt } from "react-icons/fa"
+import ReadMore from "./readMore"
+import { FaArrowRight } from "react-icons/fa"
 
 const RecentPosts = () => {
   const data = useStaticQuery(graphql`
@@ -41,16 +41,16 @@ const RecentPosts = () => {
   const edges = data.allMdx.edges
 
   return (
-    <section id="blog" className={recentStyles.container}>
+    <section id="blog" className={recentStyles.secContainer}>
       <div className={recentStyles.recentPosts}>
-        <div className={recentStyles.subStyles}>
-          <div className={recentStyles.titleStyles}>
-            <SubHeading title="Latest Articles" />
-          </div>
+        <div className={recentStyles.subHeading}>
+          <SubHeading title="Latest Articles" />
           <div className={recentStyles.viewAll}>
-            <Link to="/blog/">
-              View all Articles <FaExternalLinkAlt />
-            </Link>
+            <ReadMore
+              btnPry={`btn-primary readMore ${recentStyles.link}`}
+              text="all posts"
+              linkTo="/blog/"
+            />
           </div>
         </div>
 
@@ -59,24 +59,26 @@ const RecentPosts = () => {
             const { id, frontmatter, fields, excerpt } = node
             return (
               <article className={recentStyles.article} key={id}>
-                <header>
+                <div className={recentStyles.mainContent}>
                   <Link to={`/${fields.slug.name}/`}>
                     <Img
                       fluid={frontmatter.featured.childImageSharp.fluid}
                       alt={fields.slug.name}
                       fadeIn={false}
                       loading="eager"
+                      className={recentStyles.imgWrapper}
+                      backgroundColor="#eaeaea"
                     />
+                    <div className={recentStyles.content}>
+                      <h2>{frontmatter.title}</h2>
+                      <p className={recentStyles.excerpt}>
+                        {frontmatter.description || excerpt}
+                      </p>
+                      <div className={recentStyles.learnMore}>
+                        explore <FaArrowRight />
+                      </div>
+                    </div>
                   </Link>
-                </header>
-                <div className={recentStyles.content}>
-                  <h2>
-                    <Link to={`/${fields.slug.name}/`}>
-                      {" "}
-                      {frontmatter.title}
-                    </Link>
-                  </h2>
-                  <p>{frontmatter.description || excerpt}</p>
                 </div>
               </article>
             )

@@ -1,29 +1,13 @@
 import React from "react"
-
-//import { slugify } from "../../util/utilityFunction"
 import shareStyles from "../../templates/blogpage.module.scss"
-import {
-  FaFacebookF,
-  // FaGithub,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa"
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"
 
-const ShareItems = ({
-  twitterHandle,
-  slug,
-  title,
-  heading,
-  customClass,
-  siteUrl,
-}) => {
+const ShareItems = ({ twitterHandle, slug, title, heading, siteUrl }) => {
   const baseUrl = `${siteUrl}/`
-
-  //console.log(slug, title, twitterHandle, customClass, siteUrl, baseUrl)
 
   return (
     <>
-      <div className={`share__container ${customClass} ${shareStyles.shareContainer}`}>
+      <div className={`share__container  ${shareStyles.shareContainer}`}>
         <p className={shareStyles.shareTitle}>{heading}</p>
         <div className={shareStyles.socialShare}>
           <ul>

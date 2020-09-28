@@ -4,7 +4,7 @@ description: "There are many ways to style a React application. The inline CSS s
 category: "React"
 datePublished: "2020-01-27 10:31:00"
 dateUpdated: "2020-03-12 10:31:00"
-featured: "./images/css-in-reactjs-app.png"
+featured: "./images/css-in-reactjs-app_.png"
 tags:
   - react
   - style

@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { slugify } from "../../../util/utilityFunction"
 import relatedPostStyles from "./relatedArticles.module.scss"
-//import { FaHotjar } from "react-icons/fa" //FaHotjar FaFire
 import { FaSlackHash } from "react-icons/fa"
 import flame from "../../../images/flame.svg"
 

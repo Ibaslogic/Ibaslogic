@@ -4,7 +4,7 @@ description: "From Zero to deploy, you will learn how to set up a Gatsby site wi
 category: "Gatsby"
 datePublished: "2020-02-11 10:32:00"
 dateUpdated: "2020-02-11 11:32:00"
-featured: "./images/gatsby-with-contentful-cms.png"
+featured: "./images/gatsby-with-contentful-cms_.png"
 tags:
   - gatsby
   - contentful

@@ -1,15 +1,15 @@
 $content-max-width: 76rem;
 $link-color: #e55e34;
-$scroll-bg-color: rgba(229, 94, 52, 0.8); //rgb(32, 35, 42);
-$main-white: #fff; 
-$meta: #202428;//#888;
+$scroll-bg-color: rgba(229, 94, 52, 0.8);
+$main-white: #fff;
+$meta: #202428;
 $separator: #707788;
-$sidebar-color: rgba(8, 9, 10, .8); // #4d5760;
+$sidebar-color: rgba(8, 9, 10, 0.8);
 $main-aside-max-width: 730px;
 $base-font-size: 1rem;
-$base-container-LR-padding: 20px;
+$plr: 1em;
+$plrls: 2em;
 $border-color: #f2f2f2;
-
 
 @mixin transition {
   transition: all 0.5s ease-out;
@@ -18,20 +18,22 @@ $border-color: #f2f2f2;
 .container {
   max-width: $content-max-width;
   margin: 0 auto;
-  padding: 0 $base-container-LR-padding;
+  padding: 0 $plr;
   width: 100%;
 
+  @media screen and (min-width: 768px) {
+    padding: 0 $plrls;
+  }
   @media screen and (min-width: 960px) {
     display: flex;
     justify-content: space-between;
   }
 }
 .wrap {
-  padding-top: 3rem;
   padding-bottom: 3.2rem;
 
   @media screen and (min-width: 768px) {
-    // padding-top: 4.15rem;
+    padding-top: 3rem;
     padding-bottom: 3.7rem;
     flex-direction: row;
   }
@@ -50,7 +52,7 @@ $border-color: #f2f2f2;
     width: 61.34%;
     margin: 0;
     background-color: $main-white;
-    padding: 25px;
+    padding: 0 25px 25px;
     border: 1px solid #f0f0f0;
   }
   @media screen and (min-width: 1300px) {
@@ -88,52 +90,40 @@ $border-color: #f2f2f2;
     margin-bottom: 0.66rem;
     a {
       text-decoration: none;
-      // background-color: #e5f5f8;
       font-size: 0.755rem;
       padding: 4px 7px 6px;
       border-radius: 0.24rem;
       line-height: 1;
-      // color: #33475b;
       span {
-        opacity: .4;
+        opacity: 0.4;
       }
     }
   }
 }
 
 .tag-links {
-  // border-top: 1px solid #f2f2f2;
-  // border-bottom: 1px solid #f2f2f2;
-  // margin-top: 50px;
-  // padding: 29px 0;
-
-  // @media screen and (min-width: 960px) {
-  //   border-bottom: none;
-  // }
-
   ul {
     margin-bottom: 10px;
   }
 }
 
 .entry-header .title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.23333;
   margin: 0 0 1.2rem;
   font-weight: 700;
 
   @media screen and (min-width: 480px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   @media screen and (min-width: 960px) {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
   }
 }
 .post-meta {
   font-size: 14px;
   line-height: 1.6;
-  // font-weight: 300;
   margin-bottom: 2em;
   color: $meta;
 }
@@ -183,7 +173,8 @@ $border-color: #f2f2f2;
     font-size: 9px;
     margin-left: 3px;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $meta;
     text-decoration: underline;
   }
@@ -212,13 +203,23 @@ $border-color: #f2f2f2;
   margin-left: -20px;
   margin-right: -20px;
 
-@media screen and (min-width: 480px) {
-  margin-left: 0px;
-  margin-right: 0px;
-}
+  > div:first-child {
+    padding-bottom: 50% !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   @media screen and (min-width: 960px) {
+    margin-left: -25px;
+    margin-right: -25px;
     margin-bottom: 1.8667rem;
+  }
+  @media screen and (min-width: 1300px) {
+    margin-left: -40px;
+    margin-right: -40px;
   }
 }
 .entry-content {
@@ -228,7 +229,7 @@ $border-color: #f2f2f2;
 
   @media screen and (min-width: 768px) {
     line-height: 1.65;
-    font-size: 1.02rem;
+    font-size: 1.03rem;
   }
 
   ol li {
@@ -275,7 +276,7 @@ $border-color: #f2f2f2;
   p,
   ul,
   ol {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   h2 {
     font-size: 1.5rem;
@@ -287,9 +288,9 @@ $border-color: #f2f2f2;
     }
   }
   h3 {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     @media screen and (min-width: 480px) {
-      font-size: 1.3rem;
+      font-size: 1.35rem;
     }
   }
   h2,
@@ -310,10 +311,6 @@ $border-color: #f2f2f2;
 .entry-content h3 {
   padding-top: 1em;
 }
-
-// p img {
-//   padding-bottom: 10px;
-// }
 
 // =====================================================
 // Social Shares
@@ -354,7 +351,6 @@ $border-color: #f2f2f2;
     }
   }
   .social-share {
-    // margin-top: 1.5rem;
     ul {
       display: flex;
       flex-flow: row wrap;
@@ -375,7 +371,7 @@ $border-color: #f2f2f2;
 
           @media screen and (min-width: 480px) {
             padding: 8px 30px 7px;
-        }
+          }
         }
       }
     }
@@ -396,7 +392,6 @@ $border-color: #f2f2f2;
 
     @media screen and (min-width: 1300px) {
       left: 6px;
-      transform: translateX(-150%);
     }
 
     @media screen and (min-width: 1340px) {
@@ -408,17 +403,6 @@ $border-color: #f2f2f2;
     text-align: center;
     padding: 0;
     border: 0;
-
-    &.shareNotInView {
-      visibility: hidden;
-      transition: all 0.5s ease-out;
-    }
-
-    &.shareInView {
-      visibility: visible;
-      transform: translateX(0);
-      transition: all 0.5s ease-out;
-    }
   }
   .share-title {
     font-size: 1rem;
@@ -440,10 +424,6 @@ $border-color: #f2f2f2;
         &:hover {
           opacity: 0.8;
         }
-        // @media screen and (min-width: 1300px) {
-        //   padding-left: 27px;
-        //   padding-right: 27px;
-        // }
       }
     }
   }
@@ -477,7 +457,7 @@ $border-color: #f2f2f2;
   cursor: pointer;
   text-align: center;
   color: #fff;
-  background-color: $scroll-bg-color; 
+  background-color: $scroll-bg-color;
   border-radius: 50%;
   line-height: 1;
   font-size: 13px;

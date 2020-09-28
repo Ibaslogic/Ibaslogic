@@ -1,22 +1,17 @@
 $link-color: #e55e34;
+$border-color: #f0f0f0;
 $sidebar-bg-color: #fff; //#edeff1;
 
 .listContainer {
+  border: 1px solid $border-color;
   ul {
-    border: 1px solid #f0f0f0;
-    padding: 12px 17px;  
-    font-size: .92rem;
+    padding: 1.25rem 17px;
+    font-size: 0.92rem;
     line-height: 28px;
     background-color: $sidebar-bg-color;
-
-    @media screen and(min-width: 960px) {
-      padding: 10px 17px;
-    }
+    margin: 0;
     li {
       margin-bottom: 10px;
-      @media screen and(min-width: 960px) {
-        margin-bottom: 5px;
-      }
       &:last-child {
         margin-bottom: 0px;
       }
@@ -42,14 +37,12 @@ $sidebar-bg-color: #fff; //#edeff1;
 }
 
 .subTitle {
-  margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: 700;
   font-size: 20px;
-  @media screen and(min-width: 1200px) {
-    margin-bottom: 12px;
-  }
+  border-bottom: 1px solid $border-color;
+  padding: 1.25rem 0;
 }
 
 .image-container {

@@ -1,11 +1,12 @@
 $header-bg-color: #ffffff;
 $main-white: #fff;
 $base-a80: rgba(9, 10, 11, 0.8);
-$nav-link: $base-a80; // #5f6368;
+$nav-link: $base-a80;
 $content-max-width: 76rem;
-$base-container-LR-padding: 20px;
+$plr: 1em;
+$plrls: 2em;
 $link-color: #e55e34;
-$nav-btn-color: #08090a; // #5f6368;
+$nav-btn-color: #1b1b1b;
 
 // mixins
 @mixin transition {
@@ -23,8 +24,7 @@ $nav-btn-color: #08090a; // #5f6368;
 
 .container {
   background: $header-bg-color;
-
-  height: 4rem;
+  height: 56px;
   color: $main-white;
   position: fixed;
   z-index: 9;
@@ -43,8 +43,8 @@ $nav-btn-color: #08090a; // #5f6368;
   @media screen and (min-width: 768px) {
     max-width: $content-max-width;
     margin: 0 auto;
-    padding-right: $base-container-LR-padding;
-    padding-left: $base-container-LR-padding;
+    padding-right: $plrls;
+    padding-left: $plrls;
   }
 }
 
@@ -52,14 +52,17 @@ $nav-btn-color: #08090a; // #5f6368;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -6px;
 
   a {
-    padding: 15px;
     color: $nav-link;
     font-size: 18px;
-    padding-left: 11px;
-    padding-right: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 56px;
+    text-align: center;
+    margin-right: 10px;
   }
   svg {
     opacity: 0.8;
@@ -72,33 +75,37 @@ $nav-btn-color: #08090a; // #5f6368;
 .darkLight {
   background: inherit;
   border: none;
-  padding: 12px $base-container-LR-padding 12px 10px;
   cursor: pointer;
-  width: 50px;
   outline: none;
-
-  @media screen and (min-width: 768px) {
-    padding-right: 0px;
-    width: 30px;
-  }
   svg {
-    color: $nav-link; //$nav-btn-color;
+    color: $nav-link;
   }
 
-  .moon {
-    padding-bottom: 1px;
+  .themeMode {
+    padding: 0 $plr 0 8px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     outline: none;
-    svg {
-      width: 16px;
-      height: 16px;
+    @media screen and (min-width: 768px) {
+      padding: 0 0 0 8px;
     }
-  }
 
-  .sun {
-    outline: none;
-    svg {
-      width: 21px;
-      height: 21px;
+    &.moon {
+      svg {
+        width: 19px;
+        height: 16px;
+        margin-right: 2px;
+      }
+    }
+
+    &.sun {
+      svg {
+        margin-right: 2px;
+        width: 19px;
+        height: 19px;
+      }
     }
   }
 }
@@ -109,7 +116,6 @@ $nav-btn-color: #08090a; // #5f6368;
   align-items: center;
   max-width: $content-max-width;
   margin: 0 auto;
-  height: 4rem;
   justify-content: flex-start;
   flex-flow: row-reverse;
 
@@ -136,16 +142,17 @@ $nav-btn-color: #08090a; // #5f6368;
 
 .nav-link {
   display: block;
-  padding: 1.2rem 25px;
   line-height: 1.3125rem;
-  font-size: 1rem;
   color: $nav-link;
-  margin-left: 0;
   letter-spacing: -0.03em;
-  text-transform: capitalize;
   text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $link-color !important;
     @media screen and (min-width: 768px) {
       color: $nav-link !important;
@@ -164,7 +171,6 @@ $nav-btn-color: #08090a; // #5f6368;
     display: inline-block;
     padding: 6px 0;
     font-size: 0.9rem;
-    // font-weight: 300;
     position: relative;
     opacity: 1;
 
@@ -198,25 +204,60 @@ $nav-btn-color: #08090a; // #5f6368;
 // Navigation Menu
 // =================================================
 
-.menu-btn {
+.menu-btn,
+.close {
   cursor: pointer;
-  padding: $base-container-LR-padding;
+  border: none;
+  background: transparent;
 
   .btn-line {
-    width: 22px;
+    width: 28px;
     height: 2px;
     margin: 0 0 5px 0;
     background: $nav-btn-color;
-
-    &:last-child {
-      margin-bottom: 0 !important;
-    }
   }
 
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
+.menu-btn {
+  padding: 20px $plr;
+  .btn-line {
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+}
+.close {
+  .btn-line {
+    position: absolute;
+    right: 17px;
+    &:nth-of-type(1) {
+      transform: rotate(45deg);
+    }
+    &:nth-of-type(2) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 .menu-nav {
   position: fixed;
   top: 0;
@@ -241,20 +282,6 @@ $nav-btn-color: #08090a; // #5f6368;
     transform: translate3d(0, 0, 0);
   }
 
-  .close {
-    color: #5f6368;
-    font-size: 21px;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    cursor: pointer;
-    padding: 13px 20px;
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-
   @media screen and (min-width: 768px) {
     position: static;
     display: flex;
@@ -276,19 +303,18 @@ $nav-btn-color: #08090a; // #5f6368;
 }
 
 .nav-item {
-  &:last-child {
-    a {
-      margin-bottom: 1.5rem;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+  &:nth-of-type(1) {
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
     }
   }
 
   @media screen and (min-width: 768px) {
     margin-left: 2.5rem;
-    &:last-child {
-      a {
-        margin-bottom: 0rem;
-      }
-    }
   }
   @media screen and (min-width: 1200px) {
     margin-left: 3.4rem;

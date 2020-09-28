@@ -4,7 +4,7 @@ description: "In this tutorial, you will learn how to build a Gatsby blog site f
 category: "Gatsby"
 datePublished: "2020-02-02 10:32:00"
 dateUpdated: "2020-08-09 10:32:00"
-featured: "./images/gatsby-tutorial-from-scratch-for-beginners_.png"
+featured: "./images/gatsby-tutorial-beginners-guide_.png"
 tags:
   - gatsby
   - javascript
@@ -12,9 +12,7 @@ tags:
   - react
 ---
 
-Do you want to build a well-optimized site with Gatsby?
-
-If you navigate around this website, you will notice that the requested pages open almost immediately without page reload.
+Do you want to build a well-optimized site with Gatsby? If you navigate around this website, you will notice that the requested pages open almost immediately without page reload.
 
 This is happening because the files are generated ahead of time, eliminating the use of web servers. This is a new way of building websites that delivers better performance.
 

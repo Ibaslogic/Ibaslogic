@@ -4,7 +4,7 @@ description: "You can deploy your app to GitHub pages in three simple steps. Mov
 category: "React"
 datePublished: "2020-01-27 10:33:00"
 dateUpdated: "2020-03-08 10:33:00"
-featured: "./images/deploying-react-app-to-github-pages.png"
+featured: "./images/deploying-react-app-to-github-pages_.png"
 tags:
   - react
   - github

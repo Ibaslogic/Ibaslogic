@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-//import Img from "gatsby-image"
 import SidebarTitle from "./sidebarTitle"
 import recentPostStyles from "./sidebar.module.scss"
 import SidebarPostsMarkup from "./SidebarPostMarkup"
@@ -34,7 +33,7 @@ const recentPostQuery = graphql`
   query {
     allMdx(
       sort: { fields: [frontmatter___dateUpdated], order: DESC }
-      limit: 5
+      limit: 3
     ) {
       edges {
         node {

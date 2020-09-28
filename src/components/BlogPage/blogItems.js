@@ -62,7 +62,7 @@ const BlogItems = props => {
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
           {/* categories filter */}
-          <div className={blogStyles.filterPosts}>
+          <h2 className={blogStyles.filterPosts}>
             <span className={blogStyles.filterPostsHeading}>
               I want to learn about
             </span>
@@ -105,7 +105,7 @@ const BlogItems = props => {
                 </ul>
               </div>
             </div>
-          </div>
+          </h2>
 
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
@@ -118,6 +118,7 @@ const BlogItems = props => {
                   time={node.timeToRead}
                   fluid={node.frontmatter.featured.childImageSharp.fluid}
                   slug={node.fields.slug.name}
+                  excerpt={node.excerpt}
                 />
               )
             })}

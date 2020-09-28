@@ -1,12 +1,7 @@
 import React from "react"
-
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
-//import Post from "../components/post"
-
 import SEO from "../components/seo"
-//import Hero from "../components/hero"
 import BlogItems from "../components/BlogPage/blogItems"
 
 const BlogPage = ({ data }) => {
@@ -48,6 +43,7 @@ export const query = graphql`
             }
           }
           timeToRead
+          excerpt
         }
       }
     }

@@ -15,19 +15,26 @@ const ContactContent = () => {
     }
   `)
   return (
-    <section className={contactContentStyles.contact__area}>
-      <div className={contactContentStyles.main__container}>
-        <p className={contactContentStyles.connect}>
-          You can also send a direct mail to: <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a> or connect with{" "}
-          <a
-            href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ibas on Twitter
-          </a>
+    <section>
+      <div className={contactContentStyles.inner}>
+        <div className={contactContentStyles.heading}>
+          <h1>Let's talk about your project</h1>
+          <p className={contactContentStyles.desc}>
+            You can also send a direct mail to:{" "}
+            <a href={`mailto:${data.site.siteMetadata.email}`}>
+              ibas@ibaslogic.com
+            </a>{" "}
+            or connect with{" "}
+            <a
+              href={`https://twitter.com/${data.site.siteMetadata.twitterHandle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ibas on Twitter
+            </a>
+          </p>
+        </div>
 
-        </p>
         <ContactForm />
       </div>
     </section>
