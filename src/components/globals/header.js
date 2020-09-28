@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react"
-
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
 import logo from "../../images/ibaslogic__site__logo_v3.5.png"

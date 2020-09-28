@@ -126,7 +126,7 @@ $nav-btn-color: #1b1b1b;
 }
 
 .brand {
-  margin-left: 5px;
+  margin-left: 10px;
   @media screen and (min-width: 768px) {
     margin: 0px;
   }
@@ -260,9 +260,7 @@ $nav-btn-color: #1b1b1b;
 
 .menu-nav {
   position: fixed;
-  top: 0;
   max-width: 280px;
-  width: 70%;
   overflow-y: scroll;
   background: $header-bg-color;
   left: 0;
@@ -272,14 +270,12 @@ $nav-btn-color: #1b1b1b;
   padding: 4rem 0px 0;
   text-align: left;
   z-index: 0;
-  visibility: hidden;
-  transform: translate3d(-100%, 0, 0);
+  width: 0;
   @include transition;
   list-style: none;
 
   &.show-nav {
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
+    width: 70%;
   }
 
   @media screen and (min-width: 768px) {
@@ -291,8 +287,6 @@ $nav-btn-color: #1b1b1b;
     width: auto;
     height: inherit;
     padding: 0;
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
     background: none !important;
   }
 }
