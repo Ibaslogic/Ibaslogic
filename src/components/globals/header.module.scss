@@ -39,7 +39,7 @@ $nav-btn-color: #1b1b1b;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 56px;
   @media screen and (min-width: 768px) {
     max-width: $content-max-width;
     margin: 0 auto;

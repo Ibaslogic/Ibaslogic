@@ -1,9 +1,16 @@
 [
   {
-    "subHeading": "New here? Here is how I can help!",
-    "content": "If you are getting into the world of web technologies, avoid the common pitfalls of learning them in isolation without applying what you've learned. Do not wait until you accumulate enough. It helps you to solidify your learnings and of course, making you appreciate every step. Plus it provides a faster learning curve because it will serve as morale for subsequent learning. This strategy has proven to work best. And that is why we have structured our easy to follow guides in a way you can apply them to build a real-world project."
+    "subHeading": "New here? What Ibaslogic is all about",
+    "content": "If you have ever taught about finding project-based dev articles for a self-starter or beginners, then you’ve come to the right place. These types do not only make you grasp the fundamentals, but you’ll also get to know how these techs are connected to form a real-world solution."
   },
   {
-    "content": "That said, I will advise you to stick around and take your dev knowledge to another level. In this blog, I will be sharing with you all the knowledge and strategy I acquired thus far. So make sure you sign up for free updates and follow us on all social platforms."
+    "subHeading": "Here is how I can help!",
+    "content": "While learning web development, most beginners learn different dev tools and tech in isolation without a deep understanding of knowing how to connect the dots to build a real-world project. They end up getting tired of learning, making them stop learning. Only for them to revisit the learnings all over again. If not careful, they end up repeating the cycle."
+  },
+  {
+    "content": "I learned this the hard way! The pit is so deep, so you wouldn’t want to fall in it in the next cycle of learning. That is where Ibaslogic comes in. This blog is birth to help aspiring developers and point them in the right direction. In this blog, you’ll not only find articles about the fundamentals, but you’ll also find that of the project-based. Plus, I’ll be showing you the exact tips and strategy you’ll need to grasp web technologies in no distant time. No technical jargons. Just beginner friendly articles."
+  },
+  {
+    "content": "That said, make sure you stick around and take your dev knowledge to another level; sign up for free updates and follow us on all social platforms."
   }
 ]
