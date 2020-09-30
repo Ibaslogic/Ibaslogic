@@ -17,9 +17,7 @@ Here, you will learn how to host and deploy your Gatsby site on Netlify for free
 
 Netlify is a great service for hosting static websites and a very popular choice when working with Gatsby sites. It allows us to push our code to GitHub or any of its other supported repository. It then takes this code and deploys your site.
 
-To get started, [you need a GitHub account](https://github.com/ "GitHub account"). So create one if you don’t have.
-
-Then, we will move all our Gatsby files to GitHub repository. This involves moving the files to the local repository and then to the remote repository.
+To get started, [you need a GitHub account](https://github.com/ "GitHub account"). So create one if you don’t have. Then, we will move all our Gatsby files to GitHub repository. This involves moving the files to the local repository and then to the remote repository.
 
 The first thing you would want to do when setting up a git project is to initialize your local Git repository. This will create a `.git` folder in your project directory.
 
@@ -63,17 +61,13 @@ On the new page, you will be required to name your repository. In my case, I wil
 
 > Note that Gatsby already included a README.md file in your project folder. So DON'T Initialize this repository with a README.
 
-Next, click on the **Create repository** button. This takes you to a page where you will find the remote URL.
-
-Find the command that looks like this and run it in your terminal:
+Next, click on the **Create repository** button. This takes you to a page where you will find the remote URL. Find the command that looks like this and run it in your terminal:
 
 ```
 git remote add origin https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial.git
 ```
 
-If you can’t find it, modify the URL above to reflect your repository. What this command does is to add the repo as the remote repository.
-
-Finally, run this command to push to the master branch:
+If you can’t find it, modify the URL above to reflect your repository. What this command does is to add the repo as the remote repository. Finally, run this command to push to the master branch:
 
 ```
 git push -u origin master

@@ -47,9 +47,7 @@ Now, in this part, we will take a look at integrating form in our React app. Als
 
 But before you go ahead, I will advise you to take a look at [how to handle form inputs fields in React](/simple-guide-to-react-form/ "react form"). There, you will learn how the common input types such as checkbox, text, textarea, select input, radio and range work in React.
 
-Once you understand the basics of the React form inputs, then, let’s move on.
-
-Here is the current status of our app:
+Once you understand the basics of the React form inputs, then, let’s move on. Here is the current status of our app:
 
 ![React devtools](./images/react-devtools.png)
 
@@ -83,29 +81,21 @@ With this, the state will serve as a **single source of truth**.
 
 Meaning, the input checkbox would no longer listens to its internal state (i.e the browser DOM) but the state in your app. This is necessary because the component state will not change unless you change it.
 
-Let’s see how it works.
+Let’s see how it works. If you take a look at the `state` object in the parent component, we have a Boolean value (`true` or `false`) assigned to every `completed` key in the `todos` data. We can tap into that to toggle the checkboxes.
 
-If you take a look at the `state` object in the parent component, we have a Boolean value (`true` or `false`) assigned to every `completed` key in the `todos` data. We can tap into that to toggle the checkboxes.
-
-So go inside the `TodoItem.js` file and add a `checked` prop to the `input` checkbox and then assign `{this.props.todo.completed}`.
-
-So you have:
+So go inside the `TodoItem.js` file and add a `checked` prop to the `input` checkbox and then assign `{this.props.todo.completed}`. So you have:
 
 ```jsx
 <input type="checkbox" checked={this.props.todo.completed} />
 ```
 
-Save the file.
-
-Remember, just like the `title`, we have access to the `completed` value in this component.
+Save the file. Remember, just like the `title`, we have access to the `completed` value in this component.
 
 At this point, you have succeeded in making the input checkbox a controlled input because it now listens only to the state in your application.
 
 Now if you try to toggle any of the checkboxes, nothing will happen. This is because each of the `checked` attributes is assigned a value equal to the current value of the state.
 
-Remember, only the first task is assigned to be completed.
-
-We need a way to change the state whenever users click on the checkboxes. React already gives us a hint through the Console tab of the browser DevTools.
+Remember, only the first task is assigned to be completed. We need a way to change the state whenever users click on the checkboxes. React already gives us a hint through the Console tab of the browser DevTools.
 
 If you open it, you'll see a warning displayed as a result of the added `checked` attribute. React is telling us to add an `onChange` handler to keep track of any changes in the field. Else, it wouldn’t know if the input field is checked or not.
 
@@ -125,21 +115,15 @@ For the meantime, we are assigning to the handler, a callback function that will
 
 ![Handling Input](./images/handlingInput.gif)
 
-Now, instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked.
-
-To do this, we need to understand how to raise and handle events.
+Now, instead of logging text in the console, we want to toggle the checkboxes anytime they are being clicked. To do this, we need to understand how to raise and handle events.
 
 ## Raising and Handling Events
 
-In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it.
-
-Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`.
+In our app, the parent component, `TodoContainer` is the one that holds the state data. This component, therefore, is the ONLY one that can change it. Meaning the `TodoItem` component, which is the one handling the checkboxes, cannot change the state data in the parent component, `TodoContainer`.
 
 We need to find a way to access the state data from the `TodoItem` and toggle the `completed` value to `true` or `false` in the `TodoContainer` component.
 
-To do this, we will need to raise an event from the `TodoItem` up a level to `TodosList`, and then into `TodoContainer` component.
-
-In other words, we need to **climb a ladder**.
+To do this, we will need to raise an event from the `TodoItem` up a level to `TodosList`, and then into `TodoContainer` component. In other words, we need to **climb a ladder**.
 
 ![Handling Event](./images/handling-event.png)
 
@@ -149,9 +133,7 @@ This is kind of tricky but trust me it's very simple. You can either go from the
 
 So let’s do it.
 
-We will first enable communication between these components.
-
-Starting from the parent component, `TodoContainer`, add a handler method, `handleChange` just above the `render()` method.
+We will first enable communication between these components. Starting from the parent component, `TodoContainer`, add a handler method, `handleChange` just above the `render()` method.
 
 ```JavaScript
 handleChange = () => {
@@ -161,9 +143,7 @@ handleChange = () => {
 
 You can name this method anything you like. Let’s see how we can communicate with this method from the child component.
 
-Start by passing this method to the `TodosList` component through the props.
-
-So update `<TodosList />` so you have:
+Start by passing this method to the `TodosList` component through the props. So update `<TodosList />` so you have:
 
 ```jsx
 <TodosList todos={this.state.todos} handleChangeProps={this.handleChange} />
@@ -183,9 +163,7 @@ From there, we can pass it to the `TodoItem` component. Let’s update the `<Tod
 />
 ```
 
-At this point, the `handleChange()` data can be accessed from the `TodoItem` component.
-
-So update the `onChange` handler in the `TodoItem` component so you have:
+At this point, the `handleChange()` data can be accessed from the `TodoItem` component. So update the `onChange` handler in the `TodoItem` component so you have:
 
 ```jsx
 onChange={() => this.props.handleChangeProps()}
@@ -193,15 +171,11 @@ onChange={() => this.props.handleChangeProps()}
 
 This time, make sure you have parenthesis, `()` attached to the `handleChangeProps`.
 
-Save all your files.
-
-Now, if you click any of the checkboxes, the `onChange` event will trigger and will call the `handleChange()` method in the parent component, `TodoContainer`.
+Save all your files. Now, if you click any of the checkboxes, the `onChange` event will trigger and will call the `handleChange()` method in the parent component, `TodoContainer`.
 
 For now, we are only logging a text in the console.
 
-Let’s go a step further.
-
-We need to identify which one of the checkboxes is clicked. To do this, we need to pass along their respective `ids` through the callback function.
+Let’s go a step further. We need to identify which one of the checkboxes is clicked. To do this, we need to pass along their respective `ids` through the callback function.
 
 Update the `onChange` handler in the `TodoItem` component to include the `id`.
 
@@ -252,9 +226,7 @@ handleChange = id => {
 
 The `id` on the first line comes from the `TodoItem` component (it contains the checked id). You know that already!
 
-On looping through the todos data, we check if any of the items id matches the checked id. Then, we flip the completed value.
-
-Save the file and check your application. You should be able to toggle the checkboxes.
+On looping through the todos data, we check if any of the items id matches the checked id. Then, we flip the completed value. Save the file and check your application. You should be able to toggle the checkboxes.
 
 ![State update](./images/stateupdate.png)
 
@@ -266,9 +238,7 @@ This will be similar to how we handled the input checkboxes. Here also, the todo
 
 That means we will be raising an event from the `TodoItem` component and move up levels until we get to the `TodoContainer` component where the event will be handled.
 
-Let’s get down.
-
-Start by adding a delete button in the `TodoItem` component. So add this `button` element below the `input` tag:
+Let’s get down. Start by adding a delete button in the `TodoItem` component. So add this `button` element below the `input` tag:
 
 ```html
 <button>Delete</button>
@@ -311,9 +281,7 @@ Save the file and move a level down inside the `TodosList` component and update 
 />
 ```
 
-Finally, back in the `TodoItem` component. Update the `button` element to include an `onClick` event handler that will trigger the `delTodo` method in the parent component.
-
-You should have this:
+Finally, back in the `TodoItem` component. Update the `button` element to include an `onClick` event handler that will trigger the `delTodo` method in the parent component. You should have this:
 
 ```jsx
 <button onClick={() => this.props.deleteTodoProps(this.props.todo.id)}>
@@ -321,9 +289,7 @@ You should have this:
 </button>
 ```
 
-Save all your files and check the frontend.
-
-Open the Console tab and try to delete any of the todos items.
+Save all your files and check the frontend. Open the Console tab and try to delete any of the todos items.
 
 ![Handle delete](./images/handledelete.png)
 
@@ -331,13 +297,9 @@ At the moment, we are logging "deleted" text alongside the id of the deleted ite
 
 Up to this point, we are repeating what we did for the checkbox. If it's not clear, revisit the earlier explanation.
 
-Next, we will manipulate the state and remove any of the deleted items from the list. The way we do that is by using the `filter()` method.
+Next, we will manipulate the state and remove any of the deleted items from the list. The way we do that is by using the `filter()` method. This method is also a higher-order function just like the `map()` method. It returns a new array by applying a condition on every array element.
 
-This method is also a higher-order function just like the `map()` method. It returns a new array by applying a condition on every array element.
-
-In this case, we only want to return the todos items that do not match the id that will be passed in – i.e the clicked id. Any id that matches will be deleted.
-
-Now update the `delTodo` method so you have:
+In this case, we only want to return the todos items that do not match the id that will be passed in – i.e the clicked id. Any id that matches will be deleted. Now update the `delTodo` method so you have:
 
 ```JavaScript{2-8}
 delTodo = id => {
@@ -387,9 +349,7 @@ Don’t forget, it can be a functional component if we use React Hooks. Coming t
 
 Keep reading!
 
-Also, notice how we are extending the `Component` class in the React library.
-
-Unlike the previous class components where we used `React.Component`. Here, we are using `Component` after importing it from the `react` module like this:
+Also, notice how we are extending the `Component` class in the React library. Unlike the previous class components where we used `React.Component`. Here, we are using `Component` after importing it from the `react` module like this:
 
 ```JavaScript
 import React, { Component } from "react";
@@ -405,9 +365,7 @@ To use this component in our application, we will import it inside the `TodoCont
 import InputTodo from "./InputTodo"
 ```
 
-Then, add `<InputTodo />` inside the `render()` method just below the `<Header />`.
-
-You should have this:
+Then, add `<InputTodo />` inside the `render()` method just below the `<Header />`. You should have this:
 
 ```jsx{5}
 render() {
@@ -425,9 +383,7 @@ render() {
 }
 ```
 
-Save the file. You should have the form fields rendered in the frontend.
-
-As we did for the checkbox, we have to make the form input field a controlled field. The first step is to have a state manage the user's input.
+Save the file. You should have the form fields rendered in the frontend. As we did for the checkbox, we have to make the form input field a controlled field. The first step is to have a state manage the user's input.
 
 So, add this code just above the `render()` method in the `InputTodo` component:
 
@@ -437,9 +393,7 @@ state = {
 };
 ```
 
-We can now take this data and assign it to a `value` prop in the text input tag.
-
-So update it so you have:
+We can now take this data and assign it to a `value` prop in the text input tag. So update it so you have:
 
 ```jsx
 <input type="text" placeholder="Add todo..." value={this.state.title} />
@@ -449,9 +403,7 @@ So update it so you have:
 
 Now, the text input field is being controlled by the component state and not the DOM. Hence, you will not be able to write anything in the field because it is assigned a value equal to the current value of the state.
 
-The value is empty as declared in the `state` object.
-
-To change the state, we need to update it through the `setState()` method.
+The value is empty as declared in the `state` object. To change the state, we need to update it through the `setState()` method.
 
 Again, just like the `checked` prop, the `value` prop also exhibits a warning in the console. React is reminding us that we need to add an `onChange` handler that will keep track of any changes in the field.
 
@@ -471,9 +423,7 @@ onChange = e => {
 
 Don’t forget that we are using `this.onChange` because the method, `onChange()` is part of the class.
 
-Save your file.
-
-If you try to write in the input field, you’ll see "hello" text being displayed in response to every keystroke inside the console.
+Save your file. If you try to write in the input field, you’ll see "hello" text being displayed in response to every keystroke inside the console.
 
 Next, we need to handle the event and update the state. Let’s update the `onChange` method to this:
 
@@ -499,9 +449,7 @@ And if you recall from vanilla JavaScript DOM API, the predefined parameter, `e`
 
 ## Handling React form that has more than one text input field
 
-For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the `state` and assigned to them an empty string.
-
-After that, you’ll have to modify the `onChange` method to this:
+For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the `state` and assigned to them an empty string. After that, you’ll have to modify the `onChange` method to this:
 
 ```JavaScript{3}
 onChange = e => {
@@ -557,9 +505,7 @@ As long as the value of the `name` attribute in the input tag matches what you h
 
 At the moment, the page will reload if you try to submit a todos item and update the state data. We need to handle that. To submit todos items, we will make use of the `onSubmit` event handler on the `form` element.
 
-Let's quickly do that.
-
-Update the `<form>` tag in the `InputTodo` component to include the `onSubmit` handler.
+Let's quickly do that. Update the `<form>` tag in the `InputTodo` component to include the `onSubmit` handler.
 
 ```jsx
 <form onSubmit={this.handleSubmit}>
@@ -578,19 +524,13 @@ For the meantime, if you submit your todos items, they will be displayed in the 
 
 > Note how we are preventing the default behaviour of the form submission.
 
-Now, instead of logging the user's input (titles) in the console, we want to pass them from this component to the `TodoContainer` component and update the state data.
-
-To do that, we will need to raise and handle the event just like we have been doing.
+Now, instead of logging the user's input (titles) in the console, we want to pass them from this component to the `TodoContainer` component and update the state data. To do that, we will need to raise and handle the event just like we have been doing.
 
 But this time, we will raise an event from the `InputTodo` component (that accept the user’s input) to the parent component, `TodoContainer` where the state data to be updated live.
 
 If you check the app diagram or open the React Tools to see the component hierarchy, you will see that we are moving up a level from the `InputTodo` to the `TodoContainer` component.
 
-Let’s do it again.
-
-As usual, let's start by enabling communication between those components.
-
-Starting from the parent component, `TodoContainer` , add this class method above the `render()` method:
+Let’s do it again. As usual, let's start by enabling communication between those components. Starting from the parent component, `TodoContainer` , add this class method above the `render()` method:
 
 ```JavaScript
 addTodoItem = title => {
@@ -606,9 +546,7 @@ Next, pass this class method to the `InputTodo` component by updating the `<Inpu
 <InputTodo addTodoProps={this.addTodoItem} />
 ```
 
-Now, the `addTodoItem()` method can be accessed through props in the `InputTodo` component.
-
-So update the `handleSubmit` method in the `InputTodo` component so you have:
+Now, the `addTodoItem()` method can be accessed through props in the `InputTodo` component. So update the `handleSubmit` method in the `InputTodo` component so you have:
 
 ```JavaScript{3}
 handleSubmit = e => {
@@ -619,9 +557,7 @@ handleSubmit = e => {
 
 Save the file. You should still be able to see your todos in the console.
 
-Before we move on, let’s clear the input field once we have submitted a todos item for subsequent entry.
-
-Simply update the `handleSubmit` method so you have:
+Before we move on, let’s clear the input field once we have submitted a todos item for subsequent entry. Simply update the `handleSubmit` method so you have:
 
 ```JavaScript{4-6}
 handleSubmit = e => {
@@ -633,9 +569,7 @@ handleSubmit = e => {
 };
 ```
 
-Finally, we can update the state.
-
-Back to the `TodoContainer` component, update the `addTodoItem()` method so you have:
+Finally, we can update the state. Back to the `TodoContainer` component, update the `addTodoItem()` method so you have:
 
 ```JavaScript{2-9}
 addTodoItem = title => {
@@ -650,17 +584,13 @@ addTodoItem = title => {
 };
 ```
 
-Save your files.
-
-Go to the frontend and add a new todos item to the list.
+Save your files. Go to the frontend and add a new todos item to the list.
 
 ![Todos update](./images/todosupdate.png)
 
 What did we do?
 
-In the code, we started by defining an object for the new item. In this object, we are passing a set of key-value pair. Here, we have the `title` from the user’s input, the `completed` key assigned a `false` value so that the checkbox is not selected by default.
-
-Then, for the meantime, we are working with hardcoded `id`.
+In the code, we started by defining an object for the new item. In this object, we are passing a set of key-value pair. Here, we have the `title` from the user’s input, the `completed` key assigned a `false` value so that the checkbox is not selected by default. Then, for the meantime, we are working with hardcoded `id`.
 
 With the `setState()` method, we are re-rendering the state. We are adding the new item to the current todos list which can be grabbed using the spread operator (`…`).
 
@@ -668,15 +598,11 @@ With the `setState()` method, we are re-rendering the state. We are adding the n
 
 If you try to submit more than one todos item, React will trigger a console warning telling you that the ids/keys are meant to be unique. This is happening because we are assigning a single `id` (an id of 4) to every new todos item received through the input field.
 
-That is not ideal.
-
-The `id` help React to identify which item is added or removed.
+That is not ideal. The `id` help React to identify which item is added or removed.
 
 To fix this warning, we will install something that will generate random ids that we can use. This is called the UUID (Universal Unique Identifier).
 
-To install it, stop the server with `CTRL + C`.
-
-From your terminal, run:
+To install it, stop the server with `CTRL + C`. From your terminal, run:
 
 ```
 C:\Users\Your Name\simple-todo-app > npm i uuid
@@ -684,17 +610,13 @@ C:\Users\Your Name\simple-todo-app > npm i uuid
 
 Once installed, start the server again with `npm start`.
 
-To use these ids in your app, you need to import the UUID in the `TodoContainer.js` file.
-
-So, add this line below the list of the `import` statements.
+To use these ids in your app, you need to import the UUID in the `TodoContainer.js` file. So, add this line below the list of the `import` statements.
 
 ```JavaScript
 import { v4 as uuidv4 } from "uuid";
 ```
 
-Then, replace any hardcoded `id` value with `uuidv4()`.
-
-For instance, instead of having:
+Then, replace any hardcoded `id` value with `uuidv4()`. For instance, instead of having:
 
 ```js
 id: 1,
@@ -706,9 +628,7 @@ You’ll have:
 id: uuidv4(),
 ```
 
-Do the same for the other ids.
-
-Save the file and test your application. You should be able to add as many todos items without any console error.
+Do the same for the other ids. Save the file and test your application. You should be able to add as many todos items without any console error.
 
 If you check the React tools, you’ll see that the todos items are assigned unique ids from the UUID.
 
@@ -716,8 +636,6 @@ If you check the React tools, you’ll see that the todos items are assigned uni
 
 Great! We are getting there.
 
-Now you know the logic behind form handling in React. Not only that, you now know how to raise and handle events.
-
-In the next section, you will learn how to implement CSS in your React application.
+Now you know the logic behind form handling in React. Not only that, you now know how to raise and handle events. In the next section, you will learn how to implement CSS in your React application.
 
 <PostNextUnit heading="Next part: How to implement CSS in Reactjs App" btnLabel="continue" url="/css-in-reactjs-app/" />

@@ -13,9 +13,7 @@ tags:
 
 Straight to the point! What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the "array-like" objects?
 
-At the end of this guide, you’ll find answers to those questions.
-
-If you are familiar with array, let’s take a look at this:
+At the end of this guide, you’ll find answers to those questions. If you are familiar with array, let’s take a look at this:
 
 ```js
 const lists = ["item1", "item2", "item3"]
@@ -96,9 +94,7 @@ If you save the file and check the `newList` in the console, you should see this
 
 We are getting an `undefined` value on the first index, `lists[1]` i.e the second array item.
 
-Let’s see how the `forEach` method handles the same iteration.
-
-Replace the for loop with this:
+Let’s see how the `forEach` method handles the same iteration. Replace the for loop with this:
 
 ```js
 const lists = ["item1", , "item2", "item3"]
@@ -140,9 +136,7 @@ Save and revisit the console. It should work perfectly.
 
 Good. That is a great start.
 
-Let’s take a step further by applying the other optional callback parameters.
-
-Simply add the following code in the `.js` file:
+Let’s take a step further by applying the other optional callback parameters. Simply add the following code in the `.js` file:
 
 ```js
 let numbers = [2, 4, 6, 8, 10]
@@ -174,9 +168,7 @@ Sometimes, you may be working with `this` keyword in your `forEach` loop. And if
 
 To bind that keyword to your object of interest, JavaScript `forEach` provides us with `thisValue` argument as specified in its syntax.
 
-Let’s see a use case.
-
-Start by adding the following code in your `.js` file:
+Let’s see a use case. Start by adding the following code in your `.js` file:
 
 ```js
 function MyNumber() {
@@ -192,9 +184,7 @@ const num = new MyNumber()
 num.multiply()
 ```
 
-If you’ve ever written object-oriented style of code, you should be familiar with the above.
-
-We defined a constructor function, `MyNumber` containing a `data` property and a `multiply` method.
+If you’ve ever written object-oriented style of code, you should be familiar with the above. We defined a constructor function, `MyNumber` containing a `data` property and a `multiply` method.
 
 > In case you are not familiar with the code, I have [a step by step guide](/object-oriented-programming-javascript/ "oop tutorial") that explains it to details.
 
@@ -278,9 +268,7 @@ const myNum = numbers.forEach(number => {
 console.log(myNum)
 ```
 
-As you can see, we are returning the `forEach` logic and assigning the result in the `myNum` variable.
-
-If you save the file and open the console, you’ll see an `undefined` value.
+As you can see, we are returning the `forEach` logic and assigning the result in the `myNum` variable. If you save the file and open the console, you’ll see an `undefined` value.
 
 Well, if you’d like to return something, [use another method like map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map "map method"). It has a similar definition to the `forEach`.
 
@@ -312,9 +300,7 @@ If you have ever worked with the HTML DOM, you should be familiar with the DOM m
 
 These methods can be used to gather a bunch of elements in a document. And they either return an `HTMLCollection` or a `NodeList` (both of which are array-like objects).
 
-In this section, you’ll learn how to iterate these objects using the `forEach`.
-
-Let’s see a practical example. Add the following to your `.html` file:
+In this section, you’ll learn how to iterate these objects using the `forEach`. Let’s see a practical example. Add the following to your `.html` file:
 
 ```html
 <ul class="list">
@@ -476,9 +462,7 @@ Output:
 ["item1", "item2", "item3"]
 ```
 
-From there, you can call the `forEach` method on the output to loop through.
-
-Or if you like, simply use the earlier method of calling the `forEach` indirectly using the `call()` method like so:
+From there, you can call the `forEach` method on the output to loop through. Or if you like, simply use the earlier method of calling the `forEach` indirectly using the `call()` method like so:
 
 ```js
 const arrayLike = {
@@ -497,6 +481,4 @@ If you save the file and check the console, you should see your items.
 
 We have seen almost all the use cases of the forEach method. From iterating through a simple array to working with the array-like objects and almost all that is in-between. Now, you should be able to apply it in your project.
 
-If you have any questions, please let me know through the comment section.
-
-And if you like this tutorial, endeavor to share it around the web and subscribe for more updates.
+If you have any questions, please let me know through the comment section. And if you like this tutorial, endeavor to share it around the web and subscribe for more updates.

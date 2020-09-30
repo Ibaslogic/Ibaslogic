@@ -33,19 +33,13 @@ For those of us who are comfortable writing React code, let’s dive in.
 
 [Gatsby or GatsbyJS](https://www.gatsbyjs.org/ "Gatsby website") is a framework based on React library and GraphQL that makes it easy to create both website and web applications.
 
-It is built on the JAMstack – i.e a strategy for building websites/apps based on client-side JavaScript (or other scripts), reusable APIs and prebuilt Markup.
-
-This type of site has high performance, scalability and safety.
+It is built on the JAMstack – i.e a strategy for building websites/apps based on client-side JavaScript (or other scripts), reusable APIs and prebuilt Markup. This type of site has high performance, scalability and safety.
 
 Though, Gatsby is considered a static site generator (SSG) like other Jamstack technologies (Jekyll, Next, Hugo etc) based on what it shares with them. But in reality, it can do much more than you can typically do with a static site generator.
 
-You can think of Gatsby as a React framework for building complex websites and web apps.
+You can think of Gatsby as a React framework for building complex websites and web apps. With Gatsbyjs, you are not limited to static sites. You can build a blog site, e-commerce or any complex website by using the latest tools like React, GraphQL, headless CMSs etc.
 
-With Gatsbyjs, you are not limited to static sites. You can build a blog site, e-commerce or any complex website by using the latest tools like React, GraphQL, headless CMSs etc.
-
-Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources.
-
-If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal.
+Gatsby has become so popular because it is really fast and easy to work with. It allows us to manage contents from different sources. If you are a technical person, you can manage and source your content from the Markdown files. Otherwise, you can [source your content from CMSs like Contentful](/gatsby-with-contentful-cms/ "Gatsby with contentful"), WordPress or Drupal.
 
 This way, you can build a static website powered by Gatsby but still manage your content through a nice admin interface.
 
@@ -59,9 +53,7 @@ Enough said, let’s get started.
 
 To get started with Gatsby, you will need to have NodeJS and Git installed on your machine. With NodeJS, you can run your Gatsby JavaScript code outside of a web browser. You will also have access to its npm (node package manager) tool.
 
-You can check if you have it installed by running `npm -v` and `node –v` in your terminal.
-
-The commands should return their respective versions. If not, head over to [NodeJS website](https://nodejs.org/en/ "NodeJS site"), download and install the latest version.
+You can check if you have it installed by running `npm -v` and `node –v` in your terminal. The commands should return their respective versions. If not, head over to [NodeJS website](https://nodejs.org/en/ "NodeJS site"), download and install the latest version.
 
 Likewise, you will need Git to install Gatsby starter files.
 
@@ -69,9 +61,7 @@ Likewise, you will need Git to install Gatsby starter files.
 
 If you don't have it installed, head over to [Git website](https://git-scm.com/downloads "Git site") , download and install the one for your operating system. The steps to install Git varies on the operating system. So if you need a pointer, check [this guide](https://www.atlassian.com/git/tutorials/install-git "Git installation guide").
 
-Once you are done with that, you need to install the Gatsby CLI (command line interface). This CLI will allow you to generate a new Gatsby project. And it is available as an npm package.
-
-So head over to your terminal and run this npm command:
+Once you are done with that, you need to install the Gatsby CLI (command line interface). This CLI will allow you to generate a new Gatsby project. And it is available as an npm package. So head over to your terminal and run this npm command:
 
 ```
 npm install -g gatsby-cli
@@ -99,17 +89,13 @@ Ok, from the terminal, switch to the directory you would like to save your proje
 gatsby new ibaslogic-gatsby-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-This will create a new project folder called **ibaslogic-gatsby-tutorial** (you can name it anything you like) and include all of the starter files.
-
-Once your new Gatsby site has been successfully bootstrapped, open it with your favourite text editor. In my case, I will be using the VsCode.
+This will create a new project folder called **ibaslogic-gatsby-tutorial** (you can name it anything you like) and include all of the starter files. Once your new Gatsby site has been successfully bootstrapped, open it with your favourite text editor. In my case, I will be using the VsCode.
 
 Your project structure should look like this:
 
 ![Project structure](./images/project-structure.png)
 
-Before we take a look inside the project folder, let's run the development server. To do this, we will run one of the scripts that Gatsby provides.
-
-If you open the `package.json` file in the root and check the `scripts` property, you will see something like this:
+Before we take a look inside the project folder, let's run the development server. To do this, we will run one of the scripts that Gatsby provides. If you open the `package.json` file in the root and check the `scripts` property, you will see something like this:
 
 ```json
 "scripts": {
@@ -125,9 +111,7 @@ If you open the `package.json` file in the root and check the `scripts` property
 
 Your focus here should be on the `develop` script. This will allow you to start the development server and build your project locally. This script also comes with live reload so that changes are reflected in real time.
 
-You can start your Gatsby site either from your computer terminal or the integrated terminal of VsCode (if you are using it).
-
-From the computer terminal, navigate into your project directory:
+You can start your Gatsby site either from your computer terminal or the integrated terminal of VsCode (if you are using it). From the computer terminal, navigate into your project directory:
 
 ```
 cd ibaslogic-gatsby-tutorial
@@ -141,9 +125,7 @@ C:\Users\Your Name\ ibaslogic-gatsby-tutorial > gatsby develop
 
 If you are using VsCode, you can open its integrated terminal from `View -> Terminal` (or use the shortcut, `` Ctrl + ` `` or `` cmd + ` `` on Windows and Mac respectively) and run `gatsby develop`.
 
-Once the command is done, you will see a success message with the link to view your default starter site.
-
-Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
+Once the command is done, you will see a success message with the link to view your default starter site. Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
 
 > Also, you'd see a URL like this: [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). Take note of it, We will explore this later when we start pulling data to our site.
 
@@ -165,19 +147,13 @@ First, you need to understand the project structure. So let’s take a look at s
 
 Having worked with React, I expect that you should be familiar with the project (folders and files) structure. But to be on the same page, I will quickly touch some of the important folders and files.
 
-The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial.
+The `node_modules` folder contains all the third-party libraries as well as Gatsby itself. This directory will also contain packages you’ll be installing through npm later in the tutorial. The `public` folder will contain the public asset of your site and will hold your static files.
 
-The `public` folder will contain the public asset of your site and will hold your static files.
-
-The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory.
-
-This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename.
+The `src` folder will contain all of your working files. This is where you’ll spend most of your time. Inside this folder, we have the `pages` directory. This is a very important directory inside the Gatsby project. Any files inside this folder automatically become static pages with paths based on their filename.
 
 At the moment, we have `index.js` present in the pages folder. And as you know, the index file always references the home page. This is why the content of this file is being rendered in the frontend.
 
-Don’t worry about the `src` files, we will write everything from scratch.
-
-The `static` folder is a good place to include your redirect file, favicon or even your logo.
+Don’t worry about the `src` files, we will write everything from scratch. The `static` folder is a good place to include your redirect file, favicon or even your logo.
 
 As the name implies, the `gatsby-config.js` file is where you configure your Gatsby site. In this file, you set the site title, description, the Gatsby plugins to include and some other configuration. You will learn how to do all of these later.
 
@@ -187,9 +163,7 @@ Now that you are familiar with the project structure, let’s go ahead and make 
 
 I mentioned earlier that the `src/pages` folder holds the file for the site static pages. So go inside the folder and open the `index.js` file. The code in this file is a simple React component that is rendering a simple "Hello world!" on the screen.
 
-If you change the "hello world!" text to something else and save the file, the changes will be reflected in real-time in the browser.
-
-This is happening because Gatsby comes bundled with hot reload.
+If you change the "hello world!" text to something else and save the file, the changes will be reflected in real-time in the browser. This is happening because Gatsby comes bundled with hot reload.
 
 Great start!
 
@@ -216,9 +190,7 @@ const Index = () => {
 export default Index
 ```
 
-Save the file and see your changes in the frontend.
-
-This is all it takes to create a Gatsby page. All we are doing is rendering a simple React functional component.
+Save the file and see your changes in the frontend. This is all it takes to create a Gatsby page. All we are doing is rendering a simple React functional component.
 
 > If you are scratching your head understanding the code, please go ahead and read this [React tutorial](/react-tutorial-for-beginners/ "React tutorial") and come back.
 
@@ -230,9 +202,7 @@ Now the name of the file is also important. Here, the file is called `index.js`.
 
 With Gatsby, `index.js` will be the default homepage. To create a new page, all you have to do is to add a new file to the `src/pages` directory.
 
-In this tutorial, we will be creating an additional three pages. The **Blog**, **Contact** and **About** pages.
-
-So let’s create these files – `blog.js`, `contact.js` and `about.js` in the `src/pages` folder.
+In this tutorial, we will be creating an additional three pages. The **Blog**, **Contact** and **About** pages. So let’s create these files – `blog.js`, `contact.js` and `about.js` in the `src/pages` folder.
 
 In the `blog.js` file, add the following code:
 
@@ -293,9 +263,7 @@ Save your files and don’t forget to access your pages at http://localhost:8000
 
 ## Creating the Gatsby Page Layout Component
 
-Now, instead of accessing all your pages by navigating to their respective URLs in the browser address bar, we will create another component called the `Header` component.
-
-This component will render the header content including the navigation menu links. This way, users can easily visit each of the pages.
+Now, instead of accessing all your pages by navigating to their respective URLs in the browser address bar, we will create another component called the `Header` component. This component will render the header content including the navigation menu links. This way, users can easily visit each of the pages.
 
 One way to do this is by importing the `Header` component in each of the pages’ files. But there is a drawback in doing this. Imagine if the site becomes complex and new pages are added, you’d need to keep updating every new page by adding the `Header` component.
 
@@ -303,9 +271,7 @@ Instead of doing that, we will create a universal `Layout` component which will 
 
 Let’s see how it works.
 
-Starting with the `Header` component.
-
-In the `src` directory, create a new folder called `components`. Inside this folder, add a file called `header.js` and add the following code:
+Starting with the `Header` component. In the `src` directory, create a new folder called `components`. Inside this folder, add a file called `header.js` and add the following code:
 
 ```jsx
 import React from "react"
@@ -319,9 +285,7 @@ export default Header
 
 For the meantime, we are rendering a simple text.
 
-The file is not doing anything yet. We need to import it somewhere. Not in the pages' files but the layout file. So let’s create the file.
-
-Go inside the `components` folder and create the `layout.js` file. Then start by adding this code:
+The file is not doing anything yet. We need to import it somewhere. Not in the pages' files but the layout file. So let’s create the file. Go inside the `components` folder and create the `layout.js` file. Then start by adding this code:
 
 ```jsx
 import React from "react"
@@ -365,9 +329,7 @@ Save all your files and check the frontend index/home page.
 
 ![Index page](./images/index-page_.png)
 
-Do the same for the other pages.
-
-All you have to do is to import the `Layout` component into the page and wrap the content with the `Layout` tags.
+Do the same for the other pages. All you have to do is to import the `Layout` component into the page and wrap the content with the `Layout` tags.
 
 <br />
 
@@ -419,9 +381,7 @@ const Header = () => {
 export default Header
 ```
 
-Save the file and see your changes in the frontend.
-
-In the code, we are making use of the `<Link />` component from the `gatsby` module to link between internal pages. This has a whole lot of optimization compared to the regular HTML `<a>` tag.
+Save the file and see your changes in the frontend. In the code, we are making use of the `<Link />` component from the `gatsby` module to link between internal pages. This has a whole lot of optimization compared to the regular HTML `<a>` tag.
 
 For instance, clicking on the HTML anchor element will make the page to run through a full page refresh. But the `Link` tags allows the page to load instantly which provides a better user experience.
 

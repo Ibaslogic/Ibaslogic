@@ -12,17 +12,13 @@ tags:
 
 Oftentimes, I get asked by my readers how they can implement the instant post switching as seen on my blog page.
 
-As a site owner, providing your audience with the ease to interact with your post is something you’d want to prioritize.
-
-Take a look at this.
+As a site owner, providing your audience with the ease to interact with your post is something you’d want to prioritize. Take a look at this.
 
 <br />
 
 ![post instant filter](./images/post_instant_filter_.gif)
 
-If you love the fluidity of the post type switching and think of applying that to your Gatsby site, then this guide is for you.
-
-But instead of the dropdown type of post-filtering as seen on the blog page, we will be creating the filtering button to switch the posts in this tutorial.
+If you love the fluidity of the post type switching and think of applying that to your Gatsby site, then this guide is for you. But instead of the dropdown type of post-filtering as seen on the blog page, we will be creating the filtering button to switch the posts in this tutorial.
 
 This is what we [will create at the end of this tutorial](https://gatsby-post-switching.netlify.com/blog/ "Ibaslogic post switching").
 
@@ -30,17 +26,13 @@ This is what we [will create at the end of this tutorial](https://gatsby-post-sw
 
 ![post button filter](./images/button-filter.gif)
 
-The approach is the same. You can use your CSS skills to make it a dropdown.
-
-Or simply take a look at [my site code on GitHub](https://github.com/Ibaslogic/Ibaslogic "Ibaslogic github project") and see how I created the dropdown.
+The approach is the same. You can use your CSS skills to make it a dropdown. Or simply take a look at [my site code on GitHub](https://github.com/Ibaslogic/Ibaslogic "Ibaslogic github project") and see how I created the dropdown.
 
 ## Prerequisite
 
 To follow this tutorial, make sure you are comfortable creating a Gatsby site. If not, quickly read this [Gatsby tutorial guide](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") and come back.
 
-You can as well follow along if you want to apply this feature in your [React application](/react-tutorial-for-beginners/ "react tutorial").
-
-We will be writing purely React code!
+You can as well follow along if you want to apply this feature in your [React application](/react-tutorial-for-beginners/ "react tutorial"). We will be writing purely React code!
 
 You just have to understand how it works. You can easily tweak the code to suit your needs.
 
@@ -50,9 +42,7 @@ Enough said. Let’s dive in.
 
 ## Setting up a Gatsby Starter
 
-Just like every Gatsby site, we will start by installing a [Gatsby starter](https://www.gatsbyjs.org/starters/ "gatsby starters").
-
-Any Gatsby blog starter will do. But in this guide, I’ve provided a [Gatsby starter to use](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "ibaslogic gatsby starter").
+Just like every Gatsby site, we will start by installing a [Gatsby starter](https://www.gatsbyjs.org/starters/ "gatsby starters"). Any Gatsby blog starter will do. But in this guide, I’ve provided a [Gatsby starter to use](https://github.com/Ibaslogic/ibaslogic-gatsby-tutorial "ibaslogic gatsby starter").
 
 Install it by running this command from your terminal:
 
@@ -82,17 +72,13 @@ Good.
 
 Irrespective of the Gatsby blog starter you are using, you’d want to use the **page query** to grab your data from the source (either [from the filesystem](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") or [Content Management System](/gatsby-with-contentful-cms/ "gatsby tutorial contentful")) instead of the **StaticQuery**.
 
-The reason for that is because you can easily pass all the query data (in this case, a list of posts) into a child component so that your blog page file will not be cumbersome.
-
-The starter template we are using in this tutorial uses the **StaticQuery** to grab the data.
+The reason for that is because you can easily pass all the query data (in this case, a list of posts) into a child component so that your blog page file will not be cumbersome. The starter template we are using in this tutorial uses the **StaticQuery** to grab the data.
 
 It was intentional.
 
 This will allow you to learn how to convert static query to page query. And we will start with that.
 
-Once this child component receives the query data (i.e a list of posts) from the blog page component, we will store them in the state so that we can filter and update them.
-
-To do this, we will make the component a **class-based**.
+Once this child component receives the query data (i.e a list of posts) from the blog page component, we will store them in the state so that we can filter and update them. To do this, we will make the component a **class-based**.
 
 > Note that we can also manage the state logic through the **functional component** by [using the React Hooks](/react-hooks-tutorial/ "React Hooks tutorial").
 
@@ -100,9 +86,7 @@ To do this, we will make the component a **class-based**.
 
 Ok. Let’s get started.
 
-We will start by converting the blog page to use the page query.
-
-In the `src/pages/blog.js` file, cut the static query and paste it outside of the component definition (preferable after the `export default` at the bottom). Make sure you modify it to use the page query like so:
+We will start by converting the blog page to use the page query. In the `src/pages/blog.js` file, cut the static query and paste it outside of the component definition (preferable after the `export default` at the bottom). Make sure you modify it to use the page query like so:
 
 ```js
 export const query = graphql`
@@ -140,15 +124,11 @@ At this point, the result coming from the query is injected into the component t
 const Blog = ({ data }) => {
 ```
 
-And now we can pass it down to a child component.
-
-If you save your file, your code will still work!
+And now we can pass it down to a child component. If you save your file, your code will still work!
 
 That’s all for the conversion.
 
-Now, we can create a child component where we will pass the query data. From there, we can manage the post switching and render them on the screen.
-
-In the `src/components` folder, create a file called `blogItems.js`. Inside this file, add the following starting code:
+Now, we can create a child component where we will pass the query data. From there, we can manage the post switching and render them on the screen. In the `src/components` folder, create a file called `blogItems.js`. Inside this file, add the following starting code:
 
 ```jsx
 import React, { Component } from "react"
@@ -201,9 +181,7 @@ class BlogItems extends Component {
 export default BlogItems
 ```
 
-You can start by cutting the post loop from within the `return` statement of the blog page into the `BlogItems` component and then modify.
-
-Then, update the `src/pages/blog.js` file to include a reference to this component.
+You can start by cutting the post loop from within the `return` statement of the blog page into the `BlogItems` component and then modify. Then, update the `src/pages/blog.js` file to include a reference to this component.
 
 ```jsx{6,15}
 import React from "react"
@@ -258,9 +236,7 @@ export const query = graphql`
 
 At this point, we can start working on the post switching.
 
-Notice we declared two parameters (`items` and `blogPostItems`) of the same value in the state. Both of which contains all of the blog posts in the `edges` array.
-
-However, we are looping through the `blogPostItems` within the `render()` method to display the list of posts.
+Notice we declared two parameters (`items` and `blogPostItems`) of the same value in the state. Both of which contains all of the blog posts in the `edges` array. However, we are looping through the `blogPostItems` within the `render()` method to display the list of posts.
 
 The trick is simple!
 
@@ -269,14 +245,11 @@ Else, if any of the categories buttons is clicked, we will filter the `items` an
 
 Make sense?
 
-As you just read, we will be using the post categories for switching.
-
-So let’s start by adding the `category` field to the `frontmatter` of every post.
+As you just read, we will be using the post categories for switching. So let’s start by adding the `category` field to the `frontmatter` of every post.
 
 ![Frontmatter category](./images/frontmatter-category.png)
 
-In my case, I’ve created another blog post making it three. Then I added “Gatsby” and again “React” to the other two posts.
-You will see why I did that in a moment.
+In my case, I’ve created another blog post making it three. Then I added “Gatsby” and again “React” to the other two posts. You will see why I did that in a moment.
 
 > **Note:** If you are getting the content from CMS like Contentful, go there and add the category to the Content model. You can [check this guide](/gatsby-with-contentful-cms/ "gatsby contentful") for easy setup.
 
@@ -303,9 +276,7 @@ export const query = graphql`
 `
 ```
 
-Now, we will set up a function that will grab these categories for us.
-
-Above the class component in the `blogItems.js` file, add the following code:
+Now, we will set up a function that will grab these categories for us. Above the class component in the `blogItems.js` file, add the following code:
 
 ```js
 const getCategories = items => {
@@ -336,15 +307,11 @@ console.log(this.state.categories)
 
 ![devtools categories](./images/devtools-categories.png)
 
-As you can see, we are getting repeated categories. That’s not what we want.
-
-We want unique categories.
+As you can see, we are getting repeated categories. That’s not what we want. We want unique categories.
 
 > This is why I advise adding more post of the same category to show you how things work.
 
-We will use JavaScript `Set` object to make the repeated category only occur once.
-
-So update the function so you have:
+We will use JavaScript `Set` object to make the repeated category only occur once. So update the function so you have:
 
 ```js
 const getCategories = items => {
@@ -360,13 +327,9 @@ Refresh the blog page and check the console of your DevTools.
 
 ![javascript set object](./images/javascript-set-object.png)
 
-Now, we are getting the unique categories.
+Now, we are getting the unique categories. However, it is returning an object instead of array (which is easier to work with).
 
-However, it is returning an object instead of array (which is easier to work with).
-
-So let’s quickly convert it to an array and then add “all posts” value to the list. This is necessary to create the “all posts” button for the users to view all of the posts.
-
-Go back in your code and update the function so you have:
+So let’s quickly convert it to an array and then add “all posts” value to the list. This is necessary to create the “all posts” button for the users to view all of the posts. Go back in your code and update the function so you have:
 
 ```js
 const getCategories = items => {
@@ -380,9 +343,7 @@ const getCategories = items => {
 }
 ```
 
-Save your file.
-
-Now if you reload the page and check the console once again, the returned data should be an array.
+Save your file. Now if you reload the page and check the console once again, the returned data should be an array.
 
 ![the spread operator](./images/the-spread-operator.png)
 
@@ -392,9 +353,7 @@ Don’t forget to remove the `console.log` you added earlier.
 
 Moving on…
 
-Let’s display the post-switching buttons.
-
-In your `blogItems.js` file, add this code just after the `<ul>` opening tag in the `return` statement.
+Let’s display the post-switching buttons. In your `blogItems.js` file, add this code just after the `<ul>` opening tag in the `return` statement.
 
 ```jsx
 <div className={blogStyles.filterButton}>
@@ -451,9 +410,7 @@ Great! We are almost there.
 
 I mentioned earlier that anytime the user clicks on the **All Posts** button, we will reset the `blogPostItems` in the state back to the `items`. Else, we will filter the `items` based on the category clicked and pass it to the `blogPostItems`.
 
-Let’s see how to achieve this.
-
-We will start by adding an `onClick` event to the `button` element.
+Let’s see how to achieve this. We will start by adding an `onClick` event to the `button` element.
 
 ```jsx
 <button type="button" key={index} onClick={() => this.handleItems(category)}>
@@ -471,13 +428,7 @@ handleItems = category => {
 
 For the meantime, we are logging the category that is being clicked in the console.
 
-Save the file.
-
-Open the DevTools console and click any of the filter buttons. You should see its category rendered.
-
-Instead of that, let’s switch the posts based on these categories.
-
-Update the `handleItems` method so you have:
+Save the file. Open the DevTools console and click any of the filter buttons. You should see its category rendered. Instead of that, let’s switch the posts based on these categories. Update the `handleItems` method so you have:
 
 ```js
 handleItems = category => {
@@ -497,9 +448,7 @@ handleItems = category => {
 }
 ```
 
-Save the file and test your work.
-
-And it works!
+Save the file and test your work. And it works!
 
 Good job.
 
@@ -515,17 +464,13 @@ We started by getting a copy of all the post items using the spread operator (`�
 
 <br />
 
-Finally, let’s style the active category button for the rendered post.
-
-Start by adding another property, `selectedItem` to the `state` object.
+Finally, let’s style the active category button for the rendered post. Start by adding another property, `selectedItem` to the `state` object.
 
 ```js
 selectedItem: getCategories(this.props.items.allMarkdownRemark.edges) && getCategories(this.props.items.allMarkdownRemark.edges)[0],
 ```
 
-Here, we are setting the first item of the array to be the default button that will get styled. As you know, it is the “all posts” item.
-
-Then update the button element to include the `style` prop.
+Here, we are setting the first item of the array to be the default button that will get styled. As you know, it is the “all posts” item. Then update the button element to include the `style` prop.
 
 ```jsx
 <button
@@ -577,9 +522,7 @@ handleItems = category => {
 }
 ```
 
-With these additions, if any of the category buttons is clicked, the state will receive the new category value and the CSS style will get applied.
-
-Save your files and check the blog page.
+With these additions, if any of the category buttons is clicked, the state will receive the new category value and the CSS style will get applied. Save your files and check the blog page.
 
 ![gatsby posts switching button](./images/gatsby-posts-switching-button.png)
 
@@ -587,9 +530,7 @@ Good job.
 
 ## Conclusion
 
-With this simple implementation in your site, you will no doubt improve the user's experience by making it easier for them to navigate through your posts.
-
-And the way we set this up, if you add more categories through your posts, more buttons will be displayed.
+With this simple implementation in your site, you will no doubt improve the user's experience by making it easier for them to navigate through your posts. And the way we set this up, if you add more categories through your posts, more buttons will be displayed.
 
 That’s what we want.
 

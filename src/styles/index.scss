@@ -101,7 +101,7 @@ h5,
 h6 {
   color: var(--header-color);
   font-weight: 700;
-  font-family: "Open Sans", "Lato", "Segoe UI", sans-serif;
+  font-family: "Roboto", "Lato", "Segoe UI", sans-serif;
 }
 
 h2 a,
@@ -658,10 +658,6 @@ body {
      section#blog {
       background-color: var(--bg-secondary) !important;
     }
-
-    // {
-    //   background-color: var(--bg-secondary) !important;
-    // }
 
     //General btn on hover (and home page blog section)
     .btn-primary {

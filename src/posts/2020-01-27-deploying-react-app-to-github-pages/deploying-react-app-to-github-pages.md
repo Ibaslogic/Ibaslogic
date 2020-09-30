@@ -51,13 +51,9 @@ To get started, you [need a GitHub account](https://github.com/ "GitHub account 
 
 You can [download and install Git](https://git-scm.com/downloads "Git site") for your operating system and then, [set it up](https://www.atlassian.com/git/tutorials/install-git "Git installation guide").
 
-Once that’s done,
+Once that’s done, you will need to move all your React code to your GitHub account. And this can be done in two phases. First, you will move your files to the local repository and then to the remote repository.
 
-You will need to move all your React code to your GitHub account. And this can be done in two phases. First, you will move your files to the local repository and then to the remote repository.
-
-Let’s get started.
-
-Stop the server with `Ctrl + C`.
+Let’s get started. Stop the server with `Ctrl + C`.
 
 ## Initialize the project folder as a Git repository
 
@@ -69,9 +65,7 @@ Fortunately, this is available by default when you set up a React project with `
 >
 > Click the **Apply** button and then **Ok**.
 
-Now you should be able to see the `.git` folder in your project directory.
-
-But if you do not set up your project with the CLI, run this command from your terminal to create it:
+Now you should be able to see the `.git` folder in your project directory. But if you do not set up your project with the CLI, run this command from your terminal to create it:
 
 ```
 C:\Users\Your Name\simple-todo-app > git init
@@ -79,9 +73,7 @@ C:\Users\Your Name\simple-todo-app > git init
 
 Make sure you are in your project directory in the terminal.
 
-For the rest of us that set up the project using the `create-react-app` CLI, we don’t need to reinitialize the git repository.
-
-Instead, we just have to make sure that all of the new files actually becomes part of the repo.
+For the rest of us that set up the project using the `create-react-app` CLI, we don’t need to reinitialize the git repository. Instead, we just have to make sure that all of the new files actually becomes part of the repo.
 
 Let’s do that.
 
@@ -137,17 +129,13 @@ On the new page, you will be required to name your repository. In my case, I wil
 
 > Note that React already included a `README.md` file in your project folder. So DON'T Initialize this repository with a README.
 
-Once you are done, click on the **Create repository** button. This takes you to a page where you will find additional information on what to do.
-
-Find the command that looks like this and run it in your terminal:
+Once you are done, click on the **Create repository** button. This takes you to a page where you will find additional information on what to do. Find the command that looks like this and run it in your terminal:
 
 ```
 git remote add origin https://github.com/Ibaslogic/simple-todo-app.git
 ```
 
-If you can't find it, make sure you modify the URL above to reflect your repository.
-
-What this command does is add the repo as the remote repository.
+If you can't find it, make sure you modify the URL above to reflect your repository. What this command does is add the repo as the remote repository.
 
 Finally, run this command to push to the master branch:
 
@@ -175,9 +163,7 @@ After that, open the `package.json` file in your root directory and add this lin
 "homepage": "https://username.github.io/repository-name",
 ```
 
-Modify the above URL to include your GitHub username and repository name.
-
-In my case, the `package.json` file now looks like this:
+Modify the above URL to include your GitHub username and repository name. In my case, the `package.json` file now looks like this:
 
 ```json{4,6}
 "name": "simple-todo-app",
@@ -212,9 +198,7 @@ Your scripts should look like this:
 },
 ```
 
-Save the file.
-
-Lastly, run this command to push your file to the gh-pages:
+Save the file. Lastly, run this command to push your file to the gh-pages:
 
 ```
 C:\Users\Your Name\simple-todo-app > npm run deploy
@@ -228,9 +212,7 @@ Alternatively, you can go back to your GitHub repository and click on the **Sett
 
 ![locate React app url](./images/reactappurl.png)
 
-Congratulations!
-
-Test your application and proudly share with the world.
+Congratulations! Test your application and proudly share with the world.
 
 At this point, you've covered so much in this React for beginner’s series. Now you know what React is, how to create a beautiful React application and deploy on the web.
 

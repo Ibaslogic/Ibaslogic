@@ -69,9 +69,7 @@ As you may have known, website plugins add functionalities to the website. And G
 
 You can search for these plugins by [visiting the Gatsby site](https://www.gatsbyjs.org/ "Gatsby site") and navigating to the **Plugins** page.
 
-Now, the sass plugin we will install is called `gatsby-plugin-sass`.
-
-So let’s stop the development server with `CTRL + C` or `CMD + C` depending on your operating system and then run:
+Now, the sass plugin we will install is called `gatsby-plugin-sass`. So let’s stop the development server with `CTRL + C` or `CMD + C` depending on your operating system and then run:
 
 ```
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > npm install gatsby-plugin-sass node-sass
@@ -139,9 +137,7 @@ For instance, if you add a CSS Module for the `Header` component, the styles app
 
 That is what we want.
 
-Starting with the `Header` component.
-
-Let’s go inside the `src/components` directory and create a file called `header.module.scss`. Then, add the following styles:
+Starting with the `Header` component. Let’s go inside the `src/components` directory and create a file called `header.module.scss`. Then, add the following styles:
 
 ```scss
 .header {
@@ -267,9 +263,7 @@ Then update the `.header` class selector in the `header.module.scss` file so you
 }
 ```
 
-Before you save the file, let’s add an overlay to the background image.
-
-In the `header.js` file, add this `div` immediately after the `<header>` opening tag:
+Before you save the file, let’s add an overlay to the background image. In the `header.js` file, add this `div` immediately after the `<header>` opening tag:
 
 ```html
 <div className="{headerStyles.overlay}"></div>
@@ -337,9 +331,7 @@ To do this, go inside the `header.js` file and update the `<Link />` components 
 </ul>
 ```
 
-The `activeClassName` attribute gets applied to the `Link` when the current item is active. And as you can see in the code, it’s referencing the `.activeMenuItem` class selector.
-
-So go inside the `header.module.scss` file and add this style:
+The `activeClassName` attribute gets applied to the `Link` when the current item is active. And as you can see in the code, it’s referencing the `.activeMenuItem` class selector. So go inside the `header.module.scss` file and add this style:
 
 ```scss
 .active-menu-item {
@@ -378,9 +370,7 @@ const Layout = props => {
 
 The markup in the `return` statement is a common structure for the sticky footer. Where the header and the main content are placed in a `div` container while the footer is placed outside of it.
 
-You’ll notice we imported a css module file named `layout.module.scss`. So you need to create that file.
-
-In the same `src/components` directory, create a `layout.module.scss` file and add the following:
+You’ll notice we imported a css module file named `layout.module.scss`. So you need to create that file. In the same `src/components` directory, create a `layout.module.scss` file and add the following:
 
 ```scss
 .container {
@@ -442,9 +432,9 @@ Save your files and check the frontend. Your page should look like this:
 
 ![css module body](./images/css-module-body.png)
 
-Looks good. Now you know how to add styles to your Gatsby site.
+Looks good.
 
-Depending on what you want, you can decide to add a global style or locally scope your style to your component. Besides, you also learned how to implement SASS in a Gatsby site.
+Now you know how to add styles to your Gatsby site. Depending on what you want, you can decide to add a global style or locally scope your style to your component. Besides, you also learned how to implement SASS in a Gatsby site.
 
 In the next section, we will start working on getting dynamic data to our site.
 

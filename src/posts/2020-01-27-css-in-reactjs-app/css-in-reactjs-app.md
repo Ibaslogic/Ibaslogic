@@ -47,21 +47,15 @@ url: "/react-hooks-tutorial/"
 
 Just like adding styles to HTML file, you can style React JSX using the inline CSS styles and CSS classes. React application can also be styled [using the CSS modules](/styling-in-gatsby/#styling-gatsby-site-with-css-modules "css modules").
 
-But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial").
-
-It follows the same approach since Gatsby is built on React.
+But this tutorial covers only the inline and the CSS classes. We've explained how to apply the CSS Modules in this [GatsbyJS tutorial](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"). It follows the same approach since Gatsby is built on React.
 
 Let's dive in.
 
 ## Starting with the CSS classes
 
-Remember, in HTML file, we add CSS classes to elements using the `class` syntax. But in React JSX, we make use of a special syntax called `className`.
+Remember, in HTML file, we add CSS classes to elements using the `class` syntax. But in React JSX, we make use of a special syntax called `className`. Let's see how to use this syntax.
 
-Let's see how to use this syntax.
-
-First, we need to create and import a CSS file.
-
-So go inside the `src` folder and create a new file called `App.css`. Inside the file, add the following CSS styles:
+First, we need to create and import a CSS file. So go inside the `src` folder and create a new file called `App.css`. Inside the file, add the following CSS styles:
 
 ```css
 * {
@@ -94,9 +88,7 @@ If you like, you can import the file in the parent component file, `TodoContaine
 
 You should see your CSS styles rendered in the frontend. Or better still, inspect the page to see the style declaration.
 
-Now, let’s start adding class names.
-
-Open the `TodoContainer.js`, update the `div` wrapper to include a `container` class name.
+Now, let’s start adding class names. Open the `TodoContainer.js`, update the `div` wrapper to include a `container` class name.
 
 ```jsx{1}
 <div className="container">
@@ -198,9 +190,7 @@ Finally, add the following styles to the `App.css` file:
 }
 ```
 
-Save your files and check the frontend.
-
-Your app should look like this:
+Save your files and check the frontend. Your app should look like this:
 
 ![styling react app](./images/reactstyle.png)
 
@@ -210,9 +200,7 @@ That's it. Simple!
 
 If you recall, we use inline styling in HTML document by passing a string of all the styles to the `style` attribute. But with React JSX, we will assign a JavaScript object to the attribute.
 
-Go inside the `Header.js` file and update the heading and paragraph elements to include the `style` attribute.
-
-So you have:
+Go inside the `Header.js` file and update the heading and paragraph elements to include the `style` attribute. So you have:
 
 ```jsx{3,4}
 return (
@@ -227,9 +215,7 @@ return (
 
 Save the file and check the frontend to see your changes.
 
-In the code, you’ll notice two curly braces.
-
-We already know that valid JavaScript expressions in JSX are written inside curly braces. The second curly brace is for the inline styling in the form of a JavaScript object.
+In the code, you’ll notice two curly braces. We already know that valid JavaScript expressions in JSX are written inside curly braces. The second curly brace is for the inline styling in the form of a JavaScript object.
 
 Also, notice that the style keys are in camelCase.
 
@@ -248,9 +234,7 @@ Then update the `<header>` opening tag so you have:
 <header style={headerStyle}>
 ```
 
-Save the file.
-
-Now, your code should look like this:
+Save the file. Now, your code should look like this:
 
 ```jsx{3-7,9,10,13}
 import React from "react"
@@ -275,17 +259,13 @@ const Header = () => {
 export default Header
 ```
 
-Check the frontend to see your changes or inspect the `header` element to see your CSS style declaration.
-
-In the code, we created an object, `headerStyle` with the styling information and then refer to it in the `style` attribute of the `<header>` tag. Here, we used a curly brace.
+Check the frontend to see your changes or inspect the `header` element to see your CSS style declaration. In the code, we created an object, `headerStyle` with the styling information and then refer to it in the `style` attribute of the `<header>` tag. Here, we used a curly brace.
 
 Moving on.
 
 ## Adding Styles when any of the todos items is completed
 
-Here, we will add a `line-through` to a completed task in the to-dos list. This should be straight forward.
-
-In the `TodoItem` component, add the following styles in the `render()` method but above the `return` statement:
+Here, we will add a `line-through` to a completed task in the to-dos list. This should be straight forward. In the `TodoItem` component, add the following styles in the `render()` method but above the `return` statement:
 
 ```js
 const completedStyle = {
@@ -316,9 +296,7 @@ return (
 )
 ```
 
-In the code, we introduced a new tag, `span` and then added a `style` attribute to it.
-
-We also used the **ternary operator** in the `style` attribute to dynamically change the CSS style if any of the todos item(s) is/are completed.
+In the code, we introduced a new tag, `span` and then added a `style` attribute to it. We also used the **ternary operator** in the `style` attribute to dynamically change the CSS style if any of the todos item(s) is/are completed.
 
 > As a refresher,
 >
@@ -340,21 +318,15 @@ That is it. But before we move to the next section, let’s simply optimize our 
 
 ## Using Destructuring
 
-If you take a look at the `TodoItem` component, we were writing multiples `this.props.todo` to grab the `id`, `title` and `completed` values.
+If you take a look at the `TodoItem` component, we were writing multiples `this.props.todo` to grab the `id`, `title` and `completed` values. This can be a pain in the neck if your application gets complex.
 
-This can be a pain in the neck if your application gets complex.
-
-Instead of doing these, you can pull each of the variables out of the todo. In other words, you can "destructure" the todo and get these variables from it.
-
-So in the `TodoItem` component, add this line of code just above the `return` statement:
+Instead of doing these, you can pull each of the variables out of the todo. In other words, you can "destructure" the todo and get these variables from it. So in the `TodoItem` component, add this line of code just above the `return` statement:
 
 ```js
 const { completed, id, title } = this.props.todo
 ```
 
-Then, replace every `this.props.todo` with their corresponding variables. For instance, `this.props.todo.completed` should be replaced with `completed` and so on.
-
-Your `return` statement should look like this:
+Then, replace every `this.props.todo` with their corresponding variables. For instance, `this.props.todo.completed` should be replaced with `completed` and so on. Your `return` statement should look like this:
 
 ```jsx{5,6,8,9}
 return (

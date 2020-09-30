@@ -37,9 +37,7 @@ C:\Users\Your Name> npx create-react-app react-form-handling
 
 The command will create a project folder called `react-form-handling` in your choosing directory.
 
-I won’t dive in the file structure here. You should be familiar with it if you [follow my React tutorial](/react-tutorial-for-beginners/ "react tutorial").
-
-Open the folder with your favourite code editor and start the development server:
+I won’t dive in the file structure here. You should be familiar with it if you [follow my React tutorial](/react-tutorial-for-beginners/ "react tutorial"). Open the folder with your favourite code editor and start the development server:
 
 ```
 C:\Users\Your Name\react-form-handling > npm start
@@ -71,9 +69,7 @@ export default App
 
 Save the file and check the frontend.
 
-Here, we are rendering a simple `form` element displaying a text input field. Nothing special. It is just like our regular HTML input.
-
-But to handle this input in React, we will need to understand the concept of a controlled input.
+Here, we are rendering a simple `form` element displaying a text input field. Nothing special. It is just like our regular HTML input. But to handle this input in React, we will need to understand the concept of a controlled input.
 
 ## Uncontrolled and Controlled Input
 
@@ -87,9 +83,7 @@ How does it work?
 
 Depending on your component type, you will store your input data in the component state. Here, we will be [using the React Hook](/react-hooks-tutorial/ "react hook tutorial") to manage our form data. However, the approach is the same if you are using a class-based component. All you have to do is to declare a `state` object where your data would live.
 
-From there, you will set up logic to listen to changes in the input and control it (i.e update the state) using the `onChange` event.
-
-This way, you will always get up-to-date value as you will see in a moment.
+From there, you will set up logic to listen to changes in the input and control it (i.e update the state) using the `onChange` event. This way, you will always get up-to-date value as you will see in a moment.
 
 Let’s apply what you just read!
 
@@ -130,9 +124,7 @@ Now, for us to make the input field a controlled input, we assigned the state va
 
 Now, if you try to write anything in the text input field, nothing will happen. This is because the `value` prop is assigned a state variable whose value is set to empty string. And this is being forced on the input.
 
-This is good because we now have total control over the input state. Let’s go ahead and update it.
-
-Update the code to include an `onChange` event handler.
+This is good because we now have total control over the input state. Let’s go ahead and update it. Update the code to include an `onChange` event handler.
 
 ```jsx{7-9,17}
 import React, { useState } from "react"
@@ -164,9 +156,7 @@ export default App
 
 Save the file.
 
-Now you should be able to write something in the input field.
-
-As you can see below (in the React tools and the frontend view), we are getting the most updated value on every keystroke.
+Now you should be able to write something in the input field. As you can see below (in the React tools and the frontend view), we are getting the most updated value on every keystroke.
 
 ![single text field](./images/single-text-field.gif)
 
@@ -277,9 +267,7 @@ setState({
 
 The same thing applies to every other input element.
 
-Still on the `handleChange` function,
-
-Anytime we group related data as we have it in the state variable, the state returned by the `useState` Hook is not merged with that of the update passed to it. In other words, the `useState` Hook doesn’t merge the old and new state. Instead, it overrides the entire state with that of the current.
+Still on the `handleChange` function. Anytime we group related data as we have it in the state variable, the state returned by the `useState` Hook is not merged with that of the update passed to it. In other words, the `useState` Hook doesn’t merge the old and new state. Instead, it overrides the entire state with that of the current.
 
 To get a clearer picture,
 
@@ -357,9 +345,7 @@ Moving on…
 
 This is not different from the other input fields. As usual, we can make it a controlled input by first have the state manage the input data. Then add a `value` prop to the element and finally update it through the `onChange` handler function (but in our case, we don’t have to do anything here because we have the logic set already).
 
-And don’t forget to add a `name` prop (to the element) that matches the name in the state.
-
-So let’s create a dropdown list with options to select car brands.
+And don’t forget to add a `name` prop (to the element) that matches the name in the state. So let’s create a dropdown list with options to select car brands.
 
 As expected, add a new property in the state. In my case, I will call it `carBrand`.
 
@@ -417,9 +403,7 @@ Unlike the other input fields, the checkbox uses a `checked` prop (which is a Bo
 
 Now, if you take a look at the `handleChange` function, we only make provision for the inputs that have `value` prop through `e.target.value`.
 
-We will need to adjust the handler function to accommodate the checkbox type of input.
-
-Ok, let’s start by adding a new property to the state. In my case, I will call it isChecked.
+We will need to adjust the handler function to accommodate the checkbox type of input. Ok, let’s start by adding a new property to the state. In my case, I will call it `isChecked`.
 
 ```js
 const [state, setState] = useState({
@@ -428,9 +412,7 @@ const [state, setState] = useState({
 });
 ```
 
-Here, we assign a Boolean value of `false` so that the input field is unchecked by default.
-
-Next, add input checkbox just before the closing `</form>` tag.
+Here, we assign a Boolean value of `false` so that the input field is unchecked by default. Next, add input checkbox just before the closing `</form>` tag.
 
 ```jsx{5-14,21}
 return (
@@ -492,9 +474,7 @@ The radio input types combine the input text and the checkbox type. In other wor
 
 Let’s see how it works.
 
-We will create radio inputs that allow users to select gender.
-
-As expected, let’s add that to the state.
+We will create radio inputs that allow users to select gender. As expected, let’s add that to the state.
 
 ```js
 const [state, setState] = useState({
@@ -594,9 +574,7 @@ return (
 );
 ```
 
-Save your file and test your input.
-
-The code should be self-explanatory if you have followed along.
+Save your file and test your input. The code should be self-explanatory if you have followed along.
 
 To reiterate,
 

@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
 import logo from "../../images/ibaslogic__site__logo_v3.5.png"
 import { FaMoon, FaGithub, FaTwitter } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
-
 // header styles
 import headerStyles from "./header.module.scss"
 import Helmet from "react-helmet"
 
 const Header = () => {
-  const node = useRef()
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [links] = useState([
     {
@@ -33,21 +31,6 @@ const Header = () => {
   const handleToggle = () => {
     setNavbarOpen(prev => !navbarOpen)
   }
-
-  const handleClick = e => {
-    if (node.current.contains(e.target)) {
-      return
-    }
-    setNavbarOpen(false)
-  }
-
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mousedown", handleClick) // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClick)
-    }
-  }, [])
 
   const darkMode = useDarkMode(false)
 
@@ -76,29 +59,25 @@ const Header = () => {
               </Link>
             </div>
 
-            <nav ref={node} className={`${headerStyles.navbar}`}>
+            <nav className={`${headerStyles.navbar}`}>
               <button
-                className={`menu__btn ${headerStyles.menuBtn}`}
+                className={`menu__btn ${headerStyles.menuBtn} ${
+                  navbarOpen ? headerStyles.isOpened : ""
+                }`}
                 onClick={handleToggle}
               >
                 <div className={headerStyles.btnLine}></div>
                 <div className={headerStyles.btnLine}></div>
                 <div className={headerStyles.btnLine}></div>
               </button>
+
               <ul // add show
                 className={
                   navbarOpen
-                    ? `menu__nav ${headerStyles.menuNav} ${headerStyles.showNav}`
+                    ? `menu__nav ${headerStyles.menuNav} ${headerStyles.showMenu}`
                     : `menu__nav ${headerStyles.menuNav}`
                 }
               >
-                <div className={headerStyles.closeBtn}>
-                  <button className={headerStyles.close} onClick={handleToggle}>
-                    <div className={headerStyles.btnLine}></div>
-                    <div className={headerStyles.btnLine}></div>
-                  </button>
-                </div>
-
                 {links.map(link => {
                   return (
                     <li key={link.id} className={headerStyles.navItem}>
@@ -150,13 +129,6 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div
-        className={
-          navbarOpen
-            ? `${headerStyles.sidebarOverlay} ${headerStyles.showOverlay}`
-            : `${headerStyles.sidebarOverlay}`
-        }
-      ></div>
     </header>
   )
 }

@@ -14,9 +14,7 @@ Have you ever found yourself switching your React component from a function to a
 
 A lot of times I hear!
 
-Well, you are not alone. Now, the function component is more than just being a presentational component.
-
-With the introduction of [React Hooks](https://reactjs.org/docs/hooks-intro.html "react hooks"), you’ll get to use a state and manage the class-based lifecycle logic inside of the function components.
+Well, you are not alone. Now, the function component is more than just being a presentational component. With the introduction of [React Hooks](https://reactjs.org/docs/hooks-intro.html "react hooks"), you’ll get to use a state and manage the class-based lifecycle logic inside of the function components.
 
 The benefit here is that you’ll be able to write a more readable, concise and clear code. You will also have one way of creating a component.
 
@@ -32,9 +30,7 @@ Before we dive in, make sure you are familiar with React. If not, [you can start
 
 React comes bundled with a few Hooks that allow us to manage most of the use cases of the class logic. It also allows us to create custom Hooks whenever we want to reuse component logic.
 
-Here, we will explore the common use cases of built-in Hooks.
-
-To get started, let's get our project files ready.
+Here, we will explore the common use cases of built-in Hooks. To get started, let's get our project files ready.
 
 ## Pulling project files from GitHub
 
@@ -46,17 +42,13 @@ git clone https://github.com/Ibaslogic/react-hooks-starter-project
 
 This will create a directory in the name of the project folder. In this case, `react-hooks-starter-project`.
 
-Once you have the project files and folders bootstrapped, open it with your text editor. Here, I will be using VsCode.
-
-Next, switch inside the directory (`cd react-hooks-starter-project`) and run:
+Once you have the project files and folders bootstrapped, open it with your text editor. Here, I will be using VsCode. Next, switch inside the directory (`cd react-hooks-starter-project`) and run:
 
 ```
 npm install
 ```
 
-This will install all the necessary dependencies in the local `node_modules` folder.
-
-Finally, start your development server by running:
+This will install all the necessary dependencies in the local `node_modules` folder. Finally, start your development server by running:
 
 ```
 npm start
@@ -70,21 +62,15 @@ _(To build this todos app from scratch, check out this post, [React tutorial for
 
 What this app does is simple and clear. You simply add, checked and delete todos items. On top of that, you get alerted when the checkbox or delete button is clicked.
 
-As expected of you, you should know that the files that make up this UI live in the `src` folder.
-
-If you take a look inside the `src/components` folder, we have five component files. Of which all of them are class-based.
+As expected of you, you should know that the files that make up this UI live in the `src` folder. If you take a look inside the `src/components` folder, we have five component files. Of which all of them are class-based.
 
 Now, let’s optimize our code using React Hooks.
 
-We will start with the component where only the state logic (and not lifecycle logic) is being managed.
-
-So let’s take a look at `src/components/InputTodo.js` file.
+We will start with the component where only the state logic (and not lifecycle logic) is being managed. So let’s take a look at `src/components/InputTodo.js` file.
 
 Presently, it has a `state` object (where we assign a default empty string to the `title` property) and class methods at the top level of the component.
 
-Let’s start by commenting out all the code.
-
-Then add this starting code at the top to avoid page break:
+Let’s start by commenting out all the code. Then add this starting code at the top to avoid page break:
 
 ```jsx
 import React from "react"
@@ -100,13 +86,9 @@ This is the first conversion. Notice we are now using a function instead of clas
 
 ## Using the React Hooks useState
 
-To add state in a function component, React provides us with a Hook called `useState`.
+To add state in a function component, React provides us with a Hook called `useState`. If you revisit the class component, the data defined in the `state` object is accessed using `this.state`. It is as well updated using `this.setState` method.
 
-If you revisit the class component, the data defined in the `state` object is accessed using `this.state`. It is as well updated using `this.setState` method.
-
-Now, let’s replicate that in a function component.
-
-First, import the `useState` Hook from the `react` module like so:
+Now, let’s replicate that in a function component. First, import the `useState` Hook from the `react` module like so:
 
 ```jsx{1, 4}
 import React, { useState } from "react"
@@ -135,23 +117,15 @@ For instance,
 const [title, setTitle] = useState("hello")
 ```
 
-Here, we declared a state variable called `title` (which holds the current state i.e **hello**) and a function called `setTitle` to update the state.
+Here, we declared a state variable called `title` (which holds the current state i.e **hello**) and a function called `setTitle` to update the state. This is similar to `this.state.title` and `this.setState` in our class component.
 
-This is similar to `this.state.title` and `this.setState` in our class component.
-
-Unlike the class component, the state doesn’t have to be an object. It can hold an array, number and string (as seen above).
-
-Also, note that you are not limited to one state property as in the case of class component. Here, you can define multiple states.
-
-You’ll see how this works later in this guide.
+Unlike the class component, the state doesn’t have to be an object. It can hold an array, number and string (as seen above). Also, note that you are not limited to one state property as in the case of class component. Here, you can define multiple states. You’ll see how this works later in this guide.
 
 _But keep in mind, it’s good to keep related data together._
 
 **Now that you have some basic understanding, let’s take a look at the rules to use these Hooks.**
 
-All you have to keep in mind is that you ONLY call Hooks at the top level of your function component or from custom Hooks. Not inside a loop, condition or regular function.
-
-This ensures that all your component logic is visible to React.
+All you have to keep in mind is that you ONLY call Hooks at the top level of your function component or from custom Hooks. Not inside a loop, condition or regular function. This ensures that all your component logic is visible to React.
 
 Back to our code, let’s update the component so you have:
 
@@ -189,9 +163,7 @@ const InputTodo = props => {
 export default InputTodo
 ```
 
-Save the file. You should see the input fields back in the frontend.
-
-Test it and it should work perfectly.
+Save the file. You should see the input fields back in the frontend. Test it and it should work perfectly.
 
 ### What’s happening in the code?
 
@@ -213,9 +185,7 @@ If you are vigilant, you’d ask yourself why we are not using the `e.target.nam
 
 Now read carefully.
 
-In our code, we are assigning a string to the `title` state variable through the `useState`. This is the simplest use case of the Hook.
-
-With this setup, you can only manage an input field in a function call. If you add more fields, you’ll need to define a separate `useState` Hook and a function to manage it.
+In our code, we are assigning a string to the `title` state variable through the `useState`. This is the simplest use case of the Hook. With this setup, you can only manage an input field in a function call. If you add more fields, you’ll need to define a separate `useState` Hook and a function to manage it.
 
 While this is fine, it is better to group related data.
 
@@ -288,9 +258,7 @@ Our focus for now will be on the `src/components/TodoContainer.js` file. This fi
 
 Let’s replicate its logic in a functional component. I believe you can convert the state logic in this component to use the `useState` Hook.
 
-Well, let’s start with that.
-
-As expected, comment-out all the code in this file and add the following at the top.
+Well, let’s start with that. As expected, comment-out all the code in this file and add the following at the top.
 
 ```jsx
 import React, { useState } from "react"
@@ -356,25 +324,17 @@ Notice we are not including the lifecycle logic yet, hence no data is being fetc
 
 ### So what is happening?
 
-In the code, we started by defining a separate `useState` Hook for the state variables and assigning a default value to them.
-
-Now, comparing the entire code to that of the class version, you’ll notice that we removed all occurrence of `this.state` since it doesn’t apply in the function component.
+In the code, we started by defining a separate `useState` Hook for the state variables and assigning a default value to them. Now, comparing the entire code to that of the class version, you’ll notice that we removed all occurrence of `this.state` since it doesn’t apply in the function component.
 
 Likewise, the `setTodos` and `setShow` function which are used to update the state value replaces their respective `this.setState`.
 
 That out of the way,
 
-If you take a look at the class version of our code, we are fetching the default todos data using the HTTP `GET` method in the `componentDidMount` lifecycle method.
+If you take a look at the class version of our code, we are fetching the default todos data using the HTTP `GET` method in the `componentDidMount` lifecycle method. But in a function component, we cannot use this method. Instead, we will make use of another Hook called `useEffect`.
 
-But in a function component, we cannot use this method. Instead, we will make use of another Hook called `useEffect`.
+As the name implies, it is used to perform side effects. An example is the data we fetch via an HTTP request. React allows us to combine different lifecycle logic using this single Hook. So you can think of useEffect Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
 
-As the name implies, it is used to perform side effects. An example is the data we fetch via an HTTP request.
-
-React allows us to combine different lifecycle logic using this single Hook. So you can think of useEffect Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
-
-Though, just like the `useState` Hook, you can also have multiple `useEffect` to separate unrelated logic.
-
-Let’s see how to apply this Hook.
+Though, just like the `useState` Hook, you can also have multiple `useEffect` to separate unrelated logic. Let’s see how to apply this Hook.
 
 In the `src/components/TodoContainer.js` file, import the `useEffect` Hook from the `react` module. So your import should look like this:
 
@@ -392,9 +352,7 @@ useEffect(() => {
 
 With this simple addition, if you reload the frontend, you should see the log message displayed in the browser console.
 
-This Hook takes in a function as an argument and an optional array (I omitted that for now). The function defines the side effect to run (in our case, making an HTTP request) and the optional array will define when to re-run the effect.
-
-Now, let’s update this Hook to include our HTTP request.
+This Hook takes in a function as an argument and an optional array (I omitted that for now). The function defines the side effect to run (in our case, making an HTTP request) and the optional array will define when to re-run the effect. Now, let’s update this Hook to include our HTTP request.
 
 ```js
 useEffect(() => {
@@ -427,9 +385,7 @@ useEffect(() => {
 }, []);
 ```
 
-By specifying this array, we can control whether or not the effect should re-run. If we pass-in variable(s), the effect will only re-run if its value(s) changes between re-renders. Else, it will skip applying the effect.
-
-But if we pass an empty array, React will only execute the effect once because no data is changing.
+By specifying this array, we can control whether or not the effect should re-run. If we pass-in variable(s), the effect will only re-run if its value(s) changes between re-renders. Else, it will skip applying the effect. But if we pass an empty array, React will only execute the effect once because no data is changing.
 
 Taking a closer look at this, we have the equivalent of `componentDidMount` when the array is empty and `componentDidUpdate` when it includes variable(s) that will trigger re-rendering.
 
@@ -444,21 +400,15 @@ useEffect(() => {
 }, [])
 ```
 
-Save the file and test your application.
-
-It should work as expected.
+Save the file and test your application. It should work as expected.
 
 Next, let’s see how the `useEffect` handles the logic of the `componentDidUpdate` and `componentWillUnmount`.
 
 ### Starting with the `componentDidUpdate`,
 
-Remember that component gets updated when there is/are state or prop changes, thereby trigger re-rendering.
+Remember that component gets updated when there is/are state or prop changes, thereby trigger re-rendering. If you take a look at the `src/components/Header.js` file, we are using this lifecycle method to update the DOM whenever there is prop change. This happens every time the checkbox is clicked.
 
-If you take a look at the `src/components/Header.js` file, we are using this lifecycle method to update the DOM whenever there is prop change. This happens every time the checkbox is clicked.
-
-To apply this logic using the Hook,
-
-Let’s start by converting the component to a function-based.
+To apply this logic using the Hook, let’s start by converting the component to a function-based.
 
 ```jsx
 import React from "react"
@@ -485,9 +435,7 @@ export default Header
 
 At this point, we don’t have the lifecycle logic in place.
 
-Let’s do that now.
-
-Import the `useEffect` from the `react` module like so:
+Let’s do that now. Import the `useEffect` from the `react` module like so:
 
 ```js
 import React, { useEffect } from "react"
@@ -515,17 +463,13 @@ Oops! The heading text, “clicked” is displaying on initial render – withou
 
 As mentioned earlier, the Hook is designed to run not only when the component first renders but also on every update. That is why the call to manipulate the DOM as defined in it is being executed on the initial rendering.
 
-Once it renders for the first time, it checks for an update in the dependency to run subsequently.
-
-Remember, this dependency gets updated whenever you click the checkbox.
+Once it renders for the first time, it checks for an update in the dependency to run subsequently. Remember, this dependency gets updated whenever you click the checkbox.
 
 While this is the common use case of this lifecycle logic using the Hook, sometimes, we want the Hook to run only on updates and right after any user action. In our case, whenever the user clicks on the checkbox.
 
 ## Running an Effect only on Updates
 
-If you revisit the class version of our code, we are checking for update (i.e if a checkbox is clicked) by comparing the `prevProps` and the current prop.
-
-With React Hooks, we can get the previous props or state as the case may be using the `useRef()` Hook.
+If you revisit the class version of our code, we are checking for update (i.e if a checkbox is clicked) by comparing the `prevProps` and the current prop. With React Hooks, we can get the previous props or state as the case may be using the `useRef()` Hook.
 
 For instance, add this above the `useEffect` Hook:
 
@@ -557,9 +501,7 @@ If you save your file and check the console, you should see this:
 
 ![useref initial mount](./images/useref-initial-mount.png)
 
-The `useRef` Hook returns an object containing the `current` property. This property holds the value we passed to the Hook.
-
-This is good because we can track whether we are on the first render or subsequent render.
+The `useRef` Hook returns an object containing the `current` property. This property holds the value we passed to the Hook. This is good because we can track whether we are on the first render or subsequent render.
 
 Next, let’s update the `useEffect` Hook so you have:
 
@@ -605,29 +547,21 @@ Save your file and test your application.
 
 In the `useEffect` Hook, we are checking if the current property of the `useRef` is `true`.
 
-By default, we set the value to `true` to track when the component has just mounted. When this happens, we ignore any action and immediately set the value to `false`.
-
-At this point we know we can do whatever we want. In our case, we can perform DOM manipulation right after a clicked checkbox.
+By default, we set the value to `true` to track when the component has just mounted. When this happens, we ignore any action and immediately set the value to `false`. At this point we know we can do whatever we want. In our case, we can perform DOM manipulation right after a clicked checkbox.
 
 Moving on.
 
-Next, the `componentWillUnmount` logic.
+Next, the `componentWillUnmount` logic. Here, our focus is on the `src/components/TodoItem.js` file.
 
-Here, our focus is on the `src/components/TodoItem.js` file.
+Normally, we do cleanups (for instance, cancelling the network request, removing event listeners) in the `componentWillUnmount`. This is because it is invoked just before a component is unmounted and destroyed.
 
-Normally, we do cleanups (for instance, cancelling the network request, removing event listeners) in the `componentWillUnmount`. This is because it is invoked immediately before a component is unmounted and destroyed.
-
-But in our app, we are using this lifecycle logic to trigger an alert when an item is about to be deleted from the todos list.
-
-Now, how can we replicate the same logic with Hooks?
+But in our app, we are using this lifecycle logic to trigger an alert when an item is about to be deleted from the todos list. Now, how can we replicate the same logic with Hooks?
 
 While you are aware that the `useEffect` Hook run on every render (except you control it), React allows us to clean up effects from the previous render before running another cycle and also before the component is unmounted.
 
 Well, let’s see this in action.
 
-As expected, we will convert the `TodoItem` class component to a function-based.
-
-This should be straight forward.
+As expected, we will convert the `TodoItem` class component to a function-based. This should be straight forward.
 
 Here you have it:
 
@@ -662,9 +596,7 @@ export default TodoItem
 
 Save the file.
 
-Now let’s apply the Unmount logic.
-
-In the same file, import the `useEffect` like so:
+Now let’s apply the Unmount logic. In the same file, import the `useEffect` like so:
 
 ```js
 import React, { useEffect } from "react"
@@ -690,9 +622,7 @@ In our case, we don’t have any array dependency. So, the effect will run just 
 
 At this point, you have total control over the type of component to create.
 
-Now, the logic of our todos app is managed in the functional component using the React Hooks. Though, we still have a component constructed with class in the `src/components/TodosList.js` file.
-
-Mind you, this component has no state or lifecycle logic. This makes the conversion easy and direct.
+Now, the logic of our todos app is managed in the functional component using the React Hooks. Though, we still have a component constructed with class in the `src/components/TodosList.js` file. Mind you, this component has no state or lifecycle logic. This makes the conversion easy and direct.
 
 Can you give it a try?
 
@@ -724,11 +654,7 @@ export default TodosList
 
 Now, we have a complete React app written only with a function component.
 
-Thanks to the Hooks.
-
-While you have learned a lot and covered most of the use cases of the React Hooks, there are more to learn like creating a custom Hook for logic reusability.
-
-But this is a great start! You can start using these Hooks in your new and existing project.
+Thanks to the Hooks. While you have learned a lot and covered most of the use cases of the React Hooks, there are more to learn like creating a custom Hook for logic reusability. But this is a great start! You can start using these Hooks in your new and existing project.
 
 Please note, you don’t have to rewrite your existing logic, but you can start applying these Hooks to new updates.
 

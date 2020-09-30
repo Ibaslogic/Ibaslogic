@@ -10,46 +10,44 @@ tags:
   - http
 ---
 
-In the last part of our React series, we deployed our working [todos app on the web](https://ibaslogic.github.io/simple-todo-app/ "todos app"). Up to this moment, we have the default todos items hardcoded in the app component. 
+In the last part of our React series, we deployed our working [todos app on the web](https://ibaslogic.github.io/simple-todo-app/ "todos app"). Up to this moment, we have the default todos items hardcoded in the app component.
 
 <PostSeriesLink
 label="This React tutorial is part 5 of 6 in the React for beginners series."
 datas={[
-  {
-    prefix: "Part 1",
-    label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-    url: "/react-tutorial-for-beginners/"
-  },
-  {
-    prefix: "Part 2",
-    label: "Getting Started with React Form and Event Handling",
-    url: "/react-form-handling/"
-  },
-  {
-    prefix: "Part 3",
-    label: "How to Implement CSS in Reactjs App",
-    url: "/css-in-reactjs-app/"
-  },
-  {
-    prefix: "Part 4",
-    label: "Deploying React App to GitHub Pages",
-    url: "/deploying-react-app-to-github-pages/"
-  },
-  {
-    prefix: "Part 6",
-    label: "The Practical Guide to Learning Hooks for Beginners",
-    url: "/react-hooks-tutorial/"
-  },
+{
+prefix: "Part 1",
+label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
+url: "/react-tutorial-for-beginners/"
+},
+{
+prefix: "Part 2",
+label: "Getting Started with React Form and Event Handling",
+url: "/react-form-handling/"
+},
+{
+prefix: "Part 3",
+label: "How to Implement CSS in Reactjs App",
+url: "/css-in-reactjs-app/"
+},
+{
+prefix: "Part 4",
+label: "Deploying React App to GitHub Pages",
+url: "/deploying-react-app-to-github-pages/"
+},
+{
+prefix: "Part 6",
+label: "The Practical Guide to Learning Hooks for Beginners",
+url: "/react-hooks-tutorial/"
+},
 ]}
 />
 
 While that’s fine, in reality, making an HTTP request or fetching data from an API is most likely what you’ll be doing when building an application with a frontend framework.
 
-So instead of manually adding these default items, we will request the todos data from the server and list them on the frontend.
+So instead of manually adding these default items, we will request the todos data from the server and list them on the frontend. To do this, we can make use of the native Fetch API or Axios to perform this HTTP request to a REST API.
 
-To do this, we can make use of the native Fetch API or Axios to perform this HTTP request to a REST API.
-
-*HTTP request? Native Fetch API? Axios? REST API?*
+_HTTP request? Native Fetch API? Axios? REST API?_
 
 What are they?
 
@@ -57,9 +55,7 @@ What are they?
 
 **The Native Fetch API** allows us to perform an HTTP request to a server and handle responses. **Axios**, on the other hand, is a 3rd party HTTP library that allows us to make this request as well.
 
-In this tutorial, we will make use of Axios to fetch a list of todos data.
-
-One of the benefits of using this library over the native Fetch API is that it supports all modern browsers, including support for IE8 and higher by default. This is because it is compiled with Babel.
+In this tutorial, we will make use of Axios to fetch a list of todos data. One of the benefits of using this library over the native Fetch API is that it supports all modern browsers, including support for IE8 and higher by default. This is because it is compiled with Babel.
 
 For Fetch API to support older browsers, it needs what is called polyfill – a piece of code used to provide modern functionality on older browsers.
 
@@ -69,9 +65,7 @@ We will make use of a FREE online REST API called JSONPlaceholder. This allows u
 
 Enough said. Let’s dive in.
 
-First, you need to start your server by running `npm start`. After that, delete all the hardcoded todos data in the `TodoContainer` component.
-
-The `state` object now looks like this:
+First, you need to start your server by running `npm start`. After that, delete all the hardcoded todos data in the `TodoContainer` component. The `state` object now looks like this:
 
 ```js
 state = {
@@ -79,15 +73,11 @@ state = {
 }
 ```
 
-Save the file and see your app displaying empty default items.
-
-Next, head over to [JSONPlaceholder website](https://jsonplaceholder.typicode.com "jsonplaceholder site"). Scroll down to **Resources** section and click on the **todos** link. Here, you will see a list of 200 todos that we will be working with.
+Save the file and see your app displaying empty default items. Next, head over to [JSONPlaceholder website](https://jsonplaceholder.typicode.com "jsonplaceholder site"). Scroll down to **Resources** section and click on the **todos** link. Here, you will see a list of 200 todos that we will be working with.
 
 > Please take note of the URL, we will make an HTTP request to use its todos data.
 
-But before that, we will need to install Axios to perform this request.
-
-So stop the server with `CTRL + C` and run this from your terminal:
+But before that, we will need to install Axios to perform this request. So stop the server with `CTRL + C` and run this from your terminal:
 
 ```
 C:\Users\Your Name\simple-todo-app > npm i axios
@@ -99,9 +89,7 @@ Now, to start making this request, you’ll need to understand the lifecycle met
 
 Every React component you create always goes through a series of events or phases from its birth to death. For instance, if you create a component to render something on the screen, it will go through a couple of phases to display the content.
 
-You can think of this component going through a cycle of birth, growth and finally death.
-
-In React, these phases are mainly three:
+You can think of this component going through a cycle of birth, growth and finally death. In React, these phases are mainly three:
 
 **Mounting** – As the name implies, this is the phase when React component mounts (created and inserted) the DOM. In this phase, the component is birthed.
 
@@ -111,9 +99,7 @@ In React, these phases are mainly three:
 
 In each of these phases, React provides lifecycle methods that we can use to monitor and manipulate what happens within the component.
 
-Though, we have been using one of these lifecycle methods – the `render()` method.
-
-This method is the only required lifecycle method within a React class component. It’s responsible for rendering React elements in the DOM and it is called during the mounting and updating phase.
+Though, we have been using one of these lifecycle methods – the `render()` method. This method is the only required lifecycle method within a React class component. It’s responsible for rendering React elements in the DOM and it is called during the mounting and updating phase.
 
 React has several optional lifecycle methods, of which some are deprecated. But the common once include –
 
@@ -152,13 +138,9 @@ Save the file and check the console. You will see a list of objects containing t
 
 > Make sure you are connected to the internet.
 
-We can limit the number of todos data to 10 just for brevity.
+We can limit the number of todos data to 10 just for brevity. This can be done either by appending the query string parameter `\_limit=10` to the URL or by adding them as a second argument in the `get()` method.
 
-This can be done either by appending the query string parameter `\_limit=10` to the URL or by adding them as a second argument in the `get()` method.
-
-I will show you both options.
-
-First, update the endpoint URL so you now have this:
+I will show you both options. First, update the endpoint URL so you now have this:
 
 ```js
 axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
@@ -183,21 +165,13 @@ componentDidMount() {
 
 You should have the same result as the first method. Here we are using the `params` option to set a query string parameter in the config object.
 
-To be on the same page, let’s go with the first method.
+To be on the same page, let’s go with the first method. Before we go ahead and display the todos items in our app, let’s explain what we did.
 
-Before we go ahead and display the todos items in our app, let’s explain what we did.
+First, I guess you remember why we are using the `componentDidMount()` method. Again, it is a good place to make an HTTP request. Here, we are using HTTP `GET` method to retrieve data from an endpoint.
 
-First, I guess you remember why we are using the `componentDidMount()` method. Again, it is a good place to make an HTTP request.
+By using Axios, we make use of `axios.get()` method. This accepts the URL of the endpoint and an optional config object as the second parameter. This method, `axios.get()` returns a promise which must be resolved to access the data. To do that, we use the `.then()` method which will receive a response that contains the data we need.
 
-Here, we are using HTTP `GET` method to retrieve data from an endpoint.
-
-By using Axios, we make use of `axios.get()` method. This accepts the URL of the endpoint and an optional config object as the second parameter.
-
-This method, `axios.get()` returns a promise which must be resolved to access the data. To do that, we use the `.then()` method which will receive a response that contains the data we need.
-
-Now, we can update the state with these data.
-
-Update the code so you have:
+Now, we can update the state with these data. Update the code so you have:
 
 ```js
 componentDidMount() {
@@ -218,9 +192,7 @@ As you can see, some are marked as completed because they are assigned a `true` 
 
 Now if you add more entries to the todos list, you will only be updating the UI and not the backend. What we want is to make a `POST` request to the API server, get a response and update the UI.
 
-If you check the JSONPlaceholder home page, you will see a number of the request you can make under the **Routes** section. For instance, you can make a `POST` request, `DELETE` request and so on.
-
-You would want to make a `POST` request whenever you are adding something.
+If you check the JSONPlaceholder home page, you will see a number of the request you can make under the **Routes** section. For instance, you can make a `POST` request, `DELETE` request and so on. You would want to make a `POST` request whenever you are adding something.
 
 Remember, we are working with a Fake Online REST API, so our data doesn’t actually get saved to the JSONplaceholder server. However, it does complete the request and gives us a response. Thereby mimics a real-life backend.
 
@@ -245,9 +217,7 @@ Save the file.
 
 When you make a `POST` request to the JSONplaceholder server, an `id` is generated for the returned data. So, you don’t need the `UUID` anymore. You can delete it.
 
-However, this `id` is static for every submission. This is because we are not actually updating their database.
-
-As seen below, it returned an `id` of 201 for every submission. Remember, the endpoint has a total of 200 todos items.
+However, this `id` is static for every submission. This is because we are not actually updating their database. As seen below, it returned an `id` of 201 for every submission. Remember, the endpoint has a total of 200 todos items.
 
 ![axios.post method](./images/axios-post.png)
 
@@ -263,9 +233,7 @@ The `axios.post()` will also return a promise which must be resolved using the `
 
 At this point, you should be comfortable making a request to the server. They all follow the same pattern. And a `DELETE` request is not an exception.
 
-Let’s do it together.
-
-Modify the `delTodo` method in the `TodoContainer` component so it looks like this:
+Let’s do it together. Modify the `delTodo` method in the `TodoContainer` component so it looks like this:
 
 ```js
 delTodo = id => {
@@ -297,9 +265,7 @@ Again, if you are working with a real backend, the todos item(s) will be deleted
 
 This is another important lifecycle method in React. As I mentioned earlier, this method is called immediately after updating occurs – i.e after state or props changes.
 
-It is a perfect place to manipulate the DOM when the component has been updated. Also, in this method, you can make API calls after specific conditions have been met.
-
-So let's see how we can apply this method in our todos application.
+It is a perfect place to manipulate the DOM when the component has been updated. Also, in this method, you can make API calls after specific conditions have been met. So let's see how we can apply this method in our todos application.
 
 First, what is the goal here?
 
@@ -356,9 +322,7 @@ componentDidUpdate(prevProps, prevState) {
 }
 ```
 
-This method accepts the previous props and state as parameters. These are simply the state and props before the update.
-
-We can use them to check for updates by comparing them to the current snapshot which we can get through `this.state` or `this.props`.
+This method accepts the previous props and state as parameters. These are simply the state and props before the update. We can use them to check for updates by comparing them to the current snapshot which we can get through `this.state` or `this.props`.
 
 At the moment, they are null. So we need to pass data to them.
 
@@ -366,9 +330,7 @@ We can either define a state in this `Header` component to get the `prevState` o
 
 As I mentioned earlier, we will define another property in the `state` object of the parent component and pass it down to the `Header` component.
 
-With this, we will have access to the `prevProps`.
-
-So, update the `state` to include the `show` property and pass it to the `<Header />`.
+With this, we will have access to the `prevProps`. So, update the `state` to include the `show` property and pass it to the `<Header />`.
 
 ```jsx{5,11}
 ...
@@ -392,9 +354,7 @@ class TodoContainer extends React.Component {
 
 Save the file.
 
-Now, we have access to the default data through the `headerSpan` prop in the `Header` component.
-
-Next, update the lifecycle method so you have:
+Now, we have access to the default data through the `headerSpan` prop in the `Header` component. Next, update the lifecycle method so you have:
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -406,9 +366,7 @@ componentDidUpdate(prevProps, prevState) {
 
 In the code, all we are doing is comparing the previous and current snapshot.
 
-Remember, we want these changes to happen once we click the checkboxes.
-
-So we need to get the current prop by updating the method that is called whenever we click on the input checkbox.
+Remember, we want these changes to happen once we click the checkboxes. So we need to get the current prop by updating the method that is called whenever we click on the input checkbox.
 
 In the parent component, `TodoContainer`, update the `handleChange` method to include the `show` object property:
 
@@ -436,11 +394,7 @@ Save the file. Head over to the console and click on the checkboxes.
 
 ![componentdidupdate](./images/componentdidupdate.gif)
 
-We are almost there.
-
-Instead of logging text in the console, we want to manipulate the DOM.
-
-Update the method so you have:
+We are almost there. Instead of logging text in the console, we want to manipulate the DOM. Update the method so you have:
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -457,9 +411,7 @@ componentDidUpdate(prevProps, prevState) {
 }
 ```
 
-This is self-explanatory.
-
-All we are doing is referencing the `span` element in the JSX and then add text and dynamic background colour.
+This is self-explanatory. All we are doing is referencing the `span` element in the JSX and then add text and dynamic background colour.
 
 Once again, test your application.
 
@@ -473,9 +425,7 @@ This lifecycle method is called when a component is about to be destroyed or rem
 
 In our todos app, we will use this method to trigger an alert when an item is about to be deleted from the todos list.
 
-This is pretty straight forward.
-
-Go inside the `src/components/TodoItem.js` file and add this code above the `render()` method:
+This is pretty straight forward. Go inside the `src/components/TodoItem.js` file and add this code above the `render()` method:
 
 ```js
 componentWillUnmount() {
@@ -485,9 +435,7 @@ componentWillUnmount() {
 
 That’s all.
 
-Whenever any of the todos items is about to be deleted, this method will be called and executed.
-
-Save your file and test your work.
+Whenever any of the todos items is about to be deleted, this method will be called and executed. Save your file and test your work.
 
 ![componentwillunmount](./images/componentwillunmount.gif)
 

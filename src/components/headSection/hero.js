@@ -14,13 +14,10 @@ const Hero = () => {
       className={`hero__container ${heroStyles.homePageHero}`}
     >
       <div className={heroStyles.heroContent}>
-        <h1 className={heroStyles.title}>
-          Dev Articles for the{" "}
-          <span className={heroStyles.nlt}>Self-Starter</span>{" "}
-        </h1>
+        <h1 className={heroStyles.title}>web development articles</h1>
         <p className={heroStyles.description}>
-          For beginners who want to ditch the stress of going through technical
-          bullshit and start learning in a beginner-friendly way.
+          For self-starter who want to ditch the stress of going through
+          technical bullshit and start learning in a beginner-friendly way.
         </p>
 
         <Link

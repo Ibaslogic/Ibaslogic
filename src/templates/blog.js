@@ -5,7 +5,6 @@ import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
 import SocialShare from "../components/BlogPage/socialShare"
-import avatar from "../images/ibas_avartar.png"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 import { FaPencilAlt } from "react-icons/fa"
@@ -19,14 +18,14 @@ import Comment from "../components/comment"
 
 export const query = graphql`
   query($slug: String!) {
-    site {
+    siteData: site {
       siteMetadata {
         siteUrl
         twitterHandle
+        author_avatar
       }
     }
-    mdx(fields: { slug: { name: { eq: $slug } } }) {
-      id
+    postsData: mdx(fields: { slug: { name: { eq: $slug } } }) {
       timeToRead
       excerpt(pruneLength: 300)
       tableOfContents
@@ -46,14 +45,41 @@ export const query = graphql`
       }
       body
     }
+    getAuthorAvatar: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            fixed(height: 32) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const Blog = ({ data, pageContext }) => {
-  const { datePublished, dateUpdated } = data.mdx.frontmatter
-  const image = data.mdx.frontmatter.featured
-    ? data.mdx.frontmatter.featured.childImageSharp.fluid
-    : null
+  const {
+    datePublished,
+    dateUpdated,
+    title,
+    description,
+    tags,
+    featured,
+  } = data.postsData.frontmatter
+  const { excerpt, timeToRead, tableOfContents, body } = data.postsData
+  const { siteUrl, twitterHandle, author_avatar } = data.siteData.siteMetadata
+  const image = featured ? featured.childImageSharp.fluid : null
+
+  const authorAvatar = data.getAuthorAvatar.edges.find(
+    ({ node }) => node.relativePath === author_avatar
+  ).node
+
+  if (!authorAvatar) {
+    return null
+  }
 
   const commentBoxRef = React.createRef()
 
@@ -76,9 +102,9 @@ const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        title={data.mdx.frontmatter.title}
-        excerpt={data.mdx.excerpt}
-        description={data.mdx.frontmatter.description}
+        title={title}
+        excerpt={excerpt}
+        description={description}
         image={image}
         isBlogPost
       />
@@ -93,17 +119,15 @@ const Blog = ({ data, pageContext }) => {
           <article className={blogPageStyles.singlePost}>
             <Img
               className={blogPageStyles.featuredImage}
-              fluid={data.mdx.frontmatter.featured.childImageSharp.fluid}
-              alt={data.mdx.frontmatter.title}
+              fluid={featured.childImageSharp.fluid}
+              alt={title}
               backgroundColor="#eaeaea"
             />
             <header className={blogPageStyles.entryHeader}>
-              <h1 className={blogPageStyles.title}>
-                {data.mdx.frontmatter.title}
-              </h1>
+              <h1 className={blogPageStyles.title}>{title}</h1>
               <div className={blogPageStyles.tagLinks}>
                 <ul className={blogPageStyles.postTags}>
-                  {data.mdx.frontmatter.tags.map((tag, index) => (
+                  {tags.map((tag, index) => (
                     <li key={index}>
                       {tag === "javascript" ? (
                         <Link
@@ -169,7 +193,12 @@ const Blog = ({ data, pageContext }) => {
                   className={`author__avatar ${blogPageStyles.authorAvatar}`}
                 >
                   <span className={blogPageStyles.avatarContainer}>
-                    <img src={avatar} alt="author avatar" />
+                    <Img
+                      fixed={authorAvatar.childImageSharp.fixed}
+                      alt={authorAvatar.relativePath}
+                      backgroundColor="#eaeaea"
+                      className={blogPageStyles.avatar}
+                    />
                   </span>
                   Ibas<span className={blogPageStyles.divider}></span>
                 </Link>
@@ -179,7 +208,7 @@ const Blog = ({ data, pageContext }) => {
                 </span>
                 <span className={blogPageStyles.divider}></span>
                 <span className={blogPageStyles.inlineBlockStyle}>
-                  {data.mdx.timeToRead} min read
+                  {timeToRead} min read
                 </span>
                 <span className={blogPageStyles.divider}></span>
                 <span className={blogPageStyles.inlineBlockStyle}>
@@ -205,13 +234,13 @@ const Blog = ({ data, pageContext }) => {
                   PostNextUnit,
                   TableOfContents: () => (
                     <TableOfContents
-                      items={data.mdx.tableOfContents.items}
+                      items={tableOfContents.items}
                       slug={pageContext.slug}
                     ></TableOfContents>
                   ),
                 }}
               >
-                <MDXRenderer>{data.mdx.body}</MDXRenderer>
+                <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </div>
           </article>
@@ -219,9 +248,9 @@ const Blog = ({ data, pageContext }) => {
           <div className={blogPageStyles.bottomSocialShare}>
             <SocialShare
               slug={pageContext.slug}
-              title={data.mdx.frontmatter.title}
-              twitterHandle={data.site.siteMetadata.twitterHandle}
-              siteUrl={data.site.siteMetadata.siteUrl}
+              title={title}
+              twitterHandle={twitterHandle}
+              siteUrl={siteUrl}
               heading="Share"
             />
           </div>
@@ -236,7 +265,7 @@ const Blog = ({ data, pageContext }) => {
         <aside className={`secondary__area ${blogPageStyles.secondaryArea}`}>
           <Sidebar
             relatedArticles={pageContext.relatedArticles}
-            twitterHandle={data.site.siteMetadata.twitterHandle}
+            twitterHandle={twitterHandle}
             slug={pageContext.slug}
           />
         </aside>
@@ -245,9 +274,9 @@ const Blog = ({ data, pageContext }) => {
       <div className={blogPageStyles.sideSocialShare}>
         <SocialShare
           slug={pageContext.slug}
-          title={data.mdx.frontmatter.title}
-          twitterHandle={data.site.siteMetadata.twitterHandle}
-          siteUrl={data.site.siteMetadata.siteUrl}
+          title={title}
+          twitterHandle={twitterHandle}
+          siteUrl={siteUrl}
           heading="share"
         />
       </div>

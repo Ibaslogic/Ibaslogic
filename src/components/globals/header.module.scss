@@ -146,10 +146,10 @@ $nav-btn-color: #1b1b1b;
   color: $nav-link;
   letter-spacing: -0.03em;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  font-weight: 600;
-  padding: 20px;
+  font-weight: 500;
+  padding: 16px 1em;
 
   &:hover,
   &:focus {
@@ -204,78 +204,77 @@ $nav-btn-color: #1b1b1b;
 // Navigation Menu
 // =================================================
 
-.menu-btn,
-.close {
-  cursor: pointer;
-  border: none;
-  background: transparent;
-
-  .btn-line {
-    width: 28px;
-    height: 2px;
-    margin: 0 0 5px 0;
-    background: $nav-btn-color;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
 .menu-btn {
-  padding: 20px $plr;
-  .btn-line {
-    &:last-child {
-      margin-bottom: 0 !important;
-    }
-  }
-}
-.closeBtn {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+  cursor: pointer;
   width: 60px;
-  height: 60px;
+  height: 57px;
+  background: transparent;
+  border: none;
+  outline: none;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 
-  button {
-    width: 100%;
-    height: 100%;
+  &.is-opened {
+    .btn-line {
+      &:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 29px;
+      }
+      &:nth-of-type(2) {
+        transform: rotate(-45deg);
+        bottom: 26px;
+      }
+      &:nth-of-type(3) {
+        opacity: 0;
+      }
+    }
   }
 }
-.close {
-  .btn-line {
-    position: absolute;
-    right: 17px;
-    &:nth-of-type(1) {
-      transform: rotate(45deg);
-    }
-    &:nth-of-type(2) {
-      transform: rotate(-45deg);
-    }
+
+.btn-line {
+  position: absolute;
+  display: block;
+  background: $nav-btn-color;
+  width: 28px;
+  right: 17px;
+  height: 2px;
+  @include transition;
+
+  &:nth-of-type(1) {
+    transform: rotate(0deg);
+    top: 21px;
+  }
+  &:nth-of-type(2) {
+    transform: rotate(0deg);
+    bottom: 27px;
+  }
+  &:nth-of-type(3) {
+    transform: rotate(0deg);
+    bottom: 20px;
   }
 }
 
 .menu-nav {
   position: fixed;
-  max-width: 280px;
+  font-family: "Roboto", "Lato", "Segoe UI", sans-serif;
   overflow-y: scroll;
   background: $header-bg-color;
   left: 0;
-  height: 100%;
+  height: 0;
   top: 0;
-  margin: 0;
-  padding: 4rem 0px 0;
+  margin-top: 56px;
+  padding: 0;
   text-align: left;
   z-index: 0;
-  width: 0;
+  width: 100%;
   @include transition;
   list-style: none;
 
-  &.show-nav {
-    width: 70%;
+  &.show-menu {
+    height: 100%;
   }
 
   @media screen and (min-width: 768px) {
@@ -287,6 +286,7 @@ $nav-btn-color: #1b1b1b;
     width: auto;
     height: inherit;
     padding: 0;
+    margin: 0;
     background: none !important;
   }
 }
@@ -301,7 +301,7 @@ $nav-btn-color: #1b1b1b;
     margin: 0;
   }
   &:nth-of-type(1) {
-    margin-top: 40px;
+    margin-top: 50px;
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }
@@ -312,23 +312,5 @@ $nav-btn-color: #1b1b1b;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 3.4rem;
-  }
-}
-
-// Overlay
-// =================================================
-
-.sidebar-overlay {
-  background: rgba(0, 0, 0, 0.4);
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  z-index: 10;
-  visibility: hidden;
-
-  &.show-overlay {
-    visibility: visible;
   }
 }

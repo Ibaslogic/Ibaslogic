@@ -13,9 +13,7 @@ tags:
 
 If you have been working with a Gatsby blog site, you’d most likely know how to source markdown files from the filesystem.
 
-This is not bad for someone technical and enjoys working with the markdown syntax.
-
-But, as a developer, you’d also want to consider those that would be managing their Gatsby blog content from the admin interface.
+This is not bad for someone technical and enjoys working with the markdown syntax. But, as a developer, you’d also want to consider those that would be managing their Gatsby blog content from the admin interface.
 
 In this tutorial, you’ll learn how to set up Gatsby with Contentful CMS (Content Management System) and deploy on Netlify for free.
 
@@ -41,19 +39,13 @@ C:\Users\Your Name > gatsby new gatsby-contentful-blogsite
 
 The command will create a new project folder called **gatsby-contentful-blogsite** and include all of the starter files.
 
-Switch inside the directory (`cd gatsby-contentful-blogsite`) and run `gatsby develop`.
-
-Now, you should have your default home page at http://localhost:8000/
+Switch inside the directory (`cd gatsby-contentful-blogsite`) and run `gatsby develop`. Now, you should have your default home page at http://localhost:8000/
 
 ![Gatsby default](./images/gatsby-default.png)
 
-Before we dive in, let’s quickly make some changes to the rendered content.
+Before we dive in, let’s quickly make some changes to the rendered content. Open your project with your favourite text editor.
 
-Open your project with your favourite text editor.
-
-When it comes to page creation, the `src/pages` directory is where Gatsby looks to create site pages. Files in this directory automatically become static pages.
-
-So in the `src/pages` folder, rename the `page-2.js` file to `blog.js`.
+When it comes to page creation, the `src/pages` directory is where Gatsby looks to create site pages. Files in this directory automatically become static pages. So in the `src/pages` folder, rename the `page-2.js` file to `blog.js`.
 
 Then, go inside the `src/pages/index.js` and modify the `Link` component so that it points to the blog page.
 
@@ -89,9 +81,7 @@ Now that we have the basic setup, let’s see how to start sourcing content from
 
 **Contentful CMS**, like every other headless CMS, focuses on the backend task (i.e storing content and providing a friendly editing interface). It then allows us to pull the content into any frontend technologies by providing an API.
 
-The other types of CMS including the traditional CMSs like WordPress and Drupal also provides options to work with the frontend technologies by supporting the API approach.
-
-All you need to source content from these CMSs is the Content Delivery API.
+The other types of CMS including the traditional CMSs like WordPress and Drupal also provides options to work with the frontend technologies by supporting the API approach. All you need to source content from these CMSs is the Content Delivery API.
 
 Ok. Enough said.
 
@@ -99,27 +89,17 @@ Let's head over to [contentful.com](https://www.contentful.com/sign-up/ "Content
 
 Once this is done, you can create an empty space. Think of _space_ as a storage area for your project content.
 
-To create it, open the sidebar menu and click on the **create space** link. Go ahead and use the free space and give it a name. In my case, I will call it **Ibaslogic Gatsby Blog**.
+To create it, open the sidebar menu and click on the **create space** link. Go ahead and use the free space and give it a name. In my case, I will call it **Ibaslogic Gatsby Blog**. Select **Create an empty space** and proceed.
 
-Select **Create an empty space** and proceed.
-
-Next, we will focus on defining the type of data we want to track. Here, we will look at the **Content model** and the **Content** tab.
-
-For a typical blog post, you’ll want to get the _post title_, _date_, _featured image_, _excerpt_, _slug_ and the actual _posts content_.
+Next, we will focus on defining the type of data we want to track. Here, we will look at the **Content model** and the **Content** tab. For a typical blog post, you’ll want to get the _post title_, _date_, _featured image_, _excerpt_, _slug_ and the actual _posts content_.
 
 So, we will add these fields in the model.
 
-Let’s click on the **Content model** tab to add a content type.
-
-Name your content type (for instance, **Blog Post**) and click on the **Create** button.
+Let’s click on the **Content model** tab to add a content type. Name your content type (for instance, **Blog Post**) and click on the **Create** button.
 
 ![Content model](./images/content-model.png)
 
-Next, we need to start adding the necessary fields for our blog posts.
-
-To add these fields, click the **Add field** button.
-
-We will be using four of these fields for our Blog Post model. The **Text** for the post title, slug and excerpt, **Date and time** for the date, **Media** for the featured image and **Rich text** for the post body.
+Next, we need to start adding the necessary fields for our blog posts. To add these fields, click the **Add field** button. We will be using four of these fields for our Blog Post model. The **Text** for the post title, slug and excerpt, **Date and time** for the date, **Media** for the featured image and **Rich text** for the post body.
 
 ![Content type](./images/content-type.png)
 
@@ -133,15 +113,11 @@ Once you add the remaining fields, your content model should look like this:
 
 ![Blog content model](./images/blog-content-model.png)
 
-Again, take note of the field types for each of the field names.
-
-Save the model by clicking on the **Save** button at the top right corner.
+Again, take note of the field types for each of the field names. Save the model by clicking on the **Save** button at the top right corner.
 
 Now, you have your content model in place. Let’s go ahead and start creating the post content based on this model.
 
-Head over to the **Content** tab and click on the **Add Blog Post** button.
-
-Go ahead and fill all the fields you specified earlier and click the **Publish** button.
+Head over to the **Content** tab and click on the **Add Blog Post** button. Go ahead and fill all the fields you specified earlier and click the **Publish** button.
 
 ![Post editor](./images/post-editor.png)
 
@@ -193,9 +169,7 @@ Either way, you should see something like this:
 
 These data are sensitive and should be made secret. So, pasting them directly in the `gatsby-config.js` file is wrong since we will be pushing the code to GitHub.
 
-Though it would work.
-
-Instead, let’s create a file called `.env.development` in the project root directory and add them like this:
+Though it would work. Instead, let’s create a file called `.env.development` in the project root directory and add them like this:
 
 ```
 CONTENTFUL_SPACE_ID="vf0ielhy9a1g"
@@ -204,9 +178,7 @@ CONTENTFUL_ACCESS_TOKEN="NtjCzgXgLXlNAhuw8zn4ZReQwATR-frfB-PTousRodU"
 
 > Make sure you replace the ID and the token with yours.
 
-Next, open the `.gitignore` file located in the root directory and include `.env.development`. Now, this file will be ignored when you make a commit to your repo.
-
-Finally, go inside the `gatsby-config.js` file and add this at the top:
+Next, open the `.gitignore` file located in the root directory and include `.env.development`. Now, this file will be ignored when you make a commit to your repo. Finally, go inside the `gatsby-config.js` file and add this at the top:
 
 ```js
 require("dotenv").config({
@@ -214,9 +186,7 @@ require("dotenv").config({
 })
 ```
 
-This code ensures that the environment variables are available in the `gatsby-config.js` file. And they can be accessed via the global variable `process.env`
-
-Now, update the `spaceId` and the `accessToken` so you have:
+This code ensures that the environment variables are available in the `gatsby-config.js` file. And they can be accessed via the global variable `process.env`. Now, update the `spaceId` and the `accessToken` so you have:
 
 ```js{13,14}
 require("dotenv").config({
@@ -240,16 +210,13 @@ module.exports = {
 }
 ```
 
-Save all your files and start the development server.
-
-Make sure you are connected to the internet.
+Save all your files and start the development server. Make sure you are connected to the internet.
 
 Now, the Contentful data are available for us to use in the frontend.
 
 ## Rendering Contentful Data in the Frontend
 
-To render the Contentful data, let’s start by opening the GraphiQL IDE (http://localhost:8000/___graphql) and see what queries we have access to.
-Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post).
+To render the Contentful data, let’s start by opening the GraphiQL IDE (http://localhost:8000/___graphql) and see what queries we have access to. Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post).
 
 > **Note:** The `BlogPost` attached to the `allContentfulBlogPost` is the name of our content type. If you had specified another name, that’s what you would see.
 
@@ -265,9 +232,7 @@ As seen in the image above, the query is returning the Contentful data that we n
 
 > If the query looks strange to you, you need to [start from here](/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby graphql data").
 
-Now, we need to use this query to construct the blog page (post listing page).
-
-So, go inside the `src/pages/blog.js` file and replace the code with the following:
+Now, we need to use this query to construct the blog page (post listing page). So, go inside the `src/pages/blog.js` file and replace the code with the following:
 
 ```jsx
 import React from "react"
@@ -346,17 +311,11 @@ export default Blog
 
 Save the file and check the blog page. You should have your Contentful post listed.
 
-The code should be self-explanatory. It is similar to how you’d [render the markdown data](/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby data").
+The code should be self-explanatory. It is similar to how you’d [render the markdown data](/gatsby-tutorial-from-scratch-for-beginners/#working-with-gatsby-data "gatsby data"). In essence, we are using the query we constructed in the GraphiQL IDE to render the Contentful data in the JSX.
 
-In essence, we are using the query we constructed in the GraphiQL IDE to render the Contentful data in the JSX.
+Now, if you click on the **Read More** link to access the single post, you’ll get a 404 error page. We do not want that. So we need to generate a single post page.
 
-Now, if you click on the **Read More** link to access the single post, you’ll get a 404 error page.
-
-We do not want that. So we need to generate a single post page.
-
-Let’s take a look at the `gatsby-node.js` file located in the root directory. Gatsby allows us to use this file to dynamically create the single post page.
-
-Also, we will need a template file alongside the `gatsby-node.js`. This file will be used to render every of the single post on the screen.
+Let’s take a look at the `gatsby-node.js` file located in the root directory. Gatsby allows us to use this file to dynamically create the single post page. Also, we will need a template file alongside the `gatsby-node.js`. This file will be used to render every of the single post on the screen.
 
 First, let's add the following code to the `gatsby-node.js`file:
 
@@ -394,13 +353,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
 Gatsby allows us to use an API function called `createPages` to dynamically generate a single post page based on the `slug` we fetched from Contentful.
 
-Notice we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need.
+Notice we are using the `async/await` syntax to get a promise response from the `graphql` function. This response holds all of the data we need. So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
 
-So we looped through its `edges` array (which contains the list of posts) and then dynamically create each post page by calling the `createPage` function.
-
-In this function, we specified the parameters needed to create the pages.
-
-Pay attention to the `component` parameter that points to the template file. We need to create this file in the `src` directory.
+In this function, we specified the parameters needed to create the pages. Pay attention to the `component` parameter that points to the template file. We need to create this file in the `src` directory.
 
 So let’s quickly do that.
 
@@ -454,41 +409,29 @@ const BlogPost = props => {
 export default BlogPost
 ```
 
-Save all your files and restart the development server.
+Save all your files and restart the development server. You should see your single post rendered in the frontend.
 
-You should see your single post rendered in the frontend.
+In the query, we are using the `contentfulBlogPost` to fetch the individual post based on the `slug` that is dynamically passed in. This `slug` comes from the `context` object of the `gatsby-node.js` file.
 
-In the query, we are using the `contentfulBlogPost` to fetch the individual post based on the `slug` that is dynamically passed in.
-This `slug` comes from the `context` object of the `gatsby-node.js` file.
-
-Notice we are not rendering the post body yet. This requires additional steps.
-
-We will take a look at that now.
+Notice we are not rendering the post body yet. This requires additional steps. We will take a look at that now.
 
 ## Rendering the Contentful Rich Text
 
-Remember, when working with Contentful CMS, we selected the **Rich Text** for the body content. This provides capabilities similar to that of the traditional editors.
-You’ll be able to embed assets and do all sort of things within your content.
+Remember, when working with Contentful CMS, we selected the **Rich Text** for the body content. This provides capabilities similar to that of the traditional editors. You’ll be able to embed assets and do all sort of things within your content.
 
-We can query this content and render them in the frontend.
-
-Let's see how to do this from the GraphiQL IDE.
+We can query this content and render them in the frontend. Let's see how to do this from the GraphiQL IDE.
 
 ![Graphql body query](./images/graphql-body.png)
 
 > **Note:** For Contentful Rich text, you’d want to grab `json` from the `body` field.
 
-In the image above, the structure of the response object is complex. So we need to customize it using an npm library that Contentful provides.
-
-So, shutdown the terminal and run this:
+In the image above, the structure of the response object is complex. So we need to customize it using an npm library that Contentful provides. So, shutdown the terminal and run this:
 
 ```
 C:\Users\Your Name\gatsby-contentful-blogsite > npm install @contentful/rich-text-react-renderer
 ```
 
-This library parses the Contentful Rich Text data into a set of React component.
-
-Once the installation is done, start your development server.
+This library parses the Contentful Rich Text data into a set of React component. Once the installation is done, start your development server.
 
 To use this library, head over to the `src/templates/blog-post.js` file and update the query to grab the `json` from the `body` field:
 
@@ -560,15 +503,11 @@ _What’s happening?_
 
 ## Rendering the Contentful Rich Text Images
 
-By default, embedded images are ignored. To display them, you need to customize how certain node types are rendered.
-
-If you take a look at the returned data in the GraphiQL IDE, you will find your embedded image URL and title in the `embedded-asset-block` node.
+By default, embedded images are ignored. To display them, you need to customize how certain node types are rendered. If you take a look at the returned data in the GraphiQL IDE, you will find your embedded image URL and title in the `embedded-asset-block` node.
 
 ![Contentful images query](./images/graphql-images.png)
 
-We can customize this node type and generate our images.
-
-To do that, add this code just above the `return` statement in `src/templates/blog-post.js` file.
+We can customize this node type and generate our images. To do that, add this code just above the `return` statement in `src/templates/blog-post.js` file.
 
 ```js
 const options = {
@@ -615,9 +554,7 @@ To fix this problem, go inside the `gatsby-config.js` file and add the `forceFul
 
 Save your file and restart the development server.
 
-Now you should be good.
-
-Before we go ahead and deploy our site to Netlify, let’s add some styling.
+Now you should be good. Before we go ahead and deploy our site to Netlify, let’s add some styling.
 
 It is recommended to scope your component styles locally [using the CSS Module](/gatsby-tutorial-from-scratch-for-beginners/#styling-gatsby-site-with-css-modules "gatsby styles"). But for the sake of this tutorial, we’ll add a few lines of CSS styles in the `src/components/layout.css` file.
 
@@ -677,27 +614,19 @@ The first step to deploying your site is to push your project files to your GitH
 
 Next, we will go ahead and connect this repo to Netlify.
 
-So head over to [Netlify](https://www.netlify.com/ "netlify signup") and sign up for a free account if you don't have one. Once you are logged in, click on the **New site from Git** button.
+So head over to [Netlify](https://www.netlify.com/ "netlify signup") and sign up for a free account if you don't have one. Once you are logged in, click on the **New site from Git** button. After that, select **GitHub** as your Git provider and choose your website repository. On the deploy settings page, leave the default options and click on the **Show advanced** button to set up the environment variables.
 
-After that, select **GitHub** as your Git provider and choose your website repository. On the deploy settings page, leave the default options and click on the **Show advanced** button to set up the environment variables.
-
-Here, you will add the **space id** and the **access token** that Contentful provide for you. Remember, you have them in the `.env.development` file.
-
-Add them and click on the **Deploy site** button to start the deployment process.
+Here, you will add the **space id** and the **access token** that Contentful provide for you. Remember, you have them in the `.env.development` file. Add them and click on the **Deploy site** button to start the deployment process.
 
 ![Gatsby deploy](./images/gatsby-deploy.png)
 
 Once the deployment is complete, you’ll see your site URL.
 
-Visit the link and see your site live!
-
-You can as well change your site name from the **Site information** section in the **Settings** page.
+Visit the link and see your site live! You can as well change your site name from the **Site information** section in the **Settings** page.
 
 ## Continuous Deployment for Contentful CMS
 
-Anytime you make changes to your site code, you’ll need to push this code to GitHub to see a new version of your site on the web.
-
-But if you make changes to your Contentful post data, you can either trigger a deploy manually from Netlify or generate a Netlify build hook (that you can add to Contentful CMS) to trigger an automatic redeploy of your site.
+Anytime you make changes to your site code, you’ll need to push this code to GitHub to see a new version of your site on the web. But if you make changes to your Contentful post data, you can either trigger a deploy manually from Netlify or generate a Netlify build hook (that you can add to Contentful CMS) to trigger an automatic redeploy of your site.
 
 I will show you both methods.
 
@@ -707,26 +636,18 @@ To trigger a redeploy manually from Netlify, all you have to do is to click on t
 
 Simple as that!
 
-For automatic Netlify redeploy, click on the **Settings** tab and select **Build & deploy** from the left menu. In the **Build hooks** section, click on the **Add build hook** button.
+For automatic Netlify redeploy, click on the **Settings** tab and select **Build & deploy** from the left menu. In the **Build hooks** section, click on the **Add build hook** button. Name your hook (in my case, I will name it _contentful_) and click on the **Save** button.
 
-Name your hook (in my case, I will name it _contentful_) and click on the **Save** button.
-
-This generates a unique build hook URL. Copy it and head over to your Contentful dashboard.
-
-From the **Settings** dropdown, click on **Webhooks** and select Netlify to add your URL.
+This generates a unique build hook URL. Copy it and head over to your Contentful dashboard. From the **Settings** dropdown, click on **Webhooks** and select Netlify to add your URL.
 
 ![Contentful webhooks](./images/webhooks.png)
 
 Once you add the URL, make sure you click the **Create webhook** button.
 
-At this point, if you add a new Contentful blog post or modify an existing post, a new redeploy will be triggered as soon as you hit the **Publish** button in your Contentful dashboard.
-
-And you should be able to see your changes live in a few seconds.
+At this point, if you add a new Contentful blog post or modify an existing post, a new redeploy will be triggered as soon as you hit the **Publish** button in your Contentful dashboard. And you should be able to see your changes live in a few seconds.
 
 Great!
 
-Now, you know how to work with data from a headless CMS. It’s time to put what you’ve learned into practice and create a beautiful Gatsby site for yourself.
-
-But before that, make sure you share this post around the web.
+Now, you know how to work with data from a headless CMS. It’s time to put what you’ve learned into practice and create a beautiful Gatsby site for yourself. But before that, make sure you share this post around the web.
 
 Again, you can view [the project here](https://gatsby-contentful-blogsite.netlify.com/blog/ "Ibaslogic gatsby tutorial") and the [source code here](https://github.com/Ibaslogic/gatsby-contentful-blogsite "github repo").

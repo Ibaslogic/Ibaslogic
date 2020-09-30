@@ -139,9 +139,7 @@ That is the default behavior.
 
 To override it, we used the ES5 `bind()` method. This ensures that the value of `this` point to the class instance just like the other `this` in the class constructor.
 
-To see a clearer picture,
-
-Let’s log `this` keyword in the handler method and click on the button.
+To see a clearer picture, let’s log `this` keyword in the handler method and click on the button.
 
 ```js
 buttonClick() {
@@ -250,8 +248,7 @@ function createBook(title, genre, author) {
 
 Nothing complex is happening in the code. We created a normal function that accepts our book data as argument. Inside this function, we defined the `book` object and as well returned it.
 
-Earlier, I said we can add object members (i.e properties and methods) to an object literal through the dot or bracket notations. That is what we did in the function.
-We simply create an empty object and add members to it.
+Earlier, I said we can add object members (i.e properties and methods) to an object literal through the dot or bracket notations. That is what we did in the function. We simply create an empty object and add members to it.
 
 The code above is the same as the following:
 
@@ -351,9 +348,7 @@ That brings us to another important sub-topic.
 
 ## The Concept of Prototype in JavaScript
 
-The idea behind the prototype is very simple. It is the logic behind an object inheriting features from another object.
-
-We have two distinct prototypes – the object’s prototype and the prototype property.
+The idea behind the prototype is very simple. It is the logic behind an object inheriting features from another object. We have two distinct prototypes – the object’s prototype and the prototype property.
 
 These are kind of confusing. So you have to read carefully.
 
@@ -377,15 +372,11 @@ Now, we know that these inherited members are coming from the constructor functi
 
 But where exactly can we find them?
 
-They are defined on the `prototype` property on the constructor functions.
-
-If you type `Book.prototype.` or `Object.prototype.` in the console, you’ll see the methods.
+They are defined on the `prototype` property on the constructor functions. If you type `Book.prototype.` or `Object.prototype.` in the console, you’ll see the methods.
 
 ![prototype property](./images/prototype_property.png)
 
-With this prototype property, we can add new members to the list of methods to be inherited by object instances.
-
-Now, we don’t need to define methods directly in the constructor function.
+With this prototype property, we can add new members to the list of methods to be inherited by object instances. Now, we don’t need to define methods directly in the constructor function.
 
 Let see the implementation.
 
@@ -446,9 +437,7 @@ const journal1 = new Journal("Journal_one", "technology", "John Marcus", "2020")
 
 The area of focus is the `Journal` constructor. Here, we are creating the child constructor just like any other constructor. In addition to that, we are calling the properties defined in the parent constructor, `Book()` using the `call()` method.
 
-Mind you, the value of `this` in the `call()` will point to the current object instance created from the `Journal` constructor.
-
-At the end of the day, all we are doing in the child constructor is this:
+Mind you, the value of `this` in the `call()` will point to the current object instance created from the `Journal` constructor. At the end of the day, all we are doing in the child constructor is this:
 
 ```js
 function Journal(title, genre, author, year) {
@@ -467,9 +456,7 @@ And if you try to access methods on the parent constructor’s prototype, you’
 
 Most of the time, you’d want to define a new method that will accommodate your new additions (in our case, we added a `year` to the property). We'll come to that in a moment.
 
-For now, let’s see how to inherit the parent methods.
-
-Simply add this code below the `Journal` constructor function but above the constructor call.
+For now, let’s see how to inherit the parent methods. Simply add this code below the `Journal` constructor function but above the constructor call.
 
 ```js
 // inherit Book prototype
@@ -478,9 +465,7 @@ Journal.prototype = Object.create(Book.prototype)
 
 By using `Object.create()` method, you can create a new object based on any existing object. So in the code above, we simply get the methods on the `Book.prototype` and assigned them to the `prototype` property on the `Journal` constructor.
 
-This way, all instances of the `Journal` constructor can have access.
-
-Now, save your file and check if `journal1` can now access the `bookDetails()` method.
+This way, all instances of the `Journal` constructor can have access. Now, save your file and check if `journal1` can now access the `bookDetails()` method.
 
 ![method inheritance](./images/method_inheritance.png)
 
@@ -526,9 +511,7 @@ In the image, the `bookDetails()` method is presented in two different forms. Of
 
 We’ve seen how to create objects by calling a constructor function. Now, you’ll learn a modern way of doing the same thing using the `class` syntax – which provides a much easier way.
 
-Besides, we cover how to implement inheritance using this syntax.
-
-Let’s start with a simple class definition:
+Besides, we cover how to implement inheritance using this syntax. Let’s start with a simple class definition:
 
 ```js
 class Book {
@@ -595,9 +578,7 @@ If you save your file and type `journal1` in the console, you’ll see your data
 
 ![oop subclass](./images/oop_subclass.png)
 
-Just like we did in the prototype-based, we can also define a new `bookDetails()` method on the `Journal` class to capture the year.
-
-So add this in the `Journal` class:
+Just like we did in the prototype-based, we can also define a new `bookDetails()` method on the `Journal` class to capture the year. So add this in the `Journal` class:
 
 ```js
 bookDetails() {
@@ -605,9 +586,7 @@ bookDetails() {
 }
 ```
 
-Save your file and test your work.
-
-You should be good!
+Save your file and test your work. You should be good!
 
 ## Conclusion
 

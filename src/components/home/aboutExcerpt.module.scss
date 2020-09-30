@@ -17,8 +17,12 @@ $sColor: #e55e34;
   }
 }
 .about-posts {
-  padding-left: 20px;
+  padding-left: 10px;
   position: relative;
+
+  @media screen and (min-width: 480px) {
+    padding-left: 20px;
+  }
 
   &:after {
     content: "";
@@ -34,14 +38,18 @@ $sColor: #e55e34;
     font-size: 18px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
   }
   p {
     font-size: 17px;
-    line-height: 27px;
+    line-height: 30px;
     margin: 0;
     font-weight: 300;
     @media screen and (min-width: 768px) {
-      font-size: 19px;
+      line-height: 35px;
+      font-size: 20px;
     }
   }
 

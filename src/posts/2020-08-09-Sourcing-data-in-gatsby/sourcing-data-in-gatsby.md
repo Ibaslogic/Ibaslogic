@@ -90,17 +90,11 @@ Gatsby allows us to load data into a component through the **page query** or the
 
 A page component lives in the `src/pages` directory and becomes site pages automatically. This type can use either of the query types.
 
-On the other hand, the Non-page component is embedded in other component or multiple page components. For instance, the `Header`, `Footer`, `Layout` components.
+On the other hand, the Non-page component is embedded in other component or multiple page components. For instance, the `Header`, `Footer`, `Layout` components. This type of component can only use the `StaticQuery` type or its React hooks version, `useStaticQuery`.
 
-This type of component can only use the `StaticQuery` type or its React hooks version, `useStaticQuery`.
+In our site, we want to get the site title and description in the `Header` component and the author in the `Footer` component. To do this, we will make use of the `StaticQuery` or `useStaticQuery`. I prefer the latter.
 
-In our site, we want to get the site title and description in the `Header` component and the author in the `Footer` component.
-
-To do this, we will make use of the `StaticQuery` or `useStaticQuery`. I prefer the latter.
-
-So let’s go ahead and make some changes to our `header.js` file and use the `useStaticQuery` hook.
-
-Update this `import` statement:
+So let’s go ahead and make some changes to our `header.js` file and use the `useStaticQuery` hook. Update this `import` statement:
 
 ```js
 import { Link } from "gatsby"
@@ -129,9 +123,7 @@ const data = useStaticQuery(
 )
 ```
 
-Finally, reference the site title and description in the `return` statement using `{data.site.siteMetadata.title}` and `{data.site.siteMetadata.description}` respectively.
-
-Your file should look like this:
+Finally, reference the site title and description in the `return` statement using `{data.site.siteMetadata.title}` and `{data.site.siteMetadata.description}` respectively. Your file should look like this:
 
 ```jsx{2,7-18,24,27}
 import React from "react"
@@ -236,9 +228,7 @@ I mentioned earlier that we can source blog post content from the local files, C
 
 To achieve this, we will make use of two plugins.
 
-First, a source plugin called `gatsby-source-filesystem` that will fetch the raw content and allow us to query data about the files.
-
-The second plugin, `gatsby-transformer-remark`, will allow us to query the data inside the files and will transform the content (i.e markdown content) into the format we want (i.e HTML).
+First, a source plugin called `gatsby-source-filesystem` that will fetch the raw content and allow us to query data about the files. The second plugin, `gatsby-transformer-remark`, will allow us to query the data inside the files and will transform the content (i.e markdown content) into the format we want (i.e HTML).
 
 Let’s see how to achieve this.
 
@@ -286,9 +276,7 @@ Save your files.
 
 As seen in the `frontmatter` (the block surrounded in dashes), we specified the post's `title` and `date`. You can inject any piece of data (like the tags, categories, featured image URL, posts description etc) here.
 
-Now, we need to tell Gatsby to source content from the local files using the `gatsby-source-filesystem`.
-
-In your terminal, stop the development server and install the plugin at the root of the project by running:
+Now, we need to tell Gatsby to source content from the local files using the `gatsby-source-filesystem`. In your terminal, stop the development server and install the plugin at the root of the project by running:
 
 ```
 C:\Users\Your Name\ ibaslogic-gatsby-tutorial > npm install gatsby-source-filesystem
@@ -318,9 +306,7 @@ With this configuration, we are telling Gatsby to source content from the file s
 >
 > The `__dirname` is a method of NodeJS that returns the absolute path of the currently running file. There are 2 underscores before the dirname.
 
-Save your file and restart the development server. Now let’s head over to GraphiQL IDE and see what has been added.
-
-You can find all the details about the `src` files inside the `allFile -> edges -> node` dropdown in the Explorer panel.
+Save your file and restart the development server. Now let’s head over to GraphiQL IDE and see what has been added. You can find all the details about the `src` files inside the `allFile -> edges -> node` dropdown in the Explorer panel.
 
 Remember, the source plugin allows us to query data about the files. The image below shows how we can query our file names, directory and the extensions.
 
@@ -328,9 +314,7 @@ Remember, the source plugin allows us to query data about the files. The image b
 
 As seen in the query area, you can bring up autocomplete window using the `Ctrl + Space` and add more fields to the query.
 
-Now that we are fetching the local files, let’s go ahead and install the `gatsby-transformer-remark` plugin that will transform the available Markdown files (.md) into HTML.
-
-Back to your terminal, stop the development server and run this installation:
+Now that we are fetching the local files, let’s go ahead and install the `gatsby-transformer-remark` plugin that will transform the available Markdown files (.md) into HTML. Back to your terminal, stop the development server and run this installation:
 
 ```
 npm install gatsby-transformer-remark
@@ -360,9 +344,7 @@ If you explore some of the fields that are available on the node of the `allMark
 
 ![allMarkdownRemark](./images/allmarkdownremark.png)
 
-In the query area, you’ll notice we are passing the `sort` argument to the `allMarkdownRemark` to structure the blog posts in descending order of the frontmatter’s date field.
-
-Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files.
+In the query area, you’ll notice we are passing the `sort` argument to the `allMarkdownRemark` to structure the blog posts in descending order of the frontmatter’s date field. Remember we specified the `date` alongside the `title` in the frontmatter of our Markdown files.
 
 As seen in the Explorer panel, you can also pass a number of arguments (filter, limit and skip) to your query. For instance, you can reduce the total number of results from a query by specifying the `limit`. Also, you can omit a number of results through the `skip`.
 
@@ -433,15 +415,11 @@ Now that we have a list of posts on the blog page, let’s go ahead and create a
 
 ## Creating the Single Post Page
 
-At the moment, we are only rendering the excerpt of our markdown content on the blog page. Later, we will get to display the featured image as we have it in the finished project.
-
-But before that, let’s see how to generate the single post page.
+At the moment, we are only rendering the excerpt of our markdown content on the blog page. Later, we will get to display the featured image as we have it in the finished project. But before that, let’s see how to generate the single post page.
 
 Imagine you are creating a React component in the `src/pages` directory for each of the single blog posts. Remember, every component in this directory automatically becomes a page. This is not something you’d want to venture in.
 
-Instead, you will learn how to dynamically generate the single post page using Gatsby node API.
-
-We can achieve this in three simple steps:
+Instead, you will learn how to dynamically generate the single post page using Gatsby node API. We can achieve this in three simple steps:
 
 1. Generating the page slug
 2. Creating the blog post page template
@@ -486,9 +464,7 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-Here, we are using the NodeJS `path.basename()` method to extract the filename from `fileAbsolutePath`.
-
-After restarting the development server once again, you should have the slugs for each of the markdown file.
+Here, we are using the NodeJS `path.basename()` method to extract the filename from `fileAbsolutePath`. After restarting the development server once again, you should have the slugs for each of the markdown file.
 
 ![render slug](./images/render-slug.png)
 
@@ -514,17 +490,13 @@ exports.onCreateNode = ({ node, actions }) => {
 
 The `createNodeField` which is a function comes from the `actions` object of the `onCreateNode`. It enables us to create additional fields on nodes.
 
-Once you save the file and restart the development server, you can now access the field value (i.e slug) at `node.fields.slug`.
-
-In the GraphiQL, you should produce something like this.
+Once you save the file and restart the development server, you can now access the field value (i.e slug) at `node.fields.slug`. In the GraphiQL, you should produce something like this.
 
 ![createNodeField](./images/createnodefield.png)
 
 Now that the slugs are being generated, let’s move on to step two which is creating the blog post template. In this template, all you need to do is to create a React component.
 
-This single component will be used to render all of the single blog posts.
-
-In the `src` directory, create a new folder called `templates`. In this folder, create a file named `blog-post.js` and add the following:
+This single component will be used to render all of the single blog posts. In the `src` directory, create a new folder called `templates`. In this folder, create a file named `blog-post.js` and add the following:
 
 ```jsx
 import React from "react"
@@ -609,9 +581,7 @@ Remember we specified the slug in the object.
 
 > **Note:** Variables are prefixed with `$`, so the `slug` property becomes `$slug` argument in the query.
 
-Now let’s take this query and use it to exhibit each of the single posts.
-
-So update the `src/templates/blog-post.js` file so you have:
+Now let’s take this query and use it to exhibit each of the single posts. So update the `src/templates/blog-post.js` file so you have:
 
 ```jsx{2,6-17,21-32}
 import React from "react"

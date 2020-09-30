@@ -10,8 +10,6 @@ $main-white: hsla(0, 0%, 100%, 0.878);
 $plr: 1em;
 $plrls: 2em;
 $max-width: 76rem;
-$head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
-  "Helvetica Neue", sans-serif;
 
 .homePageHero {
   min-height: calc(100vh - 4rem);
@@ -19,13 +17,9 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-position: bottom !important;
-
-  @media screen and (min-width: 768px) {
-    background-position: left !important;
-    background-repeat: repeat !important;
-    background-size: contain !important;
-  }
+  background-position: left !important;
+  background-repeat: repeat !important;
+  background-size: contain !important;
 }
 
 .hero-content {
@@ -34,7 +28,6 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
 
-  padding-top: 4rem;
   @media screen and (min-width: 768px) {
     padding-left: $plrls;
     padding-right: $plrls;
@@ -54,7 +47,6 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
 .title {
   font-size: 2rem;
   margin-bottom: 1.45rem;
-  font-family: $head-font;
   line-height: 1.17647;
   font-weight: 600;
   margin-right: auto;
@@ -68,18 +60,13 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
     font-size: 3rem;
     line-height: 1.24583em;
   }
-  @media screen and (min-width: 960px) {
-    .nlt {
-      display: block;
-    }
-  }
 }
 
 .description {
   font-size: 1rem;
   margin: 0 auto;
   margin-bottom: 1.45rem;
-  max-width: 750px;
+  max-width: 900px;
   padding-top: 0;
   line-height: 1.6;
 
@@ -137,7 +124,7 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
   height: 50px;
   width: 50px;
   color: #444;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -149,6 +136,10 @@ $head-font: "Open Sans", "Nunito", "Helvetica Neue", Helvetica, "Segoe UI",
         margin-bottom: -22px;
       }
     }
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-bottom: -20px;
   }
 
   svg {

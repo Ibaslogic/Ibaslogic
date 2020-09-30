@@ -26,9 +26,7 @@ To get around this, React provides us with the Context API.
 
 ## What Is React Context API
 
-The context API in React allows every component in the component tree to have access to consume data without having to manually pass props down to it.
-
-The advantage here is that you will get to cut out "middleman" components. Meaning only the component that needs the data would know about it.
+The context API in React allows every component in the component tree to have access to consume data without having to manually pass props down to it. The advantage here is that you will get to cut out "middleman" components. Meaning only the component that needs the data would know about it.
 
 This is how it works.
 
@@ -48,9 +46,7 @@ We will start by pulling our starting project files [from this GitHub repo](http
 git clone https://github.com/Ibaslogic/simple-todo-app
 ```
 
-This will create a directory in the name of the project folder.
-
-Once you have the project files and folders bootstrapped, open it with your text editor and run:
+This will create a directory in the name of the project folder. Once you have the project files and folders bootstrapped, open it with your text editor and run:
 
 ```
 npm install
@@ -82,17 +78,11 @@ We were doing what is called State lifting! Nothing special, that is basic React
 
 Now, from the component tree, you can deduce that we have just two layers of which we are passing down data. From `TodosContainer` component to `TodosList` and then to `TodosItem`.
 
-In this case, manually passing down data through the props is desirable/recommended.
+In this case, manually passing down data through the props is desirable/recommended. But if you discover that prop drilling is becoming an issue – i.e you are passing down data through the props into many nested components, making some components only serve as a route. Then using the Context API is better.
 
-But if you discover that prop drilling is becoming an issue – i.e you are passing down data through the props into many nested components, making some components only serve as a route. Then using the Context API is better.
+To see the context API in action, we will still be working with this Todos app. But keep in mind that context is desirable if props drilling is becoming an issue (that is not the case with this app).
 
-To see the context API in action, we will still be working with this Todos app.
-
-But keep in mind that context is desirable if props drilling is becoming an issue (that is not the case with this app).
-
-Again, you shouldn’t go for context too soon.
-
-You will get to know why later in this guide. Keep reading!
+Again, you shouldn’t go for context too soon. You will get to know why later in this guide. Keep reading!
 
 ## Setting up the Context
 
@@ -139,9 +129,7 @@ What is happening?
 
 In the context file, we started by creating a context object which we assigned to the `TodosContext` variable. Here, you can pass a default context value or simply pass an empty value as seen above.
 
-Now, you might be wondering: "Why class component? This is the year 20XX, why not use Hook in a function component".
-
-Irrespective of the component type (class or function), the approach to creating the context object is the same.
+Now, you might be wondering: "Why class component? This is the year 20XX, why not use Hook in a function component". Irrespective of the component type (class or function), the approach to creating the context object is the same.
 
 Moreover, the focus is on the Context API and not the component type. Also, remember that there are people who still use the class component.
 
@@ -165,9 +153,7 @@ As a refresher, the `this.props.children` as used in the `MyContext` component i
 
 The `Provider` as seen in the context file accepts a `value` prop where we will place all of our data. For the meantime, we are passing a simple string. Later, we will pass a whole object.
 
-At this point, nothing has changed in our application!
-
-Let’s see how we can access/consume the context value from any of the children components.
+At this point, nothing has changed in our application! Let’s see how we can access/consume the context value from any of the children components.
 
 ## Accessing the Context Data
 
@@ -253,21 +239,15 @@ class MyContext extends Component {
 ...
 ```
 
-Remember to update the `value` prop in the `<TodosProvider>`.
-
-If you save your file and check the console once again, you will see the todos data.
+Remember to update the `value` prop in the `<TodosProvider>`. If you save your file and check the console once again, you will see the todos data.
 
 ![context api contextType](./images/context-api-contextType.png)
 
-In the `value` prop, we are now passing the entire todos state data that we are getting using the spread operator, `…this.state`.
-
-Now that the `value` prop has this data, it can be consumed from any of the children components in the tree.
+In the `value` prop, we are now passing the entire todos state data that we are getting using the spread operator, `…this.state`. Now that the `value` prop has this data, it can be consumed from any of the children components in the tree.
 
 Next, let’s move all the class methods from the `TodoContainer.js` file also to the `context.js` to make them globally accessible. Cut and paste them above the `render()` method.
 
-Now, we can expose these methods (just like we did for the `state` object) so that other components in the tree can have access.
-
-So, update the `value` prop in the Provider component to include these methods like so:
+Now, we can expose these methods (just like we did for the `state` object) so that other components in the tree can have access. So, update the `value` prop in the Provider component to include these methods like so:
 
 ```jsx
 ...
@@ -288,9 +268,7 @@ render() {
 ...
 ```
 
-Now you can delete the `state` object in the `TodoContainer.js` file (remember we moved it to the `context.js` file) and remove all the `props` associated with all the components tags.
-
-Your `TodoContainer.js` file should now look like this:
+Now you can delete the `state` object in the `TodoContainer.js` file (remember we moved it to the `context.js` file) and remove all the `props` associated with all the components tags. Your `TodoContainer.js` file should now look like this:
 
 ```jsx
 import React from "react"
@@ -320,9 +298,7 @@ If you save your files and check the frontend, you will see a page break. This i
 
 Fixing this is simple.
 
-As you know, the data is available in this component through the context. All you have to do is to point to where it’s saved and grab it.
-
-So modify the `TodosList.js` file so you have:
+As you know, the data is available in this component through the context. All you have to do is to point to where it’s saved and grab it. So modify the `TodosList.js` file so you have:
 
 ```jsx
 import React from "react"
@@ -346,9 +322,7 @@ class TodosList extends React.Component {
 export default TodosList
 ```
 
-Since the todos data is saved in the `value` variable, we accessed it and looped through as expected. Notice, the `<TodoItem />` instance in this file no longer serves as a path to pass data around.
-
-Save the file and check the frontend. You should see your app rendered.
+Since the todos data is saved in the `value` variable, we accessed it and looped through as expected. Notice, the `<TodoItem />` instance in this file no longer serves as a path to pass data around. Save the file and check the frontend. You should see your app rendered.
 
 Simple as that.
 
@@ -362,9 +336,7 @@ As you know, this app is built only with the class components. Though, I’ve co
 
 What this tells you is that we need to convert one of the components into a function type to see how we can access the context data.
 
-This should be straight forward.
-
-Open the `src/components/TodoItem.js` file and replace the class component with this function component.
+This should be straight forward. Open the `src/components/TodoItem.js` file and replace the class component with this function component.
 
 ```jsx
 import React from "react"
@@ -405,9 +377,7 @@ Let’s access them.
 
 Since we are dealing with a function component, the earlier method used in the class component is not applicable. Instead, we will make use of the `Consumer` component. This component allows us to access the Context data within a function component.
 
-Remember, this `Consumer` component is present in the context file.
-
-So go inside the file and uncomment this line.
+Remember, this `Consumer` component is present in the context file. So go inside the file and uncomment this line.
 
 ```js
 // const TodosConsumer = TodosContext.Consumer
@@ -419,9 +389,7 @@ Then, update the `export` to include it like so:
 export { TodosContext, MyContext, TodosConsumer }
 ```
 
-Save the file.
-
-Back to the `TodoItem.js` file, import the `TodosConsumer` from the context file.
+Save the file. Back to the `TodoItem.js` file, import the `TodosConsumer` from the context file.
 
 ```js
 import { TodosConsumer } from "../context"
@@ -485,15 +453,11 @@ return (
 )
 ```
 
-With JavaScript object destructuring, we are extracting the `handleChange` and the `delTodo` methods from the `value` argument.
-
-We then replaced `props.handleChangeProps` and `props.deleteTodoProps` with `handleChange` and `delTodo` respectively.
+With JavaScript object destructuring, we are extracting the `handleChange` and the `delTodo` methods from the `value` argument. We then replaced `props.handleChangeProps` and `props.deleteTodoProps` with `handleChange` and `delTodo` respectively.
 
 Save the file.
 
-Now, you know how to access context data in a function component.
-
-You should be able to toggle the checkboxes and delete todos items. But you can’t submit todos yet. We will get to that.
+Now, you know how to access context data in a function component. You should be able to toggle the checkboxes and delete todos items. But you can’t submit todos yet. We will get to that.
 
 Moving on.
 
@@ -552,9 +516,7 @@ export default InputTodo
 
 Good.
 
-Now, let’s update the `InputTodo.js` file to use the context.
-
-You should have:
+Now, let’s update the `InputTodo.js` file to use the context. You should have:
 
 ```jsx
 import React, { useState, useContext } from "react"
@@ -590,9 +552,7 @@ This is straight forward. As you can see, with a single line of code, we have th
 
 > _Tip: Use a function component if you want to access the context outside of the class `render()` method._
 
-You can save your file and test your application.
-
-It should work as expected.
+You can save your file and test your application. It should work as expected.
 
 ## Performance Issue With React Context API
 
@@ -600,15 +560,11 @@ React context is known for re-rendering components that consume the context data
 
 What do I mean?
 
-Whenever the `value` of the context changes, the consumer component that triggers the changes re-render to get the updated value. That is fine.
-
-But the re-rendering will not be restricted to that consumer component alone but all components that are accessing the context.
+Whenever the `value` of the context changes, the consumer component that triggers the changes re-render to get the updated value. That is fine. But the re-rendering will not be restricted to that consumer component alone but all components that are accessing the context.
 
 While this might cause little to no performance issue in a small app, it cannot be overlooked especially if your app is becoming complex.
 
-Let’s take a look at these issues in our app.
-
-We will be logging some text in all the component files.
+Let’s take a look at these issues in our app. We will be logging some text in all the component files.
 
 Starting with the `src/components/TodoContainer.js` file. Add this above the `return` statement:
 
@@ -667,15 +623,11 @@ This is the danger of passing objects to the context `value` as against a simple
 
 From the image above, you can see the `TodoContainer` and the `Header` components are not re-rendering after the initial page load. This is because they are not consuming context data.
 
-Now, let’s try to write something in the text input field while the console is opened.
-
-On every keystroke, only the `InputTodo.js` is being rendered.
+Now, let’s try to write something in the text input field while the console is opened. On every keystroke, only the `InputTodo.js` is being rendered.
 
 This is happening because the `onChange` function (which is responsible for these changes through the local state variable) in this component is not part of the context.
 
-Imagine, you take this `onChange` function and the local state to the context `value` prop. What do you think would happen?
-
-On every keystroke, all the components consuming the context data would re-render. This is not ideal as it may cause performance issue.
+Imagine, you take this `onChange` function and the local state to the context `value` prop. What do you think would happen? On every keystroke, all the components consuming the context data would re-render. This is not ideal as it may cause performance issue.
 
 A point to note here:
 
@@ -699,8 +651,6 @@ Don’t just use it simply because you want to avoid prop drilling (if this is v
 
 Now your turn!
 
-Do you have questions, difficulties or contributions as regards this topic? Please let me know.
-
-If you like this React context tutorial, endeavour to share this post around the web and make sure you subscribe to our newsletter to receiving more of this.
+Do you have questions, difficulties or contributions as regards this topic? Please let me know. If you like this React context tutorial, endeavour to share this post around the web and make sure you subscribe to our newsletter to receiving more of this.
 
 ### [Project Source Code on GitHub](https://github.com/Ibaslogic/react-context-api "render context project source code").

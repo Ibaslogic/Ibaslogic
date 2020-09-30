@@ -44,15 +44,11 @@ Save the file and revisit the error page. You should see your custom 404 page.
 
 Every SEO optimized website would have simple metadata like the page title and description in their `head` element. These are a major factor in helping search engines understand your page and are also important for search user experience.
 
-They are used in key places like search engine result.
-
-Also, the title is displayed at the top of the web browser and act as a placeholder.
+They are used in key places like search engine result. Also, the title is displayed at the top of the web browser and act as a placeholder.
 
 ![page metadata](./images/page-metadata__.png)
 
-As seen in the image, the document title starts with the page title, followed by a separation and ends with the brand name.
-
-But if you [look at our Gatsby project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we don’t have this yet.
+As seen in the image, the document title starts with the page title, followed by a separation and ends with the brand name. But if you [look at our Gatsby project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial"), we don’t have this yet.
 
 To enable support for it, we will install two packages. So stop your development server and run this:
 
@@ -71,9 +67,7 @@ plugins: [
 ],
 ```
 
-Start your development server and let’s use this Helmet.
-
-In the `src/components` directory, create a new file called `metadata.js` and add the following code:
+Start your development server and let’s use this Helmet. In the `src/components` directory, create a new file called `metadata.js` and add the following code:
 
 ```jsx
 import React from "react"
@@ -106,9 +100,7 @@ const Metadata = ({ title, description }) => {
 export default Metadata
 ```
 
-Then go inside each of the pages' file in the `src/pages` directory and import the component to set up the metadata.
-
-For instance, your `index.js` file should look like this:
+Then go inside each of the pages' file in the `src/pages` directory and import the component to set up the metadata. For instance, your `index.js` file should look like this:
 
 ```jsx{3,8}
 import React from "react"
@@ -128,17 +120,13 @@ const Index = () => {
 export default Index
 ```
 
-Now if you save your files and inspect the `head` of the Home page, you should see the page title and description.
-
-The title will also show up at the top of the browser.
+Now if you save your files and inspect the `head` of the Home page, you should see the page title and description. The title will also show up at the top of the browser.
 
 ![home metadata](./images/home-metadata_.png)
 
 Make sure you render the `Metadata` component in the other `src/pages` files and pass along their unique `title` and `description` props.
 
-For the single post pages, the title will be passed dynamically based on the post the user is viewing.
-
-So go inside the `src/templates/blog-post.js` file and import the `Metadata` component.
+For the single post pages, the title will be passed dynamically based on the post the user is viewing. So go inside the `src/templates/blog-post.js` file and import the `Metadata` component.
 
 ```js
 import Metadata from "../components/metadata"
@@ -154,9 +142,7 @@ Then, add this just after the `<Layout>` opening tag.
 
 ### What did we do?
 
-We started by creating a reusable component, `Metadata`, where we configured the Helmet itself.
-
-This Helmet accepts plain HTML tags – title and meta description – and outputs them in the `head` element of your document.
+We started by creating a reusable component, `Metadata`, where we configured the Helmet itself. This Helmet accepts plain HTML tags – title and meta description – and outputs them in the `head` element of your document.
 
 The contents of these tags are accessed by passing props data through the `Metadata` from each of the pages.
 
@@ -164,8 +150,6 @@ The contents of these tags are accessed by passing props data through the `Metad
 
 In the same way that we set the `title` and `description`, you can set the keywords, author in the document `head`.
 
-At this point, you have the basic SEO setup for your Gatsby site.
-
-Try to navigate around your web pages and make sure that the page title at the top of the web browser reflects the current page.
+At this point, you have the basic SEO setup for your Gatsby site. Try to navigate around your web pages and make sure that the page title at the top of the web browser reflects the current page.
 
 <PostNextUnit heading="Next part: Deploying Site to Netlify" btnLabel="continue" url="/deploy-gatsby-to-netlify/" />

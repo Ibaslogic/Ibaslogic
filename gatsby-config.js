@@ -8,6 +8,7 @@ module.exports = {
     facebook: `ibaslogic`,
     github: `ibaslogic`,
     email: `ibas@ibaslogic.com`,
+    author_avatar: `ibas_avartar.png`,
     siteUrl: `https://ibaslogic.com`,
   },
   plugins: [
@@ -20,8 +21,8 @@ module.exports = {
             variants: [`300`, `400`, `700`],
           },
           {
-            family: `Open Sans`,
-            variants: [`300`, `700`],
+            family: `Roboto`,
+            variants: [`300`, `500`, `700`],
           },
         ],
       },
@@ -150,6 +151,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

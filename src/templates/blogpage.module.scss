@@ -130,12 +130,17 @@ $border-color: #f2f2f2;
 
 .avatar-container {
   width: 32px;
-  height: auto;
+  height: 33px;
   border-radius: 100%;
   margin-right: 7px;
-  margin-bottom: -6px;
+  margin-bottom: 11px;
+  bottom: -8px;
   display: inline-block;
   position: relative;
+
+  .avatar {
+    border-radius: 100%;
+  }
 
   &:after {
     content: "";
@@ -154,10 +159,6 @@ $border-color: #f2f2f2;
 .author-avatar {
   color: inherit;
   img {
-    border-radius: 100%;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
     margin-bottom: 0px;
   }
   &:hover,

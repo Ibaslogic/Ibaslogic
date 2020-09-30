@@ -63,9 +63,7 @@ Ipsam mollitia alias temporibus dicta
 
 In the frontend, you will see the image `alt` text (gatsby tutorial) being displayed instead of the actual image.
 
-By default, Gatsby doesn’t know where to fetch images.
-
-To provide support for this, we will install a couple of plugins. So head over to the terminal and stop the development server.
+By default, Gatsby doesn’t know where to fetch images. To provide support for this, we will install a couple of plugins. So head over to the terminal and stop the development server.
 
 Then run:
 
@@ -191,9 +189,7 @@ Still in the template, import the `Img` component from `gatsby-image` module lik
 import Img from "gatsby-image"
 ```
 
-Then you’ll pass the returned data from the `fluid` object in your query through the `fluid` prop.
-
-So add the following just below the span element in the JSX.
+Then you’ll pass the returned data from the `fluid` object in your query through the `fluid` prop. So add the following just below the span element in the JSX.
 
 ```jsx
 {
@@ -257,9 +253,7 @@ Then add the following just above the **excerpt** in the JSX.
 
 Save the file and check the blog page. You should see the thumbnail displayed.
 
-Before we go ahead and add more styles to our Gatsby site. Let’s update the other Markdown post to include a featured image.
-
-All you have to do is add a field called `featured` in the `frontmatter` pointing to your image.
+Before we go ahead and add more styles to our Gatsby site. Let’s update the other Markdown post to include a featured image. All you have to do is add a field called `featured` in the `frontmatter` pointing to your image.
 
 ```
 ---
@@ -385,9 +379,7 @@ Save your files and check the blog page.
 
 Beautiful!
 
-In the same way, let’s style the single post page.
-
-Go inside the `src/templates` directory and create a new file called `blogPost.module.scss`. Then, add the following styles:
+In the same way, let’s style the single post page. Go inside the `src/templates` directory and create a new file called `blogPost.module.scss`. Then, add the following styles:
 
 ```scss
 .content {
