@@ -112,6 +112,7 @@ $nav-btn-color: #1b1b1b;
 
 .content {
   display: flex;
+  height: 100%;
   padding: 0;
   align-items: center;
   max-width: $content-max-width;
@@ -208,7 +209,7 @@ $nav-btn-color: #1b1b1b;
   position: relative;
   cursor: pointer;
   width: 60px;
-  height: 57px;
+  height: 56px;
   background: transparent;
   border: none;
   outline: none;
@@ -221,11 +222,11 @@ $nav-btn-color: #1b1b1b;
     .btn-line {
       &:nth-of-type(1) {
         transform: rotate(45deg);
-        top: 29px;
+        top: 27px;
       }
       &:nth-of-type(2) {
         transform: rotate(-45deg);
-        bottom: 26px;
+        bottom: 27px;
       }
       &:nth-of-type(3) {
         opacity: 0;
@@ -294,6 +295,10 @@ $nav-btn-color: #1b1b1b;
 // .brand,
 .navbar {
   z-index: 11;
+  height: 56px;
+  @media screen and (min-width: 768px) {
+    height: auto;
+  }
 }
 
 .nav-item {
