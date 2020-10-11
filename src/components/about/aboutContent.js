@@ -24,7 +24,7 @@ const AboutContent = () => {
         </div>
       </section>
       <section
-        className={`sectionWrapper ${aboutContentStyles.section} ${aboutContentStyles.newsletter}`}
+        className={`sectionWrapper newsletter ${aboutContentStyles.section} ${aboutContentStyles.newsletter}`}
       >
         <div className={aboutContentStyles.inner}>
           <div className={aboutContentStyles.newsletterContent}>

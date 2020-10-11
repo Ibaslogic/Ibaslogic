@@ -82,7 +82,9 @@ As a JavaScript developer, you are sure to have interacted with the real DOM whi
 
 The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document).
 
-Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML. This way, JavaScript can connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
+Whenever an HTML document is loaded in the browser as a web page, a corresponding Document Object Model is created for that page. This is simply an object-based representation of the HTML.
+
+This way, JavaScript can connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
 
 But hey! There is a problem. Though not with the DOM. Every time the DOM changes, the browser would need to recalculate the CSS, run layout and repaint the web page.
 
@@ -278,7 +280,9 @@ Comparing this code to the one we write directly in the HTML file at the beginni
 
 Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
 
-At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable. Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain. So instead of rendering a simple element, we will render a React component.
+At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable. Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain.
+
+So instead of rendering a simple element, we will render a React component.
 
 ## Creating the Component Files
 

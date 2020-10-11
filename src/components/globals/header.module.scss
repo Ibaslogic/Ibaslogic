@@ -26,13 +26,9 @@ $nav-btn-color: #1b1b1b;
   background: $header-bg-color;
   height: 56px;
   color: $main-white;
-  position: fixed;
   z-index: 9;
   width: 100%;
-  top: 0;
-  left: 0;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.01), inset 0 -1px 0 0 #dadce0;
 }
 
 .headerContentWrap {
@@ -52,6 +48,7 @@ $nav-btn-color: #1b1b1b;
   display: flex;
   align-items: center;
   justify-content: center;
+  // z-index: 99;
 
   a {
     color: $nav-link;
@@ -128,6 +125,7 @@ $nav-btn-color: #1b1b1b;
 
 .brand {
   margin-left: 10px;
+  // z-index: 99;
   @media screen and (min-width: 768px) {
     margin: 0px;
   }
@@ -213,7 +211,7 @@ $nav-btn-color: #1b1b1b;
   background: transparent;
   border: none;
   outline: none;
-
+  z-index: 99;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -266,7 +264,7 @@ $nav-btn-color: #1b1b1b;
   left: 0;
   height: 0;
   top: 0;
-  margin-top: 56px;
+  // margin-top: 56px;
   padding: 0;
   text-align: left;
   z-index: 0;
@@ -306,7 +304,7 @@ $nav-btn-color: #1b1b1b;
     margin: 0;
   }
   &:nth-of-type(1) {
-    margin-top: 50px;
+    margin-top: 10rem;
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }
@@ -317,5 +315,27 @@ $nav-btn-color: #1b1b1b;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 3.4rem;
+  }
+}
+
+// top bar
+
+.main_flashes {
+  display: block;
+  width: 100%;
+}
+
+.flashe_message {
+  background: #333;
+  color: $main-white;
+  padding: 10px $plr;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-white;
+    text-align: center;
+    margin: 0;
   }
 }

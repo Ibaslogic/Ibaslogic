@@ -46,7 +46,7 @@ const Header = () => {
   `)
 
   return (
-    <header className={`top__header ${headerStyles.container}`}>
+    <header className={`top__header sticky_inner ${headerStyles.container}`}>
       <Helmet>
         <html className={navbarOpen ? `${headerStyles.noScroll}` : ``} />
       </Helmet>

@@ -43,11 +43,14 @@ $plrls: 2em;
   }
 }
 .heading {
-  font-size: 1.62671rem;
+  font-size: 1.35rem;
   text-transform: uppercase;
   margin-bottom: 15px;
+  @media screen and (min-width: 600px) {
+    font-size: 1.5rem;
+  }
   @media screen and (min-width: 768px) {
-    font-size: 33px;
+    font-size: 2.2rem;
   }
 }
 

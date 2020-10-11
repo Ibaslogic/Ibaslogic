@@ -16,7 +16,8 @@ html {
 :root {
   --primary-color: #08090a; // #08090ae6; // #3c4043;
   --header-color: var(--primary-color);
-  --bg-secondary: #1d2b35;
+  --bg-primary-dm: #1c262d;
+  --bg-secondary-dm: #1d2b35;
   --main-white: hsla(0, 0%, 100%, 0.878);
   --main-spacing: 0.1rem;
   --home-bg-banner: #282c34;
@@ -505,6 +506,22 @@ Next Series Posts
 }
 
 /* ======================
+Sticky Top Bar
+======================= */
+
+.sticky_wrapper {
+  position: relative;
+  height: 56px;
+}
+
+.sticky .sticky_inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ======================
 DARK LIGHT MODE
 ======================= */
 
@@ -519,7 +536,7 @@ body {
 
   &.dark-mode {
     color: var(--main-white);
-    background: var(--bg-secondary);
+    background: var(--bg-primary-dm);
 
     h1,
     h2,
@@ -532,7 +549,7 @@ body {
 
     .top__header {
       box-shadow: 0 2px 6px 0 rgb(29, 43, 53), inset 0 -1px 0 0 #4c5a64;
-      background: var(--bg-secondary);
+      background: var(--bg-primary-dm);
     }
 
     .menu__btn div,
@@ -543,7 +560,7 @@ body {
 
     .menu__nav,
     .series-link-container {
-      background: var(--bg-secondary);
+      background: var(--bg-primary-dm);
     }
 
     .nav__link {
@@ -576,7 +593,7 @@ body {
     }
 
     .drop__down {
-      background: var(--bg-secondary);
+      background: var(--bg-primary-dm);
 
       ul {
         color: var(--main-white);
@@ -606,6 +623,7 @@ body {
 
     .list__item {
       border-color: var(--hr-dark);
+      background-color: var(--bg-secondary-dm);
       a {
         color: var(--main-white);
         div,
@@ -634,7 +652,6 @@ body {
     }
 
     footer,
-    .blogpage__main,
     aside div,
     aside div > ul,
     .list__container h3 {
@@ -644,19 +661,30 @@ body {
     .about__content_wrap,
     .subscribe__content {
       border-color: var(--hr-dark);
-      background: var(--bg-secondary);
+      background: var(--bg-primary-dm);
     }
 
     main,
-    .recent__post,
-    .sign__up,
-    .list__container > ul,
-    .sectionWrapper,
      // hero/ about hero/ home page blog section
      .hero__container,
      .about__hero,
      section#blog {
-      background-color: var(--bg-secondary) !important;
+      background-color: var(--bg-primary-dm) !important;
+    }
+
+    .sectionWrapper {
+      background-color: var(--bg-primary-dm);
+    }
+
+    .recent__post,
+    .sign__up,
+    .list__container > ul,
+    .list__container,
+    .about_excerpt,
+    .blogpage__main,
+    .sectionWrapper.newsletter {
+      background-color: var(--bg-secondary-dm) !important;
+      border-color: var(--bg-secondary-dm) !important;
     }
 
     //General btn on hover (and home page blog section)
