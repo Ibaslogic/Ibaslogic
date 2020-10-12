@@ -6,10 +6,10 @@ import Subscribe from "../subscribe/subscribe"
 import lineSvg from "../../../static/assets/line.svg"
 
 const Hero = () => {
-  return (
+  return (  
     <section
       style={{
-        background: `#fdfdfd url(${lineSvg}) center center fixed`,
+        background: `#f6f8fa url(${lineSvg}) center center fixed`,
       }}
       className={`hero__container ${heroStyles.homePageHero}`}
     >

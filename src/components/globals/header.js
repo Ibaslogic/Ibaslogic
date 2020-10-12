@@ -46,56 +46,52 @@ const Header = () => {
   `)
 
   return (
-    <header className={`top__header sticky_inner ${headerStyles.container}`}>
+    <header className={`sticky_inner ${headerStyles.container}`}>
       <Helmet>
         <html className={navbarOpen ? `${headerStyles.noScroll}` : ``} />
       </Helmet>
-      <div className={headerStyles.headerContentWrap}>
-        <div className={headerStyles.contentLeft}>
-          <div className={headerStyles.content}>
-            <div className={headerStyles.brand}>
-              <Link to="/" className={headerStyles.brandLink}>
-                <img src={logo} alt="ibaslogic logo" title="site logo" />
-              </Link>
-            </div>
-
-            <nav className={`${headerStyles.navbar}`}>
-              <button
-                className={`menu__btn ${headerStyles.menuBtn} ${
-                  navbarOpen ? headerStyles.isOpened : ""
-                }`}
-                onClick={handleToggle}
-              >
-                <div className={headerStyles.btnLine}></div>
-                <div className={headerStyles.btnLine}></div>
-                <div className={headerStyles.btnLine}></div>
-              </button>
-
-              <ul // add show
-                className={
-                  navbarOpen
-                    ? `menu__nav ${headerStyles.menuNav} ${headerStyles.showMenu}`
-                    : `menu__nav ${headerStyles.menuNav}`
-                }
-              >
-                {links.map(link => {
-                  return (
-                    <li key={link.id} className={headerStyles.navItem}>
-                      <Link
-                        to={link.path}
-                        className={`nav__link ${headerStyles.navLink}`}
-                        activeClassName={headerStyles.activeNavItem}
-                      >
-                        {link.text}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </nav>
+      <div className={headerStyles.headerContentWrap}>     
+        <div className={headerStyles.brandContainer}>
+          <div className={headerStyles.brand}>
+            <Link to="/" className={headerStyles.brandLink}>
+              <img src={logo} alt="ibaslogic logo" title="site logo" />
+            </Link>
           </div>
+          <button
+            className={`${headerStyles.menuBtn} ${
+              navbarOpen ? headerStyles.isOpened : ""
+            }`}
+            onClick={handleToggle}
+          >
+            <div className={headerStyles.btnLine}></div>
+            <div className={headerStyles.btnLine}></div>
+            <div className={headerStyles.btnLine}></div>
+          </button>   
         </div>
-
+        <nav className={`${headerStyles.navbar}`}>        
+          <ul // add show
+            className={
+              navbarOpen
+                ? `${headerStyles.menuNav} ${headerStyles.showMenu}`
+                : `${headerStyles.menuNav}`
+            }
+          >
+            {links.map(link => {
+              return (
+                <li key={link.id} className={headerStyles.navItem}>
+                  <Link
+                    to={link.path}
+                    className={`nav__link ${headerStyles.navLink}`}
+                    activeClassName={headerStyles.activeNavItem}
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+        <div className={headerStyles.spacer}></div>
         <div className={`content__right ${headerStyles.contentRight}`}>
           <a
             href={`https://github.com/${data.site.siteMetadata.github}`}
@@ -113,7 +109,6 @@ const Header = () => {
           >
             <FaTwitter />
           </a>
-
           <button
             className={`darkLight__link ${headerStyles.darkLight}`}
             onClick={darkMode.toggle}
@@ -127,7 +122,7 @@ const Header = () => {
               {darkMode.value ? <TiAdjustBrightness /> : <FaMoon />}
             </div>
           </button>
-        </div>
+        </div>     
       </div>
     </header>
   )
