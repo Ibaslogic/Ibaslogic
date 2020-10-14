@@ -28,6 +28,7 @@ html {
   --hr-dark: hsla(0, 0%, 100%, 0.2);
   --dark-color: rgba(49, 45, 45, 0.2);
   --border-color: #f0f0f0;
+  --light-grey: #f6f8fa;
 }
 
 body {
@@ -522,6 +523,39 @@ Sticky Top Bar
 }
 
 /* ======================
+Markdown Table
+======================= */
+
+table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  tr {
+    background-color: var(--main-white);
+    border-top: 1px solid var(--border-color);
+
+    &:nth-child(2n) {
+      background-color: var(--light-grey);
+    }
+  }
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+  }
+  th {
+    font-weight: 600;
+  }
+}
+
+/* ======================
 DARK LIGHT MODE
 ======================= */
 
@@ -547,8 +581,9 @@ body {
       color: var(--main-white);
     }
 
-    .series-link-container {
-      background: var(--bg-primary-dm);
+    .series-link-container,
+    table tr {
+      background-color: var(--bg-primary-dm);
     }
 
     .tag__container,
@@ -656,7 +691,8 @@ body {
     .list__container,
     .about_excerpt,
     .sectionWrapper.newsletter,
-    .flash__message {
+    .flash__message,
+    table tr:nth-child(2n) {
       background-color: var(--bg-secondary-dm) !important;
       border-color: var(--bg-secondary-dm) !important;
     }

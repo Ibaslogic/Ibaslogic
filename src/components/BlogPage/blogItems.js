@@ -109,16 +109,18 @@ const BlogItems = props => {
 
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
+              const {frontmatter, id, timeToRead, fields, excerpt} = node
+              const {title, dateUpdated, datePublished, featured} = frontmatter
               return (
                 <Post
-                  key={node.id}
-                  title={node.frontmatter.title}
-                  updated={node.frontmatter.dateUpdated}
-                  posted={node.frontmatter.datePublished}
-                  time={node.timeToRead}
-                  fluid={node.frontmatter.featured.childImageSharp.fluid}
-                  slug={node.fields.slug.name}
-                  excerpt={node.excerpt}
+                  key={id}
+                  title={title}
+                  updated={dateUpdated}
+                  posted={datePublished}
+                  time={timeToRead}
+                  fluid={featured && featured.childImageSharp.fluid}
+                  slug={fields.slug.name}
+                  excerpt={excerpt}
                 />
               )
             })}

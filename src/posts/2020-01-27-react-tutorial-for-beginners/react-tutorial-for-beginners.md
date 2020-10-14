@@ -3,7 +3,7 @@ title: "React Tutorial From Scratch: A Step-by-Step Guide for 2020"
 description: "In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-08-09 10:27:00"
+dateUpdated: "2020-08-10 10:27:00"
 featured: "./images/react-tutorial-for-beginners_.png"
 tags:
   - react
@@ -40,7 +40,7 @@ To follow along, you can find all of the code in [my GitHub repo](https://github
 
 Since our aim is to cover this topic to length for beginners. We’ve divided this React tutorial into six different parts. And here is a quick overview of what you’ll learn in this part.
 
-<TableOfContents />
+<TableOfContents /> 
 
 Now let's get started.
 

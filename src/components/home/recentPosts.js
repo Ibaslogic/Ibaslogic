@@ -57,18 +57,19 @@ const RecentPosts = () => {
         <div className={recentStyles.container}>
           {edges.map(({ node }) => {
             const { id, frontmatter, fields, excerpt } = node
+            const { featured } = frontmatter
             return (
               <article className={recentStyles.article} key={id}>
                 <div className={recentStyles.mainContent}>
                   <Link to={`/${fields.slug.name}/`}>
-                    <Img
-                      fluid={frontmatter.featured.childImageSharp.fluid}
+                    {featured && <Img
+                      fluid={featured.childImageSharp.fluid}
                       alt={fields.slug.name}
                       fadeIn={false}
                       loading="eager"
                       className={recentStyles.imgWrapper}
                       backgroundColor="#eaeaea"
-                    />
+                    />}                 
                     <div className={recentStyles.content}>
                       <h2>{frontmatter.title}</h2>
                       <p className={recentStyles.excerpt}>

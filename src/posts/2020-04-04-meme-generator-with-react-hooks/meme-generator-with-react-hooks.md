@@ -7,6 +7,7 @@ dateUpdated: "2020-04-04 10:32:00"
 featured: "./images/simple-meme-generator-with-react-hooks_.png"
 tags:
   - hooks
+  - react
 ---
 
 Earlier on this blog, we created a [practical guide to learning the React hooks](/react-hooks-tutorial/ "react hook tutorial"). There, we discussed the fundamentals of these Hooks and also apply them in a real project.
@@ -29,21 +30,19 @@ git clone https://github.com/Ibaslogic/memegenerator
 
 Once the download is done, change directory (`cd`) inside the project folder and run `npm install`. This creates a `node_module` folder consisting of the necessary dependencies.
 
-Finally, start your server with `npm start`. You should see this app at [http://localhost:3000/](http://localhost:3000/ "dev server")
+Finally, start your server with `npm start`. You should see your app at [http://localhost:3000/](http://localhost:3000/ "dev server")
 
-<br />
-
-![Meme Generator Starter](./images/meme-generator-starter.gif)
-
-<br />
+![meme generator starter](./images/meme-generator-starter.png)
 
 What this app does is simple.
 
-The user inputs the top and bottom text through the input fields and then generate random images by clicking on the `Generate` button.
+The user inputs the top and bottom text through the input fields and then generate random images by clicking on the `GENERATE` button.
 
 As expected, you should know that the files that make up this UI live in the `src` folder. If you take a look inside the `src/components` folder, we have three files. Both the `Header.js` and `MemeApp.js` are already a function component. The `MemeGenerator.js` manages the state and a lifecycle method, hence constructed using a class component.
 
-Let’s optimize the component to use the React Hooks. So, open the `src/components/MemeGenerator.js` file. Presently, it has a `state` object (consisting of four different properties with default values) and class methods including a lifecycle (`componentDidMount`) at the top level of the component.
+Let’s optimize the component to use the React Hooks.
+
+So, open the `src/components/MemeGenerator.js` file. Presently, it has a `state` object (consisting of four different properties with default values) and class methods including a lifecycle (`componentDidMount`) at the top level of the component.
 
 You can start by commenting out all the code. Then add this starting code at the top to avoid page break:
 
@@ -245,8 +244,6 @@ Save the file.
 Comparing this code to that of the class version, you’ll notice that we’ve removed all the occurrence of `this.state` since it doesn’t apply in the function component. Likewise, the `setRandomImage` function which update its state value replaces `this.setState`.
 
 Now check your app and test it. It should work as expected.
-
-![React Hook componentdidmount](./images/react-hooks-componentdidmount.png)
 
 Good job!
 

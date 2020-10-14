@@ -22,18 +22,19 @@ const Tags = ({ pageContext, data }) => {
           </div>
           <ul className={blogStyles.list}>
             {edges.map(({ node }) => {
-              const { id, timeToRead } = node
+              const { id, frontmatter, timeToRead, fields } = node
+              const { title, datePublished, dateUpdated, featured } = frontmatter
               return (
                 <Post
                   key={id}
-                  title={node.frontmatter.title}
-                  posted={node.frontmatter.datePublished}
-                  updated={node.frontmatter.dateUpdated}
+                  title={title}
+                  posted={datePublished}
+                  updated={dateUpdated}
                   time={timeToRead}
-                  fluid={node.frontmatter.featured.childImageSharp.fluid}
-                  slug={node.fields.slug.name}
+                  fluid={featured && featured.childImageSharp.fluid}
+                  slug={fields.slug.name}
                 />
-              )
+              ) 
             })}
           </ul>
         </div>

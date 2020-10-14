@@ -277,16 +277,17 @@ $link-color: #e55e34;
   background: $header-bg-color;
   height: 0;
   padding: 0;
+  margin: 0;
   text-align: left;
   z-index: 0;
   width: 100%;
   @include transition;
   list-style: none;
+  position: relative;
 
   &.show-menu {
     height: 100vh;
     z-index: 9;
-    position: fixed;
   }
 
   @media screen and (min-width: 768px) {

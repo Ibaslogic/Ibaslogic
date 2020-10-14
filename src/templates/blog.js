@@ -117,12 +117,12 @@ const Blog = ({ data, pageContext }) => {
           role="main"
         >
           <article className={blogPageStyles.singlePost}>
-            <Img
+            {featured &&  <Img
               className={blogPageStyles.featuredImage}
               fluid={featured.childImageSharp.fluid}
               alt={title}
               backgroundColor="#eaeaea"
-            />
+            />}        
             <header className={blogPageStyles.entryHeader}>
               <h1 className={blogPageStyles.title}>{title}</h1>
               <div className={blogPageStyles.tagLinks}>
