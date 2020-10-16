@@ -113,7 +113,7 @@ h2 a:hover {
 
 blockquote {
   color: rgba(0, 0, 0, 0.8);
-  border-left: 8px solid #e9f1f9;
+  border-left: 8px solid #d9e9f9;
   background: #f8f9fa;
   border-radius: 0 8px 8px 0;
   margin: 1.5rem 0;
@@ -610,7 +610,6 @@ body {
     .post__meta,
     .get_inTouch,
     .prerequisite,
-    blockquote,
     .status__success {
       color: var(--main-white);
     }
@@ -665,8 +664,10 @@ body {
       background-color: var(--bg-primary-dm) !important;
     }
 
-    .sectionWrapper {
+    .sectionWrapper,
+    blockquote {
       background-color: var(--bg-primary-dm);
+      color: var(--main-white);
     }
 
     .recent__post,
