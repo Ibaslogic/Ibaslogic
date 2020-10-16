@@ -664,13 +664,14 @@ body {
       background-color: var(--bg-primary-dm) !important;
     }
 
-    .sectionWrapper,
-    blockquote {
-      background-color: var(--bg-secondary-dm);
+    .sectionWrapper {
       color: var(--main-white);
+      background-color: var(--bg-primary-dm);
     }
 
     blockquote {
+      background-color: var(--bg-secondary-dm);
+      color: var(--main-white);
       @media screen and (min-width: 960px) {
         background-color: var(--bg-primary-dm);
       }
