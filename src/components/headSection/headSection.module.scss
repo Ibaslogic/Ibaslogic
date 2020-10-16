@@ -45,7 +45,7 @@ $max-width: 76rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 1.45rem;
   line-height: 1.17647;
   font-weight: 600;
@@ -54,10 +54,10 @@ $max-width: 76rem;
   text-transform: uppercase;
 
   @media screen and (min-width: 600px) {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
   @media screen and (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 1.24583em;
   }
 }
@@ -69,6 +69,7 @@ $max-width: 76rem;
   max-width: 900px;
   padding-top: 0;
   line-height: 1.6;
+  font-weight: 300;
 
   @media screen and (min-width: 768px) {
     font-size: 1.3rem;

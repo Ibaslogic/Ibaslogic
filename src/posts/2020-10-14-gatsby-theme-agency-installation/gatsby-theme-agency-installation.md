@@ -10,6 +10,8 @@ tags:
   - theme
 ---
 
+Are you aiming to set up a simple agency or consultancy site? Gatsby Theme Agency suits your purpose.
+
 Essentially, a theme allows users to change how the website looks on the frontend without having to alter the core code.
 
 Like WordPress CMS, for instance, Gatsby allows us to utilize a theme for multiple sites. However, here, the themes are composable. Meaning, you can have multiples of them installed and performs a different function in a Gatsby project.
@@ -18,7 +20,7 @@ That is why [a Gatsby theme](https://www.gatsbyjs.com/docs/themes/what-are-gatsb
 
 In this guide, I will walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project. This theme primarily focuses on the site content and comes with three post types – blog, services and testimonial.
 
-It is ideal for simple services consultancy or agency. It also comes configured with the contact form if you are hosting your site on Netlify. All that is required from you is turn it ON via the configuration file. You will see how to do this as you read on.
+It also comes configured with the contact form if you are hosting your site on Netlify. All that is required from you is turn it ON via the configuration file. You will see how to do this as you read on.
 
 ### _[See a live demo](https://gatsby-site-agency.netlify.app/ "gatsby theme blog")_
 

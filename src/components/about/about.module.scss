@@ -9,10 +9,10 @@ $plr: 1em;
 $plrls: 2em;
 
 .section {
-  font-size: 1.03rem;
+  font-size: 0.95rem;
   padding: 3rem 0;
   @media screen and (min-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 .ibaslogic {
@@ -34,7 +34,7 @@ $plrls: 2em;
   margin-bottom: 30px;
 
   p {
-    line-height: 32px;
+    line-height: 1.7;
     margin-bottom: 0;
   }
 

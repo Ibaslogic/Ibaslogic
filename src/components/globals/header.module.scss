@@ -1,13 +1,11 @@
 $header-bg-color: #24292e;
 $main-white: #fff;
 $white-a80: hsla(0, 0%, 100%, 0.878);
-// $base-a80: rgba(9, 10, 11, 0.8);
 $nav-link: $white-a80;
 $content-max-width: 76rem;
 $plr: 1em;
 $plrls: 2em;
 $link-color: #e55e34;
-// $nav-btn-color: #1b1b1b;
 
 // mixins
 @mixin transition {
@@ -22,11 +20,6 @@ $link-color: #e55e34;
 .noScroll {
   overflow-y: hidden;
 }
-
-// .top__header {
-//   box-shadow: 0 2px 6px 0 rgb(29, 43, 53), inset 0 -1px 0 0 #4c5a64;
-//   background: var(--bg-primary-dm);
-// }
 
 .container {
   background: $header-bg-color;
@@ -117,11 +110,7 @@ $link-color: #e55e34;
 
 .brandContainer {
   display: flex;
-  // height: 100%;
-  // padding: 0;
   align-items: center;
-  // max-width: $content-max-width;
-  // margin: 0 auto;
   justify-content: flex-start;
   flex-flow: row-reverse;
 
@@ -133,7 +122,6 @@ $link-color: #e55e34;
 
 .brand {
   margin-left: 10px;
-  // z-index: 99;
   @media screen and (min-width: 768px) {
     margin: 0px;
   }
@@ -272,7 +260,6 @@ $link-color: #e55e34;
 }
 
 .menu-nav {
-  font-family: "Roboto", "Lato", "Segoe UI", sans-serif;
   overflow-y: scroll;
   background: $header-bg-color;
   height: 0;

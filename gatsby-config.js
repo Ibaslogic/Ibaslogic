@@ -17,12 +17,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Lato`,
-            variants: [`300`, `400`, `700`],
-          },
-          {
             family: `Roboto`,
-            variants: [`300`, `500`, `700`],
+            variants: [`300`, `400`, `500`, `700`],
           },
         ],
       },

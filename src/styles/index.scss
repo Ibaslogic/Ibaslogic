@@ -14,8 +14,8 @@ html {
 }
 
 :root {
-  --primary-color: #08090a; // #08090ae6; // #3c4043;
-  --header-color: var(--primary-color);
+  --primary-color: #3c4043; //#08090a; // #08090ae6; // #3c4043;
+  --header-color: #202124;
   --bg-primary-dm: #24292e; // #1c262d;
   --bg-secondary-dm: #282e33; //#1d2b35;
   --main-white: hsla(0, 0%, 100%, 0.878);
@@ -36,7 +36,7 @@ body {
   font-size: 100%;
   font-weight: 400;
   line-height: 1.42857143;
-  font-family: "Lato", "Open Sans", "Segoe UI", sans-serif;
+  font-family: "Roboto", "Segoe UI", sans-serif;
 }
 
 article,
@@ -102,8 +102,8 @@ h4,
 h5,
 h6 {
   color: var(--header-color);
-  font-weight: 700;
-  font-family: "Roboto", "Lato", "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-family: "Roboto", "Segoe UI", sans-serif;
 }
 
 h2 a,
@@ -113,13 +113,11 @@ h2 a:hover {
 
 blockquote {
   color: rgba(0, 0, 0, 0.8);
-  border-left: 8px solid #ffe564;
-  background: rgba(255, 229, 100, 0.3);
-  border-radius: 4px;
-  font-weight: 500;
+  border-left: 8px solid #e9f1f9;
+  background: #f8f9fa;
+  border-radius: 0 8px 8px 0;
   margin: 1.5rem 0;
   padding: 20px;
-  line-height: 1.6;
   font-size: inherit;
 
   p:last-of-type {
@@ -249,29 +247,15 @@ li > a > code {
   padding-left: 28px;
 }
 
-.gatsby-highlight,
-blockquote {
+.gatsby-highlight {
   overflow: auto;
-  margin: 2rem -16px;
-  border-radius: 0;
-
-  @media screen and (min-width: 600px) {
-    margin: 2rem 0px;
-    border-radius: 0.3em;
-  }
-  @media screen and (min-width: 960px) {
-    margin: 2rem -25px;
-    border-radius: 0;
-  }
-  @media screen and (min-width: 1300px) {
-    margin: 2rem -40px;
-    border-radius: 0;
-  }
+  border-radius: 0.3em;
+  margin: 1.5rem 0px;
 }
 
 .gatsby-highlight pre[class*="language-"] {
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+  float: left;
+  min-width: 100%;
   border-radius: 0;
 }
 
