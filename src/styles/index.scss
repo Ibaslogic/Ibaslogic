@@ -666,8 +666,14 @@ body {
 
     .sectionWrapper,
     blockquote {
-      background-color: var(--bg-primary-dm);
+      background-color: var(--bg-secondary-dm);
       color: var(--main-white);
+    }
+
+    blockquote {
+      @media screen and (min-width: 960px) {
+        background-color: var(--bg-primary-dm);
+      }
     }
 
     .recent__post,
