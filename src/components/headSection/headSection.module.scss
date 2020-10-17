@@ -20,6 +20,10 @@ $max-width: 76rem;
   background-position: left !important;
   background-repeat: repeat !important;
   background-size: contain !important;
+
+  @media screen and (min-width: 960px) {
+    background-position: right !important;
+  }
 }
 
 .hero-content {
@@ -45,7 +49,7 @@ $max-width: 76rem;
 }
 
 .title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.45rem;
   line-height: 1.17647;
   font-weight: 600;
@@ -54,7 +58,7 @@ $max-width: 76rem;
   max-width: 400px;
 
   @media screen and (min-width: 600px) {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -75,7 +79,7 @@ $max-width: 76rem;
 }
 
 .subscribe_container {
-  margin-top: 5rem;
+  margin-top: 2rem;
   p {
     display: inline;
   }

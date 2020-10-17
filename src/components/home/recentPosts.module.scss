@@ -97,11 +97,10 @@ $plr: 20px;
   &:last-child {
     margin-bottom: 0;
   }
+  @include transition;
 
   &:hover {
-    .excerpt {
-      opacity: 1;
-    }
+    transform: translate3d(0, -5px, 0);
   }
 
   @media screen and (min-width: 576px) {
@@ -166,17 +165,6 @@ $plr: 20px;
     margin: 0;
     line-height: 1.6;
     letter-spacing: 0;
-  }
-}
-
-.excerpt {
-  height: 0px;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out 0s;
-
-  @media screen and (min-width: 1280px) {
-    height: auto;
   }
 }
 

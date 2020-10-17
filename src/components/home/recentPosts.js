@@ -18,7 +18,6 @@ const RecentPosts = () => {
             id
             frontmatter {
               title
-              description
               featured {
                 childImageSharp {
                   fluid(maxWidth: 600) {
@@ -32,7 +31,6 @@ const RecentPosts = () => {
                 name
               }
             }
-            excerpt
           }
         }
       }
@@ -56,7 +54,7 @@ const RecentPosts = () => {
 
         <div className={recentStyles.container}>
           {edges.map(({ node }) => {
-            const { id, frontmatter, fields, excerpt } = node
+            const { id, frontmatter, fields } = node
             const { featured } = frontmatter
             return (
               <article className={recentStyles.article} key={id}>
@@ -72,9 +70,6 @@ const RecentPosts = () => {
                     />}                 
                     <div className={recentStyles.content}>
                       <h2>{frontmatter.title}</h2>
-                      <p className={recentStyles.excerpt}>
-                        {frontmatter.description || excerpt}
-                      </p>
                       <div className={recentStyles.learnMore}>
                         explore <FaArrowRight />
                       </div>
