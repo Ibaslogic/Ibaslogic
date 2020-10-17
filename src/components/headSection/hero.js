@@ -9,20 +9,23 @@ const Hero = () => {
   return (  
     <section
       style={{
-        background: `#f6f8fa url(${lineSvg}) center center fixed`,
+        background: `#ffffff url(${lineSvg}) center center fixed`,
       }}
       className={`hero__container ${heroStyles.homePageHero}`}
     >
       <div className={heroStyles.heroContent}>
-        <h1 className={heroStyles.title}>web development articles</h1>
+        <h1 className={heroStyles.title}>Dev Articles for the Self-Starters</h1>
         <p className={heroStyles.description}>
-          For self-starter who want to ditch the stress of going through
-          technical bullshit and start learning in a beginner-friendly way.
+        Do you want to ditch the stress of going through technical bullshit and start learning in a beginner-friendly way?
+        </p>
+
+        <p className={heroStyles.additional}>
+        No fluff or jargons! Just practical guides that work. 
         </p>
 
         <Link
           to="blog"
-          className="btn-primary"
+          className={`btn-primary ${heroStyles.btn_primary}`}
           smooth={true}
           offset={-64}
           duration={500}
@@ -30,9 +33,9 @@ const Hero = () => {
           get started
         </Link>
 
-        <div className={heroStyles.additional}>
+        <div className={heroStyles.subscribe_container}>
           <p>
-            Get our <strong style={{ color: "#e55e34" }}>FREE</strong> React.js
+          Before you read on, get our <strong style={{ color: "#e55e34" }}>FREE</strong> React.js
             book and start building awesome projects:
           </p>
           <div className="home__subscribe">

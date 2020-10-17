@@ -6,7 +6,7 @@ import { FaExternalLinkAlt } from "react-icons/fa"
 
 const AboutExcerpt = () => {
   return (
-    <section className="about_excerpt">
+    <section className={`about_excerpt ${aboutStyles.about_excerpt}`}>
       <div className={aboutStyles.inner}>
         <div className={aboutStyles.aboutPosts}>
           <SubHeading title="How Ibaslogic can help you grow your dev knowledge!" />

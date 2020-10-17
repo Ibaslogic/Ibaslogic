@@ -45,42 +45,37 @@ $max-width: 76rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1.45rem;
   line-height: 1.17647;
   font-weight: 600;
   margin-right: auto;
   margin-left: auto;
-  text-transform: uppercase;
+  max-width: 400px;
 
   @media screen and (min-width: 600px) {
     font-size: 2.5rem;
   }
-  @media screen and (min-width: 768px) {
-    font-size: 3rem;
-    line-height: 1.24583em;
-  }
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0 auto;
   margin-bottom: 1.45rem;
-  max-width: 900px;
   padding-top: 0;
   line-height: 1.6;
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.25rem;
-  }
+  max-width: 500px;
 }
 
-.additional {
+.additional,
+.subscribe_container {
   font-size: 13px;
-  margin-top: 1.45rem;
   line-height: 1.3rem;
   margin-bottom: 1.45rem;
+}
 
+.subscribe_container {
+  margin-top: 5rem;
   p {
     display: inline;
   }
@@ -112,6 +107,11 @@ $max-width: 76rem;
       text-decoration: underline;
     }
   }
+}
+
+.btn_primary {
+  font-size: 12px;
+  text-transform: capitalize;
 }
 
 .arrow {
