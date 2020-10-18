@@ -5,30 +5,25 @@
   transition: all 0.5s linear;
 }
 $link-color: #ff7c3c;
-$link-hover: #fb6318; //#ea4812;
+$link-hover: #fb6318;
 $main-white: #fff;
 $plr: 1em;
 $plrls: 2em;
 $max-width: 76rem;
 
 .homePageHero {
-  // min-height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-position: left !important;
   background-repeat: repeat !important;
-  // background-size: 2000px !important;
   background-size: contain !important;
   padding-bottom: 4rem;
 
   @media screen and (min-width: 960px) {
     padding-bottom: 0;
   }
-  // @media screen and (min-width: 960px) {
-  //   background-position: right !important;
-  // }
 }
 
 .hero-content {
