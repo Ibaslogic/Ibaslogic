@@ -19,8 +19,11 @@ $max-width: 76rem;
   flex-direction: column;
   background-position: left !important;
   background-repeat: repeat !important;
-  background-size: contain !important;
+  background-size: 2000px !important;
 
+  @media screen and (min-width: 768px) {
+    background-size: contain !important;
+  }
   @media screen and (min-width: 960px) {
     background-position: right !important;
   }
