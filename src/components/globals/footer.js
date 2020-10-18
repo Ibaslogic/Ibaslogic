@@ -27,7 +27,7 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className={footerStyles.siteFooter}>
+    <footer className={`bg_dm ${footerStyles.siteFooter}`}>
       <div className={footerStyles.container}>
         <div className={footerStyles.ftTop}>
           <div className={footerStyles.getInTouch}>

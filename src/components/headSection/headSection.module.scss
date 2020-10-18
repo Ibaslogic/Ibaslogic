@@ -4,40 +4,46 @@
 @mixin transition {
   transition: all 0.5s linear;
 }
-$link-color: #e55e34;
-$link-hover: #ea4812;
-$main-white: hsla(0, 0%, 100%, 0.878);
+$link-color: #ff7c3c;
+$link-hover: #fb6318; //#ea4812;
+$main-white: #fff;
 $plr: 1em;
 $plrls: 2em;
 $max-width: 76rem;
 
 .homePageHero {
-  min-height: calc(100vh - 4rem);
+  // min-height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-position: left !important;
   background-repeat: repeat !important;
-  background-size: 2000px !important;
+  // background-size: 2000px !important;
+  background-size: contain !important;
+  padding-bottom: 4rem;
 
-  @media screen and (min-width: 768px) {
-    background-size: contain !important;
-  }
   @media screen and (min-width: 960px) {
-    background-position: right !important;
+    padding-bottom: 0;
   }
+  // @media screen and (min-width: 960px) {
+  //   background-position: right !important;
+  // }
 }
 
 .hero-content {
-  padding: 0 $plr;
+  padding: 4rem $plr 0;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  color: $main-white;
 
   @media screen and (min-width: 768px) {
     padding-left: $plrls;
     padding-right: $plrls;
+  }
+  @media screen and (min-width: 960px) {
+    padding-top: 6rem;
   }
 }
 
@@ -58,7 +64,8 @@ $max-width: 76rem;
   font-weight: 600;
   margin-right: auto;
   margin-left: auto;
-  max-width: 400px;
+  max-width: 600px;
+  color: $main-white;
 
   @media screen and (min-width: 600px) {
     font-size: 2.4rem;
@@ -71,7 +78,7 @@ $max-width: 76rem;
   margin-bottom: 1.45rem;
   padding-top: 0;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 650px;
 }
 
 .additional,
@@ -79,6 +86,7 @@ $max-width: 76rem;
   font-size: 13px;
   line-height: 1.3rem;
   margin-bottom: 1.45rem;
+  color: $main-white;
 }
 
 .subscribe_container {
@@ -119,6 +127,12 @@ $max-width: 76rem;
 .btn_primary {
   font-size: 12px;
   text-transform: capitalize;
+  &:hover,
+  &:focus {
+    background-color: #fb6318;
+    border-color: #fb6318;
+    color: $main-white;
+  }
 }
 
 .arrow {

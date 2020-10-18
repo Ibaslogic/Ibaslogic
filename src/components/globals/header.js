@@ -46,7 +46,7 @@ const Header = () => {
   `)
 
   return (
-    <header className={`sticky_inner ${headerStyles.container}`}>
+    <header className={`sticky_inner bg_dm ${headerStyles.container}`}>
       <Helmet>
         <html className={navbarOpen ? `${headerStyles.noScroll}` : ``} />
       </Helmet>
@@ -70,10 +70,9 @@ const Header = () => {
         </div>
         <nav className={`${headerStyles.navbar}`}>        
           <ul // add show
-            className={
-              navbarOpen
-                ? `${headerStyles.menuNav} ${headerStyles.showMenu}`
-                : `${headerStyles.menuNav}`
+            className={`bg_dm ${navbarOpen
+              ? `${headerStyles.menuNav} ${headerStyles.showMenu}`
+              : `${headerStyles.menuNav}`}`         
             }
           >
             {links.map(link => {

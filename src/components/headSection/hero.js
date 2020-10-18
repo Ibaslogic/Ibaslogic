@@ -9,7 +9,7 @@ const Hero = () => {
   return (  
     <section
       style={{
-        background: `#f5f6f7 url(${lineSvg}) center center fixed`,
+        background: `#373636 url(${lineSvg}) center center fixed`,
       }}
       className={`hero__container ${heroStyles.homePageHero}`}
     >
@@ -35,11 +35,11 @@ const Hero = () => {
 
         <div className={heroStyles.subscribe_container}>
           <p>
-          Before you read on, get our <strong style={{ color: "#e55e34" }}>FREE</strong> React.js
+          Before you read on, get our <strong style={{ color: "#ff7c3c" }}>FREE</strong> React.js
             book and start building awesome projects:
           </p>
           <div className="home__subscribe">
-            <Subscribe placeholder="Enter email to receive it" />
+            <Subscribe customClass="" placeholder="Enter email to receive it" />
           </div>
         </div>
       </div>

@@ -14,15 +14,14 @@ html {
 }
 
 :root {
-  --primary-color: #3c4043; //#08090a; // #08090ae6; // #3c4043;
+  --primary-color: #3c4043;
   --header-color: #202124;
-  --bg-primary-dm: #24292e; // #1c262d;
-  --bg-secondary-dm: #282e33; //#1d2b35;
+  --bg-primary-dm: #24292e;
+  --bg-secondary-dm: #282e33;
   --main-white: hsla(0, 0%, 100%, 0.878);
   --main-spacing: 0.1rem;
-  --home-bg-banner: #282c34;
-  --secondary-color: #e55e34; // #ee6d41;
-  --secondary-hover: #ea4812;
+  --secondary-color: #ff7c3c;
+  --secondary-hover: #fb6318;
   --btn-bg-color: var(--secondary-color);
   --button-hover: var(--secondary-hover);
   --hr-dark: hsla(0, 0%, 100%, 0.2);
@@ -355,7 +354,7 @@ Subscribe Form
   padding: 0px 25px;
   border: 1px solid #e6e6e6;
   margin-bottom: 4px;
-  color: #444;
+  color: inherit;
   outline: none;
 }
 
@@ -405,7 +404,7 @@ Subscribe Form
   .field__input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--hr-dark);
     padding-left: 10px;
     padding-right: 10px;
     height: 35px;
@@ -664,7 +663,8 @@ body {
       background-color: var(--bg-primary-dm) !important;
     }
 
-    .sectionWrapper {
+    .sectionWrapper,
+    .bg_dm {
       color: var(--main-white);
       background-color: var(--bg-primary-dm);
     }
