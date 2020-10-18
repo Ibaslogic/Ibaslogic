@@ -9,7 +9,7 @@ const Hero = () => {
   return (  
     <section
       style={{
-        background: `#ffffff url(${lineSvg}) center center fixed`,
+        background: `#f5f6f7 url(${lineSvg}) center center fixed`,
       }}
       className={`hero__container ${heroStyles.homePageHero}`}
     >
