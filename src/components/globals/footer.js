@@ -29,13 +29,13 @@ const Footer = () => {
   return (
     <footer className={`bg_dm ${footerStyles.siteFooter}`}>
       <div className={footerStyles.container}>
-        <div className={footerStyles.ftTop}>
+        <div className={`dmWhite ${footerStyles.ftTop}`}> 
           <div className={footerStyles.getInTouch}>
             <h2 className={footerStyles.heading}>Need a consultation?</h2>
             <p>Then let's talk! We are here to provide you the best service.</p>
             <div className={footerStyles.contact}>
               <Link
-                className="btn-primary"
+                className={`btn-primary ${footerStyles.btnPrimary}`}
                 to="/contact/"
                 target="_blank"
                 title="Get in touch"
@@ -93,7 +93,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className={footerStyles.ftBottom}>
+        <div className={`border_dm ${footerStyles.ftBottom}`}>
           <p className={footerStyles.copy}>
             Designed and developed by{" "}
             <a

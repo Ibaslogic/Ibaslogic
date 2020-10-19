@@ -9,14 +9,14 @@ $base-font-size: 0.94rem;
 $plr: 20px;
 
 .secContainer {
-  background: #f9f9f9;
+  background: #ffffff;
 }
 .recent-posts {
   padding: 3.5rem 1em;
   max-width: $max-width;
   margin: 0 auto;
   @media screen and (min-width: 768px) {
-    padding: 6rem 2em;
+    padding: 5rem 2em 6rem;
   }
 
   .subHeading {

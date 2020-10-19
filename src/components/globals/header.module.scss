@@ -23,7 +23,7 @@ $link-color: #ff7c3c;
 
 .container {
   background: $header-bg-color;
-  height: 56px;
+  height: 50px;
   color: $main-white;
   z-index: 9;
   width: 100%;
@@ -35,7 +35,7 @@ $link-color: #ff7c3c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 56px;
+  height: 50px;
   flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     max-width: $content-max-width;
@@ -49,7 +49,6 @@ $link-color: #ff7c3c;
   display: flex;
   align-items: center;
   justify-content: center;
-  // z-index: 99;
 
   a {
     color: $nav-link;
@@ -58,7 +57,7 @@ $link-color: #ff7c3c;
     justify-content: center;
     align-items: center;
     width: 40px;
-    height: 56px;
+    height: 50px;
     text-align: center;
     margin-right: 10px;
   }
@@ -81,7 +80,7 @@ $link-color: #ff7c3c;
 
   .themeMode {
     padding: 0 $plr 0 8px;
-    height: 56px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +209,7 @@ $link-color: #ff7c3c;
   position: relative;
   cursor: pointer;
   width: 60px;
-  height: 56px;
+  height: 50px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -223,11 +222,11 @@ $link-color: #ff7c3c;
     .btn-line {
       &:nth-of-type(1) {
         transform: rotate(45deg);
-        top: 27px;
+        top: 24px;
       }
       &:nth-of-type(2) {
         transform: rotate(-45deg);
-        bottom: 27px;
+        bottom: 24px;
       }
       &:nth-of-type(3) {
         opacity: 0;
@@ -247,15 +246,15 @@ $link-color: #ff7c3c;
 
   &:nth-of-type(1) {
     transform: rotate(0deg);
-    top: 21px;
+    top: 17px;
   }
   &:nth-of-type(2) {
     transform: rotate(0deg);
-    bottom: 27px;
+    bottom: 24px;
   }
   &:nth-of-type(3) {
     transform: rotate(0deg);
-    bottom: 20px;
+    bottom: 17px;
   }
 }
 
@@ -334,13 +333,16 @@ $link-color: #ff7c3c;
 
 .flash_message {
   background: $main-white;
-  padding: 10px $plr;
+  padding: 5px $plr;
   text-align: center;
 
   p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     text-align: center;
     margin: 0;
+    @media screen and (min-width: 600px) {
+      font-size: 14px;
+    }
   }
 }

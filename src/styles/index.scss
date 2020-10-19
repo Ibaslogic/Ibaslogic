@@ -356,6 +356,7 @@ Subscribe Form
   margin-bottom: 4px;
   color: inherit;
   outline: none;
+  background: transparent;
 }
 
 .status__success {
@@ -425,6 +426,7 @@ Subscribe Form
 .about__subscribe {
   .field__input {
     width: 100%;
+    border-color: var(--hr-dark);
   }
 
   .field__submit {
@@ -495,7 +497,7 @@ Sticky Top Bar
 
 .sticky_wrapper {
   position: relative;
-  height: 56px;
+  height: 50px;
 }
 
 .sticky .sticky_inner {
@@ -572,7 +574,8 @@ body {
     .tag__container,
     .secondary__area,
     .edit__post,
-    .author__avatar {
+    .author__avatar,
+    .dmWhite {
       color: var(--main-white);
       opacity: 0.8;
     }
@@ -639,7 +642,8 @@ body {
     .post__next__unit,
     .series-link-container,
     .share__container,
-    .discusion__title {
+    .discusion__title,
+    .border_dm {
       border-color: var(--hr-dark) !important;
     }
 

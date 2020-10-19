@@ -19,11 +19,6 @@ $max-width: 76rem;
   background-position: left !important;
   background-repeat: repeat !important;
   background-size: contain !important;
-  padding-bottom: 4rem;
-
-  @media screen and (min-width: 960px) {
-    padding-bottom: 0;
-  }
 }
 
 .hero-content {
@@ -70,9 +65,9 @@ $max-width: 76rem;
 .description {
   font-size: 0.95rem;
   margin: 0 auto;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   padding-top: 0;
-  line-height: 1.6;
+  line-height: 1.4;
   max-width: 650px;
 }
 
@@ -82,6 +77,9 @@ $max-width: 76rem;
   line-height: 1.3rem;
   margin-bottom: 1.45rem;
   color: $main-white;
+  @media screen and (min-width: 960px) {
+    margin-bottom: 2.45rem;
+  }
 }
 
 .subscribe_container {
@@ -142,6 +140,7 @@ $max-width: 76rem;
   color: #444;
   margin-bottom: 0;
   cursor: pointer;
+  margin-bottom: -20px;
 
   @media screen and (min-width: 768px) {
     height: 58px;
@@ -152,10 +151,6 @@ $max-width: 76rem;
         margin-bottom: -22px;
       }
     }
-  }
-
-  @media screen and (min-width: 960px) {
-    margin-bottom: -20px;
   }
 
   svg {

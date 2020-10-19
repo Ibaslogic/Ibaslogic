@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <div className={headerStyles.main_flashes}>
       <div className={`flash__message ${headerStyles.flash_message}`}>
-        <p>A free Gatsby theme for you! <a href="https://gatsby-site-agency.netlify.app/" target="_blank" rel="noopener noreferrer"> See demo </a> and a simple <Link to="/gatsby-theme-agency-installation/">installation guide</Link></p>         
+        <p>Want to set up an Agency site? A free Gatsby theme for you! <a href="https://gatsby-site-agency.netlify.app/" target="_blank" rel="noopener noreferrer"> See demo </a> and a simple <Link to="/gatsby-theme-agency-installation/">installation guide</Link></p>         
         </div>
     </div>
   )
