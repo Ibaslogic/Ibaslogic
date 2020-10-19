@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
-import logo from "../../images/ibaslogic__site__logo_v3.5.png"
+import logo from "../../images/site_logo.png"
 import { FaMoon, FaGithub, FaTwitter } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
 // header styles

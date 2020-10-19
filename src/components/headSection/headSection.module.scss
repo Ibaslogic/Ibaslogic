@@ -18,7 +18,10 @@ $max-width: 76rem;
   flex-direction: column;
   background-position: left !important;
   background-repeat: repeat !important;
-  background-size: contain !important;
+  background-size: 2000px !important;
+  @media screen and (min-width: 960px) {
+    background-size: contain !important;
+  }
 }
 
 .hero-content {
@@ -48,9 +51,9 @@ $max-width: 76rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1.45rem;
-  line-height: 1.17647;
+  line-height: 1.3;
   font-weight: 600;
   margin-right: auto;
   margin-left: auto;
@@ -67,8 +70,11 @@ $max-width: 76rem;
   margin: 0 auto;
   margin-bottom: 1rem;
   padding-top: 0;
-  line-height: 1.4;
+  line-height: 1.6;
   max-width: 650px;
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .additional,
