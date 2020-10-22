@@ -1,29 +1,16 @@
 import React from "react"
 import SubHeading from "./subHeading"
 import aboutStyles from "./aboutExcerpt.module.scss"
-import ReadMore from "./readMore"
-import { FaExternalLinkAlt } from "react-icons/fa"
 
 const AboutExcerpt = () => {
-  return (
-    <section className={`about_excerpt ${aboutStyles.about_excerpt}`}>
-      <div className={aboutStyles.inner}>
+  return ( 
+    <section className={`bg_dtl ${aboutStyles.about_excerpt}`}>
+      <div className={`bg_dtd ${aboutStyles.inner}`}>
         <div className={aboutStyles.aboutPosts}>
           <SubHeading title="How Ibaslogic can help you grow your dev knowledge!" />
           <p>
-            Often, beginner developers learn web languages without having a
-            sound knowledge to build a real-world project. To avoid this
-            pitfall, here, you will start learning dev topics in a project-based
-            method. Through, easy to follow guides, you will learn to connect
-            the dots and complete a project.
+          This site documents all of my journey as a developer. My learnings, mistakes, tricks and logic are detailed through easy to follow articles and guides. Meaning you’ll have a proven path to follow. Thus, learning dev topics in a much quicker way. And that is the end goal!
           </p>
-          <div className={aboutStyles.viewAll}>
-            <ReadMore
-              linkTo="/about/"
-              text="Click to Read More"
-              icon={<FaExternalLinkAlt />}
-            />
-          </div>
         </div>
       </div>
     </section>

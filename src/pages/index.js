@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/headSection/hero"
-import RecentPosts from "../components/home/recentPosts"
+import FeaturedGuides from "../components/home/featuredGuides"
 import AboutExcerpt from "../components/home/aboutExcerpt"
 
 const IndexPage = () => (
@@ -11,7 +11,7 @@ const IndexPage = () => (
     <main className="main" role="main">
       <Hero />
       <AboutExcerpt />
-      <RecentPosts />
+      <FeaturedGuides />
     </main>
   </Layout>
 )

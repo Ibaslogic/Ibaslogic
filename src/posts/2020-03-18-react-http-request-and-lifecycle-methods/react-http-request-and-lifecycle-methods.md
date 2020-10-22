@@ -5,6 +5,7 @@ category: "React"
 datePublished: "2020-03-18 10:32:00"
 dateUpdated: "2020-03-18 10:32:00"
 featured: "./images/react-http-request-lifecycle-methods_.png"
+series: "react_tutorial"
 tags:
   - react
   - http

@@ -1,16 +1,16 @@
 [
   {
     "subHeading": "New here? What Ibaslogic is all about",
-    "content": "If you are wondering where you can find a project-based article on web development, then you’ve come to the right place. This article type do not only make you grasp the fundamentals, but you’ll also get to know how the techs are connected to form a real-world solution."
+    "content": "Do you want to learn modern web development? Are you tired of reading dev articles that take you nowhere in your dev journey? Or maybe you want project-based articles to enable you fast track your learnings. Then you’ve come to the right place. Here, you’ll not only learn about the fundamentals, but you’ll also get to know how they are connected to form a real-world solution."
   },
   {
     "subHeading": "Here is how I can help!",
-    "content": "While learning web development, most beginners learn different dev tools and tech in isolation without a deep understanding connecting the dots to build a real-world project. They end up getting tired of the process, making them stop learning. Only for them to revisit the learnings all over again. If not careful, they end up repeating the cycle."
+    "content": "Being a self-taught developer, I learned the hard way! Most of the beginners also fall in the common pitfall of learning dev tools and tech in isolation without really understanding how they can connect the dots to build a real-world project. They end up getting tired of the process, making them stop learning. Only for them to revisit the learnings all over again. If not careful, they end up repeating the cycle."
   },
   {
-    "content": "I learned this the hard way! The pit is so deep, so you wouldn’t want to fall in it in the next cycle of learning. That is where Ibaslogic comes in. This blog is birth to help aspiring developers by pointing them in the right direction. In this blog, you’ll not only find articles about the fundamentals, but you’ll also find that of the project-based. Plus, I’ll be showing you the exact tips and strategy you’ll need to grasp web technologies in no distant time. No technical jargons. Just beginner-friendly articles."
+    "content": "The pit is so deep, so you wouldn’t want to fall in it in the next cycle of learning. That is where Ibaslogic comes in. This site is birth to help aspiring developers by pointing them in the right direction. It is where I share all my learnings, mistakes, tips and strategy that will help you grasp web technologies in no distant time. No technical jargons. Just beginner-friendly articles. That said, make sure you stick around, sign up for free updates and follow us on all social platforms."
   },
   {
-    "content": "That said, make sure you stick around and take your dev knowledge to another level; sign up for free updates and follow us on all social platforms."
+    "content": "<strong>Note:</strong> The site content (tutorial guides and the site source code) is <a href='https://github.com/Ibaslogic/Ibaslogic' target='_blank' rel='noopener noreferrer' >open-source on GitHub</a> and you are welcome to contribute."
   }
 ]

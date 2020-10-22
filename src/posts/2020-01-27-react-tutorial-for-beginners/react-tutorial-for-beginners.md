@@ -5,6 +5,7 @@ category: "React"
 datePublished: "2020-01-27 10:27:00"
 dateUpdated: "2020-08-10 10:27:00"
 featured: "./images/react-tutorial-for-beginners_.png"
+series: "react_tutorial"
 tags:
   - react
   - javascript
@@ -40,7 +41,7 @@ To follow along, you can find all of the code in [my GitHub repo](https://github
 
 Since our aim is to cover this topic to length for beginners. We’ve divided this React tutorial into six different parts. And here is a quick overview of what you’ll learn in this part.
 
-<TableOfContents /> 
+<TableOfContents />
 
 Now let's get started.
 
@@ -514,7 +515,7 @@ Let’s fix the console warnings.
 
 Whenever you map through something, a list is created. React want each child in the list to have a unique key prop. This helps React to identify which items have changed, added or removed.
 
-To add this unique key prop, we will take advantage of the `id` we provided in the `TodoContainer` state. We can access these `id` the same way we accessed the `title`.
+To add this unique key prop, we will take advantage of the `id` we provided in the `TodoContainer` state. We can access these `id`s the same way we accessed the `title`.
 
 So go ahead and update the `<li>` element in the `TodosList` component so you have:
 

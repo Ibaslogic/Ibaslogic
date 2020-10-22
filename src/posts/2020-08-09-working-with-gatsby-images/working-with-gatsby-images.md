@@ -2,9 +2,10 @@
 title: "Gatsby Tutorial: Working with Gatsby Images"
 description: ""
 category: "Gatsby"
-datePublished: "2020-08-08 10:32:00"
-dateUpdated: "2020-08-08 10:32:00"
+datePublished: "2020-08-10 10:32:00"
+dateUpdated: "2020-08-11 10:32:00"
 featured: "./images/working-with-gatsby-images_.png"
+series: "gatsby_tutorial"
 tags:
   - gatsby
   - images

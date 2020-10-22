@@ -2,9 +2,10 @@
 title: "Gatsby Tutorial: Deploying Site to Netlify"
 description: ""
 category: "Gatsby"
-datePublished: "2020-08-08 10:32:00"
-dateUpdated: "2020-08-08 10:32:00"
+datePublished: "2020-08-12 10:32:00"
+dateUpdated: "2020-08-12 10:32:00"
 featured: "./images/deploy-gatsby-to-netlify_.png"
+series: "gatsby_tutorial"
 tags:
   - gatsby
   - github

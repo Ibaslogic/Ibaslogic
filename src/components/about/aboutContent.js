@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import aboutContentStyles from "./about.module.scss"
 import Subscribe from "../subscribe/subscribe"
 import aboutIbaslogic from "../../contents/aboutPage/aboutIbaslogic.json"
@@ -54,19 +53,6 @@ const AboutContent = () => {
               <p dangerouslySetInnerHTML={{ __html: content }}></p>
             </div>
           ))}
-          <div>
-            Go ahead and <Link to="/contact/">send a message</Link> or connect
-            with{" "}
-            <a
-              href="https://twitter.com/ibaslogic"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Follow me on Twitter"
-            >
-              Ibas on Twitter
-            </a>
-            .
-          </div>
         </div>
       </section>
     </>

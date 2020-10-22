@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
 
         <Link
-          to="blog"
+          to="featured"
           className={`btn-primary ${heroStyles.btn_primary}`}
           smooth={true}
           offset={-64}
@@ -45,7 +45,7 @@ const Hero = () => {
       </div>
 
       <Link
-        to="blog"
+        to="featured"
         smooth={true}
         offset={-64}
         duration={500}

@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
     <div className={layoutStyles.container}> 
       <div className={layoutStyles.content}>
         <TopBar />
-        <div className={`sticky_wrapper${isSticky ? ' sticky' : ''}`} ref= {ref}>
+        <div className={`${layoutStyles.stickyWrapper} sticky_wrapper${isSticky ? ' sticky' : ''}`} ref= {ref}>
         <Header />
         </div>
        

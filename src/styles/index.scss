@@ -574,8 +574,7 @@ body {
     .tag__container,
     .secondary__area,
     .edit__post,
-    .author__avatar,
-    .dmWhite {
+    .author__avatar {
       color: var(--main-white);
       opacity: 0.8;
     }
@@ -643,7 +642,7 @@ body {
     .series-link-container,
     .share__container,
     .discusion__title,
-    .border_dm {
+    .dm_brder {
       border-color: var(--hr-dark) !important;
     }
 
@@ -668,8 +667,8 @@ body {
     }
 
     .sectionWrapper,
-    .bg_dm {
-      color: var(--main-white);
+    .bg_dm,
+    .bg_dtd {
       background-color: var(--bg-primary-dm);
     }
 
@@ -685,7 +684,7 @@ body {
     .sign__up,
     .list__container > ul,
     .list__container,
-    .about_excerpt,
+    .bg_dtl,
     .sectionWrapper.newsletter,
     .flash__message,
     table tr:nth-child(2n) {

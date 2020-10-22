@@ -2,9 +2,10 @@
 title: "React Tutorial: Working with React Form and Handling Event"
 description: "Form handling in React works a bit different compared to the regular HTML form. In this step-by-step guide, you will learn this in a simple way."
 category: "React"
-datePublished: "2020-01-27 10:29:00"
+datePublished: "2020-01-28 10:29:00"
 dateUpdated: "2020-05-25 10:29:00"
 featured: "./images/react-form-handling.png"
+series: "react_tutorial"
 tags:
   - react
   - form
