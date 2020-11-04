@@ -1,15 +1,11 @@
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/align"; //default padding left right max-width
+
 // =====================================================
 // Hero
 // ======================
-@mixin transition {
-  transition: all 0.5s linear;
-}
-$link-color: #ff7c3c;
-$link-hover: #fb6318;
-$main-white: #fff;
-$plr: 1em;
-$plrls: 2em;
-$max-width: 76rem;
 
 .homePageHero {
   display: flex;
@@ -25,28 +21,18 @@ $max-width: 76rem;
 }
 
 .hero-content {
-  padding: 4rem $plr 0;
+  padding: 7rem $plr 0;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  color: $main-white;
+  color: $color-white-main;
 
   @media screen and (min-width: 768px) {
     padding-left: $plrls;
     padding-right: $plrls;
   }
   @media screen and (min-width: 960px) {
-    padding-top: 6rem;
-  }
-}
-
-.errorContent {
-  padding: 4rem $plr;
-  max-width: $max-width;
-  margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    padding-left: $plrls;
-    padding-right: $plrls;
+    padding-top: 9rem;
   }
 }
 
@@ -54,11 +40,11 @@ $max-width: 76rem;
   font-size: 1.7rem;
   margin-bottom: 1.45rem;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: auto;
   margin-left: auto;
   max-width: 600px;
-  color: $main-white;
+  color: $color-white-main;
 
   @media screen and (min-width: 600px) {
     font-size: 2.4rem;
@@ -81,10 +67,10 @@ $max-width: 76rem;
 .subscribe_container {
   font-size: 13px;
   line-height: 1.3rem;
-  margin-bottom: 1.45rem;
-  color: $main-white;
+  margin-bottom: 2rem;
+  color: $color-white-main;
   @media screen and (min-width: 960px) {
-    margin-bottom: 2.45rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -95,55 +81,26 @@ $max-width: 76rem;
   }
 }
 
-.error-title {
-  font-size: 2.5rem;
-  line-height: 1.17647;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  @media screen and (min-width: 480px) {
-    font-size: 2.8;
-  }
-}
-
-.error-description {
-  margin: 1em auto 0;
-  font-size: 16px;
-  line-height: 1.66667;
-
-  @media screen and (min-width: 768px) {
-    font-size: 17px;
-  }
-
-  a {
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-}
-
 .btn_primary {
   font-size: 12px;
   text-transform: capitalize;
   &:hover,
   &:focus {
-    background-color: #fb6318;
-    border-color: #fb6318;
-    color: $main-white;
+    background-color: $color-dark-pink;
+    border-color: $color-dark-pink;
+    color: $color-white-main;
   }
 }
 
 .arrow {
-  background-color: #fff;
+  background-color: $color-white-main;
   border-radius: 100px;
-  -webkit-box-shadow: 0 4px 8px #dadce0;
-  box-shadow: 0 4px 8px #dadce0;
+  box-shadow: 0 4px 8px $color-grey-a30;
   display: block;
   margin: 0 auto;
   height: 50px;
   width: 50px;
-  color: #444;
+  color: $color-grey;
   margin-bottom: 0;
   cursor: pointer;
   margin-bottom: -20px;
@@ -153,6 +110,7 @@ $max-width: 76rem;
     width: 58px;
 
     &:hover {
+      color: $primary-color;
       svg {
         margin-bottom: -22px;
       }

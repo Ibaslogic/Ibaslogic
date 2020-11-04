@@ -45,7 +45,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `#ff7a59`,
+        color: `#fb6318`,
         // Disable the loading spinner.
         showSpinner: false,
       },
@@ -152,6 +152,20 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/contents/articles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `series`,
+        path: `${__dirname}/src/contents/series`,
       },
     },
     {

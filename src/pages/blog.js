@@ -20,7 +20,9 @@ export default BlogPage
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }
+      filter: { fields: { collection: { eq: "series" } } }
+      ) {
       edges {
         node {
           id
@@ -43,7 +45,6 @@ export const query = graphql`
             }
           }
           timeToRead
-          excerpt
         }
       }
     }

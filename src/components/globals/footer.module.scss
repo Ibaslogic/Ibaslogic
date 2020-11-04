@@ -1,24 +1,20 @@
-$footer-bg-color: #f2f3f5;
-$color: #586069;
-$footer-link: #586069;
-$content-max-width: 76rem;
-$main-white: #ffffff;
-$link-color: #ff7c3c;
-$link-hover: #fb6318;
-$plr: 1em;
-$plrls: 2em;
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/mixins"; //mixins
+@import "../../styles/base/align"; //default padding left right max-width
 
 .site-footer {
-  background: $footer-bg-color;
+  background: $color-grey-a20;
   font-size: 13px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba($color-grey-a30, .6);
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
-  color: $color;
+  color: $color-grey;
 }
 
 .container {
-  max-width: $content-max-width;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 0 $plr;
   @media screen and (min-width: 768px) {
@@ -44,10 +40,10 @@ $plrls: 2em;
   }
 
   a {
-    color: $footer-link;
-
+    color: $color-grey;
+    @include transition;
     &:hover {
-      color: $link-color;
+      color: $color-dark-pink !important;
     }
   }
 }

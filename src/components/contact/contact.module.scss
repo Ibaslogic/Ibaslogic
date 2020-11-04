@@ -1,21 +1,18 @@
-$body-font: "Nunito", "Helvetica Neue", Helvetica, "Segoe UI", "Helvetica Neue",
-  sans-serif;
-
-@mixin transition {
-  transition: all 0.5s linear;
-}
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/mixins"; //mixins
+@import "../../styles/base/font"; //mixins
+@import "../../styles/base/align"; //default padding left right max-width
 
 $max-width: 960px;
-$link-color: #ff7c3c;
-$link-hover: #fb6318;
-$formBorder: #bfbfbf;
-$heading-color: #1d2b35;
-$body-color: #212529;
-$plr: 1em;
-$plrls: 2em;
+
+.contact {
+  padding: 50px 0;
+}
 
 .inner {
-  padding: 4rem $plr;
+  padding: 40px $plr 0;
   max-width: $max-width;
   margin: 0 auto;
 
@@ -47,10 +44,10 @@ $plrls: 2em;
 
   a {
     color: inherit;
-    transition: all 0.3s ease-out;
+    @include transition;
     text-decoration: underline;
     &:hover {
-      color: $link-color;
+      color: $color-light-pink;
     }
   }
 }
@@ -78,14 +75,13 @@ $plrls: 2em;
     outline: none;
     padding: 10px;
     line-height: 1.66667;
-    border: 1px solid $formBorder;
-    font-family: $body-font;
-    color: $body-color;
+    border: 1px solid $color-grey-a80;
+    font-family: $fonts;
 
     &::placeholder,
     &:-moz-placeholder {
       font-size: 16px;
-      font-family: $body-font;
+      font-family: $fonts;
       color: inherit;
       text-transform: capitalize;
       font-weight: 600;
@@ -96,8 +92,8 @@ $plrls: 2em;
     }
 
     &:focus {
-      border-color: rgba(244, 79, 24, 0.12);
-      box-shadow: 0 2px 6px 0 rgba($link-color, 0.12);
+      border-color: $color-grey-a30;
+      box-shadow: 0 2px 6px 0 rgba($color-light-pink, 0.12);
     }
   }
 

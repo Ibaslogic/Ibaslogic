@@ -12,7 +12,7 @@ const Newsletter = props => {
         <div className={newsletterStyles.newsletterContent}>
           <div className={newsletterStyles.headingContent}>
             <h3 className={newsletterStyles.title}>
-              FREE React Tutorial Book (valued at $14.99)
+              React Tutorial Book (valued at $14.99). Yours completely free!
             </h3>
             <p className={newsletterStyles.description}>
               Read at your pace and start building awesome projects!

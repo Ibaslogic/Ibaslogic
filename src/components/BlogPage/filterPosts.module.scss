@@ -1,0 +1,48 @@
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/mixins"; //mixins
+
+.filterContainer {
+  position: relative;
+  background: $color-grey-a10 none repeat scroll 0% 0%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $color-grey-a30;
+  margin-bottom: 30px;
+
+  button {
+    text-transform: capitalize;
+    color: $color-grey-a80;
+    padding: 10px;
+    @include transition;
+    background: transparent none repeat scroll 0% 0%;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+
+    @media screen and (min-width: 600px) {
+      padding: 13px 30px 13px 15px;
+    }
+  }
+}
+
+.filter {
+  .selected {
+    color: $primary-color !important;
+  }
+}
+
+.articles {
+  a {
+    color: inherit;
+    display: block;
+  }
+  button {
+    padding-right: 13px;
+  }
+}

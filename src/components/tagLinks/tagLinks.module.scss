@@ -1,0 +1,30 @@
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+
+.list {
+  list-style: outside none none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  text-transform: capitalize;
+
+  li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    a {
+      color: $color-grey;
+      border: 1px solid $color-grey-a40;
+      padding: 3px 5px;
+      border-radius: 2px;
+      background: $color-grey-a30 none repeat scroll 0% 0%;
+      font-size: 13px;
+
+      &:hover {
+        background: $color-grey-a40 none repeat scroll 0%;
+      }
+    }
+  }
+}

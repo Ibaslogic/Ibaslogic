@@ -1,12 +1,24 @@
 const path = require("path")
 const _ = require("lodash")
-// const { slugify } = require("./src/util/utilityFunction")
 
-module.exports.onCreateNode = ({ node, actions }) => {
+module.exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-
   if (node.internal.type === "Mdx") {
     const slug = path.basename(node.fileAbsolutePath)
+
+    // To filter by source instance - i.e mdx files in the 'src/...' directory
+
+    // let's get all the source instance from the parent node
+    const collection = getNode(node.parent).sourceInstanceName
+
+    // Then create field called "collection" having all the parent source instance.
+    createNodeField({
+      node,
+      name: "collection",
+      value: collection,
+    })
+
+    // creating slug field
     createNodeField({
       node,
       name: "slug",
@@ -15,22 +27,26 @@ module.exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
+// Now, let's create pages
+
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve("./src/templates/blog.js")
+  const seriesTemplate = path.resolve("./src/templates/blog.js")
+  const articleTemplate = path.resolve("./src/templates/article.js")
   const tagTemplate = path.resolve("./src/templates/tags-page.js")
 
   const res = await graphql(`
     query {
-      allMdx {
+      allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }) {
         edges {
           node {
-            id
+            id 
             frontmatter {
               title
               tags
             }
             fields {
+              collection
               slug {
                 name
                 relativePath
@@ -64,7 +80,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const MINIMUM_CATEGORIES_IN_COMMMON = 1
 
     const hasAtLeastOneCategoryInCommon = ({ node }) => {
-      // console.log("@@@@@@ node", node)
 
       if (currentArticle.id === node.id) {
         return false
@@ -78,24 +93,48 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
 
     const filteredResult = articles.filter(hasAtLeastOneCategoryInCommon)
-    // console.log("@@@@@@@ lenght", filteredResult.length)
 
     if (filteredResult.length > 2) {
       return filteredResult.sort(sortByDateDescending).slice(0, 2)
     }
-    // console.log("@@@@@@@ filter result", filteredResult)
     return filteredResult
   }
 
-  res.data.allMdx.edges.forEach(edge => {
+  const allPosts = res.data.allMdx.edges
+
+  const seriesPosts = allPosts.filter(
+    edge => edge.node.fields.collection === `series`
+  )
+
+  const articlesPosts = allPosts.filter(
+    edge => edge.node.fields.collection === `articles`
+  )
+
+  seriesPosts.forEach(({ node }) => {
     createPage({
-      path: `/${edge.node.fields.slug.name}/`,
-      component: blogTemplate,
+      path: `/${node.fields.slug.name}/`,
+      component: seriesTemplate,
       context: {
-        slug: edge.node.fields.slug.name,
-        postPath: edge.node.fields.slug.relativePath,
+        slug: node.fields.slug.name,
+        postPath: node.fields.slug.relativePath,
         //related articles
-        relatedArticles: getRelatedArticles(edge.node, res.data.allMdx.edges),
+        relatedArticles: getRelatedArticles(node, seriesPosts),
+      },
+    })
+  })
+
+  articlesPosts.forEach(({ node }, index) => {
+    const prev =
+      index === articlesPosts.length - 1 ? null : articlesPosts[index + 1].node
+    const next = index === 0 ? null : articlesPosts[index - 1].node
+    createPage({
+      path: `/${node.fields.slug.name}`,
+      component: articleTemplate,
+      context: {
+        slug: node.fields.slug.name,
+        postPath: node.fields.slug.relativePath,
+        prev,
+        next,
       },
     })
   })
@@ -103,7 +142,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //tags
 
   let tags = []
-  _.each(res.data.allMdx.edges, edge => {
+  _.each(allPosts, edge => {
     if (_.get(edge, "node.frontmatter.tags")) {
       tags = tags.concat(edge.node.frontmatter.tags)
     }

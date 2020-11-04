@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react"
-
+import React, { useState } from "react"
 import Post from "../post"
+import FilterPosts from "./filterPosts"
 import blogStyles from "./blogItems.module.scss"
 
 const getCategories = items => {
@@ -9,24 +9,27 @@ const getCategories = items => {
   })
   let tempCategories = new Set(tempItems)
   let categories = Array.from(tempCategories)
-  categories = ["everything", ...categories]
+  categories = ["all posts", ...categories]
   return categories
 }
 
-const BlogItems = props => {
-  const node = useRef()
-  const [items] = useState(props.items.allMdx.edges)
-  const [blogPostItems, setBlogPostItems] = useState(props.items.allMdx.edges)
-  const [categories] = useState(getCategories(props.items.allMdx.edges))
-  const [showItems, setShowItems] = useState(false)
+const BlogItems = ({ items }) => {
+
+  // filter posts
+  const [postItems] = useState(items.allMdx.edges)
+  const [blogPostItems, setBlogPostItems] = useState(items.allMdx.edges)
+  const [categories] = useState(getCategories(items.allMdx.edges))
   const [selectedItem, setSelectedItem] = useState(
-    getCategories(props.items.allMdx.edges) &&
-      getCategories(props.items.allMdx.edges)[0]
+    getCategories(items.allMdx.edges) &&
+    getCategories(items.allMdx.edges)[0]
   )
 
+  const itemsNum = items.allMdx.edges.length
+
+  // handle filter posts
   const handleItems = category => {
-    let tempItems = [...items]
-    if (category === "everything") {
+    let tempItems = [...postItems]
+    if (category === "all posts") {
       setBlogPostItems(tempItems)
       setSelectedItem(category)
     } else {
@@ -38,79 +41,19 @@ const BlogItems = props => {
     }
   }
 
-  const dropDown = () => {
-    setShowItems(!showItems)
-  }
-
-  const handleClick = e => {
-    if (node.current.contains(e.target)) {
-      return
-    }
-    setShowItems(false)
-  }
-
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mousedown", handleClick) // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClick)
-    }
-  }, [])
-
-  if (items.length > 0) {
+  if (itemsNum > 0) {
     return (
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
-          {/* categories filter */}
-          <h2 className={blogStyles.filterPosts}>
-            <span className={blogStyles.filterPostsHeading}>
-              I want to learn about
-            </span>
-
-            <div
-              ref={node}
-              onClick={dropDown}
-              className={`select__box ${blogStyles.selectBoxContainer}`}
-            >
-              <span className={blogStyles.selectedBoxItem}>{selectedItem}</span>
-              <div className={blogStyles.selectBoxArrow}>
-                <span
-                  className={`${
-                    showItems
-                      ? `arrow___up ${blogStyles.selectBoxArrowUp}`
-                      : `arrow__down ${blogStyles.selectBoxArrowDown}`
-                  }`}
-                ></span>
-              </div>
-
-              <div
-                className={`drop__down ${blogStyles.dropDownContainer}`}
-                style={{ display: showItems ? "block" : "none" }}
-              >
-                <ul className={blogStyles.dropDownList}>
-                  {categories.map((category, index) => {
-                    const listClass =
-                      selectedItem === category ? `${blogStyles.selected}` : ""
-                    return (
-                      <li
-                        key={index}
-                        value={category}
-                        onClick={() => handleItems(category)}
-                        className={`${blogStyles.dropDownItem} ${listClass}`}
-                      >
-                        {category}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </div>
-          </h2>
-
+          <FilterPosts
+            categories={categories}
+            handleItems={handleItems}
+            selectedItem={selectedItem}
+          />
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
-              const {frontmatter, id, timeToRead, fields, excerpt} = node
-              const {title, dateUpdated, datePublished, featured} = frontmatter
+              const { frontmatter, id, timeToRead, fields } = node
+              const { title, dateUpdated, datePublished, featured } = frontmatter
               return (
                 <Post
                   key={id}
@@ -120,7 +63,6 @@ const BlogItems = props => {
                   time={timeToRead}
                   fluid={featured && featured.childImageSharp.fluid}
                   slug={fields.slug.name}
-                  excerpt={excerpt}
                 />
               )
             })}

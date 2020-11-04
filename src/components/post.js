@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import blogStyles from "./BlogPage/blogItems.module.scss"
 import { Link } from "gatsby"
 
-const Post = ({ title, updated, posted, time, excerpt, fluid, slug }) => {
+const Post = ({ title, updated, posted, time, fluid, slug }) => {
   return (
     <li className={`list__item ${blogStyles.listItem}`}>
       <Link to={`/${slug}/`}>
@@ -28,13 +28,6 @@ const Post = ({ title, updated, posted, time, excerpt, fluid, slug }) => {
             </div>
           </div>
         </article>
-        {excerpt && (
-          <div className={blogStyles.excerpt}>
-            <div className={blogStyles.excerptInner}>
-              <p>{excerpt}</p>
-            </div>
-          </div>
-        )}
       </Link>
     </li>
   )

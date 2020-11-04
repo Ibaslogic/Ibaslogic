@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import blogStyles from "../components/BlogPage/blogItems.module.scss"
+import styles from "../templates/tags.module.scss"
 import kebabCase from "lodash/kebabCase"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
@@ -16,14 +16,12 @@ const Tagspage = ({
   return (
     <Layout>
       <SEO title="All tags" />
-      <main className={blogStyles.main} role="main">
-        <div className={blogStyles.container}>
-          <div className={blogStyles.filterPosts}>
-            <h3 className={blogStyles.description}>All Tags</h3>
-          </div>
-          <ul className={`tag__list__container`}>
+      <main className={styles.main} role="main">
+        <div className={styles.container}>
+          <h3 className={styles.description}>All Tags</h3>
+          <ul className={`tag__list__container ${styles.list2}`}>
             {group.map(tag => (
-              <li className={blogStyles.tagList} key={tag.fieldValue}>
+              <li className={styles.item2} key={tag.fieldValue}>
                 <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>

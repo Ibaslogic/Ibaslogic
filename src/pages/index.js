@@ -4,10 +4,14 @@ import SEO from "../components/seo"
 import Hero from "../components/headSection/hero"
 import FeaturedGuides from "../components/home/featuredGuides"
 import AboutExcerpt from "../components/home/aboutExcerpt"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Helping You Improving Your Web Dev Knowledge!" />
+    <Helmet>
+        <html className="home-page" />
+    </Helmet>
     <main className="main" role="main">
       <Hero />
       <AboutExcerpt />

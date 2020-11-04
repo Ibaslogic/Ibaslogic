@@ -1,14 +1,14 @@
-$link-color: #ff7c3c;
-$border-color: #f0f0f0;
-$sidebar-bg-color: #fff; //#edeff1;
+// Import
+// ===================================================
+@import "../../../styles/base/colors"; //colors
 
 .listContainer {
-  border: 1px solid $border-color;
+  border: 1px solid $color-grey-a10;
   ul {
     padding: 1.25rem 17px;
-    font-size: 0.92rem;
-    line-height: 28px;
-    background-color: $sidebar-bg-color;
+    font-size: 15px;
+    line-height: 23px;
+    background-color: $color-white-main;
     margin: 0;
     li {
       margin-bottom: 10px;
@@ -30,7 +30,7 @@ $sidebar-bg-color: #fff; //#edeff1;
       }
       &:hover,
       &:focus {
-        color: $link-color;
+        color: $color-light-pink;
       }
     }
   }
@@ -40,9 +40,9 @@ $sidebar-bg-color: #fff; //#edeff1;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: 700;
-  font-size: 20px;
-  border-bottom: 1px solid $border-color;
-  padding: 1.25rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid $color-grey-a10;
+  padding: 1rem 0;
 }
 
 .image-container {

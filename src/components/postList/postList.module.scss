@@ -1,0 +1,57 @@
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+
+.listItem {
+  padding: 1rem 0;
+  border-bottom: 2px solid $color-grey-a30;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  &:hover {
+    h2 {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  line-height: 22.4px;
+}
+.entryTitle {
+  font-size: 18px;
+  @media screen and (min-width: 960px) {
+    font-size: 20px;
+  }
+}
+
+.meta {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 18.2px;
+  color: rgba($primary-color, 0.6);
+}
+
+.divider {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: rgba($primary-color, 0.6);
+    position: absolute;
+    top: 7px;
+    left: 2px;
+  }
+}
+
+.time {
+  margin-left: 8px;
+}

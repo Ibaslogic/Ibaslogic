@@ -1,0 +1,73 @@
+// Import
+// ===================================================
+@import "../styles/base/colors"; //colors
+@import "../styles/base/align"; //default padding left right max-width
+
+$inner-max-width: 870px;
+
+.main {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  margin-top: 50px;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $plr;
+  @media screen and (min-width: 768px) {
+    padding: 0 $plrls;
+  }
+}
+
+.description {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+
+  @media screen and (min-width: 480px) {
+    font-size: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: $inner-max-width;
+  margin: 0 auto;
+}
+.list2 {
+  margin: 0;
+  display: flex;
+  flex-flow: wrap;
+}
+.item2 {
+  position: relative;
+  margin: 13px 22px;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $color-light-pink;
+      text-decoration: underline;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    left: -15px;
+    top: 9px;
+    background: $color-light-pink;
+  }
+}
+
+
+

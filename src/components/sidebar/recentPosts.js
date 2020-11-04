@@ -18,7 +18,6 @@ const RecentPosts = () => {
               <SidebarPostsMarkup
                 key={node.id}
                 title={node.frontmatter.title}
-                tags={node.frontmatter.tags}
                 slug={node.fields.slug.name}
               />
             ))}
@@ -27,20 +26,20 @@ const RecentPosts = () => {
       />
     </div>
   )
-}
+} 
 
 const recentPostQuery = graphql`
   query {
     allMdx(
       sort: { fields: [frontmatter___dateUpdated], order: DESC }
-      limit: 3
+      filter: { fields: { collection: { eq: "series" } } }
+      limit: 4
     ) {
       edges {
         node {
           id
           frontmatter {
             title
-            tags
           }
           fields {
             slug {

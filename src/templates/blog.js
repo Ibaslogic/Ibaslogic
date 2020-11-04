@@ -1,13 +1,11 @@
 import React, { useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { slugify } from "../util/utilityFunction"
 import Img from "gatsby-image"
 import Sidebar from "../components/sidebar/sidebar"
-import SocialShare from "../components/BlogPage/socialShare"
+import ShareItems from "../components/socialShare/shareItems"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
-import { FaPencilAlt } from "react-icons/fa"
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
 import PostNextUnit from "../components/globals/custom_components/PostNextUnit"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
@@ -15,6 +13,8 @@ import ScrollTop from "../components/BlogPage/scrollTop"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Comment from "../components/comment"
+import PostMeta from "../components/postMeta"
+import SeriesTagLinks from "../components/tagLinks/series"
 
 export const query = graphql`
   query($slug: String!) {
@@ -113,118 +113,22 @@ const Blog = ({ data, pageContext }) => {
         className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
       >
         <main
-          className={`blogpage__main ${blogPageStyles.siteMain}`}
+          className={blogPageStyles.siteMain} //bg_dtl_pp
           role="main"
         >
           <article className={blogPageStyles.singlePost}>
-            {featured &&  <Img
+                    
+            <header className={blogPageStyles.entryHeader}>
+              <h1>{title}</h1>
+              
+              <PostMeta authorAvatar={authorAvatar} datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} pageContext={pageContext} isSeries/>
+
+              {featured &&  <Img
               className={blogPageStyles.featuredImage}
               fluid={featured.childImageSharp.fluid}
               alt={title}
               backgroundColor="#eaeaea"
-            />}        
-            <header className={blogPageStyles.entryHeader}>
-              <h1 className={blogPageStyles.title}>{title}</h1>
-              <div className={blogPageStyles.tagLinks}>
-                <ul className={blogPageStyles.postTags}>
-                  {tags.map((tag, index) => (
-                    <li key={index}>
-                      {tag === "javascript" ? (
-                        <Link
-                          style={{ backgroundColor: "#f4d001", color: "#000" }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      ) : tag === "gatsby" ? (
-                        <Link
-                          style={{ backgroundColor: "#653297", color: "#fff" }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      ) : tag === "basic" ? (
-                        <Link
-                          style={{ backgroundColor: "#035b21", color: "#fff" }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      ) : tag === "graphql" ? (
-                        <Link
-                          style={{ backgroundColor: "#ae0878", color: "#fff" }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      ) : tag === "react" ||
-                        tag === "reactjs" ||
-                        tag === "jsx" ? (
-                        <Link
-                          style={{
-                            backgroundColor: "#222222",
-                            color: "#61DAF6",
-                          }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      ) : (
-                        <Link
-                          style={{ backgroundColor: "#bfbfbf", color: "#000" }}
-                          to={`/tags/${slugify(tag)}/`}
-                        >
-                          <span>#</span>
-                          {tag}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className={`post__meta ${blogPageStyles.postMeta}`}>
-                <Link
-                  to="/about/"
-                  className={`author__avatar ${blogPageStyles.authorAvatar}`}
-                >
-                  <span className={blogPageStyles.avatarContainer}>
-                    <Img
-                      fixed={authorAvatar.childImageSharp.fixed}
-                      alt={authorAvatar.relativePath}
-                      backgroundColor="#eaeaea"
-                      className={blogPageStyles.avatar}
-                    />
-                  </span>
-                  Ibas<span className={blogPageStyles.divider}></span>
-                </Link>
-                <span className={blogPageStyles.inlineBlockStyle}>
-                  {datePublished === dateUpdated ? " Published " : "Updated"} on{" "}
-                  {dateUpdated}
-                </span>
-                <span className={blogPageStyles.divider}></span>
-                <span className={blogPageStyles.inlineBlockStyle}>
-                  {timeToRead} min read
-                </span>
-                <span className={blogPageStyles.divider}></span>
-                <span className={blogPageStyles.inlineBlockStyle}>
-                  <a
-                    className={`edit__post ${blogPageStyles.editPost}`}
-                    href={
-                      "https://github.com/Ibaslogic/Ibaslogic/blob/master/src/" +
-                      pageContext.postPath
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Edit <FaPencilAlt />
-                  </a>
-                </span>
-              </div>
+            />}
             </header>
 
             <div className={blogPageStyles.entryContent}>
@@ -243,44 +147,44 @@ const Blog = ({ data, pageContext }) => {
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </div>
+            <SeriesTagLinks tags={tags}/>
           </article>
-
-          <div className={blogPageStyles.bottomSocialShare}>
-            <SocialShare
-              slug={pageContext.slug}
-              title={title}
-              twitterHandle={twitterHandle}
-              siteUrl={siteUrl}
-              heading="Share"
-            />
-          </div>
-
-          <div className={blogPageStyles.commentSection}>
-            <h2 className={`discusion__title ${blogPageStyles.title}`}>
-              Discussion
-            </h2>
-            <Comment commentBoxRef={commentBoxRef} />
+          <div className={blogPageStyles.discus}>
+            <div className={blogPageStyles.socialShare_tablet}>
+              <ShareItems
+                slug={pageContext.slug}
+                title={title}
+                twitterHandle={twitterHandle}
+                siteUrl={siteUrl}
+                heading="share"
+              />
+            </div>
+            <div className={blogPageStyles.commentSection}>
+              <h2 className={`discusion__title ${blogPageStyles.title}`}>
+                Discussion
+              </h2>
+              <Comment commentBoxRef={commentBoxRef} />
+            </div>
           </div>
         </main>
+        <div className={blogPageStyles.socialShare_largeScreen}>
+          <ShareItems
+            slug={pageContext.slug}
+            title={title}
+            twitterHandle={twitterHandle}
+            siteUrl={siteUrl}
+            heading="share"
+          />
+        </div>
         <aside className={`secondary__area ${blogPageStyles.secondaryArea}`}>
           <Sidebar
             relatedArticles={pageContext.relatedArticles}
             twitterHandle={twitterHandle}
             slug={pageContext.slug}
           />
-        </aside>
+        </aside>   
       </div>
-
-      <div className={blogPageStyles.sideSocialShare}>
-        <SocialShare
-          slug={pageContext.slug}
-          title={title}
-          twitterHandle={twitterHandle}
-          siteUrl={siteUrl}
-          heading="share"
-        />
-      </div>
-
+     
       <ScrollTop />
     </Layout>
   )

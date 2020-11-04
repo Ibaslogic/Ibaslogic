@@ -1,3 +1,9 @@
+// Import
+// ===================================================
+@import "./base/colors"; //colors
+@import "./base/mixins"; //mixins
+@import "./base/font"; //mixins
+
 // Globals
 // ===================================================
 
@@ -14,20 +20,20 @@ html {
 }
 
 :root {
-  --primary-color: #3c4043;
-  --header-color: #202124;
-  --bg-primary-dm: #24292e;
-  --bg-secondary-dm: #282e33;
-  --main-white: hsla(0, 0%, 100%, 0.878);
-  --main-spacing: 0.1rem;
-  --secondary-color: #ff7c3c;
-  --secondary-hover: #fb6318;
-  --btn-bg-color: var(--secondary-color);
-  --button-hover: var(--secondary-hover);
-  --hr-dark: hsla(0, 0%, 100%, 0.2);
-  --dark-color: rgba(49, 45, 45, 0.2);
-  --border-color: #f0f0f0;
-  --light-grey: #f6f8fa;
+  --primary-color: #{$primary-color};
+  --dark-color: #{$dark-color};
+  --color-white-a80: #{$color-white-a80};
+  --color-white-main: #{$color-white-main};
+  --color-light-pink: #{$color-light-pink};
+  --color-dark-pink: #{$color-dark-pink};
+  --color-bg-dm-pry: #{$color-bg-dm-pry};
+  --color-bg-dm-secondary: #{$color-bg-dm-secondary};
+  --color-light-blue: #{$color-light-blue};
+  --color-dark-blue: #{$color-dark-blue};
+  --color-white-a20: #{$color-white-a20};
+  --color-grey: #{$color-grey};
+  --color-grey-a10: #{$color-grey-a10};
+  --color-grey-a20: #{$color-grey-a20};
 }
 
 body {
@@ -35,7 +41,7 @@ body {
   font-size: 100%;
   font-weight: 400;
   line-height: 1.42857143;
-  font-family: "Roboto", "Segoe UI", sans-serif;
+  font-family: $fonts;
 }
 
 article,
@@ -53,20 +59,15 @@ summary {
   display: block;
 }
 
-// mixins
-@mixin transition {
-  transition: all 0.35s ease-out 0s;
-}
-
 a {
-  color: var(--secondary-color);
+  color: var(--color-light-blue);
   background-color: transparent;
   outline: none;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: var(--secondary-hover);
+    color: var(--color-dark-blue);
   }
 }
 
@@ -78,6 +79,7 @@ b {
 ol,
 ul {
   list-style: none;
+  margin-bottom: 30px;
 }
 
 dl,
@@ -100,14 +102,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--header-color);
-  font-weight: 600;
-  font-family: "Roboto", "Segoe UI", sans-serif;
+  color: var(--dark-color);
+  font-weight: 700;
 }
 
 h2 a,
 h2 a:hover {
-  color: var(--header-color);
+  color: var(--dark-color);
 }
 
 blockquote {
@@ -134,10 +135,10 @@ blockquote {
   display: inline-block;
   text-decoration: none;
   letter-spacing: 3px;
-  color: var(--main-white, #fff);
-  background: var(--secondary-color) none repeat scroll 0% 0%;
+  color: var(--color-white-a80);
+  background: var(--color-light-pink) none repeat scroll 0% 0%;
   padding: 10px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--color-light-pink);
 
   text-transform: uppercase;
   cursor: pointer;
@@ -156,18 +157,18 @@ blockquote {
 }
 
 .prerequisite {
-  font-size: 1.5rem;
-  color: var(--header-color);
+  font-size: 19px;
+  color: var(--dark-color);
   line-height: 1.3777em;
   margin-bottom: 1.8rem;
-  font-weight: 600;
-  padding-top: 1em;
+  font-weight: 700;
+  padding-top: 0.5em;
 
-  @media screen and (min-width: 480px) {
-    font-size: 1.65rem;
+  @media screen and (min-width: 600px) {
+    font-size: 22px;
   }
   @media screen and (min-width: 768px) {
-    font-size: 1.9rem;
+    font-size: 26px;
   }
 }
 
@@ -188,7 +189,6 @@ pre[class*="language-"] {
   margin: 0 !important;
   padding: 2em 15px !important;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
 
   @media screen and (min-width: 600px) {
     padding: 2em !important;
@@ -226,7 +226,7 @@ li > a > code {
   background: #151414;
   padding: 0.5rem 1rem 0.5rem;
   font-size: 1rem;
-  color: #fff;
+  color: var(--color-white-main);
   font-weight: 700;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -273,6 +273,31 @@ blockquote .gatsby-highlight + p {
   margin-bottom: 35px;
 }
 
+// Home page header
+// =================================================
+.home-page .top_header {
+  @media screen and (min-width: 768px) {
+    background: transparent none repeat scroll 0% 0%;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+
+    a,
+    svg {
+      color: var(--color-white-a80);
+
+      &:hover {
+        color: var(--color-white-a80) !important;
+      }
+    }
+  }
+}
+
+// Top header (Other pages)
+
+.top_header {
+  background: var(--color-white-main) none repeat scroll 0% 0%;
+}
+
 // =====================================================
 // Blog
 // ======================
@@ -309,7 +334,7 @@ blockquote .gatsby-highlight + p {
       display: block;
       width: 41px;
       height: 2px;
-      background: var(--secondary-color);
+      background: var(--color-light-blue);
       position: absolute;
       bottom: -12px;
       left: 0px;
@@ -379,9 +404,9 @@ Subscribe Form
 }
 
 .field__submit {
-  color: #fff;
-  background: var(--btn-bg-color);
-  border: 1px solid var(--btn-bg-color);
+  color: var(--color-white-main);
+  background: var(--color-light-blue);
+  border: 1px solid var(--color-light-blue);
   font-size: 1.2rem;
   text-transform: capitalize;
   font-weight: 400;
@@ -389,9 +414,9 @@ Subscribe Form
   @include transition;
   cursor: pointer;
   &:hover {
-    color: #fff;
-    background: var(--button-hover);
-    border: 1px solid var(--button-hover);
+    color: var(--color-white-main);
+    background: var(--color-dark-blue);
+    border: 1px solid var(--color-dark-blue);
   }
 }
 
@@ -405,7 +430,7 @@ Subscribe Form
   .field__input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--color-light-pink);
     padding-left: 10px;
     padding-right: 10px;
     height: 35px;
@@ -426,7 +451,7 @@ Subscribe Form
 .about__subscribe {
   .field__input {
     width: 100%;
-    border-color: var(--hr-dark);
+    border-color: var(--color-white-a20);
   }
 
   .field__submit {
@@ -463,7 +488,7 @@ Next Series Posts
 ======================= */
 
 .post__next__unit {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--color-grey-a10);
   margin-top: 2rem;
   .next__heading {
     padding-top: 1.3rem;
@@ -472,8 +497,8 @@ Next Series Posts
   }
 
   .btn__link {
-    background-color: var(--secondary-color);
-    color: var(--main-white);
+    background-color: var(--color-light-pink);
+    color: var(--color-white-a80);
     border-radius: 2px;
     padding: 8px 14px 10px;
     font-size: 16px;
@@ -481,7 +506,7 @@ Next Series Posts
 
     &:hover,
     &:focus {
-      background: var(--secondary-hover);
+      background: var(--color-dark-pink);
       text-decoration: none;
     }
 
@@ -489,22 +514,6 @@ Next Series Posts
       margin-bottom: -3px;
     }
   }
-}
-
-/* ======================
-Sticky Top Bar
-======================= */
-
-.sticky_wrapper {
-  position: relative;
-  height: 50px;
-}
-
-.sticky .sticky_inner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 /* ======================
@@ -520,20 +529,21 @@ table {
   margin-bottom: 16px;
   border-spacing: 0;
   border-collapse: collapse;
+  width: 100%;
 
   tr {
-    background-color: var(--main-white);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--color-white-a80);
+    border-top: 1px solid var(--color-grey-a10);
 
     &:nth-child(2n) {
-      background-color: var(--light-grey);
+      background-color: var(--color-grey-a20);
     }
   }
 
   th,
   td {
     padding: 6px 13px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-grey-a10);
   }
   th {
     font-weight: 600;
@@ -548,14 +558,14 @@ DARK LIGHT MODE
 
 body {
   &.light-mode {
-    background: var(--main-white);
+    background: var(--color-white-a80);
   }
 
   //Dark mode theme
 
   &.dark-mode {
-    color: var(--main-white);
-    background: var(--bg-primary-dm);
+    color: var(--color-white-a80);
+    background: var(--color-bg-dm-pry);
 
     h1,
     h2,
@@ -563,63 +573,61 @@ body {
     h4,
     h5,
     h6 {
-      color: var(--main-white);
+      color: var(--color-white-a80);
     }
 
     .series-link-container,
     table tr {
-      background-color: var(--bg-primary-dm);
+      background-color: var(--color-bg-dm-pry);
     }
 
-    .tag__container,
+    // .tag__container,
     .secondary__area,
     .edit__post,
     .author__avatar {
-      color: var(--main-white);
+      color: var(--color-white-a80);
       opacity: 0.8;
     }
 
-    .darkLight__link,
-    .content__right a {
-      svg {
-        color: var(--main-white);
-        opacity: 0.8;
-      }
+    .darkLight__link svg,
+    .content__right a svg, 
+    .bg_dm a, .bg_dm_wc{
+        color: var(--color-white-a80);
     }
 
     .drop__down {
-      background: var(--bg-primary-dm);
+      background: var(--color-bg-dm-pry);
 
       ul {
-        color: var(--main-white);
+        color: var(--color-white-a80);
       }
     }
 
     .select__box {
       &:after {
-        background: var(--main-white);
+        background: var(--color-white-a80);
       }
 
       .arrow___up {
-        border-bottom: 8px solid var(--main-white);
+        border-bottom: 8px solid var(--color-white-a80);
       }
       .arrow__down {
-        border-top: 8px solid var(--main-white);
+        border-top: 8px solid var(--color-white-a80);
       }
     }
 
     .post__meta,
     .get_inTouch,
     .prerequisite,
-    .status__success {
-      color: var(--main-white);
+    .status__success, .selected {
+      color: var(--color-white-a80) !important;
     }
 
     .list__item {
-      border-color: var(--hr-dark);
-      background-color: var(--bg-secondary-dm);
+      border-color: var(--color-white-a20);
+      background-color: var(--color-bg-dm-secondary);
       a {
-        color: var(--main-white);
+        color: var(--color-white-a80);
         div,
         span {
           color: inherit;
@@ -631,52 +639,51 @@ body {
     .form__field {
       input,
       textarea {
-        color: var(--main-white);
+        color: var(--color-white-a80);
         background: transparent;
-        border-color: var(--hr-dark);
+        border-color: var(--color-white-a20);
       }
     }
 
     .email__input,
     .post__next__unit,
     .series-link-container,
-    .share__container,
     .discusion__title,
-    .dm_brder {
-      border-color: var(--hr-dark) !important;
+    .dm_brder, .top_header, .list_item {
+      border-color: var(--color-white-a20) !important;
     }
 
     footer,
     aside div,
     aside div > ul,
     .list__container h3 {
-      border-color: var(--hr-dark);
+      border-color: var(--color-white-a20);
     }
 
     .about__content_wrap,
     .subscribe__content {
-      border-color: var(--hr-dark);
-      background: var(--bg-primary-dm);
+      border-color: var(--color-white-a20);
+      background: var(--color-bg-dm-pry);
     }
 
     main,
     .hero__container,
     .about__hero,
     section#blog {
-      background-color: var(--bg-primary-dm) !important;
+      background-color: var(--color-bg-dm-pry) !important;
     }
 
     .sectionWrapper,
     .bg_dm,
     .bg_dtd {
-      background-color: var(--bg-primary-dm);
+      background-color: var(--color-bg-dm-pry);
     }
 
     blockquote {
-      background-color: var(--bg-secondary-dm);
-      color: var(--main-white);
+      background-color: var(--color-bg-dm-secondary);
+      color: var(--color-white-a80);
       @media screen and (min-width: 960px) {
-        background-color: var(--bg-primary-dm);
+        background-color: var(--color-bg-dm-pry);
       }
     }
 
@@ -688,14 +695,14 @@ body {
     .sectionWrapper.newsletter,
     .flash__message,
     table tr:nth-child(2n) {
-      background-color: var(--bg-secondary-dm) !important;
-      border-color: var(--bg-secondary-dm) !important;
+      background-color: var(--color-bg-dm-secondary) !important;
+      border-color: var(--color-bg-dm-secondary) !important;
     }
 
-    .blogpage__main {
+    .bg_dtl_pp {
       @media screen and (min-width: 960px) {
-        background-color: var(--bg-secondary-dm) !important;
-        border-color: var(--bg-secondary-dm) !important;
+        background-color: var(--color-bg-dm-secondary) !important;
+        border-color: var(--color-bg-dm-secondary) !important;
       }
     }
 
@@ -704,26 +711,22 @@ body {
       &.readMore,
       &:hover,
       &:focus {
-        color: var(--main-white);
+        color: var(--color-white-a80);
       }
     }
 
-    .list__container {
-      a {
-        &:after {
-          background: var(--main-white);
-        }
-      }
+    .list__container a::after, .btn_line {
+      background: var(--color-white-a80);
     }
 
     .tag__list__container {
       a {
-        color: var(--main-white);
+        color: var(--color-white-a80);
       }
     }
 
     .sidebarTitle {
-      border-color: var(--hr-dark) !important;
+      border-color: var(--color-white-a20) !important;
     }
     //end dark mode
   }

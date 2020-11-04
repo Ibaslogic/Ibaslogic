@@ -1,22 +1,26 @@
-@mixin transition {
-  transition: all 0.3s ease-out;
-}
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/align"; //default padding left right max-width
 
 $max-width: 960px;
-$bacground: #3e3e3e;
-$mainWhite: #fff;
-$plr: 1em;
-$plrls: 2em;
+
+.about {
+  padding: 50px 0;
+}
 
 .section {
   font-size: 0.95rem;
-  padding: 4rem 0;
+  padding: 40px 0;
   @media screen and (min-width: 768px) {
     font-size: 1rem;
   }
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 .ibaslogic {
-  background: $mainWhite;
+  background: $color-white-main;
 }
 .inner {
   max-width: $max-width;
@@ -55,8 +59,8 @@ $plrls: 2em;
 }
 
 .newsletter {
-  color: $mainWhite;
-  background: $bacground;
+  color: $color-white-main;
+  background: $color-dark-a70;
   padding: 5rem 0;
 }
 
@@ -70,7 +74,7 @@ $plrls: 2em;
 .formHeading {
   h3 {
     font-size: 1.8rem;
-    color: #fff;
+    color: $color-white-main;
     margin-bottom: 2rem;
     line-height: 30px;
   }
@@ -83,8 +87,18 @@ $plrls: 2em;
   @media screen and (min-width: 600px) {
     flex: 0.5;
   }
+  button {
+    background-color: $color-light-pink;
+    color: $color-white-main;
+    border-color: $color-light-pink;
+
+    &:hover {
+      background-color: $color-dark-pink;
+      border-color: $color-dark-pink;
+    }
+  }
 }
 
 .ibas {
-  background: $mainWhite;
+  background: $color-white-main;
 }

@@ -1,18 +1,17 @@
-$max-width: 970px;
-$sColor: #ff7c3c;
-$mainWhite: #fff;
-$lightgrey: #e8e8e8;
-$linkColor: #256b95;
-$plr: 1em;
-$plrls: 2em;
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/align"; //default padding left right max-width
+
+$inner-max-width: 970px;
 
 .featuredGuides {
-  background: $mainWhite;
+  background: $color-white-main;
 }
 
 .inner {
   padding: 2.5rem $plr 0;
-  max-width: $max-width;
+  max-width: $inner-max-width;
   margin: 0 auto;
   counter-increment: a;
 
@@ -35,7 +34,7 @@ $plrls: 2em;
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 20px;
-  border-bottom: 1px solid $lightgrey;
+  border-bottom: 1px solid $color-grey-a30;
   padding-bottom: 5px;
 
   h2 {
@@ -71,10 +70,10 @@ $plrls: 2em;
   }
 
   a {
-    color: $linkColor;
+    color: $color-light-blue;
     &:hover,
     &:focus {
-      color: $sColor;
+      color: $color-light-pink;
       text-decoration: underline;
     }
   }

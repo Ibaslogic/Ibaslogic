@@ -6,7 +6,7 @@ import aboutIbas from "../../contents/aboutPage/aboutMe.json"
 
 const AboutContent = () => {
   return (
-    <>
+    <div className={aboutContentStyles.about}>
       <section
         className={`sectionWrapper ${aboutContentStyles.section} ${aboutContentStyles.ibaslogic}`}
       >
@@ -55,7 +55,7 @@ const AboutContent = () => {
           ))}
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

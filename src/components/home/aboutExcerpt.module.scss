@@ -1,21 +1,18 @@
-$max-width: 76rem;
-$base-font-size: 1rem;
-$plr: 1em;
-$plrls: 2em;
-$sColor: #ff7c3c;
-$lighterGrey: #b5b0ae;
-@mixin transition {
-  transition: all 0.5s ease-out;
-}
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/align"; //default padding left right max-width
+
+$inner-max-width: 970px;
 
 .about_excerpt {
-  background: #ffffff;
-  padding: 2rem 0;
+  background: $color-white-main;
+  padding: 2rem 0 1rem;
 }
 
 .inner {
   padding: 1rem $plr;
-  max-width: 970px;
+  max-width: $inner-max-width;
   margin: 0 auto;
   border-radius: 3px;
 
@@ -25,7 +22,6 @@ $lighterGrey: #b5b0ae;
 }
 .about-posts {
   h2 {
-    font-weight: 300;
     font-size: 23px;
     margin-bottom: 20px;
     @media screen and (min-width: 480px) {
@@ -34,8 +30,7 @@ $lighterGrey: #b5b0ae;
   }
   p {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 22px;
     margin: 0;
-    font-weight: 300;
   }
 }

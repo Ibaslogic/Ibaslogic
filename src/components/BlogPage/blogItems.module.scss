@@ -1,31 +1,16 @@
-$content-max-width: 76rem;
-$primary-color: #3c4043;
-$body-color: #1a1a1a;
-$main-white: #fff;
-$link-color: #ff7c3c;
-$plr: 1em;
-$plrls: 2em;
-
-@mixin transition {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/align"; //default padding left right max-width
 
 .main {
-  padding-top: 3.18rem;
-  padding-bottom: 4.8rem;
-
-  @media screen and (min-width: 768px) {
-    padding-top: 4.15rem;
-    padding-bottom: 6.15rem;
-  }
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  margin-top: 50px;
 }
 
 .container {
-  max-width: $content-max-width;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 0 $plr;
   @media screen and (min-width: 768px) {
@@ -50,7 +35,6 @@ $plrls: 2em;
   }
 }
 
-.filter-posts,
 .description {
   text-align: center;
   font-size: 1.8rem;
@@ -64,126 +48,11 @@ $plrls: 2em;
   @media screen and (min-width: 768px) {
     font-size: 2.7rem;
   }
-
-  .filter-posts-heading {
-    display: block;
-    line-height: 1.41667;
-    @media screen and (min-width: 480px) {
-      display: inline-block;
-    }
-  }
-
-  /*Filter Bolg Posts */
-  .select-box-container {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 10px 0 0;
-
-    @media screen and (min-width: 480px) {
-      margin-left: 10px;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: -5px;
-      background-color: #161922;
-      height: 1px;
-    }
-  }
-
-  .select-box-arrow {
-    position: relative;
-    display: inline-block;
-    right: -11px;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    padding: 0;
-    top: 8px;
-  }
-
-  .select-box-arrow-down {
-    position: absolute;
-    top: 12px;
-    left: 18px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 8px solid rgba($body-color, 0.6);
-  }
-  .select-box-arrow-up {
-    position: absolute;
-    top: 10px;
-    left: 18px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 8px solid rgba($body-color, 0.6);
-  }
-
-  .drop-down-container {
-    position: absolute;
-    top: 63px;
-    right: 0;
-    left: 0;
-    display: block;
-    padding: 0;
-    min-width: 157px;
-    margin: 0;
-    @include transition;
-    height: auto;
-
-    border-radius: 2px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09);
-    box-shadow: 0 15px 30px 0 rgba(244, 79, 24, 0.09),
-      inset 0 -1px 0 0 $link-color;
-    z-index: 8;
-    overflow: hidden;
-
-    @media screen and (min-width: 768px) {
-      min-width: 297px;
-    }
-  }
-
-  .drop-down-list {
-    height: auto;
-    margin: 0;
-  }
-
-  .drop-down-item {
-    padding: 20px 30px;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.66667;
-    text-align: left;
-
-    &:hover {
-      background-color: #f6f8f9;
-      color: $link-color;
-      opacity: 0.8;
-    }
-
-    &.selected {
-      background-color: #f6f8f9;
-      color: $link-color;
-    }
-  }
 }
 
 .list-item {
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px 0px;
+  box-shadow: rgba($color-dark-main, 0.1) 0px 2px 20px 0px;
 }
 
 .post-summary-content {
@@ -193,28 +62,28 @@ $plrls: 2em;
 }
 
 .entry-title {
-  font-size: 1.4rem;
+  font-size: 21px;
   padding: 15px 0px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 2.5625rem;
-  padding: 15px 10px;
+  padding: 15px 10px 5px;
 
   @media screen and (min-width: 768px) {
-    padding: 1.25rem 0.9375rem;
+    padding: 15px 15px;
   }
-}
+} 
 
 .entry-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 0 10px 1.1875rem;
-  font-size: 14px;
-  color: rgba($body-color, 0.7);
+  font-size: 12px;
+  color: rgba($primary-color, 0.7);
 
   @media screen and (min-width: 768px) {
-    padding-left: 0.9775rem;
-    padding-right: 0.9775rem;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -225,7 +94,7 @@ $plrls: 2em;
     display: block;
     width: 2px;
     height: 2px;
-    background: #727274;
+    background: rgba($primary-color, 0.6);;
     position: absolute;
     top: 7px;
     left: 2px;
@@ -242,63 +111,5 @@ $plrls: 2em;
   }
   @media screen and (min-width: 768px) {
     height: auto;
-  }
-}
-
-.excerpt {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-
-  @media screen and (min-width: 1280px) {
-    background: rgba(0, 0, 0, 0.8);
-    @include transition;
-    z-index: 1;
-    opacity: 0;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-.excerptInner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 0;
-  color: $main-white;
-
-  @media screen and (min-width: 1280px) {
-    height: 100%;
-  }
-}
-
-// Tags List
-
-.tag-list {
-  position: relative;
-  margin: 13px 22px;
-  a {
-    color: #26282d;
-    &:hover {
-      color: $link-color;
-      text-decoration: underline;
-    }
-  }
-  &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    left: -23px;
-    top: 9px;
-    background: $link-color;
   }
 }

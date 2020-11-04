@@ -1,40 +1,36 @@
 import React from "react"
 import Layout from "../components/layout"
-import Post from "../components/post"
 import SEO from "../components/seo"
-import blogStyles from "../components/BlogPage/blogItems.module.scss"
+import styles from "./tags.module.scss"
 import { graphql } from "gatsby"
+import PostList from "../components/postList"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMdx
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"
+    } tagged with "${tag}"`
 
   return (
     <Layout>
       <SEO title={`All posts tagged as "${tag}"`} />
-      <main className={blogStyles.main} role="main">
-        <div className={blogStyles.container}>
-          <div className={blogStyles.filterPosts}>
-            <h3 className={blogStyles.description}>{tagHeader}</h3>
-          </div>
-          <ul className={blogStyles.list}>
+      <main className={styles.main} role="main">
+        <div className={styles.container}>
+          <h3 className={styles.description}>{tagHeader}</h3>
+          <ul className={styles.list}>
             {edges.map(({ node }) => {
               const { id, frontmatter, timeToRead, fields } = node
-              const { title, datePublished, dateUpdated, featured } = frontmatter
+              const { title, datePublished, dateUpdated } = frontmatter
               return (
-                <Post
+                <PostList
                   key={id}
                   title={title}
-                  posted={datePublished}
                   updated={dateUpdated}
+                  posted={datePublished}
                   time={timeToRead}
-                  fluid={featured && featured.childImageSharp.fluid}
                   slug={fields.slug.name}
                 />
-              ) 
+              )
             })}
           </ul>
         </div>
@@ -59,13 +55,6 @@ export const pageQuery = graphql`
             title
             datePublished(formatString: "MMMM Do, YYYY")
             dateUpdated(formatString: "MMMM Do, YYYY")
-            featured {
-              childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
           }
           fields {
             slug {

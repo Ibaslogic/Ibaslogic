@@ -15,7 +15,7 @@ const ContactContent = () => {
     }
   `)
   return (
-    <section>
+    <section className={contactContentStyles.contact}>
       <div className={contactContentStyles.inner}>
         <div className={contactContentStyles.heading}>
           <h1>Let's talk about your project</h1>

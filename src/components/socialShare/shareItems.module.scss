@@ -1,0 +1,55 @@
+$share-border: rgb(225, 225, 225);
+
+.container {
+  padding-top: 1rem;
+  @media screen and (min-width: 960px) {
+    position: sticky;
+    top: 82px;
+  }
+}
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 1.4rem;
+}
+.list {
+  display: flex;
+  list-style: outside none none;
+  margin: 0px;
+  @media screen and (min-width: 960px) {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 10px 22px 10px 0px;
+    @media screen and (min-width: 960px) {
+      margin: 15px 0px;
+    }
+
+    a {
+      font-size: 18px;
+      padding: 5px 7px 2px;
+      border: 1px solid $share-border;
+      border-radius: 50%;
+    }
+  }
+}
+.twitter {
+  color: #71baf2;
+  &:hover {
+    color: #2092eb;
+  }
+}
+.facebook {
+  color: #4073eb;
+  &:hover {
+    color: #3a589e;
+  }
+}
+.linkedin {
+  color: #0d77b7;
+  &:hover {
+    color: #024b79;
+  }
+}

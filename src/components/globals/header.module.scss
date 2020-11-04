@@ -1,20 +1,8 @@
-$header-bg-color: #373636;
-$main-white: #fff;
-$white-a80: hsla(0, 0%, 100%, 0.878);
-$nav-link: $white-a80;
-$content-max-width: 76rem;
-$plr: 1em;
-$plrls: 2em;
-$link-color: #ff7c3c;
-
-// mixins
-@mixin transition {
-  transition: all 0.35s ease-out;
-  -webkit-transition: all 0.35s ease-out;
-  -moz-transition: all 0.35s ease-out;
-  -ms-transition: all 0.35s ease-out;
-  -o-transition: all 0.35s ease-out;
-}
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/mixins"; //mixins
+@import "../../styles/base/align"; //default padding left right max-width
 
 // No Scroll on Menu toggle on Mobile
 .noScroll {
@@ -22,13 +10,35 @@ $link-color: #ff7c3c;
 }
 
 .container {
-  background: inherit;
+  background: $color-white-main none repeat scroll 0% 0%;
+  border-bottom: 1px solid $color-grey-a30;
   height: 50px;
-  color: $main-white;
   z-index: 9;
   width: 100%;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.01),
-    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 6px rgba($color-dark-main, 0.04);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scrolled {
+  .container {
+    @media screen and (min-width: 768px) {
+      background: $color-white-main none repeat scroll 0% 0%;
+      border-bottom: 1px solid $color-grey-a30;
+      box-shadow: 0 3px 6px rgba($color-dark-main, 0.04);
+      a,
+      svg {
+        color: $color-grey;
+
+        &:hover {
+          color: $color-grey !important;
+        }
+      }
+    }
+  }
 }
 
 .headerContentWrap {
@@ -38,7 +48,7 @@ $link-color: #ff7c3c;
   height: 50px;
   flex-wrap: wrap;
   @media screen and (min-width: 768px) {
-    max-width: $content-max-width;
+    max-width: $max-width;
     margin: 0 auto;
     padding-right: $plrls;
     padding-left: $plrls;
@@ -51,7 +61,7 @@ $link-color: #ff7c3c;
   justify-content: center;
 
   a {
-    color: $nav-link;
+    color: $color-grey;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -60,12 +70,15 @@ $link-color: #ff7c3c;
     height: 50px;
     text-align: center;
     margin-right: 10px;
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
   }
   svg {
     opacity: 0.8;
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 
@@ -74,8 +87,15 @@ $link-color: #ff7c3c;
   border: none;
   cursor: pointer;
   outline: none;
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
   svg {
-    color: $nav-link;
+    color: $color-grey;
+    opacity: 0.8;
   }
 
   .themeMode {
@@ -93,13 +113,13 @@ $link-color: #ff7c3c;
       svg {
         width: 19px;
         height: 16px;
-        margin-right: 2px;
+        // margin-right: 2px;
       }
     }
 
     &.sun {
       svg {
-        margin-right: 2px;
+        // margin-right: 2px;
         width: 19px;
         height: 19px;
       }
@@ -122,7 +142,7 @@ $link-color: #ff7c3c;
 .brand {
   margin-left: 10px;
   @media screen and (min-width: 768px) {
-    margin: 0px;
+    margin: 0px 20px 0 0;
   }
 }
 
@@ -137,7 +157,7 @@ $link-color: #ff7c3c;
 .nav-link {
   display: block;
   line-height: 1.3125rem;
-  color: $white-a80;
+  color: $color-grey;
   letter-spacing: -0.03em;
   text-decoration: none;
   font-size: 1.1rem;
@@ -147,17 +167,18 @@ $link-color: #ff7c3c;
 
   &:hover,
   &:focus {
-    color: $link-color !important;
+    color: $color-light-pink !important;
     @media screen and (min-width: 768px) {
-      color: $nav-link !important;
+      color: $color-grey !important;
+      background-color: $color-dark-a30;
     }
   }
 
   &.active-nav-item {
-    color: $link-color !important;
+    color: $color-light-pink !important;
     @media screen and (min-width: 768px) {
       opacity: 1;
-      color: $nav-link !important;
+      color: $color-light-pink !important;
     }
   }
 
@@ -168,6 +189,7 @@ $link-color: #ff7c3c;
     position: relative;
     text-transform: capitalize;
     opacity: 1;
+    padding: 15px 20px 14px;
 
     &::after {
       content: "";
@@ -176,16 +198,10 @@ $link-color: #ff7c3c;
       left: 0;
       right: 0;
       bottom: 0;
-      height: 1px;
-      background: $nav-link;
+      height: 2px;
+      background: $color-light-pink;
       opacity: 0;
       @include transition;
-    }
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
     }
 
     &.active-nav-item {
@@ -238,9 +254,9 @@ $link-color: #ff7c3c;
 .btn-line {
   position: absolute;
   display: block;
-  background: $white-a80;
+  background: $primary-color;
   width: 28px;
-  right: 17px;
+  left: 15px;
   height: 2px;
   @include transition;
 
@@ -260,7 +276,7 @@ $link-color: #ff7c3c;
 
 .menu-nav {
   overflow-y: scroll;
-  background: $header-bg-color;
+  background: $color-white-main;
   height: 0;
   padding: 0;
   margin: 0;
@@ -313,36 +329,6 @@ $link-color: #ff7c3c;
     margin-top: 3rem;
     @media screen and (min-width: 768px) {
       margin-top: 0;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-left: 2.5rem;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-left: 3.4rem;
-  }
-}
-
-// top bar
-
-.main_flashes {
-  display: block;
-  width: 100%;
-}
-
-.flash_message {
-  background: $main-white;
-  padding: 5px $plr;
-  text-align: center;
-
-  p {
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-    margin: 0;
-    @media screen and (min-width: 600px) {
-      font-size: 14px;
     }
   }
 }
