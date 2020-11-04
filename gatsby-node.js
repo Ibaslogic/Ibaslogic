@@ -8,7 +8,7 @@ module.exports.onCreateNode = ({ node, actions, getNode }) => {
 
     // To filter by source instance - i.e mdx files in the 'src/...' directory
 
-    // let's get all the source instance from the parent node
+    // let's get all the source instance from the parent node.
     const collection = getNode(node.parent).sourceInstanceName
 
     // Then create field called "collection" having all the parent source instance.
