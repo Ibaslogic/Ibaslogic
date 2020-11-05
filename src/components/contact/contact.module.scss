@@ -38,9 +38,9 @@ $max-width: 960px;
 }
 
 .desc {
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 30px;
-  line-height: 1.6;
+  line-height: 24px;
 
   a {
     color: inherit;
@@ -75,7 +75,7 @@ $max-width: 960px;
     outline: none;
     padding: 10px;
     line-height: 1.66667;
-    border: 1px solid $color-grey-a80;
+    border: 1px solid rgba($color-grey, .4);
     font-family: $fonts;
 
     &::placeholder,

@@ -113,13 +113,11 @@
       svg {
         width: 19px;
         height: 16px;
-        // margin-right: 2px;
       }
     }
 
     &.sun {
       svg {
-        // margin-right: 2px;
         width: 19px;
         height: 19px;
       }
@@ -157,13 +155,13 @@
 .nav-link {
   display: block;
   line-height: 1.3125rem;
-  color: $color-grey;
+  color: rgba($primary-color, .8);
   letter-spacing: -0.03em;
   text-decoration: none;
   font-size: 1.1rem;
   text-transform: uppercase;
-  font-weight: 400;
-  padding: 16px 1em;
+  font-weight: 700;
+  padding: 13px 1em;
 
   &:hover,
   &:focus {
@@ -187,6 +185,8 @@
     padding: 6px 0;
     font-size: 14px;
     position: relative;
+    color: $color-grey;
+    font-weight: 400;
     text-transform: capitalize;
     opacity: 1;
     padding: 15px 20px 14px;
@@ -262,7 +262,7 @@
 
   &:nth-of-type(1) {
     transform: rotate(0deg);
-    top: 17px;
+    top: 18px;
   }
   &:nth-of-type(2) {
     transform: rotate(0deg);
@@ -270,7 +270,7 @@
   }
   &:nth-of-type(3) {
     transform: rotate(0deg);
-    bottom: 17px;
+    bottom: 18px;
   }
 }
 
