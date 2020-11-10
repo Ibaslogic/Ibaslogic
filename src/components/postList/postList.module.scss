@@ -31,7 +31,7 @@
 
 .excerpt {
   position: relative;
-  max-height: 50px;
+  max-height: 48px;
   overflow: hidden;
   font-size: 15px;
 
@@ -42,7 +42,7 @@
     position: absolute;
     box-shadow: rgba($color-white-main, 0.85) -16px 0px 14px 0px;
     left: 90px;
-    bottom: 5px;
+    bottom: 3px;
     background-color: $color-white-main;
     color: $color-light-blue;
     padding-right: 100%;
