@@ -275,9 +275,7 @@ Comparing this code to the one we write directly in the HTML file at the beginni
 
 > **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`).
 >
-> A **module** is just a file that usually contains a class or library of functions.
->
-> And `create-react-app` CLI have both files installed for us to use.
+> A **module** is just a file that usually contains a class or library of functions. And `create-react-app` CLI have both files installed for us to use.
 
 Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
 

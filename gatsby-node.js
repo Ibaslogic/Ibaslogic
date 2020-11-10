@@ -117,8 +117,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.fields.slug.name,
         postPath: node.fields.slug.relativePath,
-        //related articles
-        relatedArticles: getRelatedArticles(node, seriesPosts),
       },
     })
   })
@@ -127,6 +125,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const prev =
       index === articlesPosts.length - 1 ? null : articlesPosts[index + 1].node
     const next = index === 0 ? null : articlesPosts[index - 1].node
+
     createPage({
       path: `/${node.fields.slug.name}`,
       component: articleTemplate,
@@ -135,6 +134,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
         postPath: node.fields.slug.relativePath,
         prev,
         next,
+        //related articles
+        relatedArticles: getRelatedArticles(node, articlesPosts),
       },
     })
   })

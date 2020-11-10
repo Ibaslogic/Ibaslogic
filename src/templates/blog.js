@@ -1,9 +1,8 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Img from "gatsby-image"
-import Sidebar from "../components/sidebar/sidebar"
 import ShareItems from "../components/socialShare/shareItems"
+import TagLinks from "../components/tagLinks/tagLinks"
 import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
@@ -14,7 +13,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Comment from "../components/comment"
 import PostMeta from "../components/postMeta"
-import SeriesTagLinks from "../components/tagLinks/series"
+import Newsletter from "../components/newsletter/newsletter"
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -32,16 +32,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        datePublished(formatString: "Do MMM, YY")
-        dateUpdated(formatString: "Do MMM, YY")
         tags
-        featured {
-          childImageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
       body
     }
@@ -62,16 +53,12 @@ export const query = graphql`
 
 const Blog = ({ data, pageContext }) => {
   const {
-    datePublished,
-    dateUpdated,
     title,
     description,
     tags,
-    featured,
   } = data.postsData.frontmatter
   const { excerpt, timeToRead, tableOfContents, body } = data.postsData
   const { siteUrl, twitterHandle, author_avatar } = data.siteData.siteMetadata
-  const image = featured ? featured.childImageSharp.fluid : null
 
   const authorAvatar = data.getAuthorAvatar.edges.find(
     ({ node }) => node.relativePath === author_avatar
@@ -105,86 +92,67 @@ const Blog = ({ data, pageContext }) => {
         title={title}
         excerpt={excerpt}
         description={description}
-        image={image}
         isBlogPost
       />
-      <div
-        id="primary"
-        className={`${blogPageStyles.container} ${blogPageStyles.wrap}`}
-      >
-        <main
-          className={blogPageStyles.siteMain} //bg_dtl_pp
-          role="main"
-        >
-          <article className={blogPageStyles.singlePost}>
-                    
-            <header className={blogPageStyles.entryHeader}>
-              <h1>{title}</h1>
-              
-              <PostMeta authorAvatar={authorAvatar} datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} pageContext={pageContext} isSeries/>
+      <div className={`bg_dtl_pp ${blogPageStyles.wrapper}`}>
+        <div className={blogPageStyles.inner}>
+          <main
+            id="primary"
+            className={blogPageStyles.siteMain}
+            role="main"
+          >
+            <article className={blogPageStyles.singlePost}>
 
-              {featured &&  <Img
-              className={blogPageStyles.featuredImage}
-              fluid={featured.childImageSharp.fluid}
-              alt={title}
-              backgroundColor="#eaeaea"
-            />}
-            </header>
+              <header className={blogPageStyles.entryHeader}>
+                <h1>{title}</h1>
+                <PostMeta authorAvatar={authorAvatar} timeToRead={timeToRead} pageContext={pageContext} isSeries />
+              </header>
 
-            <div className={blogPageStyles.entryContent}>
-              <MDXProvider
-                components={{
-                  PostSeriesLink,
-                  PostNextUnit,
-                  TableOfContents: () => (
-                    <TableOfContents
-                      items={tableOfContents.items}
-                      slug={pageContext.slug}
-                    ></TableOfContents>
-                  ),
-                }}
-              >
-                <MDXRenderer>{body}</MDXRenderer>
-              </MDXProvider>
+              <div className={blogPageStyles.content}>
+                <MDXProvider
+                  components={{
+                    PostSeriesLink,
+                    PostNextUnit,
+                    TableOfContents: () => (
+                      <TableOfContents
+                        items={tableOfContents.items}
+                        slug={pageContext.slug}
+                      ></TableOfContents>
+                    ),
+                  }}
+                >
+                  <MDXRenderer>{body}</MDXRenderer>
+                </MDXProvider>
+              </div>
+            </article>
+          </main>
+
+          <aside className={`bg_dtd ${blogPageStyles.aside}`}>
+            <div className={blogPageStyles.asideContent}>
+              <div className={blogPageStyles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={blogPageStyles.share}>
+                <ShareItems
+                  slug={pageContext.slug}
+                  title={title}
+                  twitterHandle={twitterHandle}
+                  siteUrl={siteUrl}
+                  heading="Share"
+                />
+              </div>
             </div>
-            <SeriesTagLinks tags={tags}/>
-          </article>
-          <div className={blogPageStyles.discus}>
-            <div className={blogPageStyles.socialShare_tablet}>
-              <ShareItems
-                slug={pageContext.slug}
-                title={title}
-                twitterHandle={twitterHandle}
-                siteUrl={siteUrl}
-                heading="share"
-              />
-            </div>
+          </aside>
+
+          <section className={blogPageStyles.secondary}>
+            <Newsletter socialhandle={twitterHandle} />
             <div className={blogPageStyles.commentSection}>
               <h2 className={`discusion__title ${blogPageStyles.title}`}>
                 Discussion
               </h2>
               <Comment commentBoxRef={commentBoxRef} />
             </div>
-          </div>
-        </main>
-        <div className={blogPageStyles.socialShare_largeScreen}>
-          <ShareItems
-            slug={pageContext.slug}
-            title={title}
-            twitterHandle={twitterHandle}
-            siteUrl={siteUrl}
-            heading="share"
-          />
+          </section>
         </div>
-        <aside className={`secondary__area ${blogPageStyles.secondaryArea}`}>
-          <Sidebar
-            relatedArticles={pageContext.relatedArticles}
-            twitterHandle={twitterHandle}
-            slug={pageContext.slug}
-          />
-        </aside>   
       </div>
-     
       <ScrollTop />
     </Layout>
   )

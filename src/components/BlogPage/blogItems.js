@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Post from "../post"
+import PostList from "../postList"
 import FilterPosts from "./filterPosts"
 import blogStyles from "./blogItems.module.scss"
 
@@ -9,7 +9,7 @@ const getCategories = items => {
   })
   let tempCategories = new Set(tempItems)
   let categories = Array.from(tempCategories)
-  categories = ["all posts", ...categories]
+  categories = ["all series", ...categories]
   return categories
 }
 
@@ -29,7 +29,7 @@ const BlogItems = ({ items }) => {
   // handle filter posts
   const handleItems = category => {
     let tempItems = [...postItems]
-    if (category === "all posts") {
+    if (category === "all series") {
       setBlogPostItems(tempItems)
       setSelectedItem(category)
     } else {
@@ -45,6 +45,10 @@ const BlogItems = ({ items }) => {
     return (
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
+          <div className={blogStyles.topContent}>
+            <h1>The Up-to-date Practical Guides</h1>
+            <p>Level up your Dev knowledge with our series of in-depth and easy to follow guides. Go ahead and explore by category.</p>
+          </div>
           <FilterPosts
             categories={categories}
             handleItems={handleItems}
@@ -52,16 +56,15 @@ const BlogItems = ({ items }) => {
           />
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
-              const { frontmatter, id, timeToRead, fields } = node
-              const { title, dateUpdated, datePublished, featured } = frontmatter
+              const { frontmatter, id, timeToRead, excerpt, fields } = node
+              const { title, tags } = frontmatter
               return (
-                <Post
+                <PostList
                   key={id}
                   title={title}
-                  updated={dateUpdated}
-                  posted={datePublished}
+                  tags={tags}
                   time={timeToRead}
-                  fluid={featured && featured.childImageSharp.fluid}
+                  excerpt={excerpt}
                   slug={fields.slug.name}
                 />
               )

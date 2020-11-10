@@ -1,16 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ShareItems from "../components/socialShare/shareItems"
 import TagLinks from "../components/tagLinks/tagLinks"
-import articleStyle from "./article.module.scss"
+import blogPageStyles from "./blogpage.module.scss"
 import SEO from "../components/seo"
 import NavigatePosts from "../components/navigatePost/navigate"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
 import PostMeta from "../components/postMeta"
+import ScrollTop from "../components/BlogPage/scrollTop"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-// import Comment from "../components/comment"
+import RelatedArticles from "../components/RelatedArticles/relatedArticles"
+import Newsletter from "../components/newsletter/newsletter"
+import Comment from "../components/comment"
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,18 +36,6 @@ export const query = graphql`
       }
       body
     }
-    getAuthorAvatar: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-      edges {
-        node {
-          relativePath
-          childImageSharp {
-            fixed(height: 32) {
-              ...GatsbyImageSharpFixed_withWebp
-            }
-          }
-        }
-      }
-    }
   }
 `
 
@@ -63,14 +54,33 @@ const Article = ({ data, pageContext }) => {
   const prev = pageContext.prev
     ? {
       url: pageContext.prev.fields.slug.name,
+      title: pageContext.prev.frontmatter.title,
     }
     : null
   const next = pageContext.next
     ? {
       url: pageContext.next.fields.slug.name,
+      title: pageContext.next.frontmatter.title,
     }
     : null
 
+  const commentBoxRef = React.createRef()
+
+  useEffect(() => {
+    const scriptEle = document.createElement("script")
+    scriptEle.async = true
+    scriptEle.src = "https://utteranc.es/client.js"
+    scriptEle.setAttribute("repo", "ibaslogic/comments")
+    scriptEle.setAttribute("issue-term", "pathname")
+    scriptEle.setAttribute("id", "utterances")
+    scriptEle.setAttribute("theme", "github-light")
+    scriptEle.setAttribute("crossorigin", "anonymous")
+    if (commentBoxRef && commentBoxRef.current) {
+      commentBoxRef.current.appendChild(scriptEle)
+    } else {
+      console.log(`Error with utterances comments on: ${commentBoxRef}`)
+    }
+  }, [])
 
   return (
     <Layout>
@@ -80,53 +90,70 @@ const Article = ({ data, pageContext }) => {
         description={description}
         isBlogPost
       />
-      <main
-        id="primary"
-        className={`bg_dtl_pp ${articleStyle.siteMain}`}
-        role="main"
-      >
-        <article className={articleStyle.singlePost}>
-          <header className={articleStyle.entryHeader}>
-            <h1 className={articleStyle.title}>{title}</h1>
-            <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} pageContext={pageContext} />
-          </header>
-
-          <div className={articleStyle.content}>
-            <MDXProvider
-              components={{
-                TableOfContents: () => (
-                  <TableOfContents
-                    items={tableOfContents.items}
-                    slug={pageContext.slug}
-                  ></TableOfContents>
-                ),
-              }}
-            >
-              <MDXRenderer>{body}</MDXRenderer>
-            </MDXProvider>
-          </div>
-        </article>
-        <aside className={articleStyle.secondary}>
-          <div className={articleStyle.secondaryContent}>
-            <div className={articleStyle.tags}>{tags && <TagLinks tags={tags} />}</div>
-            <div className={articleStyle.navigateContainer}>
-              <NavigatePosts
-                prev={prev}
-                next={next}
-              />
+      <div className={`bg_dtl_pp ${blogPageStyles.wrapper}`}>
+        <div className={blogPageStyles.inner}>
+          <main
+            id="primary"
+            className={blogPageStyles.siteMain}
+            role="main"
+          >
+            <article className={blogPageStyles.singlePost}>
+              <header className={blogPageStyles.entryHeader}>
+                <h1>{title}</h1>
+                <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} pageContext={pageContext} />
+              </header>
+              <div className={blogPageStyles.content}>
+                <MDXProvider
+                  components={{
+                    TableOfContents: () => (
+                      <TableOfContents
+                        items={tableOfContents.items}
+                        slug={pageContext.slug}
+                      ></TableOfContents>
+                    ),
+                  }}
+                >
+                  <MDXRenderer>{body}</MDXRenderer>
+                </MDXProvider>
+              </div>
+            </article>
+          </main>
+          <aside className={`bg_dtd ${blogPageStyles.aside}`}>
+            <div className={blogPageStyles.asideContent}>
+              <div className={blogPageStyles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={blogPageStyles.navigateContainer}>
+                <NavigatePosts
+                  prev={prev}
+                  next={next}
+                />
+              </div>
+              <div className={blogPageStyles.share}>
+                <ShareItems
+                  slug={pageContext.slug}
+                  title={title}
+                  twitterHandle={twitterHandle}
+                  siteUrl={siteUrl}
+                  heading="Share"
+                />
+              </div>
             </div>
-            <div className={articleStyle.share}>
-              <ShareItems
-                slug={pageContext.slug}
-                title={title}
-                twitterHandle={twitterHandle}
-                siteUrl={siteUrl}
-                heading="Share"
-              />
+          </aside>
+          <section className={blogPageStyles.secondary}>
+            <Newsletter socialhandle={twitterHandle} />
+            {(pageContext.relatedArticles.length && (
+              <RelatedArticles articles={pageContext.relatedArticles} />
+            )) ||
+              null}
+            <div className={blogPageStyles.commentSection}>
+              <h2 className={`discusion__title ${blogPageStyles.title}`}>
+                Discussion
+              </h2>
+              <Comment commentBoxRef={commentBoxRef} />
             </div>
-          </div>
-        </aside>
-      </main>
+          </section>
+        </div>
+      </div>
+      <ScrollTop />
     </Layout>
   )
 }

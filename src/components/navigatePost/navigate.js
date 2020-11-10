@@ -10,7 +10,7 @@ const NavigatePosts = ({ prev, next }) => {
   return (
     <div className={`bg_dm ${styles.navigatePosts}`}>
       {prev && (
-        <Link to={`/${prev.url}`}>
+        <Link to={`/${prev.url}/`} title={prev.title}>
           <span className={styles.arrow}>
             <FaArrowLeft />
           </span>
@@ -18,7 +18,7 @@ const NavigatePosts = ({ prev, next }) => {
         </Link>
       )}
       {next && (
-        <Link to={`/${next.url}`}>
+        <Link to={`/${next.url}/`} title={next.title}>
           <span className={styles.next}>Next</span>
           <span className={styles.arrow}>
             <FaArrowRight />

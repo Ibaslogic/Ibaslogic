@@ -106,8 +106,7 @@ h6 {
   font-weight: 700;
 }
 
-h2 a,
-h2 a:hover {
+h2 a {
   color: var(--dark-color);
 }
 
@@ -274,8 +273,8 @@ blockquote .gatsby-highlight + p {
 
 // Gatsby default image class
 .gatsby-resp-image-wrapper {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 // Home page header
@@ -381,7 +380,7 @@ Subscribe Form
 }
 
 .field__input {
-  padding: 0px 25px;
+  padding: 0px 15px;
   border: 1px solid #e6e6e6;
   margin-bottom: 4px;
   color: inherit;
@@ -464,9 +463,9 @@ Subscribe Form
   }
 }
 
-// Sidebar Subscribe
+// Post Subscribe
 
-.sidebar__subscribe {
+.post__subscribe {
   .field__input {
     margin-bottom: 8px;
   }
@@ -497,7 +496,7 @@ Next Series Posts
   margin-top: 2rem;
   .next__heading {
     padding-top: 1.3rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -506,7 +505,7 @@ Next Series Posts
     color: var(--color-white-a80);
     border-radius: 2px;
     padding: 8px 14px 10px;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: capitalize;
 
     &:hover,
@@ -586,8 +585,7 @@ body {
       background-color: var(--color-bg-dm-pry);
     }
 
-    // .tag__container,
-    .secondary__area,
+    // .secondary__area,
     .edit__post,
     .author__avatar {
       color: var(--color-white-a80);
@@ -596,7 +594,7 @@ body {
 
     .darkLight__link svg,
     .content__right a svg, 
-    .bg_dm a, .bg_dm_wc{
+    .bg_dm a, .bg_dm li, .bg_dm_wc{
         color: var(--color-white-a80);
     }
 
@@ -628,18 +626,6 @@ body {
       color: var(--color-white-a80) !important;
     }
 
-    .list__item {
-      border-color: var(--color-white-a20);
-      background-color: var(--color-bg-dm-secondary);
-      a {
-        color: var(--color-white-a80);
-        div,
-        span {
-          color: inherit;
-        }
-      }
-    }
-
     .email__input,
     .form__field {
       input,
@@ -665,22 +651,22 @@ body {
       border-color: var(--color-white-a20);
     }
 
+    .bg_dtd,
     .about__content_wrap,
     .subscribe__content {
       border-color: var(--color-white-a20);
       background: var(--color-bg-dm-pry);
     }
 
-    main,
-    .hero__container,
+    // main,
+    .hero__container, 
     .about__hero,
     section#blog {
       background-color: var(--color-bg-dm-pry) !important;
     }
 
     .sectionWrapper,
-    .bg_dm,
-    .bg_dtd {
+    .bg_dm {
       background-color: var(--color-bg-dm-pry);
     }
 
@@ -692,13 +678,7 @@ body {
       }
     }
 
-    .recent__post,
-    .sign__up,
-    .list__container > ul,
-    .list__container,
     .bg_dtl,
-    .sectionWrapper.newsletter,
-    .flash__message,
     table tr:nth-child(2n) {
       background-color: var(--color-bg-dm-secondary) !important;
       border-color: var(--color-bg-dm-secondary) !important;
@@ -712,7 +692,7 @@ body {
     }
 
     //General btn on hover (and home page blog section)
-    .btn-primary {
+    .btn-primary,.hover_white button {
       &.readMore,
       &:hover,
       &:focus {
@@ -732,6 +712,20 @@ body {
 
     .sidebarTitle {
       border-color: var(--color-white-a20) !important;
+    }
+
+    .shadow {
+      box-shadow: var(--color-bg-dm-pry) -16px 0px 14px 0px;
+      background: var(--color-bg-dm-pry);
+    }
+
+    .dm a, .dm svg {
+      @media screen and (min-width: 768px) {
+        &:hover, &:focus {
+          color: var(--color-white-main) !important;
+          background-color:  rgba(0, 0, 0, 0.08);
+        }
+      }
     }
     //end dark mode
   }

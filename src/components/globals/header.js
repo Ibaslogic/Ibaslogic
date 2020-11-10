@@ -14,13 +14,13 @@ const Header = () => {
   const [links] = useState([
     {
       id: 1,
-      path: "/blog/",
-      text: "series",
+      path: "/articles/",
+      text: "articles",
     },
     {
       id: 2,
-      path: "/articles/",
-      text: "articles",
+      path: "/blog/",
+      text: "series",
     },
     {
       id: 3,
@@ -76,7 +76,7 @@ const Header = () => {
         <Helmet>
           <html className={navbarOpen ? `${headerStyles.noScroll}` : ``} />
         </Helmet>
-        <div className={headerStyles.headerContentWrap}>
+        <div className={`dm ${headerStyles.headerContentWrap}`}>
           <div className={headerStyles.brandContainer}>
             <div className={headerStyles.brand}>
               <Link to="/" className={headerStyles.brandLink}>

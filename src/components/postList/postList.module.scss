@@ -4,7 +4,6 @@
 
 .listItem {
   padding: 1rem 0;
-  border-bottom: 2px solid $color-grey-a30;
 
   &:last-child {
     border-bottom: none;
@@ -13,12 +12,6 @@
   a {
     color: inherit;
   }
-
-  &:hover {
-    h2 {
-      text-decoration: underline;
-    }
-  }
 }
 
 .content {
@@ -26,8 +19,40 @@
 }
 .entryTitle {
   font-size: 18px;
+  margin-bottom: 5px;
+
+  &:hover {
+    text-decoration: underline;
+  }
   @media screen and (min-width: 960px) {
     font-size: 20px;
+  }
+}
+
+.excerpt {
+  position: relative;
+  max-height: 50px;
+  overflow: hidden;
+  font-size: 15px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  span { 
+    position: absolute;
+    box-shadow: rgba($color-white-main, 0.85) -16px 0px 14px 0px;
+    left: 90px;
+    bottom: 5px;
+    background-color: $color-white-main;
+    color: $color-light-blue;
+    padding-right: 100%;
+    padding-left: 4px;
+  }
+
+  a {
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -36,6 +61,8 @@
   font-size: 13px;
   line-height: 18.2px;
   color: rgba($primary-color, 0.6);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .divider {
@@ -48,7 +75,7 @@
     background: rgba($primary-color, 0.6);
     position: absolute;
     top: 7px;
-    left: 2px;
+    left: -7px;
   }
 }
 

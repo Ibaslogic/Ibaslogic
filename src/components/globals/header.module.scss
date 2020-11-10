@@ -158,10 +158,10 @@
   color: rgba($primary-color, .8);
   letter-spacing: -0.03em;
   text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 13px 1em;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 12px 1em;
 
   &:hover,
   &:focus {
@@ -326,7 +326,7 @@
     margin: 0;
   }
   &:nth-of-type(1) {
-    margin-top: 3rem;
+    margin-top: 2rem;
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }

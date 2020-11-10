@@ -28,8 +28,8 @@ export const query = graphql`
           id
           frontmatter {
             title
+            tags
             category
-            datePublished(formatString: "MMMM Do, YYYY")
             dateUpdated(formatString: "MMMM Do, YYYY")
             featured {
               childImageSharp {
@@ -45,6 +45,7 @@ export const query = graphql`
             }
           }
           timeToRead
+          excerpt
         }
       }
     }

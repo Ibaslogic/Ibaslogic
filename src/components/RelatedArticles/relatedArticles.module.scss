@@ -1,0 +1,41 @@
+// Import
+// ===================================================
+@import "../../styles/base/colors"; //colors
+@import "../../styles/base/mixins"; //mixins
+
+.listContainer {
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.list {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  margin: 0;
+  a {
+    color: inherit;
+    border: 1px solid $color-grey-a10;
+    border-radius: 3px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #f9fafb;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.subTitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 3rem 0 1.5rem;
+
+  @media screen and (min-width: 960px) {
+    font-size: 1.4rem;
+  }
+}
+

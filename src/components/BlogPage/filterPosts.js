@@ -8,7 +8,7 @@ const FilterPosts = ({
   selectedItem,
 }) => {
   return (
-    <div className={`bg_dtl ${styles.filterContainer}`}>
+    <div className={`bg_dtl hover_white ${styles.filterContainer}`}>
       <div className={styles.filter}>
         {categories.map((category, index) => {
           return (

@@ -169,7 +169,6 @@ $inner-max-width: 870px;
   &:last-child {
     border-bottom: none;
   }
-
   a {
     color: inherit;
   }
@@ -180,17 +179,20 @@ $inner-max-width: 870px;
   grid-column-gap: 8px;
   grid-row-gap: 2px;
   grid-template-areas:
-    "header entryTitle entryTitle entryTitle entryTitle entryTitle"
-    "content content content content content content"
-    "meta meta meta meta meta meta";
+    "header entryTitle"
+    "content content"
+    "meta meta";
 
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 100px 1fr;
 
   @media screen and (min-width: 480px) {
     grid-template-areas:
-      "header entryTitle entryTitle entryTitle entryTitle entryTitle"
-      "header content content content content content"
-      "header meta meta meta meta meta";
+      "header entryTitle"
+      "header content"
+      "header meta";
+  }
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 150px 1fr;
   }
   @media screen and (min-width: 768px) {
     grid-column-gap: 20px;
