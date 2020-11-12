@@ -127,7 +127,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : articlesPosts[index - 1].node
 
     createPage({
-      path: `/${node.fields.slug.name}`,
+      path: `/${node.fields.slug.name}/`,
       component: articleTemplate,
       context: {
         slug: node.fields.slug.name,

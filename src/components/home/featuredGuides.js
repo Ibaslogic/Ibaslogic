@@ -43,8 +43,8 @@ const FeaturedGuides = () => {
   return (
     <section id="featured" className={`bg_dtl ${featuredStyles.featuredGuides}`}>
       <div className={featuredStyles.inner}>
-        <p>Complete our React and Gatsby series and have modern projects in your portfolio.</p>
-        <div className={`dm_brder ${featuredStyles.subHeading}`}> 
+        <p>Level up your Dev knowledge with our series of in-depth and easy to follow guides.</p>
+        <div className={`dm_brder ${featuredStyles.subHeading}`}>
           <SubHeading title="React tutorial series" />
         </div>
 
@@ -54,8 +54,8 @@ const FeaturedGuides = () => {
             const { title } = frontmatter
             return (
               <li className={featuredStyles.listItem} key={id}>
-                <Link className={featuredStyles.subTitle} to={`/${fields.slug.name}/`}>     
-                    {title}
+                <Link className={featuredStyles.subTitle} to={`/${fields.slug.name}/`}>
+                  {title}
                 </Link>
               </li>
             )
@@ -73,8 +73,8 @@ const FeaturedGuides = () => {
             const { title } = frontmatter
             return (
               <li className={featuredStyles.listItem} key={id}>
-                <Link className={featuredStyles.subTitle} to={`/${fields.slug.name}/`}>     
-                    {title}
+                <Link className={featuredStyles.subTitle} to={`/${fields.slug.name}/`}>
+                  {title}
                 </Link>
               </li>
             )

@@ -14,6 +14,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Comment from "../components/comment"
 import PostMeta from "../components/postMeta"
 import Newsletter from "../components/newsletter/newsletter"
+import EditPost from "../components/editPost"
+
 
 
 export const query = graphql`
@@ -105,7 +107,7 @@ const Blog = ({ data, pageContext }) => {
 
               <header className={blogPageStyles.entryHeader}>
                 <h1>{title}</h1>
-                <PostMeta authorAvatar={authorAvatar} timeToRead={timeToRead} pageContext={pageContext} isSeries />
+                <PostMeta authorAvatar={authorAvatar} timeToRead={timeToRead} isSeries />
               </header>
 
               <div className={blogPageStyles.content}>
@@ -130,6 +132,9 @@ const Blog = ({ data, pageContext }) => {
           <aside className={`bg_dtd ${blogPageStyles.aside}`}>
             <div className={blogPageStyles.asideContent}>
               <div className={blogPageStyles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={blogPageStyles.editPost}>
+                <EditPost pageContext={pageContext} isSeries />
+              </div>
               <div className={blogPageStyles.share}>
                 <ShareItems
                   slug={pageContext.slug}

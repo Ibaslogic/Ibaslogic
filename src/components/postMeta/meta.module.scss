@@ -6,7 +6,7 @@
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 1.5em;
-  color: $color-grey;
+  color: rgba($color-grey, .8);
 }
 
 .avatar-container {
@@ -48,22 +48,9 @@
     text-decoration: underline;
   }
 }
-.edit-post {
-  color: $color-grey;
-  margin: 4px;
-  svg {
-    font-size: 9px;
-    margin-left: 3px;
-    color: $color-light-blue;
-  }
-  &:hover,
-  &:focus {
-    color: $color-grey;
-    text-decoration: underline;
-  }
-}
+
 .divider {
-  margin-right: 7px;
+  margin-right: 10px;
   position: relative;
   &::after {
     content: "";

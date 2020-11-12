@@ -50,6 +50,7 @@ $side-max-width: 730px;
     grid-area: aside;
     margin: 0;
     background: #f5f2f0;
+    border-right: 1px solid $color-grey-a30;
   }
 }
 
@@ -188,17 +189,25 @@ $side-max-width: 730px;
   }
 }
 .tags {
-  @media screen and (min-width: 960px) {
-    margin-bottom: 1.5rem;
-  }
+  margin-bottom: 1.5rem;
 }
 
 .navigateContainer {
   margin-top: 2rem;
   @media screen and (min-width: 960px) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
+
+.editPost {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 1.2em;
+  a {
+    color: rgba($color-grey, .8);
+  }
+}
+
 // =====================================================
 // Social Shares
 // ======================

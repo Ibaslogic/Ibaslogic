@@ -45,10 +45,6 @@ const BlogItems = ({ items }) => {
     return (
       <main className={blogStyles.main} role="main">
         <div className={blogStyles.container}>
-          <div className={blogStyles.topContent}>
-            <h1>The Up-to-date Practical Guides</h1>
-            <p>Level up your Dev knowledge with our series of in-depth and easy to follow guides. Go ahead and explore by category.</p>
-          </div>
           <FilterPosts
             categories={categories}
             handleItems={handleItems}

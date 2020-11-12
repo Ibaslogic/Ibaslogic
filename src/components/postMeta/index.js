@@ -1,11 +1,11 @@
 import React from 'react'
-import { FaPencilAlt } from "react-icons/fa"
+
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 import metaStyle from "./meta.module.scss"
 
-const PostMeta = ({ datePublished, dateUpdated, timeToRead, pageContext, authorAvatar, isSeries }) => {
+const PostMeta = ({ datePublished, dateUpdated, timeToRead, authorAvatar, isSeries }) => {
   return (
     <div className={`post__meta ${metaStyle.postMeta}`}>
       {authorAvatar && <Link
@@ -26,7 +26,7 @@ const PostMeta = ({ datePublished, dateUpdated, timeToRead, pageContext, authorA
         !isSeries && (
           <>
             <span className={metaStyle.inlineBlockStyle}>
-              {datePublished === dateUpdated ? " Published " : "Updated"} on{" "}
+              {datePublished === dateUpdated ? " Published " : "Updated"}
               {dateUpdated}
             </span>
             <span className={metaStyle.divider}></span>
@@ -36,20 +36,6 @@ const PostMeta = ({ datePublished, dateUpdated, timeToRead, pageContext, authorA
 
       <span className={metaStyle.inlineBlockStyle}>
         {timeToRead} min read
-      </span>
-      <span className={metaStyle.divider}></span>
-      <span className={metaStyle.inlineBlockStyle}>
-        <a
-          className={`edit__post ${metaStyle.editPost}`}
-          href={
-            `https://github.com/Ibaslogic/Ibaslogic/blob/master/src/contents/${isSeries ? "series" : "articles"}/` +
-            pageContext.postPath
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Edit Post <FaPencilAlt />
-        </a>
       </span>
     </div>
   )

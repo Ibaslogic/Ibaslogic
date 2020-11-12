@@ -11,11 +11,11 @@ const Articles = ({ data }) => {
         title="Comprehensive articles"
         description="This page showcases our step-by-step articles."
       />
-      <ArticlePage items={data} /> 
+      <ArticlePage items={data} />
     </Layout>
   )
 }
- 
+
 export default Articles
 
 export const query = graphql`

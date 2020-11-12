@@ -14,6 +14,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import RelatedArticles from "../components/RelatedArticles/relatedArticles"
 import Newsletter from "../components/newsletter/newsletter"
 import Comment from "../components/comment"
+import EditPost from "../components/editPost"
 
 export const query = graphql`
   query($slug: String!) {
@@ -30,8 +31,8 @@ export const query = graphql`
       frontmatter {
         title
         description
-        datePublished(formatString: "Do MMM, YY")
-        dateUpdated(formatString: "Do MMM, YY")
+        datePublished(formatString: "MMMM DD, YYYY")
+        dateUpdated(formatString: "MMMM DD, YYYY")
         tags
       }
       body
@@ -100,7 +101,7 @@ const Article = ({ data, pageContext }) => {
             <article className={blogPageStyles.singlePost}>
               <header className={blogPageStyles.entryHeader}>
                 <h1>{title}</h1>
-                <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} pageContext={pageContext} />
+                <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} />
               </header>
               <div className={blogPageStyles.content}>
                 <MDXProvider
@@ -126,6 +127,9 @@ const Article = ({ data, pageContext }) => {
                   prev={prev}
                   next={next}
                 />
+              </div>
+              <div className={blogPageStyles.editPost}>
+                <EditPost pageContext={pageContext} />
               </div>
               <div className={blogPageStyles.share}>
                 <ShareItems
