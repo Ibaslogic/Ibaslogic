@@ -3,83 +3,38 @@
 @import "../../styles/base/colors"; //colors
 
 .listItem {
-  padding: 1rem 0;
-
   &:last-child {
     border-bottom: none;
     padding-bottom: 0
   }
+}
 
-  a {
-    color: inherit;
+.link { 
+  padding: 15px 10px;
+  display: block;
+  color: rgba($primary-color, 0.6);
+
+  &:hover {
+    background: $color-grey-a10;
+    color: rgba($primary-color, 0.6);
   }
 }
 
 .content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
   line-height: 22.4px;
 }
 .entryTitle {
   font-size: 18px;
-  margin-bottom: 5px;
-
-  &:hover {
-    text-decoration: underline;
-  }
-  @media screen and (min-width: 960px) {
-    font-size: 20px;
-  }
-}
-
-.excerpt {
-  position: relative;
-  max-height: 48px;
-  overflow: hidden;
-  font-size: 15px;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-  }
-  span { 
-    position: absolute;
-    box-shadow: rgba($color-white-main, 0.85) -16px 0px 14px 0px;
-    left: 90px;
-    bottom: 3px;
-    background-color: $color-white-main;
-    color: $color-light-blue;
-    padding-right: 100%;
-    padding-left: 4px;
-  }
-
-  a {
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
-  }
-}
-
-.meta {
-  margin-top: 10px;
-  font-size: 13px;
-  line-height: 18.2px;
-  color: rgba($primary-color, 0.6);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.divider {
-  position: relative;
-  &::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 2px;
-    background: rgba($primary-color, 0.6);
-    position: absolute;
-    top: 7px;
-    left: -7px;
-  }
+  font-weight: 600;
+  margin-right: 20px;
 }
 
 .time {
-  margin-left: 8px;
+  font-size: 13px;
+  line-height: 18.2px;
+  color: inherit;
+  margin-top: 3px;
 }

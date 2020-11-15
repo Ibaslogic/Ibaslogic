@@ -1,17 +1,13 @@
 $color-grey: #636466;
-$color-dark-pink: #fb6318;
 
 .edit-post {
   color: $color-grey;
-  margin: 4px;
   svg {
-    font-size: 9px;
-    margin-left: 3px;
-    color: $color-dark-pink;
+    font-size: 10px;
+    margin-right: 3px;
   }
   &:hover,
   &:focus {
-    color: $color-grey;
     text-decoration: underline;
   }
 }

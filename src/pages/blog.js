@@ -28,16 +28,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            tags
             category
-            dateUpdated(formatString: "MMMM Do, YYYY")
-            featured {
-              childImageSharp {
-                fluid(maxWidth: 600) {
-                  ...GatsbyImageSharpFluid_noBase64
-                }
-              }
-            }
           }
           fields {
             slug {
@@ -45,7 +36,6 @@ export const query = graphql`
             }
           }
           timeToRead
-          excerpt
         }
       }
     }

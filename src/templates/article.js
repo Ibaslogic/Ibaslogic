@@ -143,7 +143,7 @@ const Article = ({ data, pageContext }) => {
             </div>
           </aside>
           <section className={blogPageStyles.secondary}>
-            <Newsletter socialhandle={twitterHandle} />
+            <Newsletter />
             {(pageContext.relatedArticles.length && (
               <RelatedArticles articles={pageContext.relatedArticles} />
             )) ||

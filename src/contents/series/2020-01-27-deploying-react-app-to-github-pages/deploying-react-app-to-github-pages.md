@@ -3,8 +3,7 @@ title: "How to Deploy React App to GitHub Pages"
 description: "You can deploy your app to GitHub pages in three simple steps. Move your files to the local repository, then to a remote repository and finally to Gh-pages."
 category: "React"
 datePublished: "2020-01-30 10:33:00"
-dateUpdated: "2020-08-14 10:33:00"
-featured: "./images/deploying-react-app-to-github-pages.png"
+dateUpdated: "2020-11-09 10:32:00"
 series: "react_tutorial"
 tags:
   - react

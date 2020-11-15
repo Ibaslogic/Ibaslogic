@@ -6,7 +6,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import styles from "./navigate.module.scss"
 
 const NavigatePosts = ({ prev, next }) => {
-  console.log(prev, next)
   return (
     <div className={`bg_dm ${styles.navigatePosts}`}>
       {prev && (

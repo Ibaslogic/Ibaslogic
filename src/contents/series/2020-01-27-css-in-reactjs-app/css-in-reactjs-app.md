@@ -3,8 +3,7 @@ title: "How to Implement CSS in Reactjs App"
 description: "There are many ways to style a React application. The inline CSS styles, the CSS classes and the CSS Modules."
 category: "React"
 datePublished: "2020-01-29 10:31:00"
-dateUpdated: "2020-03-12 10:31:00"
-featured: "./images/css-in-reactjs-app_.png"
+dateUpdated: "2020-11-10 10:32:00"
 series: "react_tutorial"
 tags:
   - react

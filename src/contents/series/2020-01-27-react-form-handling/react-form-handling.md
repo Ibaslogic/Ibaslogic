@@ -3,8 +3,7 @@ title: "React Tutorial: Working with React Form and Handling Event"
 description: "Form handling in React works a bit different compared to the regular HTML form. In this step-by-step guide, you will learn this in a simple way."
 category: "React"
 datePublished: "2020-01-28 10:29:00"
-dateUpdated: "2020-05-25 10:29:00"
-featured: "./images/react-form-handling_.png"
+dateUpdated: "2020-11-11 10:32:00"
 series: "react_tutorial"
 tags:
   - react
@@ -126,7 +125,7 @@ We need to find a way to access the state data from the `TodoItem` and toggle th
 
 To do this, we will need to raise an event from the `TodoItem` up a level to `TodosList`, and then into `TodoContainer` component. In other words, we need to **climb a ladder**.
 
-![Handling Event](./images/handling-event.png)
+![Handling Event](./images/handlingevent_.png)
 
 The `TodoItem` component will raise the event while the parent component, `TodoContainer` will handle the event. And the way we do that is through `props`.
 
@@ -232,6 +231,64 @@ On looping through the todos data, we check if any of the items id matches the c
 ![State update](./images/stateupdate.png)
 
 You can also see the current state of your app in the React Tools.
+
+## Using the setState updater
+
+You already know that the `setState()` method in a class component is used to update the state. However, the usage in the `handeChange()` has its drawback. Well, it is fine if you do not care about what the previous version of the state was. But trust me, a lot of time, you would care.
+
+You may want to toggle button; increasing a count of numbers by adding 1 to a previous state. And in our case, toggling of the checkboxes. These are some of the scenarios where the next state depends on the previous state. 
+
+So why can’t we just pass a new state to the `setState()` as we have it above?
+
+According to React documentation – "the `setState()` does not always immediately update the component. It may batch or defer the update until later. This makes reading `this.state` right after calling `setState()` a potential pitfall."
+
+Forget about the technical language. React is simply saying you should not rely on the value of `this.state` to calculate the next state. You might not get the intended output.
+
+Instead, it recommends using the setState updater if the next state depends on the previous state. 
+
+To do this, you simply pass an updater function to the `setState()`. That function is going to receive the previous version of the state as its parameter. Like so:
+
+```js
+this.setState((prevState) => ({
+  //update state
+}));
+```
+
+If you update the `handeChange()`, you should have: 
+
+```js{1,2}
+this.setState(prevState => ({
+  todos: prevState.todos.map((todo) => {
+    if (todo.id === id) {
+      todo.completed = !todo.completed;
+    }
+    return todo;
+  }),
+}));
+```
+
+Now instead of using `this.state` within the `setState()` to get the previous state, we are using the snapshot (`prevState`) from the previous state. As it is guaranteed to be up-to-date. From there, we are accessing the `todos` array and then looped through as expected.
+
+Save your file and test your work.
+
+A quick note:
+
+In the `setState()` callback, instead of using the `return` statement to explicitly return an object, we are wrapping it in parenthesis, `()`. Else, your code will look like this:
+
+```js{1,2}
+this.setState(prevState => {
+  return {
+    todos: prevState.todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    }),
+  }
+});
+```
+
+Both methods work fine.
 
 ## Deleting items from the todos
 
@@ -450,7 +507,7 @@ And if you recall from vanilla JavaScript DOM API, the predefined parameter, `e`
 
 ## Handling React form that has more than one text input field
 
-For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the `state` and assigned to them an empty string. After that, you’ll have to modify the `onChange` method to this:
+For instance, if your form requires fields for the name, email and password. First, you would want all those fields included in the `state` and assigned to them an empty string. After that, you’d have to modify the `onChange` method to this:
 
 ```JavaScript{3}
 onChange = e => {
@@ -589,7 +646,7 @@ Save your files. Go to the frontend and add a new todos item to the list.
 
 ![Todos update](./images/todosupdate.png)
 
-What did we do?
+### What did we do?
 
 In the code, we started by defining an object for the new item. In this object, we are passing a set of key-value pair. Here, we have the `title` from the user’s input, the `completed` key assigned a `false` value so that the checkbox is not selected by default. Then, for the meantime, we are working with hardcoded `id`.
 

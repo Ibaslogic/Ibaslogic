@@ -11,7 +11,7 @@ tags:
   - basic
 ---
 
-Straight to the point! What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the "array-like" objects?
+What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the "array-like" objects?
 
 At the end of this guide, you’ll find answers to those questions. If you are familiar with array, let’s take a look at this:
 

@@ -13,7 +13,7 @@ const EditPost = ({ pageContext, isSeries }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Edit Post <FaPencilAlt />
+      <FaPencilAlt /> Edit on GitHub
     </a>
   )
 }

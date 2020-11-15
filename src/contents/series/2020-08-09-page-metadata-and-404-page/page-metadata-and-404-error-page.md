@@ -3,8 +3,7 @@ title: "Gatsby Tutorial: Adding Page Metadata and 404 Error Page"
 description: ""
 category: "Gatsby"
 datePublished: "2020-08-11 10:32:00"
-dateUpdated: "2020-08-11 10:32:00"
-featured: "./images/page-metadata-and-404-page.png"
+dateUpdated: "2020-11-03 10:32:00"
 series: "gatsby_tutorial"
 tags:
   - gatsby

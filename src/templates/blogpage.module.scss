@@ -183,6 +183,8 @@ $side-max-width: 730px;
   padding-top: 0.5em;
 }
 .asideContent {
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: 960px) {
     top: 100px;
     position: sticky;
@@ -193,18 +195,21 @@ $side-max-width: 730px;
 }
 
 .navigateContainer {
-  margin-top: 2rem;
   @media screen and (min-width: 960px) {
     margin-bottom: 1rem;
   }
 }
 
 .editPost {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
-  margin-bottom: 1.2em;
+  margin-bottom: 2em;
+  order: -1;
   a {
     color: rgba($color-grey, .8);
+  }
+  @media screen and (min-width: 960px) {
+    order: 0;
   }
 }
 
@@ -238,7 +243,7 @@ $side-max-width: 730px;
   cursor: pointer;
   text-align: center;
   color: $color-white-main;
-  background-color: rgba($color-light-pink, 0.8);
+  background-color: $color-light-pink;
   border-radius: 50%;
   line-height: 1;
   font-size: 13px;

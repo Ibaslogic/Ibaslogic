@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Article = ({ title, updated, excerpt, tags, posted, time, fixed, slug }) => {
   return (
-    <li className={`list_item ${articleStyles.listItem}`}>
+    <li className={`dm_brder ${articleStyles.listItem}`}>
       <Link to={`/${slug}/`}>
         <article className={articleStyles.article}>
           <div className={articleStyles.entryHeader}>
@@ -25,7 +25,7 @@ const Article = ({ title, updated, excerpt, tags, posted, time, fixed, slug }) =
             <p>{excerpt}</p>
           </div>
           <div className={`bg_dm_wc ${articleStyles.meta}`}>
-            {updated === posted ? " Posted " : "Updated"} on{" "}
+            {updated === posted ? "Published " : "Updated "}
             <span> {updated} </span>
             <span className={articleStyles.divider}> </span>
             <span className={articleStyles.time}> {time} min read </span>

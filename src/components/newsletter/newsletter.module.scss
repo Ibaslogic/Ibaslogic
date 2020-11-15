@@ -1,62 +1,13 @@
-// Import
-// ===================================================
-@import "../../styles/base/colors"; //colors
 .sign-up {
-  box-shadow: 0 2px 15px 0 rgba(210,214,220,0.5);
+  box-shadow: 0 2px 15px 0 rgba(210,214,220,0.8);
   margin-bottom: 2rem;
   font-size: 14px;
 }
 .content {
-  @media screen and(min-width: 480px) {
-    display: flex;
-  }
+  padding: 25px;
 }
-.headingContent {
-  background-color: rgb(249, 250, 251);
-  padding: 3rem 1.5rem;
-  @media screen and(min-width: 480px) {
-    padding: 3rem 2rem;
-  }
-  @media screen and(min-width: 600px) {
-    padding: 3.5rem 3rem;
-  }
-}
-.subscribe {
-  padding: 2.5rem 1.5rem;
-  @media screen and(min-width: 480px) {
-    padding: 3rem 2rem;
-  }
-  @media screen and(min-width: 600px) {
-    padding: 3.5rem 3rem;
-  }
-}
-.title {
-  font-size: 20px;
-  line-height: 27px;
-  margin-bottom: 10px;
-}
-.description {
-  line-height: 24px;
-  margin-bottom: 0;
-  font-size: 15px;
-}
-.getInTouch {
-  margin-top: -8px;
-  text-align: left;
-  font-size: 13px;
-  letter-spacing: 0.03rem;
-  color: rgba($primary-color, 0.6);
-  p {
-    display: inline;
-  }
-  span {
-    margin-right: 5px;
-    a {
-      text-decoration: underline;
-      color: inherit;
-      svg {
-        margin-bottom: -2px;
-      }
-    }
-  }
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
 }

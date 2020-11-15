@@ -1,69 +1,28 @@
-// Import
-// ===================================================
-@import "../../styles/base/colors"; //colors
+$color-grey: #636466;
 
 .post-meta {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   margin-bottom: 1.5em;
-  color: rgba($color-grey, .8);
+  color: rgba($color-grey, .65);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.avatar-container {
-  width: 32px;
-  height: 32px;
-  border-radius: 100%;
-  margin-right: 7px;
-  margin-bottom: 11px;
-  bottom: -8px;
-  display: inline-block;
-  position: relative;
-
-  .avatar {
-    border-radius: 100%;
-  }
-
-  &:after {
-    content: "";
-    border: 1px solid rgb(225, 225, 225);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -1px; 
-    top: -1px;
-    border-radius: 100%;
-    pointer-events: none;
+.breadcrumbs, .date {
+  margin-right: 40px;
+  margin-bottom: 4px;
+  a {
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-.author-avatar {
-  color: inherit;
-  img {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.time {
+  svg {
+    margin-bottom: -1px;
   }
-  &:hover,
-  &:focus {
-    color: $color-grey;
-    text-decoration: underline;
-  }
-}
-
-.divider {
-  margin-right: 10px;
-  position: relative;
-  &::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 2px;
-    background: $color-grey;
-    position: absolute;
-    top: 8px;
-    left: 4px;
-  }
-}
-
-.inlineBlockStyle {
-  display: inline-block;
 }

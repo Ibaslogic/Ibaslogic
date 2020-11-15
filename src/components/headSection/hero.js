@@ -6,7 +6,7 @@ import Subscribe from "../subscribe/subscribe"
 import lineSvg from "../../../static/assets/line.svg"
 
 const Hero = () => {
-  return (  
+  return (
     <section
       style={{
         background: `#373636 url(${lineSvg}) center center fixed`,
@@ -16,11 +16,11 @@ const Hero = () => {
       <div className={heroStyles.heroContent}>
         <h1 className={heroStyles.title}>Dev Articles for the Self-Starters</h1>
         <p className={heroStyles.description}>
-        Ditch the stress going through technical bullshit and start learning in a beginner-friendly way.
+          Ditch the stress of going through technical bullshit and start learning in a beginner-friendly way.
         </p>
 
         <p className={heroStyles.additional}>
-        No fluff or jargons! Just practical guides that work.   
+          No fluff or jargons! Just practical guides that work.
         </p>
 
         <Link
@@ -35,7 +35,7 @@ const Hero = () => {
 
         <div className={heroStyles.subscribe_container}>
           <p>
-          Hold on! Get our <strong style={{ color: "#ff7c3c" }}>FREE</strong> React.js
+            Hold on! Get our <strong style={{ color: "#ff7c3c" }}>FREE</strong> React.js
             book and start building awesome projects:
           </p>
           <div className="home__subscribe">

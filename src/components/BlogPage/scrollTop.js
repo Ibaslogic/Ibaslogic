@@ -6,16 +6,23 @@ import shareStyles from "../../templates/blogpage.module.scss"
 const ScrollTop = () => {
   const [showScrollTop, useshowScrollTop] = useState(false)
 
-  const onScroll = () => {
-    if (window.pageYOffset > 3000) {
-      useshowScrollTop(true)
-    } else {
-      useshowScrollTop(false)
-    }
-  }
-
+  // Detect mount and unmount
   useEffect(() => {
+    let isMounted = true
+    const onScroll = () => {
+      if (isMounted) {
+        if (window.pageYOffset > 3000) {
+          useshowScrollTop(true)
+        } else {
+          useshowScrollTop(false)
+        }
+      }
+    }
     window.addEventListener("scroll", onScroll)
+
+    return () => {
+      isMounted = false
+    }
   }, [])
 
   return (

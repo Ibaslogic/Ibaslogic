@@ -20,13 +20,11 @@ const Tags = ({ pageContext, data }) => {
           <ul className={styles.list}>
             {edges.map(({ node }) => {
               const { id, frontmatter, timeToRead, fields } = node
-              const { title, tags, dateUpdated } = frontmatter
+              const { title } = frontmatter
               return (
                 <PostList
                   key={id}
                   title={title}
-                  updated={dateUpdated}
-                  tags={tags}
                   time={timeToRead}
                   slug={fields.slug.name}
                 />
@@ -53,8 +51,6 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            tags
-            dateUpdated(formatString: "MMMM Do, YYYY")
           }
           fields {
             slug {

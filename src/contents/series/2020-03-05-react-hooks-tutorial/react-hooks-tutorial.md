@@ -3,8 +3,7 @@ title: "React Hooks Tutorial: The Practical Guide to Learning Hooks for Beginner
 description: "React Hooks allows us to use a state and manage the class-based lifecycle logic inside of the function components."
 category: "React"
 datePublished: "2020-03-19 10:32:00"
-dateUpdated: "2020-08-16 10:32:00"
-featured: "./images/react-hooks-tutorial.png"
+dateUpdated: "2020-11-07 10:32:00"
 series: "react_tutorial"
 tags:
   - react

@@ -3,8 +3,7 @@ title: "Styling Gatsby Site with CSS"
 description: ""
 category: "Gatsby"
 datePublished: "2020-08-08 10:32:00"
-dateUpdated: "2020-08-08 10:32:00"
-featured: "./images/styling-in-gatsbyjs.png"
+dateUpdated: "2020-11-10 10:32:00"
 series: "gatsby_tutorial"
 tags:
   - gatsby

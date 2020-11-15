@@ -3,8 +3,7 @@ title: "Making HTTP Request in React and understanding the lifecycle methods"
 description: "React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions."
 category: "React"
 datePublished: "2020-03-18 10:32:00"
-dateUpdated: "2020-03-18 10:32:00"
-featured: "./images/react-http-request-lifecycle-methods.png"
+dateUpdated: "2020-11-08 10:32:00"
 series: "react_tutorial"
 tags:
   - react

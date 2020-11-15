@@ -1,42 +1,34 @@
 import React from 'react'
 
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { Link } from "gatsby"
+import { FaRegClock } from "react-icons/fa";
 
 import metaStyle from "./meta.module.scss"
 
-const PostMeta = ({ datePublished, dateUpdated, timeToRead, authorAvatar, isSeries }) => {
+const PostMeta = ({ datePublished, dateUpdated, timeToRead, title, isSeries }) => {
   return (
     <div className={`post__meta ${metaStyle.postMeta}`}>
-      {authorAvatar && <Link
-        to="/about/"
-        className={`author__avatar ${metaStyle.authorAvatar}`}
-      >
-        <span className={metaStyle.avatarContainer}>
-          <Img
-            fixed={authorAvatar.childImageSharp.fixed}
-            alt={authorAvatar.relativePath}
-            backgroundColor="#eaeaea"
-            className={metaStyle.avatar}
-          />
-        </span>
-        by Ibas<span className={metaStyle.divider}></span>
-      </Link>}
+      {
+        isSeries && (
+          <div className={metaStyle.breadcrumbs}>
+            <span><Link to="/">Home</Link></span><span> » </span><span><Link to="/blog/">Series</Link></span><span> » </span><span>{title}</span>
+          </div>
+        )
+      }
       {
         !isSeries && (
-          <>
-            <span className={metaStyle.inlineBlockStyle}>
-              {datePublished === dateUpdated ? " Published " : "Updated"}
-              {dateUpdated}
-            </span>
-            <span className={metaStyle.divider}></span>
-          </>
+          <div className={metaStyle.date}>
+            {datePublished === dateUpdated ? "Published " : "Updated "}
+            {dateUpdated}
+          </div>
+
         )
       }
 
-      <span className={metaStyle.inlineBlockStyle}>
-        {timeToRead} min read
-      </span>
+      <div className={metaStyle.time}>
+        <FaRegClock /> {timeToRead} min read
+      </div>
     </div>
   )
 }

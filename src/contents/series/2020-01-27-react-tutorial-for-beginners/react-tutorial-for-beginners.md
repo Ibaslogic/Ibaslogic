@@ -1,21 +1,27 @@
 ---
-title: "React Tutorial From Scratch: A Step-by-Step Guide for 2020"
+title: "React Tutorial From Scratch: A Step-by-Step Guide (2021 Update)"
 description: "In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
-dateUpdated: "2020-08-18 10:32:00"
-featured: "./images/react-tutorial-for-beginners.png"
+dateUpdated: "2020-11-12 10:32:00"
 series: "react_tutorial"
 tags:
   - react
   - javascript
 ---
 
-If you are aiming to build a modern website or app that require high performance and safety, then, it's a wise decision learning React JS.
+You have decided to learn React JS. A great choice indeed! Now, you can get to build a modern website or app that require high performance and safety.
+
+Aside from the fact that it has a smaller learning curve
+compared to other frameworks, you get the advantage to use the knowledge acquired and dive into the world of native development.
+
+So once you learn it, you can [jump into React Native](https://reactnative.dev/ "React native documentation") and start building a robust mobile application. 
+
+Still not convinced to learn React?
 
 Today, many developers and site owners are embracing web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
-These are just to name a few. What this means is that you cannot escape learning React if you want to become a present-day developer.
+These are just to name a few. What this means is that you cannot escape learning React JS if you want to become a present-day developer.
 
 In this React tutorial for beginners, you will learn the React JS fundamentals. Besides, you will be able to build React application and deploy on the web.
 
@@ -49,11 +55,9 @@ Now let's get started.
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs from a small and isolated snippet of code.
 
-In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library.
+In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library. Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
 
-Unlike some other frameworks like [Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
-
-Let’s take a step backwards. I mentioned that it allows developers to create complex UI from an isolated snippet of code.
+Let’s take a step backwards. React allows developers to create complex UI from an isolated snippet of code as mentioned earlier.
 
 What does that mean? To understand better, you need to start thinking in React Component.
 
@@ -61,7 +65,9 @@ What does that mean? To understand better, you need to start thinking in React C
 
 When building an application with React, you build a bunch of independent, isolated and reusable components. Think of component as a simple function that you can call with some input and they render some output.
 
-And as we can reuse functions, so also we can reuse components, merge them and thereby creating a complex user interface. Let’s take a look at the image below. A simple To-dos app.
+And as we can reuse functions, so also we can reuse components, merge them and thereby creating a complex user interface. 
+
+Let’s take a look at the image below. It is a simple To-dos app.
 
 As you are aware, we will create this app from scratch in this React tutorial. It may look simple in the eye but trust me, you will get to understand the concept of React and how it works afterwards.
 
@@ -73,7 +79,9 @@ Where each of these units can be represented as a component which can be built i
 
 Still on the image. The parent component (also known as the root component), label `TodoContainer`, holds all the other components (known as children components). The `Header` component renders the header contents, the `InputTodo` component accepts the user’s input, the `TodosList` component renders the todos list and finally, the `TodoItem` component takes care of each of the todos items.
 
-With this breakdown, we will be creating five different components in isolation. Having this instinct shows that you are **thinking in React!**
+With this breakdown, we will be creating five different components in isolation. If you want, you can further decompose the `TodoItem` into smaller components – one holding the checkbox, another holding the todos task and then one holding the delete button.
+
+This way, you are putting on the React cap which makes you think the React way.
 
 Moving on.
 
@@ -162,9 +170,9 @@ Head over to [babel website](https://babeljs.io/repl "babel repl") and add the J
 
 ![Babel repl](./images/babelrepl.png)
 
-You should have something similar to the image above. As seen, the JSX code is converted to plain React code. Here, we can conclude that using JSX to describe what the UI looks like is much easier.
+You should have something similar to the image above. Now, look at what is on the right side of the Babel editor. The JSX code is converted to plain React code. Here, we can conclude that using JSX to describe what the UI looks like is much easier.
 
-Also, remember that we loaded React library in the head of our HTML code even though we are not explicitly using it. But under the hood, React is using the `React` object from the library as you can see on the right side of the Babel editor.
+Also, remember that we loaded React library in the head of our HTML code even though we are not explicitly using it. But under the hood, React is using the `React` object from the library as you can see also on the right side of the editor.
 
 Take note of the following about the JSX
 
@@ -175,13 +183,11 @@ Back to our code. Save the `index.html` file and open it with a web browser.
 
 > Make sure you are connected to the internet as we have included libraries through CDN.
 
-At the moment, nothing is displayed in the browser viewport. But if you open the DevTools and check the Console tab (since we `console.log` the element in our code), you will see an object representing the JSX.
+At the moment, nothing is displayed in the browser viewport. But if you open the DevTools and check the Console tab (since we `console.log` the element in our code), you will see an object representing the JSX. Please take a look.
 
-![DevTools](./images/devtools_.png)
+The output is a React element which is also part of the virtual DOM.
 
-This output is a React element which is also part of the virtual DOM.
-
-In React, this element can have a state. And anytime the state changes, a new React element is created. React compares these elements and figures out what has changed. Then, it reaches out to the real DOM and updates only the changed object.
+In React, the element can have a state. And anytime the state changes, a new React element is created. React compares these elements and figures out what has changed. Then, it reaches out to the real DOM and updates only the changed object.
 
 Let’s render the React element inside of the real DOM for us to see. Update the `script` element so it looks like this:
 
@@ -212,7 +218,7 @@ To install and use this CLI, you will need to have [Nodejs installed](https://no
 
 You can check if you already have Nodejs and npm installed by running these commands `node -v` and `npm -v` respectively in your terminal. Make sure the Node version is **8.10** or higher and the npm version is **5.2** or higher.
 
-But if you don’t have it installed, head over to [Node.js](https://nodejs.org/ "node documentation"), download and install the latest stable version. Then, run the following command from your terminal:
+But if you don’t have it installed, [head over to Node.js](https://nodejs.org/ "node documentation"), download and install the latest stable version. Then, run the following command from your terminal:
 
 ```
 C:\Users\Your Name> npx create-react-app simple-todo-app
@@ -387,7 +393,7 @@ Likewise, the `TodosList` component will be accessing the state data and display
 
 Now, for every component that will be accessing the state data, you will need to declare the `state` object in the file of their closest common parent. For this reason, the state data will live in the `TodoContainer` component, which is their closest common parent.
 
-_Hope it’s clear?_
+Hope it’s clear?
 
 Though, instead of declaring the `state` object in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
 
@@ -395,7 +401,7 @@ In this React tutorial series, we will start with the simplest of them. Once you
 
 Let’s move on.
 
-To add a state in a class component, we simply create a `state` object with different key-value pair. The value can be of any data type.
+To add a state in a class component, we simply create a `state` object with key-value pair. The value can be of any data type.
 
 In the case of the todos data, we will have an array of objects. So add the following code just above the `render()` method in the `TodoContainer.js` file:
 
@@ -627,7 +633,7 @@ Well, this has been solved as we can now create React components ONLY with funct
 
 Until then, one helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
 
-In this React App, we will use the functional component simply for presentation as in the case of the `Header` component. There, we are rendering a simple heading text. So, revert the `TodoItem` component to class component.
+In this React App, we will use the functional component simply for presentation as in the case of the `Header` component. There, we are rendering a simple heading text. **So, let's revert the `TodoItem` component to class component**.
 
 Let’s create the `Header` component.
 

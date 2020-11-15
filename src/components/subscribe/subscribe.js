@@ -54,7 +54,7 @@ const Subscribe = props => {
             type="text"
             value={email}
             onChange={_emailHandleChange}
-            placeholder={`${props.placeholder || "Email Address"}`}
+            placeholder={`${props.placeholder || "Your Email Address"}`}
             aria-label="your-email"
           />
 
@@ -73,11 +73,11 @@ const Subscribe = props => {
             Thanks for subscribing! Youʼll receive your first email shortly.
           </div>
         ) : (
-          <div
-            className="status__error"
-            dangerouslySetInnerHTML={{ __html: msg }}
-          ></div>
-        )}
+            <div
+              className="status__error"
+              dangerouslySetInnerHTML={{ __html: msg }}
+            ></div>
+          )}
       </form>
     </>
   )

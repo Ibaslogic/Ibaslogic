@@ -12,7 +12,7 @@ const AboutContent = () => {
       >
         <div className={aboutContentStyles.inner}>
           {aboutIbaslogic.map(({ subHeading, content }) => (
-            <div className={aboutContentStyles.content} key={subHeading}>
+            <div className={aboutContentStyles.content} key={content}>
               <h2
                 className={aboutContentStyles.heading}
                 dangerouslySetInnerHTML={{ __html: subHeading }}
@@ -45,7 +45,7 @@ const AboutContent = () => {
       >
         <div className={aboutContentStyles.inner}>
           {aboutIbas.map(({ subHeading, content }) => (
-            <div className={aboutContentStyles.content} key={subHeading}>
+            <div className={aboutContentStyles.content} key={content}>
               <h2
                 className={aboutContentStyles.heading}
                 dangerouslySetInnerHTML={{ __html: subHeading }}

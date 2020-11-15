@@ -30,8 +30,8 @@ export const query = graphql`
             title
             category
             tags
-            datePublished(formatString: "MMMM Do, YYYY")
-            dateUpdated(formatString: "MMMM Do, YYYY")
+            datePublished(formatString: "MMMM DD, YYYY")
+            dateUpdated(formatString: "MMMM DD, YYYY")
             featured {
               childImageSharp {
                 fixed(width: 150, height: 150) {

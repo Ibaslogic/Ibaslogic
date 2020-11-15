@@ -52,15 +52,13 @@ const BlogItems = ({ items }) => {
           />
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
-              const { frontmatter, id, timeToRead, excerpt, fields } = node
-              const { title, tags } = frontmatter
+              const { frontmatter, id, timeToRead, fields } = node
+              const { title } = frontmatter
               return (
                 <PostList
                   key={id}
                   title={title}
-                  tags={tags}
                   time={timeToRead}
-                  excerpt={excerpt}
                   slug={fields.slug.name}
                 />
               )

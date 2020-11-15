@@ -38,18 +38,6 @@ export const query = graphql`
       }
       body
     }
-    getAuthorAvatar: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-      edges {
-        node {
-          relativePath
-          childImageSharp {
-            fixed(height: 32) {
-              ...GatsbyImageSharpFixed_withWebp
-            }
-          }
-        }
-      }
-    }
   }
 `
 
@@ -60,15 +48,7 @@ const Blog = ({ data, pageContext }) => {
     tags,
   } = data.postsData.frontmatter
   const { excerpt, timeToRead, tableOfContents, body } = data.postsData
-  const { siteUrl, twitterHandle, author_avatar } = data.siteData.siteMetadata
-
-  const authorAvatar = data.getAuthorAvatar.edges.find(
-    ({ node }) => node.relativePath === author_avatar
-  ).node
-
-  if (!authorAvatar) {
-    return null
-  }
+  const { siteUrl, twitterHandle } = data.siteData.siteMetadata
 
   const commentBoxRef = React.createRef()
 
@@ -107,7 +87,7 @@ const Blog = ({ data, pageContext }) => {
 
               <header className={blogPageStyles.entryHeader}>
                 <h1>{title}</h1>
-                <PostMeta authorAvatar={authorAvatar} timeToRead={timeToRead} isSeries />
+                <PostMeta title={title} timeToRead={timeToRead} isSeries />
               </header>
 
               <div className={blogPageStyles.content}>
@@ -148,7 +128,7 @@ const Blog = ({ data, pageContext }) => {
           </aside>
 
           <section className={blogPageStyles.secondary}>
-            <Newsletter socialhandle={twitterHandle} />
+            <Newsletter />
             <div className={blogPageStyles.commentSection}>
               <h2 className={`discusion__title ${blogPageStyles.title}`}>
                 Discussion

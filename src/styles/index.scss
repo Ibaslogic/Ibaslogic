@@ -403,7 +403,6 @@ Subscribe Form
 
 .status__success,
 .status__error {
-  margin-top: 10px;
   font-size: 13px;
 }
 
@@ -467,22 +466,28 @@ Subscribe Form
 
 .post__subscribe {
   .field__input {
-    margin-bottom: 8px;
-  }
-
-  .field__submit {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
 
   .field__input,
   .field__submit {
     height: 40px;
+  }
+
+  .field__submit {
+    margin-bottom: 5px;
+    padding: 0px 15px;
+    font-size: 12px;
+    height: 36px;
+    font-weight: 600;
+  }
+
+  .field__input{
     width: 100%;
   }
 
   .status__success,
   .status__error {
-    margin-bottom: 15px;
     text-align: left;
   }
 }
@@ -585,9 +590,7 @@ body {
       background-color: var(--color-bg-dm-pry);
     }
 
-    // .secondary__area,
-    .edit__post,
-    .author__avatar {
+    .edit__post {
       color: var(--color-white-a80);
       opacity: 0.8;
     }
@@ -596,6 +599,14 @@ body {
     .content__right a svg, 
     .bg_dm a, .bg_dm li, .bg_dm_wc{
         color: var(--color-white-a80);
+    }
+
+    .cg_dm a {
+      color: $color-grey-a80;
+
+      &:hover {
+        background: var(--color-bg-dm-secondary);
+      }
     }
 
     .drop__down {
@@ -640,7 +651,7 @@ body {
     .post__next__unit,
     .series-link-container,
     .discusion__title,
-    .dm_brder, .top_header, .list_item {
+    .dm_brder, .top_header {
       border-color: var(--color-white-a20) !important;
     }
 
