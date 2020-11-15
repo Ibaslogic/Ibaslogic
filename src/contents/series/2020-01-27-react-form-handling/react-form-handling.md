@@ -236,15 +236,15 @@ You can also see the current state of your app in the React Tools.
 
 You already know that the `setState()` method in a class component is used to update the state. However, the usage in the `handeChange()` has its drawback. Well, it is fine if you do not care about what the previous version of the state was. But trust me, a lot of time, you would care.
 
-You may want to toggle button; increasing a count of numbers by adding 1 to a previous state. And in our case, toggling of the checkboxes. These are some of the scenarios where the next state depends on the previous state. 
+You may want to toggle a button; increase a count of number by adding to a previous state. Or in our case, toggle the checkboxes. These are some of the scenarios where the next state depends on the previous. 
 
 So why can’t we just pass a new state to the `setState()` as we have it above?
 
-According to React documentation – "the `setState()` does not always immediately update the component. It may batch or defer the update until later. This makes reading `this.state` right after calling `setState()` a potential pitfall."
+According to the React documentation – "the `setState()` does not always immediately update the component. It may batch or defer the update until later. This makes reading `this.state` right after calling `setState()` a potential pitfall."
 
 Forget about the technical language. React is simply saying you should not rely on the value of `this.state` to calculate the next state. You might not get the intended output.
 
-Instead, it recommends using the setState updater if the next state depends on the previous state. 
+Instead, it recommends using the setState updater. 
 
 To do this, you simply pass an updater function to the `setState()`. That function is going to receive the previous version of the state as its parameter. Like so:
 
