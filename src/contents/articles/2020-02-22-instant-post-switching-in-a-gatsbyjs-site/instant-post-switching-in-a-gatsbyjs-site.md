@@ -56,7 +56,7 @@ Once you have the project files and folders bootstrapped, switch inside the dire
 C:\Users\Your Name\ gatsby-post-switching > gatsby develop
 ```
 
-Now, you should have your default home page at http://localhost:8000
+Now, you should have your default home page at [localhost:8000](http://localhost:8000 "local dev server").
 
 <br />
 

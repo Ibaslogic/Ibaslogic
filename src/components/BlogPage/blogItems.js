@@ -44,12 +44,21 @@ const BlogItems = ({ items }) => {
   if (itemsNum > 0) {
     return (
       <main className={blogStyles.main} role="main">
-        <div className={blogStyles.container}>
-          <FilterPosts
-            categories={categories}
-            handleItems={handleItems}
-            selectedItem={selectedItem}
-          />
+        <section className={blogStyles.filterSection}>
+          <div className={blogStyles.align}>
+            <div className={blogStyles.heading}>
+              <h1>Up-to-date Guides</h1>
+              <p>Go ahead and explore by category</p>
+            </div>
+            <FilterPosts
+              categories={categories}
+              handleItems={handleItems}
+              selectedItem={selectedItem}
+            />
+          </div>
+        </section>
+
+        <div className={blogStyles.inner}>
           <ul className={blogStyles.list}>
             {blogPostItems.map(({ node }) => {
               const { frontmatter, id, timeToRead, fields } = node

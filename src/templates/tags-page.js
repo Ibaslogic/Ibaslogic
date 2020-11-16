@@ -13,10 +13,10 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title={`All posts tagged as "${tag}"`} />
+      <SEO title={`All posts tagged as "${tag}"`} description={`All ${tag} posts.`} />
       <main className={styles.main} role="main">
         <div className={styles.container}>
-          <h3 className={styles.description}>{tagHeader}</h3>
+          <h1 className={styles.description}>{tagHeader}</h1>
           <ul className={styles.list}>
             {edges.map(({ node }) => {
               const { id, frontmatter, timeToRead, fields } = node

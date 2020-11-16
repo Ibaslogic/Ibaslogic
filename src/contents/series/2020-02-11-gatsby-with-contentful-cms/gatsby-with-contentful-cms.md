@@ -39,7 +39,7 @@ C:\Users\Your Name > gatsby new gatsby-contentful-blogsite
 
 The command will create a new project folder called **gatsby-contentful-blogsite** and include all of the starter files.
 
-Switch inside the directory (`cd gatsby-contentful-blogsite`) and run `gatsby develop`. Now, you should have your default home page at http://localhost:8000/
+Switch inside the directory (`cd gatsby-contentful-blogsite`) and run `gatsby develop`. Now, you should have your default home page at [localhost:8000](http://localhost:8000/ "local dev server")
 
 ![Gatsby default](./images/gatsby-default.png)
 
@@ -216,7 +216,7 @@ Now, the Contentful data are available for us to use in the frontend.
 
 ## Rendering Contentful Data in the Frontend
 
-To render the Contentful data, let’s start by opening the GraphiQL IDE (http://localhost:8000/___graphql) and see what queries we have access to. Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post).
+To render the Contentful data, let’s start by opening the GraphiQL IDE ([localhost:8000/___graphql](http://localhost:8000/___graphql "graphiql ide")) and see what queries we have access to. Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post). 
 
 > **Note:** The `BlogPost` attached to the `allContentfulBlogPost` is the name of our content type. If you had specified another name, that’s what you would see.
 

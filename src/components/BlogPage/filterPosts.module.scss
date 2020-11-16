@@ -5,11 +5,16 @@
 
 .filterContainer {
   position: relative;
-  background: $color-grey-a10 none repeat scroll 0% 0%;
+  background-color: $color-bg-dm-secondary;
+
   display: flex;
   justify-content: space-between;
-  border: 1px solid $color-grey-a30;
-  margin-bottom: 20px;
+  border: 1px solid $color-bg-dm-secondary;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex: 7;
+  }
 
   button {
     text-transform: capitalize;
@@ -22,7 +27,7 @@
 
     &:hover,
     &:focus {
-      color: $primary-color;
+      color: $color-white-a80;
     }
 
     @media screen and (min-width: 600px) {
@@ -33,7 +38,7 @@
 
 .filter {
   .selected {
-    color: $primary-color !important;
+    color: $color-white-a80;
   }
 }
 

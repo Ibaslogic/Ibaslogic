@@ -8,17 +8,14 @@ import { Link, graphql } from "gatsby"
 const Tagspage = ({
   data: {
     allMdx: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => {
   return (
     <Layout>
-      <SEO title="All tags" />
+      <SEO title="All tags" description="All tags" />
       <main className={styles.main} role="main">
         <div className={styles.container}>
-          <h3 className={styles.description}>All Tags</h3>
+          <h1 className={styles.description}>All Tags</h1>
           <ul className={`tag__list__container ${styles.list2}`}>
             {group.map(tag => (
               <li className={styles.item2} key={tag.fieldValue}>
@@ -38,11 +35,6 @@ export default Tagspage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMdx {
       group(field: frontmatter___tags) {
         fieldValue

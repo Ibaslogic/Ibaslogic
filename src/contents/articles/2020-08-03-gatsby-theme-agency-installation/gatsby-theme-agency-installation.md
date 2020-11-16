@@ -1,10 +1,10 @@
 ---
-title: "Gatsby Theme Agency – Documentation"
-description: "I will walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project."
+title: "Gatsby Theme Agency – Installation Guide"
+description: "This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project."
 category: "Gatsby"
-datePublished: "2020-10-14 10:32:00"
-dateUpdated: "2020-10-14 10:32:00"
-featured: "./images/gatsby-theme-agency-installation_.png"
+datePublished: "2020-08-03 10:32:00"
+dateUpdated: "2020-08-03 10:32:00"
+featured: "./images/gatsby-theme-agency-installation.png"
 tags:
   - gatsby
   - theme
@@ -12,7 +12,7 @@ tags:
 
 Are you aiming to set up a simple agency or consultancy site? Gatsby Theme Agency suits your purpose.
 
-Essentially, a theme allows users to change how the website looks on the frontend without having to alter the core code.
+As you may know, a theme allows users to change how the website looks on the frontend without having to alter the core code. 
 
 Like WordPress CMS, for instance, Gatsby allows us to utilize a theme for multiple sites. However, here, the themes are composable. Meaning, you can have multiples of them installed and performs a different function in a Gatsby project.
 
@@ -494,5 +494,3 @@ Using the same approach, you can shadow any other files including the theme styl
 Great job! I’m excited you are here.
 
 I hope everything went well. Should in case you have any question, do let me know through the comment section.
-
-And if you like this guide, endeavor to share around the web and [follow me on Twitter](https://twitter.com/ibaslogic "Ibas Twitter").

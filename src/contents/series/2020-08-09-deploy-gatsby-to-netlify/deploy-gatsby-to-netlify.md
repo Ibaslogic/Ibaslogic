@@ -100,7 +100,7 @@ Great!
 
 Instead of using the name given to you by netlify, you can change it to something that you can easily read. To do that, Head over to the **Settings** tab and click on the **Change site name** button to specify a name. In my case, **ibaslogic-site**.
 
-Make sure you save your changes and visit your new URL. Here, I’ll visit my site at https://ibaslogic-site.netlify.com/.
+Make sure you save your changes and visit your new URL. Here, I’ll visit my site at [ibaslogic-site.netlify.com](https://ibaslogic-site.netlify.com/ "Netlify site").
 
 ## Continuous Deployment
 

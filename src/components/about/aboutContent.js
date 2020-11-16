@@ -11,12 +11,12 @@ const AboutContent = () => {
         className={`sectionWrapper ${aboutContentStyles.section} ${aboutContentStyles.ibaslogic}`}
       >
         <div className={aboutContentStyles.inner}>
-          {aboutIbaslogic.map(({ subHeading, content }) => (
+          {aboutIbaslogic.map(({ heading, content }) => (
             <div className={aboutContentStyles.content} key={content}>
-              <h2
+              <h1
                 className={aboutContentStyles.heading}
-                dangerouslySetInnerHTML={{ __html: subHeading }}
-              ></h2>
+                dangerouslySetInnerHTML={{ __html: heading }}
+              ></h1>
               <p dangerouslySetInnerHTML={{ __html: content }}></p>
             </div>
           ))}
@@ -47,7 +47,7 @@ const AboutContent = () => {
           {aboutIbas.map(({ subHeading, content }) => (
             <div className={aboutContentStyles.content} key={content}>
               <h2
-                className={aboutContentStyles.heading}
+                className={aboutContentStyles.subHeading}
                 dangerouslySetInnerHTML={{ __html: subHeading }}
               ></h2>
               <p dangerouslySetInnerHTML={{ __html: content }}></p>

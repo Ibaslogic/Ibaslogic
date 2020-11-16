@@ -57,6 +57,17 @@ $max-width: 960px;
     font-size: 2.2rem;
   }
 }
+.subHeading {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  line-height: 30px;
+  @media screen and (min-width: 600px) {
+    font-size: 1.4rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 1.7rem;
+  }
+}
 
 .newsletter {
   color: $color-white-main;

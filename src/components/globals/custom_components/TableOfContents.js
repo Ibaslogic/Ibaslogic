@@ -7,7 +7,7 @@ const TableOfContents = ({ items, slug }) => {
       <ul>
         {items.map((item, index) => (
           <li key={index}>
-            <Link to={"/" + slug + "/" + item.url}>{item.title}</Link>
+            <Link to={`/${slug}/${item.url ? item.url : ""}`}>{item.title}</Link>
           </li>
         ))}
       </ul>

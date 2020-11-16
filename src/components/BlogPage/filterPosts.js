@@ -8,12 +8,12 @@ const FilterPosts = ({
   selectedItem,
 }) => {
   return (
-    <div className={`bg_dtl hover_white ${styles.filterContainer}`}>
+    <div className={`hover_white ${styles.filterContainer}`}>
       <div className={styles.filter}>
         {categories.map((category, index) => {
           return (
             <button
-              className={selectedItem === category ? `selected ${styles.selected}` : ""}
+              className={selectedItem === category ? styles.selected : ""}
               type="button"
               key={index}
               onClick={() => handleItems(category)}

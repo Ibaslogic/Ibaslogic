@@ -56,7 +56,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         // I exclude individual tags pages in sitemap.
-        exclude: ["/tags/*"],
+        exclude: ["/tags/*", '/tags/'],
       },
     },
     {

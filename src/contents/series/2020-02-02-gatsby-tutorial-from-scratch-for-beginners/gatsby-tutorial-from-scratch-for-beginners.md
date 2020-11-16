@@ -125,7 +125,7 @@ C:\Users\Your Name\ ibaslogic-gatsby-tutorial > gatsby develop
 
 If you are using VsCode, you can open its integrated terminal from `View -> Terminal` (or use the shortcut, `` Ctrl + ` `` or `` cmd + ` `` on Windows and Mac respectively) and run `gatsby develop`.
 
-Once the command is done, you will see a success message with the link to view your default starter site. Go ahead and open the site in your browser on [http://localhost:8000](http://localhost:8000 "local dev server").
+Once the command is done, you will see a success message with the link to view your default starter site. Go ahead and open the site in your browser on [localhost:8000](http://localhost:8000 "local dev server").
 
 > Also, you'd see a URL like this: [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "GraphiQL IDE"). Take note of it, We will explore this later when we start pulling data to our site.
 
@@ -221,7 +221,7 @@ const Blog = () => {
 export default Blog
 ```
 
-Save the file and navigate to http://localhost:8000/blog/ in your browser address bar to see the page. Here, the "blog" in the URL is the name of the page file.
+Save the file and navigate to [localhost:8000/blog/](http://localhost:8000/blog/ "local blog page") in your browser address bar to see the page. Here, the "blog" in the URL is the name of the page file.
 
 In the same way, go inside the `contact.js` file and add this code:
 
@@ -257,7 +257,7 @@ const About = () => {
 export default About
 ```
 
-Save your files and don’t forget to access your pages at http://localhost:8000/contact/ and http://localhost:8000/about/.
+Save your files and don’t forget to access your pages at [localhost:8000/contact/](http://localhost:8000/contact/ "local contact page") and [localhost:8000/about/](http://localhost:8000/about/ "local about page").
 
 <br/>
 

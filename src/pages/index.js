@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Helping You Improving Your Web Dev Knowledge!" />
+    <SEO title="Helping You Improving Your Web Dev Knowledge!" description="Looking for a simple and smarter way to learn the latest web tech? Here, you will learn the perfect strategy that works." />
     <Helmet>
-        <html className="home-page" />
+      <html className="home-page" />
     </Helmet>
     <main className="main" role="main">
       <Hero />

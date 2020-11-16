@@ -1,5 +1,5 @@
 ---
-title: "Learn React Hooks by Converting a Class-based Meme Generator App to Functional based"
+title: "React Hooks: Convert a Meme Generator App From a Class to Functional based"
 description: "We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component."
 category: "React"
 datePublished: "2020-04-04 10:32:00"
@@ -30,7 +30,7 @@ git clone https://github.com/Ibaslogic/memegenerator
 
 Once the download is done, change directory (`cd`) inside the project folder and run `npm install`. This creates a `node_module` folder consisting of the necessary dependencies.
 
-Finally, start your server with `npm start`. You should see your app at [http://localhost:3000/](http://localhost:3000/ "dev server")
+Finally, start your server with `npm start`. You should see your app at [localhost:3000](http://localhost:3000/ "dev server")
 
 ![meme generator starter](./images/meme-generator-starter.png)
 
@@ -245,8 +245,9 @@ Comparing this code to that of the class version, you’ll notice that we’ve r
 
 Now check your app and test it. It should work as expected.
 
-Good job!
+Good job! 
 
-This is a quick one. I hope you are having fun learning these Hooks. All you need now is to practice as much as possible. If you like this quick tutorial, feel free to share around the web and subscribe for more updates.
+This is a quick one. I hope you are having fun learning these Hooks. All you need now is to practice as much as possible. If you like this quick tutorial, feel free to share around the web and subscribe for more updates. 
 
-You can find the [source code here](https://github.com/Ibaslogic/React-Hooks/blob/master/src/components/MemeGenerator.js "meme generator source code").
+You can find the [source code here](https://github.com/Ibaslogic/React-Hooks/tree/master/src/components "meme generator source code").
+

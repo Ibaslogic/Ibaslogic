@@ -21,7 +21,7 @@ const ArticlePage = (props) => {
   const [showItems, setShowItems] = useState(false)
   const [selectedItem, setSelectedItem] = useState(
     getCategories(props.items.allMdx.edges) &&
-      getCategories(props.items.allMdx.edges)[0]
+    getCategories(props.items.allMdx.edges)[0]
   )
 
   const handleItems = category => {
@@ -61,7 +61,7 @@ const ArticlePage = (props) => {
     return (
       <main className={articlePageStyles.main} role="main">
         <div className={articlePageStyles.container}>
-        <h2 className={articlePageStyles.filterPosts}>
+          <h1 className={articlePageStyles.filterPosts}>
             <span className={articlePageStyles.filterPostsHeading}>
               I want to learn about
             </span>
@@ -85,12 +85,12 @@ const ArticlePage = (props) => {
                 <ul className={articlePageStyles.dropDownList}>
                   {categories.map((category, index) => {
                     const listClass =
-                    selectedItem === category ? `${articlePageStyles.selected}` : ""
+                      selectedItem === category ? `${articlePageStyles.selected}` : ""
                     return (
                       <li key={index}
-                      value={category}
-                      onClick={() => handleItems(category)}
-                      className={`${articlePageStyles.dropDownItem} ${listClass}`}
+                        value={category}
+                        onClick={() => handleItems(category)}
+                        className={`${articlePageStyles.dropDownItem} ${listClass}`}
                       >
                         {category}
                       </li>
@@ -99,11 +99,11 @@ const ArticlePage = (props) => {
                 </ul>
               </div>
             </div>
-          </h2>
+          </h1>
           <ul className={articlePageStyles.list}>
             {blogPostItems.map(({ node }) => {
-              const {frontmatter, id, timeToRead, excerpt, fields} = node
-              const {title, dateUpdated, tags, datePublished, featured} = frontmatter
+              const { frontmatter, id, timeToRead, excerpt, fields } = node
+              const { title, dateUpdated, tags, datePublished, featured } = frontmatter
               return (
                 <Article
                   key={id}
