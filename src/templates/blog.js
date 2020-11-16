@@ -15,6 +15,7 @@ import Comment from "../components/comment"
 import PostMeta from "../components/postMeta"
 import Newsletter from "../components/newsletter/newsletter"
 import EditPost from "../components/editPost"
+import Write from "../components/hire/write"
 
 
 
@@ -123,6 +124,9 @@ const Blog = ({ data, pageContext }) => {
                   siteUrl={siteUrl}
                   heading="Share"
                 />
+              </div>
+              <div className={blogPageStyles.write}>
+                <Write />
               </div>
             </div>
           </aside>

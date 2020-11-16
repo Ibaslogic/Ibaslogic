@@ -15,6 +15,7 @@ import RelatedArticles from "../components/RelatedArticles/relatedArticles"
 import Newsletter from "../components/newsletter/newsletter"
 import Comment from "../components/comment"
 import EditPost from "../components/editPost"
+import Write from "../components/hire/write"
 
 export const query = graphql`
   query($slug: String!) {
@@ -139,6 +140,9 @@ const Article = ({ data, pageContext }) => {
                   siteUrl={siteUrl}
                   heading="Share"
                 />
+              </div>
+              <div className={blogPageStyles.write}>
+                <Write />
               </div>
             </div>
           </aside>

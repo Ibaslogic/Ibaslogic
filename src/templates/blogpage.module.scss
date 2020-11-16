@@ -213,6 +213,17 @@ $side-max-width: 730px;
   }
 }
 
+.write {
+  margin-top: 2rem;
+  font-size: 15px;
+  line-height: 24px;
+
+  @media screen and (min-width: 960px) {
+    font-size: 12px;
+    line-height: 19px;
+  }
+}
+
 // =====================================================
 // Social Shares
 // ======================
