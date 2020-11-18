@@ -639,10 +639,11 @@ body {
 
     .email__input,
     .form__field {
+      select,
       input,
       textarea {
         color: var(--color-white-a80);
-        background: transparent;
+        background-color: var(--color-bg-dm-secondary);
         border-color: var(--color-white-a20);
       }
     }

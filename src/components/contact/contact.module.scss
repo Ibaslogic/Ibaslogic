@@ -42,6 +42,10 @@ $max-width: 960px;
   margin-bottom: 30px;
   line-height: 24px;
 
+  p {
+    margin-bottom: 15px;
+  }
+
   a {
     color: inherit;
     @include transition;
@@ -54,6 +58,16 @@ $max-width: 960px;
 
 // Contact
 
+.formWrapper {
+  background-color: #fcfaff;
+  padding: 1rem;
+  max-width: 800px;
+
+  @media screen and (min-width: 480px) {
+    padding: 2rem;
+  }
+}
+
 .form-field {
   display: grid;
   grid-gap: 15px;
@@ -63,11 +77,12 @@ $max-width: 960px;
     grid-gap: 40px;
     column-gap: 20px;
 
-    .textarea-field {
+    .textarea-field, .selectField {
       grid-column: 1/3;
     }
   }
 
+  .selectField,
   .text-field,
   .email-field,
   .textarea-field {
@@ -80,11 +95,11 @@ $max-width: 960px;
 
     &::placeholder,
     &:-moz-placeholder {
-      font-size: 16px;
+      font-size: 15px;
       font-family: $fonts;
       color: inherit;
       text-transform: capitalize;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     &:invalid {
@@ -96,9 +111,14 @@ $max-width: 960px;
       box-shadow: 0 2px 6px 0 rgba($color-light-pink, 0.12);
     }
   }
+  
+  .selectField {
+    appearance: none;
+    background: rgb(255, 255, 255) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat scroll right 0.75rem center / 8px 10px;
+  }
 
   .textarea-field {
-    height: 200px;
+    height: 140px;
     resize: vertical;
   }
 }
@@ -107,7 +127,16 @@ $max-width: 960px;
   margin-top: 40px;
 
   button {
-    font-weight: 700;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: auto;
+    letter-spacing: 1;
+
+    &:hover, &:focus {
+      color: $color-white-main;
+      background-color: $color-dark-pink;
+      border-color: $color-dark-pink;
+    }
     @media screen and (min-width: 768px) {
       font-size: 15px;
       padding: 12px 8px;

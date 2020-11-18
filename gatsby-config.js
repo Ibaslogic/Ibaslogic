@@ -13,14 +13,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Roboto`,
-            variants: [`300`, `400`, `500`, `700`],
-          },
+          `Roboto`,
+          `source sans pro\:300,400,500,700`
         ],
+        display: 'swap'
       },
     },
     {

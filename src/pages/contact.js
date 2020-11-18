@@ -7,7 +7,7 @@ const ContactPage = () => (
   <Layout>
     <SEO
       title="Get in touch with Ibas"
-      description="Do you want to talk about your project? Or have a question for me? Send me an email and I will get back to you shortly."
+      description="Want to talk about your project? Or have a question for me? Send me an email and I will get back to you shortly."
     />
     <ContactContent />
   </Layout>

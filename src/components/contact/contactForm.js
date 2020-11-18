@@ -12,12 +12,25 @@ const ContactForm = () => {
       <input type="hidden" name="bot-field" />{" "}
       <input type="hidden" name="form-name" value="contact" />{" "}
       <div className={`form__field ${contactFormStyles.formField}`}>
+        <select
+          className={contactFormStyles.selectField}
+          arial-label="I'd like to talk about"
+          name="discus"
+          required
+        >
+          <option value="" disabled selected>I'd like to talk about...</option>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Consulting Inquiry">Consulting Inquiry</option>
+          <option value="Speaking Request">Speaking Request</option>
+          <option value="Feedback and suggestions">Feedback and suggestions</option>
+          <option value="Ibaslogic Site Feature request">Ibaslogic Site Feature request</option>
+        </select>
+
         <input
           className={contactFormStyles.textField}
           type="text"
-          placeholder="Full name"
+          placeholder="Name"
           name="name"
-          id="name"
           aria-label="your-name"
           required
         />
@@ -25,9 +38,8 @@ const ContactForm = () => {
         <input
           className={contactFormStyles.emailField}
           type="text"
-          placeholder="Your email"
+          placeholder="Email Address"
           name="email"
-          id="email"
           aria-label="your-email"
           required
         />
@@ -36,7 +48,6 @@ const ContactForm = () => {
           name="message"
           placeholder="Your message"
           className={contactFormStyles.textareaField}
-          id="message"
           aria-label="text-area"
           rows="6"
           required
@@ -44,7 +55,7 @@ const ContactForm = () => {
       </div>
       <div className={contactFormStyles.actions}>
         <button aria-label="submit-form" className="btn-primary">
-          Send Message
+          Submit
         </button>
       </div>
     </form>
