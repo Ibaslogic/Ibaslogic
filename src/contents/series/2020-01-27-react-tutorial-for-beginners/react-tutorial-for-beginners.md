@@ -10,16 +10,13 @@ tags:
   - javascript
 ---
 
-You have decided to learn React JS. A great choice indeed! Now, you can get to build a modern website or app that require high performance and safety.
+You have decided to learn React JS. A great choice indeed! Now, you can get to build a modern website and app that require high performance and safety.
 
-Aside from the fact that it has a smaller learning curve
-compared to other frameworks, you get the advantage to use the knowledge acquired and dive into the world of native development.
+Aside from the fact that it has a smaller learning curve compared to other frameworks, you get the opportunity to use the acquired knowledge and dive into the world of native development.
 
 So once you learn it, you can [jump into React Native](https://reactnative.dev/ "React native documentation") and start building a robust mobile application. 
 
-Still not convinced to learn React?
-
-Today, many developers and site owners are embracing web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
+It is also worth saying that many developers and site owners are now embracing web technologies and frameworks built on React. Some of these include the [Gatsby site framework](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") and the [WordPress blocks](https://wordpress.org/gutenberg/ "WordPress custom blocks") in the Gutenberg post editor.
 
 These are just to name a few. What this means is that you cannot escape learning React JS if you want to become a present-day developer.
 
@@ -28,7 +25,7 @@ In this React tutorial for beginners, you will learn the React JS fundamentals. 
 Later in the series, you will get to [learn the React Hooks](/react-hooks-tutorial/ "React Hooks tutorial"). What they are and how they will make writing React code a breeze for you.
 
 Once you are well-grounded with React, [following a Gatsby site project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
-
+ 
 <p className="prerequisite">Prerequisites</p>
 
 Before you go ahead with this React tutorial, please make sure you have:

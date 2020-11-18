@@ -22,11 +22,11 @@ In this guide, I will walk you through how to install and add a Gatsby theme cal
 
 It also comes configured with the contact form if you are hosting your site on Netlify. All that is required from you is turn it ON via the configuration file. You will see how to do this as you read on.
 
-### _[See a live demo](https://gatsby-site-agency.netlify.app/ "gatsby theme blog")_
+[See a live demo](https://gatsby-site-agency.netlify.app/ "gatsby theme blog")
 
 Before you get started, you’ll want to [get familiarized with Gatsby](/gatsby-tutorial-from-scratch-for-beginners/ "gatsby tutorial") if you are just getting to know about it.
 
-For the rest of us, let’s dive in!
+For the rest of us, let’s dive in! 
 
 <TableOfContents />
 

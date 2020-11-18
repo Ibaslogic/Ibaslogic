@@ -54,7 +54,7 @@ This will install all the necessary dependencies in the local `node_modules` fol
 npm start
 ```
 
-You should see this app in your browser address bar at [http://localhost:3000/](http://localhost:3000/ "dev server")
+You should see this app in your browser address bar at [localhost:3000](http://localhost:3000/ "dev server")
 
 ![React Hook Starter](./images/react-hook-starter.gif)
 

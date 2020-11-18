@@ -1,5 +1,5 @@
 ---
-title: "React Hooks: Convert a Meme Generator App From a Class to Functional based"
+title: "Learn React Hooks With a Simple Meme Generator Project"
 description: "We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component."
 category: "React"
 datePublished: "2020-04-04 10:32:00"

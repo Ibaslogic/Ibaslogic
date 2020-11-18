@@ -47,7 +47,7 @@ $max-width: 960px;
     @include transition;
     text-decoration: underline;
     &:hover {
-      color: $color-light-pink;
+      color: $color-dark-pink;
     }
   }
 }

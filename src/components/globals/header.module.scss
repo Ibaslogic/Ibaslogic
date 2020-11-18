@@ -8,7 +8,7 @@
 .noScroll {
   overflow-y: hidden;
 }
-
+ 
 .container {
   background: $color-white-main none repeat scroll 0% 0%;
   border-bottom: 1px solid $color-grey-a30;
@@ -29,7 +29,13 @@
       background: $color-white-main none repeat scroll 0% 0%;
       border-bottom: 1px solid $color-grey-a30;
       box-shadow: 0 3px 6px rgba($color-dark-main, 0.04);
-      a,
+      a {
+        color: $color-dark-a70;
+
+        &:hover {
+          color: $color-dark-a70 !important;
+        }
+      }
       svg {
         color: $color-grey;
 
@@ -138,7 +144,7 @@
 }
 
 .brand {
-  margin-left: 10px;
+  margin-left: 5px;
   @media screen and (min-width: 768px) {
     margin: 0px 20px 0 0;
   }
@@ -155,7 +161,7 @@
 .nav-link {
   display: block;
   line-height: 1.3125rem;
-  color: rgba($primary-color, .8);
+  color: $color-dark-a70;
   letter-spacing: -0.03em;
   text-decoration: none;
   font-size: 1rem;
@@ -165,18 +171,17 @@
 
   &:hover,
   &:focus {
-    color: $color-light-pink !important;
+    color: $color-dark-pink !important;
     @media screen and (min-width: 768px) {
-      color: $color-grey !important;
       background-color: $color-dark-a30;
     }
   }
 
   &.active-nav-item {
-    color: $color-light-pink !important;
+    color: $color-dark-pink !important;
     @media screen and (min-width: 768px) {
       opacity: 1;
-      color: $color-light-pink !important;
+      color: $color-dark-pink !important;
     }
   }
 
@@ -185,7 +190,7 @@
     padding: 6px 0;
     font-size: 14px;
     position: relative;
-    color: $color-grey;
+    color: $color-dark-a70;
     font-weight: 400;
     text-transform: capitalize;
     opacity: 1;
@@ -199,7 +204,7 @@
       right: 0;
       bottom: 0;
       height: 2px;
-      background: $color-light-pink;
+      background: $color-dark-pink;
       opacity: 0;
       @include transition;
     }
@@ -230,47 +235,56 @@
   border: none;
   outline: none;
   z-index: 99;
+
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 
   &.is-opened {
     .btn-line {
-      &:nth-of-type(1) {
+      &:first-child {
         transform: rotate(45deg);
-        top: 24px;
+        top: 15px;
       }
-      &:nth-of-type(2) {
-        transform: rotate(-45deg);
-        bottom: 24px;
-      }
-      &:nth-of-type(3) {
+      &:nth-child(2) {
+        width: 0;
         opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 32px;
       }
     }
   }
 }
 
 .btn-line {
-  position: absolute;
   display: block;
-  background: $primary-color;
-  width: 28px;
-  left: 15px;
+  position: absolute;
   height: 2px;
+  width: 24px;
+  left: 15px;
+  background: $primary-color;
+  border-radius: 9px;
+  opacity: 1;
+  transform: rotate(0deg);
   @include transition;
 
-  &:nth-of-type(1) {
-    transform: rotate(0deg);
+  &:first-child {
     top: 18px;
+    transform-origin: left center;
   }
-  &:nth-of-type(2) {
-    transform: rotate(0deg);
-    bottom: 24px;
+  &:nth-child(2) {
+    top: 24px;
+    transform-origin: left center;
   }
-  &:nth-of-type(3) {
-    transform: rotate(0deg);
-    bottom: 18px;
+  &:nth-child(3) {
+    // transform: rotate(0deg);
+    top: 30px;
+    transform-origin: left center;
   }
 }
 

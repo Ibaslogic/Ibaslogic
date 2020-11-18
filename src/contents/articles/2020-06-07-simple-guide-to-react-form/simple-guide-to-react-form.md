@@ -23,8 +23,6 @@ Here is the final project.
 
 ![react form project](./images/react-form-input.gif)
 
-And you can find all [the project source code here](https://github.com/Ibaslogic/react-form-inputs/blob/master/src/App.js "react form source code").
-
 As you can see, we are getting the input values in real-time (and on every keystroke for the text input). This is one of the beauty of React. You can take advantage of this and [build a Meme generator app](/meme-generator-with-react-hooks/ "Meme generator app").
 
 Just so you can follow along with me, let’s create a simple React project. So, run the following command from your terminal:
@@ -588,4 +586,4 @@ Understanding how the form input work is very crucial as you will be working wit
 
 Should in case you have any difficulties, questions or contributions, do let me know. And if you like this tutorial guide, do share around the web and subscribe for more.
 
-You can find [the project source code here](https://github.com/Ibaslogic/react-form-inputs/blob/master/src/App.js "react form source code")
+You can find [the project source code here](https://github.com/Ibaslogic/react-form-inputs/tree/master/src "react form source code")

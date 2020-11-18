@@ -52,7 +52,7 @@ Save the file.
 
 Now, you need to query these data and use them in your site. To do this, you will need to know how to use a tool called **GraphiQL**. This tool is an in-browser IDE (integrated development environment) for exploring GraphQL API.
 
-You can access this tool at http://localhost:8000/___graphql.
+You can access this tool at [localhost:8000/___graphql](http://localhost:8000/___graphql "dev server").
 
 > **Note:** There are 3 underscores in the URL and it is only available when your site’s development server is running.
 
@@ -555,7 +555,7 @@ This function accepts an object where we defined the `path` for visiting the sin
 
 Now let’s restart the development server.
 
-At this point, your blog post pages are created. You can visit this URL, http://localhost:8000/blog/first-gatsby-blog-post from your browser address bar and see your new page.
+At this point, your blog post pages are created. You can visit this URL, [localhost:8000/blog/first-gatsby-blog-post](http://localhost:8000/blog/first-gatsby-blog-post "single post page") from your browser address bar and see your new page.
 
 ![template](./images/template.png)
 
