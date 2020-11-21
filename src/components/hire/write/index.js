@@ -12,7 +12,7 @@ const Write = () => {
   `)
   return (
     <>
-      Like this guide? Want me to write (article, ebook) for you? Send a direct mail to <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a>.
+      Enjoyed this reading? Want me to write (article, ebook) for you? Send a direct mail to <a href={`mailto:${data.site.siteMetadata.email}`}>ibas@ibaslogic.com</a>.
     </>
   )
 }

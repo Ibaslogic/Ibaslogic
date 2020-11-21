@@ -637,13 +637,16 @@ body {
       color: var(--color-white-a80) !important;
     }
 
+    .bd_bg_dm {
+      background-color: var(--color-bg-dm-secondary);
+    }
+
     .email__input,
     .form__field {
       select,
       input,
       textarea {
         color: var(--color-white-a80);
-        background-color: var(--color-bg-dm-secondary);
         border-color: var(--color-white-a20);
       }
     }

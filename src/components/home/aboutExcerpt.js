@@ -5,7 +5,7 @@ import aboutStyles from "./aboutExcerpt.module.scss"
 const AboutExcerpt = () => {
   return (
     <section className={`bg_dtl ${aboutStyles.about_excerpt}`}>
-      <div className={`bg_dtd ${aboutStyles.inner}`}>
+      <div className={aboutStyles.inner}>
         <div className={aboutStyles.aboutPosts}>
           <SubHeading title="How Ibaslogic can help you grow your dev knowledge!" />
           <p>

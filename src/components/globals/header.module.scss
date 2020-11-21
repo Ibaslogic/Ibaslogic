@@ -173,6 +173,7 @@
   &:focus {
     color: $color-dark-pink !important;
     @media screen and (min-width: 768px) {
+      color: $color-dark-a70 !important;
       background-color: $color-dark-a30;
     }
   }
@@ -229,15 +230,12 @@
 .menu-btn {
   position: relative;
   cursor: pointer;
-  width: 60px;
+  width: 55px;
   height: 50px;
   background-color: transparent;
   border: none;
   outline: none;
   z-index: 99;
-
-  transform: rotate(0deg);
-  transition: .5s ease-in-out;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -245,9 +243,10 @@
 
   &.is-opened {
     .btn-line {
+      width: 23px;
       &:first-child {
         transform: rotate(45deg);
-        top: 15px;
+        top: 16px;
       }
       &:nth-child(2) {
         width: 0;
@@ -265,13 +264,12 @@
   display: block;
   position: absolute;
   height: 2px;
-  width: 24px;
+  width: 20px;
   left: 15px;
   background: $primary-color;
   border-radius: 9px;
   opacity: 1;
   transform: rotate(0deg);
-  @include transition;
 
   &:first-child {
     top: 18px;
@@ -282,7 +280,6 @@
     transform-origin: left center;
   }
   &:nth-child(3) {
-    // transform: rotate(0deg);
     top: 30px;
     transform-origin: left center;
   }

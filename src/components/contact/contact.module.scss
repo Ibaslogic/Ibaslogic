@@ -127,6 +127,7 @@ $max-width: 960px;
   margin-top: 40px;
 
   button {
+    font-size: 12px;
     font-weight: bold;
     text-transform: capitalize;
     width: auto;
@@ -138,7 +139,6 @@ $max-width: 960px;
       border-color: $color-dark-pink;
     }
     @media screen and (min-width: 768px) {
-      font-size: 15px;
       padding: 12px 8px;
     }
   }

@@ -13,7 +13,7 @@ const ContactForm = () => {
       <input type="hidden" name="form-name" value="contact" />{" "}
       <div className={`form__field ${contactFormStyles.formField}`}>
         <select
-          className={contactFormStyles.selectField}
+          className={`bd_bg_dm ${contactFormStyles.selectField}`}
           arial-label="I'd like to talk about"
           name="discus"
           required
@@ -23,11 +23,11 @@ const ContactForm = () => {
           <option value="Consulting Inquiry">Consulting Inquiry</option>
           <option value="Speaking Request">Speaking Request</option>
           <option value="Feedback and suggestions">Feedback and suggestions</option>
-          <option value="Ibaslogic Site Feature request">Ibaslogic Site Feature request</option>
+          <option value="Ibaslogic Site - Feature request">Ibaslogic Site Feature request</option>
         </select>
 
         <input
-          className={contactFormStyles.textField}
+          className={`bd_bg_dm ${contactFormStyles.textField}`}
           type="text"
           placeholder="Name"
           name="name"
@@ -36,7 +36,7 @@ const ContactForm = () => {
         />
 
         <input
-          className={contactFormStyles.emailField}
+          className={`bd_bg_dm ${contactFormStyles.emailField}`}
           type="text"
           placeholder="Email Address"
           name="email"
@@ -47,7 +47,7 @@ const ContactForm = () => {
         <textarea
           name="message"
           placeholder="Your message"
-          className={contactFormStyles.textareaField}
+          className={`bd_bg_dm ${contactFormStyles.textareaField}`}
           aria-label="text-area"
           rows="6"
           required
