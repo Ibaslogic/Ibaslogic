@@ -65,7 +65,7 @@ You should see the app in your browser address bar at [localhost:3000](http://lo
 
 ![Todos app design](./images/todosapplication.png)
 
-_You can learn how to build this app from scratch, by following [this React tutorial guide](/react-tutorial-for-beginners/ "React tutorial"). There, we used "props drilling" for the data flow._
+> You can learn how to build this app from scratch, by following [this React tutorial guide](/react-tutorial-for-beginners/ "React tutorial"). There, we used "props drilling" for the data flow.
 
 The image above shows a clear picture of the components hierarchy. As expected, you should know that the component files for the app live in the `src/components` folder.
 
