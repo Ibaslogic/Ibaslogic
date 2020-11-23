@@ -86,8 +86,8 @@
   text-transform: capitalize;
   &:hover,
   &:focus {
-    background-color: $color-dark-pink;
-    border-color: $color-dark-pink;
+    opacity: .7;
+    background-color: $color-light-pink;
     color: $color-white-main;
   }
 }

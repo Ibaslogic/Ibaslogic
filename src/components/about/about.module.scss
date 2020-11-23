@@ -104,8 +104,9 @@ $max-width: 960px;
     border-color: $color-light-pink;
 
     &:hover {
-      background-color: $color-dark-pink;
-      border-color: $color-dark-pink;
+      opacity: .7;
+      background-color: $color-light-pink;
+      border-color: $color-light-pink;
     }
   }
 }

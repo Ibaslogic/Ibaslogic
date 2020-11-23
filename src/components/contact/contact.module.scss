@@ -134,9 +134,9 @@ $max-width: 960px;
     letter-spacing: 1;
 
     &:hover, &:focus {
+      opacity: .7;
+      background-color: $color-light-pink;
       color: $color-white-main;
-      background-color: $color-dark-pink;
-      border-color: $color-dark-pink;
     }
     @media screen and (min-width: 768px) {
       padding: 12px 8px;
