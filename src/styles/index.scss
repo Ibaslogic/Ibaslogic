@@ -325,33 +325,42 @@ blockquote .gatsby-highlight + p {
 // Posts inter-link
 
 .series-link-container {
-  border: 1px solid #f2f2f2;
+  background-color: #fbfbf8;
+  border: 1px solid #dcdacb;
+  border-radius: 4px;
   padding: 8px 12px;
   margin: 35px 0;
-  background: #f9f9f9;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
 
   p {
-    position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 41px;
-      height: 2px;
-      background: var(--color-light-blue);
-      position: absolute;
-      bottom: -12px;
-      left: 0px;
-      margin-top: 23px;
-    }
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
   }
 
   ul {
     margin: 0 !important;
 
+    @media screen and (min-width: 480px) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
     li {
       list-style: none;
       padding: 0 !important;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 480px) {
+        width: calc(50% - (2.4rem/2));
+      }
 
       &::after {
         content: normal !important;
@@ -515,7 +524,7 @@ Next Series Posts
 
     &:hover,
     &:focus {
-      background: var(--color-dark-pink);
+      opacity: .7;
       text-decoration: none;
     }
 

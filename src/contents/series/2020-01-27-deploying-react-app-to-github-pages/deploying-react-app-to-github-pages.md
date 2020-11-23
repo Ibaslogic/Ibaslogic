@@ -10,9 +10,7 @@ tags:
   - github
 ---
 
-Now that you have your beautiful app, it's time to share it with the world.
-
-In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
+Now that you have your beautiful app, it's time to share it with the world. In this part, you will learn how to deploy your React application to GitHub pages and access it on the web.
 
 <PostSeriesLink
 label="This React tutorial is part 4 of 6 in the React for beginners series."
