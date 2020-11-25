@@ -8,9 +8,7 @@ Maybe you like one or two features therein, feel free to use. If you do not know
 
 ## How to contribute?
 
-I welcome any suggestions or features you think should be added to improve this web project.
-
-Also, if you see any typos somewhere in a post or other issue that needs to be resolved, please don't wait to open a pull request and correct it!
+I welcome any suggestions or features you think should be added to improve this web project. Also, if you see any typos somewhere in a post or other issue that needs to be resolved, please don't wait to open a pull request and correct it!
 
 Want to write about a missing topic? Add as PR and explain it.
  

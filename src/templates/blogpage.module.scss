@@ -100,6 +100,11 @@ $side-max-width: 730px;
   line-height: 22px;
   font-weight: inherit;
 
+  @media screen and (min-width: 600px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
   ol li {
     list-style: decimal;
   }
@@ -144,7 +149,7 @@ $side-max-width: 730px;
   p,
   ul,
   ol {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
   }
   h2 {
     font-size: 19px;

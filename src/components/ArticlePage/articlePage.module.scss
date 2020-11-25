@@ -224,6 +224,11 @@ $inner-max-width: 975px;
   grid-area: entry-content;
   font-size: 14px;
   line-height: 22px; 
+
+  @media screen and (min-width: 600px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
   p {
     margin: 0;
   }

@@ -109,7 +109,7 @@
     height: 58px;
     width: 58px;
 
-    &:hover {
+    &:hover, &:focus {
       color: $primary-color;
       svg {
         margin-bottom: -22px;
