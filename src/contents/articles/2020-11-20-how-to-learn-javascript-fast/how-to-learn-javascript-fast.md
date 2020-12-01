@@ -1,6 +1,6 @@
 ---
 title: "5 Simple Tips to Learn JavaScript Effectively and Fast"
-description: ""
+description: "This article takes away your fears and uncovers what you should and should not be doing to learn JavaScript in a much faster and effective way."
 category: "JavaScript"
 datePublished: "2020-12-01 10:32:00"
 dateUpdated: "2020-12-01 10:32:00"
