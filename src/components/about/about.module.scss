@@ -1,27 +1,13 @@
 // Import
 // ===================================================
-@import "../../styles/base/colors"; //colors
 @import "../../styles/base/align"; //default padding left right max-width.
 
 $max-width: 960px;
 
 .about {
-  padding: 50px 0;
+  padding: 50px 0 30px;
 }
 
-.section {
-  font-size: 0.95rem;
-  padding: 40px 0;
-  @media screen and (min-width: 768px) {
-    font-size: 1rem;
-  }
-  &:last-child {
-    padding-bottom: 0;
-  }
-}
-.ibaslogic {
-  background: $color-white-main;
-}
 .inner {
   max-width: $max-width;
   margin: 0 auto;
@@ -31,30 +17,33 @@ $max-width: 960px;
     padding-right: $plrls;
     padding-left: $plrls;
   }
+
+  
 }
 
-.content {
+.section {
+  padding: 40px 0 0;
   line-height: 25px;
-  margin-bottom: 20px;
-
   p {
-    line-height: 27px;
-    margin-bottom: 0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+ 
 }
+
 .heading {
   font-size: 1.65rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 34px;
   @media screen and (min-width: 600px) {
     font-size: 1.8rem;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 2.2rem;
   }
 }
 .subHeading {
@@ -62,55 +51,9 @@ $max-width: 960px;
   margin-bottom: 15px;
   line-height: 30px;
   @media screen and (min-width: 600px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   @media screen and (min-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
-}
-
-.newsletter {
-  color: $color-white-main;
-  background: $color-dark-a70;
-  padding: 5rem 0;
-}
-
-.newsletterContent {
-  @media screen and (min-width: 600px) {
-    display: flex;
-    flex: 1;
-  }
-}
-
-.formHeading {
-  h3 {
-    font-size: 1.8rem;
-    color: $color-white-main;
-    margin-bottom: 2rem;
-    line-height: 30px;
-  }
-  @media screen and (min-width: 600px) {
-    flex: 0.5;
-    margin-right: 10px;
-  }
-}
-.subscribe {
-  @media screen and (min-width: 600px) {
-    flex: 0.5;
-  }
-  button {
-    background-color: $color-light-pink;
-    color: $color-white-main;
-    border-color: $color-light-pink;
-
-    &:hover {
-      opacity: .7;
-      background-color: $color-light-pink;
-      border-color: $color-light-pink;
-    }
-  }
-}
-
-.ibas {
-  background: $color-white-main;
 }

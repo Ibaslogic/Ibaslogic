@@ -65,8 +65,8 @@ a {
   outline: none;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     color: var(--color-dark-blue);
   }
 }
@@ -458,19 +458,6 @@ Subscribe Form
   }
 }
 
-// About Subscribe
-
-.about__subscribe {
-  .field__input {
-    width: 100%;
-    border-color: var(--color-white-a20);
-  }
-
-  .field__submit {
-    width: 100%;
-  }
-}
-
 // Post Subscribe
 
 .post__subscribe {
@@ -689,7 +676,6 @@ body {
       background-color: var(--color-bg-dm-pry) !important;
     }
 
-    .sectionWrapper,
     .bg_dm {
       background-color: var(--color-bg-dm-pry);
     }
