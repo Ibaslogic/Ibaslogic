@@ -8,6 +8,7 @@ featured: "./images/how-to-learn-javascript-fast.png"
 tags:
   - tips
   - javascript
+  - beginner
 ---
 
 If you have been learning JavaScript or web development in general but still, you feel like you are not good enough on the subject. Or maybe you are finding it hard to retain all of your learnings or even applying them. This article is for you. 
