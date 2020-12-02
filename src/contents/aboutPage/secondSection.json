@@ -1,9 +1,9 @@
 [
   {
-    "content": "You probably have heard this phrase: “Don’t get trapped in the tutorial hell”."
+    "content": "You probably have heard about this phrase: “Don’t get trapped in the tutorial hell”."
   },
   {
-    "content": "Understanding the proper way to learn programming is paramount. Most of the beginners lack this when getting into the world of web development."
+    "content": "Understanding the proper way to learn programming is paramount. But sadly, most of the beginners lack this when getting into the world of web development."
   },
   {
     "content": "They unconsciously get trapped in the tutorial hell. Thus, they do lots of tutorials on a subject but still, they feel not good enough to complete a real-world project."
@@ -12,12 +12,6 @@
     "content": "That is where Ibaslogic comes in."
   },
   {
-    "content": "This site is birth to help aspiring developers by pointing them in the right direction. It is where I share all my learnings, mistakes, tips and strategy that will help you grasp web technologies in no distant time. No technical jargons. Just beginner-friendly articles."
-  },
-  {
-    "content": "That said, the site content (tutorial guides and the site source code) is <a href='https://github.com/Ibaslogic/Ibaslogic' target='_blank' rel='noopener noreferrer' >open-source on GitHub</a> and you are welcome to contribute."
-  },
-  {
-    "content": "Once you make any form of contributions, your name will appear on this page. So make sure you stick around, sign up for free updates and follow us on all social platforms."
+    "content": "This blog is where I share all my learnings, mistakes, tips and strategy that will help you grasp web technologies in no distant time. No technical jargons. Just beginner-friendly articles."
   }
 ]

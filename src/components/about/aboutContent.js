@@ -3,6 +3,7 @@ import aboutContentStyles from "./about.module.scss"
 import topSection from "../../contents/aboutPage/topSection.json"
 import secondSection from "../../contents/aboutPage/secondSection.json"
 import thirdSection from "../../contents/aboutPage/thirdSection.json"
+import fourthSection from "../../contents/aboutPage/fourthSection.json"
 import Newsletter from "../newsletter/newsletter"
 
 const AboutContent = () => {
@@ -22,8 +23,14 @@ const AboutContent = () => {
           ))}
         </div>
         <div className={aboutContentStyles.section}>
-          <h2 className={aboutContentStyles.subHeading}>Who is Ibas?</h2>
+          <h2 className={aboutContentStyles.subHeading}>Open Source</h2>
           {thirdSection.map(({ content }) => (
+            <p key={content} dangerouslySetInnerHTML={{ __html: content }}></p>
+          ))}
+        </div>
+        <div className={aboutContentStyles.section}>
+          <h2 className={aboutContentStyles.subHeading}>Who is Ibas?</h2>
+          {fourthSection.map(({ content }) => (
             <p key={content} dangerouslySetInnerHTML={{ __html: content }}></p>
           ))}
         </div>
