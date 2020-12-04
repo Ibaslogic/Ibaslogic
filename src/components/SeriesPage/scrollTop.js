@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { FaChevronUp } from "react-icons/fa"
 import { Link } from "react-scroll"
-import shareStyles from "../../templates/blogpage.module.scss"
+import shareStyles from "../../templates/seriespage.module.scss"
 
 const ScrollTop = () => {
   const [showScrollTop, useshowScrollTop] = useState(false)

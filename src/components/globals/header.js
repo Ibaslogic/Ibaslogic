@@ -14,12 +14,12 @@ const Header = () => {
   const [links] = useState([
     {
       id: 1,
-      path: "/articles/",
+      path: "/blog/",
       text: "articles",
     },
     {
       id: 2,
-      path: "/blog/",
+      path: "/series/",
       text: "series",
     },
     {

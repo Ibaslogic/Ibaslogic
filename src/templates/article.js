@@ -3,12 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ShareItems from "../components/socialShare/shareItems"
 import TagLinks from "../components/tagLinks/tagLinks"
-import blogPageStyles from "./blogpage.module.scss"
+import styles from "./seriespage.module.scss"
 import SEO from "../components/seo"
 import NavigatePosts from "../components/navigatePost/navigate"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
 import PostMeta from "../components/postMeta"
-import ScrollTop from "../components/BlogPage/scrollTop"
+import ScrollTop from "../components/SeriesPage/scrollTop"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import RelatedArticles from "../components/RelatedArticles/relatedArticles"
@@ -92,19 +92,19 @@ const Article = ({ data, pageContext }) => {
         description={description}
         isBlogPost
       />
-      <div className={`bg_dtl_pp ${blogPageStyles.wrapper}`}>
-        <div className={blogPageStyles.inner}>
+      <div className={`bg_dtl_pp ${styles.wrapper}`}>
+        <div className={styles.inner}>
           <main
             id="primary"
-            className={blogPageStyles.siteMain}
+            className={styles.siteMain}
             role="main"
           >
-            <article className={blogPageStyles.singlePost}>
-              <header className={blogPageStyles.entryHeader}>
+            <article className={styles.singlePost}>
+              <header className={styles.entryHeader}>
                 <h1>{title}</h1>
                 <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} />
               </header>
-              <div className={blogPageStyles.content}>
+              <div className={styles.content}>
                 <MDXProvider
                   components={{
                     TableOfContents: () => (
@@ -120,19 +120,19 @@ const Article = ({ data, pageContext }) => {
               </div>
             </article>
           </main>
-          <aside className={`bg_dtd ${blogPageStyles.aside}`}>
-            <div className={blogPageStyles.asideContent}>
-              <div className={blogPageStyles.tags}>{tags && <TagLinks tags={tags} />}</div>
-              <div className={blogPageStyles.navigateContainer}>
+          <aside className={`bg_dtd ${styles.aside}`}>
+            <div className={styles.asideContent}>
+              <div className={styles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={styles.navigateContainer}>
                 <NavigatePosts
                   prev={prev}
                   next={next}
                 />
               </div>
-              <div className={blogPageStyles.editPost}>
+              <div className={styles.editPost}>
                 <EditPost pageContext={pageContext} />
               </div>
-              <div className={blogPageStyles.share}>
+              <div className={styles.share}>
                 <ShareItems
                   slug={pageContext.slug}
                   title={title}
@@ -141,19 +141,19 @@ const Article = ({ data, pageContext }) => {
                   heading="Share"
                 />
               </div>
-              <div className={blogPageStyles.write}>
+              <div className={styles.write}>
                 <Write />
               </div>
             </div>
           </aside>
-          <section className={blogPageStyles.secondary}>
+          <section className={styles.secondary}>
             <Newsletter />
             {(pageContext.relatedArticles.length && (
               <RelatedArticles articles={pageContext.relatedArticles} />
             )) ||
               null}
-            <div className={blogPageStyles.commentSection}>
-              <h2 className={`discusion__title ${blogPageStyles.title}`}>
+            <div className={styles.commentSection}>
+              <h2 className={`discusion__title ${styles.title}`}>
                 Discussion
               </h2>
               <Comment commentBoxRef={commentBoxRef} />

@@ -2,26 +2,26 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BlogItems from "../components/BlogPage/blogItems"
+import ArticlePage from "../components/ArticlePage/articlePage"
 
-const BlogPage = ({ data }) => {
+const Articles = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Comprehensive Guides"
-        description="Read our step-by-step guides and start learning the tools and strategy required for your next web project."
+        title="Comprehensive articles"
+        description="This page showcases our step-by-step articles."
       />
-      <BlogItems items={data} />
+      <ArticlePage items={data} />
     </Layout>
   )
 }
 
-export default BlogPage
+export default Articles
 
 export const query = graphql`
   query {
     allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }
-      filter: { fields: { collection: { eq: "series" } } }
+      filter: { fields: { collection: { eq: "articles" } } }
       ) {
       edges {
         node {
@@ -29,6 +29,16 @@ export const query = graphql`
           frontmatter {
             title
             category
+            tags
+            datePublished(formatString: "MMMM DD, YYYY")
+            dateUpdated(formatString: "MMMM DD, YYYY")
+            featured {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
           }
           fields {
             slug {
@@ -36,6 +46,7 @@ export const query = graphql`
             }
           }
           timeToRead
+          excerpt
         }
       }
     }

@@ -7,7 +7,7 @@ const HeroContent = () => {
     <div className={errorStyles.errorContent}>
       <h1 className={errorStyles.errorTitle}>not found</h1>
       <p className={errorStyles.errorDescription}>
-        I guess you are here to become a better web developer. Check <Link to="/blog/">this page</Link> for our latest dev guides.
+        I guess you are here to become a better web developer. Check <Link to="/series/">this page</Link> for our latest dev guides.
         </p>
     </div>
   )

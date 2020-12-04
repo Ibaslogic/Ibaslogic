@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PostList from "../postList"
 import FilterPosts from "./filterPosts"
-import blogStyles from "./blogItems.module.scss"
+import styles from "./SeriesItems.module.scss"
 
 const getCategories = items => {
   let tempItems = items.map(item => {
@@ -13,7 +13,7 @@ const getCategories = items => {
   return categories
 }
 
-const BlogItems = ({ items }) => {
+const SeriesItems = ({ items }) => {
 
   // filter posts
   const [postItems] = useState(items.allMdx.edges)
@@ -43,10 +43,10 @@ const BlogItems = ({ items }) => {
 
   if (itemsNum > 0) {
     return (
-      <main className={blogStyles.main} role="main">
-        <section className={blogStyles.filterSection}>
-          <div className={blogStyles.align}>
-            <div className={blogStyles.heading}>
+      <main className={styles.main} role="main">
+        <section className={styles.filterSection}>
+          <div className={styles.align}>
+            <div className={styles.heading}>
               <h1>Up-to-date Guides</h1>
               <p>Go ahead and explore by category</p>
             </div>
@@ -58,8 +58,8 @@ const BlogItems = ({ items }) => {
           </div>
         </section>
 
-        <div className={blogStyles.inner}>
-          <ul className={blogStyles.list}>
+        <div className={styles.inner}>
+          <ul className={styles.list}>
             {blogPostItems.map(({ node }) => {
               const { frontmatter, id, timeToRead, fields } = node
               const { title } = frontmatter
@@ -78,8 +78,8 @@ const BlogItems = ({ items }) => {
     )
   } else {
     return (
-      <main className={blogStyles.main} role="main">
-        <div className={blogStyles.container}>
+      <main className={styles.main} role="main">
+        <div className={styles.container}>
           <p>There are no posts to display...please add items</p>
         </div>
       </main>
@@ -87,4 +87,4 @@ const BlogItems = ({ items }) => {
   }
 }
 
-export default BlogItems
+export default SeriesItems

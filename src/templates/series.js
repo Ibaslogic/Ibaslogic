@@ -3,12 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ShareItems from "../components/socialShare/shareItems"
 import TagLinks from "../components/tagLinks/tagLinks"
-import blogPageStyles from "./blogpage.module.scss"
+import styles from "./seriespage.module.scss"
 import SEO from "../components/seo"
 import PostSeriesLink from "../components/globals/custom_components/PostSeriesLink"
 import PostNextUnit from "../components/globals/custom_components/PostNextUnit"
 import TableOfContents from "../components/globals/custom_components/TableOfContents"
-import ScrollTop from "../components/BlogPage/scrollTop"
+import ScrollTop from "../components/SeriesPage/scrollTop"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Comment from "../components/comment"
@@ -42,7 +42,7 @@ export const query = graphql`
   }
 `
 
-const Blog = ({ data, pageContext }) => {
+const Series = ({ data, pageContext }) => {
   const {
     title,
     description,
@@ -77,21 +77,21 @@ const Blog = ({ data, pageContext }) => {
         description={description}
         isBlogPost
       />
-      <div className={`bg_dtl_pp ${blogPageStyles.wrapper}`}>
-        <div className={blogPageStyles.inner}>
+      <div className={`bg_dtl_pp ${styles.wrapper}`}>
+        <div className={styles.inner}>
           <main
             id="primary"
-            className={blogPageStyles.siteMain}
+            className={styles.siteMain}
             role="main"
           >
-            <article className={blogPageStyles.singlePost}>
+            <article className={styles.singlePost}>
 
-              <header className={blogPageStyles.entryHeader}>
+              <header className={styles.entryHeader}>
                 <h1>{title}</h1>
                 <PostMeta title={title} timeToRead={timeToRead} isSeries />
               </header>
 
-              <div className={blogPageStyles.content}>
+              <div className={styles.content}>
                 <MDXProvider
                   components={{
                     PostSeriesLink,
@@ -110,13 +110,13 @@ const Blog = ({ data, pageContext }) => {
             </article>
           </main>
 
-          <aside className={`bg_dtd ${blogPageStyles.aside}`}>
-            <div className={blogPageStyles.asideContent}>
-              <div className={blogPageStyles.tags}>{tags && <TagLinks tags={tags} />}</div>
-              <div className={blogPageStyles.editPost}>
+          <aside className={`bg_dtd ${styles.aside}`}>
+            <div className={styles.asideContent}>
+              <div className={styles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={styles.editPost}>
                 <EditPost pageContext={pageContext} isSeries />
               </div>
-              <div className={blogPageStyles.share}>
+              <div className={styles.share}>
                 <ShareItems
                   slug={pageContext.slug}
                   title={title}
@@ -125,16 +125,16 @@ const Blog = ({ data, pageContext }) => {
                   heading="Share"
                 />
               </div>
-              <div className={blogPageStyles.write}>
+              <div className={styles.write}>
                 <Write />
               </div>
             </div>
           </aside>
 
-          <section className={blogPageStyles.secondary}>
+          <section className={styles.secondary}>
             <Newsletter />
-            <div className={blogPageStyles.commentSection}>
-              <h2 className={`discusion__title ${blogPageStyles.title}`}>
+            <div className={styles.commentSection}>
+              <h2 className={`discusion__title ${styles.title}`}>
                 Discussion
               </h2>
               <Comment commentBoxRef={commentBoxRef} />
@@ -147,4 +147,4 @@ const Blog = ({ data, pageContext }) => {
   )
 }
 
-export default Blog
+export default Series

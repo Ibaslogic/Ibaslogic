@@ -31,7 +31,7 @@ module.exports.onCreateNode = ({ node, actions, getNode }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const seriesTemplate = path.resolve("./src/templates/blog.js")
+  const seriesTemplate = path.resolve("./src/templates/series.js")
   const articleTemplate = path.resolve("./src/templates/article.js")
   const tagTemplate = path.resolve("./src/templates/tags-page.js")
 
