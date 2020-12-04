@@ -24,7 +24,7 @@ const FilterPosts = ({
         })}
       </div>
       <div className={styles.articles}>
-        <Link to="/articles/">
+        <Link to="/blog/">
           <button>more</button>
         </Link>
       </div>
