@@ -6,7 +6,7 @@ import featuredStyles from "./featuredPosts.module.scss"
 const FeaturedGuides = () => {
   const data = useStaticQuery(graphql`
   query {
-    reactSeriesPosts: allMdx(filter: {frontmatter: {series: {eq: "react_tutorial"}}}, sort: {fields: frontmatter___dateUpdated, order: DESC}) {
+    reactSeriesPosts: allMdx(filter: {frontmatter: {series: {eq: "react_tutorial"}}}, sort: {fields: frontmatter___dateUpdated, order: ASC}) {
       edges {
         node {
           id
@@ -21,7 +21,7 @@ const FeaturedGuides = () => {
         }
       }
     }
-    gatsbySeriesPosts: allMdx(filter: {frontmatter: {series: {eq: "gatsby_tutorial"}}}, sort: {fields: frontmatter___dateUpdated, order: DESC}) {
+    gatsbySeriesPosts: allMdx(filter: {frontmatter: {series: {eq: "gatsby_tutorial"}}}, sort: {fields: frontmatter___dateUpdated, order: ASC}) {
       edges {
         node {
           id

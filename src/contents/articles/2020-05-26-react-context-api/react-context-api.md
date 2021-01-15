@@ -5,7 +5,6 @@ category: "React"
 datePublished: "2020-05-26 10:32:00"
 dateUpdated: "2020-11-05 10:32:00"
 featured: "./images/react-context-api.png"
-series: "react_tutorial"
 tags:
   - react
   - context
