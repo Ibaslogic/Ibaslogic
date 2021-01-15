@@ -3,7 +3,7 @@ title: "Gatsby Tutorial: Sourcing Data and Content"
 description: ""
 category: "Gatsby"
 datePublished: "2020-08-09 10:32:00"
-dateUpdated: "2020-11-08 10:32:00"
+dateUpdated: "2021-01-05 11:32:00"
 series: "gatsby_tutorial"
 tags:
   - gatsby

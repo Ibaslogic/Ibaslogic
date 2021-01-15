@@ -3,7 +3,7 @@ title: "How to setup Gatsby with Contentful CMS and Deploy on Netlify"
 description: "From Zero to deploy, you will learn how to set up a Gatsby site with Contentful CMS. I also show in this guide how to avoid common pitfalls working with Gatsby Contentful."
 category: "Gatsby"
 datePublished: "2020-08-13 10:32:00"
-dateUpdated: "2020-11-01 10:32:00"
+dateUpdated: "2021-01-09 11:32:00"
 series: "gatsby_tutorial"
 tags:
   - gatsby
@@ -216,7 +216,7 @@ Now, the Contentful data are available for us to use in the frontend.
 
 ## Rendering Contentful Data in the Frontend
 
-To render the Contentful data, let’s start by opening the GraphiQL IDE ([localhost:8000/___graphql](http://localhost:8000/___graphql "graphiql ide")) and see what queries we have access to. Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post). 
+To render the Contentful data, let’s start by opening the GraphiQL IDE ([localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql "graphiql ide")) and see what queries we have access to. Your area of focus should be on the `allContentfulBlogPost` (for fetching the list of posts) and `contentfulBlogPost` (for the individual post).
 
 > **Note:** The `BlogPost` attached to the `allContentfulBlogPost` is the name of our content type. If you had specified another name, that’s what you would see.
 

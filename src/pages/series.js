@@ -20,7 +20,7 @@ export default SeriesPage
 
 export const query = graphql`
   query {
-    allMdx(sort: { fields: [frontmatter___dateUpdated], order: DESC }
+    allMdx(sort: { fields: [frontmatter___dateUpdated], order: ASC }
       filter: { fields: { collection: { eq: "series" } } }
       ) {
       edges {

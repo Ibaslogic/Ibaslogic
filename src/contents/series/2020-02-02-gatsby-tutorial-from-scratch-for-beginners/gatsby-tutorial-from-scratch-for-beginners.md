@@ -3,7 +3,7 @@ title: "Gatsby Tutorial From Scratch: The Definitive Guide (2020)"
 description: "In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free."
 category: "Gatsby"
 datePublished: "2020-08-02 10:32:00"
-dateUpdated: "2020-11-11 10:32:00"
+dateUpdated: "2021-01-03 11:32:00"
 series: "gatsby_tutorial"
 tags:
   - gatsby

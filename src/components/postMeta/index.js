@@ -12,7 +12,7 @@ const PostMeta = ({ datePublished, dateUpdated, timeToRead, title, isSeries }) =
       {
         isSeries && (
           <div className={metaStyle.breadcrumbs}>
-            <span><Link to="/">Home</Link></span><span> » </span><span><Link to="/blog/">Series</Link></span><span> » </span><span>{title}</span>
+            <span><Link to="/">Home</Link></span><span> » </span><span><Link to="/series/">Series</Link></span><span> » </span><span>{title}</span>
           </div>
         )
       }
