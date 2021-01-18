@@ -15,7 +15,7 @@
     margin-bottom: 10px;
 
     a {
-      color: $color-grey;
+      color: rgba($color-grey, 0.8);
       border: 1px solid $color-grey-a40;
       padding: 3px 5px;
       border-radius: 2px;
@@ -23,7 +23,7 @@
       font-size: 13px;
 
       &:hover {
-        background: $color-grey-a40 none repeat scroll 0%;
+        color: rgba($color-grey, 1);
       }
     }
   }

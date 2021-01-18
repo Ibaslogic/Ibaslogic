@@ -15,7 +15,6 @@ import Comment from "../components/comment"
 import PostMeta from "../components/postMeta"
 import Newsletter from "../components/newsletter/newsletter"
 import EditPost from "../components/editPost"
-import Write from "../components/hire/write"
 
 
 
@@ -87,8 +86,8 @@ const Series = ({ data, pageContext }) => {
             <article className={styles.singlePost}>
 
               <header className={styles.entryHeader}>
-                <h1>{title}</h1>
                 <PostMeta title={title} timeToRead={timeToRead} isSeries />
+                <h1>{title}</h1>
               </header>
 
               <div className={styles.content}>
@@ -124,9 +123,6 @@ const Series = ({ data, pageContext }) => {
                   siteUrl={siteUrl}
                   heading="Share"
                 />
-              </div>
-              <div className={styles.write}>
-                <Write />
               </div>
             </div>
           </aside>

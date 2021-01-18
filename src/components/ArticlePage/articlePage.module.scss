@@ -4,7 +4,6 @@
 @import "../../styles/base/mixins"; //mixins
 @import "../../styles/base/align"; //default padding left right max-width
 
-
 $inner-max-width: 975px;
 
 .main {
@@ -27,14 +26,11 @@ $inner-max-width: 975px;
 
 .filter-posts {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.447;
   margin-bottom: 3rem;
 
-  @media screen and (min-width: 480px) {
-    font-size: 2rem;
-  }
   @media screen and (min-width: 768px) {
     font-size: 2.7rem;
   }
@@ -217,13 +213,12 @@ $inner-max-width: 975px;
       margin-top: -3px;
     }
   }
-  
 }
 
 .entryContent {
   grid-area: entry-content;
   font-size: 14px;
-  line-height: 22px; 
+  line-height: 22px;
 
   @media screen and (min-width: 600px) {
     font-size: 15px;
@@ -232,7 +227,7 @@ $inner-max-width: 975px;
   p {
     margin: 0;
   }
-} 
+}
 .meta {
   grid-area: entry-meta;
   font-size: 13px;

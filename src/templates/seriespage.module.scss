@@ -6,13 +6,13 @@
 $side-max-width: 730px;
 
 .wrapper {
-  padding: 50px 0;
+  padding: 60px 0;
   max-width: $max-width;
   margin: 0px auto;
-  
+
   @media screen and (min-width: 960px) {
     padding-bottom: 0;
-  } 
+  }
 }
 
 .inner {
@@ -20,9 +20,9 @@ $side-max-width: 730px;
     display: grid;
     grid-column-gap: 6%;
     grid-template-columns: 250px minmax(0, 1fr);
-    grid-template-areas: 
-    "aside main" 
-    "aside section";
+    grid-template-areas:
+      "aside main"
+      "aside section";
   }
 }
 
@@ -49,8 +49,8 @@ $side-max-width: 730px;
   @media screen and (min-width: 960px) {
     grid-area: aside;
     margin: 0;
-    background: #f5f2f0;
-    border-right: 1px solid $color-grey-a30;
+    // background: #f5f2f0;
+    border-right: 1px solid $color-grey-a90;
   }
 }
 
@@ -67,7 +67,6 @@ $side-max-width: 730px;
   }
 }
 
-
 .singlePost {
   margin: 40px 0;
   img {
@@ -81,29 +80,22 @@ $side-max-width: 730px;
 
 .entryHeader {
   h1 {
-    font-size: 21px;
+    font-size: 27px;
     font-weight: 700;
-    line-height: 29.4px;
+    line-height: 33.4px;
     margin-bottom: 1.1rem;
 
-    @media screen and (min-width: 600px) {
-      font-size: 24px;
-    }
     @media screen and (min-width: 768px) {
-      font-size: 28px;
+      font-size: 31px;
+      line-height: 41.4px;
     }
   }
 }
 
 .content {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 26px;
   font-weight: inherit;
-
-  @media screen and (min-width: 600px) {
-    font-size: 15px;
-    line-height: 24px;
-  }
 
   ol li {
     list-style: decimal;
@@ -130,15 +122,11 @@ $side-max-width: 730px;
     padding: 0 0 0 1.5rem;
 
     &::after {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 6px;
-      background: $color-dark-a70;
-      position: absolute;
-      top: 0.6em;
-      left: 5px;
-      margin-top: 0;
+      content: "\25CF";
+      float: left;
+      margin-left: -20px;
+      color: $color-dark-main;
+      font-size: 10px;
     }
   }
 
@@ -152,27 +140,21 @@ $side-max-width: 730px;
     margin-bottom: 15px;
   }
   h2 {
-    font-size: 19px;
-    @media screen and (min-width: 600px) {
-      font-size: 22px;
+    font-size: 24px;
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
     }
+  }
+  h3 {
+    font-size: 22px;
     @media screen and (min-width: 768px) {
       font-size: 26px;
     }
   }
-  h3 {
-    font-size: 17px;
-    @media screen and (min-width: 600px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 768px) {
-      font-size: 24px;
-    }
-  }
   h2,
   h3 {
-    line-height: 28px;
-    margin-bottom: 1rem;
+    line-height: 37px;
+    margin-bottom: 1.3rem;
     font-weight: 700;
   }
 }
@@ -199,6 +181,13 @@ $side-max-width: 730px;
   margin-bottom: 1.5rem;
 }
 
+.date {
+  color: $color-grey;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
 .navigateContainer {
   @media screen and (min-width: 960px) {
     margin-bottom: 1rem;
@@ -211,7 +200,7 @@ $side-max-width: 730px;
   margin-bottom: 2em;
   order: -1;
   a {
-    color: rgba($color-grey, .8);
+    color: $color-grey;
   }
   @media screen and (min-width: 960px) {
     order: 0;
@@ -262,8 +251,8 @@ $side-max-width: 730px;
   margin: -35px 10px 0 0;
   cursor: pointer;
   text-align: center;
-  color: $color-white-main;
-  background-color: $color-light-pink;
+  color: $color-white-main !important;
+  background-color: $color-dark-a70;
   border-radius: 50%;
   line-height: 1;
   font-size: 13px;

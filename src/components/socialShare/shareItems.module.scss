@@ -20,7 +20,7 @@ $share-border: rgb(225, 225, 225);
 
   li {
     margin: 10px 22px 10px 0px;
-    
+
     a {
       font-size: 18px;
       padding: 8px;
@@ -61,5 +61,37 @@ $share-border: rgb(225, 225, 225);
   color: #0d77b7;
   &:hover {
     color: #024b79;
+  }
+}
+
+.twitterFollowBtn {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+  background-color: #1b95e0;
+  color: #fff !important;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+
+  &:hover,
+  &:focus {
+    background-color: #066cbb;
+    color: #fff;
+  }
+}
+
+.gitHubStarBtn {
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  color: #24292e !important;
+  background-color: #eff3f6;
+  border-color: rgba(27, 31, 35, 0.2);
+
+  &:hover,
+  &:focus {
+    background-color: #dfdfdf;
+    color: #24292e;
   }
 }

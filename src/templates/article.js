@@ -15,7 +15,6 @@ import RelatedArticles from "../components/RelatedArticles/relatedArticles"
 import Newsletter from "../components/newsletter/newsletter"
 import Comment from "../components/comment"
 import EditPost from "../components/editPost"
-import Write from "../components/hire/write"
 
 export const query = graphql`
   query($slug: String!) {
@@ -101,8 +100,8 @@ const Article = ({ data, pageContext }) => {
           >
             <article className={styles.singlePost}>
               <header className={styles.entryHeader}>
+                <PostMeta title={title} timeToRead={timeToRead} />
                 <h1>{title}</h1>
-                <PostMeta datePublished={datePublished} dateUpdated={dateUpdated} timeToRead={timeToRead} />
               </header>
               <div className={styles.content}>
                 <MDXProvider
@@ -123,6 +122,10 @@ const Article = ({ data, pageContext }) => {
           <aside className={`bg_dtd ${styles.aside}`}>
             <div className={styles.asideContent}>
               <div className={styles.tags}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={styles.date}>
+                {datePublished === dateUpdated ? "Published on " : "Last updated on "}
+                {dateUpdated}
+              </div>
               <div className={styles.navigateContainer}>
                 <NavigatePosts
                   prev={prev}
@@ -140,9 +143,6 @@ const Article = ({ data, pageContext }) => {
                   siteUrl={siteUrl}
                   heading="Share"
                 />
-              </div>
-              <div className={styles.write}>
-                <Write />
               </div>
             </div>
           </aside>

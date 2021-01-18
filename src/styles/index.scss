@@ -28,6 +28,7 @@ html {
   --color-dark-pink: #{$color-dark-pink};
   --color-bg-dm-pry: #{$color-bg-dm-pry};
   --color-bg-dm-secondary: #{$color-bg-dm-secondary};
+  --color-lighter-blue: #{$color-lighter-blue};
   --color-light-blue: #{$color-light-blue};
   --color-dark-blue: #{$color-dark-blue};
   --color-white-a20: #{$color-white-a20};
@@ -156,18 +157,15 @@ blockquote {
 }
 
 .prerequisite {
-  font-size: 19px;
+  font-size: 24px;
   color: var(--dark-color);
-  line-height: 1.3777em;
-  margin-bottom: 1.8rem;
+  line-height: 37px;
+  margin-bottom: 1.3rem;
   font-weight: 700;
   padding-top: 0.5em;
 
-  @media screen and (min-width: 600px) {
-    font-size: 22px;
-  }
   @media screen and (min-width: 768px) {
-    font-size: 26px;
+    font-size: 28px;
   }
 }
 
@@ -359,7 +357,7 @@ blockquote .gatsby-highlight + p {
       margin-bottom: 10px;
 
       @media screen and (min-width: 480px) {
-        width: calc(50% - (2.4rem/2));
+        width: calc(50% - (2.4rem / 2));
       }
 
       &::after {
@@ -398,7 +396,7 @@ Subscribe Form
 }
 
 .status__success {
-  color: #282828;
+  color: var(--color-white-a80);
   font-weight: 400;
 }
 
@@ -478,7 +476,7 @@ Subscribe Form
     font-weight: 600;
   }
 
-  .field__input{
+  .field__input {
     width: 100%;
   }
 
@@ -511,7 +509,7 @@ Next Series Posts
 
     &:hover,
     &:focus {
-      opacity: .7;
+      opacity: 0.7;
       text-decoration: none;
     }
 
@@ -581,6 +579,10 @@ body {
       color: var(--color-white-a80);
     }
 
+    a {
+      color: var(--color-lighter-blue);
+    }
+
     .series-link-container,
     table tr {
       background-color: var(--color-bg-dm-pry);
@@ -592,9 +594,11 @@ body {
     }
 
     .darkLight__link svg,
-    .content__right a svg, 
-    .bg_dm a, .bg_dm li, .bg_dm_wc{
-        color: var(--color-white-a80);
+    .content__right a svg,
+    .bg_dm a,
+    .bg_dm li,
+    .bg_dm_wc {
+      color: var(--color-white-a80);
     }
 
     .cg_dm a {
@@ -629,7 +633,7 @@ body {
     .post__meta,
     .get_inTouch,
     .prerequisite,
-    .status__success {
+    li::after {
       color: var(--color-white-a80) !important;
     }
 
@@ -651,7 +655,7 @@ body {
     .post__next__unit,
     .series-link-container,
     .discusion__title,
-    .dm_brder, .top_header {
+    .dm_brder {
       border-color: var(--color-white-a20) !important;
     }
 
@@ -669,11 +673,9 @@ body {
       background: var(--color-bg-dm-pry);
     }
 
-    // main,
-    .hero__container, 
-    .about__hero,
-    section#blog {
-      background-color: var(--color-bg-dm-pry) !important;
+    // main
+    .hero__container {
+      background: none !important;
     }
 
     .bg_dm {
@@ -689,6 +691,7 @@ body {
     }
 
     .bg_dtl,
+    .top_header,
     table tr:nth-child(2n) {
       background-color: var(--color-bg-dm-secondary) !important;
       border-color: var(--color-bg-dm-secondary) !important;
@@ -702,7 +705,7 @@ body {
     }
 
     //General btn on hover (and home page blog section)
-    .btn-primary,.hover_white button {
+    .hover_white button {
       &.readMore,
       &:hover,
       &:focus {
@@ -710,7 +713,8 @@ body {
       }
     }
 
-    .list__container a::after, .btn_line {
+    .list__container a::after,
+    .btn_line {
       background: var(--color-white-a80);
     }
 
@@ -729,11 +733,13 @@ body {
       background: var(--color-bg-dm-pry);
     }
 
-    .dm a, .dm svg {
+    .dm a,
+    .dm svg {
       @media screen and (min-width: 768px) {
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: var(--color-white-main) !important;
-          background-color:  rgba(0, 0, 0, 0.08);
+          background-color: rgba(0, 0, 0, 0.08);
         }
       }
     }

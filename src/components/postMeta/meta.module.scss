@@ -1,24 +1,33 @@
-$color-grey: #636466;
+$color-grey: #606770;
 
 .post-meta {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   margin-bottom: 1.5em;
-  color: rgba($color-grey, .65);
+  color: $color-grey;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.breadcrumbs, .date {
-  margin-right: 40px;
+.breadcrumbs {
+  margin-right: 10px;
   margin-bottom: 4px;
   a {
-    color: inherit;
+    // color: inherit;
     &:hover {
       text-decoration: underline;
     }
   }
+}
+
+.bcTitle {
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 215px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .time {

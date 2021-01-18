@@ -20,8 +20,35 @@
   }
 }
 
+.wrap {
+  width: 100%;
+  padding: 6rem 0 4rem;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 6rem;
+  }
+}
+
+.connect {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+
+  a {
+    margin: 0 5px;
+
+    span svg {
+      font-size: 15px;
+      margin-bottom: -2px;
+      margin-right: 4px;
+    }
+  }
+}
+
 .hero-content {
-  padding: 7rem $plr 0;
+  padding: 4rem $plr 0;
   text-align: center;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -30,9 +57,6 @@
   @media screen and (min-width: 768px) {
     padding-left: $plrls;
     padding-right: $plrls;
-  }
-  @media screen and (min-width: 960px) {
-    padding-top: 9rem;
   }
 }
 
@@ -54,7 +78,7 @@
 .description {
   font-size: 0.95rem;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-top: 0;
   line-height: 1.6;
   max-width: 650px;
@@ -63,7 +87,6 @@
   }
 }
 
-.additional,
 .subscribe_container {
   font-size: 13px;
   line-height: 1.3rem;
@@ -82,50 +105,15 @@
 }
 
 .btn_primary {
-  font-size: 12px;
+  font-size: 15px;
   text-transform: capitalize;
-  &:hover,
-  &:focus {
-    opacity: .7;
-    background-color: $color-light-pink;
-    color: $color-white-main;
-  }
-}
-
-.arrow {
-  background-color: $color-white-main;
-  border-radius: 100px;
-  box-shadow: 0 4px 8px $color-grey-a30;
-  display: block;
-  margin: 0 auto;
-  height: 50px;
-  width: 50px;
-  color: $color-grey;
-  margin-bottom: 0;
-  cursor: pointer;
-  margin-bottom: -20px;
-
-  @media screen and (min-width: 768px) {
-    height: 58px;
-    width: 58px;
-
-    &:hover, &:focus {
-      color: $primary-color;
-      svg {
-        margin-bottom: -22px;
-      }
-    }
-  }
-
-  svg {
-    margin-bottom: -18px;
-    margin-left: 16px;
-    font-size: 17px;
-
-    @media screen and (min-width: 768px) {
-      margin-bottom: -24px;
-      margin-left: 16px;
-      font-size: 24px;
-    }
+  border-radius: 0;
+  background: $color-white-a80;
+  border-color: $color-white-a80;
+  color: $color-dark-a70 !important;
+  font-weight: 400;
+  &:hover {
+    opacity: 0.7;
+    background-color: $color-white-a80;
   }
 }

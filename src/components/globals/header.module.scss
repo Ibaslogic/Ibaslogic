@@ -1,18 +1,17 @@
 // Import
 // ===================================================
 @import "../../styles/base/colors"; //colors
-@import "../../styles/base/mixins"; //mixins
 @import "../../styles/base/align"; //default padding left right max-width
 
 // No Scroll on Menu toggle on Mobile
 .noScroll {
   overflow-y: hidden;
 }
- 
+
 .container {
   background: $color-white-main none repeat scroll 0% 0%;
   border-bottom: 1px solid $color-grey-a30;
-  height: 50px;
+  height: 60px;
   z-index: 9;
   width: 100%;
   box-shadow: 0 3px 6px rgba($color-dark-main, 0.04);
@@ -51,7 +50,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 60px;
   flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     max-width: $max-width;
@@ -67,8 +66,8 @@
   justify-content: center;
 
   a {
-    color: $color-grey;
-    font-size: 18px;
+    color: $color-dark-a70;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +75,10 @@
     height: 50px;
     text-align: center;
     margin-right: 10px;
+
+    @media screen and (min-width: 480px) {
+      margin-right: 15px;
+    }
 
     &:hover {
       svg {
@@ -100,7 +103,7 @@
     }
   }
   svg {
-    color: $color-grey;
+    color: $color-dark-a70;
     opacity: 0.8;
   }
 
@@ -152,7 +155,7 @@
 
 .brand-link {
   img {
-    width: 40px;
+    width: 35px;
     height: auto;
     margin: 0;
   }
@@ -164,13 +167,12 @@
   color: $color-dark-a70;
   letter-spacing: -0.03em;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-transform: capitalize;
   font-weight: 400;
-  padding: 12px 1em;
+  padding: 12px 1.5em;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $color-dark-pink !important;
     @media screen and (min-width: 768px) {
       color: $color-dark-a70 !important;
@@ -188,14 +190,13 @@
 
   @media screen and (min-width: 768px) {
     display: inline-block;
-    padding: 6px 0;
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
     color: $color-dark-a70;
     font-weight: 400;
     text-transform: capitalize;
     opacity: 1;
-    padding: 15px 20px 14px;
+    padding: 20px 20px 18px;
 
     &::after {
       content: "";
@@ -207,7 +208,6 @@
       height: 2px;
       background: $color-dark-pink;
       opacity: 0;
-      @include transition;
     }
 
     &.active-nav-item {
@@ -230,8 +230,8 @@
 .menu-btn {
   position: relative;
   cursor: pointer;
-  width: 55px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -246,7 +246,7 @@
       width: 23px;
       &:first-child {
         transform: rotate(45deg);
-        top: 16px;
+        top: 22px;
       }
       &:nth-child(2) {
         width: 0;
@@ -254,7 +254,7 @@
       }
       &:nth-child(3) {
         transform: rotate(-45deg);
-        top: 32px;
+        top: 38px;
       }
     }
   }
@@ -272,15 +272,15 @@
   transform: rotate(0deg);
 
   &:first-child {
-    top: 18px;
+    top: 23px;
     transform-origin: left center;
   }
   &:nth-child(2) {
-    top: 24px;
+    top: 29px;
     transform-origin: left center;
   }
   &:nth-child(3) {
-    top: 30px;
+    top: 35px;
     transform-origin: left center;
   }
 }
@@ -294,7 +294,6 @@
   text-align: left;
   z-index: 0;
   width: 100%;
-  @include transition;
   list-style: none;
   position: relative;
 
