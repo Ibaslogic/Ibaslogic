@@ -123,7 +123,9 @@ $side-max-width: 730px;
 
     &::after {
       content: "\25CF";
-      float: left;
+      position: absolute;
+      display: block;
+      top: 0;
       margin-left: -20px;
       color: $color-dark-main;
       font-size: 10px;
