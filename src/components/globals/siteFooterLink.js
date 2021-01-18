@@ -3,14 +3,14 @@ import footerStyles from "./footer.module.scss"
 
 const SiteFooterLink = ({ twitterHandle, github, siteUrl, author }) => {
   return (
-    <ul className={footerStyles.list}>
+    <ul className={`dml ${footerStyles.list}`}>
       <li>&copy;{" "}
-        {new Date().getFullYear().toString()}{" "}
+      2020 - {new Date().getFullYear().toString()}{" "}
         <a
           href={`https://twitter.com/${twitterHandle}`}
           target="_blank"
           rel="noopener noreferrer"
-          title="twitter"
+          title="twitter" 
           className={footerStyles.author}
         >
           {author}
@@ -30,6 +30,15 @@ const SiteFooterLink = ({ twitterHandle, github, siteUrl, author }) => {
           rel="noopener noreferrer"
         >
           RSS
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://ko-fi.com/ibasmajid"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Support Me
         </a>
       </li>
     </ul>

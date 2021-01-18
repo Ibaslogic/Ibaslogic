@@ -9,7 +9,7 @@ import footerStyles from "./footer.module.scss"
 const SocialConnect = ({twitterHandle, linkedin, github}) => {
   return (
     <div className={footerStyles.social}>
-       <ul className={footerStyles.socialList}>
+       <ul className={`dml ${footerStyles.socialList}`}>
           <li className={footerStyles.socialItem}>
             <a
               href={`https://twitter.com/${twitterHandle}`}

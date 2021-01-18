@@ -6,8 +6,8 @@
 
 .site-footer {
   background: $color-grey-a20;
-  font-size: 13px;
-  border-top: 1px solid rgba($color-grey-a30, .6);
+  font-size: 15px;
+  border-top: 1px solid rgba($color-grey-a30, 0.6);
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
   color: $color-grey;
@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     height: 4rem;
     padding-top: 0;
     padding-bottom: 0;
@@ -41,9 +41,10 @@
 
   a {
     color: $color-grey;
+    font-weight: 400;
     @include transition;
     &:hover {
-      color: $color-dark-pink !important;
+      color: $color-dark-main;
     }
   }
 }
@@ -53,8 +54,10 @@
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
+  flex-flow: wrap;
+  justify-content: center;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
 

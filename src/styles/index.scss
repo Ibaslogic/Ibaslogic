@@ -601,6 +601,15 @@ body {
       color: var(--color-white-a80);
     }
 
+    .dml a {
+      color: var(--color-white-a80);
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     .cg_dm a {
       color: $color-grey-a80;
 
