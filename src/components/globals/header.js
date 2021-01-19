@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
-import logo from "../../images/ibaslogic_logo.png"
+import logo from "../../images/logo_ibaslogic_v1.png"
 import { FaMoon, FaGithub, FaTwitter } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
 // header styles
 import headerStyles from "./header.module.scss"
 import Helmet from "react-helmet"
-
+ 
 const Header = () => {
   const [scroll, setScroll] = useState(false)
   const [navbarOpen, setNavbarOpen] = useState(false)
