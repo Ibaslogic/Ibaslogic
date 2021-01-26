@@ -6,7 +6,7 @@
 
 .site-footer {
   background: $color-grey-a20;
-  font-size: 15px;
+  font-size: 14px;
   border-top: 1px solid rgba($color-grey-a30, 0.6);
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
@@ -70,9 +70,6 @@
         content: "|";
       }
     }
-  }
-  .author {
-    text-decoration: underline;
   }
 }
 

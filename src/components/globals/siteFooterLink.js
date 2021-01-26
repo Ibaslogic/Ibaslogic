@@ -4,14 +4,12 @@ import footerStyles from "./footer.module.scss"
 const SiteFooterLink = ({ twitterHandle, github, siteUrl, author }) => {
   return (
     <ul className={`dml ${footerStyles.list}`}>
-      <li>&copy;{" "}
-      2020 - {new Date().getFullYear().toString()}{" "}
+      <li>&copy; {new Date().getFullYear().toString()}{" "}
         <a
           href={`https://twitter.com/${twitterHandle}`}
           target="_blank"
           rel="noopener noreferrer"
           title="twitter" 
-          className={footerStyles.author}
         >
           {author}
         </a></li>
@@ -38,7 +36,7 @@ const SiteFooterLink = ({ twitterHandle, github, siteUrl, author }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Support Me
+          Donate
         </a>
       </li>
     </ul>
