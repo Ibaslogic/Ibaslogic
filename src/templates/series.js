@@ -128,6 +128,9 @@ const Series = ({ data, pageContext }) => {
           </aside>
 
           <section className={styles.secondary}>
+            <p>           
+              The content on this site is free and free of ads. If you like the content and you don’t mind supporting me, please <a href="https://ko-fi.com/ibasmajid" target="_blank" rel="noopener noreferrer">donate here</a>. Thank you.
+            </p>
             <Newsletter />
             <div className={styles.commentSection}>
               <h2 className={`discusion__title ${styles.title}`}>
