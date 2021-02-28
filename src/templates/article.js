@@ -15,6 +15,7 @@ import RelatedArticles from "../components/RelatedArticles/relatedArticles"
 import Newsletter from "../components/newsletter/newsletter"
 import Comment from "../components/comment"
 import EditPost from "../components/editPost"
+import Img from "gatsby-image"
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,6 +34,13 @@ export const query = graphql`
         description
         datePublished(formatString: "MMMM DD, YYYY")
         dateUpdated(formatString: "MMMM DD, YYYY")
+        featured {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         tags
       }
       body
@@ -46,6 +54,7 @@ const Article = ({ data, pageContext }) => {
     dateUpdated,
     title,
     description,
+    featured,
     tags
   } = data.postsData.frontmatter
   const { excerpt, timeToRead, tableOfContents, body } = data.postsData
@@ -92,7 +101,7 @@ const Article = ({ data, pageContext }) => {
         isBlogPost
       />
       <div className={`bg_dtl_pp ${styles.wrapper}`}>
-        <div className={styles.inner}>
+        <div className={styles.inner2}>
           <main
             id="primary"
             className={styles.siteMain}
@@ -102,6 +111,12 @@ const Article = ({ data, pageContext }) => {
               <header className={styles.entryHeader}>
                 <PostMeta title={title} timeToRead={timeToRead} />
                 <h1>{title}</h1>
+                {featured && <Img 
+                  fluid={featured && featured.childImageSharp.fluid}
+                  alt={title}
+                  backgroundColor="#eaeaea"
+                  className={styles.imgWrapper}
+                />}
               </header>
               <div className={styles.content}>
                 <MDXProvider
@@ -119,7 +134,7 @@ const Article = ({ data, pageContext }) => {
               </div>
             </article>
           </main>
-          <aside className={`bg_dtd ${styles.aside}`}>
+          <aside className={`no_border ${styles.aside}`}> {/* bg_dtd */}
             <div className={styles.asideContent}>
               <div className={styles.tags}>{tags && <TagLinks tags={tags} />}</div>
               <div className={styles.date}>
@@ -146,12 +161,14 @@ const Article = ({ data, pageContext }) => {
               </div>
             </div>
           </aside>
-          <section className={styles.secondary}>
-            <Newsletter />
+          <div className={styles.right}>
             {(pageContext.relatedArticles.length && (
               <RelatedArticles articles={pageContext.relatedArticles} />
             )) ||
               null}
+          </div>
+          <section className={styles.secondary}>
+            <Newsletter />
             <div className={styles.commentSection}>
               <h2 className={`discusion__title ${styles.title}`}>
                 Discussion

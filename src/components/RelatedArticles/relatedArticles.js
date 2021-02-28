@@ -12,7 +12,7 @@ const RelatedArticles = ({ articles }) => {
       <ul className={styles.list}>
         {articles.map(article => (
           <li key={article.node.id}>
-            <Link className="bg_dtd" to={`/${slugify(article.node.fields.slug.name)}/`}>
+            <Link to={`/${slugify(article.node.fields.slug.name)}/`}>
               {article.node.frontmatter.title}
             </Link>
           </li>

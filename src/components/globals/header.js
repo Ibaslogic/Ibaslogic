@@ -4,6 +4,7 @@ import useDarkMode from "use-dark-mode"
 import logo from "../../images/logo_ibaslogic_v1.png"
 import { FaMoon, FaGithub, FaTwitter } from "react-icons/fa"
 import { TiAdjustBrightness } from "react-icons/ti"
+import { MdClose } from "react-icons/md";
 // header styles
 import headerStyles from "./header.module.scss"
 import Helmet from "react-helmet"
@@ -14,28 +15,37 @@ const Header = () => {
   const [links] = useState([
     {
       id: 1,
+      path: "/",
+      text: "home"
+    },
+    {
+      id: 2,
       path: "/blog/",
       text: "articles",
     },
     {
-      id: 2,
+      id: 3,
       path: "/series/",
       text: "series",
     },
     {
-      id: 3,
+      id: 4,
       path: "/contact/",
       text: "contact",
     },
     {
-      id: 4,
+      id: 5,
       path: "/about/",
       text: "about",
     },
   ])
 
-  const handleToggle = () => {
-    setNavbarOpen(prev => !navbarOpen)
+  const openDrawer = () => {
+    setNavbarOpen(true)
+  }
+
+  const closeDrawer = () => {
+    setNavbarOpen(false)
   }
 
   const darkMode = useDarkMode(false)
@@ -86,7 +96,7 @@ const Header = () => {
             <button
               className={`${headerStyles.menuBtn} ${navbarOpen ? headerStyles.isOpened : ""
                 }`}
-              onClick={handleToggle}
+              onClick={openDrawer}
             >
               <div className={`btn_line ${headerStyles.btnLine}`}></div>
               <div className={`btn_line ${headerStyles.btnLine}`}></div>
@@ -94,6 +104,10 @@ const Header = () => {
             </button>
           </div>
           <nav className={`${headerStyles.navbar}`}>
+            {navbarOpen &&  <div className={`${headerStyles.backdrop}`} role="button" tabindex="0" onClick={closeDrawer}>
+              <button className={`${headerStyles.close}`}><MdClose style={{fontSize: '24px'}} /></button>
+            </div>}
+            
             <ul // add show
               className={`bg_dm ${navbarOpen
                 ? `${headerStyles.menuNav} ${headerStyles.showMenu}`

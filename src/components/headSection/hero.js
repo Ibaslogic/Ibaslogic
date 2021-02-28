@@ -1,20 +1,14 @@
 import React from "react"
 import { Link } from "react-scroll"
 import heroStyles from "./headSection.module.scss"
-import Subscribe from "../subscribe/subscribe"
-import lineSvg from "../../../static/assets/line.svg"
 import TwitterFollow from "../socialShare/twitterFollow"
 import GitHubStar from "../socialShare/gitHubStar"
+import { TiLocationArrow } from "react-icons/ti";
 
 
 const Hero = () => {
   return (
-    <section
-      style={{
-        background: `#1c1e21 url(${lineSvg}) center center fixed`,
-      }}
-      className={`hero__container ${heroStyles.homePageHero}`}
-    >
+    <section className={`hero__container ${heroStyles.homePageHero}`} >
       <div className={heroStyles.wrap}>
         <div className={heroStyles.connect}>
             <TwitterFollow />
@@ -23,24 +17,23 @@ const Hero = () => {
         <div className={heroStyles.heroContent}>
           <h1 className={heroStyles.title}>Dev Articles for the Self-Starters</h1>
           <p className={heroStyles.description}>
-          No fluff or technical jargons! Just practical guides that work.
+            No fluff! Just practical guides that work.
           </p>
-          
-          <Link
-            to="featured"
-            className={`btn-primary ${heroStyles.btn_primary}`}
-            smooth={true}
-            offset={-64}
-            duration={500}
-          >
-            get started
-          </Link>
-
-          <div className={heroStyles.subscribe_container}>
-            <p> Want to learn ReactJS? Get our <strong style={{ color: "#ff7c3c" }}>FREE</strong> book and start building awesome projects:
-            </p>
-            <div className="home__subscribe">
-              <Subscribe customClass="" placeholder="Enter email to receive it" />
+          <p className={heroStyles.description}>
+            Let's normalize putting our learning to practice.    
+          </p>
+          <div className={heroStyles.input_container}>
+            <Link
+              to="featured"
+              className={`btn-primary ${heroStyles.btn_primary}`}
+              smooth={true}
+              offset={-64}
+              duration={500}
+            >
+              get started
+            </Link>
+            <div className={heroStyles.newsletter}>
+              <a href="https://ibaslogic.substack.com/" target="_blank" rel="noopener noreferrer" title="Sign up">Join Newsletter <TiLocationArrow /></a> 
             </div>
           </div>
         </div>

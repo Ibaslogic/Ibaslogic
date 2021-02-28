@@ -80,7 +80,7 @@ const Series = ({ data, pageContext }) => {
         <div className={styles.inner}>
           <main
             id="primary"
-            className={styles.siteMain}
+            className={`${styles.siteMain} ${styles.ls}`}
             role="main"
           >
             <article className={styles.singlePost}>

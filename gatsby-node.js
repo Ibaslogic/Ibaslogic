@@ -94,7 +94,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
     const filteredResult = articles.filter(hasAtLeastOneCategoryInCommon)
 
-    if (filteredResult.length > 2) {
+    if (filteredResult.length > 4) {
       return filteredResult.sort(sortByDateDescending).slice(0, 2)
     }
     return filteredResult

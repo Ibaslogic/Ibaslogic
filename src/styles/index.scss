@@ -66,7 +66,6 @@ a {
   outline: none;
   text-decoration: none;
 
-  &:focus,
   &:hover {
     color: var(--color-dark-blue);
   }
@@ -288,7 +287,7 @@ blockquote .gatsby-highlight + p {
       color: var(--color-white-a80);
 
       &:hover {
-        color: var(--color-white-a80) !important;
+        color: var(--color-lighter-blue) !important;
       }
     }
   }
@@ -389,7 +388,7 @@ Subscribe Form
 .field__input {
   padding: 0px 15px;
   border: 1px solid #e6e6e6;
-  margin-bottom: 4px;
+  // margin-bottom: 4px;
   color: inherit;
   outline: none;
   background: transparent;
@@ -427,32 +426,6 @@ Subscribe Form
     color: var(--color-white-main);
     background: var(--color-dark-blue);
     border: 1px solid var(--color-dark-blue);
-  }
-}
-
-// Home Page Subscribe
-
-.home__subscribe {
-  display: inline-block;
-  .form__container {
-    text-align: left;
-  }
-  .field__input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid var(--color-light-pink);
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 35px;
-    border-radius: unset;
-    background: transparent;
-  }
-  .field__submit {
-    display: none;
-  }
-  .status__success,
-  .status__error {
-    display: table;
   }
 }
 
@@ -583,6 +556,10 @@ body {
       color: var(--color-lighter-blue);
     }
 
+    .no_border {
+      border: none;
+    }
+
     .series-link-container,
     table tr {
       background-color: var(--color-bg-dm-pry);
@@ -593,8 +570,8 @@ body {
       opacity: 0.8;
     }
 
-    .darkLight__link svg,
-    .content__right a svg,
+    // .darkLight__link svg,
+    // .content__right a svg,
     .bg_dm a,
     .bg_dm li,
     .bg_dm_wc {
@@ -666,6 +643,10 @@ body {
     .discusion__title,
     .dm_brder {
       border-color: var(--color-white-a20) !important;
+    }
+
+    .dm_brder a {
+      color: var(--color-white-a80);
     }
 
     footer,
@@ -740,17 +721,6 @@ body {
     .shadow {
       box-shadow: var(--color-bg-dm-pry) -16px 0px 14px 0px;
       background: var(--color-bg-dm-pry);
-    }
-
-    .dm a,
-    .dm svg {
-      @media screen and (min-width: 768px) {
-        &:hover,
-        &:focus {
-          color: var(--color-white-main) !important;
-          background-color: rgba(0, 0, 0, 0.08);
-        }
-      }
     }
     //end dark mode
   }

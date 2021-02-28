@@ -7,7 +7,7 @@ const Article = ({ title, updated, excerpt, tags, posted, time, fixed, slug }) =
   return (
     <li className={`dm_brder ${articleStyles.listItem}`}>
       <Link to={`/${slug}/`}>
-        <article className={articleStyles.article}>
+        <article className={articleStyles.article}> 
           <div className={articleStyles.entryHeader}>
             {fixed && <Img
               fixed={fixed}

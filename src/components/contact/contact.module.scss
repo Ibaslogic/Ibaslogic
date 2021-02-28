@@ -8,7 +8,7 @@
 $max-width: 960px;
 
 .contact {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .inner {
@@ -77,7 +77,8 @@ $max-width: 960px;
     grid-gap: 40px;
     column-gap: 20px;
 
-    .textarea-field, .selectField {
+    .textarea-field,
+    .selectField {
       grid-column: 1/3;
     }
   }
@@ -90,7 +91,7 @@ $max-width: 960px;
     outline: none;
     padding: 10px;
     line-height: 1.66667;
-    border: 1px solid rgba($color-grey, .4);
+    border: 1px solid rgba($color-grey, 0.4);
     font-family: $fonts;
 
     &::placeholder,
@@ -111,10 +112,12 @@ $max-width: 960px;
       box-shadow: 0 2px 6px 0 rgba($color-light-pink, 0.12);
     }
   }
-  
+
   .selectField {
     appearance: none;
-    background: rgb(255, 255, 255) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat scroll right 0.75rem center / 8px 10px;
+    background: rgb(255, 255, 255)
+      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+      no-repeat scroll right 0.75rem center / 8px 10px;
   }
 
   .textarea-field {
@@ -133,8 +136,9 @@ $max-width: 960px;
     width: auto;
     letter-spacing: 1;
 
-    &:hover, &:focus {
-      opacity: .7;
+    &:hover,
+    &:focus {
+      opacity: 0.7;
       background-color: $color-light-pink;
       color: $color-white-main;
     }
