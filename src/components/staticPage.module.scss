@@ -1,0 +1,20 @@
+// Import
+// ===================================================
+@import "../styles/base/align";
+
+$max-width: 960px;
+
+.wrapper {
+  padding: 60px 0;
+}
+
+.inner {
+  padding: 50px $plr 0;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding-left: $plrls;
+    padding-right: $plrls;
+  }
+}

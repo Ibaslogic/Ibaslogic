@@ -135,9 +135,9 @@ blockquote {
   text-decoration: none;
   letter-spacing: 3px;
   color: var(--color-white-a80);
-  background: var(--color-light-pink) none repeat scroll 0% 0%;
+  background: var(--color-dark-pink) none repeat scroll 0% 0%;
   padding: 10px;
-  border: 1px solid var(--color-light-pink);
+  border: 1px solid var(--color-dark-pink);
 
   text-transform: uppercase;
   cursor: pointer;
@@ -212,6 +212,14 @@ p > a > code,
 li > a > code {
   padding: 1px 6px !important;
   word-break: break-word;
+}
+
+// Ko-fi Donation Style
+// =================================================
+
+.floating-chat-kofi-popup-iframe-notice,
+.floating-chat-kofi-popup-iframe-notice-mobi {
+  visibility: hidden;
 }
 
 // Prism Highligter
@@ -473,16 +481,17 @@ Next Series Posts
   }
 
   .btn__link {
-    background-color: var(--color-light-pink);
-    color: var(--color-white-a80);
+    background-color: var(--color-dark-pink);
+    color: var(--color-white-main);
     border-radius: 2px;
+    font-weight: bold;
     padding: 8px 14px 10px;
     font-size: 14px;
     text-transform: capitalize;
 
     &:hover,
     &:focus {
-      opacity: 0.7;
+      opacity: 0.8;
       text-decoration: none;
     }
 
@@ -578,14 +587,14 @@ body {
       color: var(--color-white-a80);
     }
 
-    .dml a {
-      color: var(--color-white-a80);
-      opacity: 0.7;
+    // .dml a {
+    //   color: var(--color-white-a80);
+    //   opacity: 0.7;
 
-      &:hover {
-        opacity: 1;
-      }
-    }
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
 
     .cg_dm a {
       color: $color-grey-a80;

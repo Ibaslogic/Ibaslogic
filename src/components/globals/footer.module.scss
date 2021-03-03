@@ -5,12 +5,12 @@
 @import "../../styles/base/align"; //default padding left right max-width
 
 .site-footer {
-  background: $color-grey-a20;
+  background: $color-bg-dm-secondary;
   font-size: 14px;
   border-top: 1px solid rgba($color-grey-a30, 0.6);
   line-height: 1.375rem;
   letter-spacing: 0.01562rem;
-  color: $color-grey;
+  color: $color-white-a80;
 }
 
 .container {
@@ -37,14 +37,15 @@
     padding-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
+    flex-flow: row-reverse;
   }
 
   a {
-    color: $color-grey;
+    color: $color-white-a80;
     font-weight: 400;
     @include transition;
     &:hover {
-      color: $color-dark-main;
+      color: $color-lighter-blue;
     }
   }
 }
@@ -56,6 +57,7 @@
   align-items: center;
   flex-flow: wrap;
   justify-content: center;
+  line-height: 28px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
@@ -73,11 +75,27 @@
   }
 }
 
+.copyright {
+  p {
+    margin: 0;
+  }
+}
+
 .social {
+  height: 6rem;
+
+  @media screen and (min-width: 768px) {
+    height: 3.5rem;
+  }
+
   .socialList {
     display: flex;
+    justify-content: center;
     margin: 0;
-    margin-bottom: -6px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-end;
+    }
   }
   .socialItem {
     font-size: 1.5rem;
@@ -85,8 +103,11 @@
     opacity: 0.8;
     margin: 0 12px 0;
 
+    a {
+      color: $color-white-a80;
+    }
+
     @media screen and (min-width: 600px) {
-      margin: 0 0 0 26px;
       font-size: 1.2rem;
     }
   }

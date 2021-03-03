@@ -129,7 +129,7 @@ const Series = ({ data, pageContext }) => {
 
           <section className={styles.secondary}>
             <p>           
-              The content on this site is free and free of ads. If you like the content and you don’t mind supporting me, please <a href="https://ko-fi.com/ibasmajid" target="_blank" rel="noopener noreferrer">donate here</a>. Thank you.
+              The content on this site is free and free of ads and popups. If you don't mind supporting me, I will appreciate it. Thank you for visiting.
             </p>
             <Newsletter />
             <div className={styles.commentSection}>
