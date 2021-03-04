@@ -7,8 +7,8 @@ const Newsletter = () => {
     <div
       className={styles.signUp}
     >
-      <div className={styles.content}>
-        <p className={styles.heading}>Want to learn ReactJS from scratch? Get our book (valued at $14.99) for free!</p>
+      <div className={`bg_dtl ${styles.content}`}>
+        <p className={styles.heading}>Get our ReactJS book (valued at $14.99) for free!</p>
         <div className="post__subscribe">
           <Subscribe submitText="Yes, I want!" />
         </div>

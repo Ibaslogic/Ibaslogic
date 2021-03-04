@@ -1,13 +1,16 @@
 .sign-up {
-  box-shadow: 0 2px 15px 0 rgba(210,214,220,0.8);
+  // box-shadow: 0 2px 15px 0 rgba(210, 214, 220, 0.8);
   margin-bottom: 2rem;
   font-size: 14px;
 }
 .content {
   padding: 25px;
+  background: #f5f8fa;
+  border: 1px #e7eef2 solid;
 }
 .heading {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
+  font-size: 21px !important;
+  line-height: 29px !important;
+  font-weight: 600;
+  line-height: 30px;
 }

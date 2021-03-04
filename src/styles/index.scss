@@ -395,9 +395,9 @@ Subscribe Form
 
 .field__input {
   padding: 0px 15px;
+  background: #fff !important;
   border: 1px solid #e6e6e6;
-  // margin-bottom: 4px;
-  color: inherit;
+  color: var(--dark-color);
   outline: none;
   background: transparent;
 }
@@ -636,7 +636,7 @@ body {
       background-color: var(--color-bg-dm-secondary);
     }
 
-    .email__input,
+    // .email__input,
     .form__field {
       select,
       input,
