@@ -41,29 +41,29 @@ $max-width: 960px;
       font-size: 10px;
     }
   }
-}
 
-h1 {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 33.4px;
-  margin-bottom: 1.1rem;
+  h1 {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 33.4px;
+    margin-bottom: 1.1rem;
 
-  @media screen and (min-width: 768px) {
-    font-size: 31px;
-    line-height: 41.4px;
+    @media screen and (min-width: 768px) {
+      font-size: 31px;
+      line-height: 41.4px;
+    }
   }
-}
 
-h2 {
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 1.3rem;
-  font-weight: 700;
-  padding-top: 0.5em;
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 1.3rem;
+    font-weight: 700;
+    padding-top: 0.5em;
 
-  @media screen and (min-width: 768px) {
-    font-size: 28px;
-    line-height: 37px;
+    @media screen and (min-width: 768px) {
+      font-size: 28px;
+      line-height: 37px;
+    }
   }
 }
