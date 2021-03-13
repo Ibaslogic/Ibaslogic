@@ -16,6 +16,7 @@ import Newsletter from "../components/newsletter/newsletter"
 import Comment from "../components/comment"
 import EditPost from "../components/editPost"
 import Img from "gatsby-image"
+import WebDevShirts from "../components/ads/webDevShirts"
 
 export const query = graphql`
   query($slug: String!) {
@@ -166,6 +167,10 @@ const Article = ({ data, pageContext }) => {
               <RelatedArticles articles={pageContext.relatedArticles} />
             )) ||
               null}
+
+            <div className={`sidebar__item ${styles.ads}`}>
+              <WebDevShirts />
+            </div>
           </div>
           <section className={styles.secondary}>
             <Newsletter />

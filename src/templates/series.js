@@ -15,6 +15,7 @@ import Comment from "../components/comment"
 import PostMeta from "../components/postMeta"
 import Newsletter from "../components/newsletter/newsletter"
 import EditPost from "../components/editPost"
+import WebDevShirts from "../components/ads/webDevShirts"
 
 
 
@@ -111,11 +112,11 @@ const Series = ({ data, pageContext }) => {
 
           <aside className={`bg_dtd ${styles.aside}`}>
             <div className={styles.asideContent}>
-              <div className={styles.tags}>{tags && <TagLinks tags={tags} />}</div>
-              <div className={styles.editPost}>
+              <div className={`sidebar__item ${styles.tags}`}>{tags && <TagLinks tags={tags} />}</div>
+              <div className={`sidebar__item ${styles.editPost}`}>
                 <EditPost pageContext={pageContext} isSeries />
               </div>
-              <div className={styles.share}>
+              <div className={`sidebar__item ${styles.share}`}>
                 <ShareItems
                   slug={pageContext.slug}
                   title={title}
@@ -124,13 +125,13 @@ const Series = ({ data, pageContext }) => {
                   heading="Share"
                 />
               </div>
+              <div className={`sidebar__item`}>
+                <WebDevShirts />
+              </div>
             </div>
           </aside>
 
           <section className={styles.secondary}>
-            <p>           
-              The content on this site is free and free of ads and popups. If you don't mind supporting me, I will appreciate it. Thank you for visiting.
-            </p>
             <Newsletter />
             <div className={styles.commentSection}>
               <h2 className={`discusion__title ${styles.title}`}>
