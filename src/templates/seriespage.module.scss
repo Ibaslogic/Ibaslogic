@@ -97,6 +97,7 @@ $side-max-width: 730px;
   @media screen and (min-width: 960px) {
     grid-area: section;
     margin: 40px 0 0;
+    max-width: 800px;
   }
 }
 
