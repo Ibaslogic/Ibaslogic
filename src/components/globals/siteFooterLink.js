@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 import footerStyles from "./footer.module.scss"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 const SiteFooterLink = ({ github, siteUrl }) => {
   return (
     <ul className={footerStyles.list}>
-      <li>
+      {/* <li>
         <a
           href="https://ko-fi.com/ibasmajid"
           target="_blank"
@@ -13,23 +13,27 @@ const SiteFooterLink = ({ github, siteUrl }) => {
         >
           Support Me
         </a>
+      </li> */}
+      <li>
+        <a
+          href={`https://github.com/${github}/Ibaslogic`}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="contribute"
+        >
+          Open Source
+        </a>
       </li>
-      <li><a
-        href={`https://github.com/${github}/Ibaslogic`}
-        target="_blank"
-        rel="noopener noreferrer"
-        title="contribute"
-      >
-        Open Source
-        </a></li>
-      <li><a
-        href="https://ibaslogic.substack.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Sign up"
-      >
-        Newsletter
-        </a></li>
+      <li>
+        <a
+          href="https://ibaslogic.substack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Sign up"
+        >
+          Newsletter
+        </a>
+      </li>
       <li>
         <a
           href={`${siteUrl}/rss.xml`}
@@ -40,18 +44,10 @@ const SiteFooterLink = ({ github, siteUrl }) => {
         </a>
       </li>
       <li>
-        <Link
-          to="/privacy"
-        >
-          privacy
-        </Link>
+        <Link to="/privacy">privacy</Link>
       </li>
       <li>
-        <Link
-          to="/terms/"
-        >
-           Terms of Service
-        </Link>
+        <Link to="/terms/">Terms of Service</Link>
       </li>
     </ul>
   )
