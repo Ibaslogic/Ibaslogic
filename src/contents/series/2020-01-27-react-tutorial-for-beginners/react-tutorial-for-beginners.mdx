@@ -1,6 +1,6 @@
 ---
 title: "React Tutorial From Scratch: A Step-by-Step Guide (2021)"
-description: "In this React tutorial for beginners, you will learn every step by step to build a React project. Besides, you will be able to deploy on the web."
+description: "In this React tutorial for beginners, you will learn every step by step to build a React project and you will be able to deploy on the web."
 category: "React"
 datePublished: "2020-01-27 10:27:00"
 dateUpdated: "2021-01-03 10:32:00"
@@ -20,13 +20,13 @@ Having said that, React has a smaller learning curve compared to other framework
 
 So once you learn it, you can [jump into React Native](https://reactnative.dev/ "React native documentation") and start building a robust mobile application.
 
-In this React tutorial for beginners, you will learn how to build a React project step by step. Starting from the fundamentals, to building a React application and then deploying on the web.
+In this React tutorial for beginners, you will learn how to build a React project step by step -- from the fundamentals to building a React application and then deploying on the web.
 
 This React tutorial breaks down every technical procedure you might find anywhere else into a simple and actionable method.
 
-It doesn’t matter whether you are an absolute beginner looking for a _React for dummies guide_ or you are the type looking for a _React sample project tutorial_ or maybe you are looking for a _React web tutorial_ where you want to handle routing i.e different page views. This guide is for you.
+It doesn’t matter whether you are an absolute beginner looking for a _React for dummies guide_ or you are the type looking for a _React sample project tutorial_ or maybe you are looking for a _React web tutorial_ where you want to handle routing, i.e., different page views. This guide is for you.
 
-It may also happen that you want to read at your pace, then you can grab our React JS tutorial PDF book. Just signup via the form at the bottom of this page and get it for free. Mind you, this series is more robust and covers more on the subject than the PDF. So take your time and read every part of the series.
+If you want to read at your pace, then you can grab our React JS tutorial PDF book. Just signup via the form at the bottom of this page and get it for free. Mind you, this series is more robust and covers more on the subject than the PDF. So take your time and read every part of the series.
 
 Once you are well-grounded with React, [following a Gatsby site project](/gatsby-tutorial-from-scratch-for-beginners/ "Gatsby tutorial") or some other once that is built on it will be a piece a cake.
 
@@ -44,11 +44,11 @@ At the end of this React js tutorial, you will be able to [build this to-dos App
 
 ![Todos app project](./images/react-todo-app_700.gif)
 
-It may look simple in the eye but trust me, you will get to understand the concept of React and how it works. You’ll also learn how to create multiple views or "pages" in a Single page application using the React Router. You’ll see the common pitfalls associated with the Router and learn how to overcome it.
+You will get to understand the concept of React and how it works. You’ll also learn how to create multiple views or "pages" in a Single page application using the React Router. You’ll see the common pitfalls associated with the Router and learn how to overcome it.
 
 To follow along, you can find all of the code in [my GitHub repo](https://github.com/Ibaslogic/react-todo-project "react tutorial GitHub repo").
 
-Since we aim to cover this topic to length for beginners. We’ve divided this React tutorial into different parts. And here is a quick overview of what you’ll learn in this part
+Since we aim to cover this topic at length for beginners, we’ve divided this React tutorial into different parts. And here is a quick overview of what you’ll learn in this part:
 
 <TableOfContents />
 
@@ -58,19 +58,19 @@ Now let's get started and learn React step by step.
 
 React (sometimes called React.js or ReactJS) is a JavaScript library for building a fast and interactive user interface. It was originated at Facebook in 2011 and allow developers to create sizeable web applications or complex UIs by integrating a small and isolated snippet of code.
 
-In some quarters, React is often called a framework because of its behaviour and capabilities. But technically, it is a library.
+In some quarters, React is often called a framework because of its behavior and capabilities. But technically, it is a library.
 
 Unlike some other [frameworks like Angular](https://angularjs.org/ "Angular documentation") or [Vue](https://vuejs.org/ "Vue documentation"), you’ll often need to use more libraries with React to form any solution.
 
 Let’s take a step backwards.
 
-React allows developers to create complex UI from an isolated snippet of code as mentioned earlier. To understand the statement better, you need to start thinking in React Component.
+React allows developers to create complex UI from an isolated snippet of code as mentioned earlier. To understand the statement better, you need to start thinking in React Components.
 
-## Thinking in React Component
+## Thinking in React Components
 
-When building an application with React, you build a bunch of independent, isolated and reusable components. Think of component as a simple function that you can call with some input and they render some output.
+When building an application with React, you build a bunch of independent, isolated and reusable components. Think of a component as a simple function that you can call with some input and that renders some output.
 
-And as you can reuse functions, so also you can reuse components, merge them and thereby creating a complex user interface.
+As you can reuse functions, so can you reuse components, merge them, and thereby create a complex user interface.
 
 Let’s take a look at the image below. It is a simple To-dos app.
 
@@ -78,17 +78,15 @@ As you are aware, we will create this React app from scratch in this React tutor
 
 ![Todos app design](./images/todosapp_.png)
 
-To build this type of React app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into a smaller and isolated unit as outlined in the image.
+To build this type of React app or any complex app (even as complex as Twitter), the very first thing to do is to split and decompose the UI design into smaller and isolated units as outlined in the image -- where each of these units can be represented as a component which we can build in isolation and then later merge to form a complete UI.
 
-Where each of these units can be represented as a component which we can build in isolation and then later merge to form a complete UI.
+Still on the image: The parent component (also known as the root component), label `TodoContainer`, holds all the other components (known as children components). The `Header` component renders the header contents, the `InputTodo` component accepts the user’s input, the `TodosList` component renders the todos list, the `TodoItem` component takes care of each of the todos items and finally, the `Navbar` component takes care of the navigation.
 
-Still on the image. The parent component (also known as the root component), label `TodoContainer`, holds all the other components (known as children components). The `Header` component renders the header contents, the `InputTodo` component accepts the user’s input, the `TodosList` component renders the todos list, the `TodoItem` component takes care of each of the todos items and finally, the `Navbar` component takes care of the navigation.
+As you can see in the view, and from the breakdown, we will be creating six different components in isolation. Though, later, we will add more components when we start learning Routing in React. There, we will render the single About page.
 
-As you can see in the view, and from the breakdown, we will be creating six different components in isolation. Though, later, we will add more component when we start learning Routing in React. There, we will render the single About page.
+Until then, we will be creating components based on what we are viewing at the moment.
 
-Till then, we will be creating components based on what we are viewing at the moment.
-
-If you want, you can further decompose the `TodoItem` into smaller components – one holding the checkbox, another holding the todos task and then one holding the delete button. You may also wish to have lesser components depending on how you are viewing the design. Ideally, a component should take care of one functionality.
+If you want, you can further decompose the `TodoItem` into smaller components – one holding the checkbox, another holding the todos task and then one holding the delete button. You may also wish to have fewer components depending on how you are viewing the design. Ideally, a component should take care of one piece of functionality.
 
 This way, you are putting on the React cap which makes you think the React way.
 
@@ -96,7 +94,7 @@ Moving on.
 
 ## The Concept of Virtual DOM
 
-As a JavaScript developer, you are sure to have interacted with the real DOM while building interactive websites. Though, you may have been able to avoid understanding how it works. So, let’s reiterate to enable you to quickly grasp the concept behind virtual DOM that React provides for us.
+As a JavaScript developer, you have almost surely interacted with the real DOM while building interactive websites, though you may have been able to avoid understanding how it works. Let’s review so you can quickly grasp the concept behind the virtual DOM that React provides for us.
 
 The DOM (Document Object Model) is an interface that allows JavaScript or other scripts to read and manipulate the content of a document (in this case, an HTML document).
 
@@ -104,23 +102,21 @@ Whenever an HTML document is loaded in the browser as a web page, a correspondin
 
 This way, JavaScript can connect and dynamically manipulate the DOM because it can read and understand its object-based format. This makes it possible to add, modify contents or perform actions on web pages.
 
-But hey! There is a problem. Though not with the DOM. Every time the DOM changes, the browser would need to recalculate the CSS, run layout and repaint the web page.
+But hey! There is a problem, though not with the DOM. Every time the DOM changes, the browser would need to recalculate the CSS, run layout and repaint the web page.
 
-And with Single Page Application (SPA) whereby JavaScript updates the DOM much more than they have to. Things become slower due to the process in the browser workflow after DOM manipulation.
+With a Single Page Application (SPA), in which JavaScript updates the DOM much more than they have to, things become slower due to the browser workflow after DOM manipulation.
 
-So we need a way to minimize the time it takes to repaint the screen. This is where the Virtual DOM comes in.
+We need a way to minimize the time it takes to repaint the screen. This is where the Virtual DOM comes in.
 
-As the name implies, it is a virtual representation of the actual DOM. It uses a strategy that updates the DOM without having to redraw all the webpage elements. This ensures that the actual DOM receive only the necessary data to repaint the UI.
+As the name implies, it is a virtual representation of the actual DOM. It uses a strategy that updates the DOM without having to redraw all the webpage elements. This ensures that the actual DOM receives only the necessary data to repaint the UI.
 
-Let's see how it works. Whenever a new element is added to the UI, a virtual DOM is created. Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare with the previous version to detect which of the virtual DOM object has changed.
+Let's see how it works. Whenever a new element is added to the UI, a virtual DOM is created. Now, if the state of this element changes, React would recreate the virtual DOM for the second time and compare it with the previous version to detect which virtual DOM object has changed.It then updates ONLY that object on the real DOM. This provides a whole lot of optimization, as it reduces the performance cost of re-rendering the webpage.
 
-It then updates ONLY the object on the real DOM. This has a whole lot of optimization as it reduces the performance cost of re-rendering the webpage.
-
-DO not worry if all these seem strange, you will get to see them in practice later.
+DO not worry if all this seem strange, you will get to see it in practice later.
 
 ## Setting up Working Environment
 
-There are several ways we can interact and get started with React. Though React recommended setting up the environment through the `create-react-app` CLI tool (coming to that), I will quickly walk you through how to start working with React by simply writing React code in HTML file.
+There are several ways we can interact and get started with React. Though React recommends setting up the environment through the `create-react-app` CLI tool (coming to that), I will quickly walk you through how to start working with React by simply writing React code in HTML file.
 
 This will quickly get you up and running and does not require any installation.
 
@@ -171,11 +167,11 @@ And you might be wondering why we are writing HTML inside of JavaScript. Well, t
 
 ## What Is JSX?
 
-Writing JavaScript/React code to describe what the user interface (UI) will look like is not as simple as you may think. This makes the React author create what looks like a JavaScript version of HTML. This is called JSX (JavaScript XML). It is an XML like syntax extension to JavaScript that makes it easier and more intuitive to describe the UI.
+Writing JavaScript/React code to describe what the user interface (UI) should look like is not as simple as you may think. Thus, the React authors created what looks like a JavaScript version of HTML. This is called JSX (JavaScript XML). It is an XML-like syntax extension to JavaScript that makes it easier and more intuitive to describe the UI.
 
-Under the hood, the JSX is being translated to regular JavaScript version of itself at runtime since the browser can’t read it. This is how it works:
+Under the hood, the JSX is being translated to regular JavaScript version of itself at runtime, since the browser can’t read JSX. This is how it works:
 
-The JSX code is passed to Babel (a JavaScript compiler) which will then convert it to plain JavaScript code that all browser can understand. This compiler also changes any JavaScript ES6 features into what the older browsers would recognize. For instance, it converts the `const` keyword to `var`.
+The JSX code is passed to Babel (a JavaScript compiler) which will then convert it to plain JavaScript code that all browsers can understand. This compiler also changes any JavaScript ES6 features into what the older browsers would recognize. For instance, it converts the `const` keyword to `var`.
 
 Let’s see a quick demo.
 
@@ -183,9 +179,9 @@ Head over to [babel website](https://babeljs.io/repl "babel repl") and add the J
 
 ![Babel repl](./images/babelrepl.png)
 
-You should have something similar to the image above. Now, look at what is on the right side of the Babel editor. The JSX code is converted to plain React code. Here, we can conclude that using JSX to describe what the UI looks like is much easier.
+You should have something similar to the image above. Now, look at what is on the right side of the Babel editor. The JSX code is converted to plain React code. You can see that using JSX to describe what the UI looks like is much easier.
 
-Also, remember that we loaded React library in the head of our HTML code even though we are not explicitly using it. But under the hood, React is using the `React` object from the library as you can see also on the right side of the editor.
+Also, remember that we loaded the React library in the head of our HTML code even though we are not explicitly using it. However, under the hood, as you can see on the right side of the editor, React is using the `React` object from the library .
 
 Take note of the following about the JSX
 
@@ -196,9 +192,9 @@ Back to our code on CodePen (or open it in the browser if you are using a text e
 
 The output is a React element which represents a Virtual DOM object. Think of it as a blueprint of the actual DOM object. This makes it very easy for ReactJS to create, manipulate and update.
 
-Now let’s imagine you have a list of these JSX (i.e Virtual DOM objects) to render on the screen. Then somehow, one or some of the JSX gets updated. React would recreate an entirely new list of objects still in Virtual DOM and compare with the previous version to figure out which of the virtual DOM object has changed. This process is called **_diffing_**.
+Now let’s imagine you have a list of these JSX (i.e Virtual DOM objects) to render on the screen. Then somehow, one or some of the JSX gets updated. React would recreate an entirely new list of objects still in the Virtual DOM and compare with the previous version to figure out which of the virtual DOM object has changed. This process is called **_diffing_**.
 
-Then, React reaches out to the real DOM and updates only the changed object.
+React then reaches out to the real DOM and updates only the changed object.
 
 Let’s render the React element inside of the real DOM for us to see. Update the `script` element so it looks like this:
 
@@ -291,13 +287,13 @@ If you are using VsCode, you can open its integrated terminal from **View -> Ter
 
 Once the command is done, your app will launch automatically in your browser window on **port 3000**. If nothing happens, visit [localhost:3000](http://localhost:3000/ "dev server") in the browser address bar. You should see your default app.
 
-That is a good start. Let’s move on.
+This is a good start. Let’s move on.
 
 ## Writing the To-dos App
 
-At this point, we can start creating our React App. The files that describe what you are seeing in the frontend live in the `src` folder. Since this React tutorial focuses on the beginners, we will write all the `src` files from scratch.
+At this point, we can start creating our React App. The files that describe what you are seeing in the frontend live in the `src` folder. Since this React tutorial focuses on beginners, we will write all the `src` files from scratch.
 
-So let’s start by deleting all the files in the `src` folder. The frontend breaks immediately you do that. This is because React needs an `index.js` file present in the `src` folder. This file is the entry point.
+Let’s start by deleting all the files in the `src` folder. The frontend breaks immediately after you do that. This is because React needs an `index.js` file present in the `src` folder. This file is the entry point.
 
 Let’s create the file. In the `src` folder, create an `index.js` file and add the following code:
 
@@ -310,47 +306,49 @@ const element = <h1>Hello from Create React App</h1>
 ReactDOM.render(element, document.getElementById("root"))
 ```
 
-Once you save the file, you’ll see a heading text displayed in the frontend.
+Once you save the file you’ll see a heading text displayed in the frontend.
 
-Comparing this code to the one we write directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we are importing `React` and `ReactDOM` instead of loading their respective CDN.
+Compare this code to the one we wrote directly in the HTML file at the beginning. You'll see that we didn’t do anything special except that we are importing `React` and `ReactDOM` instead of loading their respective CDN.
 
 > **Note:** The `import` statement is an ES6 feature that allows us to bring in objects (`React` and `ReactDOM`) from their respective modules (`react` and `react-dom`).
 >
 > A **module** is just a file that usually contains a class or library of functions. And `create-react-app` CLI have both files installed for us to use.
 
-Notice also, we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
+Notice also that we are not loading Babel to compile JSX to JavaScript. It comes bundled with this CLI.
 
-At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practicable. Imagine having an app with hundreds of element, you’ll agree with me that it would be hard to maintain.
+At the moment, we are rendering the JSX element directly in the real DOM through the `ReactDOM.render`. This is not practical. Imagine having an app with hundreds of element, you’ll concur that it would be hard to maintain.
 
-So instead of rendering a simple element, we will render a React component.
+Instead of rendering a simple element, we will render a React component.
 
 ## A Quick Look at React Component Types
 
-Earlier, I mentioned that an App in React is built by combining a bunch of reusable components. Now, this component can either be a **function** or a **class-based**.
+Earlier, I mentioned that an App in React is built by combining a bunch of reusable components. This component can either be a **function** or **class-based**.
 
-A class component is created using [the ES6 class syntax](/object-oriented-programming-javascript/ "oop") while the functional component is created by writing function.
+A class component is created using [the ES6 class syntax](/object-oriented-programming-javascript/ "oop") while the functional component is created by writing a function.
 
-Before the 16.8 version of React, the class-based type is required if the component will manage the state data and/or lifecycle method (more on this later). Hence, it is called a **stateful component**.
+Before the 16.8 version of React, the class-based type was required if the component were to manage the state data and/or lifecycle method (more on this later). Hence, it is called a **stateful component**.
 
-On the other hand, the function component before React 16.8 cannot maintain state and lifecycle logic. And as such, it is referred to as a **stateless component**.
+On the other hand, the function component before React 16.8 cannot maintain state and lifecycle logic. As such, it is referred to as a **stateless component**.
 
-This type is the simplest form of React component because it is primarily concerned with how things look. But now, things have changed with the [introduction of React Hooks](/react-hooks-tutorial/ "react hooks tutorial").
+This latter type is the simplest form of React component because it is primarily concerned with how things look. 
 
-You can now manage the stateful features inside of the function component. This gives us the flexibility to create a React application ONLY with function component.
+However, in subsequent releases of React, things have changed with the [introduction of React Hooks](/react-hooks-tutorial/ "react hooks tutorial").
+
+You can now manage stateful features inside of the function component. This gives us the flexibility to create a React application with ONLY function components.
 
 In this tutorial, we could simply ignore the class-based type and focus on the modern functional component. But NO!
 
 You may come across the class-based when working on a project. So understanding all the tools available to you is paramount.
 
-So, we will start by using the class component to manage the functionality of our app as you will see in a moment. Later in the series, you will learn how to manage this logic in a function component using the React Hooks.
+as you will see in a moment, we will start by using the class component to manage the functionality of our app. Later, you will learn how to manage this logic in a function component using the React Hooks.
 
 ## Creating the Component Files
 
-Remember, in the beginning, we decomposed our application into a tree of isolated components. Where the parent component, `TodoContainer`, holds four children components (`Header`, `InputTodo`, `TodosList` and `Navbar`). Then, `TodosList` holds another component called `TodoItem`.
+Remember, in the beginning, we decomposed our application into a tree of isolated components in which the parent component, `TodoContainer`, holds four children components (`Header`, `InputTodo`, `TodosList` and `Navbar`). Then, `TodosList` holds another component called `TodoItem`.
 
-Meaning, we are creating six components in total. [Revisit the app design](/react-tutorial-for-beginners/#thinking-in-react-component "todo app design") if you need a refresher.
+We are creating six components in total. [Revisit the app design](/react-tutorial-for-beginners/#thinking-in-react-component "todo app design") if you need a refresher.
 
-Let’s create these files. Start by creating a folder called `components` inside the `src` directory and create these components files – i.e `TodoContainer.js`, `Header.js`, `InputTodo.js`, `TodosList.js`, `Navbar.js` and `TodoItem.js`.
+Let’s create these files. Start by creating a folder called `components` inside the `src` directory and create these components files – i.e., `TodoContainer.js`, `Header.js`, `InputTodo.js`, `TodosList.js`, `Navbar.js` and `TodoItem.js`.
 
 Next, add the following code in the parent component file, `TodoContainer.js` and save it:
 
@@ -384,13 +382,13 @@ Save the file and check the frontend. You should have a heading and a paragraph 
 
 ### What did we do?
 
-In the parent file, we started by creating a React class component (called `TodoContainer` by extending the `Component` class in the React library. Inside this class, we have the `render()` method where we are returning the JSX that is being rendered on the screen.
+In the parent file, we started by creating a React class component (called `TodoContainer` by extending the `Component` class in the React library. Inside this class, we have the `render()` method where we are returning the JSX that will be rendered on the screen.
 
 This method is different from the render in the `ReactDOM.render()` earlier mentioned on this page. The `render()` used here is a component render. Unlike the other, it takes no arguments and does not directly interact with the browser. It focuses on returning the corresponding React elements for that component. Remember, these React elements are Virtual DOM objects.
 
 > **Please note:** Make sure you import React object for the JSX to work.
 >
-> You cannot return more than one JSX element next to each other except you wrap them in a single element. In our case, we wrapped them inside a `<div>`. But in case you don’t want a redundant wrapper around your element, you can wrap everything in a **React Fragment** (a virtual element that doesn’t get shown in the DOM).
+> You cannot return more than one JSX element next to each other except if you wrap them in a single element. In our case, we wrapped them inside a `<div>`. But in case you don’t want a redundant wrapper around your element, you can wrap everything in a **React Fragment** (a virtual element that doesn’t get shown in the DOM).
 >
 > For instance, use `<React.fragment>` (or use shortcut, `<></>`) instead of `<div>`.
 >
@@ -401,7 +399,7 @@ This method is different from the render in the `ReactDOM.render()` earlier ment
 > </React.Fragment>
 > ```
 
-Immediately we had the parent component created, we rendered it using a custom tag similar to HTML, `<TodoContainer />` in the `index.js` file. Now, instead of rendering a simple JSX element, we are rendering a React component.
+Immediately after we had the parent component created, we rendered it using a custom tag similar to HTML, `<TodoContainer />` in the `index.js` file. Now, instead of rendering a simple JSX element, we are rendering a React component.
 
 A few more notes:
 
@@ -436,15 +434,15 @@ ReactDOM.render(
 )
 ```
 
-As you can see, we are wrapping the root component, `<TodoContainer />` in the `index.js` file. This enables checks and warning not only for the component but also its descendants.
+As you can see, we are wrapping the root component, `<TodoContainer />` in the `index.js` file. This enables checks and warning not only for the component but also for its descendants.
 
-If you want to activate check for a particular component, you should wrap that component instead of the root component. Like the `Fragment`, the `StrictMode` doesn’t render any UI or get shown in the DOM.
+If you want to activate a check for a particular component, you should wrap that component instead of the root component. Like the `Fragment`, the `StrictMode` doesn’t render any UI or get shown in the DOM.
 
 Now, you’ll be able to see warnings in your DevTools console.
 
 ## Working With Data
 
-When creating a React app, you cannot do without having components receiving and/or passing data. It may be a child component receiving data from its parent or maybe the user directly input data to the component.
+When creating a React app, you will almost certainly need to have components receiving and/or passing data. It may be a child component receiving data from its parent or perhaps the user has directly input data into the component.
 
 Understanding how the data flows is very crucial to building React component. That brings us to the concept of **state** and **props**.
 
@@ -456,7 +454,7 @@ The props (which stands for properties) is one of the two types of “model” d
 <input type="checkbox" checked="{true}" />
 ```
 
-They are the primary way to send data and/or event handlers down the component tree. i.e from parent to its child component.
+Props are the primary way to send data and/or event handlers down the component tree. i.e from parent to its child component.
 
 When this happens, the data that is received in the child component becomes read-only and cannot be changed by the child component. This is because the data is owned by the parent component and can only be changed by the same parent component.
 
@@ -464,29 +462,29 @@ When this happens, the data that is received in the child component becomes read
 
 Unlike the props, the state data is local and specific to the component that owns it. It is not accessible to any other components unless the owner component chooses to pass it down as props to its child component(s).
 
-Even while the child component receives the data in its props, it wouldn’t know where exactly the data comes from. Maybe it was inputted or comes from the props.
+Even while the child component receives the data in its props, it wouldn’t know where exactly the data comes from. Maybe it was input or maybe it comes from the props.
 
 This way, the receiver component wouldn’t know how to update the data unless it references the parent owner.
 
-You’ll mostly find yourself declaring a state anytime you want some data to be updated whenever user perform some action like updating input field, toggling menu button etc. Also, if two or more child components need to communicate with each other. We’ll talk about this in detail in a moment. You will also get to understand the principle of “top-down” data flow.
+You’ll mostly find yourself declaring a state anytime you want some data to be updated when a user performs some action like updating input field, toggling a menu button, etc. Declaring a state is also useful if two or more child components need to communicate with each other. We’ll talk about this in detail in a moment. You will also get to understand the principle of “top-down” data flow.
 
 Keep reading!
 
 ## Adding State
 
-As we have it in the app diagram, the `InputTodo` component takes the responsibility of accepting the user’s input. Now, once the component receives this input data, we need to pass it to a central location where we can manage it and display in the browser view.
+As we have it in the app diagram, the `InputTodo` component takes the responsibility of accepting the user’s input. Now, once the component receives this input data, we need to pass it to a central location where we can manage it and display it in the browser view.
 
 This allows other components to have access to this data.
 
-For instance, the `TodosList` component will be accessing the data and display its todos items. Also, the `TodoItem` component (which holds the checkbox and delete button) will be accessing the data to update the checkbox, update edited items and also remove items from the state.
+For instance, the `TodosList` component will be accessing the data and displaying its todos items. Also, the `TodoItem` component (which holds the checkbox and delete button) will be accessing the data to update the checkbox, update edited items, and also remove items from the state.
 
 Now, for every child component that will be accessing the data, you will need to declare the shared state in their closest common parent. For this reason, the shared state data will live in the `TodoContainer` component, which is their closest common parent. This parent component can then pass the state back to the children by using `props`. This is what we call “Lifting state up” and then having a “top-down” data flow.
 
-Hope it’s clear?
+Hope it’s clear.
 
-Though, instead of declaring a shared state in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
+Instead of declaring a shared state in the parent component as mentioned above, an alternative is to [use the Context API to manage the state data](/react-context-api/ "React Context API tutorial"). As a beginner, you should explore all options.
 
-In this React tutorial series, we will start with the simplest of them. Once you have the basic knowledge, you can then learn to use the Context API for your state management.
+In this React tutorial series, we will start with the simplest option. Once you have the basic knowledge, you can then learn to use the Context API for your state management.
 
 Let’s move on.
 
@@ -498,7 +496,7 @@ state = {
 }
 ```
 
-If you look at our design critically, we will be updating the to-dos checkbox. And as you may know from basic HTML, it uses a `checked` prop (which is a Boolean attribute).
+If you look at our design critically, we will be updating the to-dos checkbox. As you may know basic HTML uses a `checked` prop (which is a Boolean attribute).
 
 This implies that we need to make provision for that. So a typical to-dos item will look like this:
 
@@ -512,7 +510,7 @@ This implies that we need to make provision for that. So a typical to-dos item w
 
 The `id` is very important as you will read later on this page.
 
-In our to-dos app, for a start, we’ll display default items on the screen. Now, instead of an empty array, we will have an array of objects. So add the following code just above the `render()` method in the `TodoContainer.js` file:
+For a start, in our to-dos app, we’ll display default items on the screen. Now, instead of an empty array, we will have an array of objects. So add the following code just above the `render()` method in the `TodoContainer.js` file:
 
 ```JavaScript
 state = {
@@ -558,7 +556,7 @@ Save the file and check the frontend.
 
 After we defined the todos data in the `state` object, we accessed it in the `render()` method using `this.state.todos`.
 
-In addition to the earlier explanation, the `render()` method is one of the lifecycle methods (more on this later) that React call during the Render phase. This phase is when React decides what changes need to be made to the DOM.
+In addition to the earlier explanation, the `render()` method is one of the lifecycle methods (more on this later) that React calls during the Render phase. This phase is when React decides what changes need to be made to the DOM.
 
 Since the value of the `todos` is an array of objects as declared in the `state`, we looped through this array and output each of the todos item i.e `title`.
 
@@ -592,7 +590,7 @@ Since we are using an instance of a component, `<TodosList />` in another file, 
 import TodosList from "./TodosList";
 ```
 
-At this point, you now have the `state` data in the `todos` prop. Thanks to this line:
+At this point, you now have the `state` data in the `todos` prop thanks to this line:
 
 ```jsx
 <TodosList todos={this.state.todos} />
@@ -620,9 +618,9 @@ export default TodosList
 
 Save your file. You should have the todos title rendered on the screen just like before. Notice how we accessed the state data from within the child component, `TodosList`, using `this.props.todos`.
 
-Always remember, with props, we can access state data at different levels of the component hierarchy. This is called **prop drilling**. And it has to do with manually getting data from component A down to component B through the props. Where component A is the parent of B.
+Always remember, with props, we can access state data at different levels of the component hierarchy. This is called **prop drilling**. And it has to do with manually getting data from component A down to component B through the props, where component A is the parent of B.
 
-As a recap,
+As a recap:
 
 The todos data that come from the state of the `TodoContainer` component is passed as props using `todos={this.state.todos}`. Then, we accessed it through `this.props.todos` from within the `TodosList` component.
 
@@ -702,13 +700,13 @@ Up to this moment, we have been using the class-based component to describe the 
 
 Though, later in the series, we will use the functional component to manage our app functionality (i.e the stateful logic) using the React Hooks. We’ve mentioned that before.
 
-But now, I want to quickly show you how to easily integrate this component type in your app. As you have guessed, for now, the component will not be managing any logic.
+But now, I want to quickly show you how to easily integrate this component type into your app. As you have guessed, for now the component will not be managing any logic.
 
-If you take a look at the components we created, only one of them is holding the state data. That is the parent component, `TodoContainer`. That means we will retain this component as a class-based (at least for now).
+If you take a look at the components we created, only one of them is holding the state data. That is the parent component, `TodoContainer`. That means we will retain this component as class-based (at least for now).
 
-The other components which are presently class components can also be function components. This is because they do not hold state data. That is the norm before the React Hooks.
+The other components which are presently class components can also be function components. This is because they do not hold state data. That was the norm before React Hooks.
 
-So let’s convert one of the class component, `TodoItem`, to a function component.
+Let’s convert one of the class component, `TodoItem`, to a function component.
 
 ## Converting Class-Based Component to Function Component
 
@@ -732,7 +730,7 @@ Here, we created a function with the same component name instead of extending th
 
 Also, notice that `this.props` in the class component was replaced by `props`. And to use this `props`, we included it as the function argument.
 
-Until you get to learn the React Hooks, you may not always know (being a beginner) whether to use a function or class component. A lot of times, you will realize after a while that you chose the wrong type. But as you create more components, making this choice will get easier.
+Until you learn the React Hooks, you may not always know (being a beginner) whether to use a function or class component. At times, after a while you will realize that you chose the wrong type. But as you create more components, making this choice will get easier.
 
 One helpful tip to note is that a class component that only has markup within the `render()` method can safely be converted to a function component.
 
