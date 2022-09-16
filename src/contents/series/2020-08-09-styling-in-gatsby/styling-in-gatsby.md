@@ -220,7 +220,8 @@ Starting with the `Header` component. Let’s go inside the `src/components` dir
 After that, go inside the `header.js` file and import the `.scss` file like so:
 
 ```js
-import headerStyles from "./header.module.scss"
+import * as headerStyles from "./header.module.scss"
+
 ```
 
 Then, update the markup within the `return` statement to include the class names:
