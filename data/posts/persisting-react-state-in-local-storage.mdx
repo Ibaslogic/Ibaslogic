@@ -1,0 +1,325 @@
+---
+title: 'Using LocalStorage with React'
+description: 'Learn how to use Browser Local Storage to save and retrieve state data in React easily.'
+publishedAt: '2020-01-27 10:27:00'
+updatedAt: '2023-02-03 10:23:00'
+# featured: '/static/images/react-components-data-model/react-key-prop-list.png'
+category: 'React'
+author_avatar: '/avatar.png'
+toc: true
+---
+
+When building web applications with React, we may want to persist some data, so they are available when we revisit the application. 
+
+This lesson will discuss how to persist a React state in the localStorage. We’ll use the storage mechanism in our todos project to store and retrieve the todos state that renders the UI.
+
+<PostSeriesLink
+  label="This React tutorial is part 10 of 17 in the React for beginners series."
+  datas={[
+    {
+      prefix: 'Part 1',
+      label: 'React Tutorial: A Comprehensive Guide for Beginners',
+      url: '/react-tutorial-for-beginners/',
+    },
+    {
+      prefix: 'Part 2',
+      label: 'React Components and Data Model',
+      url: '/react-components-data-model/',
+    },
+    {
+      prefix: 'Part 3',
+      label: 'React Hooks: Managing State and Side-Effects',
+      url: '/react-hooks-tutorial/',
+    },
+    {
+      prefix: 'Part 4',
+      label: 'Build React Form With This Best Practice',
+      url: '/simple-guide-to-react-form/',
+    },
+    {
+      prefix: 'Part 5',
+      label: 'Raising and Handling Events in React',
+      url: '/react-form-handling/',
+    },
+    {
+      prefix: 'Part 6',
+      label: 'React Developer Tools: Debug and optimize React apps',
+      url: '/react-developer-tools/',
+    },
+    {
+      prefix: 'Part 7',
+      label: 'CSS in React: Styling React Components',
+      url: '/css-in-reactjs-app/',
+    },
+    {
+      prefix: 'Part 8',
+      label: 'React Todos App: Add Editing functionality',
+      url: '/how-to-edit-todos-items-in-react/',
+    },
+    {
+      prefix: 'Part 9',
+      label: 'Profiling: Optimizing Performance in React',
+      url: '/react-performance-optimization/',
+    },
+    {
+      prefix: 'Part 11',
+      label: 'How to Use React Icons',
+      url: '/how-to-use-svg-icons-in-react-project/',
+    },
+    {
+      prefix: 'Part 12',
+      label: 'React Context API: Managing Application State',
+      url: '/react-context-api/',
+    },
+    {
+      prefix: 'Part 13',
+      label: 'Zustand Tutorial: Managing React State',
+      url: '/zustand-react-state-management/',
+    },
+    {
+      prefix: 'Part 14',
+      label: 'React Router: The Beginners Guide',
+      url: '/routing-with-react-router/',
+    },
+    {
+      prefix: 'Part 15',
+      label: 'React children props: What Is It?',
+      url: '/react-children-props/',
+    },
+    {
+      prefix: 'Part 16',
+      label: 'React Toggle Button: Let’s Switch Navigation Widget',
+      url: '/how-to-add-hamburger-menu-in-react/',
+    },
+    {
+      prefix: 'Part 17',
+      label: 'Deploy React App With Vercel',
+      url: '/deploy-react-app-with-vercel/',
+    },
+  ]}
+/>
+
+## The Web Storage API
+
+For every website or web app we render in the browser, the browser creates a storage unit for them to store data. It also provides storage access for developers to interact with the data. 
+
+### Local Storage and Session Storage
+
+We can use either the `localStorage` API or `sessionStorage` API to store data in the browser's storage. 
+
+The `sessionStorage`, as the name implies, lets us store data that persist throughout a session. In other words, it lasts as long as the current browser tab remains active. Meanwhile, data stored in the `localStorage` has no expiration date. The data is available when the browser is closed and shared between windows that use the same origin. 
+
+
+> Same origin implies same domain, same protocol(HTTP/HTTPS), and same port. URL path can be different.
+
+In our todos project, we want the todos state data to persist across the same origin and not be bound to the current browser tab. So, we will use the `localStorage`. The procedure, however, is similar to implementing the `sessionStorage`.
+
+## Using the `localStorage`
+
+If we open the console of any web browser and type/enter `localStorage`, we’ll have access to the `Storage` object of the page. Inside this object, we have access to the storage space.
+
+```js showLineNumbers
+localStorage
+// same as this:
+window.localStorage
+```
+
+> The `window` object is global; we can access its built-in properties without a `window.` prefix. 
+
+If we go further and look at the methods available on the `prototype`, we’ll see helpful methods like `setItem`, `getItem`, `removeItem`, and `clear`. We’ll discuss each of them, starting with the `setItem`.
+
+## Saving Data With `setItem`
+
+The localStorage `setItem()` lets us add items to the `Storage` object. It takes two arguments, namely, `key` and `value`:
+
+```js
+localStorage.setItem("key", "value")
+```
+The `key` is the unique name we give to the value to store. 
+
+To see how it works, let’s open the browser’s console and paste the following code:
+
+```js
+localStorage.setItem("todos", "data")
+```
+Once we press enter, we can open the browser “Local Storage” area and see the data. 
+
+If you are on: 
+
+- Mozilla Firefox: Open DevTools, Storage → Local Storage
+- Chrome: Open DevTools, Application → Local Storage
+
+Then, find the current site URL to see the set item.
+
+The storage only accepts strings for both keys and values. It automatically converts data types like Number and Boolean to String. If we send an object data type to the localStorage, we’ll use `JSON.stringify()` method to convert the JavaScript object to a JSON string. 
+
+## Reading Data From Local Storage With `getItem`
+
+To get an item from local storage, we’ll call the `getItem()` method and pass the item’s `key` to retrieve it as an argument. The syntax looks like so:
+
+```js
+localStorage.getItem("key")
+```
+If we want to retrieve the earlier data we set in the local storage, we can pass the todos key like so in the console:
+
+```js
+localStorage.getItem("todos")
+```
+### Saving and Reading JavaScript object
+
+Let’s see how to work with a JavaScript object. Open the browser console and add the following object:
+
+```js showLineNumbers
+const obj = {
+  id: 1,
+  title: "Setup development environment",
+  completed: true,
+}
+```
+Hit enter and add the following line:
+
+```js
+localStorage.setItem("myItem", JSON.stringify(obj))
+```
+The code would save the `obj` data in the “Local Storage”. The `JSON.stringify(obj)` used in the line above helps convert the JavaScript object into a JSON string that the storage can handle. 
+
+To read the data using `getItem()`, let’s add the following code in the console:
+
+```js
+localStorage.getItem("myItem")
+```
+We’ll receive the data in JSON format like so:
+
+```json
+'{"id":1,"title":"Setup development environment","completed":true}'
+```
+This is so because the storage always returns a string. 
+
+**Use** `**JSON.parse()**` **to Convert to JavaScript Object**
+
+The `JSON.parse()` method will parse the JSON string and returns a JavaScript object. If we enter the following code in the console, we’ll get a proper JavaScript object:
+
+```js
+JSON.parse(localStorage.getItem("myItem"))
+```   
+## Removing Data From Local Storage with `removeItem`
+
+The localStorage `removeItem()` method lets us remove an item from the storage. It takes the item’s key to remove as an argument. The syntax looks like so:
+
+```js
+localStorage.removeItem("key")
+```
+To remove the item that we saved earlier from the storage, we will call the method with the key like so:
+
+```js
+localStorage.removeItem("myItem")
+```
+## Clearing the Storage With localStorage `clear`
+
+We can clear the storage instead of removing items with their keys. To remove all stored data from the “Local Storage”, we’ll use the following code:
+
+```js
+localStorage.clear()
+```
+## Persisting Todos Data to Browser Storage
+
+Now that we know how the localStorage works, we’ll use the `setItem()` and `getItem()` methods to save and retrieve the todos state to/from the storage. 
+
+### Saving Todos State in Local Storage
+
+In the React Hooks lesson, we mentioned that any action that modifies a state outside a component scope is a side effect and must isolate inside a `useEffect` Hook. 
+
+Since we’ll perform an action that modifies the browser storage, the logic will go inside this Hook. Let’s open the `components/TodosLogic.jsx` file, import a `useEffect` Hook, and invoke a `setItem` method in the Hook:
+
+```jsx {1,8-12} showLineNumbers
+import { useState, useEffect } from 'react';
+// ...
+const TodosLogic = () => {
+  const [todos, setTodos] = useState([
+    // ...
+  ]);
+  // ...
+  useEffect(() => {
+    // storing todos items
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
+  }, [todos]);
+
+  return (
+    // ...
+  );
+};
+export default TodosLogic;
+```
+The `useEffect` Hook containing the storage logic will run when the component renders and rerun whenever the `todos` dependency updates. So whenever the todos state update, the Hook will rerun the effect to save the updated data in the “Local storage”. 
+
+If we save the file and open the browser’s local storage, we should see the todos items. 
+
+### Retrieving the Todos Items From Local Storage
+
+To retrieve and display the storage items, we’ll create a function that returns the items and use the function as the initial value of the state. 
+
+Still, in the `TodosLogic` component, we’ll add this function:
+
+```jsx
+function getInitialTodos() {
+  // getting stored items
+  const temp = localStorage.getItem('todos');
+  const savedTodos = JSON.parse(temp);
+  return savedTodos || [];
+}
+```
+After that, we’ll find the following state:
+
+```js
+const [todos, setTodos] = useState([
+  // ...
+]);
+```
+And initial the state variable with the `getInitialTodos` function: 
+
+```js
+const [todos, setTodos] = useState(getInitialTodos());
+```
+The `TodosLogic` component should look like so:
+
+```jsx {3,5-10,12-16} showLineNumbers
+const TodosLogic = () => {
+
+  const [todos, setTodos] = useState(getInitialTodos());
+
+  function getInitialTodos() {
+    // getting stored items
+    const temp = localStorage.getItem('todos');
+    const savedTodos = JSON.parse(temp);
+    return savedTodos || [];
+  }
+
+  useEffect(() => {
+    // storing todos items
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
+  }, [todos]);
+
+  // handlers here...
+
+  return (
+    // ...
+  );
+};
+export default TodosLogic;
+```
+
+> Notice we no longer use static todos data. The component will use the current items saved in the local storage as the initial state. 
+
+If we save the file and interact with the todos application, the items should persist and be available when we refresh the page and on a subsequent visit.
+
+Following the same procedure above, we can persist the form's input values, theme values for dark/light mode, etc. Using the web storage for our use case and the one we just mentioned is okay. However, storing more significant amounts of data is better with [the IndexedDB](https://www.w3.org/TR/IndexedDB/).
+
+In the next lesson, we will discuss using SVG icons in React. 
+
+<PostNextUnit
+  heading="Next part: How to Use React Icons"
+  btnLabel="continue"
+  url="/how-to-use-svg-icons-in-react-project/"
+/>

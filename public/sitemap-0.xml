@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://ibaslogic.com/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/about/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/blog/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/contact/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/series/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/css-in-reactjs-app/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/deploy-gatsby-to-netlify/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/deploying-react-app-to-github-pages/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/gatsby-theme-agency-installation/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/gatsby-tutorial-from-scratch-for-beginners/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/gatsby-with-contentful-cms/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/how-to-add-hamburger-menu-in-react/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/how-to-edit-todos-items-in-react/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/how-to-learn-javascript-fast/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/how-to-use-svg-icons-in-react-project/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/instant-post-switching-in-a-gatsbyjs-site/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/javascript-foreach/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/meme-generator-with-react-hooks/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/object-oriented-programming-javascript/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/page-metadata-and-404-error-page/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/persisting-react-state-in-local-storage/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/react-context-api/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/react-form-handling/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/react-hooks-tutorial/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/react-lifecycle-methods/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/react-tutorial-for-beginners/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/routing-with-react-router/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/simple-guide-to-react-form/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/sourcing-data-in-gatsby/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/styling-in-gatsby/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/the-new-javascript-at-method/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+<url><loc>https://ibaslogic.com/working-with-gatsby-images/</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2023-01-26T05:21:19.333Z</lastmod></url>
+</urlset>

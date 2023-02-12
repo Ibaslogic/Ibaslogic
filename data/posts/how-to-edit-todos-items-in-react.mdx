@@ -1,0 +1,348 @@
+---
+title: 'React Todos App: Add Editing functionality'
+description: 'Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.'
+publishedAt: '2020-01-27 10:27:00'
+updatedAt: '2023-02-03 10:25:00'
+featured: '/static/images/how-to-edit-todos-items-in-react/edit-state-entries.png'
+category: 'React'
+author_avatar: '/avatar.png'
+toc: true
+---
+
+Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.
+
+<PostSeriesLink
+  label="This React tutorial is part 8 of 17 in the React for beginners series."
+  datas={[
+    {
+      prefix: 'Part 1',
+      label: 'React Tutorial: A Comprehensive Guide for Beginners',
+      url: '/react-tutorial-for-beginners/',
+    },
+    {
+      prefix: 'Part 2',
+      label: 'React Components and Data Model',
+      url: '/react-components-data-model/',
+    },
+    {
+      prefix: 'Part 3',
+      label: 'React Hooks: Managing State and Side-Effects',
+      url: '/react-hooks-tutorial/',
+    },
+    {
+      prefix: 'Part 4',
+      label: 'Build React Form With This Best Practice',
+      url: '/simple-guide-to-react-form/',
+    },
+    {
+      prefix: 'Part 5',
+      label: 'Raising and Handling Events in React',
+      url: '/react-form-handling/',
+    },
+    {
+      prefix: 'Part 6',
+      label: 'React Developer Tools: Debug and optimize React apps',
+      url: '/react-developer-tools/',
+    },
+    {
+      prefix: 'Part 7',
+      label: 'CSS in React: Styling React Components',
+      url: '/css-in-reactjs-app/',
+    },
+    {
+      prefix: 'Part 9',
+      label: 'Profiling: Optimizing Performance in React',
+      url: '/react-performance-optimization/',
+    },
+    {
+      prefix: 'Part 10',
+      label: 'Using LocalStorage with React',
+      url: '/persisting-react-state-in-local-storage/',
+    },
+    {
+      prefix: 'Part 11',
+      label: 'How to Use React Icons',
+      url: '/how-to-use-svg-icons-in-react-project/',
+    },
+    {
+      prefix: 'Part 12',
+      label: 'React Context API: Managing Application State',
+      url: '/react-context-api/',
+    },
+    {
+      prefix: 'Part 13',
+      label: 'Zustand Tutorial: Managing React State',
+      url: '/zustand-react-state-management/',
+    },
+    {
+      prefix: 'Part 14',
+      label: 'React Router: The Beginners Guide',
+      url: '/routing-with-react-router/',
+    },
+    {
+      prefix: 'Part 15',
+      label: 'React children props: What Is It?',
+      url: '/react-children-props/',
+    },
+    {
+      prefix: 'Part 16',
+      label: 'React Toggle Button: Let’s Switch Navigation Widget',
+      url: '/how-to-add-hamburger-menu-in-react/',
+    },
+    {
+      prefix: 'Part 17',
+      label: 'Deploy React App With Vercel',
+      url: '/deploy-react-app-with-vercel/',
+    },
+  ]}
+/>
+
+In our todos project, we've stored the rendered items in a component state. So, let's see how to modify the state data.
+
+## Adding an Edit Button
+
+As expected, we’ll add an edit button to individual todos entries. Let’s open the `components/TodoItem.jsx` file and add this button:
+
+```jsx {7} showLineNumbers
+const TodoItem = ({ itemProp, handleChange, delTodo }) => {
+  // ...
+  return (
+    <li className={styles.item}>
+      <div className={styles.content}>
+        {/* ... */}
+        <button>Edit</button>
+        <button onClick={() => delTodo(itemProp.id)}>Delete</button>
+        {/* ... */}
+      </div>
+    </li>
+  );
+};
+export default TodoItem;
+```
+## Setting up a State
+
+We will set up a state that lets us switch between view and edit modes. When in edit mode, we’ll display an editable text input containing the text to edit. However, in view mode, we will hide the editable input.
+
+Let’s add a state that lets us display an edit input when we click an edit button:
+
+```jsx {1,4,6-8,13} showLineNumbers
+import { useState } from 'react';
+// ...
+const TodoItem = ({ itemProp, handleChange, delTodo }) => {
+  const [editing, setEditing] = useState(false);
+  // ...
+  const handleEditing = () => {
+    setEditing(true);
+  };
+  return (
+    <li className={styles.item}>
+      <div className={styles.content}>
+        {/* ... */}
+        <button onClick={handleEditing}>Edit</button>
+        {/* ... */}
+      </div>
+    </li>
+  );
+};
+export default TodoItem;
+```
+### Display Editable Text Input
+
+We’ll dynamically display a text input with the text to edit. Let’s add an input field right before the closing `</li>` tag:
+
+```jsx {6-10} showLineNumbers
+return (
+  <li className={styles.item}>
+    <div className={styles.content}>
+      {/* ... */}
+    </div>
+    <input
+      type="text"
+      value={itemProp.title}
+      className={styles.textInput}
+    />
+  </li>
+);
+```
+Note that we’ve included a CSS Module class name. We’ll add the style rules in the `TodoItem.module.css` file:
+
+```css showLineNumbers
+.textInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+}
+```
+If we save the files, the layout should look like this:
+
+![react-todos-edit](/static/images/how-to-edit-todos-items-in-react/react-todos-edit.gif)
+
+**Display the Edit Input Field Only When the** `**editing**` **State Is True**
+We want to display the edit input only when the item is in editing mode. We’ll update the `TodoItem` component to include an `if/else` statement that checks if an item is in edit mode or view mode, then we dynamically hide/display the item using the `style` attribute.
+
+```jsx {4-10,13,18} showLineNumbers
+const TodoItem = ({ itemProp, handleChange, delTodo }) => {
+  const [editing, setEditing] = useState(false);
+  // ...
+  let viewMode = {};
+  let editMode = {};
+  if (editing) {
+    viewMode.display = 'none';
+  } else {
+    editMode.display = 'none';
+  }
+  return (
+    <li className={styles.item}>
+      <div className={styles.content} style={viewMode}>
+        {/* ... */}
+      </div>
+      <input
+        // ...
+        style={editMode}
+      />
+    </li>
+  );
+};
+export default TodoItem;
+```
+If we save the file, we should have this behavior:
+
+![edit-state-entries](/static/images/how-to-edit-todos-items-in-react/edit-state-entries.png)
+
+## Editing and Updating the Todos State
+
+To edit the text in the text field and update the actual todos state in the parent component, we’ll listen to a change event on the input and send the updated input value up to the `TodosLogic` parent component to update the state.
+
+In the `TodoItem` component, let’s add an `onChange` event to the text input:
+
+```jsx {6} showLineNumbers
+return (
+  <li className={styles.item}>
+    {/* ... */}
+    <input
+      // ...
+      onChange={(e) => console.log(e.target.value, itemProp.id)}
+    />
+  </li>
+);
+```
+In the meantime, we are logging the updated value and item id to the console. We will send these values to the parent state. 
+
+Like we’ve been doing in the series, we’ll pass the values to the parent state through props. We’ll set up the logic in the `TodosLogic` component where the state lives. 
+
+```jsx {6-8,14} showLineNumbers
+const TodosLogic = () => {
+  const [todos, setTodos] = useState([
+    // ...
+  ]);
+  // other handlers ...
+  const setUpdate = (updatedTitle, id) => {
+    // update state
+  };
+  return (
+    <div>
+      {/* ... */}
+      <TodosList
+        // ...
+        setUpdate={setUpdate}
+      />
+    </div>
+  );
+};
+export default TodosLogic;
+```
+We defined a `setUpdate` handler that expects an edited item and its id and then passed the handler down to `TodosList` using a `setUpdate` prop. 
+
+Let’s access the prop in the `TodosList` component and further pass it down to the `TodoItem`:
+
+```jsx {1,7} showLineNumbers
+const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
+  return (
+    <ul>
+      {todosProps.map((todo) => (
+        <TodoItem
+          // ...
+          setUpdate={setUpdate}
+        />
+      ))}
+    </ul>
+  );
+};
+export default TodosList;
+```
+We’ll now grab the `setUpdate` in the `TodoItem` component and pass the updated value and item id as arguments like so:
+
+```jsx {1,8} showLineNumbers
+const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+  // ...
+  return (
+    <li className={styles.item}>
+      {/* ... */}
+      <input
+        //  ...
+        onChange={(e) => setUpdate(e.target.value, itemProp.id)}
+      />
+    </li>
+  );
+};
+export default TodoItem;
+```
+With the `onChange` event, a change in the edit input field will invoke the `setUpdate` handler that lives in the `TodosLogic` parent component. 
+
+### Updating the UI With the Edited Text
+
+We’ll update the `setUpdate` handler in the `TodosLogic`, so we have the following:
+
+```jsx showLineNumbers
+const setUpdate = (updatedTitle, id) => {
+  setTodos(
+    todos.map((todo) => {
+      if (todo.id === id) {
+        todo.title = updatedTitle;
+      }
+      return todo;
+    })
+  );
+};
+```
+All we are doing with the code is updating the todo's title, whose id matches that of the edited input. If we save and test our project, we should be able to edit and update the state. 
+
+### Exiting the Editing Mode
+
+We’ll detect if the user presses an enter key and opt-out of the edit mode. We’ll listen for a key-down event on the edit text field and check for the Enter key using the `event.key`. Then, we’ll reset the `editing` state to `false`.
+
+We’ll update the `TodoItem` component to include the `onKeyDown` event:
+
+```jsx {4-8,15} showLineNumbers
+const TodoItem = ({ itemProp, handleChange, delTodo, setUpdate }) => {
+  const [editing, setEditing] = useState(false);
+  // ...
+  const handleUpdatedDone = (event) => {
+    if (event.key === 'Enter') {
+      setEditing(false);
+    }
+  };
+  return (
+    <li className={styles.item}>
+      {/* ... */}
+      <input
+        type="text"
+        // ...
+        onKeyDown={handleUpdatedDone}
+      />
+    </li>
+  );
+};
+export default TodoItem;
+```
+If we save and test the project, it should work! However, the way we implemented the edited functionality can cause a performance bottleneck. This was intentional!
+
+In the next section, we will see this issue and look at fixing it. 
+
+<PostNextUnit
+  heading="Next part: Profiling: Optimizing Performance in React"
+  btnLabel="continue"
+  url="/react-performance-optimization/"
+/>
+

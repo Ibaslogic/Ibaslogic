@@ -1,0 +1,268 @@
+---
+title: 'How to Use React Icons'
+description: 'Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.'
+publishedAt: '2020-01-27 10:27:00'
+updatedAt: '2023-02-03 10:22:00'
+featured: '/static/images/how-to-use-svg-icons-in-react-project/react-icons-library.png'
+category: 'React'
+author_avatar: '/avatar.png'
+toc: true
+---
+
+Using icons in a web project can improve the visual message. For React projects, we have pools of free icon libraries available. But, in this lesson, we’ll look at a library called “React Icons.” 
+
+<PostSeriesLink
+  label="This React tutorial is part 11 of 17 in the React for beginners series."
+  datas={[
+    {
+      prefix: 'Part 1',
+      label: 'React Tutorial: A Comprehensive Guide for Beginners',
+      url: '/react-tutorial-for-beginners/',
+    },
+    {
+      prefix: 'Part 2',
+      label: 'React Components and Data Model',
+      url: '/react-components-data-model/',
+    },
+    {
+      prefix: 'Part 3',
+      label: 'React Hooks: Managing State and Side-Effects',
+      url: '/react-hooks-tutorial/',
+    },
+    {
+      prefix: 'Part 4',
+      label: 'Build React Form With This Best Practice',
+      url: '/simple-guide-to-react-form/',
+    },
+    {
+      prefix: 'Part 5',
+      label: 'Raising and Handling Events in React',
+      url: '/react-form-handling/',
+    },
+    {
+      prefix: 'Part 6',
+      label: 'React Developer Tools: Debug and optimize React apps',
+      url: '/react-developer-tools/',
+    },
+    {
+      prefix: 'Part 7',
+      label: 'CSS in React: Styling React Components',
+      url: '/css-in-reactjs-app/',
+    },
+    {
+      prefix: 'Part 8',
+      label: 'React Todos App: Add Editing functionality',
+      url: '/how-to-edit-todos-items-in-react/',
+    },
+    {
+      prefix: 'Part 9',
+      label: 'Profiling: Optimizing Performance in React',
+      url: '/react-performance-optimization/',
+    },
+    {
+      prefix: 'Part 10',
+      label: 'Using LocalStorage with React',
+      url: '/persisting-react-state-in-local-storage/',
+    },
+    {
+      prefix: 'Part 12',
+      label: 'React Context API: Managing Application State',
+      url: '/react-context-api/',
+    },
+    {
+      prefix: 'Part 13',
+      label: 'Zustand Tutorial: Managing React State',
+      url: '/zustand-react-state-management/',
+    },
+    {
+      prefix: 'Part 14',
+      label: 'React Router: The Beginners Guide',
+      url: '/routing-with-react-router/',
+    },
+    {
+      prefix: 'Part 15',
+      label: 'React children props: What Is It?',
+      url: '/react-children-props/',
+    },
+    {
+      prefix: 'Part 16',
+      label: 'React Toggle Button: Let’s Switch Navigation Widget',
+      url: '/how-to-add-hamburger-menu-in-react/',
+    },
+    {
+      prefix: 'Part 17',
+      label: 'Deploy React App With Vercel',
+      url: '/deploy-react-app-with-vercel/',
+    },
+  ]}
+/>
+
+## What is React Icons Library?
+
+This small library lets us include icons in our React project from various popular icon sets as React SVG components. These popular icon sets include Font Awesome, Ionicons, Bootstrap icons, Feather, etc.
+
+Using React icons library is a good choice because SVGs:
+
+1. are supported by all major browsers
+2. take less space compared to other image formats
+3. allows us to style icons without a quality loss
+
+## Installing React Icons
+
+Let’s add the React icons via npm like so:
+
+```
+npm install react-icons
+```    
+### Searching for Icons
+
+If we go to [the react-icons website](https://react-icons.github.io/react-icons/), we’ll see all the icons available. On the left panel, we can click on the available fonts library and search for the icons we want. We can go through the list or use `CTRL + F` or `CMD + F` to search for specific icons.
+
+Another way to search for icons is to use the search field. We can determine which of the libraries an icon belongs to by looking at the prefix, i.e., the first two letters of the icon name. We’ll use this prefix when importing the icon into our React project. 
+
+![react-icons-library](/static/images/how-to-use-svg-icons-in-react-project/react-icons-library.png)
+
+## Adding a Delete, Edit, and Submit Icons
+
+In our todos project, we’ll add `FaTrash`, `AiFillEdit`, and `FaPlusCircle` icons to replace the delete, edit and submit texts, respectively. 
+
+Since React icons export icons as React components, we’ll use the ES6 `import` to include them in our project. 
+
+### Adding a Submit Icon
+
+We’ll use the `FaPlusCircle` icon to replace the “Submit” text in the `components/InputTodo.jsx` file. Let’s open the file and import the SVG component:
+
+```jsx
+import { FaPlusCircle } from "react-icons/fa"
+```
+After that, find the following line:
+
+```jsx
+<button className="input-submit">Submit</button>
+```
+And replace the text with the icon component element:
+
+```jsx {2} showLineNumbers
+<button className="input-submit">
+  <FaPlusCircle />
+</button>
+```
+We should see a submit icon in the frontend if we save the file. 
+
+The code is self-explanatory. We only imported an icon from the “Font Awesome” icon set and rendered the icon in the JSX.
+
+### Adding the Delete and Edit Icons
+
+We’ll use `FaTrash` and `AiFillEdit` icons to replace the “Delete” and “Edit” texts in the `components/TodoItem.jsx` file. Let’s open the file and import the icon components:
+
+```jsx
+import { FaTrash } from "react-icons/fa";
+import { AiFillEdit } from "react-icons/ai";
+```
+After that, we’ll replace the “Delete” and “Edit” texts, so we have:
+
+```jsx {6,9} showLineNumbers
+return (
+  <li className={styles.item}>
+    <div className={styles.content} style={viewMode}>
+      {/* ... */}
+      <button onClick={handleEditing}>
+        <AiFillEdit />
+      </button>
+      <button onClick={() => delTodo(itemProp.id)}>
+        <FaTrash />
+      </button>
+      {/* ... */}
+    </div>
+    {/* ... */}
+  </li>
+);
+```
+Let’s save the file and ensure the icons are rendered in the frontend.
+
+## Styling the React Icons
+
+By default, React icons inherit the styles of the parent element. We can style the SVG icons directly in our CSS file by targeting the parent element:
+
+```css showLineNumbers
+.input-submit svg {
+  color: #5e5e5e;
+  font-size: 20px;
+  margin-top: 2px;
+}
+```
+We can also style individual icons using attributes like `color`, `size`, and `className`:
+
+```jsx {3-5} showLineNumbers
+<button className="input-submit">
+  <FaPlusCircle
+    color="#5e5e5e"
+    size="20px"
+    className="submit-icon"
+  />
+</button>
+```
+Like JSX elements, we can also style the icons using the `style` attribute. Let’s use this approach and update the submit button in the `components/InputTodo.jsx` file, so we have the following:
+
+```jsx {3-7} showLineNumbers
+<button className="input-submit">
+  <FaPlusCircle
+    style={{
+      color: '#5e5e5e',
+      fontSize: '20px',
+      marginTop: '2px',
+    }}
+  />
+</button>
+```
+We can save the file and see the update in the frontend. 
+
+Next, we will style the edit and delete button in the `components/TodoItem.jsx` file, so we have the following:
+
+```jsx {2,5} showLineNumbers
+<button onClick={handleEditing}>
+  <AiFillEdit style={{ color: "#5e5e5e", fontSize: "16px" }} />
+</button>
+<button onClick={() => delTodo(itemProp.id)}>
+  <FaTrash style={{ color: "#5e5e5e", fontSize: "16px" }} />
+</button>
+```
+Let’s save it and ensure it works as expected. 
+
+![style-react-icons](/static/images/how-to-use-svg-icons-in-react-project/style-react-icons.png)
+
+## Styling React Icons With `IconContext`
+
+The `IconContext` makes it easy to style multiple icons placed side-by-side. To use `IconContext`, we will import it from the `react-icons`:
+
+```jsx
+import { IconContext } from "react-icons"
+```
+Afterward, we can wrap all the icons to style in a `Provider` component and assign an object with unique keys (provided by `react-icons`) and value pairs to the Provider `value` attribute.
+
+The implementation should look like so:
+
+```jsx showLineNumbers
+<IconContext.Provider
+  value={{
+    color: "darkcyan",
+    style: { fontSize: "20px", color: "#ff0000" },
+    className: "submit-iconn",
+  }}
+>
+  <button className="input-submit">
+    <FaPlusCircle />
+    <FaPlusCircle />
+    <FaPlusCircle />
+  </button>
+</IconContext.Provider>
+```
+Be aware that the `color` inside the `style: {...}` property will override the one assigned directly to the `value` attribute. 
+
+The `IconContext` usage may need to be clarified further because it uses the React context API. While we don’t have to know the context API to use it, we will cover the context API in the next lesson, and the implementation above will make more sense.
+
+<PostNextUnit
+  heading="Next part: React Context API: Managing Application State"
+  btnLabel="continue"
+  url="/react-context-api/"
+/>

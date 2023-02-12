@@ -1,0 +1,238 @@
+---
+title: 'React children props: What Is It?'
+description: 'Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.'
+publishedAt: '2023-02-03 10:18:00'
+updatedAt: '2023-02-03 10:18:00'
+#featured: '/static/images/react-components-data-model/react-key-prop-list.png'
+category: 'React'
+author_avatar: '/avatar.png'
+toc: true
+---
+
+If you have followed the React series up to this lesson, we talked about `props.children` briefly in the React context API lesson. We will explore this unique prop further and learn another important React concept called Composition.
+
+<PostSeriesLink
+  label="This React tutorial is part 15 of 17 in the React for beginners series."
+  datas={[
+    {
+      prefix: 'Part 1',
+      label: 'React Tutorial: A Comprehensive Guide for Beginners',
+      url: '/react-tutorial-for-beginners/',
+    },
+    {
+      prefix: 'Part 2',
+      label: 'React Components and Data Model',
+      url: '/react-components-data-model/',
+    },
+    {
+      prefix: 'Part 3',
+      label: 'React Hooks: Managing State and Side-Effects',
+      url: '/react-hooks-tutorial/',
+    },
+    {
+      prefix: 'Part 4',
+      label: 'Build React Form With This Best Practice',
+      url: '/simple-guide-to-react-form/',
+    },
+    {
+      prefix: 'Part 5',
+      label: 'Raising and Handling Events in React',
+      url: '/react-form-handling/',
+    },
+    {
+      prefix: 'Part 6',
+      label: 'React Developer Tools: Debug and optimize React apps',
+      url: '/react-developer-tools/',
+    },
+    {
+      prefix: 'Part 7',
+      label: 'CSS in React: Styling React Components',
+      url: '/css-in-reactjs-app/',
+    },
+    {
+      prefix: 'Part 8',
+      label: 'React Todos App: Add Editing functionality',
+      url: '/how-to-edit-todos-items-in-react/',
+    },
+    {
+      prefix: 'Part 9',
+      label: 'Profiling: Optimizing Performance in React',
+      url: '/react-performance-optimization/',
+    },
+    {
+      prefix: 'Part 10',
+      label: 'Using LocalStorage with React',
+      url: '/persisting-react-state-in-local-storage/',
+    },
+    {
+      prefix: 'Part 11',
+      label: 'How to Use React Icons',
+      url: '/how-to-use-svg-icons-in-react-project/',
+    },
+    {
+      prefix: 'Part 12',
+      label: 'React Context API: Managing Application State',
+      url: '/react-context-api/',
+    },
+    {
+      prefix: 'Part 13',
+      label: 'Zustand Tutorial: Managing React State',
+      url: '/zustand-react-state-management/',
+    },
+    {
+      prefix: 'Part 14',
+      label: 'React Router: The Beginners Guide',
+      url: '/routing-with-react-router/',
+    },
+    {
+      prefix: 'Part 16',
+      label: 'React Toggle Button: Let’s Switch Navigation Widget',
+      url: '/how-to-add-hamburger-menu-in-react/',
+    },
+    {
+      prefix: 'Part 17',
+      label: 'Deploy React App With Vercel',
+      url: '/deploy-react-app-with-vercel/',
+    },
+  ]}
+/>
+
+We should be familiar with passing React data down to a nested component using the prop like so:
+
+```jsx
+<Header text="About page" />
+```
+And afterward, grab the data using `props.text`:
+
+```jsx showLineNumbers
+const Header = (props) => {
+  return <header>{props.text}</header>;
+};
+export default Header;
+```
+Another way we can gain access to the text data is to mirror HTML and pass the text between the opening and closing tag of the component element:
+
+```jsx
+<Header>About page</Header>
+```
+React lets us grab the text using `props.children` when we have a component element like the above:
+
+```jsx showLineNumbers
+const Header = (props) => {
+  return <header>{props.children}</header>;
+};
+export default Header;
+```
+We don’t have to pass a named prop called `children`; React automatically passes whatever content comes between component elements to `props.children`. This approach can help make React components more flexible and reusable. 
+
+## Composition in React
+
+In functional programming, a composition is an act of building complex functions by combining multiple smaller functions. React lets us use this concept to compose a complex component by injecting other components using the `children` prop. 
+
+This complex component can render varying amounts of content without knowing the children's content ahead of time. A good example of components that implement this concept includes Hero and Sidebar.
+
+Read Fundamentals of functional programming with React.
+
+### Building a Reusable `Header` component
+
+Back to our todos project, we will modify the `Header` component to reuse it with varying content in multiple routes.
+
+Let’s open the `components/Header.jsx` file, and modify the following render:
+
+```jsx showLineNumbers
+return (
+  <header style={headerStyle} className={styles.header}>
+    <h1>todos</h1>
+    <p>Items will persist in the browser local storage</p>
+  </header>
+);
+```
+…to this:
+
+```jsx {1,5} showLineNumbers
+const Header = (props) => {
+  // ...
+  return (
+    <header style={headerStyle} className={styles.header}>
+      {props.children}
+    </header>
+  );
+};
+export default Header;
+```
+With the `children` prop, we can now inject varying content between the opening and closing tags of the `Header` component. If we open the `routes/Home.jsx` file, we will see a self-closing `<Header />` being rendered. Let’s replace it with the following:
+
+```jsx showLineNumbers
+<Header>
+  <h1>todos</h1>
+  <p>Items will persist in the browser local storage</p>
+</Header>
+```
+Everything in between `Header` is considered its `children` prop and thus appears between the `header` tags in the `Header` component. 
+
+Let’s save all the files and ensure the index page still render the header content.
+
+The component that renders the `children` (in our case, the `Header` component) doesn’t know what is coming to replace the `children` prop. This makes the component reusable and flexible to customize because we have control over the content that we place between the component element. 
+
+For instance, the About route renders an `h1`, not a `p` element. In the `routes/About.jsx` file, we can wrap the `h1` with the `Header` component element:
+
+```jsx {1,6-8} showLineNumbers
+import Header from '@/components/Header';
+// ...
+const About = () => {
+  return (
+    <>
+      <Header>
+        <h1>About page.</h1>
+      </Header>
+      <div className="about">
+        {/* ... */}
+      </div>
+    </>
+  );
+};
+export default About;
+```
+Let’s save the file and do the same for the `Login` and `Profile` routes. The `Login` component now looks like so:
+
+```jsx {2,7-9} showLineNumbers
+// ...
+import Header from '@/components/Header';
+const Login = () => {
+  // ...
+  return (
+    <div>
+      <Header>
+        <h1>Login</h1>
+      </Header>
+      {/* ... */}
+    </div>
+  );
+};
+export default Login;
+```
+Here is how the `Profile` component now looks like:
+
+```jsx {1,7-9} showLineNumbers
+import Header from '@/components/Header';
+// ...
+const Profile = () => {
+  // ...
+  return (
+    <div>
+      <Header>
+        <h1>Profile.</h1>
+      </Header>
+      {/* ... */}
+    </div>
+  );
+};
+export default Profile;
+```
+Save all files and ensure the Route’s heading text maintains the same styles. In the next lesson, we’ll work on navigation.
+
+<PostNextUnit
+  heading="Next part: React Toggle Button"
+  btnLabel="continue"
+  url="/how-to-add-hamburger-menu-in-react/"
+/>

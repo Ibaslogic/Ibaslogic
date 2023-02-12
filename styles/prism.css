@@ -1,0 +1,116 @@
+/**
+ * CSS Styles for code highlighting.
+ * Feel free to customize token styles 
+ * by copying from a prismjs compatible theme:
+ * https://github.com/PrismJS/prism-themes
+ */
+
+/* Code block styles */
+.code-highlight {
+  @apply float-left min-w-full;
+}
+
+.code-line {
+  @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
+}
+
+.code-line.inserted {
+  @apply bg-green-500 bg-opacity-20;
+}
+
+.code-line.deleted {
+  @apply bg-red-500 bg-opacity-20;
+}
+
+.highlight-line {
+  @apply -mx-4 border-l-4  bg-[#e6f1e5];
+}
+
+.line-number::before {
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
+  content: attr(line);
+}
+
+.token.imports {
+  color: hsl(355, 77%, 42%);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: hsl(0, 0%, 51%);;
+  font-style: italic;
+}
+
+.token.punctuation, .token.doctype, .token.entity {
+  color: hsl(230, 8%, 24%);
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.namespace {
+  opacity: 0.8;
+}
+
+.token.deleted {
+  color: hsl(5, 74%, 59%);
+  font-style: italic;
+}
+
+.token.symbol,
+.token.important,
+.token.property, .token.tag {
+  color: hsl(355, 77%, 42%);;
+}
+
+
+.token.operator,
+.token.function,
+.token.keyword.module {
+  color: hsl(302, 67%, 54%);
+
+}
+
+.token.keyword, .token.variable {
+  color: hsl(220, 84%, 48%);
+}
+
+
+
+.token.boolean, .token.number, .token.class-name, .token.atrule, .token.constant, .token.attr-name {
+  color: hsl(35, 99%, 36%);
+}
+
+.token.builtin,
+.token.selector,
+.token.inserted,
+.token.string,
+.token.char {
+  color: hsl(119, 34%, 47%);
+}
+
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: hsl(198, 99%, 37%);
+}
+
+.token.regex,
+.token.attr-value {
+  color: hsl(119, 34%, 47%);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.table {
+  display: inline;
+}

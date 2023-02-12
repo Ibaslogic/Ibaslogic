@@ -1,0 +1,155 @@
+---
+title: 'React Developer Tools: Debug and optimize React apps'
+description: 'This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.'
+publishedAt: '2023-02-03 10:27:00'
+updatedAt: '2023-02-03 10:27:00'
+featured: '/static/images/react-developer-tools/react-developer-tools.png'
+category: 'React'
+author_avatar: '/avatar.png'
+toc: true
+---
+
+To debug and inspect component hierarchies, we use the React Developer Tools (also called React DevTools). 
+
+This tool lets us keep track of the component’s state, props, hooks, etc., and analyze a React application for performance optimization. 
+
+<PostSeriesLink
+  label="This React tutorial is part 6 of 17 in the React for beginners series."
+  datas={[
+    {
+      prefix: 'Part 1',
+      label: 'React Tutorial: A Comprehensive Guide for Beginners',
+      url: '/react-tutorial-for-beginners/',
+    },
+    {
+      prefix: 'Part 2',
+      label: 'React Components and Data Model',
+      url: '/react-components-data-model/',
+    },
+    {
+      prefix: 'Part 3',
+      label: 'React Hooks: Managing State and Side-Effects',
+      url: '/react-hooks-tutorial/',
+    },
+    {
+      prefix: 'Part 4',
+      label: 'Build React Form With This Best Practice',
+      url: '/simple-guide-to-react-form/',
+    },
+    {
+      prefix: 'Part 5',
+      label: 'Raising and Handling Events in React',
+      url: '/react-form-handling/',
+    },
+    {
+      prefix: 'Part 7',
+      label: 'CSS in React: Styling React Components',
+      url: '/css-in-reactjs-app/',
+    },
+    {
+      prefix: 'Part 8',
+      label: 'React Todos App: Add Editing functionality',
+      url: '/how-to-edit-todos-items-in-react/',
+    },
+    {
+      prefix: 'Part 9',
+      label: 'Profiling: Optimizing Performance in React',
+      url: '/react-performance-optimization/',
+    },
+    {
+      prefix: 'Part 10',
+      label: 'Using LocalStorage with React',
+      url: '/persisting-react-state-in-local-storage/',
+    },
+    {
+      prefix: 'Part 11',
+      label: 'How to Use React Icons',
+      url: '/how-to-use-svg-icons-in-react-project/',
+    },
+    {
+      prefix: 'Part 12',
+      label: 'React Context API: Managing Application State',
+      url: '/react-context-api/',
+    },
+    {
+      prefix: 'Part 13',
+      label: 'Zustand Tutorial: Managing React State',
+      url: '/zustand-react-state-management/',
+    },
+    {
+      prefix: 'Part 14',
+      label: 'React Router: The Beginners Guide',
+      url: '/routing-with-react-router/',
+    },
+    {
+      prefix: 'Part 15',
+      label: 'React children props: What Is It?',
+      url: '/react-children-props/',
+    },
+    {
+      prefix: 'Part 16',
+      label: 'React Toggle Button: Let’s Switch Navigation Widget',
+      url: '/how-to-add-hamburger-menu-in-react/',
+    },
+    {
+      prefix: 'Part 17',
+      label: 'Deploy React App With Vercel',
+      url: '/deploy-react-app-with-vercel/',
+    },
+  ]}
+/>
+
+To use this tool in our application, we'll install it as a browser add-on:
+
+## Install React Developer Tools
+
+Head over to the extension page for your browser of choice and install it:
+
+- [Chrome browser web store](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Firefox browser Add-ons](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+
+After installation, that is all. It does not require any other setup.
+
+
+> **Note:** This lesson uses Chrome React DevTools for demos and screenshots
+## Detecting a React Application
+
+With the React DevTools installed, we’ll know at a glance if a webpage is rendering a React web application. For React apps in production, a blue React icon will appear at the upper right corner of the browser:
+
+![react-production](/static/images/react-developer-tools/react-production.png)
+
+If you cannot find the icon, click on the **Extensions** icon, label 1, and click on the pin icon by the React Developer Tools. 
+
+For React apps in development, the icon will appear in red:
+
+![react-development](/static/images/react-developer-tools/react-development.png)
+
+Otherwise, the webpage does not render a React web application, and the icon will appear grey. 
+
+## React Profiler and Components Tabs
+
+These two tabs will appear after we install the DevTools while React project is running. See label one(1) below:
+
+![react-developer-tools](/static/images/react-developer-tools/react-developer-tools.png)
+
+### The Components Tab
+
+On the Components tab, we can view the app’s components hierarchy, as seen in label 2, and the props and state of the application, as seen in label 3. If we interact with our application and update the state, we will see the changes in real time in this tab.
+
+> Try exploring the tools by navigating through different tree components and viewing the state and props data. 
+
+### The React Profiler Tab
+
+On this tab, we can measure the performance of a React application. The Profiler allows us to record the time it takes a component to render. It also lets us see why it renders so we know where bottlenecks are within an application.
+
+Understanding how to measure an application’s performance using the Profiler is vital to implement necessary optimization. We’ll later explore this tool in this series.
+
+> You can also learn more in this article: How to optimize React app’s performance.
+
+This is a quick lesson! Up next, we will discuss how to style a React application. 
+
+<PostNextUnit
+  heading="Next part: CSS in React: Styling React Component"
+  btnLabel="continue"
+  url="/css-in-reactjs-app/"
+/>

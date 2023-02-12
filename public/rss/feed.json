@@ -1,0 +1,405 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Demo site | RSS Feed",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000/rss/feed.json",
+    "description": "This is my personal feed!",
+    "icon": "http://localhost:3000/avatar.png",
+    "author": {
+        "name": "John Doe",
+        "url": "https://twitter.com/<username>"
+    },
+    "items": [
+        {
+            "id": "http://localhost:3000/react-tutorial-for-beginners",
+            "content_html": "Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.",
+            "url": "http://localhost:3000/react-tutorial-for-beginners",
+            "title": "React Tutorial: A Comprehensive Guide for Beginners",
+            "summary": "Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.",
+            "date_modified": "2023-02-03T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-components-data-model",
+            "content_html": "This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ",
+            "url": "http://localhost:3000/react-components-data-model",
+            "title": "React Components and Data Model",
+            "summary": "This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ",
+            "date_modified": "2023-02-03T09:31:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-hooks-tutorial",
+            "content_html": "This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.",
+            "url": "http://localhost:3000/react-hooks-tutorial",
+            "title": "React Hooks: Managing State and Side-Effects",
+            "summary": "This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.",
+            "date_modified": "2023-02-03T09:30:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/simple-guide-to-react-form",
+            "content_html": "Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.",
+            "url": "http://localhost:3000/simple-guide-to-react-form",
+            "title": "Build React Form With This Best Practice",
+            "summary": "Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.",
+            "date_modified": "2023-02-03T09:29:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-form-handling",
+            "content_html": "Understand the concept behind raising and handling events in React in this lesson.",
+            "url": "http://localhost:3000/react-form-handling",
+            "title": "Raising and Handling Events in React",
+            "summary": "Understand the concept behind raising and handling events in React in this lesson.",
+            "date_modified": "2023-02-03T09:28:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-developer-tools",
+            "content_html": "This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.",
+            "url": "http://localhost:3000/react-developer-tools",
+            "title": "React Developer Tools: Debug and optimize React apps",
+            "summary": "This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.",
+            "date_modified": "2023-02-03T09:27:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/css-in-reactjs-app",
+            "content_html": "This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!",
+            "url": "http://localhost:3000/css-in-reactjs-app",
+            "title": "CSS in React: Styling React Components",
+            "summary": "This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!",
+            "date_modified": "2023-02-03T09:26:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/how-to-edit-todos-items-in-react",
+            "content_html": "Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.",
+            "url": "http://localhost:3000/how-to-edit-todos-items-in-react",
+            "title": "React Todos App: Add Editing functionality",
+            "summary": "Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.",
+            "date_modified": "2023-02-03T09:25:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-performance-optimization",
+            "content_html": "This tutorial will show you how to use the React Profiler to profile and optimize your React components.",
+            "url": "http://localhost:3000/react-performance-optimization",
+            "title": "Profiling: Optimizing Performance in React",
+            "summary": "This tutorial will show you how to use the React Profiler to profile and optimize your React components.",
+            "date_modified": "2023-02-03T09:24:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/persisting-react-state-in-local-storage",
+            "content_html": "Learn how to use Browser Local Storage to save and retrieve state data in React easily.",
+            "url": "http://localhost:3000/persisting-react-state-in-local-storage",
+            "title": "Using LocalStorage with React",
+            "summary": "Learn how to use Browser Local Storage to save and retrieve state data in React easily.",
+            "date_modified": "2023-02-03T09:23:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/how-to-use-svg-icons-in-react-project",
+            "content_html": "Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.",
+            "url": "http://localhost:3000/how-to-use-svg-icons-in-react-project",
+            "title": "How to Use React Icons",
+            "summary": "Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.",
+            "date_modified": "2023-02-03T09:22:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-context-api",
+            "content_html": "Get started with the React Context API and quickly share state and props throughout your application.",
+            "url": "http://localhost:3000/react-context-api",
+            "title": "React Context API: Managing Application State",
+            "summary": "Get started with the React Context API and quickly share state and props throughout your application.",
+            "date_modified": "2023-02-03T09:21:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/zustand-react-state-management",
+            "content_html": "Get started with Zustand in React and learn how to manage a global state efficiently.",
+            "url": "http://localhost:3000/zustand-react-state-management",
+            "title": "Zustand Tutorial: Managing React State",
+            "summary": "Get started with Zustand in React and learn how to manage a global state efficiently.",
+            "date_modified": "2023-02-03T09:20:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/routing-with-react-router",
+            "content_html": "Use this practical guide to learn how to handle client-side routing with React Router efficiently.",
+            "url": "http://localhost:3000/routing-with-react-router",
+            "title": "React Router: The Beginners Guide",
+            "summary": "Use this practical guide to learn how to handle client-side routing with React Router efficiently.",
+            "date_modified": "2023-02-03T09:19:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-children-props",
+            "content_html": "Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.",
+            "url": "http://localhost:3000/react-children-props",
+            "title": "React children props: What Is It?",
+            "summary": "Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.",
+            "date_modified": "2023-02-03T09:18:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/how-to-add-hamburger-menu-in-react",
+            "content_html": "Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ",
+            "url": "http://localhost:3000/how-to-add-hamburger-menu-in-react",
+            "title": "React Toggle Button: Let’s Switch Navigation Widget",
+            "summary": "Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ",
+            "date_modified": "2023-02-03T09:17:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/deploy-react-app-with-vercel",
+            "content_html": "Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!",
+            "url": "http://localhost:3000/deploy-react-app-with-vercel",
+            "title": "Deploy React App With Vercel",
+            "summary": "Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!",
+            "date_modified": "2023-02-03T09:16:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/deploying-react-app-to-github-pages",
+            "content_html": "Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!",
+            "url": "http://localhost:3000/deploying-react-app-to-github-pages",
+            "title": "Deploy React App to GitHub Pages",
+            "summary": "Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!",
+            "date_modified": "2023-02-03T09:15:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/the-new-javascript-at-method",
+            "content_html": "The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes",
+            "url": "http://localhost:3000/the-new-javascript-at-method",
+            "title": "Using the new JavaScript .at() method",
+            "summary": "The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes",
+            "date_modified": "2021-11-23T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/gatsby-with-contentful-cms",
+            "content_html": "From Zero to deploy, you will learn how to set up a Gatsby site with Contentful CMS. I also show in this guide how to avoid common pitfalls working with Gatsby Contentful.",
+            "url": "http://localhost:3000/gatsby-with-contentful-cms",
+            "title": "How to setup Gatsby with Contentful CMS and Deploy on Netlify",
+            "summary": "From Zero to deploy, you will learn how to set up a Gatsby site with Contentful CMS. I also show in this guide how to avoid common pitfalls working with Gatsby Contentful.",
+            "date_modified": "2021-01-09T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/deploy-gatsby-to-netlify",
+            "content_html": "",
+            "url": "http://localhost:3000/deploy-gatsby-to-netlify",
+            "title": "Gatsby Tutorial: Deploying Site to Netlify",
+            "date_modified": "2021-01-08T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/react-lifecycle-methods",
+            "content_html": "React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.",
+            "url": "http://localhost:3000/react-lifecycle-methods",
+            "title": "Getting Started With the React lifecycle methods",
+            "summary": "React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.",
+            "date_modified": "2021-01-08T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/page-metadata-and-404-error-page",
+            "content_html": "",
+            "url": "http://localhost:3000/page-metadata-and-404-error-page",
+            "title": "Gatsby Tutorial: Adding Page Metadata and 404 Error Page",
+            "date_modified": "2021-01-07T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/working-with-gatsby-images",
+            "content_html": "",
+            "url": "http://localhost:3000/working-with-gatsby-images",
+            "title": "Gatsby Tutorial: Working with Gatsby Images",
+            "date_modified": "2021-01-06T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/sourcing-data-in-gatsby",
+            "content_html": "",
+            "url": "http://localhost:3000/sourcing-data-in-gatsby",
+            "title": "Gatsby Tutorial: Sourcing Data and Content",
+            "date_modified": "2021-01-05T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/styling-in-gatsby",
+            "content_html": "",
+            "url": "http://localhost:3000/styling-in-gatsby",
+            "title": "Styling Gatsby Site with CSS",
+            "date_modified": "2021-01-04T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/gatsby-tutorial-from-scratch-for-beginners",
+            "content_html": "In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.",
+            "url": "http://localhost:3000/gatsby-tutorial-from-scratch-for-beginners",
+            "title": "Gatsby Tutorial From Scratch: The Definitive Guide (2020)",
+            "summary": "In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.",
+            "date_modified": "2021-01-03T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/how-to-learn-javascript-fast",
+            "content_html": "This article takes away your fears and uncovers what you should and should not be doing to learn JavaScript in a much faster and effective way.",
+            "url": "http://localhost:3000/how-to-learn-javascript-fast",
+            "title": "5 Simple Tips to Learn JavaScript Effectively and Fast",
+            "summary": "This article takes away your fears and uncovers what you should and should not be doing to learn JavaScript in a much faster and effective way.",
+            "date_modified": "2020-12-01T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/javascript-foreach",
+            "content_html": "What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?",
+            "url": "http://localhost:3000/javascript-foreach",
+            "title": "JavaScript Foreach: A Comprehensive Guide for Beginners",
+            "summary": "What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?",
+            "date_modified": "2020-08-09T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/gatsby-theme-agency-installation",
+            "content_html": "This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.",
+            "url": "http://localhost:3000/gatsby-theme-agency-installation",
+            "title": "Gatsby Theme Agency – Installation Guide",
+            "summary": "This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.",
+            "date_modified": "2020-08-03T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/object-oriented-programming-javascript",
+            "content_html": "In this OOP tutorial, we cover the object fundamentals, OOPS concepts, the ES5 constructor function, the prototype concept, inheritance and the ES6 class syntax.",
+            "url": "http://localhost:3000/object-oriented-programming-javascript",
+            "title": "Object-Oriented JavaScript: Complete Beginner’s Guide",
+            "summary": "In this OOP tutorial, we cover the object fundamentals, OOPS concepts, the ES5 constructor function, the prototype concept, inheritance and the ES6 class syntax.",
+            "date_modified": "2020-07-25T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/meme-generator-with-react-hooks",
+            "content_html": "We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component.",
+            "url": "http://localhost:3000/meme-generator-with-react-hooks",
+            "title": "Learn React Hooks With a Simple Meme Generator Project",
+            "summary": "We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component.",
+            "date_modified": "2020-04-04T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
+            "id": "http://localhost:3000/instant-post-switching-in-a-gatsbyjs-site",
+            "content_html": "Utilize the power of Gatsby React and create an instant post-filtering so that your users can easily interact with your posts.",
+            "url": "http://localhost:3000/instant-post-switching-in-a-gatsbyjs-site",
+            "title": "Instant Post Switching in a GatsbyJS Site",
+            "summary": "Utilize the power of Gatsby React and create an instant post-filtering so that your users can easily interact with your posts.",
+            "date_modified": "2020-03-13T10:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        }
+    ]
+}
