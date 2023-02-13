@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Demo site | RSS Feed</title>
-        <link>undefined</link>
+        <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 12 Feb 2023 13:28:24 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Feb 2023 15:37:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Demo site | RSS Feed</title>
-            <url>undefined/avatar.png</url>
-            <link>undefined</link>
+            <url>http://localhost:3000/avatar.png</url>
+            <link>http://localhost:3000</link>
         </image>
         <copyright>All rights reserved 2023, Ibas</copyright>
         <item>
             <title><![CDATA[React Tutorial: A Comprehensive Guide for Beginners]]></title>
-            <link>undefined/react-tutorial-for-beginners</link>
-            <guid>undefined/react-tutorial-for-beginners</guid>
+            <link>http://localhost:3000/react-tutorial-for-beginners</link>
+            <guid>http://localhost:3000/react-tutorial-for-beginners</guid>
             <pubDate>Fri, 03 Feb 2023 09:32:00 GMT</pubDate>
             <description><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></description>
             <content:encoded><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></content:encoded>
@@ -24,8 +24,8 @@
         </item>
         <item>
             <title><![CDATA[React Components and Data Model]]></title>
-            <link>undefined/react-components-data-model</link>
-            <guid>undefined/react-components-data-model</guid>
+            <link>http://localhost:3000/react-components-data-model</link>
+            <guid>http://localhost:3000/react-components-data-model</guid>
             <pubDate>Fri, 03 Feb 2023 09:31:00 GMT</pubDate>
             <description><![CDATA[This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ]]></description>
             <content:encoded><![CDATA[This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ]]></content:encoded>
@@ -33,8 +33,8 @@
         </item>
         <item>
             <title><![CDATA[React Hooks: Managing State and Side-Effects]]></title>
-            <link>undefined/react-hooks-tutorial</link>
-            <guid>undefined/react-hooks-tutorial</guid>
+            <link>http://localhost:3000/react-hooks-tutorial</link>
+            <guid>http://localhost:3000/react-hooks-tutorial</guid>
             <pubDate>Fri, 03 Feb 2023 09:30:00 GMT</pubDate>
             <description><![CDATA[This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.]]></description>
             <content:encoded><![CDATA[This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.]]></content:encoded>
@@ -42,8 +42,8 @@
         </item>
         <item>
             <title><![CDATA[Build React Form With This Best Practice]]></title>
-            <link>undefined/simple-guide-to-react-form</link>
-            <guid>undefined/simple-guide-to-react-form</guid>
+            <link>http://localhost:3000/simple-guide-to-react-form</link>
+            <guid>http://localhost:3000/simple-guide-to-react-form</guid>
             <pubDate>Fri, 03 Feb 2023 09:29:00 GMT</pubDate>
             <description><![CDATA[Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.]]></description>
             <content:encoded><![CDATA[Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.]]></content:encoded>
@@ -51,8 +51,8 @@
         </item>
         <item>
             <title><![CDATA[Raising and Handling Events in React]]></title>
-            <link>undefined/react-form-handling</link>
-            <guid>undefined/react-form-handling</guid>
+            <link>http://localhost:3000/react-form-handling</link>
+            <guid>http://localhost:3000/react-form-handling</guid>
             <pubDate>Fri, 03 Feb 2023 09:28:00 GMT</pubDate>
             <description><![CDATA[Understand the concept behind raising and handling events in React in this lesson.]]></description>
             <content:encoded><![CDATA[Understand the concept behind raising and handling events in React in this lesson.]]></content:encoded>
@@ -60,8 +60,8 @@
         </item>
         <item>
             <title><![CDATA[React Developer Tools: Debug and optimize React apps]]></title>
-            <link>undefined/react-developer-tools</link>
-            <guid>undefined/react-developer-tools</guid>
+            <link>http://localhost:3000/react-developer-tools</link>
+            <guid>http://localhost:3000/react-developer-tools</guid>
             <pubDate>Fri, 03 Feb 2023 09:27:00 GMT</pubDate>
             <description><![CDATA[This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.]]></description>
             <content:encoded><![CDATA[This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.]]></content:encoded>
@@ -69,8 +69,8 @@
         </item>
         <item>
             <title><![CDATA[CSS in React: Styling React Components]]></title>
-            <link>undefined/css-in-reactjs-app</link>
-            <guid>undefined/css-in-reactjs-app</guid>
+            <link>http://localhost:3000/css-in-reactjs-app</link>
+            <guid>http://localhost:3000/css-in-reactjs-app</guid>
             <pubDate>Fri, 03 Feb 2023 09:26:00 GMT</pubDate>
             <description><![CDATA[This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!]]></description>
             <content:encoded><![CDATA[This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!]]></content:encoded>
@@ -78,8 +78,8 @@
         </item>
         <item>
             <title><![CDATA[React Todos App: Add Editing functionality]]></title>
-            <link>undefined/how-to-edit-todos-items-in-react</link>
-            <guid>undefined/how-to-edit-todos-items-in-react</guid>
+            <link>http://localhost:3000/how-to-edit-todos-items-in-react</link>
+            <guid>http://localhost:3000/how-to-edit-todos-items-in-react</guid>
             <pubDate>Fri, 03 Feb 2023 09:25:00 GMT</pubDate>
             <description><![CDATA[Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.]]></description>
             <content:encoded><![CDATA[Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.]]></content:encoded>
@@ -87,8 +87,8 @@
         </item>
         <item>
             <title><![CDATA[Profiling: Optimizing Performance in React]]></title>
-            <link>undefined/react-performance-optimization</link>
-            <guid>undefined/react-performance-optimization</guid>
+            <link>http://localhost:3000/react-performance-optimization</link>
+            <guid>http://localhost:3000/react-performance-optimization</guid>
             <pubDate>Fri, 03 Feb 2023 09:24:00 GMT</pubDate>
             <description><![CDATA[This tutorial will show you how to use the React Profiler to profile and optimize your React components.]]></description>
             <content:encoded><![CDATA[This tutorial will show you how to use the React Profiler to profile and optimize your React components.]]></content:encoded>
@@ -96,8 +96,8 @@
         </item>
         <item>
             <title><![CDATA[Using LocalStorage with React]]></title>
-            <link>undefined/persisting-react-state-in-local-storage</link>
-            <guid>undefined/persisting-react-state-in-local-storage</guid>
+            <link>http://localhost:3000/persisting-react-state-in-local-storage</link>
+            <guid>http://localhost:3000/persisting-react-state-in-local-storage</guid>
             <pubDate>Fri, 03 Feb 2023 09:23:00 GMT</pubDate>
             <description><![CDATA[Learn how to use Browser Local Storage to save and retrieve state data in React easily.]]></description>
             <content:encoded><![CDATA[Learn how to use Browser Local Storage to save and retrieve state data in React easily.]]></content:encoded>
@@ -105,8 +105,8 @@
         </item>
         <item>
             <title><![CDATA[How to Use React Icons]]></title>
-            <link>undefined/how-to-use-svg-icons-in-react-project</link>
-            <guid>undefined/how-to-use-svg-icons-in-react-project</guid>
+            <link>http://localhost:3000/how-to-use-svg-icons-in-react-project</link>
+            <guid>http://localhost:3000/how-to-use-svg-icons-in-react-project</guid>
             <pubDate>Fri, 03 Feb 2023 09:22:00 GMT</pubDate>
             <description><![CDATA[Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.]]></description>
             <content:encoded><![CDATA[Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.]]></content:encoded>
@@ -114,8 +114,8 @@
         </item>
         <item>
             <title><![CDATA[React Context API: Managing Application State]]></title>
-            <link>undefined/react-context-api</link>
-            <guid>undefined/react-context-api</guid>
+            <link>http://localhost:3000/react-context-api</link>
+            <guid>http://localhost:3000/react-context-api</guid>
             <pubDate>Fri, 03 Feb 2023 09:21:00 GMT</pubDate>
             <description><![CDATA[Get started with the React Context API and quickly share state and props throughout your application.]]></description>
             <content:encoded><![CDATA[Get started with the React Context API and quickly share state and props throughout your application.]]></content:encoded>
@@ -123,8 +123,8 @@
         </item>
         <item>
             <title><![CDATA[Zustand Tutorial: Managing React State]]></title>
-            <link>undefined/zustand-react-state-management</link>
-            <guid>undefined/zustand-react-state-management</guid>
+            <link>http://localhost:3000/zustand-react-state-management</link>
+            <guid>http://localhost:3000/zustand-react-state-management</guid>
             <pubDate>Fri, 03 Feb 2023 09:20:00 GMT</pubDate>
             <description><![CDATA[Get started with Zustand in React and learn how to manage a global state efficiently.]]></description>
             <content:encoded><![CDATA[Get started with Zustand in React and learn how to manage a global state efficiently.]]></content:encoded>
@@ -132,8 +132,8 @@
         </item>
         <item>
             <title><![CDATA[React Router: The Beginners Guide]]></title>
-            <link>undefined/routing-with-react-router</link>
-            <guid>undefined/routing-with-react-router</guid>
+            <link>http://localhost:3000/routing-with-react-router</link>
+            <guid>http://localhost:3000/routing-with-react-router</guid>
             <pubDate>Fri, 03 Feb 2023 09:19:00 GMT</pubDate>
             <description><![CDATA[Use this practical guide to learn how to handle client-side routing with React Router efficiently.]]></description>
             <content:encoded><![CDATA[Use this practical guide to learn how to handle client-side routing with React Router efficiently.]]></content:encoded>
@@ -141,8 +141,8 @@
         </item>
         <item>
             <title><![CDATA[React children props: What Is It?]]></title>
-            <link>undefined/react-children-props</link>
-            <guid>undefined/react-children-props</guid>
+            <link>http://localhost:3000/react-children-props</link>
+            <guid>http://localhost:3000/react-children-props</guid>
             <pubDate>Fri, 03 Feb 2023 09:18:00 GMT</pubDate>
             <description><![CDATA[Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.]]></description>
             <content:encoded><![CDATA[Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.]]></content:encoded>
@@ -150,8 +150,8 @@
         </item>
         <item>
             <title><![CDATA[React Toggle Button: Let’s Switch Navigation Widget]]></title>
-            <link>undefined/how-to-add-hamburger-menu-in-react</link>
-            <guid>undefined/how-to-add-hamburger-menu-in-react</guid>
+            <link>http://localhost:3000/how-to-add-hamburger-menu-in-react</link>
+            <guid>http://localhost:3000/how-to-add-hamburger-menu-in-react</guid>
             <pubDate>Fri, 03 Feb 2023 09:17:00 GMT</pubDate>
             <description><![CDATA[Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ]]></description>
             <content:encoded><![CDATA[Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ]]></content:encoded>
@@ -159,8 +159,8 @@
         </item>
         <item>
             <title><![CDATA[Deploy React App With Vercel]]></title>
-            <link>undefined/deploy-react-app-with-vercel</link>
-            <guid>undefined/deploy-react-app-with-vercel</guid>
+            <link>http://localhost:3000/deploy-react-app-with-vercel</link>
+            <guid>http://localhost:3000/deploy-react-app-with-vercel</guid>
             <pubDate>Fri, 03 Feb 2023 09:16:00 GMT</pubDate>
             <description><![CDATA[Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!]]></description>
             <content:encoded><![CDATA[Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!]]></content:encoded>
@@ -168,8 +168,8 @@
         </item>
         <item>
             <title><![CDATA[Deploy React App to GitHub Pages]]></title>
-            <link>undefined/deploying-react-app-to-github-pages</link>
-            <guid>undefined/deploying-react-app-to-github-pages</guid>
+            <link>http://localhost:3000/deploying-react-app-to-github-pages</link>
+            <guid>http://localhost:3000/deploying-react-app-to-github-pages</guid>
             <pubDate>Fri, 03 Feb 2023 09:15:00 GMT</pubDate>
             <description><![CDATA[Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!]]></description>
             <content:encoded><![CDATA[Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!]]></content:encoded>
@@ -177,8 +177,8 @@
         </item>
         <item>
             <title><![CDATA[Using the new JavaScript .at() method]]></title>
-            <link>undefined/the-new-javascript-at-method</link>
-            <guid>undefined/the-new-javascript-at-method</guid>
+            <link>http://localhost:3000/the-new-javascript-at-method</link>
+            <guid>http://localhost:3000/the-new-javascript-at-method</guid>
             <pubDate>Tue, 23 Nov 2021 09:32:00 GMT</pubDate>
             <description><![CDATA[The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></description>
             <content:encoded><![CDATA[The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></content:encoded>
@@ -186,8 +186,8 @@
         </item>
         <item>
             <title><![CDATA[How to setup Gatsby with Contentful CMS and Deploy on Netlify]]></title>
-            <link>undefined/gatsby-with-contentful-cms</link>
-            <guid>undefined/gatsby-with-contentful-cms</guid>
+            <link>http://localhost:3000/gatsby-with-contentful-cms</link>
+            <guid>http://localhost:3000/gatsby-with-contentful-cms</guid>
             <pubDate>Sat, 09 Jan 2021 10:32:00 GMT</pubDate>
             <description><![CDATA[From Zero to deploy, you will learn how to set up a Gatsby site with Contentful CMS. I also show in this guide how to avoid common pitfalls working with Gatsby Contentful.]]></description>
             <content:encoded><![CDATA[From Zero to deploy, you will learn how to set up a Gatsby site with Contentful CMS. I also show in this guide how to avoid common pitfalls working with Gatsby Contentful.]]></content:encoded>
@@ -195,15 +195,15 @@
         </item>
         <item>
             <title><![CDATA[Gatsby Tutorial: Deploying Site to Netlify]]></title>
-            <link>undefined/deploy-gatsby-to-netlify</link>
-            <guid>undefined/deploy-gatsby-to-netlify</guid>
+            <link>http://localhost:3000/deploy-gatsby-to-netlify</link>
+            <guid>http://localhost:3000/deploy-gatsby-to-netlify</guid>
             <pubDate>Fri, 08 Jan 2021 10:32:00 GMT</pubDate>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
             <title><![CDATA[Getting Started With the React lifecycle methods]]></title>
-            <link>undefined/react-lifecycle-methods</link>
-            <guid>undefined/react-lifecycle-methods</guid>
+            <link>http://localhost:3000/react-lifecycle-methods</link>
+            <guid>http://localhost:3000/react-lifecycle-methods</guid>
             <pubDate>Fri, 08 Jan 2021 09:32:00 GMT</pubDate>
             <description><![CDATA[React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.]]></description>
             <content:encoded><![CDATA[React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.]]></content:encoded>
@@ -211,36 +211,36 @@
         </item>
         <item>
             <title><![CDATA[Gatsby Tutorial: Adding Page Metadata and 404 Error Page]]></title>
-            <link>undefined/page-metadata-and-404-error-page</link>
-            <guid>undefined/page-metadata-and-404-error-page</guid>
+            <link>http://localhost:3000/page-metadata-and-404-error-page</link>
+            <guid>http://localhost:3000/page-metadata-and-404-error-page</guid>
             <pubDate>Thu, 07 Jan 2021 10:32:00 GMT</pubDate>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
             <title><![CDATA[Gatsby Tutorial: Working with Gatsby Images]]></title>
-            <link>undefined/working-with-gatsby-images</link>
-            <guid>undefined/working-with-gatsby-images</guid>
+            <link>http://localhost:3000/working-with-gatsby-images</link>
+            <guid>http://localhost:3000/working-with-gatsby-images</guid>
             <pubDate>Wed, 06 Jan 2021 10:32:00 GMT</pubDate>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
             <title><![CDATA[Gatsby Tutorial: Sourcing Data and Content]]></title>
-            <link>undefined/sourcing-data-in-gatsby</link>
-            <guid>undefined/sourcing-data-in-gatsby</guid>
+            <link>http://localhost:3000/sourcing-data-in-gatsby</link>
+            <guid>http://localhost:3000/sourcing-data-in-gatsby</guid>
             <pubDate>Tue, 05 Jan 2021 10:32:00 GMT</pubDate>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
             <title><![CDATA[Styling Gatsby Site with CSS]]></title>
-            <link>undefined/styling-in-gatsby</link>
-            <guid>undefined/styling-in-gatsby</guid>
+            <link>http://localhost:3000/styling-in-gatsby</link>
+            <guid>http://localhost:3000/styling-in-gatsby</guid>
             <pubDate>Mon, 04 Jan 2021 10:32:00 GMT</pubDate>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
             <title><![CDATA[Gatsby Tutorial From Scratch: The Definitive Guide (2020)]]></title>
-            <link>undefined/gatsby-tutorial-from-scratch-for-beginners</link>
-            <guid>undefined/gatsby-tutorial-from-scratch-for-beginners</guid>
+            <link>http://localhost:3000/gatsby-tutorial-from-scratch-for-beginners</link>
+            <guid>http://localhost:3000/gatsby-tutorial-from-scratch-for-beginners</guid>
             <pubDate>Sun, 03 Jan 2021 10:32:00 GMT</pubDate>
             <description><![CDATA[In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.]]></description>
             <content:encoded><![CDATA[In this tutorial, you will learn how to build a Gatsby blog site from scratch and deploy on the web for free.]]></content:encoded>
@@ -248,8 +248,8 @@
         </item>
         <item>
             <title><![CDATA[5 Simple Tips to Learn JavaScript Effectively and Fast]]></title>
-            <link>undefined/how-to-learn-javascript-fast</link>
-            <guid>undefined/how-to-learn-javascript-fast</guid>
+            <link>http://localhost:3000/how-to-learn-javascript-fast</link>
+            <guid>http://localhost:3000/how-to-learn-javascript-fast</guid>
             <pubDate>Tue, 01 Dec 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[This article takes away your fears and uncovers what you should and should not be doing to learn JavaScript in a much faster and effective way.]]></description>
             <content:encoded><![CDATA[This article takes away your fears and uncovers what you should and should not be doing to learn JavaScript in a much faster and effective way.]]></content:encoded>
@@ -257,8 +257,8 @@
         </item>
         <item>
             <title><![CDATA[JavaScript Foreach: A Comprehensive Guide for Beginners]]></title>
-            <link>undefined/javascript-foreach</link>
-            <guid>undefined/javascript-foreach</guid>
+            <link>http://localhost:3000/javascript-foreach</link>
+            <guid>http://localhost:3000/javascript-foreach</guid>
             <pubDate>Sun, 09 Aug 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?]]></description>
             <content:encoded><![CDATA[What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?]]></content:encoded>
@@ -266,8 +266,8 @@
         </item>
         <item>
             <title><![CDATA[Gatsby Theme Agency – Installation Guide]]></title>
-            <link>undefined/gatsby-theme-agency-installation</link>
-            <guid>undefined/gatsby-theme-agency-installation</guid>
+            <link>http://localhost:3000/gatsby-theme-agency-installation</link>
+            <guid>http://localhost:3000/gatsby-theme-agency-installation</guid>
             <pubDate>Mon, 03 Aug 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.]]></description>
             <content:encoded><![CDATA[This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.]]></content:encoded>
@@ -275,8 +275,8 @@
         </item>
         <item>
             <title><![CDATA[Object-Oriented JavaScript: Complete Beginner’s Guide]]></title>
-            <link>undefined/object-oriented-programming-javascript</link>
-            <guid>undefined/object-oriented-programming-javascript</guid>
+            <link>http://localhost:3000/object-oriented-programming-javascript</link>
+            <guid>http://localhost:3000/object-oriented-programming-javascript</guid>
             <pubDate>Sat, 25 Jul 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[In this OOP tutorial, we cover the object fundamentals, OOPS concepts, the ES5 constructor function, the prototype concept, inheritance and the ES6 class syntax.]]></description>
             <content:encoded><![CDATA[In this OOP tutorial, we cover the object fundamentals, OOPS concepts, the ES5 constructor function, the prototype concept, inheritance and the ES6 class syntax.]]></content:encoded>
@@ -284,8 +284,8 @@
         </item>
         <item>
             <title><![CDATA[Learn React Hooks With a Simple Meme Generator Project]]></title>
-            <link>undefined/meme-generator-with-react-hooks</link>
-            <guid>undefined/meme-generator-with-react-hooks</guid>
+            <link>http://localhost:3000/meme-generator-with-react-hooks</link>
+            <guid>http://localhost:3000/meme-generator-with-react-hooks</guid>
             <pubDate>Sat, 04 Apr 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component.]]></description>
             <content:encoded><![CDATA[We will be working with a simple meme generator app that is built on the class logic (state and lifecycle method). You will, however, learn how to manage this logic using the React Hooks in a function component.]]></content:encoded>
@@ -293,8 +293,8 @@
         </item>
         <item>
             <title><![CDATA[Instant Post Switching in a GatsbyJS Site]]></title>
-            <link>undefined/instant-post-switching-in-a-gatsbyjs-site</link>
-            <guid>undefined/instant-post-switching-in-a-gatsbyjs-site</guid>
+            <link>http://localhost:3000/instant-post-switching-in-a-gatsbyjs-site</link>
+            <guid>http://localhost:3000/instant-post-switching-in-a-gatsbyjs-site</guid>
             <pubDate>Fri, 13 Mar 2020 10:32:00 GMT</pubDate>
             <description><![CDATA[Utilize the power of Gatsby React and create an instant post-filtering so that your users can easily interact with your posts.]]></description>
             <content:encoded><![CDATA[Utilize the power of Gatsby React and create an instant post-filtering so that your users can easily interact with your posts.]]></content:encoded>
