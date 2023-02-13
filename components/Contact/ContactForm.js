@@ -34,7 +34,10 @@ const ContactForm = () => {
     email: Yup.string()
       .email('Enter a valid email!')
       .required('Email is required!'),
-    message: Yup.string().trim().required('Write a brief message!'),
+    message: Yup.string()
+      .min(10, 'Message too short')
+      .trim()
+      .required('Write a brief message!'),
   });
 
   const formik = useFormik({

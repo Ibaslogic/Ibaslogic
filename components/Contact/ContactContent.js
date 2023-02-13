@@ -6,7 +6,7 @@ import config from '../../data/siteMetadata.js';
 const { twitterShare } = config;
 
 const ContactContent = () => {
-  const displayForm = false;
+  const displayForm = true;
   return (
     <>
       <div className="mb-8 contact">
