@@ -4,7 +4,7 @@
         <title>Demo site | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 13 Feb 2023 15:37:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Feb 2023 05:27:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -17,7 +17,7 @@
             <title><![CDATA[React Tutorial: A Comprehensive Guide for Beginners]]></title>
             <link>http://localhost:3000/react-tutorial-for-beginners</link>
             <guid>http://localhost:3000/react-tutorial-for-beginners</guid>
-            <pubDate>Fri, 03 Feb 2023 09:32:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:32:00 GMT</pubDate>
             <description><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></description>
             <content:encoded><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -26,7 +26,7 @@
             <title><![CDATA[React Components and Data Model]]></title>
             <link>http://localhost:3000/react-components-data-model</link>
             <guid>http://localhost:3000/react-components-data-model</guid>
-            <pubDate>Fri, 03 Feb 2023 09:31:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:31:00 GMT</pubDate>
             <description><![CDATA[This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ]]></description>
             <content:encoded><![CDATA[This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -35,7 +35,7 @@
             <title><![CDATA[React Hooks: Managing State and Side-Effects]]></title>
             <link>http://localhost:3000/react-hooks-tutorial</link>
             <guid>http://localhost:3000/react-hooks-tutorial</guid>
-            <pubDate>Fri, 03 Feb 2023 09:30:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:30:00 GMT</pubDate>
             <description><![CDATA[This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.]]></description>
             <content:encoded><![CDATA[This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -44,7 +44,7 @@
             <title><![CDATA[Build React Form With This Best Practice]]></title>
             <link>http://localhost:3000/simple-guide-to-react-form</link>
             <guid>http://localhost:3000/simple-guide-to-react-form</guid>
-            <pubDate>Fri, 03 Feb 2023 09:29:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:29:00 GMT</pubDate>
             <description><![CDATA[Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.]]></description>
             <content:encoded><![CDATA[Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -53,7 +53,7 @@
             <title><![CDATA[Raising and Handling Events in React]]></title>
             <link>http://localhost:3000/react-form-handling</link>
             <guid>http://localhost:3000/react-form-handling</guid>
-            <pubDate>Fri, 03 Feb 2023 09:28:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:28:00 GMT</pubDate>
             <description><![CDATA[Understand the concept behind raising and handling events in React in this lesson.]]></description>
             <content:encoded><![CDATA[Understand the concept behind raising and handling events in React in this lesson.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -62,7 +62,7 @@
             <title><![CDATA[React Developer Tools: Debug and optimize React apps]]></title>
             <link>http://localhost:3000/react-developer-tools</link>
             <guid>http://localhost:3000/react-developer-tools</guid>
-            <pubDate>Fri, 03 Feb 2023 09:27:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:27:00 GMT</pubDate>
             <description><![CDATA[This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.]]></description>
             <content:encoded><![CDATA[This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -71,7 +71,7 @@
             <title><![CDATA[CSS in React: Styling React Components]]></title>
             <link>http://localhost:3000/css-in-reactjs-app</link>
             <guid>http://localhost:3000/css-in-reactjs-app</guid>
-            <pubDate>Fri, 03 Feb 2023 09:26:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:26:00 GMT</pubDate>
             <description><![CDATA[This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!]]></description>
             <content:encoded><![CDATA[This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -80,7 +80,7 @@
             <title><![CDATA[React Todos App: Add Editing functionality]]></title>
             <link>http://localhost:3000/how-to-edit-todos-items-in-react</link>
             <guid>http://localhost:3000/how-to-edit-todos-items-in-react</guid>
-            <pubDate>Fri, 03 Feb 2023 09:25:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:25:00 GMT</pubDate>
             <description><![CDATA[Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.]]></description>
             <content:encoded><![CDATA[Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -89,7 +89,7 @@
             <title><![CDATA[Profiling: Optimizing Performance in React]]></title>
             <link>http://localhost:3000/react-performance-optimization</link>
             <guid>http://localhost:3000/react-performance-optimization</guid>
-            <pubDate>Fri, 03 Feb 2023 09:24:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:24:00 GMT</pubDate>
             <description><![CDATA[This tutorial will show you how to use the React Profiler to profile and optimize your React components.]]></description>
             <content:encoded><![CDATA[This tutorial will show you how to use the React Profiler to profile and optimize your React components.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -98,7 +98,7 @@
             <title><![CDATA[Using LocalStorage with React]]></title>
             <link>http://localhost:3000/persisting-react-state-in-local-storage</link>
             <guid>http://localhost:3000/persisting-react-state-in-local-storage</guid>
-            <pubDate>Fri, 03 Feb 2023 09:23:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:23:00 GMT</pubDate>
             <description><![CDATA[Learn how to use Browser Local Storage to save and retrieve state data in React easily.]]></description>
             <content:encoded><![CDATA[Learn how to use Browser Local Storage to save and retrieve state data in React easily.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -107,7 +107,7 @@
             <title><![CDATA[How to Use React Icons]]></title>
             <link>http://localhost:3000/how-to-use-svg-icons-in-react-project</link>
             <guid>http://localhost:3000/how-to-use-svg-icons-in-react-project</guid>
-            <pubDate>Fri, 03 Feb 2023 09:22:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:22:00 GMT</pubDate>
             <description><![CDATA[Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.]]></description>
             <content:encoded><![CDATA[Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -116,7 +116,7 @@
             <title><![CDATA[React Context API: Managing Application State]]></title>
             <link>http://localhost:3000/react-context-api</link>
             <guid>http://localhost:3000/react-context-api</guid>
-            <pubDate>Fri, 03 Feb 2023 09:21:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:21:00 GMT</pubDate>
             <description><![CDATA[Get started with the React Context API and quickly share state and props throughout your application.]]></description>
             <content:encoded><![CDATA[Get started with the React Context API and quickly share state and props throughout your application.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -125,7 +125,7 @@
             <title><![CDATA[Zustand Tutorial: Managing React State]]></title>
             <link>http://localhost:3000/zustand-react-state-management</link>
             <guid>http://localhost:3000/zustand-react-state-management</guid>
-            <pubDate>Fri, 03 Feb 2023 09:20:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:20:00 GMT</pubDate>
             <description><![CDATA[Get started with Zustand in React and learn how to manage a global state efficiently.]]></description>
             <content:encoded><![CDATA[Get started with Zustand in React and learn how to manage a global state efficiently.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -134,7 +134,7 @@
             <title><![CDATA[React Router: The Beginners Guide]]></title>
             <link>http://localhost:3000/routing-with-react-router</link>
             <guid>http://localhost:3000/routing-with-react-router</guid>
-            <pubDate>Fri, 03 Feb 2023 09:19:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:19:00 GMT</pubDate>
             <description><![CDATA[Use this practical guide to learn how to handle client-side routing with React Router efficiently.]]></description>
             <content:encoded><![CDATA[Use this practical guide to learn how to handle client-side routing with React Router efficiently.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -143,7 +143,7 @@
             <title><![CDATA[React children props: What Is It?]]></title>
             <link>http://localhost:3000/react-children-props</link>
             <guid>http://localhost:3000/react-children-props</guid>
-            <pubDate>Fri, 03 Feb 2023 09:18:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:18:00 GMT</pubDate>
             <description><![CDATA[Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.]]></description>
             <content:encoded><![CDATA[Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -152,7 +152,7 @@
             <title><![CDATA[React Toggle Button: Let’s Switch Navigation Widget]]></title>
             <link>http://localhost:3000/how-to-add-hamburger-menu-in-react</link>
             <guid>http://localhost:3000/how-to-add-hamburger-menu-in-react</guid>
-            <pubDate>Fri, 03 Feb 2023 09:17:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:17:00 GMT</pubDate>
             <description><![CDATA[Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ]]></description>
             <content:encoded><![CDATA[Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -161,7 +161,7 @@
             <title><![CDATA[Deploy React App With Vercel]]></title>
             <link>http://localhost:3000/deploy-react-app-with-vercel</link>
             <guid>http://localhost:3000/deploy-react-app-with-vercel</guid>
-            <pubDate>Fri, 03 Feb 2023 09:16:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:16:00 GMT</pubDate>
             <description><![CDATA[Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!]]></description>
             <content:encoded><![CDATA[Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -170,7 +170,7 @@
             <title><![CDATA[Deploy React App to GitHub Pages]]></title>
             <link>http://localhost:3000/deploying-react-app-to-github-pages</link>
             <guid>http://localhost:3000/deploying-react-app-to-github-pages</guid>
-            <pubDate>Fri, 03 Feb 2023 09:15:00 GMT</pubDate>
+            <pubDate>Mon, 13 Feb 2023 09:15:00 GMT</pubDate>
             <description><![CDATA[Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!]]></description>
             <content:encoded><![CDATA[Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
@@ -198,15 +198,6 @@
             <link>http://localhost:3000/deploy-gatsby-to-netlify</link>
             <guid>http://localhost:3000/deploy-gatsby-to-netlify</guid>
             <pubDate>Fri, 08 Jan 2021 10:32:00 GMT</pubDate>
-            <author>example@gmail.com (John Doe)</author>
-        </item>
-        <item>
-            <title><![CDATA[Getting Started With the React lifecycle methods]]></title>
-            <link>http://localhost:3000/react-lifecycle-methods</link>
-            <guid>http://localhost:3000/react-lifecycle-methods</guid>
-            <pubDate>Fri, 08 Jan 2021 09:32:00 GMT</pubDate>
-            <description><![CDATA[React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.]]></description>
-            <content:encoded><![CDATA[React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>

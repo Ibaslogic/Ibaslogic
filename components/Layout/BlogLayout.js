@@ -66,6 +66,7 @@ const BlogLayout = ({ children, frontmatter }) => {
       };
 
   const { name, link, avatar, handle } = authorInfo;
+  // console.log(readingTime);
   const actualReadingTime = Math.floor(readingTime.minutes / 2);
   return (
     <Layout
@@ -85,6 +86,7 @@ const BlogLayout = ({ children, frontmatter }) => {
                 <p>{format(parseISO(date), 'MMMM dd, yyyy')}</p>
                 <span>{' . '}</span>
                 <span>{`${actualReadingTime} min read`}</span>
+                <span className="hidden">{`${readingTime.text}`}</span>
               </div>
 
               <h1 className="text-3xl font-bold md:text-[2.5rem] md:leading-[1.25] text-black mb-[0.5em] lg:mt-8">

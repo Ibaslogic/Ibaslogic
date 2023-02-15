@@ -16,7 +16,7 @@
             "url": "http://localhost:3000/react-tutorial-for-beginners",
             "title": "React Tutorial: A Comprehensive Guide for Beginners",
             "summary": "Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.",
-            "date_modified": "2023-02-03T09:32:00.000Z",
+            "date_modified": "2023-02-13T09:32:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -28,7 +28,7 @@
             "url": "http://localhost:3000/react-components-data-model",
             "title": "React Components and Data Model",
             "summary": "This tutorial prepares you for React projects by covering React functional and class components, state, and props data models. ",
-            "date_modified": "2023-02-03T09:31:00.000Z",
+            "date_modified": "2023-02-13T09:31:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -40,7 +40,7 @@
             "url": "http://localhost:3000/react-hooks-tutorial",
             "title": "React Hooks: Managing State and Side-Effects",
             "summary": "This React Hooks tutorial covers what you need to know to use Hooks in your project. Learn how we have used it to manage state and component logic, including side effects.",
-            "date_modified": "2023-02-03T09:30:00.000Z",
+            "date_modified": "2023-02-13T09:30:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -52,7 +52,7 @@
             "url": "http://localhost:3000/simple-guide-to-react-form",
             "title": "Build React Form With This Best Practice",
             "summary": "Learn how to create and handle forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques.",
-            "date_modified": "2023-02-03T09:29:00.000Z",
+            "date_modified": "2023-02-13T09:29:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -64,7 +64,7 @@
             "url": "http://localhost:3000/react-form-handling",
             "title": "Raising and Handling Events in React",
             "summary": "Understand the concept behind raising and handling events in React in this lesson.",
-            "date_modified": "2023-02-03T09:28:00.000Z",
+            "date_modified": "2023-02-13T09:28:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -76,7 +76,7 @@
             "url": "http://localhost:3000/react-developer-tools",
             "title": "React Developer Tools: Debug and optimize React apps",
             "summary": "This tutorial will introduce you to the React developer tools and get started with analyzing a React application for performance optimization.",
-            "date_modified": "2023-02-03T09:27:00.000Z",
+            "date_modified": "2023-02-13T09:27:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -88,7 +88,7 @@
             "url": "http://localhost:3000/css-in-reactjs-app",
             "title": "CSS in React: Styling React Components",
             "summary": "This CSS in React tutorial covers how to style a React application like a pro. Read now and take your React skills to the next level!",
-            "date_modified": "2023-02-03T09:26:00.000Z",
+            "date_modified": "2023-02-13T09:26:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -100,7 +100,7 @@
             "url": "http://localhost:3000/how-to-edit-todos-items-in-react",
             "title": "React Todos App: Add Editing functionality",
             "summary": "Whether we are building a todos application or any React project that requires editing data, this lesson will show you how to add an edit feature to modify data entries.",
-            "date_modified": "2023-02-03T09:25:00.000Z",
+            "date_modified": "2023-02-13T09:25:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -112,7 +112,7 @@
             "url": "http://localhost:3000/react-performance-optimization",
             "title": "Profiling: Optimizing Performance in React",
             "summary": "This tutorial will show you how to use the React Profiler to profile and optimize your React components.",
-            "date_modified": "2023-02-03T09:24:00.000Z",
+            "date_modified": "2023-02-13T09:24:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -124,7 +124,7 @@
             "url": "http://localhost:3000/persisting-react-state-in-local-storage",
             "title": "Using LocalStorage with React",
             "summary": "Learn how to use Browser Local Storage to save and retrieve state data in React easily.",
-            "date_modified": "2023-02-03T09:23:00.000Z",
+            "date_modified": "2023-02-13T09:23:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -136,7 +136,7 @@
             "url": "http://localhost:3000/how-to-use-svg-icons-in-react-project",
             "title": "How to Use React Icons",
             "summary": "Get started with React icons in your project with our practical tutorial. Enhance your application design and user experience with just a few steps.",
-            "date_modified": "2023-02-03T09:22:00.000Z",
+            "date_modified": "2023-02-13T09:22:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -148,7 +148,7 @@
             "url": "http://localhost:3000/react-context-api",
             "title": "React Context API: Managing Application State",
             "summary": "Get started with the React Context API and quickly share state and props throughout your application.",
-            "date_modified": "2023-02-03T09:21:00.000Z",
+            "date_modified": "2023-02-13T09:21:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -160,7 +160,7 @@
             "url": "http://localhost:3000/zustand-react-state-management",
             "title": "Zustand Tutorial: Managing React State",
             "summary": "Get started with Zustand in React and learn how to manage a global state efficiently.",
-            "date_modified": "2023-02-03T09:20:00.000Z",
+            "date_modified": "2023-02-13T09:20:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -172,7 +172,7 @@
             "url": "http://localhost:3000/routing-with-react-router",
             "title": "React Router: The Beginners Guide",
             "summary": "Use this practical guide to learn how to handle client-side routing with React Router efficiently.",
-            "date_modified": "2023-02-03T09:19:00.000Z",
+            "date_modified": "2023-02-13T09:19:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -184,7 +184,7 @@
             "url": "http://localhost:3000/react-children-props",
             "title": "React children props: What Is It?",
             "summary": "Explore the React Children Props and learn how to use them in your React project. Get started now with this comprehensive tutorial.",
-            "date_modified": "2023-02-03T09:18:00.000Z",
+            "date_modified": "2023-02-13T09:18:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -196,7 +196,7 @@
             "url": "http://localhost:3000/how-to-add-hamburger-menu-in-react",
             "title": "React Toggle Button: Let’s Switch Navigation Widget",
             "summary": "Learn how to create a dynamic toggle button in React to hide/show the navigation widget. ",
-            "date_modified": "2023-02-03T09:17:00.000Z",
+            "date_modified": "2023-02-13T09:17:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -208,7 +208,7 @@
             "url": "http://localhost:3000/deploy-react-app-with-vercel",
             "title": "Deploy React App With Vercel",
             "summary": "Ready to share your app with the world? This tutorial will show you how to deploy your React app to Vercel. Get started now and publish your React app for free!",
-            "date_modified": "2023-02-03T09:16:00.000Z",
+            "date_modified": "2023-02-13T09:16:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -220,7 +220,7 @@
             "url": "http://localhost:3000/deploying-react-app-to-github-pages",
             "title": "Deploy React App to GitHub Pages",
             "summary": "Ready to share your app with the world? This guide will show you how to deploy your React app to Gh-Pages. Get started now and publish your React app for free!",
-            "date_modified": "2023-02-03T09:15:00.000Z",
+            "date_modified": "2023-02-13T09:15:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
@@ -256,18 +256,6 @@
             "url": "http://localhost:3000/deploy-gatsby-to-netlify",
             "title": "Gatsby Tutorial: Deploying Site to Netlify",
             "date_modified": "2021-01-08T10:32:00.000Z",
-            "author": {
-                "name": "John Doe",
-                "url": "https://twitter.com/<username>"
-            }
-        },
-        {
-            "id": "http://localhost:3000/react-lifecycle-methods",
-            "content_html": "React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.",
-            "url": "http://localhost:3000/react-lifecycle-methods",
-            "title": "Getting Started With the React lifecycle methods",
-            "summary": "React provides lifecycle methods to manipulate what happens when the components mount, update and unmount the DOM. In this lifecycle methods, we can make an HTTP request to an API or perform some other actions.",
-            "date_modified": "2021-01-08T09:32:00.000Z",
             "author": {
                 "name": "John Doe",
                 "url": "https://twitter.com/<username>"
