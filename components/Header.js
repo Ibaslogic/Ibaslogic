@@ -49,14 +49,14 @@ const Header = () => {
             aria-label="Menu button"
             aria-haspopup="menu"
             aria-expanded={navbarOpen ? 'true' : 'false'}
-            className="relative cursor-pointer w-10 h-10 bg-transparent border-none focus:outline-none mr-4 ml-[-6px] rounded-[50%] flex items-center justify-center sm:hidden"
+            className="relative cursor-pointer w-10 h-10 bg-transparent border-none focus:outline-none mr-4 sm:mr-8 ml-[-6px] rounded-[50%] flex items-center justify-center md:hidden"
           >
             <div className="absolute block h-[2.5px] w-[23px] bg-[#2d2d2d] top-[10.6px]" />
             <div className="absolute block h-[2.5px] w-[23px] bg-[#2d2d2d] top-[18px]" />
             <div className="absolute block h-[2.5px] w-[23px] bg-[#2d2d2d] top-[26.2px]" />
           </button>
         </div>
-        <nav className="w-full order-2 block sm:order-none sm:h-auto sm:w-auto">
+        <nav className="w-full order-2 block md:order-none md:h-auto md:w-auto">
           {navbarOpen && (
             <div
               className="fixed top-0 left-0 w-full h-screen z-[99] opacity-[0.85] bg-black"
@@ -71,13 +71,13 @@ const Header = () => {
           )}
 
           <ul
-            className={`bg-white custom_transform invisible fixed right-14 bottom-0 left-0 top-0 max-w-[300px] min-w-[264px] z-[100] sm:static sm:flex sm:flex-row sm:max-w-full sm:w-auto sm:visible sm:bg-transparent px-4 sm:px-0 sm:cust_translateZ  ${
+            className={`bg-white custom_transform invisible fixed right-14 bottom-0 left-0 top-0 max-w-[300px] min-w-[264px] z-[100] md:static md:flex md:flex-row md:max-w-full md:w-auto md:visible md:bg-transparent px-4 md:px-0 md:cust_translateZ  ${
               navbarOpen ? 'show-nav' : ''
             }`}
           >
             {navLinks.map(({ link, label }, index) => (
               <li
-                className={`first:mt-20 sm:py-0 sm:first:mt-0 sm:first:ml-4 sm:mr-[2.5rem] lg:first:ml-6 lg:mr-14`}
+                className={`first:mt-20 md:py-0 md:first:mt-0 md:first:ml-4 md:mr-[2.5rem] lg:first:ml-6 lg:mr-14`}
                 // border-b border-solid border-[#cfd6dd] sm:border-none
                 key={index}
               >
@@ -85,9 +85,9 @@ const Header = () => {
                   href={`${link}`}
                   className={`py-4 ${
                     currentRoute === link
-                      ? 'text-[#a1a1a1] sm:text-black sm:border-b-[1.5px] sm:border-solid sm:border-[#8a4baf]'
+                      ? 'text-[#a1a1a1] md:text-black md:border-b-[1.5px] md:border-solid md:border-[#8a4baf]'
                       : ''
-                  } block text-2xl leading-[1.4167] text-center font-normal sm:text-base sm:leading-[24px] tracking-tight sm:opacity-70 sm:hover:opacity-100 capitalize sm:py-2`}
+                  } block text-2xl leading-[1.4167] text-center font-normal md:text-base md:leading-[24px] tracking-tight md:opacity-70 md:hover:opacity-100 capitalize md:py-2`}
                 >
                   {/*  */}
                   {label}

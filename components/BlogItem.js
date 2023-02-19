@@ -2,7 +2,7 @@ import Link from 'next/link';
 import ViewCounter from '../components/viewCounter';
 
 const BlogItem = (props) => {
-  const { title, slug, external_post } = props;
+  const { title, slug, external_post, owner } = props;
 
   return (
     <li>
@@ -18,7 +18,7 @@ const BlogItem = (props) => {
             {!external_post ? (
               <ViewCounter slug={slug} />
             ) : (
-              '3rd party post'
+              `Written for ${owner}`
             )}
           </span>
         </div>

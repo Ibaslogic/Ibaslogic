@@ -1,14 +1,15 @@
 ---
 title: 'Using the new JavaScript .at() method'
 description: 'The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes'
-publishedAt: '2021-11-23 10:32:00'
-updatedAt: '2021-11-23 10:32:00'
-featured: '/static/images/the-new-javascript-at-method/banner.png'
+publishedAt: '2023-02-20 10:32:00'
+updatedAt: '2023-02-20 10:32:00'
+featured: '/static/images/the-new-javascript-at-method/using-new-javascript-at-method.png'
 external_post: true
 external_url: 'https://blog.logrocket.com/using-new-javascript-at-method/'
 category: 'JavaScript'
 author_avatar: '/avatar.png'
 toc: true; 
+owner: 'LogRocket'
 ---
 
 <OriginallyWrittenFor
@@ -16,7 +17,7 @@ toc: true;
   owner="LogRocket"
 />
 
-The JavaScript `.at()` method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes.
+The JavaScript `.at()` method was introduced to allow developers to seamlessly grab elements based on their indexes.
 
 Selecting elements in JavaScript is a common occurrence in development, but, before the introduction of the `.at()` method, JavaScript had existing methods and techniques to select elements or characters from the start or end of lists or within a string.
 
@@ -24,15 +25,18 @@ The bracket notation, `[]`, is commonly used to get an element at a specific ind
 
 Consequently, developers resort to using the `slice()` method and the `length` property to grab items from the end of a list. Nonetheless, they also have their respective drawbacks.
 
-In this tutorial, we’ll look at the JavaScript `.at()` method, its use cases, and how it can improve developers’ experiences compared to the preexisting methods.
+In this tutorial, we’ll look at the JavaScript `.at()` method, its use cases, and how it can improve developers’ experiences compared to preexisting methods.
+
 
 ## The indexable object prototype
 
-The ` .``at() ` method is located on the `prototype` of indexable objects.
+Indexable objects are objects that can create index entries. In JavaScript, they include classes like `Array`, `String`, and `TypedArray`.
 
-These objects, which can formulate index entries, include classes like `Array`, `String`, and `TypedArray`, which are `Array.prototype.at()`, `String.prototype.at()`, and `%TypedArray%.prototype.at()`, respectively.
+The .at() method which is located on the prototype of these indexable objects is represented like so: `Array.prototype.at()`, `String.prototype.at()`, and `%TypedArray%.prototype.at()`. Hence, we can call it directly on the object instance. For example, we will have the following syntax for arrays:
 
-Because of this, we can perform the `.at()` method directly on these indexable objects.
+```JavaScript
+array.at(index)
+```
 
 ## Existing methods for getting list elements
 
@@ -40,51 +44,63 @@ To see the benefits of the `.at()` method, we will quickly walk through some of 
 
 Let’s consider an array of elements called `arr`:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 ```
+
 
 By using the bracket notation, `[]`, on the `arr` array, we can get an element at a specific index. For instance, `arr[0]` returns the first element, `1`, and so on. But, to get an item from the end of an unknown length, we use the `length` property or the `slice()` method.
 
-### Using the `length` property
+
+### Using the <code>length</code> property
 
 The `length` property’s syntax is written as the following:
 
-```js
+
+```JavaScript
 arr[arr.length - N];
 ```
+
 
 Here, `N` equals the nth element from the end of a list, and by using the syntax, we can grab any element from the end of that list.
 
 In the following code, we use the syntax to grab the last element of the `arr` array:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 const lastItem = arr[arr.length - 1];
-console.log(lastItem); // Expected Output: false
+console.log(lastItem);  // Expected Output: false
 ```
+
 
 This works fine, but the syntax can be inconvenient and tedious for a simple task. Besides, one of its drawbacks when working with the returned value of a function compels us to first store the returned value in a variable before applying the syntax:
 
-```js
+
+```JavaScript
 function appendNumber(arr, N) {
   arr.push(N);
   return arr;
 }
 
-const tempArr = appendNumber([1, 2, 'three', 4, 5, true, false], 6);
+const tempArr = appendNumber([1, 2, "three", 4, 5, true, false], 6);
 console.log(tempArr[tempArr.length - 1]); // Expected Output: 6
 ```
 
+
 In the code above, the returned value of the `appendNumber()` function is first stored in the `tempArr` variable before the `length` property is applied.
 
-### The `slice()` method
 
-Developers can also employ the `slice()` method to grab the last item of a list using the following syntax:
+### The <code>slice()</code> method
 
-```js
-arr.slice(-1)[0];
+Developers can also [employ the slice() method](https://blog.logrocket.com/javascript-array-methods/slice) to grab the last item of a list using the following syntax:
+
+
+```JavaScript
+arr.slice(-1)[0]
 ```
+
 
 This syntax allows a negative index, something you’ll see in the `.at()` method later in this tutorial.
 
@@ -94,28 +110,31 @@ But here, the focus is on the last item, hence `slice(-1)` in the syntax. Then, 
 
 Using the syntax, we can grab the last item of the `arr` array like so:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 
 console.log(arr.slice(-1)[0]); // Expected Output: false
 ```
 
+
 Unlike the `length` property above, this method does not force us to store the returned value of a function before using the syntax. Hence making it more flexible:
 
-```js
+
+```JavaScript
 function appendNumber(arr, N) {
   arr.push(N);
   return arr;
 }
 
-console.log(
-  appendNumber([1, 2, 'three', 4, 5, true, false], 6).slice(-1)[0]
-); // 6
+console.log(appendNumber([1, 2, "three", 4, 5, true, false], 6).slice(-1)[0]); // 6
 ```
+
 
 Nonetheless, the syntax looks odd and doesn’t portray its intention. And of course, it can be inconvenient as well.
 
-### Why not just use `arr[-1]` to access the last array element?
+
+### Why not access the last array element with<code>arr[-1]</code>?
 
 This question often comes up from JavaScript beginners, especially if they come from a programming language like Python.
 
@@ -123,70 +142,86 @@ The `arr[-1]` notation in JavaScript is a valid object property. Remember everyt
 
 By rewriting the `arr` array in the object notation, we have something like this:
 
-```js
+
+```JavaScript
 const arr = {
   0: 1,
   1: 2,
-  3: 'three',
+  2: "three",
   // ...
 };
 
 console.log(arr[0]); // Expected Output: 1
 ```
 
+
 In the above code, we don’t have a key `-1`. So, `arr[-1]` returns a value of `undefined`. If the object property has a key `-1`, as seen in the code below, `arr[-1]` returns its corresponding value:
 
-```js
+
+```JavaScript
 const arr = {
-  '-1': 'valid',
+  "-1": "valid"
 };
 
 console.log(arr[-1]); // Expected Output: valid
 ```
 
+
 This means we can’t use the `arr[-1]` to grab the last element because it’s a valid syntax already. To use the negative index syntax to return an element from the end of a list, we will use the `.at()` method.
 
-## The `.at()` syntax
+
+## The <code>.at()</code> syntax
 
 When using the `.at()` syntax, it receives an index of an item to return. When passing a negative index, it counts from the end of the list or string and returns the item or character found. Else, it returns `undefined`:
 
-```js
-at(index);
+
+```JavaScript
+at(index)
 ```
 
-## The `.at()` method in practice
+
+
+## The <code>.at()</code> method in practice
 
 As mentioned earlier, the `.at()` method receives an index of the item to return. In this section, we will cover its use cases.
 
 Let’s revisit the `arr` array and see how the `.at()` method allows us to seamlessly return an index element:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 
 console.log(arr.at(0)); // Expected Output: 1
 console.log(arr.at(2)); // Expected Output: "three"
 console.log(arr.at(-1)); // Expected Output: false
 console.log(arr.at(-3)); // Expected Output: 5
+console.log(arr.at(7)); // Expected Output: undefined
 ```
+
 
 When a positive index passes to the `.at()` method, it returns the element at that index. For a negative index, it counts back from the last element in the list and returns the element.
 
-In the above code, `at(-1)` counts one from the end of the array and returns `false`, which is the element found. In the same way, `at(-3)` counts three from the end and returns `5`.
+In the above code, `at(-1)` counts one from the end of the array and returns `false`, which is the element found. In the same way, `at(-3)` counts three from the end and returns `5`. However, if the `.at()` index cannot be found, it returns a value of `undefined`.
 
 Like arrays, we can do the same for strings:
 
-```js
-const str = 'The last alphabet is z';
+
+```JavaScript
+const str = "The last alphabet is z";
 
 console.log(str.at(0)); // Expected Output: T
 console.log(str.at(-1)); // Expected Output: z
 ```
 
+
 As we can see, this method is pleasant to use. With just `.at(-1)`, we get the last character of the `str` string. If we did the same task with the `length` property, we would have a longer syntax, like so:
 
-```js
+
+```JavaScript
 console.log(str[str.length - 1]); // Expected Output: z
 ```
+
+
 
 ### Working with the returned value of a function
 
@@ -194,31 +229,34 @@ The `.at()` method, unlike the `length` property, does not compel us to store th
 
 The following code outputs the last element pushed to an array:
 
-```js
+
+```JavaScript
 function appendNumber(arr, N) {
   arr.push(N);
   return arr;
 }
 
-console.log(
-  appendNumber([1, 2, 'three', 4, 5, true, false], 6).at(-1)
-);
+console.log(appendNumber([1, 2, "three", 4, 5, true, false], 6).at(-1));
 // Expected Output: 6
 ```
 
-In the code, the `.at()` method applies directly on the returned value without first storing the value in a variable.
 
-### The `.at()` method accepts numbers with a decimal
+In the code, the `.at()` method applies directly to the returned value without first storing the value in a variable.
+
+
+### The <code>.at()</code> method accepts numbers with a decimal
 
 When a number with a decimal passes to the `.at()` method, it considers the value before the decimal point and returns the item at that index.
 
 Let’s take a look at the following code:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 console.log(arr.at(0.6)); // Expected Output: 1
 console.log(arr.at(-3.6)); // Expected Output: 5
 ```
+
 
 In the code above, the first console outputs the item at the `0` index while the second console counts three from the end of the array and outputs the found item.
 
@@ -226,39 +264,48 @@ This is beneficial when we want to randomly select an index element. This can be
 
 The following code illustrates how we can apply the `.at()` method to randomly select the computer’s choice:
 
-```js
-const computerOptions = ['rock', 'paper', 'scissors'];
+
+```JavaScript
+const computerOptions = ["rock", "paper", "scissors"];
 const randomIndex = Math.random() * computerOptions.length;
 
 console.log(computerOptions.at(randomIndex));
 ```
 
+![using-new-javascript-at-method](/static/images/the-new-javascript-at-method/using-new-javascript-at-method.gif)
+
+
 [Try it yourself on CodeSandbox](https://codesandbox.io/s/wonderful-river-dttqe?file=/script.js).
 
-With `Math.random()`, we get a floating-point number between `0` (inclusive) and the array length. Then, when the `.at()` method receives this floating-point number as an index, it considers the value before the decimal point and returns the element at that index.
+[With Math.random(), we get a floating-point number](https://blog.logrocket.com/building-random-number-generator-javascript-nodejs/) between `0` (inclusive) and the array length. Then, when the `.at()` method receives this floating-point number as an index, it considers the value before the decimal point and returns the element at that index.
 
 Using the square bracket notation for the same task is not possible unless we first floor the random number (that is, round the number down to the nearest integer), as seen in the code below:
 
-```js
-const randomIndex = Math.floor(
-  Math.random() * computerOptions.length
-);
+
+```JavaScript
+const randomIndex = Math.floor(Math.random() * computerOptions.length);
 
 console.log(computerOptions[randomIndex]);
 ```
 
+
 This is because the bracket notation returns an `undefined` value for numbers with decimals:
 
-```js
-const arr = [1, 2, 'three', 4, 5, true, false];
+
+```JavaScript
+const arr = [1, 2, "three", 4, 5, true, false];
 console.log(arr[0.6]); // Expected Output: undefined
 ```
 
+
 The `.at()` method saves us the extra steps of using `Math.floor` to floor a random number.
+
 
 ### Browser support
 
-At the time of writing this tutorial, the `.at()` method works pretty well with the popular modern browsers, except a few. See [browser support here](https://caniuse.com/mdn-javascript_builtins_array_at).
+The `.at()` method is widely supported by modern browsers. See [browser support here](https://caniuse.com/mdn-javascript_builtins_array_at).
+
+![javascript-support](/static/images/the-new-javascript-at-method/javascript-support.png)
 
 ## Conclusion
 
