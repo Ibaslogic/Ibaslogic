@@ -10,7 +10,7 @@ export const headerItems = [
       },
       {
         label: 'Support me',
-        url: '#',
+        url: 'https://www.buymeacoffee.com/ibaslogic',
       },
     ],
   },

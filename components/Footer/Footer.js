@@ -26,7 +26,11 @@ const Footer = () => {
     { item: 'Terms of Service', url: '/terms/' },
   ];
   const more = [
-    { item: 'support me', url: '#', external: true },
+    {
+      item: 'support me',
+      url: 'https://www.buymeacoffee.com/ibaslogic',
+      external: true,
+    },
     {
       item: 'Newsletter',
       url: 'https://ibaslogic.substack.com/',

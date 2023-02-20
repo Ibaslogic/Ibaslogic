@@ -9,16 +9,17 @@ const Dropdown = ({ submenus, dropdown }) => {
         <li key={index}>
           {submenu.label === 'Support me' ? (
             <>
-              {/* Coming soon!!!!! */}
-              {/* <a
+              <a
                 className="hover:bg-[#f2f2f2] block text-left py-[0.7rem] px-4"
-                href="/#"
+                href={submenu.url}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {submenu.label}
                 <span className="block text-xs text-[#8a4baf]">
                   Coffee fuels coding ☕️
                 </span>
-              </a> */}
+              </a>
             </>
           ) : (
             <a
