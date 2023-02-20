@@ -35,11 +35,23 @@
             }
         },
         {
+            "id": "http://localhost:3000/virtual-dom-react",
+            "content_html": "The virtual DOM provides a mechanism that abstracts manual DOM manipulations away from the developer, helping us to write more predictable code",
+            "url": "http://localhost:3000/virtual-dom-react",
+            "title": "What is a virtual DOM in React?",
+            "summary": "The virtual DOM provides a mechanism that abstracts manual DOM manipulations away from the developer, helping us to write more predictable code",
+            "date_modified": "2023-02-20T09:32:00.000Z",
+            "author": {
+                "name": "John Doe",
+                "url": "https://twitter.com/<username>"
+            }
+        },
+        {
             "id": "http://localhost:3000/react-tutorial-for-beginners",
-            "content_html": "Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.",
+            "content_html": "Learn React and start building web applications with this tutorial. This lesson is for beginners and covers the fundamental concepts.",
             "url": "http://localhost:3000/react-tutorial-for-beginners",
             "title": "React Tutorial: A Comprehensive Guide for Beginners",
-            "summary": "Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.",
+            "summary": "Learn React and start building web applications with this tutorial. This lesson is for beginners and covers the fundamental concepts.",
             "date_modified": "2023-02-13T09:32:00.000Z",
             "author": {
                 "name": "John Doe",

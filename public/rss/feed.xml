@@ -4,7 +4,7 @@
         <title>Demo site | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 19 Feb 2023 15:54:12 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Feb 2023 10:59:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -32,12 +32,21 @@
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
+            <title><![CDATA[What is a virtual DOM in React?]]></title>
+            <link>http://localhost:3000/virtual-dom-react</link>
+            <guid>http://localhost:3000/virtual-dom-react</guid>
+            <pubDate>Mon, 20 Feb 2023 09:32:00 GMT</pubDate>
+            <description><![CDATA[The virtual DOM provides a mechanism that abstracts manual DOM manipulations away from the developer, helping us to write more predictable code]]></description>
+            <content:encoded><![CDATA[The virtual DOM provides a mechanism that abstracts manual DOM manipulations away from the developer, helping us to write more predictable code]]></content:encoded>
+            <author>example@gmail.com (John Doe)</author>
+        </item>
+        <item>
             <title><![CDATA[React Tutorial: A Comprehensive Guide for Beginners]]></title>
             <link>http://localhost:3000/react-tutorial-for-beginners</link>
             <guid>http://localhost:3000/react-tutorial-for-beginners</guid>
             <pubDate>Mon, 13 Feb 2023 09:32:00 GMT</pubDate>
-            <description><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></description>
-            <content:encoded><![CDATA[Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts.]]></content:encoded>
+            <description><![CDATA[Learn React and start building web applications with this tutorial. This lesson is for beginners and covers the fundamental concepts.]]></description>
+            <content:encoded><![CDATA[Learn React and start building web applications with this tutorial. This lesson is for beginners and covers the fundamental concepts.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
