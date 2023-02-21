@@ -8,13 +8,9 @@ import { FaGithub } from 'react-icons/fa';
 import { MdClose } from 'react-icons/md';
 import { useRouter } from 'next/router';
 
-// import { Open_Sans } from '@next/font/google';
+import config from '../data/siteMetadata.js';
 
-// const openSansFonts = Open_Sans({
-//   weight: ['400'],
-//   style: ['normal'],
-//   subsets: ['latin'],
-// });
+const { github } = config;
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -100,7 +96,7 @@ const Header = () => {
         <div className="flex items-center justify-center gap-2">
           <SocialItem
             Icon={FaGithub}
-            link="#"
+            link={`https://github.com/${github}`}
             title="Star on Github"
             style="text-[21px]"
           />

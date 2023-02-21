@@ -1,21 +1,26 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Footer from "../Footer/Footer";
-import Header from "../Header";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Footer from '../Footer';
+import Header from '../Header';
 
-import config from "../../data/siteMetadata.js";
-import NewsTopbar from "../NewsTopbar";
+import config from '../../data/siteMetadata.js';
+import NewsTopbar from '../NewsTopbar';
 
 const Layout = ({ children, ...customMeta }) => {
   const router = useRouter();
-  const { siteName, defaultDescription, socialBanner, siteUrl, twitterHandle } =
-    config;
+  const {
+    siteName,
+    defaultDescription,
+    socialBanner,
+    siteUrl,
+    twitterHandle,
+  } = config;
 
   const meta = {
     // Please add image
 
     defaultImage: `${siteUrl}${socialBanner}`,
-    type: "website",
+    type: 'website',
     ...customMeta,
   };
 
@@ -42,7 +47,11 @@ const Layout = ({ children, ...customMeta }) => {
         />
         {/* Open Graph */}
         <meta property="og:type" content={meta.type} />
-        <meta property="og:title" content={meta.title} key="ogtitle" />
+        <meta
+          property="og:title"
+          content={meta.title}
+          key="ogtitle"
+        />
         <meta property="og:image" content={image} key="ogimage" />
         <meta property="og:site_name" content={siteName} />
         <meta
@@ -50,11 +59,22 @@ const Layout = ({ children, ...customMeta }) => {
           content={metaDescription}
           key="ogdesc"
         />
-        <meta property="og:url" content={`${siteUrl}${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`${siteUrl}${router.asPath}`}
+        />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" key="twcard" />
-        <meta name="twitter:creator" content={twitterHandle} key="twhandle" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twcard"
+        />
+        <meta
+          name="twitter:creator"
+          content={twitterHandle}
+          key="twhandle"
+        />
         <meta name="twitter:site" content={twitterHandle} />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={metaDescription} />

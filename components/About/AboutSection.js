@@ -1,6 +1,6 @@
 const AboutSection = ({ section }) => {
   return (
-    <div className="prose max-w-full mt-7">
+    <div className="prose max-w-full">
       {section.map(({ content }) => (
         <p
           key={content}

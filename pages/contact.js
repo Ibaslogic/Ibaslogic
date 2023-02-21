@@ -7,7 +7,7 @@ const Contact = () => {
       title="Get in touch with Ibas"
       description="Want to talk about your project? Or have a question for me? Send me an email and I will get back to you shortly."
     >
-      <main className="w-full px-[15px] pt-12 pb-20 mx-auto max-w-3xl lg:max-w-4xl">
+      <main className="w-full">
         <ContactContent />
       </main>
     </Layout>

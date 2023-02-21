@@ -102,7 +102,7 @@ const ContactForm = () => {
     <form
       name="contact v2"
       // method="post"
-      className="flex-1 py-6"
+      className="flex-1"
       onSubmit={formik.handleSubmit}
     >
       <div className="grid gap-6 md:gap-10 mb-6">

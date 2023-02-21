@@ -1,37 +1,27 @@
-import PageHeading from '../PageHeading';
 import ContactForm from './ContactForm';
-
-import config from '../../data/siteMetadata.js';
-
-const { twitterShare } = config;
+import CustomPageHeading from '../CustomPageHeading';
+import SocialFollow from '../Footer/socialFollow';
 
 const ContactContent = () => {
   const displayForm = true;
   return (
     <>
-      <div className="mb-8 contact">
-        <PageHeading title="Let's talk" />
-        <div className="prose max-w-full text-gray-600">
-          <p>
-            Do you want to talk about your project or have a question
-            for me? Use the form below to get in touch. You can also
-            send a direct email to:{' '}
-            <a href={`mailto:ibas@ibaslogic.com`}>
-              ibas@ibaslogic.com
-            </a>{' '}
-            or connect with{' '}
-            <a
-              href={`https://twitter.com/intent/user?screen_name=${twitterShare}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ibas on Twitter
-            </a>
-            .
-          </p>
-        </div>
+      <CustomPageHeading
+        title="Let's talk"
+        description="Do you want to talk about your project or have a question
+            for me? Use the form below to get in touch."
+      />
+      <div className="py-12 contact px-[15px] mx-auto max-w-3xl lg:max-w-4xl">
+        {displayForm && <ContactForm />}
       </div>
-      {displayForm && <ContactForm />}
+      <section className="pb-12">
+        <div className="py-12 contact px-[15px] mx-auto max-w-3xl lg:max-w-4xl text-center">
+          <h2 className="text-black mb-16 font-normal text-2xl sm:text-3xl">
+            Or connect with Ibas on...
+          </h2>
+          <SocialFollow />
+        </div>
+      </section>
     </>
   );
 };

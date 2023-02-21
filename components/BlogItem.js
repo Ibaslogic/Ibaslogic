@@ -18,7 +18,7 @@ const BlogItem = (props) => {
             {!external_post ? (
               <ViewCounter slug={slug} />
             ) : (
-              `Written for ${owner}`
+              `${owner}`
             )}
           </span>
         </div>

@@ -4,11 +4,12 @@ import {
   FaTwitter,
   FaBullseye,
 } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 
 import config from '../../data/siteMetadata.js';
 
 const SocialFollow = () => {
-  const { github, linkedin, twitterShare } = config;
+  const { github, linkedin, twitterShare, email } = config;
 
   const social = [
     { name: 'twitter', link: `https://twitter.com/${twitterShare}` },
@@ -17,10 +18,11 @@ const SocialFollow = () => {
       link: `https://www.linkedin.com/in/${linkedin}/`,
     },
     { name: 'github', link: `https://github.com/${github}` },
+    { name: 'email', link: `mailto:${email}` },
   ];
 
   return (
-    <ul className="flex flex-wrap">
+    <ul className="flex flex-wrap justify-center gap-16 sm:gap-40">
       {social.map((element) => {
         const { name, link } = element;
         const socialIcon =
@@ -30,6 +32,8 @@ const SocialFollow = () => {
             <FaTwitter />
           ) : name === 'github' ? (
             <FaGithub />
+          ) : name === 'email' ? (
+            <AiOutlineMail />
           ) : (
             //generic icon
             <FaBullseye />
@@ -37,7 +41,7 @@ const SocialFollow = () => {
 
         return (
           <li
-            className="mr-6 mb-2 lg:mb-0 text-2xl last:mr-0 hover:opacity-75 transition"
+            className="text-2xl hover:opacity-75 transition"
             key={name}
           >
             <a
