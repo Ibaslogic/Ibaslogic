@@ -18,6 +18,14 @@ const projects = [
     demo: 'https://react-todos-ibas.vercel.app/',
     article_url: '/react-tutorial-for-beginners',
   },
+  {
+    name: 'Audio player',
+    repo_name: 'react-audio-player',
+    description: 'Build an audio player from scratch with React.',
+    demo: 'https://ibaslogic.github.io/react-audio-player/',
+    article_url:
+      'https://blog.logrocket.com/building-audio-player-react/',
+  },
 ];
 
 export default projects;
