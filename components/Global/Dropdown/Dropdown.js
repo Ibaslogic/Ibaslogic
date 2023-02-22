@@ -25,6 +25,8 @@ const Dropdown = ({ submenus, dropdown }) => {
             <a
               className="hover:bg-[#f2f2f2] block text-left py-[0.7rem] px-4"
               href={submenu.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {submenu.label}
             </a>

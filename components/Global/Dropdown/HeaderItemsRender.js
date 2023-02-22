@@ -1,5 +1,5 @@
-import { headerItems } from "../../../data/headerItems";
-import HeaderItem from "./HeaderItem";
+import { headerItems } from '../../../data/headerItems';
+import HeaderItem from './HeaderItem';
 
 const HeaderItemsRender = () => {
   return (

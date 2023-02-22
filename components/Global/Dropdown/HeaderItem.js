@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
 
+import { BsArrowUpRight } from 'react-icons/bs';
+
 const HeaderItem = ({ items }) => {
   const [dropdown, setDropdown] = useState(false);
 
@@ -25,21 +27,8 @@ const HeaderItem = ({ items }) => {
     };
   }, [dropdown]);
 
-  // const onMouseEnter = () => {
-  //   window.innerWidth > 960 && setDropdown(true);
-  // };
-
-  // const onMouseLeave = () => {
-  //   window.innerWidth > 960 && setDropdown(false);
-  // };
-
   return (
-    <div
-      ref={ref}
-      // onMouseEnter={onMouseEnter}
-      // onMouseLeave={onMouseLeave}
-      className="relative text-sm"
-    >
+    <div ref={ref} className="relative text-sm">
       {items.submenu ? (
         <>
           <button
@@ -56,10 +45,12 @@ const HeaderItem = ({ items }) => {
         </>
       ) : (
         <a
-          className="hover:bg-[#f2f2f2] block text-left py-[0.7rem] px-4"
+          className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 text-[#f44250] font-bold text-base"
           href={items.url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {items.label}
+          {items.label} <BsArrowUpRight />
         </a>
       )}
     </div>
