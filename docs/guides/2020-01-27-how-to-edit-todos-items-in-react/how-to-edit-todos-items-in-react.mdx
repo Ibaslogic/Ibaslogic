@@ -4,62 +4,6 @@ With the current status of our app, we can add todos items, unmark/mark complete
 
 In this part of the series, you will learn how to add the edit feature to your todos app. We will take a look at this by following React best practices.
 
-<PostSeriesLink
-  label="This React tutorial is part 4 of 11 in the React for beginners series."
-  datas={[
-    {
-      prefix: "Part 1",
-      label: "React Tutorial: The Beginner's Guide to Learning React in 2020",
-      url: "/react-tutorial-for-beginners/",
-    },
-    {
-      prefix: "Part 2",
-      label: "Working with React Form and Handling Event",
-      url: "/react-form-handling/",
-    },
-    {
-      prefix: "Part 3",
-      label: "How to implement CSS in Reactjs App",
-      url: "/css-in-reactjs-app/",
-    },
-    {
-      prefix: "Part 5",
-      label: "Persisting React State in Local Storage",
-      url: "/persisting-react-state-in-local-storage/",
-    },
-    {
-      prefix: "Part 6",
-      label: "Getting Started With React Lifecycle Methods",
-      url: "/react-lifecycle-methods/",
-    },
-    {
-      prefix: "Part 7",
-      label: "Getting Started With React Hooks",
-      url: "/react-hooks-tutorial/",
-    },
-    {
-      prefix: "Part 8",
-      label: "How to use SVG Icons in React",
-      url: "/how-to-use-svg-icons-in-react-project/",
-    },
-    {
-      prefix: "Part 9",
-      label: "Routing With React Router",
-      url: "/routing-with-react-router/",
-    },
-    {
-      prefix: "Part 10",
-      label: "How to add Hamburger Menu in React",
-      url: "/how-to-add-hamburger-menu-in-react/",
-    },
-    {
-      prefix: "Part 11",
-      label: "Deploying React App to GitHub Pages",
-      url: "/deploying-react-app-to-github-pages/",
-    },
-  ]}
-/>
-
 The logic here is simple. Once we double click the item to edit, we will activate the edit mode and display a text input field containing the item to edit so that users can modify.
 
 Let’s get started by opening the `TodoItem.js` file. This file handles each of the todos items. Go ahead and wrap all the `<li>` children with a `<div>` container and add `onDoubleClick` event to it.
