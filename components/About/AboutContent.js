@@ -14,7 +14,7 @@ const AboutContent = () => {
     <>
       <CustomPageHeading
         title="About Ibaslogic"
-        description="I share dev articles, including project-based ones that'll help you learn dev topics much more quicker."
+        description="I share dev articles, including some awesome project-based ones that will help you learn dev topics faster than ever before."
       />
       <div className="text-gray-600 about px-[15px] mx-auto max-w-3xl pt-12 pb-12">
         <section className="mb-8">

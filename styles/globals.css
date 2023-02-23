@@ -43,7 +43,7 @@ Globals
   }
 
   .about .prose p, .about .prose li, .contact .prose p{
-    @apply text-[15.4px] sm:text-base md:text-lg;
+    @apply text-[15.4px] sm:text-base;
   }
 }
 

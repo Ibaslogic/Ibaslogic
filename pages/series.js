@@ -14,8 +14,7 @@ const SeriesPage = () => {
       <main className="w-full ">
         <CustomPageHeading
           title="Series"
-          description="Level up your dev knowledge with our series of in-depth
-              guides."
+          description="Enhance your development expertise by exploring our comprehensive collection of guides."
         />
 
         <section className="pt-12 pb-12">

@@ -24,7 +24,8 @@ const WorkForU = () => {
 
             <div className="leading-5">
               <p className="mb-[10px] text-gray-800 font-semibold text-xl md:text-2xl">
-                Do you have a writing gig or development for me?
+                Are you in need of a skilled writer or developer? Look
+                no further!{' '}
               </p>
               <p className="flex text-sm lg:text-base">
                 <span>
@@ -32,7 +33,7 @@ const WorkForU = () => {
                     href="/contact/"
                     className="text-[#8a4baf] leading-5 no-underline border-b border-[#8a4baf]"
                   >
-                    Yes, I'm sending a message right now
+                    I'm sending a message right now
                   </Link>
                 </span>
                 <span className="relative before:absolute before:bg-[#979797] before:w-1 before:h-1 before:top-2/4 before:left-0 before:mt-[-2px] ml-6 pl-6"></span>

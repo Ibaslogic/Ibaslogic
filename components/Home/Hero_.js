@@ -17,8 +17,8 @@ const Hero = () => {
           </h1>
           <div className="text-base lg:text-xl mb-8 md:max-w-[340px] lg:max-w-[450px]">
             <p className="mb-8">
-              Hey, I'm Ibas. This blog is where I experiment with new
-              web features and write actionable guides.
+              Hey, I'm Ibas. This blog is where I share my experiments
+              exploring the latest web technologies.
             </p>
             <p className="md:text-base">
               <a
@@ -29,10 +29,9 @@ const Hero = () => {
               >
                 Open source
               </a>
-              : See a feature that interests you? Then, use it in your
-              web project.
+              : See a feature that inspires you? Then, use it in your
+              web projects.
             </p>
-            {/* Show view counts for all blog posts, dynamically pulled from Google analytics. It's all open source */}
           </div>
           <div className="flex justify-start">
             <SocialButton

@@ -9,7 +9,7 @@ const ProjectPage = () => {
       <main className="w-full ">
         <CustomPageHeading
           title="Projects"
-          description="See a list of awesome projects you can work with."
+          description="Discover an incredible array of projects that you can engage with!"
         />
         <section className="pt-12 pb-12">
           <div className="w-full pt-6 pb-16 px-[15px] mx-auto max-w-3xl lg:max-w-5xl">

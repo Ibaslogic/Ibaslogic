@@ -30,14 +30,15 @@ const HeaderItem = ({ items }) => {
       {items.submenu ? (
         <>
           <button
-            className="text-[23px] h-10 w-10 rounded-[50%] flex items-center justify-center"
+            className="text-base rounded-[50%] flex items-center justify-center gap-1"
             type="button"
             aria-label="Menu button"
             aria-haspopup="menu"
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {items.label}
+            <span>{items.label}</span>
+            <span>More</span>
           </button>
           <Dropdown submenus={items.submenu} dropdown={dropdown} />
         </>
