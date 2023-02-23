@@ -10,7 +10,7 @@ Some excellent features include:
 
 - Display Google Analytics post views.
 - A dynamic table of content for each post
-- Posts filter feature
+- Posts filter feature.
 
 If you do not know where to start, I have a step-by-step guide on [Reactjs](https://ibaslogic.com/react-tutorial-for-beginners/ 'React tutorial'). You can take a look to get started.
 
