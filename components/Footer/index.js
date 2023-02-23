@@ -10,7 +10,7 @@ const Footer2 = () => {
     },
     {
       item: 'support me',
-      url: 'https://www.buymeacoffee.com/ibaslogic',
+      url: 'https://ko-fi.com/ibasmajid',
     },
     {
       item: 'Newsletter',
