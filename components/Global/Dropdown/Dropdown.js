@@ -1,3 +1,5 @@
+import { BsArrowUpRight } from 'react-icons/bs';
+
 const Dropdown = ({ submenus, dropdown }) => {
   return (
     <ul
@@ -18,6 +20,20 @@ const Dropdown = ({ submenus, dropdown }) => {
                 {submenu.label}
                 <span className="block text-xs text-[#8a4baf]">
                   Coffee fuels coding ☕️
+                </span>
+              </a>
+            </>
+          ) : submenu.label === 'React v1' ? (
+            <>
+              <a
+                className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 font-semibold text-base"
+                href={submenu.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {submenu.label}
+                <span className="block text-xs text-[#8a4baf]">
+                  <BsArrowUpRight />
                 </span>
               </a>
             </>

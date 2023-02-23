@@ -9,7 +9,7 @@ const PrivacyNotice = () => (
         title="Privacy policy"
         description="Thank you for visiting Ibaslogic.com."
       />
-      <section className="pt-12 pb-12 text-gray-600 px-[15px] mx-auto max-w-3xl lg:max-w-4xl">
+      <section className="pt-12 pb-12 text-gray-600 px-[15px] mx-auto max-w-3xl">
         <Privacy />
       </section>
     </main>

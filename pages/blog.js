@@ -59,7 +59,7 @@ const BlogPage = ({ postsData }) => {
     >
       <main>
         <section className="bg-[#fff]">
-          <div className="w-full pt-12 pb-0 px-[15px] mx-auto max-w-3xl lg:max-w-4xl">
+          <div className="w-full pt-12 pb-0 px-[15px] mx-auto max-w-3xl">
             <WorkForU />
             <Heading title="Featured posts" color="text-[#696969]" />
           </div>
@@ -72,7 +72,7 @@ const BlogPage = ({ postsData }) => {
           </div>
         </section>
         <section>
-          <div className="w-full px-[15px] pb-12 mx-auto max-w-3xl lg:max-w-4xl">
+          <div className="w-full px-[15px] pb-12 mx-auto max-w-3xl">
             <FilterPostsHandle
               categories={categories}
               handleItems={handleItems}

@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
 
-import { BsArrowUpRight } from 'react-icons/bs';
-
 const HeaderItem = ({ items }) => {
   const [dropdown, setDropdown] = useState(false);
 
@@ -45,12 +43,12 @@ const HeaderItem = ({ items }) => {
         </>
       ) : (
         <a
-          className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 text-[#f44250] font-bold text-base"
+          className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4"
           href={items.url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {items.label} <BsArrowUpRight />
+          {items.label}
         </a>
       )}
     </div>

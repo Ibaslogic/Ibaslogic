@@ -2,10 +2,6 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 
 export const headerItems = [
   {
-    label: 'React v1',
-    url: 'https://github.com/Ibaslogic/Ibaslogic/tree/v1/docs/guides',
-  },
-  {
     label: <BiDotsVerticalRounded />,
     submenu: [
       {
@@ -15,6 +11,10 @@ export const headerItems = [
       {
         label: 'Support me',
         url: 'https://www.buymeacoffee.com/ibaslogic',
+      },
+      {
+        label: 'React v1',
+        url: 'https://github.com/Ibaslogic/Ibaslogic/tree/v1/docs/guides',
       },
     ],
   },

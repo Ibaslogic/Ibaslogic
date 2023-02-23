@@ -4,7 +4,7 @@ const Heading = ({ title, desc, color }) => {
       <h2
         className={`${
           color ? color : 'text-black'
-        } font-bold text-2xl md:text-3xl tracking-tight`}
+        } font-bold text-2xl md:text-3xl tracking-tight mb-4`}
       >
         {title}
       </h2>

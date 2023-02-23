@@ -19,7 +19,7 @@ const SeriesPage = () => {
         />
 
         <section className="pt-12 pb-12">
-          <div className="grid gap-8 px-[15px] mx-auto max-w-3xl lg:max-w-4xl">
+          <div className="grid gap-8 px-[15px] mx-auto max-w-3xl">
             <div>
               <HeadingII title="React series" />
               <ol className="mt-6 mb-6">
