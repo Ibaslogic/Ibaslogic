@@ -8,7 +8,7 @@ const ContactContent = () => {
     <>
       <CustomPageHeading
         title="Let's talk"
-        description="Hey there! Have a project you're excited to discuss or a question burning in your mind? Don't hesitate to reach out using the form below. I'm always eager to chat and help in any way I can. Can't wait to hear from you!"
+        description="Hey there! Have a project you're excited to discuss or a question burning in your mind? Don't hesitate to reach out using the form below."
       />
       <div className="py-12 contact px-[15px] mx-auto max-w-3xl">
         {displayForm && <ContactForm />}
