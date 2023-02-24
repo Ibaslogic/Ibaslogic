@@ -42,7 +42,7 @@ const ProjectItem = ({ project }) => {
           </a>
         </p>
         {repos.find((repo) => repo.name === repo_name) && (
-          <span className="text-[15px] block">
+          <span className="text-base block">
             <a
               href={`https://github.com/ibaslogic/${repo_name}/stargazers`}
               className="flex items-center gap-1 hover:text-[#8a4baf]"
@@ -62,11 +62,11 @@ const ProjectItem = ({ project }) => {
           </span>
         )}
       </div>
-      <p className="text-sm mt-2">{description}</p>
+      <p className="text-base mt-2">{description}</p>
 
       <div className="flex mt-4 gap-4">
         <a
-          className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-sm"
+          className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
           href={`https://github.com/ibaslogic/${repo_name}`}
           target="_blank"
           rel="noreferrer"
@@ -75,7 +75,7 @@ const ProjectItem = ({ project }) => {
         </a>
         {demo && (
           <a
-            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-sm"
+            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
             href={demo}
             target="_blank"
             rel="noreferrer"
@@ -85,7 +85,7 @@ const ProjectItem = ({ project }) => {
         )}
         {article_url && (
           <Link
-            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-sm"
+            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
             href={article_url}
           >
             Tutorial

@@ -7,7 +7,7 @@ const NewsTopbar = () => {
     <>
       {topBar && (
         <aside className="text-sm py-[0.75rem] border-b border-solid border-[#f0f0f2]">
-          <div className="flex justify-between gap-x-3 items-center text-[13px] text-[black] px-[15px] max-w-3xl lg:max-w-[1200px] mx-auto">
+          <div className="flex justify-between gap-x-3 items-center text-[15px] text-[black] px-[20px] max-w-3xl lg:max-w-[1200px] mx-auto">
             <p>
               Are you struggling learning web dev?{' '}
               <a

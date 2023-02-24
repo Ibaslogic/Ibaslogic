@@ -9,13 +9,16 @@ Globals
 /* base styles */
 @layer base {
   body {
-    @apply font-base text-[#232629] font-normal leading-[1.75];
+    @apply font-base text-lg text-[#232629] font-normal leading-[1.75];
   }
   html {
    @apply scroll-smooth;
   }
   .prose  p, .prose li {
-    @apply text-[15.4px] sm:text-base sm:leading-[1.6];
+    @apply text-base sm:text-lg ;
+  }
+  h1, h2, h3, h4 { 
+    @apply font-heading 
   }
   .prose  h2 {
     @apply text-2xl lg:text-[1.8rem] lg:leading-9;
@@ -23,8 +26,11 @@ Globals
   .prose  h3 {
     @apply text-xl lg:text-2xl;
   }
-  .prose code, .prose pre {
+  .prose pre {
     @apply text-sm leading-[1.625] text-[92%];
+  }
+  .prose code {
+    @apply text-sm;
   }
   img {
     @apply block mx-auto;
@@ -43,7 +49,7 @@ Globals
   }
 
   .about .prose p, .about .prose li, .contact .prose p{
-    @apply text-[15.4px] sm:text-base;
+    @apply text-base sm:text-lg;
   }
 }
 

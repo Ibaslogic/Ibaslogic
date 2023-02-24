@@ -7,7 +7,7 @@ import DemoBrowser from '../DemoBrowser';
 const Hero = () => {
   return (
     <section className="pt-8 pb-12 md:pt-12 md:pb-16 custom_bg">
-      <div className="w-full mx-auto max-w-3xl lg:max-w-[1200px] px-[15px] flex flex-col md:flex-row items-center gap-8">
+      <div className="w-full mx-auto max-w-3xl lg:max-w-[1200px] px-[20px] flex flex-col md:flex-row items-center gap-8">
         <div className="flex-[5.5]">
           <h1 className="text-3xl md:text-[38px] leading-[40px] md:leading-[50px] text-black mb-8 font-bold">
             The Modern<span className="md:block"></span> Tutorial for
@@ -15,7 +15,7 @@ const Hero = () => {
             Developers
             <span className="md:block"></span>
           </h1>
-          <div className="text-base lg:text-xl mb-8 md:max-w-[340px] lg:max-w-[450px]">
+          <div className="text-lg lg:text-xl mb-8 md:max-w-[340px] lg:max-w-[450px]">
             <p className="mb-8">
               Hey, I'm Ibas. This blog is where I share my experiments
               exploring the latest web technologies.

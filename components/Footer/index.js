@@ -20,7 +20,7 @@ const Footer2 = () => {
 
   return (
     <footer className="bg-gray-50 text-[#24292f] text-[0.9em] pt-12 pb-9 sm:pt-12 sm:pb-9 border border-solid border-[#eaeaea] text-center">
-      <div className="px-[15px] mx-auto max-w-3xl lg:max-w-[1200px] flex items-center flex-col gap-2">
+      <div className="px-[20px] mx-auto max-w-3xl lg:max-w-[1200px] flex items-center flex-col gap-2">
         <ul className="flex items-center justify-center gap-6">
           {list.map(({ item, url }) => (
             <li className="" key={item}>

@@ -8,7 +8,7 @@ const Testimonial = () => {
         {testimonials.map((testimonial) => {
           const { image, name, feedback, title } = testimonial;
           return (
-            <div key={name} className="pb-11 px-[15px]">
+            <div key={name} className="pb-11 px-[20px]">
               <div className="text-center w-full flex justify-center items-center flex-col border border-[#e6e6e6] max-w-xl md:max-w-[720px] lg:max-w-[950px] mx-auto mt-12 md:mt-24 px-4 py-10 md:py-12 md:px-10 lg:px-16">
                 <div className="w-[100px] h-[100px] md:w-[200px] md:h-[200px] mt-[-90px] mb-[30px] md:mt-[-160px]">
                   <Image

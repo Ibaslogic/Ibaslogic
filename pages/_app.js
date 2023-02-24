@@ -9,9 +9,27 @@ import NextProgress from 'next-progress';
 import Analytics from '../components/Analytics/Analytics';
 
 import { Inter } from '@next/font/google';
+import localFont from '@next/font/local';
 
 const inter = Inter({
   subsets: ['latin'],
+});
+
+const neuzeit = localFont({
+  src: [
+    {
+      path: '../public/fonts/neuzeit_grotesk_light-webfont.woff2',
+      weight: '300',
+    },
+    {
+      path: '../public/fonts/neuzeit_grotesk_regular-webfont.woff2',
+      weight: '400',
+    },
+    {
+      path: '../public/fonts/neuzeit_grotesk_bold-webfont.woff2',
+      weight: '700',
+    },
+  ],
 });
 
 function MyApp({ Component, pageProps }) {
@@ -36,7 +54,8 @@ function MyApp({ Component, pageProps }) {
       <NextProgress delay={300} height="3px" color="#8a4baf" />
       <style jsx global>{`
         :root {
-          --font-base: ${inter.style.fontFamily};
+          --font-base: ${neuzeit.style.fontFamily};
+          --font-heading: ${inter.style.fontFamily};
         }
       `}</style>
       <Component {...pageProps} key={router.asPath} />

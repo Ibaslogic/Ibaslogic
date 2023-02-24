@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="z-[1000] sticky top-0 md:right-0 md:left-0 bg-white h-[62px] md:h-[70px] w-full text-[#24292f] border-b border-solid border-[#eaeaea]">
       {/*fixed shadow */}
-      <div className="flex justify-between items-center content-center px-[15px] max-w-3xl lg:max-w-[1200px] mx-auto h-[62px] md:h-[70px] flex-wrap">
+      <div className="flex justify-between items-center content-center px-[20px] max-w-3xl lg:max-w-[1200px] mx-auto h-[62px] md:h-[70px] flex-wrap">
         <div className="flex items-center justify-start flex-row-reverse flex-nowrap ">
           <div className="ml-2 sm:ml-0 sm:mr-5">
             <Link href="/" className="flex" aria-label="logo link">
@@ -60,7 +60,7 @@ const Header = () => {
               tabIndex="0"
               onClick={closeDrawer}
             >
-              <button className="absolute top-[16px] right-[15px] cursor-pointer text-white bg-transparent border-none focus:outline-none">
+              <button className="absolute top-[16px] right-[20px] cursor-pointer text-white bg-transparent border-none focus:outline-none">
                 <MdClose style={{ fontSize: '24px' }} />
               </button>
             </div>

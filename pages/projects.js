@@ -12,7 +12,7 @@ const ProjectPage = () => {
           description="Discover an incredible array of projects that you can engage with!"
         />
         <section className="pt-12 pb-12">
-          <div className="w-full pt-6 pb-16 px-[15px] mx-auto max-w-3xl lg:max-w-5xl">
+          <div className="w-full pt-6 pb-16 px-[20px] mx-auto max-w-3xl lg:max-w-5xl">
             <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {projects.map((project) => (
                 <ProjectItem

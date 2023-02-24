@@ -12,7 +12,7 @@ const TermsOfService = () => (
         title="Terms of service"
         description="These terms and conditions outline the rules and regulations for the use of ibaslogic.com's Website."
       />
-      <section className="pt-12 pb-12 text-gray-600 px-[15px] mx-auto max-w-3xl">
+      <section className="pt-12 pb-12 text-gray-600 px-[20px] mx-auto max-w-3xl">
         <Terms />
       </section>
     </main>

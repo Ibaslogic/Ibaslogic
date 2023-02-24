@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         base: ['var(--font-base)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
       },
       backgroundImage: {
         'gradient-radial':

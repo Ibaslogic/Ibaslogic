@@ -93,7 +93,7 @@ const ContactForm = () => {
   ));
 
   const renderError = (message) => (
-    <p className="text-[#d5402b] text-sm px-3 md:px-[30px] mt-[10px] ">
+    <p className="text-[#d5402b] text-[15px] px-3 md:px-[30px] mt-[10px] ">
       {message}
     </p>
   );
@@ -179,7 +179,7 @@ const ContactForm = () => {
       </button>
       <div className="text-left">
         {showSuccessMessage && (
-          <p className="text-green-500 font-semibold text-sm my-2">
+          <p className="text-green-500 font-semibold text-[15px] my-2">
             Thank you! Your Message has been delivered.
           </p>
         )}

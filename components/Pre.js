@@ -19,7 +19,7 @@ const Pre = (props) => {
       <button
         aria-label="Copy code"
         type="button"
-        className={`hidden sm:block absolute right-0 py-[6px] px-[10px] border-none bg-transparent text-[13px] ${
+        className={`hidden sm:block absolute right-0 py-[6px] px-[10px] border-none bg-transparent text-[15px] ${
           copied
             ? 'cursor-not-allowed text-[#8a4baf]'
             : 'text-gray-700'

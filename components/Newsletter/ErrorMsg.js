@@ -1,6 +1,6 @@
 const ErrorMsg = ({ children }) => {
   return (
-    <p className="flex items-center text-sm font-bold text-red-800">
+    <p className="flex items-center text-[15px] font-bold text-red-800">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"

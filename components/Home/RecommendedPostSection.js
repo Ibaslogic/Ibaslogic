@@ -4,7 +4,7 @@ import FeaturedPost from '../Featured';
 const RecommendedPostSection = () => {
   return (
     <section className="custom_heading_style bg-[#894baf] py-24 sm:py-36">
-      <div className="px-[15px] mx-auto max-w-3xl lg:max-w-4xl">
+      <div className="px-[20px] mx-auto max-w-3xl lg:max-w-4xl">
         <Heading
           title="Ready to start learning?"
           desc="Level up your Dev knowledge with these actionable guides."

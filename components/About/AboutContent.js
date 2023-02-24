@@ -16,7 +16,7 @@ const AboutContent = () => {
         title="About Ibaslogic"
         description="I share dev articles, including some awesome project-based ones that will help you learn dev topics faster than ever before."
       />
-      <div className="text-gray-600 about px-[15px] mx-auto max-w-3xl pt-12 pb-12">
+      <div className="text-gray-600 about px-[20px] mx-auto max-w-3xl pt-12 pb-12">
         <section className="mb-8">
           <AboutSection section={topSection} />
         </section>

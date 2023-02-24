@@ -23,9 +23,8 @@ const WorkForU = () => {
             </div>
 
             <div className="leading-5">
-              <p className="mb-[10px] text-gray-800 font-semibold text-xl md:text-2xl">
-                Are you in need of a skilled writer or developer? Look
-                no further!{' '}
+              <p className="mb-[10px] text-gray-800 font-semibold text-xl font-heading">
+                Need a skilled writer or developer? Contact me!{' '}
               </p>
               <p className="flex text-sm lg:text-base">
                 <span>
