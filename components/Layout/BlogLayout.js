@@ -11,7 +11,6 @@ import SocialItem from '../SocialItem';
 import Comments from '../Comments';
 import config from '../../data/siteMetadata.js';
 import AuthorInfo from './AuthorInfo';
-import { ImEye } from 'react-icons/im';
 import Toc from '../Toc';
 import ScrollToTop from '../ScrollToTop';
 import { parseISO, format } from 'date-fns';
@@ -112,7 +111,6 @@ const BlogLayout = ({ children, frontmatter }) => {
                       </span>
                     ) : (
                       <>
-                        <ImEye />
                         <ViewCounter slug={slug} />
                       </>
                     )}
