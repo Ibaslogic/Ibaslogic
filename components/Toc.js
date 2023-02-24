@@ -19,9 +19,9 @@ export default function Toc() {
   );
 
   // Function to determine the Heading Level based on `nodeName` (H2, H3, etc)
-  const getLevel = (nodeName) => {
-    return Number(nodeName.replace('H', ''));
-  };
+  // const getLevel = (nodeName) => {
+  //   return Number(nodeName.replace('H', ''));
+  // };
 
   return (
     <nav className="text-[#78757a]">
@@ -40,7 +40,7 @@ export default function Toc() {
                 className={clsx('block hover:text-[#8a4baf]', {
                   'text-[#8a4baf] before:absolute before:bg-[currentColor] before:w-[2px] before:h-full before:top-0 before:left-[-1px] before:right-[auto]':
                     heading.id === activeNode,
-                  'ml-3': getLevel(heading.nodeName) === 3,
+                  // 'ml-3': getLevel(heading.nodeName) === 3,
                 })}
               >
                 {heading.innerText.replace('#', '')}

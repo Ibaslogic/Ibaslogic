@@ -31,14 +31,14 @@ const AuthorInfo = ({ link, name, handle, avatar }) => {
               className="flex items-center gap-1"
             >
               <span>{name}</span>
-              <span>
+              {/* <span>
                 <Image
                   width={20}
                   height={20}
                   src="/check.png"
                   alt="author"
                 />
-              </span>
+              </span> */}
             </a>
           </p>
           <a

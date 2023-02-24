@@ -46,9 +46,9 @@ const Heading2 = (props) => {
   return <h2 {...props} data-toc />;
 };
 
-const Heading3 = (props) => {
-  return <h3 {...props} data-toc />;
-};
+// const Heading3 = (props) => {
+//   return <h3 {...props} data-toc />;
+// };
 
 const MDXComponents = {
   OriginallyWrittenFor,
@@ -65,6 +65,6 @@ const MDXComponents = {
   a: CustomLink,
   pre: Pre,
   h2: Heading2,
-  h3: Heading3,
+  // h3: Heading3,
 };
 export default MDXComponents;

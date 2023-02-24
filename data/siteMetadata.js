@@ -1,7 +1,7 @@
 export default {
   siteName: `Ibaslogic`,
   defaultDescription: `Ibaslogic | Web dev Articles for the Self-Starters.`,
-  publisher: `Ibas`,
+  publisher: `Ibas Majeed`,
   twitterHandle: `@ibaslogic`,
   twitterShare: `ibaslogic`,
   linkedin: `ibaslogic`,
