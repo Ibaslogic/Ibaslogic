@@ -76,7 +76,7 @@ const BlogLayout = ({ children, frontmatter }) => {
       external_post={external_post}
       external_url={external_url}
     >
-      <div className="w-full px-[20px] py-12 lg:grid mx-auto max-w-3xl lg:max-w-[1200px] post_wrap">
+      <div className="w-full px-[15px] py-12 lg:grid mx-auto max-w-3xl lg:max-w-[1200px] post_wrap">
         <main className="max-w-[700px] mx-auto lg:mx-5 post_main">
           <article>
             <div className="space-y-5 mb-8">
@@ -170,7 +170,7 @@ const BlogLayout = ({ children, frontmatter }) => {
             </div>
           </div>
         </aside>
-        <aside className="hidden lg:block max-w-[700px] mx-auto mt-12 lg:mt-0 post_aside_right text-base">
+        <aside className="hidden lg:block max-w-[700px] mx-auto mt-12 lg:mt-0 post_aside_right text-[13px]">
           <div className="border-solid border border-[#eaeaea] lg:border-none py-9">
             <div className="lg:flex flex-row items-center text-xs gap-3 text-gray-500 border-solid border-b border-[#eaeaea] pb-5">
               <AuthorInfo

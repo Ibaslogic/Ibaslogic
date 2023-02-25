@@ -28,7 +28,7 @@ const AuthorInfo = ({ link, name, handle, avatar }) => {
               target="_blank"
               rel="noopener noreferrer"
               title="twitter"
-              className="flex items-center gap-1 font-heading"
+              className="flex items-center gap-1"
             >
               <span>{name}</span>
               {/* <span>

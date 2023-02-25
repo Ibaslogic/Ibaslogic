@@ -6,7 +6,7 @@ import DemoBrowser from '../DemoBrowser';
 
 const Hero = () => {
   return (
-    <section className="pt-8 pb-12 md:pt-12 md:pb-16 custom_bg text-center lg:text-left">
+    <section className="pt-12 pb-20 custom_bg text-center lg:text-left">
       <div className="w-full mx-auto max-w-3xl lg:max-w-[1200px] px-[20px] flex flex-col md:flex-row items-center gap-8">
         <div className="flex-[5.5]">
           <h1 className="text-3xl md:text-[38px] leading-[40px] md:leading-[50px] text-black mb-8 font-bold">
