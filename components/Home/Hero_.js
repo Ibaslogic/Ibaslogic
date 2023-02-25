@@ -6,16 +6,16 @@ import DemoBrowser from '../DemoBrowser';
 
 const Hero = () => {
   return (
-    <section className="pt-8 pb-12 md:pt-12 md:pb-16 custom_bg">
+    <section className="pt-8 pb-12 md:pt-12 md:pb-16 custom_bg text-center lg:text-left">
       <div className="w-full mx-auto max-w-3xl lg:max-w-[1200px] px-[20px] flex flex-col md:flex-row items-center gap-8">
         <div className="flex-[5.5]">
           <h1 className="text-3xl md:text-[38px] leading-[40px] md:leading-[50px] text-black mb-8 font-bold">
-            The Modern<span className="md:block"></span> Tutorial for
-            Beginner <span className="md:block"></span>
+            The Modern<span className="lg:block"></span> Tutorial for
+            Beginner <span className="lg:block"></span>
             Developers
-            <span className="md:block"></span>
+            <span className="lg:block"></span>
           </h1>
-          <div className="text-lg lg:text-xl mb-8 md:max-w-[340px] lg:max-w-[450px]">
+          <div className="text-lg sm:text-xl mb-8 lg:max-w-[450px]">
             <p className="mb-8">
               Hey, I'm Ibas. This blog is where I share my experiments
               exploring the latest web technologies.
@@ -33,7 +33,7 @@ const Hero = () => {
               web projects.
             </p>
           </div>
-          <div className="flex justify-start">
+          <div className="flex justify-center lg:justify-start">
             <SocialButton
               Icon={FaTwitter}
               link="https://twitter.com/intent/follow?screen_name=ibaslogic&amp;region=follow_link"
@@ -48,7 +48,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="relative w-full md:flex-[4.5] lg:mt-[11px]">
+        <div className="relative w-full lg:flex-[4.5] lg:mt-[11px] hidden lg:block">
           <div className="w-full h-auto max-w-full rounded-md bg-white overflow-hidden flex flex-col custom_shadow">
             <DemoBrowser />
             <div className="flex-grow flex-shrink w-full overflow-auto">
@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
 
           <div className="">
-            <div className="relative right-[25%] mt-[-170px] hidden lg:block">
+            <div className="relative right-[25%] mt-[-170px]">
               {/* mt-[-190px] */}
               <div className="w-full h-auto max-w-full rounded-md bg-white overflow-hidden flex flex-col custom_shadow">
                 <DemoBrowser url="vscode.dev" />
