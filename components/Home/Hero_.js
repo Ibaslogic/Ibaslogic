@@ -15,12 +15,12 @@ const Hero = () => {
             Developers
             <span className="lg:block"></span>
           </h1>
-          <div className="text-lg sm:text-xl mb-8 lg:max-w-[450px]">
+          <div className="text-base sm:text-lg mb-8 lg:max-w-[450px]">
             <p className="mb-8">
               Hey, I'm Ibas. This blog is where I share my experiments
               exploring the latest web technologies.
             </p>
-            <p className="md:text-base">
+            <p className="lg:text-base">
               <a
                 href="https://github.com/Ibaslogic/Ibaslogic"
                 rel="noopener noreferrer"

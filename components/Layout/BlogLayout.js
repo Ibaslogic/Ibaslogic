@@ -76,7 +76,7 @@ const BlogLayout = ({ children, frontmatter }) => {
       external_post={external_post}
       external_url={external_url}
     >
-      <div className="w-full px-[15px] py-12 lg:grid mx-auto max-w-3xl lg:max-w-[1200px] post_wrap">
+      <div className="w-full px-[20px] py-12 lg:grid mx-auto max-w-3xl lg:max-w-[1200px] post_wrap">
         <main className="max-w-[700px] mx-auto lg:mx-5 post_main">
           <article>
             <div className="space-y-5 mb-8">
