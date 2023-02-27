@@ -176,9 +176,9 @@ Note that we’ve included a CSS Module class name. We’ll add the style rules 
 ```
 If we save the files, the layout should look like this:
 
-![react-todos-edit](/static/images/how-to-edit-todos-items-in-react/react-todos-edit.gif)
+![edit-state-entries](/static/images/how-to-edit-todos-items-in-react/edit-state-entries.png)
 
-**Display the Edit Input Field Only When the** `**editing**` **State Is True**
+**Display the Edit Input Field Only When the** `editing` **State Is True**
 We want to display the edit input only when the item is in editing mode. We’ll update the `TodoItem` component to include an `if/else` statement that checks if an item is in edit mode or view mode, then we dynamically hide/display the item using the `style` attribute.
 
 ```jsx {4-10,13,18} showLineNumbers
@@ -208,7 +208,7 @@ export default TodoItem;
 ```
 If we save the file, we should have this behavior:
 
-![edit-state-entries](/static/images/how-to-edit-todos-items-in-react/edit-state-entries.png)
+![react-todos-edit](/static/images/how-to-edit-todos-items-in-react/react-todos-edit.gif)
 
 ## Editing and Updating the Todos State
 
