@@ -26,6 +26,15 @@ const projects = [
     article_url:
       'https://blog.logrocket.com/building-audio-player-react/',
   },
+  {
+    name: 'Sortable table',
+    repo_name: 'react-sortable-table',
+    description:
+      'Build a React Table that we can sort both in the ascending and descending order',
+    demo: 'https://ibaslogic.github.io/react-sortable-table/',
+    article_url:
+      'https://blog.logrocket.com/creating-react-sortable-table/',
+  },
 ];
 
 export default projects;
