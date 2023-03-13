@@ -13,7 +13,7 @@ export const headerItems = [
         url: 'https://ko-fi.com/ibasmajid',
       },
       {
-        label: 'React v1',
+        label: 'React tutorial v1',
         url: 'https://github.com/Ibaslogic/Ibaslogic/tree/v1/docs/guides',
       },
     ],

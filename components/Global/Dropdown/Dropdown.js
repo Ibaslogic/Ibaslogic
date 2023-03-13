@@ -23,7 +23,7 @@ const Dropdown = ({ submenus, dropdown }) => {
                 </span>
               </a>
             </>
-          ) : submenu.label === 'React v1' ? (
+          ) : submenu.label === 'React tutorial v1' ? (
             <>
               <a
                 className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 font-semibold text-base"
