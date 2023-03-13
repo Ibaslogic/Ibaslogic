@@ -26,7 +26,7 @@ const Dropdown = ({ submenus, dropdown }) => {
           ) : submenu.label === 'React tutorial v1' ? (
             <>
               <a
-                className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 font-semibold text-base"
+                className="hover:bg-[#f2f2f2] text-left py-[0.7rem] px-4 flex items-center gap-2 font-semibold text-[13px]"
                 href={submenu.url}
                 target="_blank"
                 rel="noopener noreferrer"
