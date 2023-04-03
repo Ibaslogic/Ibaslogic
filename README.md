@@ -30,4 +30,4 @@ The site content, including the posts, will be in the `data` folder. The `compon
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Ibaslogic/Ibaslogic/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Ibaslogic/Ibaslogic/blob/master/LICENSE) file for details
