@@ -8,19 +8,19 @@ const Banner = () => {
   return (
     <section className="pt-10 lg:pt-20 text-left">
       <div className="w-full mx-auto max-w-3xl lg:max-w-[77rem] px-[20px]">
-        <h1 className="text-3xl md:text-[38px] text-[#1a2c47] mb-4 font-semibold">
+        <h1 className="text-[32px] leading-9 md:text-[38px] text-[#1a2c47] mb-4 font-semibold">
           <span>The Modern Tutorial</span>{' '}
           <span className="lg:block"></span>{' '}
           <span className="lg:text-[27px]">
             for Beginner Developers
           </span>
         </h1>
-        <p className="mb-4 text-base sm:text-xl">
+        <p className="mb-4 text-lg sm:text-xl">
           Hey, I'm Ibas. This blog is where I share my exciting
           discoveries and experiments with the latest web
           technologies.
         </p>
-        <p className="text-sm sm:text-base mb-4 sm:pr-28 text-[#61738e]">
+        <p className="text-base mb-4 sm:pr-28 text-[#61738e]">
           <span>
             Unleash your creativity and take your web development
             skills to new heights with our carefully curated
