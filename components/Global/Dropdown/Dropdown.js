@@ -3,7 +3,7 @@ import { BsArrowUpRight } from 'react-icons/bs';
 const Dropdown = ({ submenus, dropdown }) => {
   return (
     <ul
-      className={`absolute hidden right-0 left-auto text-sm z-[9999] min-w-[10rem] py-2 px-0 bg-white rounded-lg custom_shadow ${
+      className={`absolute hidden right-0 left-auto text-sm z-[9999] min-w-[10rem] py-2 px-0 bg-white text-[#36313d] rounded-lg custom_shadow ${
         dropdown ? '!block' : ''
       }`}
     >
@@ -18,7 +18,7 @@ const Dropdown = ({ submenus, dropdown }) => {
                 rel="noopener noreferrer"
               >
                 {submenu.label}
-                <span className="block text-xs text-[#8a4baf]">
+                <span className="block text-xs text-[#005bb3]">
                   Coffee fuels coding ☕️
                 </span>
               </a>
@@ -32,7 +32,7 @@ const Dropdown = ({ submenus, dropdown }) => {
                 rel="noopener noreferrer"
               >
                 {submenu.label}
-                <span className="block text-xs text-[#8a4baf]">
+                <span className="block text-xs text-[#005bb3]">
                   <BsArrowUpRight />
                 </span>
               </a>

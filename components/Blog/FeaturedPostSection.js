@@ -5,23 +5,21 @@ const FeaturedPostSection = () => {
     <>
       <FeaturedPost
         title="React Tutorial: A Comprehensive Guide for Beginners"
-        description="Learn React and start building web apps with this tutorial. This lesson is for beginners and covers the basic concepts."
+        description="React is a JavaScript library for building interactive UIs. It lets developers create sizeable web apps by integrating a small, isolated code snippet."
         slug="react-tutorial-for-beginners"
+        thumbnail="/static/images/react-tutorial-for-beginners/react-thumbnail.png"
       />
       <FeaturedPost
         title="React Toggle Button: Let’s Switch Navigation Widget"
-        description="Learn how to create a dynamic toggle button in React to hide/show the navigation widget."
+        description="The hamburger menu allows us to toggle navigation widget between hiding and displaying items on the screen. In this lesson, we will add an interactive toggle button to switch sidebar navigation."
         slug="how-to-add-hamburger-menu-in-react"
+        thumbnail="/static/images/react-tutorial-for-beginners/react-thumbnail.png"
       />
       <FeaturedPost
         title="Build React Form With This Best Practice"
-        description="Handling forms in React with the best practice in mind. This tutorial covers everything from fundamental concepts to advanced techniques."
+        description="This lesson will discuss how to best handle form inputs in React. We will build a project to explain the different input types, including checkbox, text, select input, radio, range, and text area."
         slug="simple-guide-to-react-form"
-      />
-      <FeaturedPost
-        title="React Router: The Beginners Guide"
-        description="Use this practical guide to learn how to handle client-side routing with React Router efficiently."
-        slug="routing-with-react-router"
+        thumbnail="/static/images/featured.png"
       />
     </>
   );

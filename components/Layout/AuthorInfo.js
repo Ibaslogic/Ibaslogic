@@ -1,15 +1,16 @@
 import Image from 'next/image';
+import SocialLink from '../SocialLink';
 
-const AuthorInfo = ({ link, name, handle, avatar }) => {
+const AuthorInfo = ({ twitter, linkedIn, name, avatar }) => {
   return (
-    <div className="flex items-center text-xs text-gray-500">
+    <div className="flex gap-4 items-center text-xs">
       <a
-        href={link}
+        href={twitter}
         target="_blank"
         rel="noopener noreferrer"
         title="twitter"
       >
-        <div className="w-12 h-12">
+        <div className="w-16 h-16">
           <Image
             width={70}
             height={70}
@@ -20,35 +21,23 @@ const AuthorInfo = ({ link, name, handle, avatar }) => {
         </div>
       </a>
 
-      <div className="ml-2 text-sm">
+      <div className="text-lg">
         <div className="flex flex-col">
-          <p className=" font-bold text-black">
+          <p className="font-semibold text-[#1a2c47]">
             <a
-              href={link}
+              href={twitter}
               target="_blank"
               rel="noopener noreferrer"
               title="twitter"
-              className="flex items-center gap-1"
+              className="flex text-[#005bb3] items-center gap-1"
             >
               <span>{name}</span>
-              {/* <span>
-                <Image
-                  width={20}
-                  height={20}
-                  src="/check.png"
-                  alt="author"
-                />
-              </span> */}
             </a>
           </p>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="twitter"
-          >
-            {handle}
-          </a>
+          <div className="flex gap-3">
+            <SocialLink link={twitter} text="Twitter" />
+            <SocialLink link={linkedIn} text="LinkedIn" />
+          </div>
         </div>
       </div>
     </div>

@@ -1,20 +1,29 @@
 import Link from 'next/link';
-import ViewCounter from './viewCounter';
+import Image from 'next/image';
 
-const FeaturedPost = ({ title, description, slug }) => {
+const FeaturedPost = ({ title, description, slug, thumbnail }) => {
   return (
-    <div className="custom_shadow no_border">
-      <Link href={`/${slug}/`}>
-        <div className="px-6 pt-8 pb-9 custom_pad">
-          <span className="text-base block text-gray-700">
-            <ViewCounter slug={slug} />
-          </span>
-          <h2 className="my-3 font-bold text-lg leading-[1.3]">
-            {title}
-          </h2>
-          <p>{description}</p>
-        </div>
-      </Link>
+    <div className="flex gap-4 mt-6">
+      <Image
+        width={60}
+        height={60}
+        src={thumbnail}
+        className="object-cover bg-gray-200 h-full m-0 rounded-md"
+        alt={title}
+      />
+      <div className="text-base">
+        <h2 className="font-semibold text-[1.3rem] leading-8 -mt-2">
+          {title}
+        </h2>
+        <p className="mt-2">{description}</p>
+
+        <Link
+          href={`/${slug}/`}
+          className="text-[#005bb3] inline-flex cursor-pointer mt-1"
+        >
+          Read more
+        </Link>
+      </div>
     </div>
   );
 };

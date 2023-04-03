@@ -7,6 +7,7 @@ import config from '../../data/siteMetadata.js';
 import NewsTopbar from '../NewsTopbar';
 
 const Layout = ({ children, ...customMeta }) => {
+  // console.log(readingTime);
   const router = useRouter();
   const {
     siteName,

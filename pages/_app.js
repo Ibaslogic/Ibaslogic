@@ -1,36 +1,20 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { pageview } from '../lib/google-analytics';
-// import * as ga from "../lib/google-analytics";
 
 import '../styles/globals.css';
 import '../styles/prism.css';
 import NextProgress from 'next-progress';
 import Analytics from '../components/Analytics/Analytics';
 
-import { Inter } from '@next/font/google';
-// import localFont from '@next/font/local';
+import { Source_Sans_Pro } from '@next/font/google';
 
-const inter = Inter({
+const sourceSans = Source_Sans_Pro({
+  weight: ['300', '400', '600', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  variable: '--font-source',
 });
-
-// const neuzeit = localFont({
-//   src: [
-//     {
-//       path: '../public/fonts/neuzeit_grotesk_light-webfont.woff2',
-//       weight: '300',
-//     },
-//     {
-//       path: '../public/fonts/neuzeit_grotesk_regular-webfont.woff2',
-//       weight: '400',
-//     },
-//     {
-//       path: '../public/fonts/neuzeit_grotesk_bold-webfont.woff2',
-//       weight: '700',
-//     },
-//   ],
-// });
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -49,16 +33,12 @@ function MyApp({ Component, pageProps }) {
   // }, [router.events]);
 
   return (
-    <>
+    <div className={`${sourceSans.variable} font-base`}>
       <Analytics />
-      <NextProgress delay={300} height="3px" color="#8a4baf" />
-      <style jsx global>{`
-        :root {
-          --font-base: ${inter.style.fontFamily};
-        }
-      `}</style>
+      <NextProgress delay={300} height="3px" color="#005bb3" />
+
       <Component {...pageProps} key={router.asPath} />
-    </>
+    </div>
   );
 }
 

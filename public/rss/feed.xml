@@ -4,12 +4,12 @@
         <title>Demo site | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 25 Feb 2023 07:06:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Apr 2023 02:45:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Demo site | RSS Feed</title>
-            <url>http://localhost:3000/avatar.png</url>
+            <url>http://localhost:3000/ibas_ibaslogic.jpeg</url>
             <link>http://localhost:3000</link>
         </image>
         <copyright>All rights reserved 2023, Ibas</copyright>
@@ -27,8 +27,8 @@
             <link>http://localhost:3000/the-new-javascript-at-method</link>
             <guid>http://localhost:3000/the-new-javascript-at-method</guid>
             <pubDate>Mon, 20 Feb 2023 09:32:00 GMT</pubDate>
-            <description><![CDATA[The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></description>
-            <content:encoded><![CDATA[The JavaScript .at() method was introduced in the August release of the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></content:encoded>
+            <description><![CDATA[The JavaScript .at() method was introduced in the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></description>
+            <content:encoded><![CDATA[The JavaScript .at() method was introduced in the ECMA International TC39’s relative indexing proposal to allow developers to grab elements based on their indexes]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>

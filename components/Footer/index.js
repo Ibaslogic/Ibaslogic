@@ -9,8 +9,8 @@ const Footer2 = () => {
       url: 'https://github.com/Ibaslogic/Ibaslogic',
     },
     {
-      item: 'support me',
-      url: 'https://ko-fi.com/ibasmajid',
+      item: 'Ko-fi',
+      url: 'https://ko-Fi.com/ibasmajid',
     },
     {
       item: 'Newsletter',
@@ -19,13 +19,13 @@ const Footer2 = () => {
   ];
 
   return (
-    <footer className="bg-gray-50 text-[#24292f] text-[0.9em] pt-12 pb-9 sm:pt-12 sm:pb-9 border border-solid border-[#eaeaea] text-center">
-      <div className="px-[20px] mx-auto max-w-3xl lg:max-w-[1200px] flex items-center flex-col gap-2">
+    <footer className="bg-gray-50 text-[#24292f] text-[17px] pt-12 pb-9 sm:pt-12 sm:pb-9 border border-solid border-[#eaeaea] text-center">
+      <div className="px-[20px] mx-auto lg:max-w-[77rem] flex items-center flex-col gap-2">
         <ul className="flex items-center justify-center gap-6">
           {list.map(({ item, url }) => (
             <li className="" key={item}>
               <a
-                className="capitalize hover:text-[#8a4baf] transition"
+                className="capitalize hover:underline transition"
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"

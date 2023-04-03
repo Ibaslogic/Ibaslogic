@@ -13,7 +13,7 @@ const ErrorPageContent = () => {
         Visit the{' '}
         <Link
           href="/blog/"
-          className="text-[#8a4baf] underline font-bold"
+          className="text-[#005bb3] underline font-bold"
         >
           blog page
         </Link>{' '}

@@ -9,13 +9,13 @@ export default {
   github: `ibaslogic`,
   email: `ibas@ibaslogic.com`,
   type: 'website',
-  ibas_avatar: `/avatar.png`,
+  ibas_avatar: `/ibas_ibaslogic.jpeg`,
   siteUrl: `${
     process.env.NODE_ENV === 'production'
       ? 'https://ibaslogic.com'
       : 'http://localhost:3000'
   }`,
 
-  socialBanner: '/avatar.png', // change image
+  socialBanner: '/ibas_ibaslogic.jpeg', // change image
   siteRepo: 'https://github.com/Ibaslogic/ibaslogic.com',
 };

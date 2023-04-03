@@ -25,7 +25,7 @@ export default function Toc() {
 
   return (
     <nav className="text-[#78757a]">
-      <h2 className="font-semibold text-[#36313d] text-base">
+      <h2 className="font-semibold text-[#36313d] text-lg">
         Jump ahead:
       </h2>
       <ul className="mt-4">
@@ -33,12 +33,12 @@ export default function Toc() {
           return (
             <li
               key={heading.id}
-              className="relative pl-5 border-l border-[#d2d3d7] leading-[1.7] py-1"
+              className="relative text-base pl-5 border-l border-[#d2d3d7] leading-[1.7] py-1"
             >
               <a
                 href={`#${heading.id}`}
-                className={clsx('block hover:text-[#8a4baf]', {
-                  'text-[#8a4baf] before:absolute before:bg-[currentColor] before:w-[2px] before:h-full before:top-0 before:left-[-1px] before:right-[auto]':
+                className={clsx('block hover:text-[#005bb3]', {
+                  'text-[#005bb3] before:absolute before:bg-[currentColor] before:w-[2px] before:h-full before:top-0 before:left-[-1px] before:right-[auto]':
                     heading.id === activeNode,
                   // 'ml-3': getLevel(heading.nodeName) === 3,
                 })}

@@ -156,7 +156,7 @@ const ContactForm = () => {
 
         <div>
           <textarea
-            className="bg-[#f0efef] outline-none border-0 border-gray-400 p-3 md:p-[30px] text-gray-700 w-full"
+            className="bg-[#f0efef] h-36 outline-none border-0 border-gray-400 p-3 md:p-[30px] text-gray-700 w-full"
             placeholder="Your message"
             aria-label="text-area"
             id="message"
@@ -173,7 +173,7 @@ const ContactForm = () => {
       <button
         type="submit"
         aria-label="submit-form"
-        className="text-center py-3 px-8 bg-[#8a4baf] hover:opacity-80 text-white tracking-widest rounded-sm"
+        className="text-center py-3 px-8 bg-[#005bb3] hover:opacity-80 text-white tracking-widest rounded-sm"
       >
         {buttonText}
       </button>
@@ -194,4 +194,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-// todo: use formik and yup for validation

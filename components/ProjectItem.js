@@ -29,11 +29,12 @@ const ProjectItem = ({ project }) => {
   }, []);
 
   return (
-    <li className="px-6 pt-8 pb-9 text-gray-700 custom_shadow no_border">
+    <li className="px-6 pt-8 pb-9 text-gray-700 border border-[#d2d3d7] rounded-lg">
+      {/* custom_shadow */}
       <div className="flex justify-between">
-        <p className="font-bold">
+        <p className="font-semibold">
           <a
-            className="hover:text-[#8a4baf]"
+            className="hover:underline"
             href={`https://github.com/ibaslogic/${repo_name}`}
             target="_blank"
             rel="noreferrer"
@@ -45,7 +46,7 @@ const ProjectItem = ({ project }) => {
           <span className="text-base block">
             <a
               href={`https://github.com/ibaslogic/${repo_name}/stargazers`}
-              className="flex items-center gap-1 hover:text-[#8a4baf]"
+              className="flex items-center gap-1 text-[#c25d24]"
               target="_blank"
               rel="noreferrer"
             >
@@ -66,7 +67,7 @@ const ProjectItem = ({ project }) => {
 
       <div className="flex mt-4 gap-4">
         <a
-          className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
+          className="border border-solid border-[#ddd] hover:border-[#000] py-1 px-2 rounded text-[15px]"
           href={`https://github.com/ibaslogic/${repo_name}`}
           target="_blank"
           rel="noreferrer"
@@ -75,7 +76,7 @@ const ProjectItem = ({ project }) => {
         </a>
         {demo && (
           <a
-            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
+            className="border border-solid border-[#ddd] hover:border-[#000] py-1 px-2 rounded text-[15px]"
             href={demo}
             target="_blank"
             rel="noreferrer"
@@ -85,7 +86,7 @@ const ProjectItem = ({ project }) => {
         )}
         {article_url && (
           <Link
-            className="border border-solid border-[#ddd] hover:border-[#8a4baf] py-1 px-2 rounded text-[15px]"
+            className="border border-solid border-[#ddd] hover:border-[#000] py-1 px-2 rounded text-[15px]"
             href={article_url}
           >
             Tutorial

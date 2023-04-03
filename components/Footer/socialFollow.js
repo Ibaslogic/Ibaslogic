@@ -49,6 +49,7 @@ const SocialFollow = () => {
               target="_blank"
               rel="noopener noreferrer"
               title={name}
+              className="text-white"
             >
               {socialIcon}
             </a>

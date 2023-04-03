@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Layout from '../components/Layout/Layout';
 import { getBlogPostData } from '../lib/mdx';
 import BlogItem from '../components/BlogItem';
-import Heading from '../components/Heading';
 import FeaturedPostSection from '../components/Blog/FeaturedPostSection';
 import FilterPostsHandle from '../components/FilterPostsHandle';
-import WorkForU from '../components/Global/WorkForU';
 import generateRssFeed from '../lib/generateRSSFeed';
+import HeadLine from '../components/HeadLine';
+import AboutAuthor from '../components/AboutAuthor';
 
 export async function getStaticProps() {
   await generateRssFeed();
@@ -58,34 +58,42 @@ const BlogPage = ({ postsData }) => {
       description="Read up-to-date dev post"
     >
       <main>
-        <section className="bg-[#fff]">
-          <div className="w-full pt-12 pb-0 px-[20px] mx-auto max-w-3xl">
-            <WorkForU />
-            <Heading title="Featured posts" color="text-[#696969]" />
-          </div>
-        </section>
-        <section>
-          <div className="w-full pt-6 pb-16 px-[20px] mx-auto max-w-4xl lg:max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-8">
-              <FeaturedPostSection />
+        <section className="bg-white">
+          <div className="w-full mx-auto max-w-3xl lg:max-w-[77rem] px-[20px]">
+            <div className="flex flex-col lg:flex-row lg:gap-24">
+              <div className="mt-12">
+                <HeadLine title="Featured Posts" />
+                <FeaturedPostSection />
+                <div className="w-full py-12">
+                  <FilterPostsHandle
+                    categories={categories}
+                    handleItems={handleItems}
+                    selectedItem={selectedItem}
+                  />
+                  <ul className="grid mt-6">
+                    {!postsData.length && (
+                      <li className="">No posts detected</li>
+                    )}{' '}
+                    {blogPostItems.map((frontmatter) => (
+                      <BlogItem
+                        key={frontmatter.slug}
+                        {...frontmatter}
+                      />
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <aside className="md:sticky md:top-20 lg:max-h-[calc(100vh-13rem)] top-4 lg:mt-14">
+                <div className="lg:w-80 rounded-2xl bg-white mb-9 sm:custom_shadow">
+                  <div className="sm:p-5">
+                    <AboutAuthor
+                      expand={false}
+                      layout="flex-col sm:flex-row lg:flex-col"
+                    />
+                  </div>
+                </div>
+              </aside>
             </div>
-          </div>
-        </section>
-        <section>
-          <div className="w-full px-[20px] pb-12 mx-auto max-w-3xl">
-            <FilterPostsHandle
-              categories={categories}
-              handleItems={handleItems}
-              selectedItem={selectedItem}
-            />
-            <ul className="grid mt-6">
-              {!postsData.length && (
-                <li className="">No posts detected</li>
-              )}{' '}
-              {blogPostItems.map((frontmatter) => (
-                <BlogItem key={frontmatter.slug} {...frontmatter} />
-              ))}
-            </ul>
           </div>
         </section>
       </main>

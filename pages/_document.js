@@ -11,16 +11,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <link
-            rel="preload"
-            href="/fonts/ibm-plex-sans-var.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          /> */}
           <link rel="icon" href="/static/favicon.png" />
         </Head>
-        <body className="bg-white text-[#36313d]">
+        <body className="bg-[white] text-[#36313d]">
           <Main />
           <NextScript />
         </body>

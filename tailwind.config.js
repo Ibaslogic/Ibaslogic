@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        base: ['var(--font-base)', ...fontFamily.sans],
+        base: ['var(--font-source)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial':
@@ -21,12 +21,12 @@ module.exports = {
           css: {
             color: '#333',
             a: {
-              color: '#8a4baf',
+              color: '#005bb3',
               textDecoration: 'none',
-              borderBottom: '1px solid #d9bae8',
+              borderBottom: '1px solid ##005bb3',
               fontWeight: '400',
               '&:hover': {
-                borderColor: '#8a4baf',
+                borderColor: '#005bb3',
               },
             },
             p: {
@@ -36,15 +36,15 @@ module.exports = {
               fontWeight: '400',
             },
             h1: {
-              fontWeight: '700',
+              fontWeight: '600',
             },
             'h2,h3': {
               scrollMarginTop: spacing[20],
               marginTop: '40px',
               marginBottom: '25px',
               lineHeight: '1.3333333',
-              color: '#111827',
-              fontWeight: '700',
+              color: '#1a2c47',
+              fontWeight: '600',
             },
             code: {
               fontSize: '14px',

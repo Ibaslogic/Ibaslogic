@@ -21,7 +21,7 @@ const Pre = (props) => {
         type="button"
         className={`hidden sm:block absolute right-0 py-[6px] px-[10px] border-none bg-transparent text-[15px] ${
           copied
-            ? 'cursor-not-allowed text-[#8a4baf]'
+            ? 'cursor-not-allowed text-[#005bb3]'
             : 'text-gray-700'
         }`}
         disabled={copied && 'true'}

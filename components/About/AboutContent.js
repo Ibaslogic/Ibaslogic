@@ -1,43 +1,57 @@
-import topSection from '../../data/aboutPage/topSection.json';
-import secondSection from '../../data/aboutPage/secondSection.json';
-import thirdSection from '../../data/aboutPage/thirdSection.json';
-// import Subscribe from '../Newsletter/Subscribe';
-import Heading from '../Heading';
+import aboutSite from '../../data/aboutPage/aboutSite.json';
+import aboutAuthor from '../../data/aboutPage/aboutAuthor.json';
+import openSource from '../../data/aboutPage/openSource.json';
 import AboutSection from './AboutSection';
-// import WorkForU from '../Global/WorkForU';
-import SocialButton from '../SocialButton';
 import { FaTwitter } from 'react-icons/fa';
+
 import CustomPageHeading from '../CustomPageHeading';
+import HeadLine from '../HeadLine';
+// import AuthorWidget from '../AuthorWidget';
+import NewsletterWidget from '../NewsletterWidget';
+import SocialButton from '../SocialButton';
 
 const AboutContent = () => {
   return (
     <>
-      <CustomPageHeading
-        title="About Ibaslogic"
-        description="I share dev articles, including some awesome project-based ones that will help you learn dev topics faster than ever before."
-      />
-      <div className="text-gray-600 about px-[20px] mx-auto max-w-3xl pt-12 pb-12">
-        <section className="mb-8">
-          <AboutSection section={topSection} />
-        </section>
-        <section className="mb-8">
-          <Heading title="Open Source" />
-          <AboutSection section={secondSection} />
-        </section>
-        <section className="mb-8">
-          <Heading title="Who is Ibas?" />
-          <AboutSection section={thirdSection} />
-        </section>
-        <section className="w-44">
-          {/* <WorkForU /> */}
-          <SocialButton
-            Icon={FaTwitter}
-            link="https://twitter.com/intent/follow?screen_name=ibaslogic&amp;region=follow_link"
-            label="Follow @ibaslogic"
-            className="flex items-center space-x-1 my-0 py-1 px-6 text-xs text-white font-semibold bg-[#1b95e0] hover:bg-[#066cbb] border-[#7490a7] rounded-2xl"
-          />
-        </section>
-      </div>
+      <CustomPageHeading title="About this site" />
+
+      <section className="bg-white">
+        <div className="w-full mx-auto max-w-3xl lg:max-w-[77rem] px-[20px]">
+          <div className="flex flex-col lg:flex-row lg:gap-24">
+            <div className="mt-3 mb-12">
+              <section className="mb-8">
+                <AboutSection section={aboutSite} />
+              </section>
+              <section className="mb-8">
+                <HeadLine title="Open Source" />
+                <AboutSection section={openSource} />
+              </section>
+              <section className="mb-8">
+                <HeadLine title="Who is Ibas?" />
+                <AboutSection section={aboutAuthor} />
+              </section>
+              <section>
+                {/* <AuthorWidget /> */}
+                <div className="w-44">
+                  <SocialButton
+                    Icon={FaTwitter}
+                    link="https://twitter.com/intent/follow?screen_name=ibaslogic&amp;region=follow_link"
+                    label="Follow @ibaslogic"
+                    className=" py-1 px-6 text-xs text-white font-semibold bg-[#005bb3] hover:bg-[#066cbb] border-[#7490a7] rounded-2xl"
+                  />
+                </div>
+              </section>
+            </div>
+            <aside className="md:sticky md:top-20 lg:max-h-[calc(100vh-13rem)] top-4 lg:mt-14">
+              <div className="lg:w-80 rounded-lg bg-white mb-9 sm:bg-gray-50">
+                <div className="sm:p-5">
+                  <NewsletterWidget />
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
