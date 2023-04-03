@@ -8,7 +8,7 @@ const FeaturedPost = ({ title, description, slug, thumbnail }) => {
         width={60}
         height={60}
         src={thumbnail}
-        className="object-cover bg-gray-200 h-full m-0 rounded-md"
+        className="object-cover bg-gray-200 m-0 w-[60px] h-[60px] rounded-md"
         alt={title}
       />
       <div className="text-base">

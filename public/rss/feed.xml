@@ -4,7 +4,7 @@
         <title>Demo site | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 03 Apr 2023 02:45:59 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Apr 2023 14:27:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
