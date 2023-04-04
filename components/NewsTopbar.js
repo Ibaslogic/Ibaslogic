@@ -11,7 +11,7 @@ const NewsTopbar = () => {
             <p>
               <a
                 href="https://ko-fi.com/ibasmajid"
-                className="hover:underline font-semibold text-[#fff]"
+                className="hover:underline text-[#fff]"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Support"

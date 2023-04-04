@@ -37,7 +37,7 @@ const MenuItems = ({ link, label, submenu, currentRoute }) => {
             aria-haspopup="menu"
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
-            className="flex justify-between items-center px-8 md:px-0 w-full py-4 md:block text-[16.2px] leading-[1.4167] text-center md:text-[15px] md:leading-[24px] tracking-tight capitalize md:py-2 md:font-semibold text-[#1a2c47]"
+            className="flex justify-between items-center px-8 md:px-0 w-full py-4 md:block text-[16.2px] leading-[1.4167] text-center md:text-[15px] md:leading-[24px] tracking-tight capitalize md:py-2 font-semibold text-[#1a2c47]"
           >
             {label}{' '}
             <span
@@ -55,7 +55,7 @@ const MenuItems = ({ link, label, submenu, currentRoute }) => {
             currentRoute === link
               ? 'text-[#000] md:border-b-[1.5px] md:border-solid md:border-[#1a2c47]'
               : ''
-          } block text-[16.2px] leading-[1.4167] text-left md:text-[15px] md:leading-[24px] tracking-tight capitalize md:py-2 md:font-semibold text-[#1a2c47]`}
+          } block text-[16.2px] leading-[1.4167] text-left md:text-[15px] md:leading-[24px] tracking-tight capitalize md:py-2 font-semibold text-[#1a2c47]`}
         >
           {label}
         </Link>

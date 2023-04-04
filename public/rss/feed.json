@@ -366,18 +366,6 @@
             }
         },
         {
-            "id": "http://localhost:3000/gatsby-theme-agency-installation",
-            "content_html": "This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.",
-            "url": "http://localhost:3000/gatsby-theme-agency-installation",
-            "title": "Gatsby Theme Agency – Installation Guide",
-            "summary": "This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.",
-            "date_modified": "2020-08-03T09:32:00.000Z",
-            "author": {
-                "name": "John Doe",
-                "url": "https://twitter.com/<username>"
-            }
-        },
-        {
             "id": "http://localhost:3000/object-oriented-programming-javascript",
             "content_html": "In this OOP tutorial, we cover the object fundamentals, OOPS concepts, the ES5 constructor function, the prototype concept, inheritance and the ES6 class syntax.",
             "url": "http://localhost:3000/object-oriented-programming-javascript",

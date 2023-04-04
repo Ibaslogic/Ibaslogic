@@ -4,7 +4,7 @@
         <title>Demo site | RSS Feed</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 03 Apr 2023 14:27:45 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Apr 2023 04:03:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -271,15 +271,6 @@
             <pubDate>Sun, 09 Aug 2020 09:32:00 GMT</pubDate>
             <description><![CDATA[What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?]]></description>
             <content:encoded><![CDATA[What exactly is forEach in JavaScript, where is it coming from and what are the use cases – including how to use it on the array-like objects?]]></content:encoded>
-            <author>example@gmail.com (John Doe)</author>
-        </item>
-        <item>
-            <title><![CDATA[Gatsby Theme Agency – Installation Guide]]></title>
-            <link>http://localhost:3000/gatsby-theme-agency-installation</link>
-            <guid>http://localhost:3000/gatsby-theme-agency-installation</guid>
-            <pubDate>Mon, 03 Aug 2020 09:32:00 GMT</pubDate>
-            <description><![CDATA[This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.]]></description>
-            <content:encoded><![CDATA[This guide walk you through how to install and add a Gatsby theme called gatsby-theme-agency to a new project.]]></content:encoded>
             <author>example@gmail.com (John Doe)</author>
         </item>
         <item>
