@@ -85,7 +85,12 @@ module.exports = {
             blockquote: {
               fontWeight: '400',
               fontStyle: 'normal',
-              color: '#525960',
+              borderColor: '#3182ce',
+              backgroundColor: '#ebf8ff',
+              padding: '1rem',
+            },
+            'blockquote p': {
+              margin: '0',
             },
             'blockquote p:first-of-type::before': false,
             'blockquote p:first-of-type::before': false,

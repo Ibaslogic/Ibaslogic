@@ -29,6 +29,9 @@ Globals
   img {
     @apply block mx-auto;
   }
+  blockquote {
+    @apply border-l-[#3182ce]
+  }
 }
 
 /* components classes */
