@@ -8,10 +8,10 @@ const Footer2 = () => {
       item: 'Open Source',
       url: 'https://github.com/Ibaslogic/Ibaslogic',
     },
-    {
-      item: 'Ko-fi',
-      url: 'https://ko-Fi.com/ibasmajid',
-    },
+    // {
+    //   item: 'Ko-fi',
+    //   url: 'https://ko-Fi.com/ibasmajid',
+    // },
     {
       item: 'Newsletter',
       url: 'https://ibaslogic.substack.com/',

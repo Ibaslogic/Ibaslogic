@@ -8,7 +8,7 @@ const NewsTopbar = () => {
       {topBar && (
         <aside className="bg-[#1a2c47] text-base py-[4px]">
           <div className="flex justify-end gap-x-3 items-center text-[#fff] px-[20px] lg:max-w-[77rem] mx-auto">
-            <p>
+            {/* <p>
               <a
                 href="https://ko-fi.com/ibasmajid"
                 className="hover:underline text-[#fff]"
@@ -18,7 +18,7 @@ const NewsTopbar = () => {
               >
                 Sponsor this project
               </a>
-            </p>
+            </p> */}
             <div className="flex items-center justify-center">
               <HeaderItemsRender />
             </div>
